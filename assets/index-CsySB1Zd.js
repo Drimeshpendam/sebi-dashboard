@@ -1098,7 +1098,7 @@ Source: \`c4scourses.in/wp-content/uploads/c4s-pdf/current-affairs-<month>-2026-
 | Source | Access | Value for SEBI GA |
 |---|---|---|
 | **Crux** (\`cruxcurrentaffairs.com/crux/sebi-grade-a\`) | Free web, day-by-day | **Best SEBI-specific tracker** — every topic = what happened + why it matters + regulation context (found Jane Street/SAT case our logs missed). ~60–70 topics/month |
-| **ixamBee BeePedia** | Free PDF but login-gated | Only digest built for regulatory exams; dedicated "SEBI & Financial Awareness" section + Learn-Along statics. User: create free account, download Jun–Nov 2026 |
+| **ixamBee BeePedia** | ✅ **Downloaded** (\`BeePedia_*.pdf/.txt\`) | The regulatory-exam digest — dedicated **"SEBI and Financial Awareness" section (~20pp/month)** + RBI Banking & Economy + Learn-Along statics. Jun–Oct monthly + Nov 1–8 weekly in this folder |
 | **BankersAdda exam capsules** | Direct PDF (bankersadda.com/wp-content) | Published ~1-2 months before each exam covering a 6-month window. **No SEBI Grade A 2027 capsule yet** — expect ~Dec 2026/Jan 2027 (Phase 1 expected Jan 2027). Watch: \`bankersadda.com/ga-capsule-for-sebi-grade-a-*\` |
 | **PracticeMock Bazooka** | Free monthly banking magazine | Secondary cross-check |
 | **GKToday monthly** | Paid | Skipped |
