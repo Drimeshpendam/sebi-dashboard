@@ -3624,6 +3624,66 @@ Paper 1 is a screening paper — the goal is a safe total (well above the 30/100
 - Domain constraint — values inside the column's allowed set (age can't be -5)
 - \`ON DELETE CASCADE\` (delete the parent → children die too) vs \`SET NULL\` vs \`RESTRICT\` — MCQ territory.
 
+### ⭐ Day-1 Walkthrough — one real table, taken apart end-to-end
+
+*This is all of Day 1 (keys → FDs → closure → normal forms) done ONCE on one realistic table. If this clicks, Day 1 is done — the sections after it are the same ideas in formal words.*
+
+**A college builds this fat table first:**
+
+ENROLL_RAW
+
+| sid | sname | course | instructor | inst_dept | grade |
+|---|---|---|---|---|---|
+| S1 | Asha | DBMS | Rao | CSE | A |
+| S1 | Asha | OS | Iyer | CSE | B |
+| S2 | Bala | DBMS | Rao | CSE | A |
+| S3 | Charu | OS | Iyer | CSE | B |
+| S4 | Dev | DBMS | Rao | CSE | B |
+
+**Step 0 — read the FDs off the data, in plain English:**
+- one student → one name → \`sid → sname\`
+- each course → one teacher → \`course → instructor\`
+- each teacher → one dept → \`instructor → inst_dept\`
+- one student in one course → one grade → \`{sid,course} → grade\`
+
+**Step 1 — find the candidate key (closure, traced line by line):**
+- Try \`sid\` alone: gives only \`sname\` — can't reach \`course\`. ✗
+- Try \`course\` alone: gives \`instructor\`, \`inst_dept\` — can't reach \`sid\`. ✗
+- Try \`{sid,course}\`:
+  - start: \`{sid, course}\`
+  - \`sid→sname\` → add sname
+  - \`course→instructor\` → add instructor
+  - \`instructor→inst_dept\` → add inst_dept
+  - \`{sid,course}→grade\` → add grade
+  - **= all 6 columns ✓ → candidate key = \`{sid, course}\`** (prime attributes: sid, course)
+
+*Recipe to remember:* nothing smaller worked, so the composite is minimal. Any attribute no FD can produce must be inside every key.
+
+**Step 2 — see WHY this table is sick (the repetition is the disease):**
+- "Rao belongs to CSE" is stored **4 times** → update it once, miss 3 rows = **update anomaly**
+- Delete all DBMS rows → the fact "Rao teaches DBMS" vanishes too = **deletion anomaly**
+- New teacher Mehta joins but no course yet → **nowhere to put him** = **insertion anomaly**
+
+**Step 3 — apply each normal form, watch the fix:**
+
+- **1NF ✓ passes** — every cell holds one value (no "DBMS, OS" in one cell).
+- **2NF ✗ fails** — key is composite \`{sid,course}\`, but \`sname\` needs only \`sid\` (a *part* of the key = partial dependency). → split off \`STUDENT(sid, sname)\`.
+- **3NF ✗ fails** — in what remains, \`inst_dept\` depends on \`instructor\` (non-key column) which depends on \`course\` — a chain = transitive dependency. → split off \`INSTRUCTOR(instructor, inst_dept)\`.
+- **BCNF ✗ fails** — remaining \`ENROLL(sid,course,instructor,grade)\` has FD \`course→instructor\`, but \`course\` is NOT a superkey of this table (course repeats: S1,S2,S4 all have DBMS). → split off \`COURSE_TEACHER(course, instructor)\`.
+
+**The final clean design — every split removed exactly one anomaly:**
+
+\`\`\`
+STUDENT(sid, sname)
+COURSE_TEACHER(course, instructor)      ← course is key here
+INSTRUCTOR(instructor, inst_dept)       ← instructor is key
+ENROLL(sid, course, grade)              ← {sid,course} is key
+\`\`\`
+
+Now every FD's left side IS the key of its own table → all four tables are BCNF, nothing is repeated, and all anomalies die. **That's the whole point of normalization — it's not theory, it's killing duplicated facts.**
+
+REMEMBER: *"Check 1NF on the cells, 2NF on the key's parts, 3NF on non-key chains, BCNF on every left side."*
+
 ### 3. Functional Dependencies & Closure
 
 **Plain words:** \`X → Y\` means *"if you know X, you know Y."* In table terms: **whenever two rows agree on X, they must agree on Y.**
