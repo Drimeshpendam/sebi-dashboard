@@ -1069,7 +1069,56 @@ RBI 1935/nationalized 1949 · MPC 6 members · CPI target 4±2% · RTGS min ₹2
 
 ---
 **Recall check:** capex ₹? · fiscal deficit %? · effective capex % GDP? · debt-GDP? · 3 scheme names + outlays · biggest source of funds? · biggest spend head?
-`,"../../01_Phase1_Paper1/General_Awareness/Current_Affairs/_SOURCES.md":"# Current Affairs Source Library\n\nDownloaded monthly compilations — kept as reference PDFs alongside the distilled `Daily_Logs/` notes.\n\n## C4S Courses — Day-by-Day Monthly Compilations (Jun–Nov 2026)\n\nFree monthly current-affairs compilations, organized **date by date** with topics per day\n(Banking & Finance, Economy, Schemes, National Affairs, Appointments, Sports, \"Facts To Remember\").\nSource: `c4scourses.in/wp-content/uploads/c4s-pdf/current-affairs-<month>-2026-monthly-compilation.pdf`\n\n| File | Month | Extracted text |\n|---|---|---|\n| `C4S_june_2026.pdf` | June 2026 | `C4S_june_2026.txt` (~1.3 MB text) |\n| `C4S_july_2026.pdf` | July 2026 | `C4S_july_2026.txt` — 24 daily posts, 547 items, 270 pp |\n| `C4S_august_2026.pdf` | August 2026 | `C4S_august_2026.txt` |\n| `C4S_september_2026.pdf` | September 2026 | `C4S_september_2026.txt` |\n| `C4S_october_2026.pdf` | October 2026 | `C4S_october_2026.txt` |\n| `C4S_november_2026.pdf` | November 2026 | `C4S_november_2026.txt` — 9 daily posts, 283 items |\n\n## Adda247 GA Capsule (via bhagyaachievers mirror)\n\n- `GA_Capsule_Adda247_JulDec_part2.pdf` — IBPS RRB Clerk Mains capsule, **covers Jul–Dec 2025/Jan 2026** (older window — keep for static-GK style reference only). Extracted: `_extracted_part2.txt`\n- Adda247's own CDN (currentaffairs.adda247.com) blocks direct downloads (403, Cloudflare).\n\n## Known-good sources for future months\n\n| Source | Access | Notes |\n|---|---|---|\n| **C4S monthly compilation** | Direct PDF, free | Pattern: `current-affairs-<month>-2026-monthly-compilation.pdf` — best day-by-day source |\n| **BankersAdda GA Capsules** | `bankersadda.com/wp-content/...pdf` | Exam-oriented capsules (RBI Grade B, RRB) cover 6-month windows before each exam |\n| **Oliveboard BOLT** | Free but login-gated | Monthly magazine + 800 practice Qs — needs account |\n| **GKToday monthly PDF** | Paid (₹250) | Not downloaded — only TOC visible |\n| **bhagyaachievers community notes** | Free | Mirrors of adda247 faculty daily CA PDFs (Sushmita Tripathi, Ashish Gautam series) |\n\n## How to use this library\n\n1. `Daily_Logs/*.md` = distilled exam-ready notes (fact → context → Q-types)\n2. These PDFs/txts = the **full raw source** — use for deep-diving a specific day or verifying a fact\n3. When updating `Daily_Logs`, grep the month's `.txt` for the date heading to pull that day's items\n","../../01_Phase1_Paper1/General_Awareness/Daily_Logs/August_2026_Daily.md":`# Daily GA — August 2026 (day-wise revision file)
+`,"../../01_Phase1_Paper1/General_Awareness/Current_Affairs/_SOURCES.md":`# Current Affairs Source Library
+
+Downloaded monthly compilations — kept as reference PDFs alongside the distilled \`Daily_Logs/\` notes.
+
+## C4S Courses — Day-by-Day Monthly Compilations (Jun–Nov 2026)
+
+Free monthly current-affairs compilations, organized **date by date** with topics per day
+(Banking & Finance, Economy, Schemes, National Affairs, Appointments, Sports, "Facts To Remember").
+Source: \`c4scourses.in/wp-content/uploads/c4s-pdf/current-affairs-<month>-2026-monthly-compilation.pdf\`
+
+| File | Month | Extracted text |
+|---|---|---|
+| \`C4S_june_2026.pdf\` | June 2026 | \`C4S_june_2026.txt\` (~1.3 MB text) |
+| \`C4S_july_2026.pdf\` | July 2026 | \`C4S_july_2026.txt\` — 24 daily posts, 547 items, 270 pp |
+| \`C4S_august_2026.pdf\` | August 2026 | \`C4S_august_2026.txt\` |
+| \`C4S_september_2026.pdf\` | September 2026 | \`C4S_september_2026.txt\` |
+| \`C4S_october_2026.pdf\` | October 2026 | \`C4S_october_2026.txt\` |
+| \`C4S_november_2026.pdf\` | November 2026 | \`C4S_november_2026.txt\` — 9 daily posts, 283 items |
+
+## Sources rejected
+
+- ~~Adda247 "IBPS RRB Clerk Mains (Jul–Dec) part 2" capsule~~ — **deleted**: covers Jul 2025–Jan 2026, outside the rolling window
+- Adda247's own CDN (currentaffairs.adda247.com) blocks direct downloads (403, Cloudflare) — use mirrors or C4S instead
+
+## SEBI-specific sources (deep research findings)
+
+| Source | Access | Value for SEBI GA |
+|---|---|---|
+| **Crux** (\`cruxcurrentaffairs.com/crux/sebi-grade-a\`) | Free web, day-by-day | **Best SEBI-specific tracker** — every topic = what happened + why it matters + regulation context (found Jane Street/SAT case our logs missed). ~60–70 topics/month |
+| **ixamBee BeePedia** | Free PDF but login-gated | Only digest built for regulatory exams; dedicated "SEBI & Financial Awareness" section + Learn-Along statics. User: create free account, download Jun–Nov 2026 |
+| **BankersAdda exam capsules** | Direct PDF (bankersadda.com/wp-content) | Published ~1-2 months before each exam covering a 6-month window. **No SEBI Grade A 2027 capsule yet** — expect ~Dec 2026/Jan 2027 (Phase 1 expected Jan 2027). Watch: \`bankersadda.com/ga-capsule-for-sebi-grade-a-*\` |
+| **PracticeMock Bazooka** | Free monthly banking magazine | Secondary cross-check |
+| **GKToday monthly** | Paid | Skipped |
+
+## Known-good sources for future months
+
+| Source | Access | Notes |
+|---|---|---|
+| **C4S monthly compilation** | Direct PDF, free | Pattern: \`current-affairs-<month>-2026-monthly-compilation.pdf\` — best day-by-day source |
+| **BankersAdda GA Capsules** | \`bankersadda.com/wp-content/...pdf\` | Exam-oriented capsules (RBI Grade B, RRB) cover 6-month windows before each exam |
+| **Oliveboard BOLT** | Free but login-gated | Monthly magazine + 800 practice Qs — needs account |
+| **GKToday monthly PDF** | Paid (₹250) | Not downloaded — only TOC visible |
+| **bhagyaachievers community notes** | Free | Mirrors of adda247 faculty daily CA PDFs (Sushmita Tripathi, Ashish Gautam series) |
+
+## How to use this library
+
+1. \`Daily_Logs/*.md\` = distilled exam-ready notes (fact → context → Q-types)
+2. These PDFs/txts = the **full raw source** — use for deep-diving a specific day or verifying a fact
+3. When updating \`Daily_Logs\`, grep the month's \`.txt\` for the date heading to pull that day's items
+`,"../../01_Phase1_Paper1/General_Awareness/Daily_Logs/August_2026_Daily.md":`# Daily GA — August 2026 (day-wise revision file)
 
 > Each day/cluster = event(s) + **Q-types**. Big items: 62nd MPC, SUDARSAN launch, GOBARdhan/Samudra Manthan schemes.
 > Sources: sebi.gov.in, rbi.org.in, PIB, affairsmap digests.
@@ -1405,6 +1454,8 @@ US–Iran conflict = backdrop for everything; SEBI's biggest circular month (GAR
 ### Oct 5–7 — **63rd RBI MPC: THE HIKE**
 - **Repo +25 bps → 5.50%** — FIRST HIKE SINCE FEB 2023 (snaps 4-meeting hold); stance **calibrated tightening**; CRR daily-average 90→**99%**; FY27 CPI **5.2%**, GDP **6.7%**; two external members dissented for pause
   Q-types: hike after how long? · stance word? · CRR rule change? · CPI/GDP prints?
+- **Oct 6:** **Jane Street vs SEBI before SAT** — US algo-trading firm denied SEBI's Bank Nifty manipulation charge (coordinated trades in constituent stocks → moved index → profited on derivatives); demanded SEBI's evidence docs
+  Q-types: manipulation alleged under which Regs (PFUTP 2003)? · SAT = appellate body under Sec 15K SEBI Act, appeal within 45 days, then SC · what is Bank Nifty?
 - **Oct 6:** SEBI — **Settlement Proceedings Regulations 2026 formally notified** (Sep 24 board → Oct notify → **in force Nov 7**); new term **RRT** (Regulatory Reporting Tribunal)
   Q-types: notification vs in-force dates? · what is RRT?
 - **Oct 6:** 3 Supreme Court judges appointed; **Justice Surya Kant** named next **CJI**
