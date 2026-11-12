@@ -1797,6 +1797,125 @@ GA isn't solved, it's recalled — but seeing the exact formats trains what to n
 ### How to use\r
 When you read daily affairs, mentally convert each item into one of these 10 formats ("who/which/year/HQ/purpose?"). That conversion is the whole GA skill — you're not reading news, you're collecting future MCQs.\r
 \r
+`,"../../01_Phase1_Paper1/General_Awareness/GA_Master_Threads.md":`# GA Master Threads — Jun–Nov 2026 (story-grouped revision)
+
+> Not date-wise — **story-wise**. Each thread chains related events into one sequence so you learn the narrative, not isolated facts.
+> Revise a thread = revise a whole MCQ cluster.
+
+## THREAD 1 — Settlement Regs: the full lifecycle (learn the chain)
+
+Consultation → Board approval → Gazette notification → In force
+
+1. **Sep 24** — SEBI Board #3 approves new Settlement Proceedings Regulations (replace 2018 rules). Formula: **Base × (S+R+G+A−M) + Legal Costs**
+2. **Oct 6** — formally notified; new body **RRT** (Regulatory Reporting Tribunal)
+3. **Nov 7** — **in force**. Post-SCN window 60→**90 days**; fast-track ≤₹10L; old rejected applicants get 90-day window at +20%
+4. **Nov 11** — **Eight Innovate Fund II** settles — first case under new RRT process
+   Q-types: order of the chain · formula letters · in-force date · who was first to settle
+
+## THREAD 2 — Rate cycle: hold → hold → HIKE
+
+1. **Jun 3–5 (MPC 61):** repo 5.25%, neutral, GDP 6.6%/CPI 5.1%
+2. **Jul 16:** unscheduled hold, GDP revised 6.9%
+3. **Aug 3–5 (MPC 62):** 4th straight hold — SDF 5.00, MSF 5.50
+4. **Oct 5–7 (MPC 63):** **+25 bps → 5.50%**, first hike since Feb 2023; stance → **calibrated tightening**; CRR daily-avg 90→99%; CPI 5.2/GDP 6.7; 2 externals dissented
+   Q-types: which MPC hiked? · stance after each · CRR change · "first hike since when?"
+
+## THREAD 3 — Finfluencer crackdown (SEBI's investor-protection push)
+
+Trigger: SEBI's own Investor Survey → **62% of investors influenced by finfluencers**
+
+- **Aug** — **Project SUDARSAN** (SupTech scanning unsolicited fin-ads) + **SEBI Check** (verify intermediaries) + **validated UPI handles (@valid)** + **Google Play verified-app label**
+- **Oct 1 onward** — mandatory Valid UPI handles; ~25% of RAs hadn't onboarded (mismatch/bank issues)
+- **Nov 12** — **Niveshak Shivir** announced (SEBI+PRAVAAH camp, Nov 17 Delhi)
+   Q-types: which tool does what · the 62% stat · @valid UPI purpose
+
+## THREAD 4 — Paytm Payments Bank: the whole saga
+
+Licence cancelled **Apr 24** (Sec 22(4) BR Act) → **Jul 8** Delhi HC orders winding up → **Jul 22** second order → **Jul 28** RBI announces liquidator **Girikumar M Nair** (ex-SBI CGM)
+   Q-types: liquidator name · which court · Act/section · sequence
+
+## THREAD 5 — AIF regulation arc
+
+- **Jun 16:** winding-up guidelines + 'Inoperative Fund' status
+- **Jul 30:** **GARUDA** — Green-channel AIF Rollout Upon Document Acknowledgement (PPM fast-track)
+- **Sep 24:** board extends investor-protection rules to all AIF forms
+   Q-types: GARUDA expansion · what it applies to · dates
+
+## THREAD 6 — PMS overhaul
+
+**Jul 23** consultation → **Sep 24** approved as **PMS Regulations 2026** → PMS can buy IPOs/primary debt; discretionary PMS ≤**10% AUM** in unlisted IG NCDs
+   Q-types: the 10% rule · replaced which year's regs
+
+## THREAD 7 — Mutual fund plumbing
+
+- **Jul 10:** intraday borrowing for MFs
+- **Jul 17:** SWP/STP extended to demat units
+- **Aug 14:** NDCF standardized for **InvITs**
+- **Nov 2:** DRs on REIT/InvIT units (framework) + OFS cooling-off for private InvITs
+- **Nov 5:** net-settlement framework
+   Q-types: NDCF expansion · which instrument each circular touches
+
+## THREAD 8 — IPO / market pipeline
+
+- **Jun:** primary market frozen (West Asia) → approval validity extended to Sep 30
+- **Oct 28:** **Jio Platforms** listing — India's largest IPO (~₹52k cr); parent Reliance
+- **Nov 12:** **Hindustan Coca-Cola Beverages** DRHP — largest beverage IPO
+   Q-types: largest IPO which company · DRHP expansion
+
+## THREAD 9 — Consumer protection / ombudsman
+
+- **Jul 1:** RBI Integrated Ombudsman — "One Nation, One Ombudsman"; ₹30L loss + ₹3L harassment caps; covers banks+NBFCs+PPIs+CICs
+- **Nov 7:** SEBI Settlement Regs (Thread 1)
+   Q-types: compensation caps · entities covered · scheme name
+
+## THREAD 10 — Schemes cluster (ministry + outlay is the MCQ)
+
+| Scheme | Outlay | Ministry/Purpose | When |
+|---|---|---|---|
+| GOBARdhan | ₹23,731 cr | dung→CBG bioenergy | approved Aug 6, launched Oct 1 |
+| Samudra Manthan | ₹84,084 cr | offshore oil/gas exploration | Aug |
+| PM VGSY | ₹7,395.55 cr | gainful employment | Oct 28 |
+| Container Mfg | ₹10,000 cr by FY40 | logistics | Oct 28 |
+| Khelo India goods | ₹1,856.67 cr | sports-goods mfg | Oct 28 |
+| NSAP extension | 5 yrs | social pensions | Oct 15 |
+| PLB | ₹2,009.61 cr | monitoring DB + free travel | Oct 15 |
+| Critical minerals CAPEX | ₹2,814 cr | 2 Li + 2 Ni assets | Nov 4 |
+| NBS revision | ₹62,370 cr | fertilizer subsidy | Nov 11 |
+| CGFMU + Stand-Up India | to Mar 2031 | SC/ST+women credit | Nov 11 |
+| ATF support | ₹10,000 cr | airline fuel relief | Jun |
+| PM SVANidhi | 6 yrs completed | MoHUA vendor loans ₹10k→20k→50k + 7% subsidy via SIDBI | Jun 1 |
+
+## THREAD 11 — Appointments mega-list (name ↔ post)
+
+- **Oct 12 six Governors:** Sudha Yadav→Karnataka · Braj Mohan Ram→Odisha · Dhal Singh Bisen→Uttarakhand · Dushyant Gautam→Sikkim · ISN Mathur→**Keralam** · RN Arlekar→TN
+- **RBI EDs:** Ravi Shankar (Jul 1, stats) · Monisha Chakraborty (Aug 3, forex+markets)
+- **Banks:** N.S. Vishwanathan→Axis chair · Anup Kumar Saha→Kotak MD&CEO (Jan 2027) · Mahesh Pai→South Indian Bank · Balaji Nuthalapadi→Equitas interim CEO
+- **Other:** Willie Walsh→IndiGo CEO · Varsha Aglawe→first woman GSI DG · S.C.L. Das→FSIB chair · Bimal Patel→ITLOS judge · Satya Pal Kumar→FIU-IND · Justice Surya Kant→next CJI · Gopal Vittal→GSMA chair · Smriti Mandhana→ODI captain + UNICEF ambassador
+
+## THREAD 12 — Indices & external validation
+
+- **Sep:** JCR upgrade BBB+→**A−** (first in 35 yrs — diverges above S&P/Fitch/Moody's BBB−)
+- FY26 GDP provisional **7.7%** (Q4 7.8%) · India → **7th** in mkt-cap (S Korea passed)
+- Forecasts: OECD 7.1% · Moody's 7% · SBI Q2 est 7.8%
+   Q-types: publisher→number matching · which agency upgraded
+
+## THREAD 13 — Big cases & tribunals
+
+- **Oct 6:** Jane Street vs SEBI before **SAT** — denied Bank Nifty manipulation (PFUTP 2003; SAT under Sec 15K SEBI Act; appeal 45 days → SC)
+- **Paytm PB** (Thread 4)
+   Q-types: SAT role/composition · which Regs · timeline
+
+## THREAD 14 — Payments & digital
+
+- **Jun:** UPI → **Cambodia** (NPCI Intl + ACLEDA) · RBI–Vietnam digital-payments MoU · BharatPe Flex (YES Bank credit line) · Sahamati = AA-ecosystem SRO
+- **Jul:** NPCI+HSBC/JPM intl UPI · Razorpay 'Banking Connect' · Paytm Europe PI licence
+- **Oct 1:** @valid UPI handles mandatory (Thread 3)
+
+## How to use
+
+1. Read one thread/day — the chain IS the MCQ
+2. After each thread, close the file and recite dates+names
+3. Cross-check any figure in \`Daily_Logs/\` or the C4S/BeePedia extractions in \`Current_Affairs/\`
 `,"../../01_Phase1_Paper1/General_Awareness/Monthly_Logs/August_2026.md":`# GA Log — August 2026
 
 > Backfilled from monthly banking-exam digests (AffairsMap/MintAffairs) + official SEBI/RBI/PIB sources.
@@ -2277,6 +2396,289 @@ When you read daily affairs, mentally convert each item into one of these 10 for
 
 ---
 **Recall check:** who established SEBI + when statutory + 3 mandates + 4 acts + chairman + 5 committees + 5 tools + settlement timeline — write from memory, mark misses.
+`,"../../01_Phase1_Paper1/General_Awareness/Test_Series/GA_Test_Plan_49Days.md":`# GA Test Series — 49 Days Plan
+
+> 10 exam-style MCQs per day × 49 days = **490 questions**, covering the full Jun–Nov 2026 window + static GA.
+> Source of truth: \`Daily_Logs/\`, \`GA_Master_Threads.md\`, C4S + BeePedia extractions.
+> Method: attempt cold → check key → mark misses → re-read that item in Daily_Logs.
+
+## Coverage map
+
+| Days | Block | File |
+|---|---|---|
+| 1–7 | **June + SEBI statics** | \`Week1_June_SEBI_Static.md\` ✅ |
+| 8–14 | July (SEBI's biggest circular month + Ombudsman + Paytm saga) | \`Week2_July.md\` |
+| 15–21 | August (MPC 62, SUDARSAN era, GOBARdhan) | \`Week3_August.md\` |
+| 22–28 | September (Board #3, JCR A−, BoP) | \`Week4_September.md\` |
+| 29–35 | October (rate hike, 6 Governors, CAS, Jane Street) | \`Week5_October.md\` |
+| 36–42 | November (Settlement in force, Jio IPO, Cabinet day) | \`Week6_November.md\` |
+| 43–49 | **Threads + mixed mock** — all months shuffled, trap-style | \`Week7_Mixed.md\` |
+
+## Daily ritual (10 min)
+
+1. Attempt that day's 10 Qs in exam spirit — no peeking
+2. Score: +1 right, −0.25 wrong (Paper 1 math)
+3. Any miss → open that day's \`Daily_Logs\` entry, re-read the item + Q-types line
+4. Log score in the dashboard tracker
+
+## Rules
+
+- 5 options per question (matches SEBI format)
+- Answer key at the end of each day block, inverted — cover while attempting
+- Missed questions get repeated inside Week 7 mixed tests — spaced repetition built in
+`,"../../01_Phase1_Paper1/General_Awareness/Test_Series/Week1_June_SEBI_Static.md":`# GA Test Series — Week 1 (Days 1–7): June 2026 + SEBI Statics
+
+10 questions/day · +1 / −0.25 · cover the answer key while attempting.
+
+## Day 1 — SEBI institutional statics
+
+**1.** SEBI was established (non-statutory) in —
+(a) 1985 (b) 1988 (c) 1990 (d) 1992 (e) 1995
+
+**2.** SEBI received statutory powers through the SEBI Act in —
+(a) 1988 (b) 1990 (c) 1992 (d) 1995 (e) 2000
+
+**3.** SEBI's headquarters is located in —
+(a) New Delhi (b) Chennai (c) Mumbai (d) Kolkata (e) Ahmedabad
+
+**4.** The current Chairperson of SEBI is —
+(a) Madhabi Puri Buch (b) Tuhin Kanta Pandey (c) Ajay Tyagi (d) U.K. Sinha (e) Sanjay Malhotra
+
+**5.** Which Act is NOT administered by SEBI?
+(a) SEBI Act 1992 (b) SCRA 1956 (c) Depositories Act 1996 (d) Banking Regulation Act 1949 (e) Companies Act provisions on securities
+
+**6.** The Securities Appellate Tribunal (SAT) was established under which section of the SEBI Act?
+(a) Section 11 (b) Section 15K (c) Section 22 (d) Section 30 (e) Section 15HA
+
+**7.** An appeal against a SEBI order must be filed before SAT within —
+(a) 15 days (b) 30 days (c) 45 days (d) 60 days (e) 90 days
+
+**8.** SCORES is SEBI's platform for —
+(a) credit scoring (b) investor grievance redress (c) IPO applications (d) insider-trading reports (e) FPI registration
+
+**9.** India moved to a T+1 settlement cycle for equities fully in —
+(a) 2021 (b) 2022 (c) 2023 (d) 2024 (e) 2025
+
+**10.** The Depositories Act relates to which two institutions?
+(a) RBI & NABARD (b) NSDL & CDSL (c) NSE & BSE (d) NPCI & CCAvenue (e) AMFI & APMI
+
+> **Key:** 1-b 2-c 3-c 4-b 5-d 6-b 7-c 8-b 9-c 10-b
+
+## Day 2 — June: RBI & banking
+
+**1.** The 61st MPC (Jun 3–5, 2026) kept the repo rate at —
+(a) 5.00% (b) 5.25% (c) 5.50% (d) 5.75% (e) 6.00%
+
+**2.** RBI's FY27 GDP projection at the June MPC was —
+(a) 6.3% (b) 6.5% (c) 6.6% (d) 6.9% (e) 7.1%
+
+**3.** RBI fined which bank ₹41.80 lakh in June for KYC/unclaimed-deposit lapses?
+(a) PNB (b) Canara Bank (c) Bank of Baroda (d) Union Bank (e) Indian Bank
+
+**4.** RBI signed a digital-payments MoU with the central bank of —
+(a) Thailand (b) Vietnam (c) Singapore (d) UAE (e) Mauritius
+
+**5.** UPI acceptance expanded to which country via NPCI International + ACLEDA Bank?
+(a) Laos (b) Cambodia (c) Myanmar (d) Indonesia (e) Philippines
+
+**6.** Which foundation was designated SRO for the Account Aggregator ecosystem?
+(a) Sahamati (b) ONDC (c) NPCI (d) IBPS (e) SIDBI
+
+**7.** BharatPe Flex, a UPI credit-line product, was launched with —
+(a) SBI (b) HDFC Bank (c) YES Bank (d) ICICI Bank (e) Axis Bank
+
+**8.** CGSMFI-2.0's large NBFC-MFI loan ceiling was raised to —
+(a) ₹500 cr (b) ₹750 cr (c) ₹1,000 cr (d) ₹1,500 cr (e) ₹2,000 cr
+
+**9.** CGSMFI-2.0 is implemented through —
+(a) RBI (b) NCGTC (c) SIDBI (d) EXIM Bank (e) NaBFID
+
+**10.** RBI fined Bank of Baroda and GIC Housing together —
+(a) ₹41.8 lakh (b) ₹55 lakh (c) ₹66.7 lakh (d) ₹80 lakh (e) ₹1 crore
+
+> **Key:** 1-b 2-c 3-b 4-b 5-b 6-a 7-c 8-c 9-b 10-c
+
+## Day 3 — June: SEBI actions
+
+**1.** SEBI's 2nd board meeting of 2026 was held on —
+(a) Jun 5 (b) Jun 12 (c) Jun 19 (d) Jun 24 (e) Jun 30
+
+**2.** On Jun 16, SEBI issued winding-up guidelines for —
+(a) mutual funds (b) AIFs (c) PMS (d) InvITs (e) REITs
+
+**3.** SEBI's Jun 17 press release cautioned investors against —
+(a) crypto apps (b) platforms trading unlisted-company shares (c) forex brokers (d) chit funds (e) NCD scams
+
+**4.** The 'Inoperative Fund' status introduced in June applies to —
+(a) AIFs (b) InvITs (c) REITs (d) debt MFs (e) ETFs
+
+**5.** EPI benefit was extended in June to which segment?
+(a) currency futures (b) commodity derivatives (c) index options (d) equity cash (e) debt ETFs
+
+**6.** SEBI proposed a Common Advertisement Code on —
+(a) Jun 16 (b) Jun 19 (c) Jun 23 (d) Jun 26 (e) Jun 30
+
+**7.** PAIA relaxation in June applied to —
+(a) all investment advisors (b) sales/non-core services staff (c) mutual fund distributors (d) research analysts (e) stock brokers
+
+**8.** Jun 22 circular consolidated/reviewed master circulars of —
+(a) banks (b) stock exchanges & clearing corporations (c) merchant bankers (d) depositories (e) AIFs
+
+**9.** SEBI's 1st board meeting of 2026 was on —
+(a) Jan 20 (b) Feb 14 (c) Mar 23 (d) Apr 11 (e) May 6
+
+**10.** AIF stands for —
+(a) Asset Investment Fund (b) Alternative Investment Fund (c) Accredited Investor Fund (d) Alternate Income Facility (e) Associated Investment Forum
+
+> **Key:** 1-c 2-b 3-b 4-a 5-b 6-c 7-b 8-b 9-c 10-b
+
+## Day 4 — June: schemes & economy
+
+**1.** PM SVANidhi completed how many years on Jun 1, 2026?
+(a) 4 (b) 5 (c) 6 (d) 7 (e) 8
+
+**2.** PM SVANidhi's loan ladder is —
+(a) ₹5k→10k→20k (b) ₹10k→20k→50k (c) ₹10k→25k→50k (d) ₹20k→50k→1L (e) ₹15k→30k→60k
+
+**3.** PM SVANidhi is administered by —
+(a) MoF (b) MoHUA (c) MSME Ministry (d) NITI Aayog (e) Labour Ministry
+
+**4.** The nodal lending institution for PM SVANidhi is —
+(a) NABARD (b) SIDBI (c) SBI (d) PNB (e) EXIM
+
+**5.** India–Oman CEPA came into force —
+(a) Jun 1 (b) Jun 15 (c) Jul 1 (d) May 30 (e) Jun 30
+
+**6.** Cabinet approved a one-time support for airlines' ATF costs of —
+(a) ₹5,000 cr (b) ₹7,500 cr (c) ₹10,000 cr (d) ₹15,000 cr (e) ₹20,000 cr
+
+**7.** FY26 provisional GDP growth (NSO) was —
+(a) 7.2% (b) 7.4% (c) 7.7% (d) 8.0% (e) 8.2%
+
+**8.** OECD raised India's FY27 GDP forecast to —
+(a) 6.0% (b) 6.3% (c) 6.6% (d) 6.9% (e) 7.1%
+
+**9.** India slipped to which rank in global market capitalization?
+(a) 5th (b) 6th (c) 7th (d) 8th (e) 9th
+
+**10.** West Bengal joined AB PM-JAY, taking coverage to —
+(a) 35 states/UTs (b) 36 states/UTs (c) all except Delhi (d) 34 states/UTs (e) 30 states/UTs
+
+> **Key:** 1-c 2-b 3-b 4-b 5-a 6-c 7-c 8-b 9-c 10-b
+
+## Day 5 — June: misc high-yield
+
+**1.** CCEA approved 4 NH projects worth —
+(a) ₹15,000 cr (b) ₹20,000 cr (c) ₹24,249 cr (d) ₹30,000 cr (e) ₹35,000 cr
+
+**2.** Mahindra's 50:50 life-insurance JV is with —
+(a) Prudential (b) Manulife (c) MetLife (d) AXA (e) Allianz
+
+**3.** SARTHAK-PDS relates to —
+(a) railways (b) PDS ration transport/handling automation (c) defence (d) education (e) health
+
+**4.** SkyCast aviation weather system was inaugurated by —
+(a) Jyotiraditya Scindia (b) Jitendra Singh (c) Nitin Gadkari (d) Piyush Goyal (e) Ashwini Vaishnaw
+
+**5.** ANRF's MAHA Water Mission outlay was —
+(a) ₹100 cr (b) ₹200 cr (c) ₹500 cr (d) ₹1,000 cr (e) ₹2,000 cr
+
+**6.** Delhi-NCR clean-air scheme outlay approved —
+(a) ₹5,000 cr (b) ₹9,585 cr (c) ₹12,000 cr (d) ₹15,000 cr (e) ₹20,000 cr
+
+**7.** VB-G RAM G relates to —
+(a) urban housing (b) rural employment successor framework (c) digital payments (d) defence (e) startups
+
+**8.** IFC invested ~$105M in which green-hydrogen firm?
+(a) ReNew (b) Hygenco (c) Greenko (d) Avaada (e) Adani Green
+
+**9.** Puducherry notified how many new SEZs in June?
+(a) 1 (b) 2 (c) 3 (d) 4 (e) 5
+
+**10.** Singer Suman Kalyanpur, who died in June, was known primarily as a —
+(a) classical dancer (b) playback singer (c) folk artist (d) actress (e) composer
+
+> **Key:** 1-c 2-b 3-b 4-b 5-b 6-b 7-b 8-b 9-b 10-b
+
+## Day 6 — Static: regulators & market bodies
+
+**1.** IRDAI regulates —
+(a) banks (b) insurance (c) pensions (d) commodities (e) payments
+
+**2.** PFRDA administers —
+(a) EPF (b) NPS (c) PM-JAY (d) MUDRA (e) PM-KISAN
+
+**3.** The forward/commodity segment was merged into SEBI's watch when FMC merged in —
+(a) 2010 (b) 2013 (c) 2015 (d) 2018 (e) 2020
+
+**4.** NPCI was incorporated in —
+(a) 2005 (b) 2008 (c) 2010 (d) 2012 (e) 2015
+
+**5.** FIU-IND works under the —
+(a) RBI (b) Ministry of Finance (c) SEBI (d) ED (e) CBI
+
+**6.** FSIB recommends heads of —
+(a) private banks (b) public-sector banks & insurers (c) NBFCs (d) RRBs only (e) cooperative banks only
+
+**7.** AMFI is the association of —
+(a) FPIs (b) mutual funds (c) merchant bankers (d) AIFs (e) insurance agents
+
+**8.** The Insolvency and Bankruptcy Code year is —
+(a) 2014 (b) 2015 (c) 2016 (d) 2018 (e) 2020
+
+**9.** GIFT City regulator for financial services is —
+(a) SEBI (b) RBI (c) IFSCA (d) IRDAI (e) PFRDA
+
+**10.** ODR platform in SEBI context means —
+(a) Open Data Registry (b) Online Dispute Resolution (c) Official Default Rate (d) Orderly Delisting Regime (e) Onshore Derivative Route
+
+> **Key:** 1-b 2-b 3-c 4-b 5-b 6-b 7-b 8-c 9-c 10-b
+
+## Day 7 — June recap + settlement basics
+
+**1.** Which MPC kept repo at 5.25% in June 2026?
+(a) 59th (b) 60th (c) 61st (d) 62nd (e) 63rd
+
+**2.** SEBI's settlement mechanism under 2018 Regs allowed settling —
+(a) only after SCN (b) at any stage (c) only pre-investigation (d) never for FPIs (e) only criminal cases
+
+**3.** T+0 settlement refers to settlement on —
+(a) same day (b) next day (c) 2 days (d) weekly (e) monthly
+
+**4.** India's market-cap rank drop to 7th was driven mainly by —
+(a) elections (b) West Asia shock + FII selling (c) GST change (d) bank crisis (e) drought
+
+**5.** DRHP stands for —
+(a) Draft Red Herring Prospectus (b) Direct Retail Holding Plan (c) Deposit Receipt Holding Paper (d) Draft Registrar Housing Protocol (e) Dual Rating Holder Panel
+
+**6.** Which of these launched 'StAR NPS' digital onboarding?
+(a) EPFO (b) PFRDA (c) LIC (d) IRDAI (e) NSDL
+
+**7.** The Street Vendors Act that anchors PM SVANidhi is from —
+(a) 2012 (b) 2014 (c) 2016 (d) 2018 (e) 2020
+
+**8.** OECD's June forecast for India's FY26 growth was —
+(a) 6.3% (b) 7.0% (c) 7.6% (d) 8.0% (e) 6.8%
+
+**9.** Gujarat's June MoU with Meta covered —
+(a) data centers (b) govt services via WhatsApp (c) chip design (d) AI labs (e) e-commerce
+
+**10.** 'Adarsh Shahar Samriddhi Yojana' belongs to —
+(a) Gujarat (b) Chhattisgarh (c) Odisha (d) MP (e) Rajasthan
+
+> **Key:** 1-c 2-b 3-a 4-b 5-a 6-b 7-b 8-c 9-b 10-b
+
+## Score log
+
+| Day | Score /10 | Missed items to re-read |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+| 4 | | |
+| 5 | | |
+| 6 | | |
+| 7 | | |
 `,"../../01_Phase1_Paper1/Quantitative_Aptitude/Formula_Sheet.md":`# Quantitative Aptitude — Learn the Tricks (Understand + Remember version)\r
 \r
 > Phase 1 Paper 1 Quant = **20 questions**. Good attempt: 15–16.\r
