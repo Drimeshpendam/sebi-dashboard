@@ -1069,6 +1069,446 @@ RBI 1935/nationalized 1949 · MPC 6 members · CPI target 4±2% · RTGS min ₹2
 
 ---
 **Recall check:** capex ₹? · fiscal deficit %? · effective capex % GDP? · debt-GDP? · 3 scheme names + outlays · biggest source of funds? · biggest spend head?
+`,"../../01_Phase1_Paper1/General_Awareness/Daily_Logs/August_2026_Daily.md":`# Daily GA — August 2026 (day-wise revision file)
+
+> Each day/cluster = event(s) + **Q-types**. Big items: 62nd MPC, SUDARSAN launch, GOBARdhan/Samudra Manthan schemes.
+> Sources: sebi.gov.in, rbi.org.in, PIB, affairsmap digests.
+
+## Week 1 · Aug 1–7
+
+### Aug 1
+- **Varsha Ashok Aglawe** = **54th DG, Geological Survey of India** — FIRST WOMAN to head GSI (founded 1851, HQ Kolkata); succeeded Asit Saha
+  Q-types: first woman head of which body? · GSI founding year/HQ? · she succeeded whom?
+
+### Aug 3
+- **Willie Walsh** = **IndiGo CEO** (ex-IATA DG, ex-IAG/BA), succeeding Pieter Elbers
+  Q-types: which airline's CEO? · his previous body (IATA)?
+- **Monisha Chakraborty** = **RBI ED** — Foreign Exchange + Financial Markets Regulation depts
+  Q-types: which RBI depts does she head? (the market-facing ones)
+- **Vishwesh Negi** = Ambassador to Iran
+
+### Aug 3–5
+- **62nd MPC:** repo held **5.25%** — 4th straight hold; neutral; SDF 5.00, MSF/Bank 5.50; Gov. Malhotra
+  Q-types: how many consecutive holds? · corridor rates?
+
+### Aug 5
+- RBI developmental measures → **Aug 12 draft: Interest Rates on Loans & Advances Directions 2026** — one harmonized framework for ALL regulated entities (banks+NBFCs+RRBs+co-ops); comments by Sep 11
+  Q-types: what did RBI harmonize? · applies to which entities?
+- **Cabinet Secy T.V. Somanathan + Home Secy Govind Mohan** — 1-yr extensions
+  Q-types: name↔post
+
+### Aug 6
+- **Cabinet: GOBARdhan National Circular Bioenergy Scheme ₹23,731 cr** (FY27–36) — dung/organic waste → Compressed Biogas; launched Oct 1
+  Q-types: outlay? · what is CBG made from? · when launched?
+
+## Week 2 · Aug 10–16
+
+### Aug 14 — double SEBI day
+- SEBI modified **OBPP framework** — *Online Bond Platform Providers = retail bond-buying apps; eased compliance → retail bond market push*
+  Q-types: OBPP = ___? · what does it do?
+- SEBI standardized **NDCF calculation for InvITs** — *Net Distributable Cash Flow = payout-able cash; one formula = comparable InvITs*
+  Q-types: NDCF expansion? · applies to which instrument?
+
+### Aug (mid-month)
+- **Cabinet: "Samudra Manthan" offshore exploration scheme ₹84,084 cr** till FY31 — deep-sea oil/gas, energy security
+  Q-types: scheme name? · outlay? · purpose?
+- **PM Surya Sarovar Yojana** (Jul approval, logged) — floating solar PV, ₹5,070 cr
+- **Upper Layer NBFC list FY27 → 17** (from 15) — Tata Sons retained; **REC, PFC, IRFC added**
+  Q-types: which entities added? · what is Upper Layer (scale-based regulation)?
+- **RBI deferred loan-recovery-agent norms to Jan 1, 2027** — agent certification + borrower-conduct rules
+- **Niyo Forex perpetual AD Cat-II licence; Indel Remit** for ₹25L trade remittances
+  Q-types: AD Cat-II vs Cat-I? (money-changers vs banks)
+
+## Week 3–4 · Aug 17–31
+
+### Aug (Chairman's Statement — bulletin)
+- **Project SUDARSAN launched** — SEBI SupTech scanning unsolicited financial ads/finfluencers — *trigger: SEBI Investor Survey = **62% of investors influenced by finfluencers***
+- **SEBI Check** + validated UPI handles — verify a real registered intermediary
+- **Google Play verified-app label** — first-of-its-kind partnership for trading apps
+  Q-types: which tool does WHAT (SUDARSAN vs SEBI Check vs Play label)? · the 62% stat?
+
+### Aug 19
+- **CCEA: 4 railway multi-tracking projects ₹9,450 cr**
+  Q-types: CCEA = Cabinet Committee on ___?
+
+### Aug (month clusters)
+- **SEBI consultation → PMS Regs overhaul proposed** (→ Sep 24 approval as PMS Regs 2026)
+- **IPO-approval validity extended to Sep 30** — West Asia war froze primary market → caused the Sep–Oct IPO rush
+- **PM-VBRY milestone:** 72 lakh first-time workers formalized (scheme launched Aug 2025)
+- **PM-AJAY:** 47,328 SC-majority villages selected (435 Telangana)
+- **Nasha Mukt Yuva Sankalp Abhiyan** — anti-drug youth campaign, 1 cr+ youth
+- **TN first TVK budget** — $1.5 trillion-economy target by 2031; FM **N. Marie Wilson**
+- **Standard Chartered** — IFSCA nod to distribute capital-market products from **GIFT City**
+- **Prasanta Mahapatra** = SEBI Executive Director
+
+## Month theme to remember
+Finfluencer crackdown era begins (SUDARSAN + 62% stat + verified apps) · RBI holds while building its harmonized lending-rate rulebook · mega-schemes month (GOBARdhan + Samudra Manthan).
+`,"../../01_Phase1_Paper1/General_Awareness/Daily_Logs/July_2026_Daily.md":`# Daily GA — July 2026 (day-wise revision file)
+
+> Each day/cluster = event(s) + **Q-types**. Heaviest SEBI month — 12 circulars + Paytm Bank saga + Ombudsman scheme.
+> Sources: sebi.gov.in, rbi.org.in, affairsmap/Hindu-Review digests.
+
+## Week 1 · Jul 1–5
+
+### Jul 1 — biggest banking day of the month
+- **RBI Integrated Ombudsman Scheme revamped, in force** — "One Nation, One Ombudsman"; banks+NBFCs+PPIs+CICs; **₹30L consequential loss + ₹3L time/harassment**; 30-day entity window, 90-day escalation window
+  Q-types: scheme name? · "One Nation One ___"? · compensation caps? · who can complain against whom?
+- **Ravi Shankar = RBI Executive Director** (Statistics & Information Mgmt) — career statistician
+  Q-types: new RBI ED name? · which dept?
+- **Ravi Agrawal re-appointed CBDT Chairman** (6-mo contract)
+  Q-types: CBDT = Central Board of ___? · who heads it?
+- **'Data Governance Guidance Framework'** — RBI for banks on data shared with vendors
+  Q-types: which regulator? · what does it govern?
+
+### Jul 2–3
+- **Air Marshal Ashutosh Dixit** = Vice Chief of Air Staff · **Anupam Misra** CMD Hindustan Copper · **Rear Admiral C. Raghuram** CMD Hindustan Shipyard · **Somnath Ghosh** HC to Malaysia
+- **Vikram Misri** — 1-yr extension as Foreign Secretary
+  Q-types: standard name↔post matching
+
+### Jul 3
+- SEBI — **handling of client's unpaid securities by Trading Members** circular
+  Q-types: what does it regulate? (broker handling of unpaid client shares)
+
+## Week 2 · Jul 6–12
+
+### Jul 7–10
+- SEBI — **IPF interest/income utilization norms for Depositories** (Jul 7)
+  Q-types: IPF = Investor ___ Fund? · which bodies hold it (NSDL/CDSL)?
+- SEBI — **intraday borrowing facility for mutual funds** (Jul 10)
+  Q-types: which entities can borrow intraday? · for what (redemption/settlement gaps)?
+- **Jul 8:** Delhi HC orders **Paytm Payments Bank winding up** (announced Jul 28) — liquidator **Girikumar M Nair** ex-SBI CGM; licence cancelled Apr 24 under Sec 22(4) BR Act
+  Q-types: liquidator's name? · under which Act/section licence cancelled? · which court?
+- **Jul 9:** **N.S. Vishwanathan** re-appointed Axis Bank Non-Exec Chairman; **Mahesh Muralidhar Pai** MD&CEO South Indian Bank
+  Q-types: RBI approval needed for bank chair/CEO — name↔bank
+
+## Week 3 · Jul 13–19
+
+### Jul 14–17
+- **Master Circular for Merchant Bankers** issued (Jul 14)
+  Q-types: which intermediary's rules consolidated?
+- **SEBI PR 40/2026 — "Boss Scam" caution** (Jul 17)
+  Q-types: what is Boss Scam? (impersonating bosses/regulators to extract info/money)
+- **SWP/STP standing instructions extended to demat MF units** (Jul 17)
+  Q-types: what facility? · to what holding form?
+- **Satya Pal Kumar (IRS 2005)** = Director **FIU-IND** — money-laundering intel agency
+  Q-types: FIU-IND full name? · who heads it?
+
+### Jul 16
+- **MPC (unscheduled hold):** repo 5.25% unanimous, neutral; FY27 GDP **6.9%**
+  Q-types: GDP projection? · stance?
+
+### Jul 19
+- **Spain won FIFA World Cup 2026** — 1–0 vs Argentina (a.e.t.), hosted USA/Canada/Mexico
+  Q-types: winner + runner-up + score + hosts — classic sports item
+
+## Week 4 · Jul 20–31
+
+### Jul 21
+- SEBI — **promoter holdings frozen at ISIN level** under Buy-back Reg 24(i)(ea)
+  Q-types: during what event? · frozen at what level (ISIN)?
+- SEBI — **certification required to distribute SIFs** (Specialized Investment Funds)
+  Q-types: distributors of which product need certification?
+
+### Jul 23 — triple-SEBI day
+- Circular — **transmission of securities simplified** (heir claims standardized)
+- Consultation — **comprehensive PMS Regulations 2020 review** (→ Sep approval)
+- Consultation — **ODR (Online Dispute Resolution) streamlining**
+  Q-types: transmission = transfer to ___? · ODR = ___?
+
+### Jul 28
+- RBI announced **Paytm Payments Bank winding-up order** (Delhi HC orders Jul 8 + Jul 22)
+  Q-types: which bank wound up? · liquidator? · licence cancelled when?
+
+### Jul 30
+- SEBI launched **GARUDA** — 'Green-Channel: AIF Rollout Upon Document Acknowledgement' for AIF PPMs
+  Q-types: GARUDA expansion? · applies to what (AIF placement memorandums)? · green-channel = ?
+
+### Month-end clusters
+- **Rajiv Kumar** (ex-Finance Secy, ex-CEC) → **HDFC Bank part-time Chairman** (RBI nod pending; followed Chakraborty's March exit)
+- **RBI fines BoB + GIC Housing ₹66.7 lakh** · **628 circulars → 64 Master Directions** · **NPCI+HSBC/JPM intl UPI** · **Razorpay+NBBL 'Banking Connect'** · **Paytm Europe PI licence (Luxembourg)** · **Sahakar CBS** for UCBs · **IRDAI 137th meeting — SBSR Act** · **US Fed held 3.50–3.75%** (3 dissents)
+- **Obit/awards:** PM Modi — Seychelles 'Guardian of the Blue Horizon'; PM visited Australia; India hydrogen fuel-cell train unveiled; Global Tiger Day Jul 29
+
+## Month theme to remember
+US–Iran conflict = backdrop for everything; SEBI's biggest circular month (GARUDA, SIFs, transmission, buyback freezing); Paytm PB saga ENDED here; Ombudsman = the consumer-protection headline.
+`,"../../01_Phase1_Paper1/General_Awareness/Daily_Logs/June_2026_Daily.md":`# Daily GA — June 2026 (day-wise revision file)
+
+> Revision format: each day = the event(s) that mattered + **Q-types** (the actual ways SEBI frames questions from it).
+> Sources: sebi.gov.in/rbi.org.in/pib + affairsmap & adda247 monthly compilations. Days with no high-yield item are marked — nothing invented.
+
+## Week 1 · Jun 1–7
+
+### Jun 1
+- **PM SVANidhi completed 6 years** (launched Jun 2020, MoHUA) — collateral-free vendor loans ₹10k→₹20k→₹50k + UPI cashback; legal base Street Vendors Act 2014
+  Q-types: which ministry? · loan ladder amounts? · launch year? · under which Act?
+- **India–Oman CEPA came into force** — trade pact (goods+services tariff cuts) — *biggest June trade item*
+  Q-types: CEPA with which country? · effective date? · CEPA vs FTA difference?
+
+### Jun 3–5
+- **61st RBI MPC** — repo held **5.25%** unanimous, neutral stance; FY27 GDP revised **6.6%**, CPI **5.1%**; supply-chain disruption flagged
+  Q-types: repo after June MPC? · GDP/CPI projections? · stance word? · how many MPC members + who chairs?
+
+### Jun 5–7
+- **West Bengal joined AB PM-JAY** — 36th state/UT; ₹5L/yr/family health cover — *scheme coverage now effectively pan-India*
+  Q-types: which state joined (last)? · cover amount? · scheme full form?
+- **RBI fined Canara Bank ₹41.80 lakh** — KYC + unclaimed-deposit violations
+  Q-types: which bank fined? · for what violation?
+
+## Week 2 · Jun 8–14
+
+### Jun 8–12 (mid-June cluster)
+- **Cabinet:** ₹10,000 cr one-time **ATF price support** for scheduled airlines (West Asia fuel shock)
+  Q-types: amount? · for which fuel/sector? · why (context)?
+- **CGSMFI-2.0 extended** to Aug 31, 2026 / ₹20,000 cr cap; large NBFC-MFI loan ceiling raised **₹300 cr → ₹1,000 cr** (20% of AUM); scheme via NCGTC, launched Mar 20, 2026
+  Q-types: new ceiling? · implementing body? · original scheme year?
+- **RBI–Vietnam central bank MoU** on digital-payments cooperation
+  Q-types: which country's central bank? · for what area?
+- **SARTHAK-PDS scheme** approved — 5 years; ration transport+handling automation in PDS
+  Q-types: scheme name expansion? · duration? · which ministry?
+- **SkyCast aviation weather system** inaugurated at IGI Airport by **Dr. Jitendra Singh**
+  Q-types: which minister? · where launched?
+
+### Jun 11
+- SEBI circular — **extension of timelines** for compliance with Jan 2, 2026 circular provisions
+  Q-types: what did SEBI extend? (low-yield — awareness level)
+
+### Jun 12–13
+- **India–US bilateral framework on critical minerals & rare earths** signed — supply-chain security
+  Q-types: which strategic sector? · between which countries?
+
+## Week 3 · Jun 15–21
+
+### Jun 16
+- SEBI — **winding-up guidelines for AIFs**: retention of proceeds + 'Inoperative Fund' status
+  Q-types: which instrument (AIF)? · what is 'inoperative fund' status?
+
+### Jun 17
+- SEBI PR — **caution on platforms trading unlisted-company securities**
+  Q-types: what did SEBI caution about? (grey-market apps)
+
+### Jun 19 — **SEBI Board Meeting #2 of 2026**
+- Key decisions PR issued same day (2026 meetings: Mar 23, Jun 19, Sep 24)
+  Q-types: date of board meeting? · which meeting number in 2026?
+- **EPI benefit extended to commodity derivatives** — early pay-in margin relief clarification
+  Q-types: EPI applies to which segment now?
+
+### Jun 19–21
+- **CCEA approved 4 National Highway projects ₹24,249 cr** — Odisha, Telangana, Bihar, MP
+  Q-types: approving body (CCEA)? · outlay? · states?
+- **FY26 GDP provisional: 7.7%** (Q4: 7.8%), GDP ₹323.12 lakh cr — NSO release
+  Q-types: FY26 growth? · which body releases (NSO under MoSPI)?
+- **NPCI Intl + ACLEDA Bank** — UPI acceptance in **Cambodia** (4.5M merchants)
+  Q-types: UPI expanded to which country? · partner bank?
+
+## Week 4 · Jun 22–30
+
+### Jun 22
+- SEBI — comprehensive review of **Master Circulars for Stock Exchanges & Clearing Corporations + Commodity Derivatives**
+  Q-types: what did SEBI consolidate? (ease of doing business drive)
+
+### Jun 23
+- SEBI proposed **Common Advertisement Code** for regulated entities (→ approved Sep 24)
+  Q-types: what is the Common Ad Code? · when proposed vs approved?
+
+### Jun 24
+- SEBI — **PAIA certification relaxation** for sales/non-core services
+  Q-types: PAIA = Persons Associated with Investment Advice — who got relief?
+
+### Jun 26–30 (month-end cluster)
+- **Sahamati Foundation designated SRO** for Account Aggregator ecosystem (RBI)
+  Q-types: which body became SRO? · for what ecosystem? (AA = consent-based data sharing)
+- **PFRDA launched StAR NPS** — digital onboarding for pension subscribers
+  Q-types: StAR belongs to which regulator? · for what purpose?
+- **Mahindra + Manulife 50:50 life insurance JV** — Mahindra Manulife Insurance Ltd (MCA nod)
+  Q-types: partners? · sector? · shareholding?
+- **BharatPe Flex** — UPI payments via credit line (with YES Bank)
+  Q-types: what product? · partner bank?
+- **VB-G RAM G framework** released — ₹1.25 lakh cr (incl. ₹95,692 cr interim); rural employment successor framework
+  Q-types: outlay? · VB-G RAM G stands for? (Viksit Bharat–Rozgar Ajeevika Mission–Gramin)
+- **Delhi-NCR 2-yr clean-air scheme** approved — ₹9,585 cr; old-vehicle replacement push
+  Q-types: outlay? · target problem?
+- **India dropped to 7th in global market cap** — overtaken by South Korea (FII selling + weak earnings)
+  Q-types: India's mkt-cap rank? · which country overtook?
+- **OECD raised India FY27 GDP to 6.3%** (+20 bps; FY26 seen 7.6%)
+  Q-types: which body's forecast? · number?
+- **India drops to 7th / June obituaries:** Suman Kalyanpur (singer, 89) died
+- **Other June items:** Puducherry 2 new SEZs notified · Gujarat–Meta MoU (WhatsApp govt services) · Andhra Angel Fund (AI/deep-tech startups) · Odisha–Intel+3DGS MoU · Chhattisgarh 'Adarsh Shahar Samriddhi Yojana' · NSDC–FVCC (Japan) workforce mobility · ANRF ₹200 cr MAHA Water Mission + patent-training portal · IFC $105M Hygenco green H2 · ADB–StanChart supply-chain finance
+
+## Month theme to remember
+- West Asia crisis (oil→ATF support→FPI outflows→market-cap drop) · SEBI's "ease of doing business" cleanup drive · UPI internationalization (Cambodia)
+`,"../../01_Phase1_Paper1/General_Awareness/Daily_Logs/November_2026_Daily.md":`# Daily GA — November 2026 (through Nov 13 — month still running)
+
+> Each day = event(s) + **Q-types**. Headlines: Settlement Regs in force Nov 7, Jio Platforms listing, Cabinet mega-day Nov 11.
+> Sources: sebi.gov.in, rbi.org.in, PIB.
+
+## Nov 2 — double SEBI day
+- **Framework for DRs on REIT/InvIT units issued** (implements Sep 24 board decision) — *foreign investors get DR route into Indian trust units*
+- **Cooling-off requirement for OFS of privately-placed InvITs** — gap needed before public offer
+  Q-types: which instrument got DRs? · OFS cooling-off applies to which?
+
+## Nov 3
+- **SBM-Gramin Phase-II extended to Mar 2028** — ₹7,000 cr; ODF+ sustainability
+  Q-types: SBM-G = Swachh Bharat Mission-___? · extension to when? · outlay?
+- **Gopal Vittal** (Bharti Airtel MD) = **GSMA Chairman 2027–28**
+  Q-types: GSMA = telecom industry body — name↔post
+- **Venkata Ramana Akkaraju** = IMU Vice-Chancellor · **Balaji Nuthalapadi** = Equitas SFB interim CEO
+
+## Nov 4
+- **Cabinet: ₹2,814 cr CAPEX for critical minerals** — 2 lithium + 2 nickel assets
+  Q-types: for what sector? · how many assets? · links to Jun India–US critical-minerals framework
+- SEBI — review of **KYC norms for PROI clients** (Portfolio-related/Offshore Instruments)
+
+## Nov 5
+- SEBI — **underlying-exposure limits in currency derivatives** revised
+- SEBI — accredited-investor framework review continued (board follow-through)
+- SEBI — **mutual-fund net-settlement framework** circular
+  Q-types: net settlement = settling only the ___ amount?
+
+## Nov 7 — **Settlement Regs 2026 IN FORCE**
+- The Sep 24 → Oct 6 → Nov 7 chain completes. Formula + RRT + ₹10L fast-track all live.
+  Q-types: "from which date are Settlement Regs 2026 effective?" — Nov 7, 2026
+
+## Nov 11 — **Cabinet mega-day + FATCA**
+- SEBI — **FATCA/CRS compliance circular** for FIs (reporting foreign nationals' accounts to tax authorities)
+  Q-types: FATCA is a ___ law (US); CRS is a ___ framework (OECD)
+- **Cabinet (4 approvals):** National Museum upgrade **₹3,230 cr** · Mumbai Aqua Line extension **₹2,390 cr** · Nutrient-Based Subsidy revision **₹62,370 cr** (winter fertilizer subsidies) · **CGFMU + Stand-Up India extended to Mar 2031**
+  Q-types: NBS = subsidizing what? · Stand-Up India targets which borrowers (SC/ST + women)?
+- **Eight Innovate Fund II** settlement — first under new RRT process
+- Markets: **Sensex 81,879 / Nifty 25,255** — post-hike rally on earnings
+
+## Nov 12
+- **Niveshak Shivir announced** — SEBI+PRAVAAH national investor-awareness camp, **Nov 17, Delhi**
+  Q-types: event name? · which bodies? · where/when?
+- **Hindustan Coca-Cola Beverages filed DRHP** — India's largest beverage IPO attempt
+  Q-types: which company filed? · DRHP = Draft ___ Herring Prospectus
+
+## Nov (IPO + economy cluster)
+- **Jio Platforms listed** — India's largest IPO ever (~₹52,000+ cr raised); parent Reliance — *listing arrived with lock-in + telecom-regulatory-risk discussion*
+  Q-types: largest IPO which company? · parent? · approximate size?
+- **Growth prints:** SBI Research Q2 FY27 GDP est **7.8%**; Moody's India FY27 **7%**; OECD held **7.1%**; El Niño caution flagged for FY28 food inflation
+  Q-types: publisher→number matching is the standard MCQ form
+
+## Month theme to remember
+**Regulation goes live + primary market heats up** — Settlement Regs took effect, DR-on-InvIT framework landed, and the Jio + Coca-Cola IPO pipeline became the biggest market story.
+`,"../../01_Phase1_Paper1/General_Awareness/Daily_Logs/October_2026_Daily.md":`# Daily GA — October 2026 (day-wise revision file)
+
+> Each day/cluster = event(s) + **Q-types**. Headlines: Settlement Regs notified, 63rd MPC RATE HIKE, CAS revised, 6 Governors in one day.
+> Sources: sebi.gov.in, rbi.org.in, PIB, digests.
+
+## Oct 1–7
+
+### Oct 1
+- **Bimal Patel re-elected ITLOS judge** (International Tribunal for the Law of the Sea) 2027–2035; **Maurice Kamga** = ITLOS President
+  Q-types: which tribunal? · India's judge? · who is president?
+- **GOBARdhan scheme launched** (approved Aug 6 — ₹23,731 cr circular-bioenergy push)
+  Q-types: approval vs launch date (trap)
+
+### Oct 5–7 — **63rd RBI MPC: THE HIKE**
+- **Repo +25 bps → 5.50%** — FIRST HIKE SINCE FEB 2023 (snaps 4-meeting hold); stance **calibrated tightening**; CRR daily-average 90→**99%**; FY27 CPI **5.2%**, GDP **6.7%**; two external members dissented for pause
+  Q-types: hike after how long? · stance word? · CRR rule change? · CPI/GDP prints?
+- **Oct 6:** SEBI — **Settlement Proceedings Regulations 2026 formally notified** (Sep 24 board → Oct notify → **in force Nov 7**); new term **RRT** (Regulatory Reporting Tribunal)
+  Q-types: notification vs in-force dates? · what is RRT?
+- **Oct 6:** 3 Supreme Court judges appointed; **Justice Surya Kant** named next **CJI**
+  Q-types: incoming CJI name?
+- **Oct 7:** SEBI — **Credit Risk-o-Meter** for all debt MF schemes (formula-based risk score to be published)
+  Q-types: what does it measure? · which schemes?
+- **Oct 7:** SEBI — merchant bankers **exempted from DT Regs** for private debt-issue management
+  Q-types: which intermediary got relief?
+
+### Oct 6–7 (RBI/banking)
+- **Anup Kumar Saha** = next Kotak Mahindra Bank MD&CEO from Jan 1, 2027
+  Q-types: name↔bank + effective date
+
+## Oct 8–15
+
+### Oct 10–13
+- **Prakash Rajpurohit** (IAS) = Deputy Election Commissioner · **Sudhakar Dalela** = Ambassador to Nepal · **L. Murugan** resigned Minister of State (Oct 13)
+
+### Oct 11
+- **Smriti Mandhana** = India's full-time **ODI captain** (Oct 6) + **UNICEF India Ambassador** (Oct 11) — *same person, two appointments = classic cross-item MCQ*
+- **Rajeshwari Kumari** = OCA Athletes' Committee member — trap shooting
+
+### Oct 12 — **SIX GOVERNORS IN ONE DAY** (highest-yield appointment day of the quarter)
+- **Sudha Yadav → Karnataka · Braj Mohan Ram → Odisha · Dhal Singh Bisen → Uttarakhand · Dushyant Gautam → Sikkim · Indra Sena Reddy Mathur → Keralam (renamed Kerala) · RN Arlekar → Tamil Nadu**
+  Q-types: state↔name matching ×6 · "Keralam" rename detail
+
+### Oct 15
+- SEBI circular — **CAS (Closing Auction Session) revised**: 20-min session **3:30–3:40pm**, 3 phases (Order Entry→Matching→Buffer), reference price = last **5-min VWAP**; effective **Dec 7, 2026**; brokers' order-transfer window extends to **Feb 8, 2027**
+  Q-types: session timing? · reference-price basis? · effective dates?
+- **Cabinet: NSAP extended 5 yrs** + **PLB Scheme approved ₹2,009.61 cr** (centralized monitoring DB + free-travel scheme)
+  Q-types: PLB outlay? · what does NSAP cover (pensions)?
+
+### Oct 16
+- **S.C.L. Das** = FSIB Chairman (follows Parameswaran Iyer — 8th consecutive IAS in the post)
+  Q-types: what does FSIB do? (selects public-sector bank/insurer heads)
+
+## Oct 22–31
+
+### Oct 22
+- SEBI — **margin obligation waived for post-EPI settlement** in cash segment
+  Q-types: margin waived after what mechanism (Early Pay-In)? · which segment?
+- **Khet Bachao Abhiyan began** (Oct 22–Nov 30) — Soil Health Card-based fertilizer campaign
+
+### Oct 23
+- SEBI — **Research Analysts' call-records requirement relaxed for institutional clients** (retail stays protected)
+  Q-types: relaxed for which client category?
+
+### Oct 27–30
+- **Oct 27:** Designated Time-limits for Outside Activities of Designated Employees — approval timelines fixed
+- **Oct 28:** **Jio Platforms DRHP → listing** — India's largest-ever IPO (details in Nov file)
+- **Oct 28:** **Cabinet triple** — PM VGSY ₹7,395.55 cr (gainful employment) · Container Manufacturing ₹10,000 cr by FY40 · Khelo India sports-goods ₹1,856.67 cr
+- **Oct 30:** SEBI — FPI KYC re-verification periodicity + digital-accessibility deadline extended
+
+## Oct (economy cluster)
+- **CPI ~6%** (near upper band) → justified the hike; credit growth **+19.4%**; banks raised MCLR; rupee **₹93.7–93.9/$** record lows
+
+## Month theme to remember
+**Rate-cycle turn** (first hike in 3+ years) + **the Sep 24 board decisions landing** (Settlement Regs notified, CAS revised) + the **6-Governor sweep** — Oct is the month's exam candy.
+`,"../../01_Phase1_Paper1/General_Awareness/Daily_Logs/September_2026_Daily.md":`# Daily GA — September 2026 (day-wise revision file)
+
+> Each day/cluster = event(s) + **Q-types**. The month is dominated by ONE day — Sep 24 SEBI Board Meeting #3 (12 decisions — the year's biggest regulatory dump).
+> Sources: sebi.gov.in, rbi.org.in, PIB, digests.
+
+## Sep 12
+- SEBI consultation — **Closing Auction Session changes** (closing-price mechanism review; 20,000+ comments → revised circular Oct 15)
+  Q-types: what does CAS determine? (official closing prices) · consultation→circular chain?
+
+## Sep 24 — **SEBI BOARD MEETING #3 of 2026** (after Mar 23, Jun 19)
+*12 approvals — memorize the headline 4 cold:*
+
+- **NEW Settlement Proceedings Regulations** (replace 2018) — formula **Base × (S+R+G+A−M) + Legal Costs**; settle BEFORE SCN (60 days); post-SCN window 60→**90 days**; fast-track ≤**₹10 lakh**; old rejected applicants get 90-day window at +20%; wrongful gains disgorged separately
+  Q-types: the formula letters S/R/G/A/M? · new post-SCN window? · monetary fast-track limit? · in force when (Nov 7)?
+- **PMS Regulations 2026** (replace 2020) — PMS can invest in IPOs/primary debt; discretionary PMS up to **10% AUM in unlisted investment-grade NCDs**
+  Q-types: what new asset access? · the 10% rule?
+- **FPIs allowed in ETCDs** (Exchange-Traded Commodity Derivatives)
+  Q-types: who was allowed where? · ETCD = commodity F&O
+- **Depository Receipts on REIT & InvIT units** approved — *lets foreign investors buy Indian infra/trust units as DRs (framework issued Nov 2)*
+  Q-types: DRs on which instruments? · purpose (foreign access)?
+- Also approved: **Vault Managers Regs scope expansion** · **Common Advertisement Code** (proposed Jun 23) · CAPSM Regs 2007 amendment · Accredited Investor framework review · AIF investor-protection extended to all forms
+  Q-types: which got "approved" vs "reviewed" (trap)?
+
+## Sep (RBI — no MPC month)
+- **WMA Advisory Committee (Chair: I.S.N. Prasad):** states' WMA limit **₹61,008 cr → ₹67,839 cr** (+11.2%); annual revision capped at 4% of revenue receipts; FY26 usage: 19 states SDF / 11 WMA / 10 OD
+  Q-types: WMA = Ways and Means ___? · new limit? · committee chair?
+- **Q1 FY27 BoP:** CAD **$4.2 bn (0.5% GDP)** vs 0.4%; capital account net OUTFLOW $5.5bn; **FPI outflow $9.6bn**
+  Q-types: CAD as % GDP? · why capital outflow (West Asia risk-off)?
+
+## Sep (schemes/economy)
+- **JCR upgraded India BBB+ → A−** — first upgrade in **35 years**, stable outlook — *non-Big-3 agency rating above S&P/Fitch/Moody's BBB−*
+  Q-types: which agency? · to what grade? · why notable?
+- **OECD Interim:** India FY27 GDP **+80 bps → 7.1%**
+  Q-types: publisher + number (recurring ask)
+- **Semicon 2.0 — ₹1,27,500 cr** (approved Jul 15; Sep push) — 6 pillars incl. fabs, ATMP/OSAT, talent
+  Q-types: outlay? · for what sector?
+- **TN:** CM **C. Joseph Vijay** (TVK govt) announced **Olympic City in Chennai**
+  Q-types: state + project + the TVK government detail
+- **Khet Bachao Abhiyan** announced — Soil Health Card-based fertilizer campaign (ran Oct 22–Nov 30)
+- **VI relaunched brand — Shah Rukh Khan ambassador**; 25-month-high shares
+
+## Sep (other/high-yield)
+- Moody's/other rating context: India remains BBB− at S&P/Fitch/Moody's — *JCR divergence is the exam point*
+
+## Month theme to remember
+**"Sep 24 or bust"** — the SEBI board day carries the month: Settlement + PMS Regs approved here (consultation→board→notify→in-force is the rulemaking chain exams trace). RBI quiet; global rating optimism (JCR A− + OECD 7.1%) vs capital outflows.
 `,"../../01_Phase1_Paper1/General_Awareness/Financial_Awareness/SEBI_Markets_Notes.md":`# Financial Awareness — SEBI & Capital Markets (exam-critical GA)
 
 > GA = **20 questions** in Paper 1 and the cheapest marks in the exam (pure recall, ~30 sec/question).
