@@ -965,6 +965,110 @@ omnipotent (all-powerful) · omniscient (all-knowing) · altruist (selfless) · 
 **Rules of thumb:** "No error"/"No improvement" is right ~20% of the time — don't force one. Fillers: both words must earn their place. RC: passage only, never outside knowledge. −0.25 marking → 50/50 guesses worth it, blind ones not.\r
 \r
 **Daily drill:** 10 min — 5 rules from Part 1, rewritten from memory with your own example. 15 min — 20 mixed MCQs (Testbook chapter tests, real weightage). 5 min — log every wrong answer with the rule number it broke.\r
+`,"../../01_Phase1_Paper1/General_Awareness/Banking_Awareness_Core.md":`# Banking & Financial Awareness — Core Static Notes
+
+> The "financial awareness" half of GA — RBI, banking terms, payment systems, institutional landscape. Stable facts = free marks.
+> Format: **fact** → *context / exam angle*.
+
+## RBI — The Institution
+- **Established:** Apr 1, 1935 under **RBI Act, 1934** — *originally private-shareholder bank; **nationalized Jan 1, 1949**.*
+- **HQ:** Mumbai (moved from Kolkata, 1937).
+- **First Governor:** Sir Osborne Smith; **first Indian Governor:** C.D. Deshmukh; **26th/current:** **Sanjay Malhotra** (since Dec 11, 2024, ex-Revenue Secretary).
+- **Core functions:** monetary policy (MPC), currency issue (sole issuer except ₹1 note — that's the **Finance Ministry**), banker to government, banker's bank, lender of last resort, forex reserves manager, banking regulator.
+- **MPC:** 6 members (3 RBI + 3 external govt nominees), Governor chairs; inflation target **CPI 4% ± 2%**; bi-monthly meetings (Jun/Aug/Oct/Dec/Feb/Apr).
+
+## Policy Rates (current — Nov 2026)
+| Rate | Value | What it does |
+|---|---|---|
+| Repo | **5.50%** | RBI lends to banks vs securities — the policy signal |
+| SDF | **5.25%** | floor — banks park money with RBI (replaced reverse repo as floor, Apr 2022) |
+| MSF & Bank Rate | **5.75%** | ceiling — emergency borrowing |
+| Fixed reverse repo | 3.35% | legacy floor reference |
+| CRR | 3.00% | % of deposits parked at RBI, no interest |
+| SLR | 18% | % of deposits in liquid assets (g-secs etc.) |
+- *LAF corridor: SDF (floor) — repo — MSF (ceiling). Chain: repo↑ → MCLR↑ → EMI↑.*
+
+## Payment Systems (names + who runs them)
+- **NPCI** (2008, RBI+IBA umbrella) runs: **UPI** (2016, instant mobile payments), **IMPS** (24×7 immediate), **NEFT** (half-hourly batches, 24×7 now), **RuPay**, **AePS**, **NACH**, **BBPS/Bharat BillPay**.
+- **RTGS** — RBI-run, real-time gross settlement for big transfers (**min ₹2 lakh**).
+- **NEFT vs RTGS vs IMPS vs UPI** — *the comparison table is a classic question: RTGS = large/instant, NEFT = batch, IMPS = small/instant pre-UPI, UPI = mobile/instant/free-ish.*
+
+## Banking History & Structure
+- **Nationalization:** 14 banks in **1969**, 6 more in **1980**; mergers 2017–20 → 12 PSBs now.
+- **SBI:** formed 1955 (from Imperial Bank of India, est. 1921).
+- **DFIs/regulators:** NABARD (1982, agri), SIDBI (1990, MSME), EXIM Bank (1982), NHB (1988, housing), IRDAI (1999, insurance), PFRDA (2003, pensions), **IFSCA** (2020, GIFT City IFSC).
+- **Small Finance Banks / Payments Banks:** differentiated licences (2015) — PBs take deposits ≤₹2L, can't lend; SFBs lend to priority segments.
+- **DICGC:** deposit insurance **₹5 lakh** per depositor per bank (raised from ₹1L in Feb 2020).
+
+## NPA / Prudential Terms
+- **NPA** = loan unpaid 90+ days; **GNPA watch** — RBI's Financial Stability Report tracks it.
+- **Basel III:** capital-adequacy framework (CRAR norms) — Indian banks follow Basel-III phased norms.
+- **Priority Sector Lending:** banks must lend **40%** of ANBC to PSL (agri, MSME, housing, education, weaker sections).
+- **PCA** = Prompt Corrective Action — RBI's restrictions on weak banks.
+- **WMA** = Ways & Means Advances — RBI's short-term lending to Centre/States.
+- **Integrated Ombudsman (2026 revamp):** one scheme for banks+NBFCs+PPIs+CICs; **₹30 lakh** max consequential-loss compensation.
+
+## Financial-Market Terms SEBI GA Loves
+- **IPO/DRHP/RHP** — draft vs final prospectus · **ASBA** — Application Supported by Blocked Amount · **QIB/FPI/NII/Retail** — IPO quota categories
+- **FPO, rights issue, preferential allotment, QIP** — ways listed cos raise money
+- **Green shoe option** = over-allotment option (~15%)
+- **Bull/Bear, circuit breakers (5/10/20%), price bands, T+1/T+0 settlement**
+- **Futures/Options, open interest, margin, MTM**
+- **Mutual fund NAV, SIP/SWP/STP, expense ratio, AUM, debt vs equity vs hybrid funds**
+- **Corporate bond vs G-sec; yield-price inverse; duration; credit ratings (AAA→D)**
+
+## Quick Recall List (write these cold)
+RBI 1935/nationalized 1949 · MPC 6 members · CPI target 4±2% · RTGS min ₹2L · UPI by NPCI 2016 · DICGC ₹5L · PSL 40% · NPA = 90 days · first Indian RBI Gov C.D. Deshmukh · current Gov Sanjay Malhotra · IFSCA = GIFT City · SFB vs Payments Bank difference.
+
+---
+**Recall check:** rates table blank-fill · payment-system comparison · 1969 vs 1980 nationalization · who issues ₹1 note (trap — Finance Ministry, not RBI).
+`,"../../01_Phase1_Paper1/General_Awareness/Budget_Economy_FY27.md":`# Union Budget FY27 (2026-27) — Key Numbers & Announcements
+
+> Presented Feb 2026 by FM Nirmala Sitharaman. Budget numbers are guaranteed GA questions — memorize the deficit %, capex, and headline schemes.
+> Format: **number** → *what it means / why it's asked*.
+
+## The Big Numbers (memorize cold)
+
+| Item | FY27 BE | Context |
+|---|---|---|
+| **Total expenditure** | **₹53.47 lakh cr** | +7.7% vs FY26 RE (₹49.6L cr) |
+| **Capital expenditure (capex)** | **₹12.22 lakh cr** | Highest-ever; +11.5% YoY; ~3.1% of GDP — *the "capex-led growth" theme* |
+| **Effective capex** | **₹17.15 lakh cr** | = capex + grants creating capital assets; **4.4% of GDP** |
+| **Fiscal deficit** | **4.3% of GDP** | FY26 RE was 4.4% — *glide path: 9.2% (FY21) → 4.3% (FY27)* |
+| **Debt-to-GDP** | **55.6%** | vs 56.1% FY26 RE — *consolidation target* |
+| **Net tax receipts** | ₹28.7 lakh cr | Centre's share |
+| **Non-debt receipts** | ₹36.5 lakh cr | vs ₹34 lakh cr FY26 RE |
+| **Revenue expenditure** | ₹41.25 lakh cr | vs ₹38.69 lakh cr FY26 |
+| **Gross market borrowings** | ₹17.2 lakh cr | net ₹11.7 lakh cr |
+| **Nominal GDP** | ₹393 lakh cr | 10% growth over FY26 (₹357.14L cr) |
+| **Resources to States** | ₹25.43 lakh cr | devolution + grants + CSS |
+
+## Where Money Comes From / Goes (classic chart questions)
+- **Sources:** Borrowings 24% (largest) → Income Tax 21% → Corporation Tax 18% → GST 15%
+- **Spends:** States' tax share 22% (largest) → Interest payments 20% → Central sector schemes ~17% → Defence 11%
+
+## Headline Announcements (name + outlay = the question)
+- **Biopharma SHAKTI** — ₹10,000 cr / 5 yrs — *make India a global biopharma manufacturing hub (Strategy for Healthcare Advancement through Knowledge, Technology & Innovation).*
+- **Electronics Components Manufacturing Scheme** — outlay raised to **₹40,000 cr** — *self-reliance in chips/electronics supply chain.*
+- **Infrastructure Risk Guarantee Fund** — *govt guarantees private developers' infra-project risks in construction phase → crowds in private capex.*
+- **Dedicated REITs for CPSE real estate** — *recycle govt-owned real estate assets via REITs → unlocks capital (ties to REIT/InvIT topics).*
+- **City Economic Regions (CER)** — **₹5,000 cr per region over 5 yrs** — *challenge-mode, reform-linked financing for city development.*
+
+## Budget Concepts (definition questions)
+- **Fiscal Deficit** = total expenditure − total receipts (excl. borrowings) = the borrowing need
+- **Revenue Deficit** = revenue expenditure − revenue receipts
+- **Primary Deficit** = fiscal deficit − interest payments
+- **Effective capex** = capex + grants-in-aid that create capital assets
+- **Effective Revenue Deficit** = revenue deficit − grants for capital assets
+
+## Economic Context Around FY27
+- RBI FY27 GDP projection: **6.7–7.1%** (Oct MPC 6.7%, later reports ~7.1%)
+- OECD forecast **7.1%**; Moody's **7%**; World Bank 7.1%; IMF/ADB ~7%
+- CPI running ~5–6% (Oct hike to 5.50% repo)
+- Theme of the budget: *capex-led growth + gradual fiscal consolidation + manufacturing/tech industrial policy*
+
+---
+**Recall check:** capex ₹? · fiscal deficit %? · effective capex % GDP? · debt-GDP? · 3 scheme names + outlays · biggest source of funds? · biggest spend head?
 `,"../../01_Phase1_Paper1/General_Awareness/Financial_Awareness/SEBI_Markets_Notes.md":`# Financial Awareness — SEBI & Capital Markets (exam-critical GA)
 
 > GA = **20 questions** in Paper 1 and the cheapest marks in the exam (pure recall, ~30 sec/question).
@@ -1103,6 +1207,14 @@ omnipotent (all-powerful) · omniscient (all-knowing) · altruist (selfless) · 
 \r
 GA in SEBI ≈ banking GA: ~70% financial/current affairs + ~30% static GK.\r
 Coverage window: **last 5–6 months** before exam. Financial news >>> everything else.\r
+\r
+## Study files (in this folder)\r
+- **\`SEBI_Static_Knowledge.md\`** — SEBI history, Acts, chairmen, committees, tools, regulations → covers Tier 1 items 1, 4, 5\r
+- **\`Banking_Awareness_Core.md\`** — RBI + rates + payment systems + banking history → covers Tier 2\r
+- **\`Budget_Economy_FY27.md\`** — Budget 2026-27 numbers + schemes → covers Budget/Survey line\r
+- **\`Reports_Indices_2026.md\`** — rank+publisher table → covers reports items\r
+- **\`Financial_Awareness/SEBI_Markets_Notes.md\`** — markets deep-dive → the Saturday rotation\r
+- **\`Monthly_Logs/\`** — Jul–Dec 2026 dated affairs → the daily drip\r
 \r
 ## Priority order (mark coverage %)\r
 \r
@@ -1494,8 +1606,9 @@ When you read daily affairs, mentally convert each item into one of these 10 for
 **Weekly recall check:** cover this file, write 10 facts from memory, mark misses → Error_Log
 `,"../../01_Phase1_Paper1/General_Awareness/Monthly_Logs/_TEMPLATE.md":`﻿# GA Log — MONTH YEAR
 
-> Fill daily (10-15 min). One line per item — the fact, not the story. Convert each into an MCQ mentally: "who/which/year/HQ/purpose?"
+> Fill daily (10-15 min). Format per item: **fact** → *context (what it is, why it happened, what it changes, the exam angle)* — teach a first-time reader, not just list facts. Convert each into an MCQ mentally: "who/which/year/HQ/purpose?"
 > Sources: PIB, SEBI press releases (highest yield — SEBI's own news IS the syllabus), RBI notifications, one daily GA compilation.
+> **Daily update:** ask Devin "update GA" — fresh items are fetched and appended under the right section with date tags.
 
 ## SEBI & Markets (Tier 1 — every SEBI circular/press release)
 - [ ] 
@@ -1519,7 +1632,112 @@ When you read daily affairs, mentally convert each item into one of these 10 for
 - [ ] 
 
 ---
-**Weekly recall check (every Sunday):** cover this file, write 10 facts from memory, mark misses →\r
+**Weekly recall check (every Sunday):** cover this file, write 10 facts from memory, mark misses →
+`,"../../01_Phase1_Paper1/General_Awareness/Reports_Indices_2026.md":`# Reports & Indices — India 2026 Master Table
+
+> Index questions always ask the same thing: **rank + publisher**. This table is built for that exact recall.
+> Sorted by yield — finance/economy first (SEBI-relevant), then social/global.
+
+## Finance & Economy Indices (highest yield for SEBI GA)
+
+| Index | India's Rank | Publisher | Note |
+|---|---|---|---|
+| Global Innovation Index 2025 | **38th** | WIPO | innovation + growth |
+| Henley Passport Index 2026 | **75th** (56 visa-free) | Henley & Partners (IATA data) | was 80th in 2025 — improving |
+| Global Hunger Index 2026 | **100th/122** — score 24.1 "serious" | Welthungerhilfe + Concern Worldwide | stunting 29.3%, wasting 19% |
+| HDI 2025 report | **130th/193** — 0.685 "medium" | UNDP | up from 134; approaching "high" (0.700) |
+| Climate Change Performance Index 2026 | **23rd** | Germanwatch + NewClimate + CAN | medium overall; low on renewables |
+| Global Terrorism Index 2025 | **14th** | Institute for Economics & Peace | of 163 countries |
+| Global Firepower Index 2025 | **4th** | Global Firepower | conventional military strength (excl. nuclear) |
+| Air Quality Life Index 2025 | **2nd worst** (PM2.5) | Univ. of Chicago EPIC | Delhi PM2.5 ~84 µg/m³ |
+| QS World Future Skills Index 2025 | **25th** | Quacquarelli Symonds | skill-readiness |
+| Ease of Doing Business (last report) | **63rd/190** | World Bank (discontinued 2020) | legacy fact — still asked |
+
+## India-Specific Static Numbers (from surveys, asked as trivia)
+- **Literacy rate:** 80.9% (PLFS 2023-24, NSSO)
+- **Population:** ~1.4 bn — world's most populous (crossed China 2023)
+- **Area rank:** 7th largest country
+- **Life expectancy:** ~72.5 yrs (HDI data)
+- **Fertility rate:** ~2.0 (below replacement 2.1)
+- **Diabetes:** 2nd most diabetics globally (~74 mn, IDF)
+
+## Sovereign Ratings Snapshot (finance-specific — know all four)
+| Agency | India Rating | Note |
+|---|---|---|
+| JCR (Japan) | **A−** | upgraded BBB+ → A− Sep 2026 — first upgrade in 35 yrs |
+| S&P / Fitch / Moody's | **BBB−** (lowest investment grade) | stable outlooks |
+| Moody's FY27 GDP forecast | 7.0% | raised Nov 2026 |
+| OECD FY27 GDP | 7.1% | +80 bps, Sep 2026 |
+
+## How Exams Ask These
+- "India's rank in GHI 2026?" → 100 (and publisher WHH+Concern — both get asked)
+- "Which agency publishes HDI?" → UNDP (not UN — specific body)
+- "Henley Passport measures?" → visa-free access count
+- Trap: publisher of Global Hunger Index is German (WHH) + Irish (Concern) agencies — NOT UN/FAO/IFPRI (IFPRI used to be associated; current = WHH+Concern)
+
+---
+**Recall check:** write 10 index→rank→publisher triples from memory — especially GII, GHI, HDI, Henley, CCPI.
+`,"../../01_Phase1_Paper1/General_Awareness/SEBI_Static_Knowledge.md":`# SEBI — Static Knowledge (the regulator IS the syllabus)
+
+> The highest-yield GA file for a SEBI exam: its own regulator's history, acts, structure, committees and tools. Every line is a past-or-likely MCQ.
+> Format: **fact** → *context / why it matters / exam angle*.
+
+## Origins & Legal Base
+- **Apr 12, 1988:** SEBI constituted as a **non-statutory body** via Government of India resolution — *existed without legal powers for ~4 years; could only "advise".*
+- **Jan 30, 1992:** SEBI given **statutory status** via Ordinance — *trigger: the 1991–92 Harshad Mehta securities scam exposed a toothless regulator; scam context is itself asked.*
+- **Apr 4, 1992:** **SEBI Act, 1992 (15 of 1992)** enacted — *"An Act to protect the interests of investors in securities and to promote the development of, and to regulate, the securities market." The three mandates — protect, promote, regulate — get asked verbatim.*
+- **G.S. Patel Committee (1985)** — *the report that first recommended creating SEBI; committee-name questions exist.*
+- **First statutory Chairman:** G.V. Ramakrishna (Feb 1992) — *held the first Board meeting; early SEBI had no power over exchanges/prospectuses — regulated via "guidelines" until Act amendments.*
+
+## The Acts SEBI Operates Under
+| Act | Year | What it gives SEBI |
+|---|---|---|
+| SEBI Act | 1992 | The regulator itself + investor protection mandate |
+| Securities Contracts (Regulation) Act — SCRA | 1956 | Recognizes/regulates stock exchanges + legal validity of securities contracts |
+| Depositories Act | 1996 | Demat holding → NSDL (1996), CDSL (1999) — *ended paper certificates* |
+| Companies Act | 2013 | Share issues, prospectus liability, corporate governance hooks |
+
+## Structure
+- **HQ:** Mumbai — *Bandra-Kurla Complex. Offices: Delhi, Kolkata, Chennai, Ahmedabad + regional offices.*
+- **Board composition:** Chairman + members from RBI, GoI ministries, and whole-time/part-time members — *Chairman appointed by Central Govt (Appointments Committee of Cabinet).*
+- **Current Chairman:** **Tuhin Kanta Pandey** — 11th Chairman, since **Mar 1, 2025** (ex-Finance Secretary, 1987-batch Odisha-cadre IAS) — *succeeded Madhabi Puri Buch (1st woman chair).*
+- **Admin domain:** Ministry of Finance — *SEBI is a finance-ministry regulator, like RBI/IRDAI aren't ministries themselves.*
+
+## Key Committees (advisory — exam loves acronyms)
+- **PMAC** — Primary Market Advisory Committee (IPO/issue-side)
+- **SMAC** — Secondary Market Advisory Committee (trading-side)
+- **CDAC** — Commodity Derivatives Advisory Committee
+- **CoBoSAC** — Corporate Bonds & Securitization Advisory Committee
+- **AIPAC** — Alternative Investment Policy Advisory Committee (AIFs)
+- **IPEF Advisory Committee** — Investor Protection & Education Fund (Oct 2026 reconstituted)
+- **Takeover Panel** — handles takeover/insider-trading disputes
+- **FAC** — FPI Advisory Committee · **TAC** — Technical Advisory Committee · **HPSC-CS** — cyber security steering · **CFRT** — fintech/regtech · **ACLOD** — listing obligations · **Social Stock Exchange AC**
+
+## Tools & Systems SEBI Runs (names asked directly)
+- **SCORES** — *SEBI Complaints Redress System — investor grievance portal.*
+- **SUDARSAN** — *SupTech tool monitoring unsolicited financial ads/finfluencers (Aug 2026).*
+- **SEBI Check** — *verify a real registered intermediary (validated UPI handles).*
+- **GARUDA** — *green-channel PPM processing for AIFs (Jul 2026).*
+- **Niveshak Shivir** — *investor-awareness event series.*
+- **Credit Risk-o-Meter** — *standardized credit-risk display for debt securities (Oct 2026).*
+
+## Landmark Reforms Timeline (the "SEBI changed markets" arc)
+- **1992:** statutory status → first broker/merchant-banker regulations (Dec 1992)
+- **1996:** Depositories Act → **NSDL** (1996) → **CDSL** (1999) — *demat killed paper certificates*
+- **Jul 2001:** T+5 rolling settlement → **Apr 2002:** T+3 → **Apr 2003:** T+2 — *each step shortened settlement*
+- **2023–24:** T+1 then **T+0** (beta) — *India = among fastest settlement globally*
+- **2002:** SAT empowered — **Securities Appellate Tribunal** hears appeals against SEBI orders
+- **Famous cases context:** Harshad Mehta (1991–92, SEBI's birth trigger) · Sahara (refund saga → led to stronger disgorgement powers) · 2014 ordinance powers (search/seizure, call-data access)
+
+## Landmark Regulations (know the names)
+- **ICDR Regs** — Issue of Capital & Disclosure Requirements (IPO/disclosure rulebook)
+- **LODR Regs 2015** — Listing Obligations & Disclosure Requirements (listed-company duties)
+- **PIT Regs** — Prohibition of Insider Trading
+- **SAST Regs** — Substantial Acquisition of Shares & Takeovers (open-offer rules)
+- **Buy-back Regs 2018** · **Mutual Fund Regs 1996** · **AIF Regs 2012** · **REIT/InvIT Regs 2014** · **PMS Regs 2020→2026** · **Settlement Proceedings Regs 2018→2026**
+
+---
+**Recall check:** who established SEBI + when statutory + 3 mandates + 4 acts + chairman + 5 committees + 5 tools + settlement timeline — write from memory, mark misses.
 `,"../../01_Phase1_Paper1/Quantitative_Aptitude/Formula_Sheet.md":`# Quantitative Aptitude — Learn the Tricks (Understand + Remember version)\r
 \r
 > Phase 1 Paper 1 Quant = **20 questions**. Good attempt: 15–16.\r
