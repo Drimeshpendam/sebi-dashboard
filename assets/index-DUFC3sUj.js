@@ -2432,6 +2432,18 @@ Licence cancelled **Apr 24** (Sec 22(4) BR Act) → **Jul 8** Delhi HC orders wi
 
 10 questions/day · +1 / −0.25 · cover the answer key while attempting.
 
+## 📖 READ FIRST — what to learn before each day's test
+
+| Day | Revise this first (10–15 min) |
+|---|---|
+| 1 | \`SEBI_Static_Knowledge.md\` — origin, mandates, chairman, SAT/SCORES basics |
+| 2 | \`Daily_Logs/June\` — Jun 3–5 MPC + banking items; \`Banking_Awareness_Core.md\` payments table |
+| 3 | \`Daily_Logs/June\` — all SEBI rows (Jun 16/17/19/23/24) |
+| 4 | \`Daily_Logs/June\` — schemes + economy rows (SVANidhi, CEPA, ATF, GDP, WB–PMJAY) |
+| 5 | \`Daily_Logs/June\` — month-end cluster + misc rows |
+| 6 | \`SEBI_Static_Knowledge.md\` — regulators table + \`Banking_Awareness_Core.md\` |
+| 7 | \`Daily_Logs/June\` — FULL re-read + Threads 2, 8, 14 |
+
 ## Day 1 — SEBI institutional statics
 
 **1.** SEBI was established (non-statutory) in —
@@ -2685,6 +2697,18 @@ Licence cancelled **Apr 24** (Sec 22(4) BR Act) → **Jul 8** Delhi HC orders wi
 
 10 Qs/day · +1 / −0.25 · cover the key while attempting.
 
+## 📖 READ FIRST — what to learn before each day's test
+
+| Day | Revise this first (10–15 min) |
+|---|---|
+| 8 | \`Daily_Logs/July\` — Jul 1 Ombudsman block + RBI appointments |
+| 9 | \`Daily_Logs/July\` — every appointment line (name↔post) + Thread 11 |
+| 10 | \`Daily_Logs/July\` — Paytm saga (Jul 8/22/28) + Thread 4 + payments-bank rules |
+| 11 | \`Daily_Logs/July\` — Jul 3/7/10/14/17 SEBI circulars |
+| 12 | \`Daily_Logs/July\` — Jul 21/23/30 (GARUDA, SIF, transmission, ODR) + Thread 5 |
+| 13 | \`Daily_Logs/July\` — month-end cluster (fines, NPCI, Razorpay, Sahakar, Fed) |
+| 14 | \`Daily_Logs/July\` — FULL re-read + FIFA + Threads 3, 4 |
+
 ## Day 8 — Ombudsman + RBI moves
 
 **1.** RBI's revamped Integrated Ombudsman Scheme took effect — (a) Jul 1 (b) Jul 8 (c) Jul 16 (d) Jul 28 (e) Aug 1
@@ -2797,6 +2821,18 @@ Licence cancelled **Apr 24** (Sec 22(4) BR Act) → **Jul 8** Delhi HC orders wi
 `,"../../01_Phase1_Paper1/General_Awareness/Test_Series/Week3_August.md":`# GA Test Series — Week 3 (Days 15–21): August 2026
 
 10 Qs/day · +1 / −0.25 · cover the key while attempting.
+
+## 📖 READ FIRST — what to learn before each day's test
+
+| Day | Revise this first (10–15 min) |
+|---|---|
+| 15 | \`Daily_Logs/August\` — Aug 1–5 appointments (GSI, IndiGo, RBI ED, extensions) |
+| 16 | \`Daily_Logs/August\` — 62nd MPC block + \`Banking_Awareness_Core\` rate corridor |
+| 17 | \`Daily_Logs/August\` — schemes (GOBARdhan, Samudra Manthan, Surya Sarovar, PM-VBRY, PM-AJAY) |
+| 18 | \`Daily_Logs/August\` — RBI rules (interest-rate draft, UL NBFCs, recovery agents, AD licences) |
+| 19 | \`Daily_Logs/August\` — SUDARSAN/SEBI Check/@valid + OBPP/NDCF (Aug 14) + Thread 3 |
+| 20 | \`Daily_Logs/August\` — SEBI ED, TN budget, railways, GIFT City, StanChart |
+| 21 | \`Daily_Logs/August\` — FULL re-read + Threads 2, 3 |
 
 ## Day 15 — August appointments
 
@@ -2911,6 +2947,18 @@ Licence cancelled **Apr 24** (Sec 22(4) BR Act) → **Jul 8** Delhi HC orders wi
 
 10 Qs/day · +1 / −0.25 · cover the key while attempting.
 
+## 📖 READ FIRST — what to learn before each day's test
+
+| Day | Revise this first (10–15 min) |
+|---|---|
+| 22 | \`Daily_Logs/September\` — Sep 24 board: Settlement Regs formula + windows + Thread 1 |
+| 23 | \`Daily_Logs/September\` — Sep 24 board: everything else (PMS, FPI-ETCD, DRs, ad code) |
+| 24 | \`Daily_Logs/September\` — WMA committee + Q1 BoP numbers |
+| 25 | \`Daily_Logs/September\` — JCR A−, OECD, Semicon 2.0, Olympic City, Khet Bachao |
+| 26 | \`Daily_Logs/September\` — VI/SRK, CAS consultation, misc rows |
+| 27 | \`Daily_Logs/September\` — FULL re-read + Thread 1 chain cold |
+| 28 | All \`Daily_Logs\` Jun–Sep — quick skim of week-boundary items |
+
 ## Day 22 — Sep 24 Board Meeting (part 1: Settlement Regs)
 
 **1.** SEBI's 3rd board meeting of 2026 was on — (a) Sep 12 (b) Sep 19 (c) Sep 24 (d) Sep 30 (e) Oct 6
@@ -3023,6 +3071,18 @@ Licence cancelled **Apr 24** (Sec 22(4) BR Act) → **Jul 8** Delhi HC orders wi
 `,"../../01_Phase1_Paper1/General_Awareness/Test_Series/Week5_October.md":`# GA Test Series — Week 5 (Days 29–35): October 2026
 
 10 Qs/day · +1 / −0.25 · cover the key while attempting.
+
+## 📖 READ FIRST — what to learn before each day's test
+
+| Day | Revise this first (10–15 min) |
+|---|---|
+| 29 | \`Daily_Logs/October\` — Oct 5–7 MPC hike block + Thread 2 (cold on numbers) |
+| 30 | \`Daily_Logs/October\` — Oct 6/7/15/22/23/27/30 circulars incl. CAS details |
+| 31 | \`Daily_Logs/October\` — Oct 12 six governors + CJI + FSIB + Thread 11 |
+| 32 | \`Daily_Logs/October\` — Oct 1/15/28 schemes + ITLOS + Nepal + Murugan |
+| 33 | \`Daily_Logs/October\` — Jane Street SAT case + Mandhana + Thread 13 |
+| 34 | \`Daily_Logs/October\` — economy cluster (CPI, credit, rupee) + Jio + misc |
+| 35 | \`Daily_Logs/October\` — FULL re-read + Threads 1, 2 |
 
 ## Day 29 — The 63rd MPC: THE hike
 
@@ -3137,6 +3197,18 @@ Licence cancelled **Apr 24** (Sec 22(4) BR Act) → **Jul 8** Delhi HC orders wi
 
 10 Qs/day · +1 / −0.25 · cover the key while attempting.
 
+## 📖 READ FIRST — what to learn before each day's test
+
+| Day | Revise this first (10–15 min) |
+|---|---|
+| 36 | \`Daily_Logs/November\` — Nov 2–4 (DRs, OFS, SBM-G, critical minerals, Vittal) |
+| 37 | \`Daily_Logs/November\` — Nov 5–7 (currency limits, net settlement, in-force date) + Thread 1 |
+| 38 | \`Daily_Logs/November\` — Nov 11 Cabinet 4 + FATCA/CRS + market levels |
+| 39 | \`Daily_Logs/November\` — Nov 12 (Niveshak Shivir, Coca-Cola DRHP) + Thread 8 |
+| 40 | \`Daily_Logs/November\` — forecasts + economy cluster + \`Reports_Indices\` recap |
+| 41 | \`Daily_Logs/November\` — appointments (IMU, Equitas, GSMA) + Thread 11 |
+| 42 | \`Daily_Logs/November\` — FULL re-read + Threads 1, 8 |
+
 ## Day 36 — Nov 2–4: SEBI + Cabinet
 
 **1.** Nov 2 framework allowed DRs on — (a) MF units (b) REIT & InvIT units (c) ETFs (d) AIF units (e) bonds
@@ -3249,6 +3321,18 @@ Licence cancelled **Apr 24** (Sec 22(4) BR Act) → **Jul 8** Delhi HC orders wi
 `,"../../01_Phase1_Paper1/General_Awareness/Test_Series/Week7_Mixed.md":`# GA Test Series — Week 7 (Days 43–49): Mixed traps + all-month mock
 
 Hardest week — cross-month ordering, wrong-statement traps, match-lists. Attempt these cold like the real paper.
+
+## 📖 READ FIRST — this week IS revision; skim only what tests expose
+
+| Day | Revise this first |
+|---|---|
+| 43 | \`GA_Master_Threads.md\` — Threads 1–8 (the chain questions) |
+| 44 | \`GA_Master_Threads.md\` — Threads 9–14 + your Week 1–6 error notes |
+| 45 | \`GA_Master_Threads.md\` — Thread 11 appointments table |
+| 46 | \`GA_Master_Threads.md\` — Thread 10 schemes table |
+| 47 | \`Daily_Logs\` — skim every month's theme line + number-heavy items |
+| 48 | \`Banking_Awareness_Core\` + \`SEBI_Static_Knowledge\` — full-forms tables |
+| 49 | Everything — weakest areas only, then take the mock cold |
 
 ## Day 43 — chains & timelines
 
