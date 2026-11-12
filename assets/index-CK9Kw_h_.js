@@ -1196,51 +1196,52 @@ When you read daily affairs, mentally convert each item into one of these 10 for
 \r
 `,"../../01_Phase1_Paper1/General_Awareness/Monthly_Logs/August_2026.md":`# GA Log — August 2026
 
-> Backfilled from monthly banking-exam digests (AffairsMap/MintAffairs) + official SEBI/RBI/PIB sources. Same rule: one line per MCQ-able fact.
+> Backfilled from monthly banking-exam digests (AffairsMap/MintAffairs) + official SEBI/RBI/PIB sources.
+> Format per item: **fact** → *context (what it is, why it happened, what it changes)*.
 
 ## SEBI & Markets (Tier 1 — every SEBI circular/press release)
-- [x] **Aug 14:** SEBI modified regulatory framework for **Online Bond Platform Providers (OBPPs)** — ease of doing business measures
-- [x] **Aug 14:** SEBI standardized **Net Distributable Cash Flow (NDCF)** calculation framework for **InvITs** — uniform cash-distribution disclosure
-- [x] **Aug:** SEBI proposed overhaul of **Portfolio Managers Regulations 2020** via consultation (→ became PMS Regs 2026 in Sep)
-- [x] **Chairman's Statement (Aug bulletin):** Project **SUDARSAN** launched — SupTech tool to monitor unsolicited financial ads/finfluencers; Investor Survey found **62% of investors influenced by finfluencers**; **SEBI Check** + validated UPI handles for verifying registered intermediaries; first-of-its-kind **Google Play verified-app label** partnership for trading apps
-- [x] **IPO context:** SEBI extended IPO-approval validity expiring Apr–Sep → Sep 30 (West Asia war had frozen primary market) — triggered the Sep–Oct IPO rush
+- [x] **Aug 14:** SEBI modified framework for **Online Bond Platform Providers (OBPPs)** — *OBPPs are apps/websites (e.g., where retail buys bonds directly); SEBI eased their compliance burden to push retail into the corporate-bond market — ease of doing business.*
+- [x] **Aug 14:** SEBI standardized **Net Distributable Cash Flow (NDCF)** calculation for **InvITs** — *NDCF = the cash an Infrastructure Investment Trust can actually pay out to unitholders; one uniform formula = investors can compare InvITs honestly (earlier each computed it differently).*
+- [x] **Aug:** SEBI proposed overhaul of **Portfolio Managers Regulations 2020** (consultation) — *→ became PMS Regs 2026 at the Sep 24 board meeting. Consultation → board → notification is the standard SEBI rulemaking chain — exams ask both ends of it.*
+- [x] **Chairman's Statement (Aug bulletin):** Project **SUDARSAN** launched — *SEBI's SupTech (supervisory-tech) tool that scans/monitor unsolicited financial ads + finfluencers pushing unregistered advice. Trigger: SEBI's own Investor Survey found **62% of investors influenced by finfluencers**. Companion tools: **SEBI Check** + validated UPI handles to verify a real registered intermediary before paying; first-of-its-kind **Google Play verified-app label** for trading apps. Ask: which tool does what.*
+- [x] **IPO context:** SEBI extended IPO-approval validity expiring Apr–Sep → **Sep 30** — *West Asia war had frozen the primary market (companies sitting on approvals they couldn't use); the extension caused the Sep–Oct IPO rush that ended in Jio's record listing.*
 
 ## RBI / Monetary Policy (rates, reports, committees)
-- [x] **Aug 3–5, 62nd MPC:** repo held **5.25%** — 4th consecutive hold; stance **neutral**; SDF 5.00%, MSF & Bank Rate 5.50%; Gov. Sanjay Malhotra chaired
-- [x] **Aug 5 developmental policies → Aug 12 draft:** RBI (Interest Rates on Loans & Advances) Directions, 2026 — harmonized principles-based framework for ALL REs (banks + NBFCs + RRBs + co-op banks); comments by Sep 11
-- [x] **Upper Layer NBFCs (Scale-Based Regulation) FY27:** list expanded to **17** (from 15) — Tata Sons retained; REC, PFC, IRFC added
-- [x] **RBI delayed** loan-recovery-agent norms to **Jan 1, 2027** (3-month extension; agent certification + conduct rules)
-- [x] **Niyo Forex** got perpetual **AD Category-II** licence; Indel Money's Indel Remit approved for trade remittances up to ₹25 lakh
+- [x] **Aug 3–5, 62nd MPC:** repo held **5.25%** — 4th consecutive hold; stance **neutral**; SDF 5.00%, MSF & Bank Rate 5.50%; Gov. Sanjay Malhotra — *wait-and-watch: inflation rising but West Asia shock not yet resolved (the Oct hike comes two months later when CPI hits ~6%).*
+- [x] **Aug 5 → Aug 12 draft:** RBI (Interest Rates on Loans & Advances) Directions, 2026 — *harmonized, principles-based interest-rate rules for ALL regulated entities (banks + NBFCs + RRBs + co-op banks) — replaces scattered per-category rules; comments by Sep 11.*
+- [x] **Upper Layer NBFCs (Scale-Based Regulation) FY27:** list expanded to **17** (from 15) — *Tata Sons retained; REC, PFC, IRFC added. Upper Layer = NBFCs RBI thinks are too-big-to-fail → bank-like stricter norms. Ask: who's new on the list.*
+- [x] **RBI delayed loan-recovery-agent norms to Jan 1, 2027** — *3-month extension; norms cover agent certification + conduct (how recovery agents may contact borrowers) — consumer-protection measure.*
+- [x] **Niyo Forex** got perpetual **AD Category-II** licence; Indel Money's Indel Remit for trade remittances up to ₹25 lakh — *AD Cat-II = Authorized Dealer Category-II: licence for money changers/fintechs to do limited forex (trade + family remittances); full forex needs AD Cat-I (banks).*
 
 ## Schemes / Budget / Economy
-- [x] **Aug 6 Cabinet:** GOBARdhan National Circular Bioenergy Scheme — **₹23,731 cr** (FY27–FY36), Compressed Biogas push (launched Oct 1)
-- [x] **Cabinet:** National Offshore Exploration Scheme "**Samudra Manthan**" — **₹84,084 cr** till FY31, energy security
-- [x] **Cabinet (Jul, logged now):** PM Surya Sarovar Yojana — floating solar PV, **₹5,070 cr**
-- [x] **PM-VBRY** (PM Viksit Bharat Rojgar Yojana, launched Aug 2025): 72 lakh first-time workers formalized
-- [x] **PM-AJAY** (SC welfare): 47,328 villages selected nationwide (435 in Telangana)
-- [x] **Nasha Mukt Yuva for Viksit Bharat Sankalp Abhiyan** launched — anti-drug youth campaign, 1 crore+ youth, 28,000 locations
-- [x] **Aug 19:** CCEA approved 4 railway multi-tracking projects **₹9,450 cr**
-- [x] **Tamil Nadu:** first TVK-government budget — target **$1.5 trillion economy by 2031**, ~9% growth path; FM N. Marie Wilson
+- [x] **Aug 6 Cabinet:** **GOBARdhan** National Circular Bioenergy Scheme — **₹23,731 cr** (FY27–FY36) — *cattle dung/organic waste → Compressed Biogas; launched Oct 1 in Delhi. Energy + rural income + waste.*
+- [x] **Cabinet:** National Offshore Exploration Scheme "**Samudra Manthan**" — **₹84,084 cr** till FY31 — *deep-sea oil/gas exploration to cut import dependence — named after the ocean-churning myth.*
+- [x] **Cabinet (Jul, logged now):** **PM Surya Sarovar Yojana** — floating solar PV on water bodies, **₹5,070 cr**.
+- [x] **PM-VBRY** (PM Viksit Bharat Rojgar Yojana, launched Aug 2025): 72 lakh first-time workers formalized — *jobs-scheme milestone.*
+- [x] **PM-AJAY** (SC welfare): 47,328 villages selected (435 in Telangana) — *Adarsh Gram development for Scheduled-Caste-majority villages.*
+- [x] **Nasha Mukt Yuva for Viksit Bharat Sankalp Abhiyan** launched — *anti-drug youth campaign; 1 crore+ youth, 28,000 locations.*
+- [x] **Aug 19:** CCEA approved 4 railway multi-tracking projects — **₹9,450 cr** — *CCEA = Cabinet Committee on Economic Affairs (approves big infra spends).*
+- [x] **Tamil Nadu:** first **TVK-government budget** — target **$1.5 trillion economy by 2031**, ~9% growth; FM **N. Marie Wilson** — *new TVK govt's first budget.*
 
 ## Appointments / Awards / Summits
-- [x] **Aug 1:** Varsha Ashok Aglawe — **54th DG, Geological Survey of India** — FIRST WOMAN to head GSI (founded 1851); succeeded Asit Saha
-- [x] **Aug 3:** Willie Walsh — **IndiGo CEO** (ex-IATA DG, ex-IAG/BA chief), succeeding Pieter Elbers
-- [x] **Aug 3:** Monisha Chakraborty — **RBI Executive Director** — heads Foreign Exchange Dept + Financial Markets Regulation Dept
-- [x] **Prasanta Mahapatra** — **Executive Director, SEBI**
-- [x] **Aug 5:** Cabinet Secy **T.V. Somanathan** & Home Secy **Govind Mohan** — 1-year extensions
-- [x] **Aug 3:** Vishwesh Negi — Ambassador to Iran
-- [x] **Aug:** Standard Chartered — IFSCA approval to distribute capital-market products from **GIFT City**
+- [x] **Aug 1:** **Varsha Ashok Aglawe** — **54th DG, Geological Survey of India** — FIRST WOMAN to head GSI (founded 1851, HQ Kolkata); succeeded Asit Saha.
+- [x] **Aug 3:** **Willie Walsh** — **IndiGo CEO** (ex-IATA DG, ex-IAG/BA chief), succeeding Pieter Elbers — *global-aviation veteran heading India's biggest airline.*
+- [x] **Aug 3:** **Monisha Chakraborty** — **RBI Executive Director** — heads Foreign Exchange Dept + Financial Markets Regulation Dept — *relevant: she runs the dept that regulates the markets you trade in.*
+- [x] **Prasanta Mahapatra** — **Executive Director, SEBI**.
+- [x] **Aug 5:** Cabinet Secy **T.V. Somanathan** & Home Secy **Govind Mohan** — 1-year extensions.
+- [x] **Aug 3:** **Vishwesh Negi** — Ambassador to Iran.
+- [x] **Aug:** **Standard Chartered** — IFSCA approval to distribute capital-market products from **GIFT City** — *IFSCA regulates India's international financial-services hub in Gujarat.*
 
 ## Sports / Books / Obituaries (the long tail — 5 min max)
 - [ ] *(fill from weekly GA compilations)*
 
 ## Reports / Indices / Rankings (note the PUBLISHER — that's what's asked)
-- [x] **SEBI Investor Survey (Aug):** 62% of investors influenced by finfluencers — publisher SEBI
+- [x] **SEBI Investor Survey (Aug):** **62% of investors influenced by finfluencers** — publisher: SEBI — *the stat behind SUDARSAN.*
 
 ## Static GK spotted while reading
-- [x] GSI HQ: Kolkata (Min. of Mines); founded 1851
-- [x] AD Cat-I = banks (full forex); AD Cat-II = FFMCs/money changers (limited: trade + family remittances)
-- [x] SEBI Chairman: Tuhin Kanta Pandey (since Mar 2025 — verify still current on sebi.gov.in)
+- [x] GSI HQ: Kolkata (Min. of Mines); founded 1851.
+- [x] AD Cat-I = banks (full forex); AD Cat-II = FFMCs/money changers (limited: trade + family remittances).
+- [x] SEBI Chairman: **Tuhin Kanta Pandey** (11th, since Mar 1, 2025).
 
 ---
 **Weekly recall check:** cover this file, write 10 facts from memory, mark misses → Error_Log
@@ -1274,220 +1275,220 @@ When you read daily affairs, mentally convert each item into one of these 10 for
 **Weekly recall check (every Sunday):** cover this file, write 10 facts from memory, mark misses →\r
 `,"../../01_Phase1_Paper1/General_Awareness/Monthly_Logs/July_2026.md":`# GA Log — July 2026
 
-> Backfilled from sebi.gov.in, rbi.org.in and monthly banking-exam digests (affairsmap, Hindu Review). One line per MCQ-able fact — who/which/year/HQ/purpose.
-> Context: July had NO SEBI board meeting and NO scheduled extra policy event, yet was one of the heaviest regulatory months — West Asia (US–Iran) conflict dominated markets all month.
+> Backfilled from sebi.gov.in, rbi.org.in and monthly banking-exam digests (affairsmap, Hindu Review).
+> Format per item: **fact** → *context (what it is, why it happened, what it changes)*.
+> Context: July had NO SEBI board meeting and NO scheduled extra policy event, yet was one of the heaviest regulatory months — the West Asia (US–Iran) conflict dominated markets all month.
 
 ## SEBI & Markets (Tier 1 — every SEBI circular/press release)
-- [x] **Jul 3:** SEBI circular — **handling of client's unpaid securities by Trading Members**
-- [x] **Jul 7:** SEBI reviewed norms for utilization of **interest/income from IPF (Investor Protection Fund) of the Depositories**
-- [x] **Jul 10:** SEBI circular — **intraday borrowing facility** availed by **mutual funds**
-- [x] **Jul 14:** SEBI issued **Master Circular for Merchant Bankers** (consolidation)
-- [x] **Jul 17 (PR 40/2026):** SEBI cautioned regulated entities & listed companies about the **"Boss Scam"** (impersonation fraud)
-- [x] **Jul 17:** SEBI extended **standing instructions for SWP/STP** to MF units held in **demat form**
-- [x] **Jul 21:** SEBI operationalised **freezing of promoter + promoter-group holdings at ISIN level** under Reg 24(i)(ea) of **Buy-back Regulations 2018**
-- [x] **Jul 21:** SEBI set **certification requirements for distribution of Specialized Investment Funds (SIFs)**
-- [x] **Jul 23:** SEBI circular — simplification & standardisation of framework for **transmission of securities** (ease of doing investment)
-- [x] **Jul 23:** SEBI consultation paper — **comprehensive review of SEBI (Portfolio Managers) Regulations 2020**
-- [x] **Jul 23:** SEBI consultation paper — **streamlining Online Dispute Resolution (ODR) framework** in securities market
-- [x] **Jul 30:** SEBI launched **GARUDA** — *'Green-Channel: AIF Rollout Upon Document Acknowledgement'* mechanism for processing **PPMs of AIFs**
+- [x] **Jul 3:** SEBI circular — **handling of client's unpaid securities by Trading Members** — *when a client buys shares but doesn't pay, this tells brokers exactly how long they may hold/sell those unpaid securities — closes misuse of client stocks.*
+- [x] **Jul 7:** SEBI reviewed norms for utilization of **interest/income from IPF of Depositories** — *IPF = Investor Protection Fund (money set aside to compensate investors on member default); the circular controls how NSDL/CDSL may spend the interest earned on that fund.*
+- [x] **Jul 10:** SEBI circular — **intraday borrowing facility for mutual funds** — *lets MFs borrow intraday to bridge timing gaps (e.g., redemption payouts vs settlement money arriving) — a liquidity cushion, not a leveraged-investment tool.*
+- [x] **Jul 14:** SEBI issued **Master Circular for Merchant Bankers** — *consolidates all scattered merchant-banker rules into one document (SEBI's standard clean-up format — merchant bankers run IPOs/issues).*
+- [x] **Jul 17 (PR 40/2026):** SEBI cautioned regulated entities & listed companies about the **"Boss Scam"** — *fraudsters impersonate senior officials ("bosses")/SEBI officers to extract confidential info or payments from company staff — SEBI told entities to verify before complying.*
+- [x] **Jul 17:** SEBI extended **standing instructions for SWP/STP** to MF units held in **demat form** — *you can auto-run Systematic Withdrawal/Transfer Plans on demat-held MF units (earlier only statement-held units) — convenience + demat push.*
+- [x] **Jul 21:** SEBI operationalised **freezing of promoter + promoter-group holdings at ISIN level** under Reg 24(i)(ea) of **Buy-back Regulations 2018** — *when a buyback is on, promoters' shares get frozen at the ISIN level so they can't quietly sell into the offer — protects the buyback's integrity.*
+- [x] **Jul 21:** SEBI set **certification requirements for distribution of Specialized Investment Funds (SIFs)** — *SIF = SEBI's newer fund category between MFs and PMS; distributors must now hold a specific certification before selling them — investor protection for complex products.*
+- [x] **Jul 23:** SEBI circular — simplification & standardisation of **transmission of securities** framework — *transmission = transfer of shares to legal heirs when the holder dies; standardized documents/process across intermediaries — cuts the paperwork nightmare for families.*
+- [x] **Jul 23:** Consultation — **comprehensive review of SEBI (Portfolio Managers) Regulations 2020** — *the Aug-proposed overhaul; → approved as PMS Regs 2026 at the Sep 24 board meeting.*
+- [x] **Jul 23:** Consultation — **streamlining Online Dispute Resolution (ODR) framework** — *ODR = resolving investor-broker disputes online instead of courts/arbitration rooms; SEBI wants faster, simpler dispute handling.*
+- [x] **Jul 30:** SEBI launched **GARUDA** — *'Green-Channel: AIF Rollout Upon Document Acknowledgement' — AIFs file a Placement Memorandum (PPM) to raise money; under GARUDA, acknowledgement = green-channel rollout, no long approval wait. Ease of doing business for funds. Ask: expansion + what it applies to (AIF PPMs).*
 
 ## RBI / Monetary Policy (rates, reports, committees)
-- [x] **Jul 1:** RBI's revamped **Integrated Ombudsman Scheme** came into force — "One Nation, One Ombudsman"; covers banks, NBFCs, PPI issuers, CICs; compensation up to **₹30 lakh** for consequential loss, **₹3 lakh** for time/harassment
-- [x] **Jul 1:** **Ravi Shankar** appointed **Executive Director, RBI** — heads Dept of Statistics & Information Management (career central-bank statistician, 30+ yrs)
-- [x] **Jul 16 MPC:** repo held **5.25%** (unanimous, Gov. Sanjay Malhotra), stance **neutral**; SDF 5.00%, MSF & Bank Rate 5.50%; **FY27 GDP projected 6.9%** amid West Asia conflict
-- [x] **Jul 28:** RBI announced **Delhi HC ordered winding up of Paytm Payments Bank** — licence cancelled Apr 24, 2026 under Sec 22(4) BR Act; **Girikumar M Nair** (ex-SBI CGM) appointed Official Liquidator w.e.f. Jul 8
-- [x] **Jul:** RBI penalised **Bank of Baroda & GIC Housing Finance ₹66.7 lakh** for fair-practice/KYC deficiencies
-- [x] **Jul:** RBI consolidated **628 circulars into 64 Master Directions** (regulatory clean-up)
-- [x] **NPCI + HSBC & J.P. Morgan** partnership for international UPI upgrades (real-time FX, faster settlement); Razorpay + NBBL launched **'Banking Connect'** netbanking platform; Paytm Europe got **Payment Institution licence from Luxembourg regulator**
-- [x] **Nuclear/Coop-bank tech:** **Sahakar CBS** — centralised core banking solution for Urban Cooperative Banks via NUCFDC
+- [x] **Jul 1:** RBI's revamped **Integrated Ombudsman Scheme** in force — "**One Nation, One Ombudsman**" — *one unified, free grievance channel for complaints against banks, NBFCs, PPI issuers, Credit Info Companies — no fee, non-adversarial; compensation up to **₹30 lakh** (consequential loss) + ₹3 lakh (time/harassment). Escalate to Ombudsman if the entity doesn't resolve in 30 days; file within 90 days of their final reply.*
+- [x] **Jul 1:** **Ravi Shankar** appointed **Executive Director, RBI** — heads Dept of Statistics & Information Management — *career central-bank statistician (30+ yrs). ED appointments are standard exam items.*
+- [x] **Jul 16 MPC:** repo held **5.25%** unanimous (Gov. Sanjay Malhotra), stance **neutral**; SDF 5.00%, MSF & Bank Rate 5.50%; **FY27 GDP 6.9%** — *hold amid West Asia uncertainty; the tightening only comes in Oct when CPI breaches.*
+- [x] **Jul 28:** RBI announced **Delhi HC ordered winding up of Paytm Payments Bank** — *licence cancelled Apr 24, 2026 under Sec 22(4) BR Act for persistent non-compliance; **Girikumar M Nair** (ex-SBI CGM) = Official Liquidator w.e.f. Jul 8; RBI had assured PPBL held enough liquidity to repay all depositors. The end of a 4-year regulatory saga.*
+- [x] **Jul:** RBI penalised **Bank of Baroda & GIC Housing Finance ₹66.7 lakh** — fair-practice/KYC deficiencies found in inspection.
+- [x] **Jul:** RBI consolidated **628 circulars into 64 Master Directions** — *huge regulatory clean-up — one master direction per topic instead of hundreds of scattered circulars.*
+- [x] **NPCI + HSBC & J.P. Morgan** for international UPI upgrades (real-time FX, faster settlement); Razorpay + NBBL launched **'Banking Connect'**; Paytm Europe got **Payment Institution licence (Luxembourg)** — *India's payment rails going global.*
+- [x] **Sahakar CBS** — centralised core-banking solution for Urban Cooperative Banks via NUCFDC — *small co-op banks get modern banking software (they historically run on weak tech).*
 
 ## Schemes / Budget / Economy
-- [x] **Jul 1:** RBI **'Data Governance Guidance Framework'** issued for banks (accountability for data shared with service providers)
-- [x] **IRDAI 137th Authority Meeting** — implementation of the **SBSR Act** reforms
-- [x] **Global:** US Fed held rates at **3.50–3.75%** end-July — 3 members dissented for immediate hike; US 30-year yield above **5%** (longest stretch since 2007) on US–Iran oil shock
+- [x] **Jul 1:** RBI **'Data Governance Guidance Framework'** for banks — *banks stay accountable for customer data shared with vendors/group entities + must enforce access controls — data-privacy tightening.*
+- [x] **IRDAI 137th Authority Meeting** — implementation of the **SBSR Act** reforms — *insurance-sector legislation rollout.*
+- [x] **Global:** US Fed held **3.50–3.75%** end-July — 3 members dissented wanting a hike; US 30-yr yield above **5%** (longest since 2007) — *US–Iran oil shock + inflation fears; EM markets (incl. India) pressured all month.*
 
 ## Appointments / Awards / Summits
-- [x] **Jul 1:** **Rajiv Kumar** (former Finance Secretary + former CEC) approved as **HDFC Bank part-time Chairman** (subject to RBI approval) — replacing interim Keki Mistry after Atanu Chakraborty's Mar resignation
-- [x] **Jul 3:** **Vikram Misri** — one-year extension as **Foreign Secretary**
-- [x] **Jul:** **Satya Pal Kumar** (IRS 2005) — **Director, FIU-IND** (Financial Intelligence Unit)
-- [x] **Jul 3:** **Ravi Agrawal** re-appointed **CBDT Chairman** (6-month contract)
-- [x] **Jul 9:** **N.S. Vishwanathan** re-appointed **Non-Executive Chairman, Axis Bank** (RBI approval)
-- [x] **Jul:** **Mahesh Muralidhar Pai** — **MD & CEO, South Indian Bank** (RBI approval)
-- [x] **Jul 2:** Air Marshal **Ashutosh Dixit** — **Vice Chief of Air Staff**
-- [x] **Jul 3:** **Anupam Misra** — CMD, Hindustan Copper; **Rear Admiral (Retd.) C. Raghuram** — CMD, Hindustan Shipyard; **Somnath Ghosh** — High Commissioner to Malaysia
+- [x] **Jul 1:** **Rajiv Kumar** (former Finance Secretary + former CEC) approved as **HDFC Bank part-time Chairman** — *replaces interim Keki Mistry; followed Atanu Chakraborty's March resignation citing values-ethics concerns (a ₹61,000-cr market-cap event). Pattern: retired IAS officers chairing big banks.*
+- [x] **Jul 3:** **Vikram Misri** — 1-year extension as **Foreign Secretary**.
+- [x] **Jul:** **Satya Pal Kumar** (IRS 2005) — **Director, FIU-IND** — *Financial Intelligence Unit: the agency that tracks suspicious transactions/money laundering.*
+- [x] **Jul 3:** **Ravi Agrawal** re-appointed **CBDT Chairman** (6 months); **Anupam Misra** — CMD Hindustan Copper; **Rear Admiral (Retd.) C. Raghuram** — CMD Hindustan Shipyard; **Somnath Ghosh** — High Commissioner to Malaysia.
+- [x] **Jul 9:** **N.S. Vishwanathan** re-appointed **Non-Exec Chairman, Axis Bank** (RBI approval); **Mahesh Muralidhar Pai** — **MD & CEO, South Indian Bank**.
+- [x] **Jul 2:** Air Marshal **Ashutosh Dixit** — **Vice Chief of Air Staff**.
 
 ## Sports / Books / Obituaries (the long tail — 5 min max)
-- [x] **Jul 19:** **Spain won FIFA World Cup 2026** — beat **Argentina 1–0** after extra time in the final
-- [x] **Jul 29:** **Global Tiger Day 2026** — India conservation progress coverage
-- [x] **PM Modi** conferred Seychelles' highest honour **"Guardian of the Blue Horizon"**; PM visited **Australia**
-- [x] India's **first hydrogen fuel cell train** unveiled (features/route coverage)
+- [x] **Jul 19:** **Spain won FIFA World Cup 2026** — beat **Argentina 1–0** after extra time in the final — *the month's biggest sports item.*
+- [x] **Jul 29:** **Global Tiger Day 2026** — India conservation coverage.
+- [x] **PM Modi** conferred Seychelles' highest honour **"Guardian of the Blue Horizon"**; PM visited **Australia**.
+- [x] India's **first hydrogen fuel cell train** unveiled.
 
 ## Reports / Indices / Rankings (note the PUBLISHER — that's what's asked)
-- [x] RBI's **Financial Stability Report** (June issue, discussed Jul) — financial system resilient amid geopolitical stress
-- [x] US–Iran conflict + oil-price swings = dominant July market theme; Strait of Hormuz reopening talks eased month-end
+- [x] RBI's **Financial Stability Report** (June issue, discussed Jul) — financial system resilient amid geopolitical stress.
+- [x] US–Iran conflict + oil swings = dominant July market theme; Strait of Hormuz reopening talks eased month-end.
 
 ## Static GK spotted while reading
-- [x] Regulator heads (2026): RBI Gov **Sanjay Malhotra** (26th, since Dec 11, 2024) · SEBI Chair **Tuhin Kanta Pandey** (11th, since Mar 1, 2025) · IRDAI Chair **Ajay Seth** (since Sep 1, 2025) · PFRDA **S. Ramann** · IFSCA **K. Rajaraman**
+- [x] Regulator heads (2026): RBI Gov **Sanjay Malhotra** (26th, since Dec 11, 2024) · SEBI Chair **Tuhin Kanta Pandey** (11th, since Mar 1, 2025) · IRDAI Chair **Ajay Seth** (since Sep 1, 2025) · PFRDA **S. Ramann** · IFSCA **K. Rajaraman**.
 
 ---
-**Weekly recall check (every Sunday):** cover this file, write 10 facts from memory, mark misses ✗
+**Weekly recall check (every Sunday):** cover this file, write 10 facts from memory, mark misses → Error_Log
 `,"../../01_Phase1_Paper1/General_Awareness/Monthly_Logs/November_2026.md":`# GA Log — November 2026\r
 \r
-> Fill daily (10-15 min). One line per item — the fact, not the story. Convert each into an MCQ mentally: "who/which/year/HQ/purpose?"\r
+> Fill daily (10-15 min). Format per item: **fact** → *context (what it is, why it happened, what it changes)*. Convert each into an MCQ mentally: "who/which/year/HQ/purpose?"\r
 > Sources: PIB, SEBI press releases (highest yield — SEBI's own news IS the syllabus), RBI notifications, one daily GA compilation.\r
 > **Daily update:** ask Devin "update GA" — fresh items are fetched and appended under the right section with date tags.\r
 \r
 ## SEBI & Markets (Tier 1 — every SEBI circular/press release)\r
-- [x] **Nov 7:** SEBI (Settlement of Administrative and Civil Proceedings) Regulations, 2026 in force — notified Oct 8; settlement possible at ANY stage; online application portal + settlement calculator + helpdesk launched; replaces 2018 framework\r
-- [x] **Nov 11:** SEBI circular — intermediaries must update KYC/CDD systems for FATCA & CRS reporting under new Income-tax Act 2025 + IT Rules 2026 (AEOI framework)\r
-- [x] **Nov 12:** SEBI press release - **Niveshak Shivir** (investor-awareness event) to be held **Nov 17, New Delhi**\r
-- [x] **Nov 12:** **Hindustan Coca-Cola Holdings Ltd** filed **DRHP** (draft red herring prospectus) with SEBI - major IPO filing\r
-- [x] **Nov 11:** SEBI Summary Settlement Order in matter of **Eight Innovate Fund II** (scheme of Eight Innovate Investment Trust I)\r
-- [x] **Nov 5:** SEBI revised limits for underlying-exposure requirement in currency derivatives contracts\r
-- [x] **Oct 28:** Jio Platforms listed — India's LARGEST-ever IPO (₹30,188 cr); issue ₹1,119 → listed ₹1,358 (+21%); subscribed 22×; bids ₹4.9 lakh cr\r
-- [x] **Sep–Oct:** 46 mainboard IPOs raised ~₹85,000 cr — record; NSE's own IPO was ₹22,563 cr\r
-- [x] **Nov 11 close:** Sensex 81,879 (+773), Nifty 25,255 (+210); Nifty +8–9% since Nov 1 on 7-session rally; heavy FII buying, IPO pipeline paused\r
-- [x] **Context:** SEBI had extended IPO-approval validity (Apr–Sep expiries → Sep 30) after West Asia war froze primary market\r
+- [x] **Nov 7:** SEBI (Settlement of Administrative and Civil Proceedings) Regulations, **2026** in force — *lets an entity under SEBI investigation/compoundable proceedings SETTLE the case (pay a settlement amount, avoid full litigation) at ANY stage — earlier framework allowed it only in narrower windows. Replaces the 2018 rules; online portal + settlement calculator + helpdesk launched. Why: faster case disposal, less court load. Ask: "settlement allowed at which stage?" → any stage.*\r
+- [x] **Nov 11:** SEBI circular — intermediaries must update KYC/CDD systems for **FATCA & CRS** reporting under new Income-tax Act 2025 + IT Rules 2026 — *FATCA (US law) & CRS (global standard) require brokers/banks to report accounts of foreign tax residents to authorities (AEOI = automatic exchange of info). New tax act changed the legal hooks, so intermediaries must rebuild their reporting systems. Why: keep India compliant with global tax-transparency treaties.*\r
+- [x] **Nov 12:** SEBI PR — **Niveshak Shivir** to be held **Nov 17, New Delhi** — *SEBI's investor-awareness/outreach event ("Niveshak" = investor). Part of SEBI's investor-education push alongside SUDARSAN/SEBI-Check tools. Ask: what is it + where held.*\r
+- [x] **Nov 12:** **Hindustan Coca-Cola Holdings Ltd** filed **DRHP** with SEBI — *DRHP = draft red herring prospectus, the first public document a company files before an IPO (discloses finances, risks, plans — no final price). Signals another mega-IPO in pipeline after Jio's record listing.*\r
+- [x] **Nov 11:** SEBI Summary Settlement Order — **Eight Innovate Fund II** (AIF scheme) — *SEBI's enforcement case against this Alternative Investment Fund scheme ended via settlement (fund paid to close proceedings). Shows the new settlement regs in action.*\r
+- [x] **Nov 5:** SEBI revised limits for **underlying-exposure requirement in currency derivatives** — *traders hedging forex risk must show a real underlying exposure (an actual import/export/foreign receivable) to take derivative positions; SEBI revised how much exposure proof is needed → affects who can trade USDINR futures and how much.*\r
+- [x] **Oct 28:** **Jio Platforms listed — India's LARGEST-ever IPO** (₹30,188 cr); issue ₹1,119 → listed ₹1,358 (+21%); subscribed 22× — *Reliance's digital arm; beats Coal India's old record. Landmark for primary-market depth.*\r
+- [x] **Sep–Oct:** 46 mainboard IPOs raised ~₹85,000 cr — record quarter; **NSE's own IPO ₹22,563 cr** — *primary-market boom after West Asia freeze lifted (SEBI had extended IPO-approval validity to Sep 30).*\r
+- [x] **Nov 11 close:** Sensex 81,879 (+773), Nifty 25,255 (+210); Nifty +8–9% since Nov 1 — *7-session rally on heavy FII buying + rate-cycle clarity; IPO pipeline paused as money rotates to secondary market.*\r
 \r
 ## RBI / Monetary Policy (rates, reports, committees)\r
-- [x] **Oct 7 MPC (63rd, Gov. Sanjay Malhotra):** repo +25 bps → **5.50%** — FIRST HIKE since Feb 2023; SDF 5.25%, MSF & Bank Rate 5.75%, fixed reverse repo 3.35%; stance → **calibrated tightening**; CRR 3.00% (daily maintenance raised 90%→99%), SLR 18%\r
-- [x] **MPC projections:** FY27 GDP 6.7%, CPI 5.2% (Q3 6.0%, Q4 5.7%); next MPC **Dec 2–4** — watch for revision (Nov reports cite RBI FY27 GDP up to 7.1%)\r
-- [x] **Oct CPI (expected):** ~6% — 2-year high, near RBI's upper band (Sept was 5.54%); food inflation ~9%\r
-- [x] **Q2 FY27 GDP:** SBI Research est. 7.8% vs RBI 7.2% — official data due end-Nov\r
-- [x] **Bank credit:** +19.4% YoY, broad money +16.5% — fastest since 2012-13 (inflation concern flagged)\r
-- [x] **MCLR hikes post-hike:** SBI +15 bps (Oct 15), PNB +10 bps (Nov 1), HDFC +5–15 bps (Nov 7), Canara/BoB +5–20 bps (Nov 12)\r
-- [x] **Rupee:** ~93.7–93.9/USD — record-weak zone (Nov 11)\r
+- [x] **Oct 7 MPC (63rd, Gov. Sanjay Malhotra):** repo **+25 bps → 5.50%** — FIRST HIKE since Feb 2023 — *inflation (~6% CPI) pushed above comfort; RBI switched stance to "calibrated tightening". SDF 5.25%, MSF & Bank Rate 5.75%, fixed reverse repo 3.35%; CRR 3.00% (daily-maintenance requirement raised 90%→99% = banks must hold CRR more strictly = liquidity tightening). Impact: loans/EMIs dearer — visible in MCLR hikes below.*\r
+- [x] **MPC projections:** FY27 GDP 6.7%, CPI 5.2%; next MPC **Dec 2–4** — *watch Dec meeting for whether tightening continues or pauses; Nov reports suggest RBI may raise FY27 GDP to ~7.1%.*\r
+- [x] **Oct CPI (expected):** ~6% — 2-year high; food inflation ~9% — *above RBI's 4% midpoint, near upper band (6%) — this is WHY the Oct hike happened.*\r
+- [x] **Q2 FY27 GDP:** SBI Research est. **7.8%** vs RBI 7.2% — official data end-Nov — *if true, fastest major economy; but strong growth + high credit = more inflation pressure.*\r
+- [x] **Bank credit:** +19.4% YoY; broad money +16.5% — fastest since 2012-13 — *credit boom = growth fuel but also inflation fuel; supports the tightening case.*\r
+- [x] **MCLR hikes after repo hike:** SBI +15 bps, PNB +10, HDFC +5–15, Canara/BoB +5–20 — *MCLR = the rate benchmark for most floating home/personal loans; it mechanically follows repo → EMIs rising = the textbook transmission chain (repo→MCLR→EMI).*\r
+- [x] **Rupee:** ~93.7–93.9/USD — record-weak zone (Nov 11) — *weak oil-import bill + FII flows; weak rupee = imported inflation, one more reason RBI is hawkish.*\r
 \r
 ## Schemes / Budget / Economy\r
-- [x] **Nov 11 Cabinet:** Yuge Yugeen Bharat Museum ₹3,230 cr — Min. of Culture, adaptive reuse of North & South Block (Raisina Hill)\r
-- [x] **Nov 11 Cabinet:** Noida–Greater Noida Metro Aqua Line ext. ₹2,390 cr — 8.5 km elevated, 5 stations, 4 yrs\r
-- [x] **Nov 11 Cabinet:** NBS fertilizer subsidy Rabi 2026-27 ₹62,370 cr (+64% vs last Rabi)\r
-- [x] **Nov 11 Cabinet:** Credit Guarantee Fund for Micro Units (CGFMU) extended to Mar 2031 — ₹5,000 cr corpus → ₹12.6 lakh cr MUDRA loans\r
-- [x] **Nov 11 Cabinet:** Stand-Up India extended to Mar 2031 — ₹4,111 cr corpus, 2.5 lakh new beneficiaries (women + SC/ST — NOTE: ST-relevant)\r
-- [x] **Nov 4 Cabinet:** CAPEX support scheme for critical minerals ₹2,814 cr — 30% cap-subsidy; 2 lithium + 2 nickel processing plants\r
-- [x] **Nov 3:** Swachh Bharat Mission (Gramin) Phase-II extended to Mar 2028 (~₹7,000 cr) — ODF Plus villages target\r
+- [x] **Nov 11 Cabinet:** **Yuge Yugeen Bharat Museum** ₹3,230 cr — *world's largest museum project; converts North & South Block (Raisina Hill) after ministries move out. Min. of Culture. Ask: outlay + location.*\r
+- [x] **Nov 11 Cabinet:** **Noida–Greater Noida Metro Aqua Line ext.** ₹2,390 cr — 8.5 km elevated, 5 stations, 4 yrs — *urban-connectivity capex.*\r
+- [x] **Nov 11 Cabinet:** **NBS fertilizer subsidy** Rabi 2026-27 — ₹62,370 cr (+64% YoY) — *NBS = nutrient-based subsidy; govt fixes subsidy per nutrient (N/P/K/S) so farmers get fertilizers below market price; jump = high global input prices.*\r
+- [x] **Nov 11 Cabinet:** **CGFMU** (Credit Guarantee Fund for Micro Units) extended to **Mar 2031** — ₹5,000 cr corpus backing ₹12.6 lakh cr MUDRA loans — *govt guarantees micro-loans so banks lend to tiny businesses without collateral.*\r
+- [x] **Nov 11 Cabinet:** **Stand-Up India** extended to **Mar 2031** — ₹4,111 cr, 2.5 lakh new beneficiaries — *bank loans ₹10L–1cr to SC/ST + women entrepreneurs for greenfield ventures. Ask: who it targets.*\r
+- [x] **Nov 4 Cabinet:** CAPEX scheme for **critical minerals** ₹2,814 cr — 30% capital subsidy; 2 lithium + 2 nickel processing plants — *cuts import dependence for battery/EV minerals (supply-chain security after West Asia shock).*\r
+- [x] **Nov 3:** **Swachh Bharat Mission (Gramin) Phase-II** extended to Mar 2028 (~₹7,000 cr) — *targets "ODF Plus" villages — beyond toilet-building to waste management.*\r
 \r
 ## Appointments / Awards / Summits\r
-- [x] **Nov 2:** Gopal Vittal (Bharti Airtel EVP) re-elected GSMA Chair for 2027–28\r
-- [x] **Nov 1:** Dinesh V. Ganvir — 55th DG, Geological Survey of India (Min. of Mines)\r
-- [x] **Nov 3:** Dr. Venkata Ramana Akkaraju — VC, Indian Maritime University, Chennai\r
-- [x] **Nov 3:** Balaji Nuthalapadi — interim CEO, Equitas Small Finance Bank (pending RBI approval)\r
-- [x] **Static+current:** RBI Governor Sanjay Malhotra (chair of MPC); SEBI Chairman — verify current holder on sebi.gov.in\r
+- [x] **Nov 2:** **Gopal Vittal** (Bharti Airtel EVP) re-elected **GSMA Chair** for 2027–28 — *GSMA = global mobile-operators' industry body (runs MWC); an Indian chairing it = telecom-sector recognition.*\r
+- [x] **Nov 1:** **Dinesh V. Ganvir** — **55th DG, Geological Survey of India** (Min. of Mines) — *GSI founded 1851, HQ Kolkata.*\r
+- [x] **Nov 3:** **Dr. Venkata Ramana Akkaraju** — VC, **Indian Maritime University**, Chennai.\r
+- [x] **Nov 3:** **Balaji Nuthalapadi** — interim CEO, **Equitas Small Finance Bank** (pending RBI nod).\r
+- [x] **Static+current:** RBI Gov **Sanjay Malhotra** (MPC chair); SEBI Chair **Tuhin Kanta Pandey** (11th, since Mar 2025).\r
 \r
 ## Sports / Books / Obituaries (the long tail — 5 min max)\r
 - [ ] *(fill as encountered in daily GA compilation)*\r
 \r
 ## Reports / Indices / Rankings (note the PUBLISHER — that's what's asked)\r
-- [x] **Moody's:** India FY27 GDP forecast raised to **7%** (from 6.5%); also 7% for CY2026 & CY2027 — publisher Moody's Ratings\r
-- [x] **OECD:** FY27 GDP +80 bps → **7.1%**; World Bank 7.1%; ADB/S&P/Fitch ~7% — India's the fastest major economy\r
-- [x] **SBI Research:** Q2 FY27 GDP est. 7.8% (54 high-frequency indicators model)\r
-- [x] **Moody's caution:** deficient SW monsoon + strengthening El Niño → farm output & rural demand risk\r
+- [x] **Moody's:** India FY27 GDP raised to **7%** (from 6.5%); 7% for CY26 & CY27 — *publisher: Moody's Ratings.*\r
+- [x] **OECD:** FY27 GDP +80 bps → **7.1%**; World Bank 7.1%; ADB/S&P/Fitch ~7% — *consensus: India = fastest major economy.*\r
+- [x] **SBI Research:** Q2 FY27 GDP est. 7.8% (54 high-frequency indicators model).\r
+- [x] **Moody's caution:** deficient SW monsoon + strengthening **El Niño** → farm output & rural demand risk — *why it matters: weak monsoon = food inflation, which RBI is already fighting.*\r
 \r
 ## Static GK spotted while reading\r
-- [x] MPC = 6 members (3 RBI + 3 external), Governor chairs; repo decisions by majority\r
-- [x] LAF corridor: SDF (floor) — repo — MSF (ceiling); SDF replaced fixed reverse repo as floor since Apr 2022\r
-- [x] RBI inflation target: 4% ± 2% band (CPI)\r
+- [x] MPC = 6 members (3 RBI + 3 external), Governor chairs; repo decided by majority vote.\r
+- [x] LAF corridor: SDF (floor) — repo — MSF (ceiling); SDF replaced fixed reverse repo as floor Apr 2022.\r
+- [x] RBI inflation target: **4% ± 2%** band (CPI).\r
 \r
 ---\r
 **Weekly recall check (every Sunday):** cover this file, write 10 facts from memory, mark misses → Error_Log\r
 `,"../../01_Phase1_Paper1/General_Awareness/Monthly_Logs/October_2026.md":`# GA Log — October 2026
 
-> Backfilled from monthly banking-exam digests (Blackbook/ExamVeda/AffairsMap) + official SEBI/RBI/PIB sources. One line per MCQ-able fact.
+> Backfilled from monthly banking-exam digests (Blackbook/ExamVeda/AffairsMap) + official SEBI/RBI/PIB sources.
+> Format per item: **fact** → *context (what it is, why it happened, what it changes)*.
 
 ## SEBI & Markets (Tier 1 — every SEBI circular/press release)
-- [x] **Oct 6–8:** **Settlement of Administrative & Civil Proceedings Regulations, 2026 NOTIFIED** — the Sep 24 board decision formalized; in force **Nov 7**; fast-track two types: violation-based + monetary-threshold (≤₹10 lakh); RRT = Remedial & Regulatory Terms (replaces "non-monetary terms")
-- [x] **Oct 7:** **Credit Risk-o-Meter** introduced — additional disclosure mechanism for debt securities
-- [x] **Oct 7:** Exemption from mandatory **merchant banker** appointment for privately-placed debt by certain listed issuers
-- [x] **Oct 15:** **Closing Auction Session (CAS) revised** — new window **3:30–3:40 pm**, 3 phases; most changes effective **Dec 7, 2026**; unexecuted limit/iceberg order transfers from **Feb 8, 2027**; CAS itself introduced Jan 2026; consultation drew 20,000+ comments
-- [x] **Oct 22:** **Margin waiver** on subsequent buy/sell after **Early Pay-In (EPI)** in cash segment
-- [x] **Oct 23:** Call-record maintenance rules relaxed for **Research Analysts'** institutional clients
-- [x] **Oct 30:** **FPI KYC-review periodicity rationalized**; digital-accessibility compliance timeline extended
-- [x] **Oct 27:** Debenture Trustees get more time for outside-SEBI activity compliance
-- [x] **Oct 28:** **Jio Platforms listed** — see November log (listed Oct 28; ₹30,188 cr = largest Indian IPO)
+- [x] **Oct 6–8:** **Settlement of Administrative & Civil Proceedings Regulations, 2026 NOTIFIED** — *the Sep 24 board decision becomes law (in force Nov 7). Lets entities settle SEBI enforcement at ANY stage; two fast-tracks: violation-based + monetary-threshold (≤₹10 lakh); "RRT" = Remedial & Regulatory Terms replaces old "non-monetary terms". Why: cut enforcement backlog + give business certainty.*
+- [x] **Oct 7:** **Credit Risk-o-Meter** introduced — *a standardized gauge (like the mutual-fund "Risk-o-Meter" but for debt securities) so investors see credit risk at a glance — more disclosure = fewer surprise defaults hitting retail money.*
+- [x] **Oct 7:** Exemption from mandatory **merchant banker** appointment for privately-placed debt by certain listed issuers — *removes a cost/compliance step for straightforward private debt placements — ease of doing business; merchant banker = the SEBI-registered intermediary that vets issues.*
+- [x] **Oct 15:** **Closing Auction Session (CAS) revised** — new window **3:30–3:40 pm**, 3 phases; most changes effective **Dec 7, 2026**; unexecuted limit/iceberg order transfers from **Feb 8, 2027** — *CAS = a call-auction that fixes each stock's official closing price (used for NAVs/indices) instead of last-trade. Consultation drew 20,000+ comments. Ask: new timings + when effective.*
+- [x] **Oct 22:** **Margin waiver** on subsequent buy/sell after **Early Pay-In (EPI)** in cash segment — *if you deliver shares/money EARLY (EPI), your next trade doesn't get blocked by margin rules — rewards early settlement, frees trading capital.*
+- [x] **Oct 23:** Call-record rules relaxed for **Research Analysts'** institutional clients — *RAs must keep call recordings for retail clients (accountability); exempted for big institutional clients — compliance relief where fraud risk is low.*
+- [x] **Oct 30:** **FPI KYC-review periodicity rationalized** — *Foreign Portfolio Investors now re-do KYC less often — easier for foreign money to invest; digital-accessibility deadline also extended.*
+- [x] **Oct 27:** **Debenture Trustees** get more time for outside-SEBI-activity compliance — *DTs guard bondholders' interests; SEBI is restricting them from doing other business that could conflict — extended deadline to comply.*
+- [x] **Oct 28:** **Jio Platforms listed** — *India's largest IPO ever (see Nov log for numbers). Primary-market milestone.*
 
 ## RBI / Monetary Policy (rates, reports, committees)
-- [x] **Oct 5–7, 63rd MPC:** repo **+25 bps → 5.50%** — first hike since Feb 2023; SDF 5.25%, MSF & Bank Rate 5.75%; stance → **calibrated tightening**; CRR daily-maintenance 90%→**99%**; FY27 CPI 5.2%, GDP 6.7%; two external members dissented (wanted neutral stance)
-- [x] **RBI approved Anup Kumar Saha** as **Kotak Mahindra Bank MD & CEO** — 3 yrs from **Jan 1, 2027**, succeeding Ashok Vaswani (bank filed Oct 1)
+- [x] **Oct 5–7, 63rd MPC:** repo **+25 bps → 5.50%** — FIRST HIKE since Feb 2023 — *CPI hit ~6% (top of RBI's 4±2% band) on food + West Asia oil shock → tightening. SDF 5.25%, MSF & Bank Rate 5.75%; stance → "calibrated tightening"; CRR daily-maintenance 90%→99% (banks must actually park 99% of required CRR daily — a quiet liquidity squeeze); FY27 CPI 5.2%, GDP 6.7%; two external members dissented (wanted neutral). Chain: repo↑ → MCLR↑ → EMIs↑ (visible in Nov).*
+- [x] **RBI approved Anup Kumar Saha** as **Kotak Mahindra Bank MD & CEO** — 3 yrs from **Jan 1, 2027** — *succeeds Ashok Vaswani; RBI approval is mandatory for bank CEO appointments — standard exam-style appointment item.*
 
 ## Schemes / Budget / Economy
-- [x] **Oct 1:** **GOBARdhan** Central Sector Scheme LAUNCHED, New Delhi (approved Aug 6, ₹23,731 cr — Compressed Biogas)
-- [x] **Oct 2:** **People's Plan Campaign 2026-27** began — theme "**Sabki Yojana, Sabka Vikas**"; GPDPs for FY28
-- [x] **Oct 28 Cabinet:** **PM Viksit Gram Swaraj Yojana (PM VGSY)** — ₹7,395.55 cr (2026-31), panchayats/local bodies
-- [x] **Oct 28 Cabinet:** **Container Manufacturing Promotion Scheme** — ₹10,000 cr till FY 2039-40
-- [x] **Oct 28 Cabinet:** **Khelo India Sports Goods Manufacturing Scheme** — ₹1,856.67 cr till FY34
-- [x] **Oct 15 Cabinet:** National Social Assistance Programme (**NSAP**) continued 2026-31; railway PLB ₹2,009.61 cr
-- [x] **TN:** "**Vetri Payanam Thittam**" (ex-Vidiyal Payanam) expanded — free bus travel for women & transgender persons
-- [x] **Oct 22–Nov 30:** **Khet Bachao Abhiyan** ran nationwide (Soil Health Card-based fertilizer use)
+- [x] **Oct 1:** **GOBARdhan** Central Sector Scheme LAUNCHED, New Delhi — *approved Aug 6, ₹23,731 cr till FY36; converts cattle dung/organic waste into Compressed Biogas (CBG) — energy security + rural income + waste handling. "GOBAR" = dung.*
+- [x] **Oct 2:** **People's Plan Campaign 2026-27** began — theme "**Sabki Yojana, Sabka Vikas**" — *villages draft their Gram Panchayat Development Plans (GPDPs) for FY28 — bottom-up planning exercise.*
+- [x] **Oct 28 Cabinet:** **PM Viksit Gram Swaraj Yojana (PM VGSY)** — ₹7,395.55 cr (2026-31) — *strengthens panchayats/local bodies (capacity + infrastructure) — part of "Viksit" village-governance push.*
+- [x] **Oct 28 Cabinet:** **Container Manufacturing Promotion Scheme** — ₹10,000 cr till FY 2039-40 — *India imports most shipping containers; scheme subsidizes domestic manufacturing → trade/logistics self-reliance.*
+- [x] **Oct 28 Cabinet:** **Khelo India Sports Goods Manufacturing Scheme** — ₹1,856.67 cr till FY34 — *domestic sports-equipment industry push.*
+- [x] **Oct 15 Cabinet:** **NSAP** (National Social Assistance Programme) continued 2026-31 — *pension/income support for elderly, widows, disabled (old-age safety net); railway Productivity-Linked Bonus ₹2,009.61 cr also cleared.*
+- [x] **TN:** "**Vetri Payanam Thittam**" (ex-Vidiyal Payanam) expanded — *free bus travel for women + transgender persons — Tamil Nadu welfare scheme (state-scheme questions do appear).*
+- [x] **Oct 22–Nov 30:** **Khet Bachao Abhiyan** nationwide — *promotes Soil Health Card-based balanced fertilizer use → soil conservation + lower subsidy burden.*
 
 ## Appointments / Awards / Summits
-- [x] **Oct 12:** President Murmu appointed **6 Governors** — Sudha Yadav (Karnataka), Braj Mohan Ram (Odisha), Dhal Singh Bisen (Uttarakhand), Dushyant Gautam (Sikkim), Mathur (Keralam), Arlekar (Tamil Nadu)
-- [x] **Oct 16:** **FSIB reconstituted** — S.C.L. Das (ex-MSME Secy) Chairperson, 3 yrs — picks PSB/FI heads
-- [x] **Oct 6:** 3 new SC judges sworn in (strength 37/38); **CJI: Justice Surya Kant**
-- [x] **Oct 10:** Prakash Rajpurohit — Deputy Election Commissioner (till Apr 2030)
-- [x] **Oct 1:** Bimal N. Patel sworn in **ITLOS judge** (Hamburg, 9 yrs, succeeding Neeru Chadha); Maurice Kamga = ITLOS President
-- [x] **Oct 16:** Sudhakar Dalela — Ambassador to Nepal
-- [x] **Oct 13:** L. Murugan resigned as MoS I&B & Rajya Sabha MP — to work for BJP in Tamil Nadu
-- [x] **Oct 11:** Achyuta Samanta (KIIT-KISS) — first President, Indian UniSport Federation
-- [x] **Oct:** INCOIS Director T.M. Balakrishnan Nair — Chair, UNESCO-IOC Indian Ocean body IOCINDIO
-- [x] **Oct 6:** **Smriti Mandhana** — India women's cricket captain (succeeds Harmanpreet Kaur); UNICEF Celebrity Advocate Oct 11
-- [x] **Oct:** Rajeshwari Kumari (trap shooter) — Olympic Council of Asia Athletes' Commission
+- [x] **Oct 12:** President Murmu appointed **6 Governors** — Sudha Yadav (Karnataka), Braj Mohan Ram (Odisha), Dhal Singh Bisen (Uttarakhand), Dushyant Gautam (Sikkim), Mathur (Keralam), Arlekar (TN) — *classic multi-appointment item; match person→state.*
+- [x] **Oct 16:** **FSIB reconstituted** — Chairperson **S.C.L. Das** (ex-MSME Secy), 3 yrs — *FSIB picks who heads PSU banks/insurers/financial institutions — the body's name + job is the exam point.*
+- [x] **Oct 6:** 3 new SC judges sworn in (strength 37/38); **CJI: Justice Surya Kant** — *sanctioned strength 34+4; know the CJI.*
+- [x] **Oct 10:** **Prakash Rajpurohit** — Deputy Election Commissioner (till Apr 2030).
+- [x] **Oct 1:** **Bimal N. Patel** sworn in **ITLOS judge** (Hamburg, 9 yrs, succeeding Neeru Chadha); **Maurice Kamga** = ITLOS President — *International Tribunal for the Law of the Sea — an Indian judge on it = prestige item.*
+- [x] **Oct 16:** **Sudhakar Dalela** — Ambassador to Nepal.
+- [x] **Oct 13:** **L. Murugan** resigned as MoS I&B + RS MP — moving to TN party work.
+- [x] **Oct 11:** **Achyuta Samanta** (KIIT-KISS founder) — first President, **Indian UniSport Federation** — *new body for university sports.*
+- [x] **Oct:** INCOIS Director **T.M. Balakrishnan Nair** — Chair, UNESCO-IOC Indian Ocean body **IOCINDIO** — *INCOIS = tsunami/ocean warning center, Hyderabad.*
+- [x] **Oct 6:** **Smriti Mandhana** — India women's cricket captain (succeeds Harmanpreet Kaur); UNICEF Celebrity Advocate Oct 11.
+- [x] **Oct:** **Rajeshwari Kumari** (trap shooter) — Olympic Council of Asia Athletes' Commission.
 
 ## Sports / Books / Obituaries (the long tail — 5 min max)
-- [x] Smriti Mandhana — women's cricket captain (above); Rajeshwari Kumari — OCA Athletes' Commission
+- [x] Smriti Mandhana — women's cricket captain; Rajeshwari Kumari — OCA Athletes' Commission (both above).
 
 ## Reports / Indices / Rankings (note the PUBLISHER — that's what's asked)
 - [x] *(Major rating/forecast items logged under Sep–Nov — JCR A− in Sep, Moody's 7% in Nov)*
 
 ## Static GK spotted while reading
-- [x] **Kerala officially renamed "Keralam"** (2026) — seen in governor appointment lists
-- [x] FSIB = Financial Services Institutions Bureau — recommends chiefs of PSU banks/insurers/FIs
-- [x] ITLOS = International Tribunal for the Law of the Sea, Hamburg, Germany
-- [x] CAS = Closing Auction Session — determines closing prices via call auction (like pre-open)
+- [x] **Kerala officially renamed "Keralam"** (2026) — appears in governor lists.
+- [x] FSIB = Financial Services Institutions Bureau — recommends chiefs of PSU banks/insurers/FIs.
+- [x] ITLOS = International Tribunal for the Law of the Sea, Hamburg, Germany.
+- [x] CAS = Closing Auction Session — call auction that sets official closing prices.
 
 ---
 **Weekly recall check:** cover this file, write 10 facts from memory, mark misses → Error_Log
 `,"../../01_Phase1_Paper1/General_Awareness/Monthly_Logs/September_2026.md":`# GA Log — September 2026
 
-> Backfilled from monthly banking-exam digests + official SEBI/RBI/PIB sources. One line per MCQ-able fact.
+> Backfilled from monthly banking-exam digests + official SEBI/RBI/PIB sources.
+> Format per item: **fact** → *context (what it is, why it happened, what it changes)*.
 
 ## SEBI & Markets (Tier 1 — every SEBI circular/press release)
-- [x] **Sep 24 — SEBI Board Meeting #3 of 2026** (Mar 23, Jun 19 earlier) — 12 agenda items approved; the month's biggest GA event:
-- [x] **Sep 24:** Approved NEW **Settlement Proceedings Regulations** replacing 2018 — formula: **Settlement Amount = Base × (S + R + G + A − M) + Legal Costs** (Stage, Regulatory action, Gravity, Aggravating, Mitigating); wrongful gains disgorged SEPARATELY (no double counting); settlement notice possible BEFORE SCN (60 days); post-SCN window raised 60→**90 days**; fast-track for amounts ≤ **₹10 lakh**; one-time 90-day window for old rejected applicants (+20%)
-- [x] **Sep 24:** Approved **SEBI (Portfolio Managers) Regulations, 2026** replacing 2020 regs — PMS can invest in IPOs/primary debt; discretionary PMS up to **10% AUM in unlisted investment-grade NCDs**
-- [x] **Sep 24:** FPIs allowed in **Exchange Traded Commodity Derivatives (ETCDs)**
-- [x] **Sep 24:** **Depository Receipts on units of REITs & InvITs** approved (framework issued Nov 2)
-- [x] **Sep 24:** Expanded scope of **Vault Managers Regulations, 2021**; Common Advertisement Code for SEBI-regulated entities; CAPSM Regs 2007 amendment; Accredited Investor framework review; AIF investor protection extended to all AIF forms
-- [x] **Sep 12:** SEBI consultation on **Closing Auction Session** changes — drew 20,000+ comments (revised circular came Oct 15)
+- [x] **Sep 24 — SEBI Board Meeting #3 of 2026** (after Mar 23, Jun 19) — 12 agenda items approved; the month's biggest GA event. *SEBI board meets ~quarterly; its approvals become regulations — board-meeting outcomes are the single highest-yield SEBI GA.*
+- [x] **Sep 24:** Approved NEW **Settlement Proceedings Regulations** replacing 2018 — *the settlement-amount FORMULA is the exam bait:* **Base × (S + R + G + A − M) + Legal Costs** *(Stage, Regulatory action, Gravity, Aggravating, Mitigating factors). Wrongful gains disgorged SEPARATELY (no double counting); settlement possible BEFORE SCN (60 days); post-SCN window raised 60→90 days; fast-track ≤₹10 lakh; one-time 90-day window for previously-rejected applicants (+20% cost). Why: speed up enforcement + predictability — notified Oct, in force Nov 7.*
+- [x] **Sep 24:** Approved **SEBI (Portfolio Managers) Regulations, 2026** replacing 2020 — *PMS (managed portfolios for HNIs, min ₹50L) can now invest in IPOs/primary debt; discretionary PMS may hold up to 10% AUM in unlisted investment-grade NCDs — widens PMS investment universe.*
+- [x] **Sep 24:** FPIs allowed in **Exchange Traded Commodity Derivatives (ETCDs)** — *foreign investors can now trade commodity futures on exchanges — deepens the commodity market (gold/agri etc.).*
+- [x] **Sep 24:** **Depository Receipts on units of REITs & InvITs** approved — *lets REIT/InvIT units be packaged as DRs (like ADRs for Indian stocks) so foreign investors can buy them more easily (framework issued Nov 2).*
+- [x] **Sep 24:** Also approved — expanded **Vault Managers Regulations 2021** scope; **Common Advertisement Code** for all SEBI-regulated entities (uniform ad rules); CAPSM Regs 2007 amendment; Accredited Investor framework review; AIF investor-protection extended to all AIF forms.
+- [x] **Sep 12:** SEBI consultation on **Closing Auction Session** changes — *the process that sets official closing prices; 20,000+ public comments → revised circular Oct 15.*
 
 ## RBI / Monetary Policy (rates, reports, committees)
-- [x] **No MPC in Sep** (meets Aug, Oct, Dec, Feb, Apr, Jun) — repo stayed 5.25% through the month
-- [x] **RBI WMA Advisory Committee report (Chair: I.S.N. Prasad):** recommended states' WMA limit **₹61,008 cr → ₹67,839 cr** (+11.2%); annual revision capped at 4% of revenue receipts; FY26 usage: 19 states SDF, 11 WMA, 10 OD
-- [x] **Q1 FY27 BoP:** CAD **$4.2 bn (0.5% of GDP)** vs $3.4 bn (0.4%) a year ago; capital account net OUTFLOW $5.5 bn; FPI outflow $9.6 bn — first capital-outflow quarter in a while
+- [x] **No MPC in Sep** — *MPC meets Aug/Oct/Dec/Feb/Apr/Jun; repo stayed 5.25% (pre-Oct-hike level) all month.*
+- [x] **RBI WMA Advisory Committee (Chair: I.S.N. Prasad):** states' WMA limit **₹61,008 cr → ₹67,839 cr** (+11.2%); annual revision capped at 4% of revenue receipts — *WMA = Ways & Means Advances, RBI's short-term overdraft to states/Centre for cash-flow gaps. FY26 usage: 19 states used SDF, 11 WMA, 10 OD.*
+- [x] **Q1 FY27 BoP:** CAD **$4.2 bn (0.5% GDP)** vs 0.4% last year; capital account net OUTFLOW $5.5 bn; FPI outflow $9.6 bn — *foreign money leaving amid West Asia risk-off + US yields — explains rupee weakness later in Nov.*
 
 ## Schemes / Budget / Economy
-- [x] **OECD Interim Outlook (Sep):** India FY27 GDP forecast raised **+80 bps → 7.1%** (from 6.3%); FY28 ~6.5%
-- [x] **JCR (Japan Credit Rating Agency):** upgraded India sovereign rating **BBB+ → A−** — FIRST upgrade in 35 years, stable outlook
-- [x] **Semicon 2.0** (approved Jul 15, PIB push in Sep): **₹1,27,500 cr** outlay — 6 pillars: R&D, chip design, machines/materials, more fabs, talent, ATMP/OSAT
-- [x] **Tamil Nadu CM C. Joseph Vijay (TVK govt):** announced world-class **Olympic City in Chennai**
-- [x] **Khet Bachao Abhiyan** announced (National Agriculture Conference–Rabi 2026): nationwide Oct 22–Nov 30, Soil Health Card-based fertilizer use
-- [x] **Corporate:** Vodafone Idea relaunched brand identity — **Shah Rukh Khan brand ambassador**; shares hit 25-month high
+- [x] **OECD Interim Outlook (Sep):** India FY27 GDP raised **+80 bps → 7.1%** (FY28 ~6.5%) — *publisher: OECD. Fastest major economy.*
+- [x] **JCR (Japan Credit Rating Agency):** upgraded India sovereign **BBB+ → A−** — FIRST upgrade in 35 years, stable outlook — *a non-Big-3 agency rating India above the S&P/Fitch/Moody's grade (they hold BBB−). Ask: which agency + to what grade.*
+- [x] **Semicon 2.0** (approved Jul 15, pushed in Sep): **₹1,27,500 cr** — 6 pillars: R&D, chip design, machines/materials, more fabs, talent, ATMP/OSAT — *India's semiconductor-manufacturing drive.*
+- [x] **Tamil Nadu CM C. Joseph Vijay (TVK govt):** announced world-class **Olympic City in Chennai** — *state infrastructure item; note the new TVK government.*
+- [x] **Khet Bachao Abhiyan** announced — *National Agriculture Conference–Rabi 2026; ran Oct 22–Nov 30 — Soil Health Card-based balanced fertilizer campaign.*
+- [x] **Corporate:** Vodafone Idea relaunched brand identity — **Shah Rukh Khan brand ambassador**; shares hit 25-month high — *VI survival news after telecom stress.*
 
 ## Appointments / Awards / Summits
-- [x] *(Sep items covered under monthly appointments — check Oct/Nov files for cross-month items like GSI DG change Nov 1)*
+- [x] *(Sep items covered under monthly appointments — see Oct/Nov files for cross-month items like GSI DG change Nov 1)*
 
 ## Sports / Books / Obituaries (the long tail — 5 min max)
 - [ ] *(fill from weekly GA compilations)*
 
 ## Reports / Indices / Rankings (note the PUBLISHER — that's what's asked)
-- [x] **JCR** — India sovereign A− (35-year first upgrade)
-- [x] **OECD Economic Outlook Interim** — India FY27 GDP 7.1%
-- [x] **PRS Monthly Policy Review** — Q1 FY27 CAD 0.5% of GDP
+- [x] **JCR** — India sovereign A− (35-year first upgrade).
+- [x] **OECD Economic Outlook Interim** — India FY27 GDP 7.1%.
+- [x] **PRS Monthly Policy Review** — Q1 FY27 CAD 0.5% of GDP.
 
 ## Static GK spotted while reading
-- [x] SEBI board meets ~quarterly; 2026 meetings: Mar 23, Jun 19, Sep 24
-- [x] Sovereign rating scale reminder: A− > BBB+ (India was lowest-investment-grade BBB− at S&P/Fitch/Moody's; JCR now higher)
-- [x] WMA = RBI's short-term lending to states/centre for cash-flow mismatches; SDF & OD are the other two legs
-- [x] TVK = Tamilaga Vettri Kazhagam — Vijay's party; TN changed government in 2026 elections
+- [x] SEBI board meets ~quarterly; 2026 meetings: Mar 23, Jun 19, Sep 24.
+- [x] Sovereign rating scale: A− > BBB+ (India was lowest-investment-grade BBB− at S&P/Fitch/Moody's; JCR now higher).
+- [x] WMA = RBI's short-term lending to states/centre for cash-flow mismatches; SDF & OD are the other two legs.
+- [x] TVK = Tamilaga Vettri Kazhagam — Vijay's party; TN changed government in 2026 elections.
 
 ---
 **Weekly recall check:** cover this file, write 10 facts from memory, mark misses → Error_Log
