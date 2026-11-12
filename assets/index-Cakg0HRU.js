@@ -1,0 +1,5409 @@
+var e=Object.create,t=Object.defineProperty,n=Object.getOwnPropertyDescriptor,r=Object.getOwnPropertyNames,i=Object.getPrototypeOf,a=Object.prototype.hasOwnProperty,o=(e,t)=>()=>(t||(e((t={exports:{}}).exports,t,t.exports),e=null),t.exports),s=(e,i,o,s)=>{if(i&&typeof i==`object`||typeof i==`function`)for(var c=r(i),l=0,u=c.length,d;l<u;l++)d=c[l],!a.call(e,d)&&d!==o&&t(e,d,{get:(e=>i[e]).bind(null,d),enumerable:!(s=n(i,d))||s.enumerable});return e},c=(n,r,o)=>(o=n==null?{}:e(i(n)),s(r||!n||!n.__esModule||!a.call(n,`default`)?t(o,`default`,{value:n,enumerable:!0}):o,n));(function(){let e=document.createElement(`link`).relList;if(e&&e.supports&&e.supports(`modulepreload`))return;for(let e of document.querySelectorAll(`link[rel="modulepreload"]`))n(e);new MutationObserver(e=>{for(let t of e)if(t.type===`childList`)for(let e of t.addedNodes)e.tagName===`LINK`&&e.rel===`modulepreload`&&n(e)}).observe(document,{childList:!0,subtree:!0});function t(e){let t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),t.credentials=e.crossOrigin===`use-credentials`?`include`:e.crossOrigin===`anonymous`?`omit`:`same-origin`,t}function n(e){if(e.ep)return;e.ep=!0;let n=t(e);fetch(e.href,n)}})();var l=o((e=>{var t=Symbol.for(`react.transitional.element`),n=Symbol.for(`react.portal`),r=Symbol.for(`react.fragment`),i=Symbol.for(`react.strict_mode`),a=Symbol.for(`react.profiler`),o=Symbol.for(`react.consumer`),s=Symbol.for(`react.context`),c=Symbol.for(`react.forward_ref`),l=Symbol.for(`react.suspense`),u=Symbol.for(`react.memo`),d=Symbol.for(`react.lazy`),f=Symbol.for(`react.activity`),p=Symbol.for(`react.view_transition`),m=Symbol.iterator;function h(e){return typeof e!=`object`||!e?null:(e=m&&e[m]||e[`@@iterator`],typeof e==`function`?e:null)}var g={isMounted:function(){return!1},enqueueForceUpdate:function(){},enqueueReplaceState:function(){},enqueueSetState:function(){}},_=Object.assign,v={};function y(e,t,n){this.props=e,this.context=t,this.refs=v,this.updater=n||g}y.prototype.isReactComponent={},y.prototype.setState=function(e,t){if(typeof e!=`object`&&typeof e!=`function`&&e!=null)throw Error(`takes an object of state variables to update or a function which returns an object of state variables.`);this.updater.enqueueSetState(this,e,t,`setState`)},y.prototype.forceUpdate=function(e){this.updater.enqueueForceUpdate(this,e,`forceUpdate`)};function b(){}b.prototype=y.prototype;function ee(e,t,n){this.props=e,this.context=t,this.refs=v,this.updater=n||g}var te=ee.prototype=new b;te.constructor=ee,_(te,y.prototype),te.isPureReactComponent=!0;var ne=Array.isArray;function x(){}var S={H:null,A:null,T:null,S:null},C=Object.prototype.hasOwnProperty;function w(e,n,r){var i=r.ref;return{$$typeof:t,type:e,key:n,ref:i===void 0?null:i,props:r}}function re(e,t){return w(e.type,t,e.props)}function ie(e){return typeof e==`object`&&!!e&&e.$$typeof===t}function ae(e){var t={"=":`=0`,":":`=2`};return`$`+e.replace(/[=:]/g,function(e){return t[e]})}var oe=/\/+/g;function se(e,t){return typeof e==`object`&&e&&e.key!=null?ae(``+e.key):t.toString(36)}function ce(e){switch(e.status){case`fulfilled`:return e.value;case`rejected`:throw e.reason;default:switch(typeof e.status==`string`?e.then(x,x):(e.status=`pending`,e.then(function(t){e.status===`pending`&&(e.status=`fulfilled`,e.value=t)},function(t){e.status===`pending`&&(e.status=`rejected`,e.reason=t)})),e.status){case`fulfilled`:return e.value;case`rejected`:throw e.reason}}throw e}function le(e,r,i,a,o){var s=typeof e;(s===`undefined`||s===`boolean`)&&(e=null);var c=!1;if(e===null)c=!0;else switch(s){case`bigint`:case`string`:case`number`:c=!0;break;case`object`:switch(e.$$typeof){case t:case n:c=!0;break;case d:return c=e._init,le(c(e._payload),r,i,a,o)}}if(c)return o=o(e),c=a===``?`.`+se(e,0):a,ne(o)?(i=``,c!=null&&(i=c.replace(oe,`$&/`)+`/`),le(o,r,i,``,function(e){return e})):o!=null&&(ie(o)&&(o=re(o,i+(o.key==null||e&&e.key===o.key?``:(``+o.key).replace(oe,`$&/`)+`/`)+c)),r.push(o)),1;c=0;var l=a===``?`.`:a+`:`;if(ne(e))for(var u=0;u<e.length;u++)a=e[u],s=l+se(a,u),c+=le(a,r,i,s,o);else if(u=h(e),typeof u==`function`)for(e=u.call(e),u=0;!(a=e.next()).done;)a=a.value,s=l+se(a,u++),c+=le(a,r,i,s,o);else if(s===`object`){if(typeof e.then==`function`)return le(ce(e),r,i,a,o);throw r=String(e),Error(`Objects are not valid as a React child (found: `+(r===`[object Object]`?`object with keys {`+Object.keys(e).join(`, `)+`}`:r)+`). If you meant to render a collection of children, use an array instead.`)}return c}function ue(e,t,n){if(e==null)return e;var r=[],i=0;return le(e,r,``,``,function(e){return t.call(n,e,i++)}),r}function de(e){if(e._status===-1){var t=e._result,n=t();n.then(function(t){(e._status===0||e._status===-1)&&(e._status=1,e._result=t,n.status===void 0&&(n.status=`fulfilled`,n.value=t))},function(t){(e._status===0||e._status===-1)&&(e._status=2,e._result=t,n.status===void 0&&(n.status=`rejected`,n.reason=t))}),e._status===-1&&(e._status=0,e._result=n)}if(e._status===1)return e._result.default;throw e._result}var fe=typeof reportError==`function`?reportError:function(e){if(typeof window==`object`&&typeof window.ErrorEvent==`function`){var t=new window.ErrorEvent(`error`,{bubbles:!0,cancelable:!0,message:typeof e==`object`&&e&&typeof e.message==`string`?String(e.message):String(e),error:e});if(!window.dispatchEvent(t))return}else if(typeof process==`object`&&typeof process.emit==`function`){process.emit(`uncaughtException`,e);return}console.error(e)};function pe(e){var t=S.T,n={};n.types=t===null?null:t.types,S.T=n;try{var r=e(),i=S.S;i!==null&&i(n,r),typeof r==`object`&&r&&typeof r.then==`function`&&r.then(x,fe)}catch(e){fe(e)}finally{t!==null&&n.types!==null&&(t.types=n.types),S.T=t}}function me(e){var t=S.T;if(t!==null){var n=t.types;n===null?t.types=[e]:n.indexOf(e)===-1&&n.push(e)}else pe(me.bind(null,e))}var he={map:ue,forEach:function(e,t,n){ue(e,function(){t.apply(this,arguments)},n)},count:function(e){var t=0;return ue(e,function(){t++}),t},toArray:function(e){return ue(e,function(e){return e})||[]},only:function(e){if(!ie(e))throw Error(`React.Children.only expected to receive a single React element child.`);return e}};e.Activity=f,e.Children=he,e.Component=y,e.Fragment=r,e.Profiler=a,e.PureComponent=ee,e.StrictMode=i,e.Suspense=l,e.ViewTransition=p,e.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE=S,e.__COMPILER_RUNTIME={__proto__:null,c:function(e){return S.H.useMemoCache(e)}},e.addTransitionType=me,e.cache=function(e){return function(){return e.apply(null,arguments)}},e.cacheSignal=function(){return null},e.cloneElement=function(e,t,n){if(e==null)throw Error(`The argument must be a React element, but you passed `+e+`.`);var r=_({},e.props),i=e.key;if(t!=null)for(a in t.key!==void 0&&(i=``+t.key),t)!C.call(t,a)||a===`key`||a===`__self`||a===`__source`||a===`ref`&&t.ref===void 0||(r[a]=t[a]);var a=arguments.length-2;if(a===1)r.children=n;else if(1<a){for(var o=Array(a),s=0;s<a;s++)o[s]=arguments[s+2];r.children=o}return w(e.type,i,r)},e.createContext=function(e){return e={$$typeof:s,_currentValue:e,_currentValue2:e,_threadCount:0,Provider:null,Consumer:null},e.Provider=e,e.Consumer={$$typeof:o,_context:e},e},e.createElement=function(e,t,n){var r,i={},a=null;if(t!=null)for(r in t.key!==void 0&&(a=``+t.key),t)C.call(t,r)&&r!==`key`&&r!==`__self`&&r!==`__source`&&(i[r]=t[r]);var o=arguments.length-2;if(o===1)i.children=n;else if(1<o){for(var s=Array(o),c=0;c<o;c++)s[c]=arguments[c+2];i.children=s}if(e&&e.defaultProps)for(r in o=e.defaultProps,o)i[r]===void 0&&(i[r]=o[r]);return w(e,a,i)},e.createRef=function(){return{current:null}},e.forwardRef=function(e){return{$$typeof:c,render:e}},e.isValidElement=ie,e.lazy=function(e){return{$$typeof:d,_payload:{_status:-1,_result:e},_init:de}},e.memo=function(e,t){return{$$typeof:u,type:e,compare:t===void 0?null:t}},e.startTransition=pe,e.unstable_useCacheRefresh=function(){return S.H.useCacheRefresh()},e.use=function(e){return S.H.use(e)},e.useActionState=function(e,t,n){return S.H.useActionState(e,t,n)},e.useCallback=function(e,t){return S.H.useCallback(e,t)},e.useContext=function(e){return S.H.useContext(e)},e.useDebugValue=function(){},e.useDeferredValue=function(e,t){return S.H.useDeferredValue(e,t)},e.useEffect=function(e,t){return S.H.useEffect(e,t)},e.useEffectEvent=function(e){return S.H.useEffectEvent(e)},e.useId=function(){return S.H.useId()},e.useImperativeHandle=function(e,t,n){return S.H.useImperativeHandle(e,t,n)},e.useInsertionEffect=function(e,t){return S.H.useInsertionEffect(e,t)},e.useLayoutEffect=function(e,t){return S.H.useLayoutEffect(e,t)},e.useMemo=function(e,t){return S.H.useMemo(e,t)},e.useOptimistic=function(e,t){return S.H.useOptimistic(e,t)},e.useReducer=function(e,t,n){return S.H.useReducer(e,t,n)},e.useRef=function(e){return S.H.useRef(e)},e.useState=function(e){return S.H.useState(e)},e.useSyncExternalStore=function(e,t,n){return S.H.useSyncExternalStore(e,t,n)},e.useTransition=function(){return S.H.useTransition()},e.version=`19.3.1`})),u=o(((e,t)=>{t.exports=l()})),d=o((e=>{function t(e,t){var n=e.length;e.push(t);a:for(;0<n;){var r=n-1>>>1,a=e[r];if(0<i(a,t))e[r]=t,e[n]=a,n=r;else break a}}function n(e){return e.length===0?null:e[0]}function r(e){if(e.length===0)return null;var t=e[0],n=e.pop();if(n!==t){e[0]=n;a:for(var r=0,a=e.length,o=a>>>1;r<o;){var s=2*(r+1)-1,c=e[s],l=s+1,u=e[l];if(0>i(c,n))l<a&&0>i(u,c)?(e[r]=u,e[l]=n,r=l):(e[r]=c,e[s]=n,r=s);else if(l<a&&0>i(u,n))e[r]=u,e[l]=n,r=l;else break a}}return t}function i(e,t){var n=e.sortIndex-t.sortIndex;return n===0?e.id-t.id:n}if(e.unstable_now=void 0,typeof performance==`object`&&typeof performance.now==`function`){var a=performance;e.unstable_now=function(){return a.now()}}else{var o=Date,s=o.now();e.unstable_now=function(){return o.now()-s}}var c=[],l=[],u=1,d=null,f=3,p=!1,m=!1,h=!1,g=!1,_=typeof setTimeout==`function`?setTimeout:null,v=typeof clearTimeout==`function`?clearTimeout:null,y=typeof setImmediate<`u`?setImmediate:null;function b(e){for(var i=n(l);i!==null;){if(i.callback===null)r(l);else if(i.startTime<=e)r(l),i.sortIndex=i.expirationTime,t(c,i);else break;i=n(l)}}function ee(e){if(h=!1,b(e),!m){if(n(c)!==null)m=!0,te||(te=!0,re());else{var t=n(l);t!==null&&oe(ee,t.startTime-e)}}}var te=!1,ne=-1,x=5,S=-1;function C(){return g?!0:!(e.unstable_now()-S<x)}function w(){if(g=!1,te){var t=e.unstable_now();S=t;var i=!0;try{a:{m=!1,h&&(h=!1,v(ne),ne=-1),p=!0;var a=f;try{b:{for(b(t),d=n(c);d!==null&&!(d.expirationTime>t&&C());){var o=d.callback;if(typeof o==`function`){d.callback=null,f=d.priorityLevel;var s=o(d.expirationTime<=t);if(t=e.unstable_now(),typeof s==`function`){d.callback=s,b(t),i=!0;break b}d===n(c)&&r(c),b(t)}else r(c);d=n(c)}if(d!==null)i=!0;else{var u=n(l);u!==null&&oe(ee,u.startTime-t),i=!1}}break a}finally{d=null,f=a,p=!1}i=void 0}}finally{i?re():te=!1}}}var re;if(typeof y==`function`)re=function(){y(w)};else if(typeof MessageChannel<`u`){var ie=new MessageChannel,ae=ie.port2;ie.port1.onmessage=w,re=function(){ae.postMessage(null)}}else re=function(){_(w,0)};function oe(t,n){ne=_(function(){t(e.unstable_now())},n)}e.unstable_IdlePriority=5,e.unstable_ImmediatePriority=1,e.unstable_LowPriority=4,e.unstable_NormalPriority=3,e.unstable_Profiling=null,e.unstable_UserBlockingPriority=2,e.unstable_cancelCallback=function(e){e.callback=null},e.unstable_forceFrameRate=function(e){0>e||125<e?console.error(`forceFrameRate takes a positive int between 0 and 125, forcing frame rates higher than 125 fps is not supported`):x=0<e?Math.floor(1e3/e):5},e.unstable_getCurrentPriorityLevel=function(){return f},e.unstable_next=function(e){switch(f){case 1:case 2:case 3:var t=3;break;default:t=f}var n=f;f=t;try{return e()}finally{f=n}},e.unstable_requestPaint=function(){g=!0},e.unstable_runWithPriority=function(e,t){switch(e){case 1:case 2:case 3:case 4:case 5:break;default:e=3}var n=f;f=e;try{return t()}finally{f=n}},e.unstable_scheduleCallback=function(r,i,a){var o=e.unstable_now();switch(typeof a==`object`&&a?(a=a.delay,a=typeof a==`number`&&0<a?o+a:o):a=o,r){case 1:var s=-1;break;case 2:s=250;break;case 5:s=1073741823;break;case 4:s=1e4;break;default:s=5e3}return s=a+s,r={id:u++,callback:i,priorityLevel:r,startTime:a,expirationTime:s,sortIndex:-1},a>o?(r.sortIndex=a,t(l,r),n(c)===null&&r===n(l)&&(h?(v(ne),ne=-1):h=!0,oe(ee,a-o))):(r.sortIndex=s,t(c,r),m||p||(m=!0,te||(te=!0,re()))),r},e.unstable_shouldYield=C,e.unstable_wrapCallback=function(e){var t=f;return function(){var n=f;f=t;try{return e.apply(this,arguments)}finally{f=n}}}})),f=o(((e,t)=>{t.exports=d()})),p=o((e=>{var t=u();function n(e){var t=`https://react.dev/errors/`+e;if(1<arguments.length){t+=`?args[]=`+encodeURIComponent(arguments[1]);for(var n=2;n<arguments.length;n++)t+=`&args[]=`+encodeURIComponent(arguments[n])}return`Minified React error #`+e+`; visit `+t+` for the full message or use the non-minified dev environment for full errors and additional helpful warnings.`}function r(){}var i={d:{f:r,r:function(){throw Error(n(522))},D:r,C:r,L:r,m:r,X:r,S:r,M:r},p:0,findDOMNode:null},a=Symbol.for(`react.portal`),o=Symbol.for(`react.recoverable`),s=Symbol.for(`react.optimistic_key`);function c(e,t,n){var r=3<arguments.length&&arguments[3]!==void 0?arguments[3]:null;return{$$typeof:a,key:r==null?null:r===s?s:``+r,children:e,containerInfo:t,implementation:n}}var l=t.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;function d(e,t){if(e===`font`)return``;if(typeof t==`string`)return t===`use-credentials`?t:``}e.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE=i,e.browser=function(e){return{$$typeof:o,_reason:e}},e.createPortal=function(e,t){var r=2<arguments.length&&arguments[2]!==void 0?arguments[2]:null;if(!t||t.nodeType!==1&&t.nodeType!==9&&t.nodeType!==11)throw Error(n(299));return c(e,t,null,r)},e.flushSync=function(e){var t=l.T,n=i.p;try{if(l.T=null,i.p=2,e)return e()}finally{l.T=t,i.p=n,i.d.f()}},e.preconnect=function(e,t){typeof e==`string`&&(t?(t=t.crossOrigin,t=typeof t==`string`?t===`use-credentials`?t:``:void 0):t=null,i.d.C(e,t))},e.prefetchDNS=function(e){typeof e==`string`&&i.d.D(e)},e.preinit=function(e,t){if(typeof e==`string`&&t&&typeof t.as==`string`){var n=t.as,r=d(n,t.crossOrigin),a=typeof t.integrity==`string`?t.integrity:void 0,o=typeof t.fetchPriority==`string`?t.fetchPriority:void 0;n===`style`?i.d.S(e,typeof t.precedence==`string`?t.precedence:void 0,{crossOrigin:r,integrity:a,fetchPriority:o}):n===`script`&&i.d.X(e,{crossOrigin:r,integrity:a,fetchPriority:o,nonce:typeof t.nonce==`string`?t.nonce:void 0})}},e.preinitModule=function(e,t){if(typeof e==`string`){if(typeof t==`object`&&t){if(t.as==null||t.as===`script`){var n=d(t.as,t.crossOrigin);i.d.M(e,{crossOrigin:n,integrity:typeof t.integrity==`string`?t.integrity:void 0,nonce:typeof t.nonce==`string`?t.nonce:void 0,fetchPriority:typeof t.fetchPriority==`string`?t.fetchPriority:void 0})}}else t??i.d.M(e)}},e.preload=function(e,t){if(typeof e==`string`&&typeof t==`object`&&t&&typeof t.as==`string`){var n=t.as,r=d(n,t.crossOrigin);i.d.L(e,n,{crossOrigin:r,integrity:typeof t.integrity==`string`?t.integrity:void 0,nonce:typeof t.nonce==`string`?t.nonce:void 0,type:typeof t.type==`string`?t.type:void 0,fetchPriority:typeof t.fetchPriority==`string`?t.fetchPriority:void 0,referrerPolicy:typeof t.referrerPolicy==`string`?t.referrerPolicy:void 0,imageSrcSet:typeof t.imageSrcSet==`string`?t.imageSrcSet:void 0,imageSizes:typeof t.imageSizes==`string`?t.imageSizes:void 0,media:typeof t.media==`string`?t.media:void 0})}},e.preloadModule=function(e,t){if(typeof e==`string`){if(t){var n=d(t.as,t.crossOrigin);i.d.m(e,{as:typeof t.as==`string`&&t.as!==`script`?t.as:void 0,crossOrigin:n,integrity:typeof t.integrity==`string`?t.integrity:void 0,nonce:typeof t.nonce==`string`?t.nonce:void 0,fetchPriority:typeof t.fetchPriority==`string`?t.fetchPriority:void 0})}else i.d.m(e)}},e.requestFormReset=function(e){i.d.r(e)},e.unstable_batchedUpdates=function(e,t){return e(t)},e.useFormState=function(e,t,n){return l.H.useFormState(e,t,n)},e.useFormStatus=function(){return l.H.useHostTransitionStatus()},e.version=`19.3.1`})),m=o(((e,t)=>{function n(){if(typeof __REACT_DEVTOOLS_GLOBAL_HOOK__<`u`&&typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE==`function`)try{__REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE(n)}catch(e){console.error(e)}}n(),t.exports=p()})),h=o((e=>{var t=f(),n=u(),r=m();function i(e){var t=`https://react.dev/errors/`+e;if(1<arguments.length){t+=`?args[]=`+encodeURIComponent(arguments[1]);for(var n=2;n<arguments.length;n++)t+=`&args[]=`+encodeURIComponent(arguments[n])}return`Minified React error #`+e+`; visit `+t+` for the full message or use the non-minified dev environment for full errors and additional helpful warnings.`}function a(e){return!(!e||e.nodeType!==1&&e.nodeType!==9&&e.nodeType!==11)}function o(e){for(var t=e,n=t;n&&!n.alternate;)t=n,t.flags&4098&&(e=t.return),n=t.return;for(;t.return;)t=t.return;return t.tag===3?e:null}function s(e){if(e.tag===13){var t=e.memoizedState;if(t===null&&(e=e.alternate,e!==null&&(t=e.memoizedState)),t!==null)return t.dehydrated}return null}function c(e){if(e.tag===31){var t=e.memoizedState;if(t===null&&(e=e.alternate,e!==null&&(t=e.memoizedState)),t!==null)return t.dehydrated}return null}function l(e){if(o(e)!==e)throw Error(i(188))}function d(e){var t=e.alternate;if(!t){if(t=o(e),t===null)throw Error(i(188));return t===e?e:null}for(var n=e,r=t;;){var a=n.return;if(a===null)break;var s=a.alternate;if(s===null){if(r=a.return,r!==null){n=r;continue}break}if(a.child===s.child){for(s=a.child;s;){if(s===n)return l(a),e;if(s===r)return l(a),t;s=s.sibling}throw Error(i(188))}if(n.return!==r.return)n=a,r=s;else{for(var c=!1,u=a.child;u;){if(u===n){c=!0,n=a,r=s;break}if(u===r){c=!0,r=a,n=s;break}u=u.sibling}if(!c){for(u=s.child;u;){if(u===n){c=!0,n=s,r=a;break}if(u===r){c=!0,r=s,n=a;break}u=u.sibling}if(!c)throw Error(i(189))}}if(n.alternate!==r)throw Error(i(190))}if(n.tag!==3)throw Error(i(188));return n.stateNode.current===n?e:t}function p(e){var t=e.tag;if(t===5||t===26||t===27||t===6)return e;for(e=e.child;e!==null;){if(t=p(e),t!==null)return t;e=e.sibling}return null}function h(e,t,n,r,i,a){for(;e!==null;){if((e.tag===5||e.tag===27||e.tag===6)&&n(e,r,i,a)||(e.tag!==22||e.memoizedState===null)&&(t||e.tag!==5&&e.tag!==27)&&h(e.child,t,n,r,i,a))return!0;e=e.sibling}return!1}function g(e){for(e=e.return;e!==null;){if(e.tag===3||e.tag===5||e.tag===27)return e;e=e.return}return null}function _(e){var t=!1;for(e=e.return;e!==null&&(e.tag===4&&(t=!0),e.tag!==3&&e.tag!==5&&e.tag!==27);)e=e.return;return t}function v(e){var t=[null,null],n=g(e);return n===null||y(t,e,n.child,{foundSelf:!1}),t}function y(e,t,n,r){for(;n!==null;){if(n===t)r.foundSelf=!0;else if(n.tag===5||n.tag===27||n.tag===6){if(r.foundSelf)return e[1]=n,!0;e[0]=n}else if((n.tag!==22||n.memoizedState===null)&&y(e,t,n.child,r))return!0;n=n.sibling}return!1}function b(e){switch(e.tag){case 5:case 27:case 6:return e.stateNode;case 3:return e.stateNode.containerInfo;default:throw Error(i(559))}}var ee=null,te=null;function ne(e,t,n){return e===n||e===t&&(ee=e,!0)}function x(e,t,n){return e===n?(te=e,!1):e===t&&(te!==null&&(ee=e),!0)}function S(e){if(e===null)return null;do e=e===null?null:e.return;while(e&&e.tag!==5&&e.tag!==27&&e.tag!==3);return e||null}function C(e,t,n){for(var r=0,i=e;i;i=n(i))r++;i=0;for(var a=t;a;a=n(a))i++;for(;0<r-i;)e=n(e),r--;for(;0<i-r;)t=n(t),i--;for(;r--;){if(e===t||t!==null&&e===t.alternate)return e;e=n(e),t=n(t)}return null}var w=Object.assign,re=Symbol.for(`react.element`),ie=Symbol.for(`react.transitional.element`),ae=Symbol.for(`react.portal`),oe=Symbol.for(`react.fragment`),se=Symbol.for(`react.strict_mode`),ce=Symbol.for(`react.profiler`),le=Symbol.for(`react.consumer`),ue=Symbol.for(`react.context`),de=Symbol.for(`react.forward_ref`),fe=Symbol.for(`react.suspense`),pe=Symbol.for(`react.suspense_list`),me=Symbol.for(`react.memo`),he=Symbol.for(`react.lazy`),ge=Symbol.for(`react.activity`),_e=Symbol.for(`react.legacy_hidden`),ve=Symbol.for(`react.memo_cache_sentinel`),ye=Symbol.for(`react.view_transition`),be=Symbol.for(`react.recoverable`),xe=Symbol.iterator;function Se(e){return typeof e!=`object`||!e?null:(e=xe&&e[xe]||e[`@@iterator`],typeof e==`function`?e:null)}var Ce=Symbol.for(`react.client.reference`);function we(e){if(e==null)return null;if(typeof e==`function`)return e.$$typeof===Ce?null:e.displayName||e.name||null;if(typeof e==`string`)return e;switch(e){case oe:return`Fragment`;case ce:return`Profiler`;case se:return`StrictMode`;case fe:return`Suspense`;case pe:return`SuspenseList`;case ge:return`Activity`;case ye:return`ViewTransition`}if(typeof e==`object`)switch(e.$$typeof){case ae:return`Portal`;case ue:return e.displayName||`Context`;case le:return(e._context.displayName||`Context`)+`.Consumer`;case de:var t=e.render;return e=e.displayName,e||=(e=t.displayName||t.name||``,e===``?`ForwardRef`:`ForwardRef(`+e+`)`),e;case me:return t=e.displayName||null,t===null?we(e.type)||`Memo`:t;case he:t=e._payload,e=e._init;try{return we(e(t))}catch{}}return null}var Te=Array.isArray,T=n.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE,E=r.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE,Ee={pending:!1,data:null,method:null,action:null},De=[],Oe=-1;function ke(e){return{current:e}}function D(e){0>Oe||(e.current=De[Oe],De[Oe]=null,Oe--)}function O(e,t){Oe++,De[Oe]=e.current,e.current=t}var Ae=ke(null),je=ke(null),Me=ke(null),Ne=ke(null);function Pe(e,t){switch(O(Me,t),O(je,e),O(Ae,null),t.nodeType){case 9:case 11:e=(e=t.documentElement)&&(e=e.namespaceURI)?up(e):0;break;default:if(e=t.tagName,t=t.namespaceURI)t=up(t),e=dp(t,e);else switch(e){case`svg`:e=1;break;case`math`:e=2;break;default:e=0}}D(Ae),O(Ae,e)}function Fe(){D(Ae),D(je),D(Me)}function Ie(e){var t=e.memoizedState;t!==null&&(sh._currentValue=t.memoizedState,O(Ne,e)),t=Ae.current;var n=dp(t,e.type);t!==n&&(O(je,e),O(Ae,n))}function Le(e){je.current===e&&(D(Ae),D(je)),Ne.current===e&&(D(Ne),sh._currentValue=Ee)}var Re,ze;function Be(e){if(Re===void 0)try{throw Error()}catch(e){var t=e.stack.trim().match(/\n( *(at )?)/);Re=t&&t[1]||``,ze=-1<e.stack.indexOf(`
+    at`)?` (<anonymous>)`:-1<e.stack.indexOf(`@`)?`@unknown:0:0`:``}return`
+`+Re+e+ze}var Ve=!1;function He(e,t){if(!e||Ve)return``;Ve=!0;var n=Error.prepareStackTrace;Error.prepareStackTrace=void 0;try{var r={DetermineComponentFrameRoot:function(){try{if(t){var n=function(){throw Error()};if(Object.defineProperty(n.prototype,"props",{set:function(){throw Error()}}),typeof Reflect==`object`&&Reflect.construct){try{Reflect.construct(n,[])}catch(e){var r=e}Reflect.construct(e,[],n)}else{try{n.call()}catch(e){r=e}n=!1;try{var i=Object.getOwnPropertyDescriptor(e.prototype,`props`);Object.defineProperty(e.prototype,"props",{configurable:!0,set:function(){throw Error()}}),n=!0,new e}finally{n&&(i===void 0?delete e.prototype.props:Object.defineProperty(e.prototype,"props",i))}}}else{try{throw Error()}catch(e){r=e}(n=e())&&typeof n.catch==`function`&&n.catch(function(){})}}catch(e){if(e&&r&&typeof e.stack==`string`)return[e.stack,r.stack]}return[null,null]}};r.DetermineComponentFrameRoot.displayName=`DetermineComponentFrameRoot`;var i=Object.getOwnPropertyDescriptor(r.DetermineComponentFrameRoot,`name`);i&&i.configurable&&Object.defineProperty(r.DetermineComponentFrameRoot,"name",{value:`DetermineComponentFrameRoot`});var a=r.DetermineComponentFrameRoot(),o=a[0],s=a[1];if(o&&s){var c=o.split(`
+`),l=s.split(`
+`);for(i=r=0;r<c.length&&!c[r].includes(`DetermineComponentFrameRoot`);)r++;for(;i<l.length&&!l[i].includes(`DetermineComponentFrameRoot`);)i++;if(r===c.length||i===l.length)for(r=c.length-1,i=l.length-1;1<=r&&0<=i&&c[r]!==l[i];)i--;for(;1<=r&&0<=i;r--,i--)if(c[r]!==l[i]){if(r!==1||i!==1)do if(r--,i--,0>i||c[r]!==l[i]){var u=`
+`+c[r].replace(` at new `,` at `);return e.displayName&&u.includes(`<anonymous>`)&&(u=u.replace(`<anonymous>`,e.displayName)),u}while(1<=r&&0<=i);break}}}finally{Ve=!1,Error.prepareStackTrace=n}return(n=e?e.displayName||e.name:``)?Be(n):``}function Ue(e,t){switch(e.tag){case 26:case 27:case 5:return Be(e.type);case 16:return Be(`Lazy`);case 13:return e.child!==t&&t!==null?Be(`Suspense Fallback`):Be(`Suspense`);case 19:return Be(`SuspenseList`);case 0:case 15:return He(e.type,!1);case 11:return He(e.type.render,!1);case 1:return He(e.type,!0);case 31:return Be(`Activity`);case 30:return Be(`ViewTransition`);default:return``}}function We(e){try{var t=``,n=null;do t+=Ue(e,n),n=e,e=e.return;while(e);return t}catch(e){return`
+Error generating stack: `+e.message+`
+`+e.stack}}var Ge=Object.prototype.hasOwnProperty,Ke=t.unstable_scheduleCallback,qe=t.unstable_cancelCallback,Je=t.unstable_shouldYield,Ye=t.unstable_requestPaint,Xe=t.unstable_now,Ze=t.unstable_getCurrentPriorityLevel,Qe=t.unstable_ImmediatePriority,$e=t.unstable_UserBlockingPriority,et=t.unstable_NormalPriority,tt=t.unstable_LowPriority,nt=t.unstable_IdlePriority,rt=t.log,it=t.unstable_setDisableYieldValue,at=null,ot=null;function st(e){if(typeof rt==`function`&&it(e),ot&&typeof ot.setStrictMode==`function`)try{ot.setStrictMode(at,e)}catch{}}var ct=Math.clz32?Math.clz32:dt,lt=Math.log,ut=Math.LN2;function dt(e){return e>>>=0,e===0?32:31-(lt(e)/ut|0)|0}var ft=256,pt=262144,mt=4194304;function ht(e){var t=e&42;if(t!==0)return t;switch(e&-e){case 1:return 1;case 2:return 2;case 4:return 4;case 8:return 8;case 16:return 16;case 32:return 32;case 64:return 64;case 128:return 128;case 256:case 512:case 1024:case 2048:case 4096:case 8192:case 16384:case 32768:case 65536:case 131072:return e&-e;case 262144:case 524288:case 1048576:case 2097152:return e&3932160;case 4194304:case 8388608:case 16777216:case 33554432:return e&62914560;case 67108864:return 67108864;case 134217728:return 134217728;case 268435456:return 268435456;case 536870912:return 536870912;case 1073741824:return 0;default:return e}}function gt(e,t,n){var r=e.pendingLanes;if(r===0)return 0;var i=0,a=e.suspendedLanes,o=e.pingedLanes;e=e.warmLanes;var s=r&134217727;return s===0?(s=r&~a,s===0?o===0?n||(n=r&~e,n!==0&&(i=ht(n))):i=ht(o):i=ht(s)):(r=s&~a,r===0?(o&=s,o===0?n||(n=s&~e,n!==0&&(i=ht(n))):i=ht(o)):i=ht(r)),i===0?0:t!==0&&t!==i&&(t&a)===0&&(a=i&-i,n=t&-t,a>=n||a===32&&n&4194048)?t:i}function _t(e,t){return(e.pendingLanes&~(e.suspendedLanes&~e.pingedLanes)&t)===0}function vt(e,t){t&8&&(t|=t&32);var n=e.entangledLanes;if(n!==0)for(e=e.entanglements,n&=t;0<n;){var r=31-ct(n),i=1<<r;t|=e[r],n&=~i}return t}function yt(e,t){switch(e){case 1:case 2:case 4:case 8:case 64:return t+250;case 16:case 32:case 128:case 256:case 512:case 1024:case 2048:case 4096:case 8192:case 16384:case 32768:case 65536:case 131072:case 262144:case 524288:case 1048576:case 2097152:return t+5e3;case 4194304:case 8388608:case 16777216:case 33554432:return-1;case 67108864:case 134217728:case 268435456:case 536870912:case 1073741824:return-1;default:return-1}}function bt(){var e=mt;return mt<<=1,!(mt&62914560)&&(mt=4194304),e}function xt(e){for(var t=[],n=0;31>n;n++)t.push(e);return t}function St(e,t){e.pendingLanes|=t,t!==268435456&&(e.suspendedLanes=0,e.pingedLanes=0,e.warmLanes=0)}function Ct(e,t,n,r,i,a){var o=e.pendingLanes;e.pendingLanes=n,e.suspendedLanes=0,e.pingedLanes=0,e.warmLanes=0,e.expiredLanes&=n,e.entangledLanes&=n,e.errorRecoveryDisabledLanes&=n,e.shellSuspendCounter=0;var s=e.entanglements,c=e.expirationTimes,l=e.hiddenUpdates;for(n=o&~n;0<n;){var u=31-ct(n),d=1<<u;s[u]=0,c[u]=-1;var f=l[u];if(f!==null)for(l[u]=null,u=0;u<f.length;u++){var p=f[u];p!==null&&(p.lane&=-536870913)}n&=~d}r!==0&&wt(e,r,0),a!==0&&i===0&&e.tag!==0&&(e.suspendedLanes|=a&~(o&~t))}function wt(e,t,n){e.pendingLanes|=t,e.suspendedLanes&=~t;var r=31-ct(t);e.entangledLanes|=t,e.entanglements[r]=e.entanglements[r]|1073741824|n&261930}function Tt(e,t){var n=e.entangledLanes|=t;for(e=e.entanglements;n;){var r=31-ct(n),i=1<<r;i&t|e[r]&t&&(e[r]|=t),n&=~i}}function Et(e,t){var n=t&-t;return n=n&42?1:Dt(n),(n&(e.suspendedLanes|t))===0?n:0}function Dt(e){switch(e){case 2:e=1;break;case 8:e=4;break;case 32:e=16;break;case 256:case 512:case 1024:case 2048:case 4096:case 8192:case 16384:case 32768:case 65536:case 131072:case 262144:case 524288:case 1048576:case 2097152:case 4194304:case 8388608:case 16777216:case 33554432:e=128;break;case 268435456:e=134217728;break;default:e=0}return e}function Ot(e){return e&=-e,2<e?8<e?e&134217727?32:268435456:8:2}function kt(){var e=E.p;return e===0?(e=window.event,e===void 0?32:Ch(e.type)):e}function At(e,t){var n=E.p;try{return E.p=e,t()}finally{E.p=n}}var jt=Math.random().toString(36).slice(2),Mt=`__reactFiber$`+jt,Nt=`__reactProps$`+jt,Pt=`__reactContainer$`+jt,Ft=`__reactEvents$`+jt,It=`__reactListeners$`+jt,Lt=`__reactHandles$`+jt,Rt=`__reactResources$`+jt,zt=`__reactMarker$`+jt,Bt=`__reactLoad$`+jt;function Vt(e){delete e[Mt],delete e[Nt],delete e[It],delete e[Lt]}function k(e){var t;if(t=e[Mt])return t;for(var n=e.parentNode;n;){if(t=n[Pt]||n[Mt]){if(n=t.alternate,t.child!==null||n!==null&&n.child!==null)for(e=fm(e);e!==null;){if(n=e[Mt])return n;e=fm(e)}return t}e=n,n=e.parentNode}return null}function Ht(e){if(e=e[Mt]||e[Pt]){var t=e.tag;if(t===5||t===6||t===13||t===31||t===26||t===27||t===3)return e}return null}function Ut(e){var t=e.tag;if(t===5||t===26||t===27||t===6)return e.stateNode;throw Error(i(33))}function Wt(e){var t=e[Rt];return t||=e[Rt]={hoistableStyles:new Map,hoistableScripts:new Map},t}function Gt(e){e[zt]=!0}function Kt(e){e[Bt]=void 0}var qt=new Set,Jt={};function Yt(e,t){Xt(e,t),Xt(e+`Capture`,t)}function Xt(e,t){for(Jt[e]=t,e=0;e<t.length;e++)qt.add(t[e])}var Zt=RegExp(`^[:A-Z_a-z\\u00C0-\\u00D6\\u00D8-\\u00F6\\u00F8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C-\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD][:A-Z_a-z\\u00C0-\\u00D6\\u00D8-\\u00F6\\u00F8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C-\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD\\-.0-9\\u00B7\\u0300-\\u036F\\u203F-\\u2040]*$`),Qt={},$t={};function en(e){return Ge.call($t,e)?!0:Ge.call(Qt,e)?!1:Zt.test(e)?$t[e]=!0:(Qt[e]=!0,!1)}var A=!1;function tn(){var e=A;return A=!1,e}function nn(e,t,n){if(en(t)){if(n===null)e.removeAttribute(t);else{switch(typeof n){case`undefined`:case`function`:case`symbol`:e.removeAttribute(t);return;case`boolean`:var r=t.toLowerCase().slice(0,5);if(r!==`data-`&&r!==`aria-`){e.removeAttribute(t);return}}e.setAttribute(t,n)}}}function rn(e,t,n){if(n===null)e.removeAttribute(t);else{switch(typeof n){case`undefined`:case`function`:case`symbol`:case`boolean`:e.removeAttribute(t);return}e.setAttribute(t,n)}}function an(e,t,n,r){if(r===null)e.removeAttribute(n);else{switch(typeof r){case`undefined`:case`function`:case`symbol`:case`boolean`:e.removeAttribute(n);return}e.setAttributeNS(t,n,r)}}function on(e){switch(typeof e){case`bigint`:case`boolean`:case`number`:case`string`:case`undefined`:return e;case`object`:return e;default:return``}}function sn(e){var t=e.type;return(e=e.nodeName)&&e.toLowerCase()===`input`&&(t===`checkbox`||t===`radio`)}function cn(e,t,n){var r=Object.getOwnPropertyDescriptor(e.constructor.prototype,t);if(!e.hasOwnProperty(t)&&r!==void 0&&typeof r.get==`function`&&typeof r.set==`function`){var i=r.get,a=r.set;return Object.defineProperty(e,t,{configurable:!0,get:function(){return i.call(this)},set:function(e){n=``+e,a.call(this,e)}}),Object.defineProperty(e,t,{enumerable:r.enumerable}),{getValue:function(){return n},setValue:function(e){n=``+e},stopTracking:function(){e._valueTracker=null,delete e[t]}}}}function ln(e){if(!e._valueTracker){var t=sn(e)?`checked`:`value`;e._valueTracker=cn(e,t,``+e[t])}}function un(e){if(!e)return!1;var t=e._valueTracker;if(!t)return!0;var n=t.getValue(),r=``;return e&&(r=sn(e)?e.checked?`true`:`false`:e.value),e=r,e!==n&&(t.setValue(e),!0)}var dn=/[\n"\\]/g;function fn(e){return e.replace(dn,function(e){return`\\`+e.charCodeAt(0).toString(16)+` `})}function j(e,t,n,r,i,a,o,s){e.name=``,o!=null&&typeof o!=`function`&&typeof o!=`symbol`&&typeof o!=`boolean`?e.type=o:e.removeAttribute(`type`),t==null?o!==`submit`&&o!==`reset`||e.removeAttribute(`value`):o===`number`?(t===0&&e.value===``||e.value!=t)&&(e.value=``+on(t)):e.value!==``+on(t)&&(e.value=``+on(t)),t==null?n==null?r!=null&&e.removeAttribute(`value`):mn(e,on(n)):o===`number`&&e.value==t?mn(e,on(e.value)):mn(e,on(t)),i==null&&a!=null&&(e.defaultChecked=!!a),i!=null&&(e.checked=i&&typeof i!=`function`&&typeof i!=`symbol`),s!=null&&typeof s!=`function`&&typeof s!=`symbol`&&typeof s!=`boolean`?e.name=``+on(s):e.removeAttribute(`name`)}function pn(e,t,n,r,i,a,o,s){if(a!=null&&typeof a!=`function`&&typeof a!=`symbol`&&typeof a!=`boolean`&&(e.type=a),t!=null||n!=null){if(!(a!==`submit`&&a!==`reset`||t!=null)){ln(e);return}n=n==null?``:``+on(n),t=t==null?n:``+on(t),s||t===e.value||(e.value=t),e.defaultValue=t}r??=i,r=typeof r!=`function`&&typeof r!=`symbol`&&!!r,e.checked=s?e.checked:!!r,e.defaultChecked=!!r,o!=null&&typeof o!=`function`&&typeof o!=`symbol`&&typeof o!=`boolean`&&(e.name=o),ln(e)}function mn(e,t){e.defaultValue!==``+t&&(e.defaultValue=``+t)}function hn(e,t,n,r){if(e=e.options,t){t={};for(var i=0;i<n.length;i++)t[`$`+n[i]]=!0;for(n=0;n<e.length;n++)i=t.hasOwnProperty(`$`+e[n].value),e[n].selected!==i&&(e[n].selected=i),i&&r&&(e[n].defaultSelected=!0)}else{for(n=``+on(n),t=null,i=0;i<e.length;i++){if(e[i].value===n){e[i].selected=!0,r&&(e[i].defaultSelected=!0);return}t!==null||e[i].disabled||(t=e[i])}t!==null&&(t.selected=!0)}}function gn(e,t,n){t!=null&&(t=``+on(t),t!==e.value&&(e.value=t),n==null)?e.defaultValue!==t&&(e.defaultValue=t):e.defaultValue=n==null?``:``+on(n)}function _n(e,t,n,r){if(t==null){if(r!=null){if(n!=null)throw Error(i(92));if(Te(r)){if(1<r.length)throw Error(i(93));r=r[0]}n=r}n??=``,t=n}n=on(t),e.defaultValue=n,r=e.textContent,r===n&&r!==``&&r!==null&&(e.value=r),ln(e)}function vn(e,t){if(t){var n=e.firstChild;if(n&&n===e.lastChild&&n.nodeType===3){n.nodeValue=t;return}}e.textContent=t}var yn=new Set(`animationIterationCount aspectRatio borderImageOutset borderImageSlice borderImageWidth boxFlex boxFlexGroup boxOrdinalGroup columnCount columns flex flexGrow flexPositive flexShrink flexNegative flexOrder gridArea gridRow gridRowEnd gridRowSpan gridRowStart gridColumn gridColumnEnd gridColumnSpan gridColumnStart fontWeight lineClamp lineHeight opacity order orphans scale tabSize widows zIndex zoom fillOpacity floodOpacity stopOpacity strokeDasharray strokeDashoffset strokeMiterlimit strokeOpacity strokeWidth MozAnimationIterationCount MozBoxFlex MozBoxFlexGroup MozLineClamp msAnimationIterationCount msFlex msZoom msFlexGrow msFlexNegative msFlexOrder msFlexPositive msFlexShrink msGridColumn msGridColumnSpan msGridRow msGridRowSpan WebkitAnimationIterationCount WebkitBoxFlex WebKitBoxFlexGroup WebkitBoxOrdinalGroup WebkitColumnCount WebkitColumns WebkitFlex WebkitFlexGrow WebkitFlexPositive WebkitFlexShrink WebkitLineClamp`.split(` `));function bn(e,t,n){var r=t.indexOf(`--`)===0;n==null||typeof n==`boolean`||n===``?r?e.setProperty(t,``):t===`float`?e.cssFloat=``:e[t]=``:r?e.setProperty(t,n):typeof n!=`number`||n===0||yn.has(t)?t===`float`?e.cssFloat=n:e[t]=(``+n).trim():e[t]=n+`px`}function xn(e,t,n){if(t!=null&&typeof t!=`object`)throw Error(i(62));if(e=e.style,n!=null){for(var r in n)!n.hasOwnProperty(r)||t!=null&&t.hasOwnProperty(r)||(r.indexOf(`--`)===0?e.setProperty(r,``):r===`float`?e.cssFloat=``:e[r]=``,A=!0);for(var a in t)r=t[a],t.hasOwnProperty(a)&&n[a]!==r&&(bn(e,a,r),A=!0)}else for(var o in t)t.hasOwnProperty(o)&&bn(e,o,t[o])}function Sn(e){if(e.indexOf(`-`)===-1)return!1;switch(e){case`annotation-xml`:case`color-profile`:case`font-face`:case`font-face-src`:case`font-face-uri`:case`font-face-format`:case`font-face-name`:case`missing-glyph`:return!1;default:return!0}}var Cn=new Map([[`acceptCharset`,`accept-charset`],[`htmlFor`,`for`],[`httpEquiv`,`http-equiv`],[`crossOrigin`,`crossorigin`],[`accentHeight`,`accent-height`],[`alignmentBaseline`,`alignment-baseline`],[`arabicForm`,`arabic-form`],[`baselineShift`,`baseline-shift`],[`capHeight`,`cap-height`],[`clipPath`,`clip-path`],[`clipRule`,`clip-rule`],[`colorInterpolation`,`color-interpolation`],[`colorInterpolationFilters`,`color-interpolation-filters`],[`colorProfile`,`color-profile`],[`colorRendering`,`color-rendering`],[`dominantBaseline`,`dominant-baseline`],[`enableBackground`,`enable-background`],[`fillOpacity`,`fill-opacity`],[`fillRule`,`fill-rule`],[`floodColor`,`flood-color`],[`floodOpacity`,`flood-opacity`],[`fontFamily`,`font-family`],[`fontSize`,`font-size`],[`fontSizeAdjust`,`font-size-adjust`],[`fontStretch`,`font-stretch`],[`fontStyle`,`font-style`],[`fontVariant`,`font-variant`],[`fontWeight`,`font-weight`],[`glyphName`,`glyph-name`],[`glyphOrientationHorizontal`,`glyph-orientation-horizontal`],[`glyphOrientationVertical`,`glyph-orientation-vertical`],[`horizAdvX`,`horiz-adv-x`],[`horizOriginX`,`horiz-origin-x`],[`imageRendering`,`image-rendering`],[`letterSpacing`,`letter-spacing`],[`lightingColor`,`lighting-color`],[`markerEnd`,`marker-end`],[`markerMid`,`marker-mid`],[`markerStart`,`marker-start`],[`maskType`,`mask-type`],[`overlinePosition`,`overline-position`],[`overlineThickness`,`overline-thickness`],[`paintOrder`,`paint-order`],[`panose-1`,`panose-1`],[`pointerEvents`,`pointer-events`],[`renderingIntent`,`rendering-intent`],[`shapeRendering`,`shape-rendering`],[`stopColor`,`stop-color`],[`stopOpacity`,`stop-opacity`],[`strikethroughPosition`,`strikethrough-position`],[`strikethroughThickness`,`strikethrough-thickness`],[`strokeDasharray`,`stroke-dasharray`],[`strokeDashoffset`,`stroke-dashoffset`],[`strokeLinecap`,`stroke-linecap`],[`strokeLinejoin`,`stroke-linejoin`],[`strokeMiterlimit`,`stroke-miterlimit`],[`strokeOpacity`,`stroke-opacity`],[`strokeWidth`,`stroke-width`],[`textAnchor`,`text-anchor`],[`textDecoration`,`text-decoration`],[`textRendering`,`text-rendering`],[`transformOrigin`,`transform-origin`],[`underlinePosition`,`underline-position`],[`underlineThickness`,`underline-thickness`],[`unicodeBidi`,`unicode-bidi`],[`unicodeRange`,`unicode-range`],[`unitsPerEm`,`units-per-em`],[`vAlphabetic`,`v-alphabetic`],[`vHanging`,`v-hanging`],[`vIdeographic`,`v-ideographic`],[`vMathematical`,`v-mathematical`],[`vectorEffect`,`vector-effect`],[`vertAdvY`,`vert-adv-y`],[`vertOriginX`,`vert-origin-x`],[`vertOriginY`,`vert-origin-y`],[`wordSpacing`,`word-spacing`],[`writingMode`,`writing-mode`],[`xmlnsXlink`,`xmlns:xlink`],[`xHeight`,`x-height`]]),wn=/^[\u0000-\u001F ]*j[\r\n\t]*a[\r\n\t]*v[\r\n\t]*a[\r\n\t]*s[\r\n\t]*c[\r\n\t]*r[\r\n\t]*i[\r\n\t]*p[\r\n\t]*t[\r\n\t]*:/i;function Tn(e){return wn.test(``+e)?`javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')`:e}function En(){}var Dn=null;function On(e){return e=e.target||e.srcElement||window,e.correspondingUseElement&&(e=e.correspondingUseElement),e.nodeType===3?e.parentNode:e}var kn=null,An=null;function jn(e){var t=Ht(e);if(t&&(e=t.stateNode)){var n=e[Nt]||null;a:switch(e=t.stateNode,t.type){case`input`:if(j(e,n.value,n.defaultValue,n.defaultValue,n.checked,n.defaultChecked,n.type,n.name),t=n.name,n.type===`radio`&&t!=null){for(n=e;n.parentNode;)n=n.parentNode;for(n=n.querySelectorAll(`input[name="`+fn(``+t)+`"][type="radio"]`),t=0;t<n.length;t++){var r=n[t];if(r!==e&&r.form===e.form){var a=r[Nt]||null;if(!a)throw Error(i(90));j(r,a.value,a.defaultValue,a.defaultValue,a.checked,a.defaultChecked,a.type,a.name)}}for(t=0;t<n.length;t++)r=n[t],r.form===e.form&&un(r)}break a;case`textarea`:gn(e,n.value,n.defaultValue);break a;case`select`:t=n.value,t!=null&&hn(e,!!n.multiple,t,!1)}}}var Mn=!1;function Nn(e,t,n){if(Mn)return e(t,n);Mn=!0;try{return e(t)}finally{if(Mn=!1,(kn!==null||An!==null)&&(zd(),kn&&(t=kn,e=An,An=kn=null,jn(t),e)))for(t=0;t<e.length;t++)jn(e[t])}}function Pn(e,t){var n=e.stateNode;if(n===null)return null;var r=n[Nt]||null;if(r===null)return null;n=r[t];a:switch(t){case`onClick`:case`onClickCapture`:case`onDoubleClick`:case`onDoubleClickCapture`:case`onMouseDown`:case`onMouseDownCapture`:case`onMouseMove`:case`onMouseMoveCapture`:case`onMouseUp`:case`onMouseUpCapture`:case`onMouseEnter`:(r=!r.disabled)||(e=e.type,r=e!==`button`&&e!==`input`&&e!==`select`&&e!==`textarea`),e=!r;break a;default:e=!1}if(e)return null;if(n&&typeof n!=`function`)throw Error(i(231,t,typeof n));return n}var Fn=typeof window<`u`&&window.document!==void 0&&window.document.createElement!==void 0,In=!1;if(Fn)try{var Ln={};Object.defineProperty(Ln,"passive",{get:function(){In=!0}}),window.addEventListener(`test`,Ln,Ln),window.removeEventListener(`test`,Ln,Ln)}catch{In=!1}var Rn=null,zn=null,Bn=null;function Vn(){if(Bn)return Bn;var e,t=zn,n=t.length,r,i=`value`in Rn?Rn.value:Rn.textContent,a=i.length;for(e=0;e<n&&t[e]===i[e];e++);var o=n-e;for(r=1;r<=o&&t[n-r]===i[a-r];r++);return Bn=i.slice(e,1<r?1-r:void 0)}function Hn(e){var t=e.keyCode;return`charCode`in e?(e=e.charCode,e===0&&t===13&&(e=13)):e=t,e===10&&(e=13),32<=e||e===13?e:0}function Un(){return!0}function Wn(){return!1}function Gn(e){function t(t,n,r,i,a){for(var o in this._reactName=t,this._targetInst=r,this.type=n,this.nativeEvent=i,this.target=a,this.currentTarget=null,e)e.hasOwnProperty(o)&&(t=e[o],this[o]=t?t(i):i[o]);return this.isDefaultPrevented=(i.defaultPrevented==null?!1===i.returnValue:i.defaultPrevented)?Un:Wn,this.isPropagationStopped=Wn,this}return w(t.prototype,{preventDefault:function(){this.defaultPrevented=!0;var e=this.nativeEvent;e&&(e.preventDefault?e.preventDefault():typeof e.returnValue!=`unknown`&&(e.returnValue=!1),this.isDefaultPrevented=Un)},stopPropagation:function(){var e=this.nativeEvent;e&&(e.stopPropagation?e.stopPropagation():typeof e.cancelBubble!=`unknown`&&(e.cancelBubble=!0),this.isPropagationStopped=Un)},persist:function(){},isPersistent:Un}),t}var Kn={eventPhase:0,bubbles:0,cancelable:0,timeStamp:function(e){return e.timeStamp||Date.now()},defaultPrevented:0,isTrusted:0},qn=Gn(Kn),Jn=w({},Kn,{view:0,detail:0}),Yn=Gn(Jn),Xn,Zn,Qn,$n=w({},Jn,{screenX:0,screenY:0,clientX:0,clientY:0,pageX:0,pageY:0,ctrlKey:0,shiftKey:0,altKey:0,metaKey:0,getModifierState:ur,button:0,buttons:0,relatedTarget:function(e){return e.relatedTarget===void 0?e.fromElement===e.srcElement?e.toElement:e.fromElement:e.relatedTarget},movementX:function(e){return`movementX`in e?e.movementX:(e!==Qn&&(Qn&&e.type===`mousemove`?(Xn=e.screenX-Qn.screenX,Zn=e.screenY-Qn.screenY):Zn=Xn=0,Qn=e),Xn)},movementY:function(e){return`movementY`in e?e.movementY:Zn}}),er=Gn($n),tr=Gn(w({},$n,{dataTransfer:0})),nr=Gn(w({},Jn,{relatedTarget:0})),rr=Gn(w({},Kn,{animationName:0,elapsedTime:0,pseudoElement:0})),ir=Gn(w({},Kn,{clipboardData:function(e){return`clipboardData`in e?e.clipboardData:window.clipboardData}})),ar=Gn(w({},Kn,{data:0})),or={Esc:`Escape`,Spacebar:` `,Left:`ArrowLeft`,Up:`ArrowUp`,Right:`ArrowRight`,Down:`ArrowDown`,Del:`Delete`,Win:`OS`,Menu:`ContextMenu`,Apps:`ContextMenu`,Scroll:`ScrollLock`,MozPrintableKey:`Unidentified`},sr={8:`Backspace`,9:`Tab`,12:`Clear`,13:`Enter`,16:`Shift`,17:`Control`,18:`Alt`,19:`Pause`,20:`CapsLock`,27:`Escape`,32:` `,33:`PageUp`,34:`PageDown`,35:`End`,36:`Home`,37:`ArrowLeft`,38:`ArrowUp`,39:`ArrowRight`,40:`ArrowDown`,45:`Insert`,46:`Delete`,112:`F1`,113:`F2`,114:`F3`,115:`F4`,116:`F5`,117:`F6`,118:`F7`,119:`F8`,120:`F9`,121:`F10`,122:`F11`,123:`F12`,144:`NumLock`,145:`ScrollLock`,224:`Meta`},cr={Alt:`altKey`,Control:`ctrlKey`,Meta:`metaKey`,Shift:`shiftKey`};function lr(e){var t=this.nativeEvent;return t.getModifierState?t.getModifierState(e):(e=cr[e])?!!t[e]:!1}function ur(){return lr}var dr=Gn(w({},Jn,{key:function(e){if(e.key){var t=or[e.key]||e.key;if(t!==`Unidentified`)return t}return e.type===`keypress`?(e=Hn(e),e===13?`Enter`:String.fromCharCode(e)):e.type===`keydown`||e.type===`keyup`?sr[e.keyCode]||`Unidentified`:``},code:0,location:0,ctrlKey:0,shiftKey:0,altKey:0,metaKey:0,repeat:0,locale:0,getModifierState:ur,charCode:function(e){return e.type===`keypress`?Hn(e):0},keyCode:function(e){return e.type===`keydown`||e.type===`keyup`?e.keyCode:0},which:function(e){return e.type===`keypress`?Hn(e):e.type===`keydown`||e.type===`keyup`?e.keyCode:0}})),fr=Gn(w({},$n,{pointerId:0,width:0,height:0,pressure:0,tangentialPressure:0,tiltX:0,tiltY:0,twist:0,pointerType:0,isPrimary:0})),pr=Gn(w({},Kn,{submitter:0})),mr=Gn(w({},Jn,{touches:0,targetTouches:0,changedTouches:0,altKey:0,metaKey:0,ctrlKey:0,shiftKey:0,getModifierState:ur})),hr=Gn(w({},Kn,{propertyName:0,elapsedTime:0,pseudoElement:0})),gr=Gn(w({},$n,{deltaX:function(e){return`deltaX`in e?e.deltaX:`wheelDeltaX`in e?-e.wheelDeltaX:0},deltaY:function(e){return`deltaY`in e?e.deltaY:`wheelDeltaY`in e?-e.wheelDeltaY:`wheelDelta`in e?-e.wheelDelta:0},deltaZ:0,deltaMode:0})),_r=Gn(w({},Kn,{newState:0,oldState:0,source:0})),vr=[9,13,27,32],yr=Fn&&`CompositionEvent`in window,br=null;Fn&&`documentMode`in document&&(br=document.documentMode);var xr=Fn&&`TextEvent`in window&&!br,Sr=Fn&&(!yr||br&&8<br&&11>=br),Cr=` `,wr=!1;function Tr(e,t){switch(e){case`keyup`:return vr.indexOf(t.keyCode)!==-1;case`keydown`:return t.keyCode!==229;case`keypress`:case`mousedown`:case`focusout`:return!0;default:return!1}}function Er(e){return e=e.detail,typeof e==`object`&&`data`in e?e.data:null}var Dr=!1;function Or(e,t){switch(e){case`compositionend`:return Er(t);case`keypress`:return t.which===32?(wr=!0,Cr):null;case`textInput`:return e=t.data,e===Cr&&wr?null:e;default:return null}}function kr(e,t){if(Dr)return e===`compositionend`||!yr&&Tr(e,t)?(e=Vn(),Bn=zn=Rn=null,Dr=!1,e):null;switch(e){case`paste`:return null;case`keypress`:if(!(t.ctrlKey||t.altKey||t.metaKey)||t.ctrlKey&&t.altKey){if(t.char&&1<t.char.length)return t.char;if(t.which)return String.fromCharCode(t.which)}return null;case`compositionend`:return Sr&&t.locale!==`ko`?null:t.data;default:return null}}var Ar={color:!0,date:!0,datetime:!0,"datetime-local":!0,email:!0,month:!0,number:!0,password:!0,range:!0,search:!0,tel:!0,text:!0,time:!0,url:!0,week:!0};function jr(e){var t=e&&e.nodeName&&e.nodeName.toLowerCase();return t===`input`?!!Ar[e.type]:t===`textarea`}function Mr(e,t,n,r){kn?An?An.push(r):An=[r]:kn=r,t=Jf(t,`onChange`),0<t.length&&(n=new qn(`onChange`,`change`,null,n,r),e.push({event:n,listeners:t}))}var Nr=null,Pr=null;function Fr(e){Vf(e,0)}function Ir(e){if(un(Ut(e)))return e}function Lr(e,t){if(e===`change`)return t}var Rr=!1;if(Fn){var zr;if(Fn){var Br=`oninput`in document;if(!Br){var Vr=document.createElement(`div`);Vr.setAttribute(`oninput`,`return;`),Br=typeof Vr.oninput==`function`}zr=Br}else zr=!1;Rr=zr&&(!document.documentMode||9<document.documentMode)}function Hr(){Nr&&(Nr.detachEvent(`onpropertychange`,Ur),Pr=Nr=null)}function Ur(e){if(e.propertyName===`value`&&Ir(Pr)){var t=[];Mr(t,Pr,e,On(e)),Nn(Fr,t)}}function Wr(e,t,n){e===`focusin`?(Hr(),Nr=t,Pr=n,Nr.attachEvent(`onpropertychange`,Ur)):e===`focusout`&&Hr()}function Gr(e){if(e===`selectionchange`||e===`keyup`||e===`keydown`)return Ir(Pr)}function Kr(e,t){if(e===`click`)return Ir(t)}function qr(e,t){if(e===`input`||e===`change`)return Ir(t)}function Jr(e,t){return e===t&&(e!==0||1/e==1/t)||e!==e&&t!==t}var Yr=typeof Object.is==`function`?Object.is:Jr;function Xr(e,t){if(Yr(e,t))return!0;if(typeof e!=`object`||!e||typeof t!=`object`||!t)return!1;var n=Object.keys(e),r=Object.keys(t);if(n.length!==r.length)return!1;for(r=0;r<n.length;r++){var i=n[r];if(!Ge.call(t,i)||!Yr(e[i],t[i]))return!1}return!0}function Zr(e){if(e||=typeof document<`u`?document:void 0,e===void 0)return null;try{return e.activeElement||e.body}catch{return e.body}}function Qr(e){for(;e&&e.firstChild;)e=e.firstChild;return e}function $r(e,t){var n=Qr(e);e=0;for(var r;n;){if(n.nodeType===3){if(r=e+n.textContent.length,e<=t&&r>=t)return{node:n,offset:t-e};e=r}a:{for(;n;){if(n.nextSibling){n=n.nextSibling;break a}n=n.parentNode}n=void 0}n=Qr(n)}}function ei(e,t){return e&&t?e===t?!0:e&&e.nodeType===3?!1:t&&t.nodeType===3?ei(e,t.parentNode):`contains`in e?e.contains(t):e.compareDocumentPosition?!!(e.compareDocumentPosition(t)&16):!1:!1}function ti(e){e=e!=null&&e.ownerDocument!=null&&e.ownerDocument.defaultView!=null?e.ownerDocument.defaultView:window;for(var t=Zr(e.document);t instanceof e.HTMLIFrameElement;){try{var n=typeof t.contentWindow.location.href==`string`}catch{n=!1}if(n)e=t.contentWindow;else break;t=Zr(e.document)}return t}function ni(e){var t=e&&e.nodeName&&e.nodeName.toLowerCase();return t&&(t===`input`&&(e.type===`text`||e.type===`search`||e.type===`tel`||e.type===`url`||e.type===`password`)||t===`textarea`||e.contentEditable===`true`)}var ri=Fn&&`documentMode`in document&&11>=document.documentMode,ii=null,ai=null,oi=null,si=!1;function ci(e,t,n){var r=n.window===n?n.document:n.nodeType===9?n:n.ownerDocument;si||ii==null||ii!==Zr(r)||(r=ii,`selectionStart`in r&&ni(r)?r={start:r.selectionStart,end:r.selectionEnd}:(r=(r.ownerDocument&&r.ownerDocument.defaultView||window).getSelection(),r={anchorNode:r.anchorNode,anchorOffset:r.anchorOffset,focusNode:r.focusNode,focusOffset:r.focusOffset}),oi&&Xr(oi,r)||(oi=r,r=Jf(ai,`onSelect`),0<r.length&&(t=new qn(`onSelect`,`select`,null,t,n),e.push({event:t,listeners:r}),t.target=ii)))}function li(e,t){var n={};return n[e.toLowerCase()]=t.toLowerCase(),n[`Webkit`+e]=`webkit`+t,n[`Moz`+e]=`moz`+t,n}var ui={animationend:li(`Animation`,`AnimationEnd`),animationiteration:li(`Animation`,`AnimationIteration`),animationstart:li(`Animation`,`AnimationStart`),transitionrun:li(`Transition`,`TransitionRun`),transitionstart:li(`Transition`,`TransitionStart`),transitioncancel:li(`Transition`,`TransitionCancel`),transitionend:li(`Transition`,`TransitionEnd`)},di={},fi={};Fn&&(fi=document.createElement(`div`).style,`AnimationEvent`in window||(delete ui.animationend.animation,delete ui.animationiteration.animation,delete ui.animationstart.animation),`TransitionEvent`in window||delete ui.transitionend.transition);function pi(e){if(di[e])return di[e];if(!ui[e])return e;var t=ui[e],n;for(n in t)if(t.hasOwnProperty(n)&&n in fi)return di[e]=t[n];return e}var mi=pi(`animationend`),hi=pi(`animationiteration`),gi=pi(`animationstart`),_i=pi(`transitionrun`),vi=pi(`transitionstart`),yi=pi(`transitioncancel`),bi=pi(`transitionend`),xi=new Map,Si=`abort auxClick beforeToggle cancel canPlay canPlayThrough click close contextMenu copy cut drag dragEnd dragEnter dragExit dragLeave dragOver dragStart drop durationChange emptied encrypted ended error fullscreenChange fullscreenError gotPointerCapture input invalid keyDown keyPress keyUp load loadedData loadedMetadata loadStart lostPointerCapture mouseDown mouseMove mouseOut mouseOver mouseUp paste pause play playing pointerCancel pointerDown pointerMove pointerOut pointerOver pointerUp progress rateChange reset resize seeked seeking stalled submit suspend timeUpdate touchCancel touchEnd touchStart volumeChange scroll toggle touchMove waiting wheel`.split(` `);Si.push(`scrollEnd`);function Ci(e,t){xi.set(e,t),Yt(t,[e])}var wi=0;function Ti(e,t){if(e.name!=null&&e.name!==`auto`)return e.name;if(t.autoName!==null)return t.autoName;e=bd.identifierPrefix;var n=wi++;return e=`_`+e+`t_`+n.toString(32)+`_`,t.autoName=e}function Ei(e){if(e==null||typeof e==`string`)return e;var t=null,n=Od;if(n!==null)for(var r=0;r<n.length;r++){var i=e[n[r]];if(i!=null){if(i===`none`)return`none`;t=t==null?i:t+(` `+i)}}return t??e.default}function Di(e,t){return e=Ei(e),t=Ei(t),t==null?e===`auto`?null:e:t===`auto`?null:t}var Oi=typeof reportError==`function`?reportError:function(e){if(typeof window==`object`&&typeof window.ErrorEvent==`function`){var t=new window.ErrorEvent(`error`,{bubbles:!0,cancelable:!0,message:typeof e==`object`&&e&&typeof e.message==`string`?String(e.message):String(e),error:e});if(!window.dispatchEvent(t))return}else if(typeof process==`object`&&typeof process.emit==`function`){process.emit(`uncaughtException`,e);return}console.error(e)},ki=[],Ai=0,ji=0;function Mi(){for(var e=Ai,t=ji=Ai=0;t<e;){var n=ki[t];ki[t++]=null;var r=ki[t];ki[t++]=null;var i=ki[t];ki[t++]=null;var a=ki[t];if(ki[t++]=null,r!==null&&i!==null){var o=r.pending;o===null?i.next=i:(i.next=o.next,o.next=i),r.pending=i}a!==0&&Ii(n,i,a)}}function Ni(e,t,n,r){ki[Ai++]=e,ki[Ai++]=t,ki[Ai++]=n,ki[Ai++]=r,ji|=r,e.lanes|=r,e=e.alternate,e!==null&&(e.lanes|=r)}function Pi(e,t,n,r){return Ni(e,t,n,r),Li(e)}function Fi(e,t){return Ni(e,null,null,t),Li(e)}function Ii(e,t,n){e.lanes|=n;var r=e.alternate;r!==null&&(r.lanes|=n);for(var i=!1,a=e.return;a!==null;)a.childLanes|=n,r=a.alternate,r!==null&&(r.childLanes|=n),a.tag===22&&(e=a.stateNode,e===null||e._visibility&1||(i=!0)),e=a,a=a.return;return e.tag===3?(a=e.stateNode,i&&t!==null&&(i=31-ct(n),e=a.hiddenUpdates,r=e[i],r===null?e[i]=[t]:r.push(t),t.lane=n|536870912),a):null}function Li(e){if(50<kd)throw kd=0,Ad=null,Error(i(185));for(var t=e.return;t!==null;)e=t,t=e.return;return e.tag===3?e.stateNode:null}var Ri={};function zi(e,t,n,r){this.tag=e,this.key=n,this.sibling=this.child=this.return=this.stateNode=this.type=this.elementType=null,this.index=0,this.refCleanup=this.ref=null,this.pendingProps=t,this.dependencies=this.memoizedState=this.updateQueue=this.memoizedProps=null,this.mode=r,this.subtreeFlags=this.flags=0,this.deletions=null,this.childLanes=this.lanes=0,this.alternate=null}function Bi(e,t,n,r){return new zi(e,t,n,r)}function Vi(e){return e=e.prototype,!(!e||!e.isReactComponent)}function Hi(e,t){var n=e.alternate;return n===null?(n=Bi(e.tag,t,e.key,e.mode),n.elementType=e.elementType,n.type=e.type,n.stateNode=e.stateNode,n.alternate=e,e.alternate=n):(n.pendingProps=t,n.type=e.type,n.flags=0,n.subtreeFlags=0,n.deletions=null),n.flags=e.flags&1206910976,n.childLanes=e.childLanes,n.lanes=e.lanes,n.child=e.child,n.memoizedProps=e.memoizedProps,n.memoizedState=e.memoizedState,n.updateQueue=e.updateQueue,t=e.dependencies,n.dependencies=t===null?null:{lanes:t.lanes,firstContext:t.firstContext},n.sibling=e.sibling,n.index=e.index,n.ref=e.ref,n.refCleanup=e.refCleanup,n}function Ui(e,t){e.flags&=1206910978;var n=e.alternate;return n===null?(e.childLanes=0,e.lanes=t,e.child=null,e.subtreeFlags=0,e.memoizedProps=null,e.memoizedState=null,e.updateQueue=null,e.dependencies=null,e.stateNode=null):(e.childLanes=n.childLanes,e.lanes=n.lanes,e.child=n.child,e.subtreeFlags=0,e.deletions=null,e.memoizedProps=n.memoizedProps,e.memoizedState=n.memoizedState,e.updateQueue=n.updateQueue,e.type=n.type,t=n.dependencies,e.dependencies=t===null?null:{lanes:t.lanes,firstContext:t.firstContext}),e}function Wi(e,t,n,r,a,o){var s=0;if(r=e,typeof r==`function`)Vi(r)&&(s=1);else if(typeof r==`string`)s=qm(e,n,Ae.current)?26:e===`html`||e===`head`||e===`body`?27:5;else a:switch(r){case ge:return e=Bi(31,n,t,a),e.elementType=ge,e.lanes=o,e;case oe:return Gi(n.children,a,o,t);case se:s=8,a|=24;break;case ce:return e=Bi(12,n,t,a|2),e.elementType=ce,e.lanes=o,e;case fe:return e=Bi(13,n,t,a),e.elementType=fe,e.lanes=o,e;case pe:return e=Bi(19,n,t,a),e.elementType=pe,e.lanes=o,e;case _e:case ye:return e=a|32,e=Bi(30,n,t,e),e.elementType=ye,e.lanes=o,e.stateNode={autoName:null,paired:null,clones:null,ref:null},e;default:if(typeof r==`object`&&r)switch(r.$$typeof){case ue:s=10;break a;case le:s=9;break a;case de:s=11;break a;case me:s=14;break a;case he:s=16,r=null;break a}s=29,n=Error(i(130,e===null?`null`:typeof e,``)),r=null}return t=Bi(s,n,t,a),t.elementType=e,t.type=r,t.lanes=o,t}function Gi(e,t,n,r){return e=Bi(7,e,r,t),e.lanes=n,e}function Ki(e,t,n){return e=Bi(6,e,null,t),e.lanes=n,e}function qi(e){var t=Bi(18,null,null,0);return t.stateNode=e,t}function Ji(e,t,n){return t=Bi(4,e.children===null?[]:e.children,e.key,t),t.lanes=n,t.stateNode={containerInfo:e.containerInfo,pendingChildren:null,implementation:e.implementation},t}var Yi=new WeakMap;function Xi(e,t){if(typeof e==`object`&&e){var n=Yi.get(e);return n===void 0?(t={value:e,source:t,stack:We(t)},Yi.set(e,t),t):n}return{value:e,source:t,stack:We(t)}}var Zi=[],Qi=0,$i=null,ea=0,ta=[],na=0,ra=null,ia=1,aa=``;function oa(e,t){Zi[Qi++]=ea,Zi[Qi++]=$i,$i=e,ea=t}function sa(e,t,n){ta[na++]=ia,ta[na++]=aa,ta[na++]=ra,ra=e;var r=ia;e=aa;var i=32-ct(r)-1;r&=~(1<<i),n+=1;var a=32-ct(t)+i;if(30<a){var o=i-i%5;a=(r&(1<<o)-1).toString(32),r>>=o,i-=o,ia=1<<32-ct(t)+i|n<<i|r,aa=a+e}else ia=1<<a|n<<i|r,aa=e}function ca(e){e.return!==null&&(oa(e,1),sa(e,1,0))}function la(e){for(;e===$i;)$i=Zi[--Qi],Zi[Qi]=null,ea=Zi[--Qi],Zi[Qi]=null;for(;e===ra;)ra=ta[--na],ta[na]=null,aa=ta[--na],ta[na]=null,ia=ta[--na],ta[na]=null}function ua(e,t){ta[na++]=ia,ta[na++]=aa,ta[na++]=ra,ia=t.id,aa=t.overflow,ra=e}var da=null,M=null,N=!1,fa=null,pa=!1,ma=Error(i(519));function ha(e){throw xa(Xi(Error(i(418,1<arguments.length&&arguments[1]!==void 0&&arguments[1]?`text`:`HTML`,``)),e)),ma}function ga(e){var t=e.stateNode,n=e.type,r=e.memoizedProps;switch(t[Mt]=e,t[Nt]=r,n){case`dialog`:Q(`cancel`,t),Q(`close`,t);break;case`iframe`:case`object`:case`embed`:Q(`load`,t);break;case`video`:case`audio`:for(n=0;n<zf.length;n++)Q(zf[n],t);break;case`source`:Q(`error`,t);break;case`img`:case`image`:case`link`:Q(`error`,t),Q(`load`,t);break;case`details`:Q(`toggle`,t);break;case`input`:Q(`invalid`,t),pn(t,r.value,r.defaultValue,r.checked,r.defaultChecked,r.type,r.name,!0);break;case`select`:Q(`invalid`,t);break;case`textarea`:Q(`invalid`,t),_n(t,r.value,r.defaultValue,r.children)}n=r.children,typeof n!=`string`&&typeof n!=`number`&&typeof n!=`bigint`||t.textContent===``+n||!0===r.suppressHydrationWarning||ep(t.textContent,n)?(r.popover!=null&&(Q(`beforetoggle`,t),Q(`toggle`,t)),r.onScroll!=null&&Q(`scroll`,t),r.onScrollEnd!=null&&Q(`scrollend`,t),r.onClick!=null&&(t.onclick=En),t=!0):t=!1,t||ha(e,!0)}function _a(e){for(da=e.return;da;)switch(da.tag){case 5:case 31:case 13:pa=!1;return;case 27:case 3:pa=!0;return;default:da=da.return}}function va(e){if(e!==da)return!1;if(!N)return _a(e),N=!0,!1;var t=e.tag,n;if((n=t!==3&&t!==27)&&((n=t===5)&&(n=e.type,n=n===`form`||n===`button`||pp(e.type,e.memoizedProps)),n=!n),n&&M&&ha(e),_a(e),t===13){if(e=e.memoizedState,e=e===null?null:e.dehydrated,!e)throw Error(i(317));M=dm(e)}else if(t===31){if(e=e.memoizedState,e=e===null?null:e.dehydrated,!e)throw Error(i(317));M=dm(e)}else t===27?(t=M,Sp(e.type)?(e=um,um=null,M=e):M=t):M=da?lm(e.stateNode.nextSibling):null;return!0}function ya(){M=da=null,N=!1}function ba(){var e=fa;return e!==null&&(pd===null?pd=e:pd.push.apply(pd,e),fa=null),e}function xa(e){fa===null?fa=[e]:fa.push(e)}var Sa=ke(null),Ca=null,wa=null;function Ta(e,t,n){O(Sa,t._currentValue),t._currentValue=n}function Ea(e){e._currentValue=Sa.current,D(Sa)}function Da(e,t,n){for(;e!==null;){var r=e.alternate;if((e.childLanes&t)===t?r!==null&&(r.childLanes&t)!==t&&(r.childLanes|=t):(e.childLanes|=t,r!==null&&(r.childLanes|=t)),e===n)break;e=e.return}}function Oa(e,t,n,r){var a=e.child;for(a!==null&&(a.return=e);a!==null;){var o=a.dependencies;if(o!==null){var s=a.child;o=o.firstContext;a:for(;o!==null;){var c=o;o=a;for(var l=0;l<t.length;l++)if(c.context===t[l]){o.lanes|=n,c=o.alternate,c!==null&&(c.lanes|=n),Da(o.return,n,e),r||(s=null);break a}o=c.next}}else if(a.tag===18){if(s=a.return,s===null)throw Error(i(341));s.lanes|=n,o=s.alternate,o!==null&&(o.lanes|=n),Da(s,n,e),s=null}else a.tag===13&&a.memoizedState!==null&&a.memoizedState.dehydrated===null?(a.lanes|=n,s=a.alternate,s!==null&&(s.lanes|=n),Da(a.return,n,e),s=a.child,s=s===null?null:s.sibling):s=a.child;if(s!==null)s.return=a;else for(s=a;s!==null;){if(s===e){s=null;break}if(a=s.sibling,a!==null){a.return=s.return,s=a;break}s=s.return}a=s}}function ka(e,t,n,r){e=null;for(var a=t,o=!1;a!==null;){if(!o){if(a.flags&524288)o=!0;else if(a.flags&262144)break}if(a.tag===10){var s=a.alternate;if(s===null)throw Error(i(387));if(s=s.memoizedProps,s!==null){var c=a.type;Yr(a.pendingProps.value,s.value)||(e===null?e=[c]:e.push(c))}}else if(a===Ne.current){if(s=a.alternate,s===null)throw Error(i(387));s.memoizedState.memoizedState!==a.memoizedState.memoizedState&&(e===null?e=[sh]:e.push(sh))}a=a.return}return e!==null&&Oa(t,e,n,r),t.flags|=262144,e!==null}function Aa(e){for(e=e.firstContext;e!==null;){if(!Yr(e.context._currentValue,e.memoizedValue))return!0;e=e.next}return!1}function ja(e){Ca=e,wa=null,e=e.dependencies,e!==null&&(e.firstContext=null)}function Ma(e){return Pa(Ca,e)}function Na(e,t){return Ca===null&&ja(e),Pa(e,t)}function Pa(e,t){var n=t._currentValue;if(t={context:t,memoizedValue:n,next:null},wa===null){if(e===null)throw Error(i(308));wa=t,e.dependencies={lanes:0,firstContext:t},e.flags|=524288}else wa=wa.next=t;return n}var Fa=typeof AbortController<`u`?AbortController:function(){var e=[],t=this.signal={aborted:!1,addEventListener:function(t,n){e.push(n)}};this.abort=function(){t.aborted=!0,e.forEach(function(e){return e()})}},Ia=t.unstable_scheduleCallback,La=t.unstable_NormalPriority,P={$$typeof:ue,Consumer:null,Provider:null,_currentValue:null,_currentValue2:null,_threadCount:0};function Ra(){return{controller:new Fa,data:new Map,refCount:0}}function za(e){e.refCount--,e.refCount===0&&Ia(La,function(){e.controller.abort()})}function Ba(e,t){if(e.pendingLanes&4194048){var n=e.transitionTypes;for(n===null&&(n=e.transitionTypes=[]),e=0;e<t.length;e++){var r=t[e];n.indexOf(r)===-1&&n.push(r)}}}var Va=null;function Ha(e){var t=e.transitionTypes;return e.transitionTypes=null,t}var Ua=null,Wa=0,Ga=0,Ka=null;function qa(e,t){if(Ua===null){var n=Ua=[];Wa=0,Ga=Pf(),Ka={status:`pending`,value:void 0,then:function(e){n.push(e)}}}return Wa++,t.then(Ja,Ja),t}function Ja(){if(--Wa===0&&(Va=null,Ua!==null)){Ka!==null&&(Ka.status=`fulfilled`);var e=Ua;Ua=null,Ga=0,Ka=null;for(var t=0;t<e.length;t++)(0,e[t])()}}function Ya(e,t){var n=[],r={status:`pending`,value:null,reason:null,then:function(e){n.push(e)}};return e.then(function(){r.status=`fulfilled`,r.value=t;for(var e=0;e<n.length;e++)(0,n[e])(t)},function(e){for(r.status=`rejected`,r.reason=e,e=0;e<n.length;e++)(0,n[e])(void 0)}),r}var Xa=T.S;T.S=function(e,t){if(gd=Xe(),typeof t==`object`&&t&&typeof t.then==`function`&&qa(e,t),Va!==null)for(var n=bf;n!==null;)Ba(n,Va),n=n.next;if(n=e.types,n!==null){for(var r=bf;r!==null;)Ba(r,n),r=r.next;if(Ga!==0){r=Va,r===null&&(r=Va=[]);for(var i=0;i<n.length;i++){var a=n[i];r.indexOf(a)===-1&&r.push(a)}}}Xa!==null&&Xa(e,t)};var Za=ke(null);function Qa(){var e=Za.current;return e===null?G.pooledCache:e}function $a(e,t){t===null?O(Za,Za.current):O(Za,t.pool)}function eo(){var e=Qa();return e===null?null:{parent:P._currentValue,pool:e}}var to=Error(i(460)),no=Error(i(474)),ro=Error(i(542)),io={then:function(){}};function ao(e){return e=e.status,e===`fulfilled`||e===`rejected`}function oo(e,t,n){switch(n=e[n],n===void 0?e.push(t):n!==t&&(t.then(En,En),t=n),t.status){case`fulfilled`:return t.value;case`rejected`:throw e=t.reason,uo(e),e===void 0&&!(`reason`in t)?Error(i(600)):e;default:if(typeof t.status==`string`)t.then(En,En);else{if(e=G,e!==null&&100<e.shellSuspendCounter)throw Error(i(482));e=t,e.status=`pending`,e.then(function(e){if(t.status===`pending`){var n=t;n.status=`fulfilled`,n.value=e}},function(e){if(t.status===`pending`){var n=t;n.status=`rejected`,n.reason=e}})}switch(t.status){case`fulfilled`:return t.value;case`rejected`:throw e=t.reason,uo(e),e}throw co=t,to}}function so(e){try{var t=e._init;return t(e._payload)}catch(e){throw typeof e==`object`&&e&&typeof e.then==`function`?(co=e,to):e}}var co=null;function lo(){if(co===null)throw Error(i(459));var e=co;return co=null,e}function uo(e){if(e===to||e===ro)throw Error(i(483))}var fo=null,po=0;function mo(e){var t=po;return po+=1,fo===null&&(fo=[]),oo(fo,e,t)}function ho(e,t){t=t.props.ref,e.ref=t===void 0?null:t}function go(e,t){throw t.$$typeof===re?Error(i(525)):(e=Object.prototype.toString.call(t),Error(i(31,e===`[object Object]`?`object with keys {`+Object.keys(t).join(`, `)+`}`:e)))}function _o(e){function t(t,n){if(e){var r=t.deletions;r===null?(t.deletions=[n],t.flags|=16):r.push(n)}}function n(n,r){if(!e)return null;for(;r!==null;)t(n,r),r=r.sibling;return null}function r(e){for(var t=new Map;e!==null;)e.key===null?t.set(e.index,e):t.set(e.key,e),e=e.sibling;return t}function a(e,t){return e=Hi(e,t),e.index=0,e.sibling=null,e}function o(t,n,r){return t.index=r,e?(r=t.alternate,r===null?(t.flags|=134217730,n):(r=r.index,r<n?(t.flags|=2,n):r)):(t.flags|=1048576,n)}function s(t){return e&&t.alternate===null&&(t.flags|=134217730),t}function c(e,t,n,r){return t===null||t.tag!==6?(t=Ki(n,e.mode,r),t.return=e,t):(t=a(t,n),t.return=e,t)}function l(e,t,n,r){var i=n.type;return i===oe?(e=d(e,t,n.props.children,r,n.key),ho(e,n),e):t!==null&&(t.elementType===i||typeof i==`object`&&i&&i.$$typeof===he&&so(i)===t.type)?(t=a(t,n.props),ho(t,n),t.return=e,t):(t=Wi(n.type,n.key,n.props,null,e.mode,r),ho(t,n),t.return=e,t)}function u(e,t,n,r){return t===null||t.tag!==4||t.stateNode.containerInfo!==n.containerInfo||t.stateNode.implementation!==n.implementation?(t=Ji(n,e.mode,r),t.return=e,t):(t=a(t,n.children||[]),t.return=e,t)}function d(e,t,n,r,i){return t===null||t.tag!==7?(t=Gi(n,e.mode,r,i),t.return=e,t):(t=a(t,n),t.return=e,t)}function f(e,t,n){if(typeof t==`string`&&t!==``||typeof t==`number`||typeof t==`bigint`)return t=Ki(``+t,e.mode,n),t.return=e,t;if(typeof t==`object`&&t){switch(t.$$typeof){case ie:return n=Wi(t.type,t.key,t.props,null,e.mode,n),ho(n,t),n.return=e,n;case ae:return t=Ji(t,e.mode,n),t.return=e,t;case he:return t=so(t),f(e,t,n)}if(Te(t)||Se(t))return t=Gi(t,e.mode,n,null),t.return=e,t;if(typeof t.then==`function`)return f(e,mo(t),n);if(t.$$typeof===ue)return f(e,Na(e,t),n);go(e,t)}return null}function p(e,t,n,r){var i=t===null?null:t.key;if(typeof n==`string`&&n!==``||typeof n==`number`||typeof n==`bigint`)return i===null?c(e,t,``+n,r):null;if(typeof n==`object`&&n){switch(n.$$typeof){case ie:return n.key===i?l(e,t,n,r):null;case ae:return n.key===i?u(e,t,n,r):null;case he:return n=so(n),p(e,t,n,r)}if(Te(n)||Se(n))return i===null?d(e,t,n,r,null):null;if(typeof n.then==`function`)return p(e,t,mo(n),r);if(n.$$typeof===ue)return p(e,t,Na(e,n),r);go(e,n)}return null}function m(e,t,n,r,i){if(typeof r==`string`&&r!==``||typeof r==`number`||typeof r==`bigint`)return e=e.get(n)||null,c(t,e,``+r,i);if(typeof r==`object`&&r){switch(r.$$typeof){case ie:return e=e.get(r.key===null?n:r.key)||null,l(t,e,r,i);case ae:return e=e.get(r.key===null?n:r.key)||null,u(t,e,r,i);case he:return r=so(r),m(e,t,n,r,i)}if(Te(r)||Se(r))return e=e.get(n)||null,d(t,e,r,i,null);if(typeof r.then==`function`)return m(e,t,n,mo(r),i);if(r.$$typeof===ue)return m(e,t,n,Na(t,r),i);go(t,r)}return null}function h(i,a,s,c){for(var l=null,u=null,d=a,h=a=0,g=null;d!==null&&h<s.length;h++){d.index>h?(g=d,d=null):g=d.sibling;var _=p(i,d,s[h],c);if(_===null){d===null&&(d=g);break}e&&d&&_.alternate===null&&t(i,d),a=o(_,a,h),u===null?l=_:u.sibling=_,u=_,d=g}if(h===s.length)return n(i,d),N&&oa(i,h),l;if(d===null){for(;h<s.length;h++)d=f(i,s[h],c),d!==null&&(a=o(d,a,h),u===null?l=d:u.sibling=d,u=d);return N&&oa(i,h),l}for(d=r(d);h<s.length;h++)g=m(d,i,h,s[h],c),g!==null&&(e&&(_=g.alternate,_!==null&&d.delete(_.key===null?h:_.key)),a=o(g,a,h),u===null?l=g:u.sibling=g,u=g);return e&&d.forEach(function(e){return t(i,e)}),N&&oa(i,h),l}function g(a,s,c,l){if(c==null)throw Error(i(151));for(var u=null,d=null,h=s,g=s=0,_=null,v=c.next();h!==null&&!v.done;g++,v=c.next()){h.index>g?(_=h,h=null):_=h.sibling;var y=p(a,h,v.value,l);if(y===null){h===null&&(h=_);break}e&&h&&y.alternate===null&&t(a,h),s=o(y,s,g),d===null?u=y:d.sibling=y,d=y,h=_}if(v.done)return n(a,h),N&&oa(a,g),u;if(h===null){for(;!v.done;g++,v=c.next())v=f(a,v.value,l),v!==null&&(s=o(v,s,g),d===null?u=v:d.sibling=v,d=v);return N&&oa(a,g),u}for(h=r(h);!v.done;g++,v=c.next())v=m(h,a,g,v.value,l),v!==null&&(e&&(_=v.alternate,_!==null&&h.delete(_.key===null?g:_.key)),s=o(v,s,g),d===null?u=v:d.sibling=v,d=v);return e&&h.forEach(function(e){return t(a,e)}),N&&oa(a,g),u}function _(e,r,o,c){if(typeof o==`object`&&o&&o.type===oe&&o.key===null&&o.props.ref===void 0&&(o=o.props.children),typeof o==`object`&&o){switch(o.$$typeof){case ie:a:{for(var l=o.key;r!==null;){if(r.key===l){if(l=o.type,l===oe){if(r.tag===7){n(e,r.sibling),c=a(r,o.props.children),ho(c,o),c.return=e,e=c;break a}}else if(r.elementType===l||typeof l==`object`&&l&&l.$$typeof===he&&so(l)===r.type){n(e,r.sibling),c=a(r,o.props),ho(c,o),c.return=e,e=c;break a}n(e,r);break}t(e,r),r=r.sibling}o.type===oe?(c=Gi(o.props.children,e.mode,c,o.key),ho(c,o),c.return=e,e=c):(c=Wi(o.type,o.key,o.props,null,e.mode,c),ho(c,o),c.return=e,e=c)}return s(e);case ae:a:{for(l=o.key;r!==null;){if(r.key===l){if(r.tag===4&&r.stateNode.containerInfo===o.containerInfo&&r.stateNode.implementation===o.implementation){n(e,r.sibling),c=a(r,o.children||[]),c.return=e,e=c;break a}n(e,r);break}t(e,r),r=r.sibling}c=Ji(o,e.mode,c),c.return=e,e=c}return s(e);case he:return o=so(o),_(e,r,o,c)}if(Te(o))return h(e,r,o,c);if(Se(o)){if(l=Se(o),typeof l!=`function`)throw Error(i(150));return o=l.call(o),g(e,r,o,c)}if(typeof o.then==`function`)return _(e,r,mo(o),c);if(o.$$typeof===ue)return _(e,r,Na(e,o),c);go(e,o)}return typeof o==`string`&&o!==``||typeof o==`number`||typeof o==`bigint`?(o=``+o,r!==null&&r.tag===6?(n(e,r.sibling),c=a(r,o),c.return=e,e=c):(n(e,r),c=Ki(o,e.mode,c),c.return=e,e=c),s(e)):n(e,r)}return function(e,t,n,r){try{po=0;var i=_(e,t,n,r);return fo=null,i}catch(t){if(t===to||t===ro)throw t;var a=Bi(29,t,null,e.mode);return a.lanes=r,a.return=e,a}}}var vo=_o(!0),yo=_o(!1),bo=!1;function xo(e){e.updateQueue={baseState:e.memoizedState,firstBaseUpdate:null,lastBaseUpdate:null,shared:{pending:null,lanes:0,hiddenCallbacks:null},callbacks:null}}function So(e,t){e=e.updateQueue,t.updateQueue===e&&(t.updateQueue={baseState:e.baseState,firstBaseUpdate:e.firstBaseUpdate,lastBaseUpdate:e.lastBaseUpdate,shared:e.shared,callbacks:null})}function Co(e){return{lane:e,tag:0,payload:null,callback:null,next:null}}function wo(e,t,n){var r=e.updateQueue;if(r===null)return null;if(r=r.shared,W&2){var i=r.pending;return i===null?t.next=t:(t.next=i.next,i.next=t),r.pending=t,t=Li(e),Ii(e,null,n),t}return Ni(e,r,t,n),Li(e)}function To(e,t,n){if(t=t.updateQueue,t!==null&&(t=t.shared,n&4194048)){var r=t.lanes;r&=e.pendingLanes,n|=r,t.lanes=n,Tt(e,n)}}function Eo(e,t){var n=e.updateQueue,r=e.alternate;if(r!==null&&(r=r.updateQueue,n===r)){var i=null,a=null;if(n=n.firstBaseUpdate,n!==null){do{var o={lane:n.lane,tag:n.tag,payload:n.payload,callback:null,next:null};a===null?i=a=o:a=a.next=o,n=n.next}while(n!==null);a===null?i=a=t:a=a.next=t}else i=a=t;n={baseState:r.baseState,firstBaseUpdate:i,lastBaseUpdate:a,shared:r.shared,callbacks:r.callbacks},e.updateQueue=n}else e=n.lastBaseUpdate,e===null?n.firstBaseUpdate=t:e.next=t,n.lastBaseUpdate=t}var Do=!1;function Oo(){if(Do){var e=Ka;if(e!==null)throw e}}function ko(e,t,n,r){Do=!1;var i=e.updateQueue;bo=!1;var a=i.firstBaseUpdate,o=i.lastBaseUpdate,s=i.shared.pending;if(s!==null){i.shared.pending=null;var c=s,l=c.next;c.next=null,o===null?a=l:o.next=l,o=c;var u=e.alternate;u!==null&&(u=u.updateQueue,s=u.lastBaseUpdate,s!==o&&(s===null?u.firstBaseUpdate=l:s.next=l,u.lastBaseUpdate=c))}if(a!==null){var d=i.baseState;o=0,u=l=c=null,s=a;do{var f=s.lane&-536870913,p=f!==s.lane;if(p?(q&f)===f:(r&f)===f){f!==0&&f===Ga&&(Do=!0),u!==null&&(u=u.next={lane:0,tag:s.tag,payload:s.payload,callback:null,next:null});a:{var m=e,h=s;f=t;var g=n;switch(h.tag){case 1:if(m=h.payload,typeof m==`function`){d=m.call(g,d,f);break a}d=m;break a;case 3:m.flags=m.flags&-65537|128;case 0:if(m=h.payload,f=typeof m==`function`?m.call(g,d,f):m,f==null)break a;d=w({},d,f);break a;case 2:bo=!0}}f=s.callback,f!==null&&(e.flags|=64,p&&(e.flags|=8192),p=i.callbacks,p===null?i.callbacks=[f]:p.push(f))}else p={lane:f,tag:s.tag,payload:s.payload,callback:s.callback,next:null},u===null?(l=u=p,c=d):u=u.next=p,o|=f;if(s=s.next,s===null){if(s=i.shared.pending,s===null)break;p=s,s=p.next,p.next=null,i.lastBaseUpdate=p,i.shared.pending=null}}while(1);u===null&&(c=d),i.baseState=c,i.firstBaseUpdate=l,i.lastBaseUpdate=u,a===null&&(i.shared.lanes=0),sd|=o,e.lanes=o,e.memoizedState=d}}function Ao(e,t){if(typeof e!=`function`)throw Error(i(191,e));e.call(t)}function jo(e,t){var n=e.callbacks;if(n!==null)for(e.callbacks=null,e=0;e<n.length;e++)Ao(n[e],t)}var Mo=ke(null),No=ke(0);function Po(e,t){e=od,O(No,e),O(Mo,t),od=e|t.baseLanes}function Fo(){O(No,od),O(Mo,Mo.current)}function Io(){od=No.current,D(Mo),D(No)}var Lo=ke(null),Ro=null;function zo(e){var t=e.alternate;O(Wo,Wo.current&1),O(Lo,e),Ro===null&&(t===null||Mo.current!==null||t.memoizedState!==null)&&(Ro=e)}function Bo(e){O(Wo,Wo.current),O(Lo,e),Ro===null&&(Ro=e)}function Vo(e){e.tag===22?(O(Wo,Wo.current),O(Lo,e),Ro===null&&(Ro=e)):Ho()}function Ho(){O(Wo,Wo.current),O(Lo,Lo.current)}function Uo(e){D(Lo),Ro===e&&(Ro=null),D(Wo)}var Wo=ke(0);function Go(e,t){O(Lo,Lo.current),O(Wo,t)}function Ko(e){D(Wo),D(Lo),Ro===e&&(Ro=null)}function qo(e){for(var t=e;t!==null;){if(t.tag===13){var n=t.memoizedState;if(n!==null&&(n=n.dehydrated,n===null||om(n)||sm(n)))return t}else if(t.tag===19&&t.memoizedProps.revealOrder!==`independent`){if(t.flags&128)return t}else if(t.child!==null){t.child.return=t,t=t.child;continue}if(t===e)break;for(;t.sibling===null;){if(t.return===null||t.return===e)return null;t=t.return}t.sibling.return=t.return,t=t.sibling}return null}var Jo=0,F=null,I=null,L=null,Yo=!1,Xo=!1,Zo=!1,Qo=0,$o=0,es=null,ts=0;function R(){throw Error(i(321))}function ns(e,t){if(t===null)return!1;for(var n=0;n<t.length&&n<e.length;n++)if(!Yr(e[n],t[n]))return!1;return!0}function rs(e,t,n,r,i,a){return Jo=a,F=t,t.memoizedState=null,t.updateQueue=null,t.lanes=0,T.H=e===null||e.memoizedState===null?yc:bc,Zo=!1,a=n(r,i),Zo=!1,Xo&&(a=as(t,n,r,i)),is(e),a}function is(e){T.H=vc;var t=I!==null&&I.next!==null;if(Jo=0,L=I=F=null,Yo=!1,$o=0,es=null,t)throw Error(i(300));e===null||B||(e=e.dependencies,e!==null&&Aa(e)&&(B=!0))}function as(e,t,n,r){F=e;var a=0;do{if(Xo&&(es=null),$o=0,Xo=!1,25<=a)throw Error(i(301));if(a+=1,L=I=null,e.updateQueue!=null){var o=e.updateQueue;o.lastEffect=null,o.events=null,o.stores=null,o.memoCache!=null&&(o.memoCache.index=0)}T.H=xc,o=t(n,r)}while(Xo);return o}function os(){var e=T.H,t=e.useState()[0];return t=typeof t.then==`function`?fs(t):t,e=e.useState()[0],(I===null?null:I.memoizedState)!==e&&(F.flags|=1024),t}function ss(){var e=Qo!==0;return Qo=0,e}function cs(e,t,n){t.updateQueue=e.updateQueue,t.flags&=-2053,e.lanes&=~n}function ls(e){if(Yo){for(e=e.memoizedState;e!==null;){var t=e.queue;t!==null&&(t.pending=null),e=e.next}Yo=!1}Jo=0,L=I=F=null,Xo=!1,$o=Qo=0,es=null}function us(){var e={memoizedState:null,baseState:null,baseQueue:null,queue:null,next:null};return L===null?F.memoizedState=L=e:L=L.next=e,L}function z(){if(I===null){var e=F.alternate;e=e===null?null:e.memoizedState}else e=I.next;var t=L===null?F.memoizedState:L.next;if(t!==null)L=t,I=e;else{if(e===null)throw F.alternate===null?Error(i(467)):Error(i(310));I=e,e={memoizedState:I.memoizedState,baseState:I.baseState,baseQueue:I.baseQueue,queue:I.queue,next:null},L===null?F.memoizedState=L=e:L=L.next=e}return L}function ds(){return{lastEffect:null,events:null,stores:null,memoCache:null}}function fs(e){var t=$o;return $o+=1,es===null&&(es=[]),e=oo(es,e,t),t=F,(L===null?t.memoizedState:L.next)===null&&(t=t.alternate,T.H=t===null||t.memoizedState===null?yc:bc),e}function ps(e){if(typeof e==`object`&&e){if(typeof e.then==`function`)return fs(e);if(e.$$typeof===be)return;if(e.$$typeof===ue)return Ma(e)}throw Error(i(438,String(e)))}function ms(e){var t=null,n=F.updateQueue;if(n!==null&&(t=n.memoCache),t==null){var r=F.alternate;r!==null&&(r=r.updateQueue,r!==null&&(r=r.memoCache,r!=null&&(t={data:r.data.map(function(e){return e.slice()}),index:0})))}if(t??={data:[],index:0},n===null&&(n=ds(),F.updateQueue=n),n.memoCache=t,n=t.data[t.index],n===void 0)for(n=t.data[t.index]=Array(e),r=0;r<e;r++)n[r]=ve;return t.index++,n}function hs(e,t){return typeof t==`function`?t(e):t}function gs(e){return _s(z(),I,e)}function _s(e,t,n){var r=e.queue;if(r===null)throw Error(i(311));r.lastRenderedReducer=n;var a=e.baseQueue,o=r.pending;if(o!==null){if(a!==null){var s=a.next;a.next=o.next,o.next=s}t.baseQueue=a=o,r.pending=null}if(o=e.baseState,a===null)e.memoizedState=o;else{t=a.next;var c=s=null,l=null,u=t,d=!1;do{var f=u.lane&-536870913;if(f===u.lane?(Jo&f)===f:(q&f)===f){var p=u.revertLane;if(p===0)l!==null&&(l=l.next={lane:0,revertLane:0,gesture:null,action:u.action,hasEagerState:u.hasEagerState,eagerState:u.eagerState,next:null}),f===Ga&&(d=!0);else if((Jo&p)===p){u=u.next,p===Ga&&(d=!0);continue}else f={lane:0,revertLane:u.revertLane,gesture:null,action:u.action,hasEagerState:u.hasEagerState,eagerState:u.eagerState,next:null},l===null?(c=l=f,s=o):l=l.next=f,F.lanes|=p,sd|=p;f=u.action,Zo&&n(o,f),o=u.hasEagerState?u.eagerState:n(o,f)}else p={lane:f,revertLane:u.revertLane,gesture:u.gesture,action:u.action,hasEagerState:u.hasEagerState,eagerState:u.eagerState,next:null},l===null?(c=l=p,s=o):l=l.next=p,F.lanes|=f,sd|=f;u=u.next}while(u!==null&&u!==t);if(l===null?s=o:l.next=c,!Yr(o,e.memoizedState)&&(B=!0,d&&(n=Ka,n!==null)))throw n;e.memoizedState=o,e.baseState=s,e.baseQueue=l,r.lastRenderedState=o}return a===null&&(r.lanes=0),[e.memoizedState,r.dispatch]}function vs(e){var t=z(),n=t.queue;if(n===null)throw Error(i(311));n.lastRenderedReducer=e;var r=n.dispatch,a=n.pending,o=t.memoizedState;if(a!==null){n.pending=null;var s=a=a.next;do o=e(o,s.action),s=s.next;while(s!==a);Yr(o,t.memoizedState)||(B=!0),t.memoizedState=o,t.baseQueue===null&&(t.baseState=o),n.lastRenderedState=o}return[o,r]}function ys(e,t,n){var r=F,a=z(),o=N;if(o){if(n===void 0)throw Error(i(407));n=n()}else n=t();var s=!Yr((I||a).memoizedState,n);if(s&&(a.memoizedState=n,B=!0),a=a.queue,Ws(Ss.bind(null,r,a,e),[e]),e=a.getSnapshot!==t||s||L!==null&&!!(L.memoizedState.tag&1),zs(e?9:8,{destroy:void 0},xs.bind(null,r,a,n,t),null),e){if(r.flags|=2048,G===null)throw Error(i(349));o||Jo&127||bs(r,t,n)}return n}function bs(e,t,n){e.flags|=16384,e={getSnapshot:t,value:n},t=F.updateQueue,t===null?(t=ds(),F.updateQueue=t,t.stores=[e]):(n=t.stores,n===null?t.stores=[e]:n.push(e))}function xs(e,t,n,r){t.value=n,t.getSnapshot=r,Cs(t)&&ws(e)}function Ss(e,t,n){return n(function(){Cs(t)&&ws(e)})}function Cs(e){var t=e.getSnapshot;e=e.value;try{var n=t();return!Yr(e,n)}catch{return!0}}function ws(e){var t=Fi(e,2);t!==null&&Pd(t,e,2)}function Ts(e){var t=us();if(typeof e==`function`){var n=e;if(e=n(),Zo){st(!0);try{n()}finally{st(!1)}}}return t.memoizedState=t.baseState=e,t.queue={pending:null,lanes:0,dispatch:null,lastRenderedReducer:hs,lastRenderedState:e},t}function Es(e,t,n,r){return e.baseState=n,_s(e,I,typeof r==`function`?r:hs)}function Ds(e,t,n,r,a){if(hc(e))throw Error(i(485));if(e=t.action,e!==null){var o={payload:a,action:e,next:null,isTransition:!0,status:`pending`,value:null,reason:null,listeners:[],then:function(e){o.listeners.push(e)}};T.T===null?o.isTransition=!1:n(!0),r(o),n=t.pending,n===null?(o.next=t.pending=o,Os(t,o)):(o.next=n.next,t.pending=n.next=o)}}function Os(e,t){var n=t.action,r=t.payload,i=e.state;if(t.isTransition){var a=T.T,o={};o.types=a===null?null:a.types,T.T=o;try{var s=n(i,r),c=T.S;c!==null&&c(o,s),ks(e,t,s)}catch(n){js(e,t,n)}finally{a!==null&&o.types!==null&&(a.types=o.types),T.T=a}}else try{a=n(i,r),ks(e,t,a)}catch(n){js(e,t,n)}}function ks(e,t,n){typeof n==`object`&&n&&typeof n.then==`function`?n.then(function(n){As(e,t,n)},function(n){return js(e,t,n)}):As(e,t,n)}function As(e,t,n){t.status=`fulfilled`,t.value=n,Ms(t),e.state=n,t=e.pending,t!==null&&(n=t.next,n===t?e.pending=null:(n=n.next,t.next=n,Os(e,n)))}function js(e,t,n){var r=e.pending;if(e.pending=null,r!==null){r=r.next;do t.status=`rejected`,t.reason=n,Ms(t),t=t.next;while(t!==r)}e.action=null}function Ms(e){e=e.listeners;for(var t=0;t<e.length;t++)(0,e[t])()}function Ns(e,t){return t}function Ps(e,t){if(N){var n=G.formState;if(n!==null){a:{var r=F;if(N){if(M){b:{for(var i=M,a=pa;i.nodeType!==8;)if(!a||(i=lm(i.nextSibling),i===null)){i=null;break b}a=i.data,i=a===`F!`||a===`F`?i:null}if(i){M=lm(i.nextSibling),r=i.data===`F!`;break a}}ha(r)}r=!1}r&&(t=n[0])}}return n=us(),n.memoizedState=n.baseState=t,r={pending:null,lanes:0,dispatch:null,lastRenderedReducer:Ns,lastRenderedState:t},n.queue=r,n=fc.bind(null,F,r),r.dispatch=n,r=Ts(!1),a=mc.bind(null,F,!1,r.queue),r=us(),i={state:t,dispatch:null,action:e,pending:null},r.queue=i,n=Ds.bind(null,F,i,a,n),i.dispatch=n,r.memoizedState=e,[t,n,!1]}function Fs(e){return Is(z(),I,e)}function Is(e,t,n){if(t=_s(e,t,Ns)[0],e=gs(hs)[0],typeof t==`object`&&t&&typeof t.then==`function`)try{var r=fs(t)}catch(e){throw e===to?ro:e}else r=t;t=z();var i=t.queue,a=i.dispatch;return n!==t.memoizedState&&(F.flags|=2048,zs(9,{destroy:void 0},Ls.bind(null,i,n),null)),[r,a,e]}function Ls(e,t){e.action=t}function Rs(e){var t=z(),n=I;if(n!==null)return Is(t,n,e);z(),t=t.memoizedState,n=z();var r=n.queue.dispatch;return n.memoizedState=e,[t,r,!1]}function zs(e,t,n,r){return e={tag:e,create:n,deps:r,inst:t,next:null},t=F.updateQueue,t===null&&(t=ds(),F.updateQueue=t),n=t.lastEffect,n===null?t.lastEffect=e.next=e:(r=n.next,n.next=e,e.next=r,t.lastEffect=e),e}function Bs(){return z().memoizedState}function Vs(e,t,n,r){var i=us();F.flags|=e,i.memoizedState=zs(1|t,{destroy:void 0},n,r===void 0?null:r)}function Hs(e,t,n,r){var i=z();r=r===void 0?null:r;var a=i.memoizedState.inst;I!==null&&r!==null&&ns(r,I.memoizedState.deps)?i.memoizedState=zs(t,a,n,r):(F.flags|=e,i.memoizedState=zs(1|t,a,n,r))}function Us(e,t){Vs(8390656,8,e,t)}function Ws(e,t){Hs(2048,8,e,t)}function Gs(e){F.flags|=4;var t=F.updateQueue;if(t===null)t=ds(),F.updateQueue=t,t.events=[e];else{var n=t.events;n===null?t.events=[e]:n.push(e)}}function Ks(e){var t=z().memoizedState;return Gs({ref:t,nextImpl:e}),function(){if(W&2)throw Error(i(440));return t.impl.apply(void 0,arguments)}}function qs(e,t){return Hs(4,2,e,t)}function Js(e,t){return Hs(4,4,e,t)}function Ys(e,t){if(typeof t==`function`){e=e();var n=t(e);return function(){typeof n==`function`?n():t(null)}}if(t!=null)return e=e(),t.current=e,function(){t.current=null}}function Xs(e,t,n){n=n==null?null:n.concat([e]),Hs(4,4,Ys.bind(null,t,e),n)}function Zs(){}function Qs(e,t){var n=z();t=t===void 0?null:t;var r=n.memoizedState;return t!==null&&ns(t,r[1])?r[0]:(n.memoizedState=[e,t],e)}function $s(e,t){var n=z();t=t===void 0?null:t;var r=n.memoizedState;if(t!==null&&ns(t,r[1]))return r[0];if(r=e(),Zo){st(!0);try{e()}finally{st(!1)}}return n.memoizedState=[r,t],r}function ec(e,t,n){return n===void 0||Jo&1073741824&&!(q&261930)?e.memoizedState=t:(e.memoizedState=n,e=Md(),F.lanes|=e,sd|=e,n)}function tc(e,t,n,r){return Yr(n,t)?n:Mo.current===null?!(Jo&106)||Jo&1073741824&&!(q&261930)?(B=!0,e.memoizedState=n):(e=Md(),F.lanes|=e,sd|=e,t):(e=ec(e,n,r),Yr(e,t)||(B=!0),e)}function nc(e,t,n,r,i){var a=E.p;E.p=a!==0&&8>a?a:8;var o=T.T,s={};s.types=o===null?null:o.types,T.T=s,mc(e,!1,t,n);try{var c=i(),l=T.S;l!==null&&l(s,c),typeof c==`object`&&c&&typeof c.then==`function`?pc(e,t,Ya(c,r),jd(e)):pc(e,t,r,jd(e))}catch(n){pc(e,t,{then:function(){},status:`rejected`,reason:n},jd())}finally{E.p=a,o!==null&&s.types!==null&&(o.types=s.types),T.T=o}}function rc(){}function ic(e,t,n,r){if(e.tag!==5)throw Error(i(476));var a=ac(e).queue;nc(e,a,t,Ee,n===null?rc:function(){return oc(e),n(r)})}function ac(e){var t=e.memoizedState;if(t!==null)return t;t={memoizedState:Ee,baseState:Ee,baseQueue:null,queue:{pending:null,lanes:0,dispatch:null,lastRenderedReducer:hs,lastRenderedState:Ee},next:null};var n={};return t.next={memoizedState:n,baseState:n,baseQueue:null,queue:{pending:null,lanes:0,dispatch:null,lastRenderedReducer:hs,lastRenderedState:n},next:null},e.memoizedState=t,e=e.alternate,e!==null&&(e.memoizedState=t),t}function oc(e){var t=ac(e);t.next===null&&(t=e.alternate.memoizedState),pc(e,t.next.queue,{},jd())}function sc(){return Ma(sh)}function cc(){return z().memoizedState}function lc(){return z().memoizedState}function uc(e){for(var t=e.return;t!==null;){switch(t.tag){case 24:case 3:var n=jd();e=Co(n);var r=wo(t,e,n);r!==null&&(Pd(r,t,n),To(r,t,n)),t={cache:Ra()},e.payload=t;return}t=t.return}}function dc(e,t,n){var r=jd();n={lane:r,revertLane:0,gesture:null,action:n,hasEagerState:!1,eagerState:null,next:null},hc(e)?gc(t,n):(n=Pi(e,t,n,r),n!==null&&(Pd(n,e,r),_c(n,t,r)))}function fc(e,t,n){pc(e,t,n,jd())}function pc(e,t,n,r){var i={lane:r,revertLane:0,gesture:null,action:n,hasEagerState:!1,eagerState:null,next:null};if(hc(e))gc(t,i);else{var a=e.alternate;if(e.lanes===0&&(a===null||a.lanes===0)&&(a=t.lastRenderedReducer,a!==null))try{var o=t.lastRenderedState,s=a(o,n);if(i.hasEagerState=!0,i.eagerState=s,Yr(s,o))return Ni(e,t,i,0),G===null&&Mi(),!1}catch{}if(n=Pi(e,t,i,r),n!==null)return Pd(n,e,r),_c(n,t,r),!0}return!1}function mc(e,t,n,r){if(r={lane:2,revertLane:Pf(),gesture:null,action:r,hasEagerState:!1,eagerState:null,next:null},hc(e)){if(t)throw Error(i(479))}else t=Pi(e,n,r,2),t!==null&&Pd(t,e,2)}function hc(e){var t=e.alternate;return e===F||t!==null&&t===F}function gc(e,t){Xo=Yo=!0;var n=e.pending;n===null?t.next=t:(t.next=n.next,n.next=t),e.pending=t}function _c(e,t,n){if(n&4194048){var r=t.lanes;r&=e.pendingLanes,n|=r,t.lanes=n,Tt(e,n)}}var vc={readContext:Ma,use:ps,useCallback:R,useContext:R,useEffect:R,useImperativeHandle:R,useLayoutEffect:R,useInsertionEffect:R,useMemo:R,useReducer:R,useRef:R,useState:R,useDebugValue:R,useDeferredValue:R,useTransition:R,useSyncExternalStore:R,useId:R,useHostTransitionStatus:R,useFormState:R,useActionState:R,useOptimistic:R,useMemoCache:R,useCacheRefresh:R,useEffectEvent:R},yc={readContext:Ma,use:ps,useCallback:function(e,t){return us().memoizedState=[e,t===void 0?null:t],e},useContext:Ma,useEffect:Us,useImperativeHandle:function(e,t,n){n=n==null?null:n.concat([e]),Vs(4194308,4,Ys.bind(null,t,e),n)},useLayoutEffect:function(e,t){return Vs(4194308,4,e,t)},useInsertionEffect:function(e,t){Vs(4,2,e,t)},useMemo:function(e,t){var n=us();t=t===void 0?null:t;var r=e();if(Zo){st(!0);try{e()}finally{st(!1)}}return n.memoizedState=[r,t],r},useReducer:function(e,t,n){var r=us();if(n!==void 0){var i=n(t);if(Zo){st(!0);try{n(t)}finally{st(!1)}}}else i=t;return r.memoizedState=r.baseState=i,e={pending:null,lanes:0,dispatch:null,lastRenderedReducer:e,lastRenderedState:i},r.queue=e,e=e.dispatch=dc.bind(null,F,e),[r.memoizedState,e]},useRef:function(e){var t=us();return e={current:e},t.memoizedState=e},useState:function(e){e=Ts(e);var t=e.queue,n=fc.bind(null,F,t);return t.dispatch=n,[e.memoizedState,n]},useDebugValue:Zs,useDeferredValue:function(e,t){return ec(us(),e,t)},useTransition:function(){var e=Ts(!1);return e=nc.bind(null,F,e.queue,!0,!1),us().memoizedState=e,[!1,e]},useSyncExternalStore:function(e,t,n){var r=F,a=us();if(N){if(n===void 0)throw Error(i(407));n=n()}else{if(n=t(),G===null)throw Error(i(349));q&127||bs(r,t,n)}a.memoizedState=n;var o={value:n,getSnapshot:t};return a.queue=o,Us(Ss.bind(null,r,o,e),[e]),r.flags|=2048,zs(9,{destroy:void 0},xs.bind(null,r,o,n,t),null),n},useId:function(){var e=us(),t=G.identifierPrefix;if(N){var n=aa,r=ia;n=(r&~(1<<32-ct(r)-1)).toString(32)+n,t=`_`+t+`R_`+n,n=Qo++,0<n&&(t+=`H`+n.toString(32)),t+=`_`}else n=ts++,t=`_`+t+`r_`+n.toString(32)+`_`;return e.memoizedState=t},useHostTransitionStatus:sc,useFormState:Ps,useActionState:Ps,useOptimistic:function(e){var t=us();t.memoizedState=t.baseState=e;var n={pending:null,lanes:0,dispatch:null,lastRenderedReducer:null,lastRenderedState:null};return t.queue=n,t=mc.bind(null,F,!0,n),n.dispatch=t,[e,t]},useMemoCache:ms,useCacheRefresh:function(){return us().memoizedState=uc.bind(null,F)},useEffectEvent:function(e){var t=us(),n={impl:e};return t.memoizedState=n,function(){if(W&2)throw Error(i(440));return n.impl.apply(void 0,arguments)}}},bc={readContext:Ma,use:ps,useCallback:Qs,useContext:Ma,useEffect:Ws,useImperativeHandle:Xs,useInsertionEffect:qs,useLayoutEffect:Js,useMemo:$s,useReducer:gs,useRef:Bs,useState:function(){return gs(hs)},useDebugValue:Zs,useDeferredValue:function(e,t){return tc(z(),I.memoizedState,e,t)},useTransition:function(){var e=gs(hs)[0],t=z().memoizedState;return[typeof e==`boolean`?e:fs(e),t]},useSyncExternalStore:ys,useId:cc,useHostTransitionStatus:sc,useFormState:Fs,useActionState:Fs,useOptimistic:function(e,t){return Es(z(),I,e,t)},useMemoCache:ms,useCacheRefresh:lc,useEffectEvent:Ks},xc={readContext:Ma,use:ps,useCallback:Qs,useContext:Ma,useEffect:Ws,useImperativeHandle:Xs,useInsertionEffect:qs,useLayoutEffect:Js,useMemo:$s,useReducer:vs,useRef:Bs,useState:function(){return vs(hs)},useDebugValue:Zs,useDeferredValue:function(e,t){var n=z();return I===null?ec(n,e,t):tc(n,I.memoizedState,e,t)},useTransition:function(){var e=vs(hs)[0],t=z().memoizedState;return[typeof e==`boolean`?e:fs(e),t]},useSyncExternalStore:ys,useId:cc,useHostTransitionStatus:sc,useFormState:Rs,useActionState:Rs,useOptimistic:function(e,t){var n=z();return I===null?(n.baseState=e,[e,n.queue.dispatch]):Es(n,I,e,t)},useMemoCache:ms,useCacheRefresh:lc,useEffectEvent:Ks};function Sc(e,t,n,r){t=e.memoizedState,n=n(r,t),n=n==null?t:w({},t,n),e.memoizedState=n,e.lanes===0&&(e.updateQueue.baseState=n)}var Cc={enqueueSetState:function(e,t,n){e=e._reactInternals;var r=jd(),i=Co(r);i.payload=t,n!=null&&(i.callback=n),t=wo(e,i,r),t!==null&&(Pd(t,e,r),To(t,e,r))},enqueueReplaceState:function(e,t,n){e=e._reactInternals;var r=jd(),i=Co(r);i.tag=1,i.payload=t,n!=null&&(i.callback=n),t=wo(e,i,r),t!==null&&(Pd(t,e,r),To(t,e,r))},enqueueForceUpdate:function(e,t){e=e._reactInternals;var n=jd(),r=Co(n);r.tag=2,t!=null&&(r.callback=t),t=wo(e,r,n),t!==null&&(Pd(t,e,n),To(t,e,n))}};function wc(e,t,n,r,i,a,o){return e=e.stateNode,typeof e.shouldComponentUpdate==`function`?e.shouldComponentUpdate(r,a,o):t.prototype&&t.prototype.isPureReactComponent?!Xr(n,r)||!Xr(i,a):!0}function Tc(e,t,n,r){e=t.state,typeof t.componentWillReceiveProps==`function`&&t.componentWillReceiveProps(n,r),typeof t.UNSAFE_componentWillReceiveProps==`function`&&t.UNSAFE_componentWillReceiveProps(n,r),t.state!==e&&Cc.enqueueReplaceState(t,t.state,null)}function Ec(e,t){var n=t;if(`ref`in t)for(var r in n={},t)r!==`ref`&&(n[r]=t[r]);if(e=e.defaultProps)for(var i in n===t&&(n=w({},n)),e)n[i]===void 0&&(n[i]=e[i]);return n}function Dc(e){Oi(e)}function Oc(e){console.error(e)}function kc(e){Oi(e)}function Ac(e,t){try{var n=e.onUncaughtError;n(t.value,{componentStack:t.stack})}catch(e){setTimeout(function(){throw e})}}function jc(e,t,n){try{var r=e.onCaughtError;r(n.value,{componentStack:n.stack,errorBoundary:t.tag===1?t.stateNode:null})}catch(e){setTimeout(function(){throw e})}}function Mc(e,t,n){return n=Co(n),n.tag=3,n.payload={element:null},n.callback=function(){Ac(e,t)},n}function Nc(e){return e=Co(e),e.tag=3,e}function Pc(e,t,n,r){var i=n.type.getDerivedStateFromError;if(typeof i==`function`){var a=r.value;e.payload=function(){return i(a)},e.callback=function(){jc(t,n,r)}}var o=n.stateNode;o!==null&&typeof o.componentDidCatch==`function`&&(e.callback=function(){jc(t,n,r),typeof i!=`function`&&(yd===null?yd=new Set([this]):yd.add(this));var e=r.stack;this.componentDidCatch(r.value,{componentStack:e===null?``:e})})}function Fc(e,t,n,r,a){if(n.flags|=32768,typeof r==`object`&&r&&typeof r.then==`function`){if(t=n.alternate,t!==null&&ka(t,n,a,!0),n=Lo.current,n!==null){switch(n.tag){case 31:case 13:case 19:return Ro===null?Kd():n.alternate===null&&Y===0&&(Y=3),n.flags&=-257,n.flags|=65536,n.lanes=a,r===io?n.flags|=16384:(t=n.updateQueue,t===null?n.updateQueue=new Set([r]):t.add(r),mf(e,r,a)),!1;case 22:return n.flags|=65536,r===io?n.flags|=16384:(t=n.updateQueue,t===null?(t={transitions:null,markerInstances:null,retryQueue:new Set([r])},n.updateQueue=t):(n=t.retryQueue,n===null?t.retryQueue=new Set([r]):n.add(r)),mf(e,r,a)),!1}throw Error(i(435,n.tag))}return mf(e,r,a),Kd(),!1}if(N)return t=Lo.current,t===null?(r!==ma&&(t=Error(i(423),{cause:r}),xa(Xi(t,n))),e=e.current.alternate,e.flags|=65536,a&=-a,e.lanes|=a,r=Xi(r,n),a=Mc(e.stateNode,r,a),Eo(e,a),Y!==4&&(Y=2)):(!(t.flags&65536)&&(t.flags|=256),t.flags|=65536,t.lanes=a,r!==ma&&(e=Error(i(422),{cause:r}),xa(Xi(e,n)))),!1;var o=Error(i(520),{cause:r});if(o=Xi(o,n),fd===null?fd=[o]:fd.push(o),Y!==4&&(Y=2),t===null)return!0;r=Xi(r,n),n=t;do{switch(n.tag){case 3:return n.flags|=65536,e=a&-a,n.lanes|=e,e=Mc(n.stateNode,r,e),Eo(n,e),!1;case 1:if(t=n.type,o=n.stateNode,!(n.flags&128)&&(typeof t.getDerivedStateFromError==`function`||o!==null&&typeof o.componentDidCatch==`function`&&(yd===null||!yd.has(o))))return n.flags|=65536,a&=-a,n.lanes|=a,a=Nc(a),Pc(a,e,n,r),Eo(n,a),!1;break;case 22:if(n.memoizedState!==null)return n.flags|=65536,!1}n=n.return}while(n!==null);return!1}var Ic=Error(i(461)),B=!1;function Lc(e,t,n,r){t.child=e===null?yo(t,null,n,r):vo(t,e.child,n,r)}function Rc(e,t,n,r,i){n=n.render;var a=t.ref;if(`ref`in r){var o={};for(var s in r)s!==`ref`&&(o[s]=r[s])}else o=r;return ja(t),r=rs(e,t,n,o,a,i),s=ss(),e!==null&&!B?(cs(e,t,i),fl(e,t,i)):(N&&s&&ca(t),t.flags|=1,Lc(e,t,r,i),t.child)}function zc(e,t,n,r,i){if(e===null){var a=n.type;return typeof a==`function`&&!Vi(a)&&a.defaultProps===void 0&&n.compare===null?(t.tag=15,t.type=a,Bc(e,t,a,r,i)):(e=Wi(n.type,null,r,t,t.mode,i),e.ref=t.ref,e.return=t,t.child=e)}if(a=e.child,!pl(e,i)){var o=a.memoizedProps;if(n=n.compare,n=n===null?Xr:n,n(o,r)&&e.ref===t.ref)return fl(e,t,i)}return t.flags|=1,e=Hi(a,r),e.ref=t.ref,e.return=t,t.child=e}function Bc(e,t,n,r,i){if(e!==null){var a=e.memoizedProps;if(Xr(a,r)&&e.ref===t.ref){if(B=!1,t.pendingProps=r=a,pl(e,i))e.flags&131072&&(B=!0);else return t.lanes=e.lanes,fl(e,t,i)}}return Jc(e,t,n,r,i)}function Vc(e,t,n,r){var i=r.children,a=e===null?null:e.memoizedState;if(e===null&&t.stateNode===null&&(t.stateNode={_visibility:1,_pendingMarkers:null,_retryCache:null,_transitions:null}),r.mode===`hidden`){if(t.flags&128){if(a=a===null?n:a.baseLanes|n,e!==null){for(r=t.child=e.child,i=0;r!==null;)i=i|r.lanes|r.childLanes,r=r.sibling;r=i&~a}else r=0,t.child=null;return Uc(e,t,a,n,r)}if(n&536870912)t.memoizedState={baseLanes:0,cachePool:null},e!==null&&$a(t,a===null?null:a.cachePool),a===null?Fo():Po(t,a),Vo(t);else return r=t.lanes=536870912,Uc(e,t,a===null?n:a.baseLanes|n,n,r)}else a===null?(e!==null&&$a(t,null),Fo(),Ho()):($a(t,a.cachePool),Po(t,a),Ho(),t.memoizedState=null);return Lc(e,t,i,n),t.child}function Hc(e,t){return e!==null&&e.tag===22||t.stateNode!==null||(t.stateNode={_visibility:1,_pendingMarkers:null,_retryCache:null,_transitions:null}),t.sibling}function Uc(e,t,n,r,i){var a=Qa();return a=a===null?null:{parent:P._currentValue,pool:a},t.memoizedState={baseLanes:n,cachePool:a},e!==null&&$a(t,null),Fo(),Vo(t),e!==null&&ka(e,t,r,!0),t.childLanes=i,null}function Wc(e,t){return t=rl({mode:t.mode,children:t.children},e.mode),t.ref=e.ref,e.child=t,t.return=e,t}function Gc(e,t,n){return vo(t,e.child,null,n),e=Wc(t,t.pendingProps),e.flags|=2,Uo(t),t.memoizedState=null,e}function Kc(e,t,n){var r=t.pendingProps,a=!!(t.flags&128);if(t.flags&=-129,e===null){if(N){if(r.mode===`hidden`)return e=Wc(t,r),t.lanes=536870912,e.memoizedState={baseLanes:0,cachePool:null},Hc(null,e);if(Bo(t),(e=M)?(e=am(e,pa),e=e!==null&&e.data===`&`?e:null,e!==null&&(t.memoizedState={dehydrated:e,treeContext:ra===null?null:{id:ia,overflow:aa},retryLane:536870912,hydrationErrors:null},n=qi(e),n.return=t,t.child=n,da=t,M=null)):e=null,e===null)throw ha(t);return t.lanes=536870912,null}return Wc(t,r)}var o=e.memoizedState;if(o!==null){var s=o.dehydrated;if(Bo(t),a){if(t.flags&256)t.flags&=-257,t=Gc(e,t,n);else if(t.memoizedState!==null)t.child=e.child,t.flags|=128,t=null;else throw Error(i(558))}else if(B||ka(e,t,n,!1),a=(n&e.childLanes)!==0,B||a){if(Mo.current===null){if(r=G,r!==null&&(s=Et(r,n),s!==0&&s!==o.retryLane))throw o.retryLane=s,Fi(e,s),Pd(r,e,s),Ic;Kd()}t=Gc(e,t,n)}else e=o.treeContext,M=lm(s.nextSibling),da=t,N=!0,fa=null,pa=!1,e!==null&&ua(t,e),t=Wc(t,r),t.flags|=134221824;return t}return e=Hi(e.child,{mode:r.mode,children:r.children}),e.ref=t.ref,t.child=e,e.return=t,e}function qc(e,t){var n=t.ref;if(n===null)e!==null&&e.ref!==null&&(t.flags|=4194816);else{if(typeof n!=`function`&&typeof n!=`object`)throw Error(i(284));(e===null||e.ref!==n)&&(t.flags|=4194816)}}function Jc(e,t,n,r,i){return ja(t),n=rs(e,t,n,r,void 0,i),r=ss(),e!==null&&!B?(cs(e,t,i),fl(e,t,i)):(N&&r&&ca(t),t.flags|=1,Lc(e,t,n,i),t.child)}function Yc(e,t,n,r,i,a){return ja(t),t.updateQueue=null,n=as(t,r,n,i),is(e),r=ss(),e!==null&&!B?(cs(e,t,a),fl(e,t,a)):(N&&r&&ca(t),t.flags|=1,Lc(e,t,n,a),t.child)}function Xc(e,t,n,r,i){if(ja(t),t.stateNode===null){var a=Ri,o=n.contextType;typeof o==`object`&&o&&(a=Ma(o)),a=new n(r,a),t.memoizedState=a.state!==null&&a.state!==void 0?a.state:null,a.updater=Cc,t.stateNode=a,a._reactInternals=t,a=t.stateNode,a.props=r,a.state=t.memoizedState,a.refs={},xo(t),o=n.contextType,a.context=typeof o==`object`&&o?Ma(o):Ri,a.state=t.memoizedState,o=n.getDerivedStateFromProps,typeof o==`function`&&(Sc(t,n,o,r),a.state=t.memoizedState),typeof n.getDerivedStateFromProps==`function`||typeof a.getSnapshotBeforeUpdate==`function`||typeof a.UNSAFE_componentWillMount!=`function`&&typeof a.componentWillMount!=`function`||(o=a.state,typeof a.componentWillMount==`function`&&a.componentWillMount(),typeof a.UNSAFE_componentWillMount==`function`&&a.UNSAFE_componentWillMount(),o!==a.state&&Cc.enqueueReplaceState(a,a.state,null),ko(t,r,a,i),Oo(),a.state=t.memoizedState),typeof a.componentDidMount==`function`&&(t.flags|=4194308),r=!0}else if(e===null){a=t.stateNode;var s=t.memoizedProps,c=Ec(n,s);a.props=c;var l=a.context,u=n.contextType;o=Ri,typeof u==`object`&&u&&(o=Ma(u));var d=n.getDerivedStateFromProps;u=typeof d==`function`||typeof a.getSnapshotBeforeUpdate==`function`,s=t.pendingProps!==s,u||typeof a.UNSAFE_componentWillReceiveProps!=`function`&&typeof a.componentWillReceiveProps!=`function`||(s||l!==o)&&Tc(t,a,r,o),bo=!1;var f=t.memoizedState;a.state=f,ko(t,r,a,i),Oo(),l=t.memoizedState,s||f!==l||bo?(typeof d==`function`&&(Sc(t,n,d,r),l=t.memoizedState),(c=bo||wc(t,n,c,r,f,l,o))?(u||typeof a.UNSAFE_componentWillMount!=`function`&&typeof a.componentWillMount!=`function`||(typeof a.componentWillMount==`function`&&a.componentWillMount(),typeof a.UNSAFE_componentWillMount==`function`&&a.UNSAFE_componentWillMount()),typeof a.componentDidMount==`function`&&(t.flags|=4194308)):(typeof a.componentDidMount==`function`&&(t.flags|=4194308),t.memoizedProps=r,t.memoizedState=l),a.props=r,a.state=l,a.context=o,r=c):(typeof a.componentDidMount==`function`&&(t.flags|=4194308),r=!1)}else{a=t.stateNode,So(e,t),o=t.memoizedProps,u=Ec(n,o),a.props=u,d=t.pendingProps,f=a.context,l=n.contextType,c=Ri,typeof l==`object`&&l&&(c=Ma(l)),s=n.getDerivedStateFromProps,(l=typeof s==`function`||typeof a.getSnapshotBeforeUpdate==`function`)||typeof a.UNSAFE_componentWillReceiveProps!=`function`&&typeof a.componentWillReceiveProps!=`function`||(o!==d||f!==c)&&Tc(t,a,r,c),bo=!1,f=t.memoizedState,a.state=f,ko(t,r,a,i),Oo();var p=t.memoizedState;o!==d||f!==p||bo||e!==null&&e.dependencies!==null&&Aa(e.dependencies)?(typeof s==`function`&&(Sc(t,n,s,r),p=t.memoizedState),(u=bo||wc(t,n,u,r,f,p,c)||e!==null&&e.dependencies!==null&&Aa(e.dependencies))?(l||typeof a.UNSAFE_componentWillUpdate!=`function`&&typeof a.componentWillUpdate!=`function`||(typeof a.componentWillUpdate==`function`&&a.componentWillUpdate(r,p,c),typeof a.UNSAFE_componentWillUpdate==`function`&&a.UNSAFE_componentWillUpdate(r,p,c)),typeof a.componentDidUpdate==`function`&&(t.flags|=4),typeof a.getSnapshotBeforeUpdate==`function`&&(t.flags|=1024)):(typeof a.componentDidUpdate!=`function`||o===e.memoizedProps&&f===e.memoizedState||(t.flags|=4),typeof a.getSnapshotBeforeUpdate!=`function`||o===e.memoizedProps&&f===e.memoizedState||(t.flags|=1024),t.memoizedProps=r,t.memoizedState=p),a.props=r,a.state=p,a.context=c,r=u):(typeof a.componentDidUpdate!=`function`||o===e.memoizedProps&&f===e.memoizedState||(t.flags|=4),typeof a.getSnapshotBeforeUpdate!=`function`||o===e.memoizedProps&&f===e.memoizedState||(t.flags|=1024),r=!1)}return a=r,qc(e,t),r=!!(t.flags&128),a||r?(a=t.stateNode,n=r&&typeof n.getDerivedStateFromError!=`function`?null:a.render(),t.flags|=1,e!==null&&r?(t.child=vo(t,e.child,null,i),t.child=vo(t,null,n,i)):Lc(e,t,n,i),t.memoizedState=a.state,e=t.child):e=fl(e,t,i),e}function Zc(e,t,n,r){return ya(),t.flags|=256,Lc(e,t,n,r),t.child}var Qc={dehydrated:null,treeContext:null,retryLane:0,hydrationErrors:null};function $c(e){return{baseLanes:e,cachePool:eo()}}function el(e,t,n){return e=e===null?0:e.childLanes&~n,t&&(e|=ud),e}function tl(e,t,n){var r=t.pendingProps,i=!1,a=!!(t.flags&128),o;if((o=a)||(o=e!==null&&e.memoizedState===null?!1:!!(Wo.current&2)),o&&(i=!0,t.flags&=-129),o=!!(t.flags&32),t.flags&=-33,e===null){if(N){if(i?zo(t):Ho(),(e=M)?(e=am(e,pa),e=e!==null&&e.data!==`&`?e:null,e!==null&&(t.memoizedState={dehydrated:e,treeContext:ra===null?null:{id:ia,overflow:aa},retryLane:536870912,hydrationErrors:null},n=qi(e),n.return=t,t.child=n,da=t,M=null)):e=null,e===null)throw ha(t);return t.lanes=sm(e)?32:536870912,null}return a=r.children,r=r.fallback,i?(Ho(),i=t.mode,a=rl({mode:`hidden`,children:a},i),r=Gi(r,i,n,null),a.return=t,r.return=t,a.sibling=r,t.child=a,r=t.child,r.memoizedState=$c(n),r.childLanes=el(e,o,n),t.memoizedState=Qc,Hc(null,r)):(zo(t),nl(t,a))}var s=e.memoizedState;if(s!==null){var c=s.dehydrated;if(c!==null)return al(e,t,a,o,r,c,s,n)}return i?(Ho(),i=r.fallback,a=t.mode,s=e.child,c=s.sibling,r=Hi(s,{mode:`hidden`,children:r.children}),r.subtreeFlags=s.subtreeFlags&1206910976,c===null?(i=Gi(i,a,n,null),i.flags|=2):i=Hi(c,i),i.return=t,r.return=t,r.sibling=i,t.child=r,Hc(null,r),r=t.child,i=e.child.memoizedState,i===null?i=$c(n):(a=i.cachePool,a===null?a=eo():(s=P._currentValue,a=a.parent===s?a:{parent:s,pool:s}),i={baseLanes:i.baseLanes|n,cachePool:a}),r.memoizedState=i,r.childLanes=el(e,o,n),t.memoizedState=Qc,Hc(e.child,r)):(zo(t),n=e.child,e=n.sibling,n=Hi(n,{mode:`visible`,children:r.children}),n.return=t,n.sibling=null,e!==null&&(o=t.deletions,o===null?(t.deletions=[e],t.flags|=16):o.push(e)),t.child=n,t.memoizedState=null,n)}function nl(e,t){return t=rl({mode:`visible`,children:t},e.mode),t.return=e,e.child=t}function rl(e,t){return e=Bi(22,e,null,t),e.lanes=0,e}function il(e,t,n){return vo(t,e.child,null,n),e=nl(t,t.pendingProps.children),e.flags|=2,t.memoizedState=null,e}function al(e,t,n,r,a,o,s,c){if(n)return t.flags&256?(zo(t),t.flags&=-257,il(e,t,c)):t.memoizedState===null?(Ho(),o=a.fallback,s=t.mode,a=rl({mode:`visible`,children:a.children},s),o=Gi(o,s,c,null),o.flags|=2,a.return=t,o.return=t,a.sibling=o,t.child=a,vo(t,e.child,null,c),a=t.child,a.memoizedState=$c(c),a.childLanes=el(e,r,c),t.memoizedState=Qc,Hc(null,a)):(Ho(),t.child=e.child,t.flags|=128,null);if(zo(t),sm(o)){if(r=o.nextSibling&&o.nextSibling.dataset,r)var l=r.dgst;return r=l,r!==``&&(a=Error(i(419)),a.stack=``,a.digest=r,xa({value:a,source:null,stack:null})),il(e,t,c)}if(B||ka(e,t,c,!1),r=(c&e.childLanes)!==0,B||r){if(Mo.current!==null)return il(e,t,c);if(r=G,r!==null&&(a=Et(r,c),a!==0&&a!==s.retryLane))throw s.retryLane=a,Fi(e,a),Pd(r,e,a),Ic;return om(o)||Kd(),il(e,t,c)}return om(o)?(t.flags|=192,t.child=e.child,null):(e=s.treeContext,M=lm(o.nextSibling),da=t,N=!0,fa=null,pa=!1,e!==null&&ua(t,e),t=nl(t,a.children),t.flags|=134221824,t)}function ol(e,t,n){e.lanes|=t;var r=e.alternate;r!==null&&(r.lanes|=t),Da(e.return,t,n)}function sl(e){for(var t=null;e!==null;){var n=e.alternate;n!==null&&qo(n)===null&&(t=e),e=e.sibling}return t}function cl(e,t,n,r,i,a){var o=e.memoizedState;o===null?e.memoizedState={isBackwards:t,rendering:null,renderingStartTime:0,last:r,tail:n,tailMode:i,treeForkCount:a}:(o.isBackwards=t,o.rendering=null,o.renderingStartTime=0,o.last=r,o.tail=n,o.tailMode=i,o.treeForkCount=a)}function ll(e){var t=e.child;for(e.child=null;t!==null;){var n=t.sibling;t.sibling=e.child,e.child=t,t=n}}function ul(e,t,n){var r=t.pendingProps,i=r.revealOrder,a=r.tail;r=r.children;var o=Wo.current;if(t.flags&128)return Go(t,o),null;var s=!!(o&2);if(s?(o=o&1|2,t.flags|=128):o&=1,Go(t,o),i===`backwards`&&e!==null?(ll(e),Lc(e,t,r,n),ll(e)):Lc(e,t,r,n),r=N?ea:0,!s&&e!==null&&e.flags&128)a:for(e=t.child;e!==null;){if(e.tag===13)e.memoizedState!==null&&ol(e,n,t);else if(e.tag===19)ol(e,n,t);else if(e.child!==null){e.child.return=e,e=e.child;continue}if(e===t)break a;for(;e.sibling===null;){if(e.return===null||e.return===t)break a;e=e.return}e.sibling.return=e.return,e=e.sibling}switch(i){case`backwards`:n=sl(t.child),n===null?(i=t.child,t.child=null):(i=n.sibling,n.sibling=null,ll(t)),cl(t,!0,i,null,a,r);break;case`unstable_legacy-backwards`:for(n=null,i=t.child,t.child=null;i!==null;){if(e=i.alternate,e!==null&&qo(e)===null){t.child=i;break}e=i.sibling,i.sibling=n,n=i,i=e}cl(t,!0,n,null,a,r);break;case`together`:cl(t,!1,null,null,void 0,r);break;case`independent`:t.memoizedState=null;break;default:n=sl(t.child),n===null?(i=t.child,t.child=null):(i=n.sibling,n.sibling=null),cl(t,!1,i,n,a,r)}return t.child}function dl(e,t,n){var r=t.pendingProps;return Ta(t,t.type,r.value),Lc(e,t,r.children,n),t.child}function fl(e,t,n){if(e!==null&&(t.dependencies=e.dependencies),sd|=t.lanes,(n&t.childLanes)===0){if(e!==null){if(ka(e,t,n,!1),(n&t.childLanes)===0)return null}else return null}if(e!==null&&t.child!==e.child)throw Error(i(153));if(t.child!==null){for(e=t.child,n=Hi(e,e.pendingProps),t.child=n,n.return=t;e.sibling!==null;)e=e.sibling,n=n.sibling=Hi(e,e.pendingProps),n.return=t;n.sibling=null}return t.child}function pl(e,t){return(e.lanes&t)!==0||(e=e.dependencies,!!(e!==null&&Aa(e)))}function ml(e,t,n){switch(t.tag){case 3:Pe(t,t.stateNode.containerInfo),Ta(t,P,e.memoizedState.cache),ya();break;case 27:case 5:Ie(t);break;case 4:Pe(t,t.stateNode.containerInfo);break;case 10:Ta(t,t.type,t.memoizedProps.value);break;case 31:if(t.memoizedState!==null)return t.flags|=128,Bo(t),null;break;case 13:var r=t.memoizedState;if(r!==null){if(r.dehydrated!==null)return zo(t),t.flags|=128,null;r=ka(e,t,n,!1);var i=t.child.childLanes;return r||(n&i)!==0?tl(e,t,n):(zo(t),e=fl(e,t,n),e===null?null:e.sibling)}zo(t);break;case 19:if(t.flags&128)return ul(e,t,n);if(i=!!(e.flags&128),r=(n&t.childLanes)!==0,r||=(ka(e,t,n,!1),(n&t.childLanes)!==0),i){if(r)return ul(e,t,n);t.flags|=128}if(i=t.memoizedState,i!==null&&(i.rendering=null,i.tail=null,i.lastEffect=null),Go(t,Wo.current),r)break;return null;case 22:return t.lanes=0,Vc(e,t,n,t.pendingProps);case 24:Ta(t,P,e.memoizedState.cache)}return fl(e,t,n)}function hl(e,t,n){if(e!==null){if(e.memoizedProps!==t.pendingProps)B=!0;else{if(!pl(e,n)&&!(t.flags&128))return B=!1,ml(e,t,n);B=!!(e.flags&131072)}}else B=!1,N&&t.flags&1048576&&sa(t,ea,t.index);switch(t.lanes=0,t.tag){case 16:a:{var r=t.pendingProps;if(e=so(t.elementType),t.type=e,typeof e==`function`)Vi(e)?(r=Ec(e,r),t.tag=1,t=Xc(null,t,e,r,n)):(t.tag=0,t=Jc(null,t,e,r,n));else{if(e!=null){var a=e.$$typeof;if(a===de){t.tag=11,t=Rc(null,t,e,r,n);break a}if(a===me){t.tag=14,t=zc(null,t,e,r,n);break a}if(a===ue){t.tag=10,t.type=e,t=dl(null,t,n);break a}}throw t=we(e)||e,Error(i(306,t,``))}}return t;case 0:return Jc(e,t,t.type,t.pendingProps,n);case 1:return r=t.type,a=Ec(r,t.pendingProps),Xc(e,t,r,a,n);case 3:a:{if(Pe(t,t.stateNode.containerInfo),e===null)throw Error(i(387));r=t.pendingProps;var o=t.memoizedState;a=o.element,So(e,t),ko(t,r,null,n);var s=t.memoizedState;if(r=s.cache,Ta(t,P,r),r!==o.cache&&Oa(t,[P],n,!0),Oo(),r=s.element,o.isDehydrated){if(o={element:r,isDehydrated:!1,cache:s.cache},t.updateQueue.baseState=o,t.memoizedState=o,t.flags&256){t=Zc(e,t,r,n);break a}if(r!==a){a=Xi(Error(i(424)),t),xa(a),t=Zc(e,t,r,n);break a}switch(e=t.stateNode.containerInfo,e.nodeType){case 9:e=e.body;break;default:e=e.nodeName===`HTML`?e.ownerDocument.body:e}for(M=lm(e.firstChild),da=t,N=!0,fa=null,pa=!0,n=yo(t,null,r,n),t.child=n;n;)n.flags=n.flags&-3|134221824,n=n.sibling}else{if(ya(),r===a){t=fl(e,t,n);break a}Lc(e,t,r,n)}t=t.child}return t;case 26:return qc(e,t),e===null?(n=Nm(t.type,null,t.pendingProps,null))?t.memoizedState=n:N||(t.stateNode=fp(t.type,t.pendingProps,Me.current,t)):t.memoizedState=Nm(t.type,e.memoizedProps,t.pendingProps,e.memoizedState),null;case 27:return Ie(t),e===null&&N&&(r=t.stateNode=hm(t.type,t.pendingProps,Me.current),da=t,pa=!0,a=M,Sp(t.type)?(um=a,M=lm(r.firstChild)):M=a),Lc(e,t,t.pendingProps.children,n),qc(e,t),e===null&&(t.flags|=4194304),t.child;case 5:return e===null&&N&&((a=r=M)&&(r=rm(r,t.type,t.pendingProps,pa),r===null?a=!1:(t.stateNode=r,da=t,M=lm(r.firstChild),pa=!1,a=!0)),a||ha(t)),Ie(t),a=t.type,o=t.pendingProps,s=e===null?null:e.memoizedProps,r=o.children,pp(a,o)?r=null:s!==null&&pp(a,s)&&(t.flags|=32),t.memoizedState!==null&&(a=rs(e,t,os,null,null,n),sh._currentValue=a),qc(e,t),Lc(e,t,r,n),t.child;case 6:return e===null&&N&&((e=n=M)&&(n=im(n,t.pendingProps,pa),n===null?e=!1:(t.stateNode=n,da=t,M=null,e=!0)),e||ha(t)),null;case 13:return tl(e,t,n);case 4:return Pe(t,t.stateNode.containerInfo),r=t.pendingProps,e===null?t.child=vo(t,null,r,n):Lc(e,t,r,n),t.child;case 11:return Rc(e,t,t.type,t.pendingProps,n);case 7:return r=t.pendingProps,qc(e,t),Lc(e,t,r,n),t.child;case 8:return Lc(e,t,t.pendingProps.children,n),t.child;case 12:return Lc(e,t,t.pendingProps.children,n),t.child;case 10:return dl(e,t,n);case 9:return a=t.type._context,r=t.pendingProps.children,ja(t),a=Ma(a),r=r(a),t.flags|=1,Lc(e,t,r,n),t.child;case 14:return zc(e,t,t.type,t.pendingProps,n);case 15:return Bc(e,t,t.type,t.pendingProps,n);case 19:return ul(e,t,n);case 31:return Kc(e,t,n);case 22:return Vc(e,t,n,t.pendingProps);case 24:return ja(t),r=Ma(P),e===null?(a=Qa(),a===null&&(a=G,o=Ra(),a.pooledCache=o,o.refCount++,o!==null&&(a.pooledCacheLanes|=n),a=o),t.memoizedState={parent:r,cache:a},xo(t),Ta(t,P,a)):((e.lanes&n)!==0&&(So(e,t),ko(t,null,null,n),Oo()),a=e.memoizedState,o=t.memoizedState,a.parent===r?(r=o.cache,Ta(t,P,r),r!==a.cache&&Oa(t,[P],n,!0)):(a={parent:r,cache:r},t.memoizedState=a,t.lanes===0&&(t.memoizedState=t.updateQueue.baseState=a),Ta(t,P,r))),Lc(e,t,t.pendingProps.children,n),t.child;case 30:return t.stateNode===null&&(t.stateNode={autoName:null,paired:null,clones:null,ref:null}),r=t.pendingProps,r.name!=null&&r.name!==`auto`?t.flags|=e===null?18882560:18874368:N&&ca(t),e!==null&&e.memoizedProps.name!==r.name?t.flags|=4194816:qc(e,t),Lc(e,t,r.children,n),t.child;case 29:throw t.pendingProps}throw Error(i(156,t.tag))}function gl(e){e.flags|=4}function _l(e,t,n,r,i){var a;if((a=!!(e.mode&32))&&(a=n===null?Jm(t,r):Jm(t,r)&&(r.src!==n.src||r.srcSet!==n.srcSet)),a){if(e.flags|=16777216,(i&335544128)===i){if(e.stateNode.complete)e.flags|=8192;else if(Ud())e.flags|=8192;else throw co=io,no}}else e.flags&=-16777217}function vl(e,t){if(t.type!==`stylesheet`||t.state.loading&4)e.flags&=-16777217;else if(e.flags|=16777216,!Ym(t)){if(Ud())e.flags|=8192;else throw co=io,no}}function yl(e,t){t!==null&&(e.flags|=4),e.flags&16384&&(t=e.tag===22?536870912:bt(),e.lanes|=t,dd|=t)}function bl(e,t){if(!N)switch(e.tailMode){case`visible`:break;case`collapsed`:for(var n=e.tail,r=null;n!==null;)n.alternate!==null&&(r=n),n=n.sibling;r===null?t||e.tail===null?e.tail=null:e.tail.sibling=null:r.sibling=null;break;default:for(t=e.tail,n=null;t!==null;)t.alternate!==null&&(n=t),t=t.sibling;n===null?e.tail=null:n.sibling=null}}function V(e){var t=e.alternate!==null&&e.alternate.child===e.child,n=0,r=0;if(t)for(var i=e.child;i!==null;)n|=i.lanes|i.childLanes,r|=i.subtreeFlags&1206910976,r|=i.flags&1206910976,i.return=e,i=i.sibling;else for(i=e.child;i!==null;)n|=i.lanes|i.childLanes,r|=i.subtreeFlags,r|=i.flags,i.return=e,i=i.sibling;return e.subtreeFlags|=r,e.childLanes=n,t}function xl(e,t,n){var r=t.pendingProps;switch(la(t),t.tag){case 16:case 15:case 0:case 11:case 7:case 8:case 12:case 9:case 14:return V(t),null;case 1:return V(t),null;case 3:return n=t.stateNode,r=null,e!==null&&(r=e.memoizedState.cache),t.memoizedState.cache!==r&&(t.flags|=2048),Ea(P),Fe(),n.pendingContext&&(n.context=n.pendingContext,n.pendingContext=null),(e===null||e.child===null)&&(va(t)?gl(t):e===null||e.memoizedState.isDehydrated&&!(t.flags&256)||(t.flags|=1024,ba())),V(t),null;case 26:var a=t.type,o=t.memoizedState;return e===null?(gl(t),o===null?(V(t),_l(t,a,null,r,n)):(V(t),vl(t,o))):o?o===e.memoizedState?(V(t),t.flags&=-16777217):(gl(t),V(t),vl(t,o)):(e=e.memoizedProps,e!==r&&gl(t),V(t),_l(t,a,e,r,n)),null;case 27:if(Le(t),n=Me.current,a=t.type,e!==null&&t.stateNode!=null)e.memoizedProps!==r&&gl(t);else{if(!r){if(t.stateNode===null)throw Error(i(166));return V(t),t.subtreeFlags&=-33554433,null}e=Ae.current,va(t)?ga(t,e):(e=hm(a,r,n),t.stateNode=e,gl(t))}return V(t),t.subtreeFlags&=-33554433,null;case 5:if(Le(t),a=t.type,e!==null&&t.stateNode!=null)e.memoizedProps!==r&&gl(t);else{if(!r){if(t.stateNode===null)throw Error(i(166));return V(t),t.subtreeFlags&=-33554433,null}if(o=Ae.current,va(t))ga(t,o);else{var s=lp(Me.current);switch(o){case 1:o=s.createElementNS(`http://www.w3.org/2000/svg`,a);break;case 2:o=s.createElementNS(`http://www.w3.org/1998/Math/MathML`,a);break;default:switch(a){case`svg`:o=s.createElementNS(`http://www.w3.org/2000/svg`,a);break;case`math`:o=s.createElementNS(`http://www.w3.org/1998/Math/MathML`,a);break;case`script`:o=s.createElement(`div`),o.innerHTML=`<script><\/script>`,o=o.removeChild(o.firstChild);break;case`select`:o=typeof r.is==`string`?s.createElement(`select`,{is:r.is}):s.createElement(`select`),r.multiple?o.multiple=!0:r.size&&(o.size=r.size);break;default:o=typeof r.is==`string`?s.createElement(a,{is:r.is}):s.createElement(a)}}o[Mt]=t,o[Nt]=r;a:for(s=t.child;s!==null;){if(s.tag===5||s.tag===6)o.appendChild(s.stateNode);else if(s.tag!==4&&s.tag!==27&&s.child!==null){s.child.return=s,s=s.child;continue}if(s===t)break a;for(;s.sibling===null;){if(s.return===null||s.return===t)break a;s=s.return}s.sibling.return=s.return,s=s.sibling}t.stateNode=o;a:switch(np(o,a,r),a){case`button`:case`input`:case`select`:case`textarea`:r=!!r.autoFocus;break a;case`img`:r=!0;break a;default:r=!1}r&&gl(t)}}return V(t),t.subtreeFlags&=-33554433,_l(t,t.type,e===null?null:e.memoizedProps,t.pendingProps,n),null;case 6:if(e&&t.stateNode!=null)e.memoizedProps!==r&&gl(t);else{if(typeof r!=`string`&&t.stateNode===null)throw Error(i(166));if(e=Me.current,va(t)){if(e=t.stateNode,n=t.memoizedProps,r=null,a=da,a!==null)switch(a.tag){case 27:case 5:r=a.memoizedProps}e[Mt]=t,e=!!(e.nodeValue===n||r!==null&&!0===r.suppressHydrationWarning||ep(e.nodeValue,n)),e||ha(t,!0)}else e=lp(e).createTextNode(r),e[Mt]=t,t.stateNode=e}return V(t),null;case 31:if(n=t.memoizedState,e===null||e.memoizedState!==null){if(r=va(t),n!==null){if(e===null){if(!r)throw Error(i(318));if(e=t.memoizedState,e=e===null?null:e.dehydrated,!e)throw Error(i(557));e[Mt]=t}else ya(),!(t.flags&128)&&(t.memoizedState=null),t.flags|=4;V(t),e=!1}else n=ba(),e!==null&&e.memoizedState!==null&&(e.memoizedState.hydrationErrors=n),e=!0;if(!e)return t.flags&256?(Uo(t),t):(Uo(t),null);if(t.flags&128)throw Error(i(558))}return V(t),null;case 13:if(r=t.memoizedState,e===null||e.memoizedState!==null&&e.memoizedState.dehydrated!==null){if(a=va(t),r!==null&&r.dehydrated!==null){if(e===null){if(!a)throw Error(i(318));if(a=t.memoizedState,a=a===null?null:a.dehydrated,!a)throw Error(i(317));a[Mt]=t}else ya(),!(t.flags&128)&&(t.memoizedState=null),t.flags|=4;V(t),a=!1}else a=ba(),e!==null&&e.memoizedState!==null&&(e.memoizedState.hydrationErrors=a),a=!0;if(!a)return t.flags&256?(Uo(t),t):(Uo(t),null)}return Uo(t),t.flags&128?(t.lanes=n,t):(n=r!==null,e=e!==null&&e.memoizedState!==null,n&&(r=t.child,a=null,r.alternate!==null&&r.alternate.memoizedState!==null&&r.alternate.memoizedState.cachePool!==null&&(a=r.alternate.memoizedState.cachePool.pool),o=null,r.memoizedState!==null&&r.memoizedState.cachePool!==null&&(o=r.memoizedState.cachePool.pool),o!==a&&(r.flags|=2048)),n!==e&&n&&(t.child.flags|=8192),yl(t,t.updateQueue),V(t),null);case 4:return Fe(),e===null&&Wf(t.stateNode.containerInfo),t.flags|=67108864,V(t),null;case 10:return Ea(t.type),V(t),null;case 19:if(Ko(t),r=t.memoizedState,r===null)return V(t),null;if(a=!!(t.flags&128),o=r.rendering,o===null){if(a)bl(r,!1);else{if(Y!==0||e!==null&&e.flags&128)for(e=t.child;e!==null;){if(o=qo(e),o!==null){for(t.flags|=128,bl(r,!1),e=o.updateQueue,t.updateQueue=e,yl(t,e),t.subtreeFlags=0,e=n,n=t.child;n!==null;)Ui(n,e),n=n.sibling;return Go(t,Wo.current&1|2),N&&oa(t,r.treeForkCount),t.child}e=e.sibling}r.tail!==null&&Xe()>_d&&(t.flags|=128,a=!0,bl(r,!1),t.lanes=4194304)}}else{if(!a){if(e=qo(o),e!==null){if(t.flags|=128,a=!0,e=e.updateQueue,t.updateQueue=e,yl(t,e),bl(r,!0),r.tail===null&&r.tailMode!==`collapsed`&&r.tailMode!==`visible`&&!o.alternate&&!N)return V(t),null}else 2*Xe()-r.renderingStartTime>_d&&n!==536870912&&(t.flags|=128,a=!0,bl(r,!1),t.lanes=4194304)}r.isBackwards?(o.sibling=t.child,t.child=o):(e=r.last,e===null?t.child=o:e.sibling=o,r.last=o)}if(r.tail!==null){e=r.tail;a:{for(n=e;n!==null;){if(n.alternate!==null){n=!1;break a}n=n.sibling}n=!0}return r.rendering=e,r.tail=e.sibling,r.renderingStartTime=Xe(),e.sibling=null,o=Wo.current,o=a?o&1|2:o&1,r.tailMode===`visible`||r.tailMode===`collapsed`||!n||N?Go(t,o):(n=o,O(Lo,t),O(Wo,n),Ro===null&&(Ro=t)),N&&oa(t,r.treeForkCount),e}return V(t),null;case 22:case 23:return Uo(t),Io(),r=t.memoizedState!==null,e===null?r&&(t.flags|=8192):e.memoizedState!==null!==r&&(t.flags|=8192),r?n&536870912&&!(t.flags&128)&&(V(t),t.subtreeFlags&6&&(t.flags|=8192)):V(t),n=t.updateQueue,n!==null&&yl(t,n.retryQueue),n=null,e!==null&&e.memoizedState!==null&&e.memoizedState.cachePool!==null&&(n=e.memoizedState.cachePool.pool),r=null,t.memoizedState!==null&&t.memoizedState.cachePool!==null&&(r=t.memoizedState.cachePool.pool),r!==n&&(t.flags|=2048),e!==null&&D(Za),null;case 24:return n=null,e!==null&&(n=e.memoizedState.cache),t.memoizedState.cache!==n&&(t.flags|=2048),Ea(P),V(t),null;case 25:return null;case 30:return t.flags|=33554432,V(t),null}throw Error(i(156,t.tag))}function Sl(e,t){switch(la(t),t.tag){case 1:return e=t.flags,e&65536?(t.flags=e&-65537|128,t):null;case 3:return Ea(P),Fe(),e=t.flags,e&65536&&!(e&128)?(t.flags=e&-65537|128,t):null;case 26:case 27:case 5:return Le(t),null;case 31:if(t.memoizedState!==null){if(Uo(t),t.alternate===null)throw Error(i(340));ya()}return e=t.flags,e&65536?(t.flags=e&-65537|128,t):null;case 13:if(Uo(t),e=t.memoizedState,e!==null&&e.dehydrated!==null){if(t.alternate===null)throw Error(i(340));ya()}return e=t.flags,e&65536?(t.flags=e&-65537|128,t):null;case 19:return Ko(t),e=t.flags,e&65536?(t.flags=e&-65537|128,e=t.memoizedState,e!==null&&(e.rendering=null,e.tail=null),t.flags|=4,t):null;case 4:return Fe(),null;case 10:return Ea(t.type),null;case 22:case 23:return Uo(t),Io(),e!==null&&D(Za),e=t.flags,e&65536?(t.flags=e&-65537|128,t):null;case 24:return Ea(P),null;case 25:return null;default:return null}}function Cl(e,t){switch(la(t),t.tag){case 3:Ea(P),Fe();break;case 26:case 27:case 5:Le(t);break;case 4:Fe();break;case 31:t.memoizedState!==null&&Uo(t);break;case 13:Uo(t);break;case 19:Ko(t);break;case 10:Ea(t.type);break;case 22:case 23:Uo(t),Io(),e!==null&&D(Za);break;case 24:Ea(P)}}function wl(e,t){try{var n=t.updateQueue,r=n===null?null:n.lastEffect;if(r!==null){var i=r.next;n=i;do{if((n.tag&e)===e){r=void 0;var a=n.create,o=n.inst;r=a(),o.destroy=r}n=n.next}while(n!==i)}}catch(e){Z(t,t.return,e)}}function Tl(e,t,n){try{var r=t.updateQueue,i=r===null?null:r.lastEffect;if(i!==null){var a=i.next;r=a;do{if((r.tag&e)===e){var o=r.inst,s=o.destroy;if(s!==void 0){o.destroy=void 0,i=t;var c=n,l=s;try{l()}catch(e){Z(i,c,e)}}}r=r.next}while(r!==a)}}catch(e){Z(t,t.return,e)}}function El(e){var t=e.updateQueue;if(t!==null){var n=e.stateNode;try{jo(t,n)}catch(t){Z(e,e.return,t)}}}function Dl(e,t,n){n.props=Ec(e.type,e.memoizedProps),n.state=e.memoizedState;try{n.componentWillUnmount()}catch(n){Z(e,t,n)}}function Ol(e,t){try{var n=e.ref;if(n!==null){switch(e.tag){case 26:case 27:case 5:var r=e.stateNode;break;case 30:var i=e.stateNode,a=Ti(e.memoizedProps,i);(i.ref===null||i.ref.name!==a)&&(i.ref=Pp(a)),r=i.ref;break;case 7:if(e.stateNode===null){var o=new Fp(e);h(e.child,!1,Qp,o,void 0,void 0),e.stateNode=o}r=e.stateNode;break;default:r=e.stateNode}typeof n==`function`?e.refCleanup=n(r):n.current=r}}catch(n){Z(e,t,n)}}function kl(e,t){var n=e.ref,r=e.refCleanup;if(n!==null){if(typeof r==`function`)try{r()}catch(n){Z(e,t,n)}finally{e.refCleanup=null,e=e.alternate,e!=null&&(e.refCleanup=null)}else if(typeof n==`function`)try{n(null)}catch(n){Z(e,t,n)}else n.current=null}}function Al(e,t){if((e.tag===5||e.tag===27||e.tag===6)&&e.alternate===null&&t!==null)for(var n=0;n<t.length;n++)em(e.stateNode,t[n])}function jl(e){for(var t=e.return;t!==null&&(Pl(t)&&em(e.stateNode,t.stateNode),!Nl(t));)t=t.return}function Ml(e){for(var t=e.return;t!==null&&(Pl(t)&&tm(e.stateNode,t.stateNode),!Nl(t));)t=t.return}function Nl(e){return e.tag===5||e.tag===3||e.tag===27}function Pl(e){return e&&e.tag===7&&e.stateNode!==null}function Fl(e){var t=e.type,n=e.memoizedProps,r=e.stateNode;try{a:switch(t){case`button`:case`input`:case`select`:case`textarea`:n.autoFocus&&r.focus();break a;case`img`:n.src?r.src=n.src:n.srcSet&&(r.srcset=n.srcSet)}}catch(t){Z(e,e.return,t)}}function Il(e,t,n){try{var r=e.stateNode;ip(r,e.type,n,t),r[Nt]=t}catch(t){Z(e,e.return,t)}}function Ll(e){return e.tag===5||e.tag===3||e.tag===26||e.tag===27&&Sp(e.type)||e.tag===4}function Rl(e){a:for(;;){for(;e.sibling===null;){if(e.return===null||Ll(e.return))return null;e=e.return}for(e.sibling.return=e.return,e=e.sibling;e.tag!==5&&e.tag!==6&&e.tag!==18;){if(e.tag===27&&Sp(e.type)||e.flags&2||e.child===null||e.tag===4)continue a;e.child.return=e,e=e.child}if(!(e.flags&2))return e.stateNode}}function zl(e,t,n,r){var i=e.tag;if(i===5||i===6)i=e.stateNode,t?(n.nodeType===9?n.body:n.nodeName===`HTML`?n.ownerDocument.body:n).insertBefore(i,t):(t=n.nodeType===9?n.body:n.nodeName===`HTML`?n.ownerDocument.body:n,t.appendChild(i),n=n._reactRootContainer,n!=null||t.onclick!==null||(t.onclick=En)),Al(e,r),A=!0;else if(i!==4&&(i===27&&(Al(e,r),r=null,Sp(e.type)&&(n=e.stateNode,t=null)),e=e.child,e!==null))for(zl(e,t,n,r),e=e.sibling;e!==null;)zl(e,t,n,r),e=e.sibling}function Bl(e,t,n,r){var i=e.tag;if(i===5||i===6)i=e.stateNode,t?n.insertBefore(i,t):n.appendChild(i),Al(e,r),A=!0;else if(i!==4&&(i===27&&(Al(e,r),r=null,Sp(e.type)&&(n=e.stateNode)),e=e.child,e!==null))for(Bl(e,t,n,r),e=e.sibling;e!==null;)Bl(e,t,n,r),e=e.sibling}function Vl(e){var t=e.stateNode,n=e.memoizedProps;try{for(var r=e.type,i=t.attributes;i.length;)t.removeAttributeNode(i[0]);np(t,r,n),t[Mt]=e,t[Nt]=n}catch(t){Z(e,e.return,t)}}var Hl=!1,Ul=null;function Wl(e){(e.tag===30||e.subtreeFlags&33554432)&&(Hl=!0)}var Gl=null;function Kl(){var e=Gl;return Gl=null,e}var ql=0;function Jl(e,t,n,r,i){return ql=0,Yl(e.child,t,n,r,i)}function Yl(e,t,n,r,i){for(var a=!1;e!==null;){if(e.tag===5){var o=e.stateNode;if(r!==null){var s=Op(o);r.push(s),s.view&&(a=!0)}else a||Op(o).view&&(a=!0);Hl=!0,Tp(o,ql===0?t:t+`_`+ql,n),ql++}else e.tag===22&&e.memoizedState!==null||e.tag===30&&i||Yl(e.child,t,n,r,i)&&(a=!0);e=e.sibling}return a}function Xl(e,t){for(;e!==null;)e.tag===5?Ep(e.stateNode,e.memoizedProps):e.tag===22&&e.memoizedState!==null||e.tag===30&&t||Xl(e.child,t),e=e.sibling}function Zl(e){if(e.subtreeFlags&18874368)for(e=e.child;e!==null;){if((e.tag!==22||e.memoizedState===null)&&(Zl(e),e.tag===30&&e.flags&18874368&&e.stateNode.paired)){var t=e.memoizedProps;if(t.name==null||t.name===`auto`)throw Error(i(544));var n=t.name;t=Di(t.default,t.share),t!==`none`&&(Jl(e,n,t,null,!1)||Xl(e.child,!1))}e=e.sibling}}function Ql(e,t){if(e.tag===30){var n=e.stateNode,r=e.memoizedProps,i=Ti(r,n),a=Di(r.default,n.paired?r.share:r.enter);a===`none`?Zl(e):Jl(e,i,a,null,!1)?(Zl(e),n.paired||t||Nd(e,r.onEnter)):Xl(e.child,!1)}else if(e.subtreeFlags&33554432)for(e=e.child;e!==null;)Ql(e,t),e=e.sibling;else Zl(e)}function $l(e){if(Ul!==null&&Ul.size!==0){var t=Ul;if(e.subtreeFlags&18874368)for(e=e.child;e!==null;){if(e.tag!==22||e.memoizedState===null){if(e.tag===30&&e.flags&18874368){var n=e.memoizedProps,r=n.name;if(r!=null&&r!==`auto`){var i=t.get(r);if(i!==void 0){var a=Di(n.default,n.share);if(a!==`none`&&(Jl(e,r,a,null,!1)?(a=e.stateNode,i.paired=a,a.paired=i,Nd(e,n.onShare)):Xl(e.child,!1)),t.delete(r),t.size===0)break}}}$l(e)}e=e.sibling}}}function eu(e){if(e.tag===30){var t=e.memoizedProps,n=Ti(t,e.stateNode),r=Ul===null?void 0:Ul.get(n),i=Di(t.default,r===void 0?t.exit:t.share);i!==`none`&&(Jl(e,n,i,null,!1)?r===void 0?Nd(e,t.onExit):(i=e.stateNode,r.paired=i,i.paired=r,Ul.delete(n),Nd(e,t.onShare)):Xl(e.child,!1)),Ul!==null&&$l(e)}else if(e.subtreeFlags&33554432)for(e=e.child;e!==null;)eu(e),e=e.sibling;else Ul!==null&&$l(e)}function tu(e){for(e=e.child;e!==null;){if(e.tag===30){var t=e.memoizedProps,n=Ti(t,e.stateNode);t=Di(t.default,t.update),e.flags&=-5,t!==`none`&&Jl(e,n,t,e.memoizedState=[],!1)}else e.subtreeFlags&33554432&&tu(e);e=e.sibling}}function nu(e){if(e.subtreeFlags&18874368)for(e=e.child;e!==null;){if(e.tag!==22||e.memoizedState===null){if(e.tag===30&&e.flags&18874368){var t=e.stateNode;t.paired!==null&&(t.paired=null,Xl(e.child,!1))}nu(e)}e=e.sibling}}function ru(e){if(e.tag===30)e.stateNode.paired=null,Xl(e.child,!1),nu(e);else if(e.subtreeFlags&33554432)for(e=e.child;e!==null;)ru(e),e=e.sibling;else nu(e)}function iu(e){for(e=e.child;e!==null;)e.tag===30?Xl(e.child,!1):e.subtreeFlags&33554432&&iu(e),e=e.sibling}function au(e,t,n,r,i,a,o){for(var s=!1;t!==null;){if(t.tag===5){var c=t.stateNode;if(a!==null&&ql<a.length){var l=a[ql],u=Op(c);(l.view||u.view)&&(s=!0);var d;if(d=!(e.flags&4)){if(u.clip)d=!0;else{d=l.rect;var f=u.rect;d=d.y!==f.y||d.x!==f.x||d.height!==f.height||d.width!==f.width}}d&&(e.flags|=4),u.abs?u=!l.abs:(l=l.rect,u=u.rect,u=l.height!==u.height||l.width!==u.width),u&&(e.flags|=32)}else e.flags|=32;e.flags&4&&Tp(c,ql===0?n:n+`_`+ql,i),s&&e.flags&4||(Gl===null&&(Gl=[]),Gl.push(c,ql===0?r:r+`_`+ql,t.memoizedProps)),ql++}else(t.tag!==22||t.memoizedState===null)&&(t.tag===30&&o?e.flags|=t.flags&32:au(e,t.child,n,r,i,a,o)&&(s=!0));t=t.sibling}return s}function ou(e,t){for(e=e.child;e!==null;){if(e.tag===30){var n=e.memoizedProps,r=e.stateNode,i=Ti(n,r),a=Di(n.default,n.update);if(t){r=r.clones;var o=r===null?null:r.map(kp)}else o=e.memoizedState,e.memoizedState=null;r=e;var s=e.child;ql=0,i=au(r,s,i,i,a,o,!1),e.flags&4&&i&&(t||Nd(e,n.onUpdate))}else e.subtreeFlags&33554432&&ou(e,t);e=e.sibling}}var su=!1,H=!1,cu=!1,lu=!1,uu=typeof WeakSet==`function`?WeakSet:Set,du=null,fu=!1,pu=!1,mu=!1,hu=!1;function gu(e,t,n){if(e=e.containerInfo,sp=gh,e=ti(e),ni(e)){if(`selectionStart`in e)var r={start:e.selectionStart,end:e.selectionEnd};else a:{r=(r=e.ownerDocument)&&r.defaultView||window;var i=r.getSelection&&r.getSelection();if(i&&i.rangeCount!==0){r=i.anchorNode;var a=i.anchorOffset,o=i.focusNode;i=i.focusOffset;try{r.nodeType,o.nodeType}catch{r=null;break a}var s=0,c=-1,l=-1,u=0,d=0,f=e,p=null;b:for(;;){for(var m;f!==r||a!==0&&f.nodeType!==3||(c=s+a),f!==o||i!==0&&f.nodeType!==3||(l=s+i),f.nodeType===3&&(s+=f.nodeValue.length),(m=f.firstChild)!==null;)p=f,f=m;for(;;){if(f===e)break b;if(p===r&&++u===a&&(c=s),p===o&&++d===i&&(l=s),(m=f.nextSibling)!==null)break;f=p,p=f.parentNode}f=m}r=c===-1||l===-1?null:{start:c,end:l}}else r=null}r||={start:0,end:0}}else r=null;for(cp={focusedElem:e,selectionRange:r},gh=!1,n=(n&335544064)===n,du=t,t=n?9270:1024;du!==null;){if(e=du,n&&(r=e.deletions,r!==null))for(a=0;a<r.length;a++)n&&eu(r[a]);if(e.alternate===null&&e.flags&2)n&&Wl(e),_u(n);else{if(e.tag===22){if(r=e.alternate,e.memoizedState!==null){r!==null&&r.memoizedState===null&&n&&eu(r),_u(n);continue}if(r!==null&&r.memoizedState!==null){n&&Wl(e),_u(n);continue}}r=e.child,(e.subtreeFlags&t)!==0&&r!==null?(r.return=e,du=r):(n&&tu(e),_u(n))}}Ul=null}function _u(e){for(;du!==null;){var t=du,n=e,r=t.alternate,a=t.flags;switch(t.tag){case 0:case 11:case 15:break;case 1:if(a&1024&&r!==null){n=void 0,a=r.memoizedProps,r=r.memoizedState;var o=t.stateNode;try{var s=Ec(t.type,a);n=o.getSnapshotBeforeUpdate(s,r),o.__reactInternalSnapshotBeforeUpdate=n}catch(e){Z(t,t.return,e)}}break;case 3:if(a&1024){if(r=t.stateNode.containerInfo,n=r.nodeType,n===9)nm(r);else if(n===1)switch(r.nodeName){case`HEAD`:case`HTML`:case`BODY`:nm(r);break;default:r.textContent=``}}break;case 5:case 26:case 27:case 6:case 4:case 17:break;case 30:n&&r!==null&&(n=Ti(r.memoizedProps,r.stateNode),a=t.memoizedProps,a=Di(a.default,a.update),a!==`none`&&Jl(r,n,a,r.memoizedState=[],!0));break;default:if(a&1024)throw Error(i(163))}if(r=t.sibling,r!==null){r.return=t.return,du=r;break}du=t.return}}function vu(e,t,n){var r=n.flags;switch(n.tag){case 0:case 11:case 15:Lu(e,n),r&4&&wl(5,n);break;case 1:if(Lu(e,n),r&4){if(e=n.stateNode,t===null)try{e.componentDidMount()}catch(e){Z(n,n.return,e)}else{var i=Ec(n.type,t.memoizedProps);t=t.memoizedState;try{e.componentDidUpdate(i,t,e.__reactInternalSnapshotBeforeUpdate)}catch(e){Z(n,n.return,e)}}}r&64&&El(n),r&512&&Ol(n,n.return);break;case 3:if(Lu(e,n),r&64&&(e=n.updateQueue,e!==null)){if(t=null,n.child!==null)switch(n.child.tag){case 27:case 5:t=n.child.stateNode;break;case 1:t=n.child.stateNode}try{jo(e,t)}catch(e){Z(n,n.return,e)}}break;case 27:t===null&&r&4&&Vl(n);case 26:case 5:Lu(e,n),t===null&&r&4&&Fl(n),r&512&&Ol(n,n.return);break;case 12:Lu(e,n);break;case 31:Lu(e,n),r&4&&Eu(e,n);break;case 13:Lu(e,n),r&4&&Du(e,n),r&64&&(e=n.memoizedState,e!==null&&(e=e.dehydrated,e!==null&&(n=_f.bind(null,n),cm(e,n))));break;case 22:if(r=n.memoizedState!==null||su,!r){var a=t!==null&&t.memoizedState!==null||H;t=su,i=H,su=r,(H=a)&&!i?(r=2,n.subtreeFlags&8772&&(r|=1),zu(e,n,r)):Lu(e,n),su=t,H=i}break;case 30:Lu(e,n),r&512&&Ol(n,n.return);break;case 7:r&512&&Ol(n,n.return);default:Lu(e,n)}}function yu(e,t){for(e=e.child;e!==null;)bu(e,t),e=e.sibling}function bu(e,t){switch(e.tag){case 5:case 26:try{var n=e.stateNode;if(t){var r=n.style;typeof r.setProperty==`function`?r.setProperty(`display`,`none`,`important`):r.display=`none`}else{var i=e.stateNode,a=e.memoizedProps.style,o=a!=null&&a.hasOwnProperty(`display`)?a.display:null;i.style.display=o==null||typeof o==`boolean`?``:(``+o).trim()}}catch(t){Z(e,e.return,t)}xu(e,t);break;case 6:try{e.stateNode.nodeValue=t?``:e.memoizedProps,A=!0}catch(t){Z(e,e.return,t)}break;case 18:try{var s=e.stateNode;t?wp(s,!0):wp(e.stateNode,!1)}catch(t){Z(e,e.return,t)}break;case 22:case 23:e.memoizedState===null&&yu(e,t);break;default:yu(e,t)}}function xu(e,t){if(e.subtreeFlags&67108864)for(e=e.child;e!==null;){a:{var n=e,r=t;switch(n.tag){case 4:bu(n,r);break a;case 22:n.memoizedState===null&&xu(n,r);break a;default:xu(n,r)}}e=e.sibling}}function Su(e){var t=e.alternate;t!==null&&(e.alternate=null,Su(t)),e.child=null,e.deletions=null,e.sibling=null,e.tag===5&&(t=e.stateNode,t!==null&&Vt(t)),e.stateNode=null,e.return=null,e.dependencies=null,e.memoizedProps=null,e.memoizedState=null,e.pendingProps=null,e.stateNode=null,e.updateQueue=null}var U=null,Cu=!1;function wu(e,t,n){for(n=n.child;n!==null;)Tu(e,t,n),n=n.sibling}function Tu(e,t,n){if(ot&&typeof ot.onCommitFiberUnmount==`function`)try{ot.onCommitFiberUnmount(at,n)}catch{}switch(n.tag){case 26:H||kl(n,t),wu(e,t,n),n.memoizedState?n.memoizedState.count--:n.stateNode&&!H&&(n=n.stateNode,n.parentNode.removeChild(n));break;case 27:H||kl(n,t),Ml(n);var r=U,i=Cu;Sp(n.type)&&(U=n.stateNode,Cu=!1),wu(e,t,n),gm(n.stateNode,n.type,n.memoizedProps),U=r,Cu=i;break;case 5:H||kl(n,t),Ml(n);case 6:if(n.tag===6&&Ml(n),r=U,i=Cu,U=null,wu(e,t,n),U=r,Cu=i,U!==null){if(Cu)try{(U.nodeType===9?U.body:U.nodeName===`HTML`?U.ownerDocument.body:U).removeChild(n.stateNode),A=!0}catch(e){Z(n,t,e)}else try{U.removeChild(n.stateNode),A=!0}catch(e){Z(n,t,e)}}break;case 18:U!==null&&(Cu?(e=U,Cp(e.nodeType===9?e.body:e.nodeName===`HTML`?e.ownerDocument.body:e,n.stateNode),Hh(e)):Cp(U,n.stateNode));break;case 4:r=U,i=Cu,U=n.stateNode.containerInfo,Cu=!0,wu(e,t,n),U=r,Cu=i;break;case 0:case 11:case 14:case 15:Tl(2,n,t),H||Tl(4,n,t),wu(e,t,n);break;case 1:H||(kl(n,t),r=n.stateNode,typeof r.componentWillUnmount==`function`&&Dl(n,t,r)),wu(e,t,n);break;case 21:wu(e,t,n);break;case 22:H=(r=H)||n.memoizedState!==null,wu(e,t,n),H=r;break;case 30:kl(n,t),wu(e,t,n);break;case 7:H||kl(n,t),wu(e,t,n);break;default:wu(e,t,n)}}function Eu(e,t){if(t.memoizedState===null&&(e=t.alternate,e!==null&&(e=e.memoizedState,e!==null))){e=e.dehydrated;try{Hh(e)}catch(e){Z(t,t.return,e)}}}function Du(e,t){if(t.memoizedState===null&&(e=t.alternate,e!==null&&(e=e.memoizedState,e!==null&&(e=e.dehydrated,e!==null))))try{Hh(e)}catch(e){Z(t,t.return,e)}}function Ou(e){switch(e.tag){case 31:case 13:case 19:var t=e.stateNode;return t===null&&(t=e.stateNode=new uu),t;case 22:return e=e.stateNode,t=e._retryCache,t===null&&(t=e._retryCache=new uu),t;default:throw Error(i(435,e.tag))}}function ku(e,t){var n=Ou(e);t.forEach(function(t){if(!n.has(t)){n.add(t);var r=vf.bind(null,e,t);t.then(r,r)}})}function Au(e,t,n){var r=t.deletions;if(r!==null)for(var a=0;a<r.length;a++){var o=r[a],s=e,c=t,l=c;a:for(;l!==null;){switch(l.tag){case 27:if(Sp(l.type)){U=l.stateNode,Cu=!1;break a}break;case 5:U=l.stateNode,Cu=!1;break a;case 3:case 4:U=l.stateNode.containerInfo,Cu=!0;break a}l=l.return}if(U===null)throw Error(i(160));Tu(s,c,o),U=null,Cu=!1,s=o.alternate,s!==null&&(s.return=null),o.return=null}if(t.subtreeFlags&13886)for(t=t.child;t!==null;)Mu(t,e,n),t=t.sibling}var ju=null;function Mu(e,t,n){var r=e.alternate,a=e.flags;switch(e.tag){case 0:case 11:case 14:case 15:if(a&4&&(r=e.updateQueue,r=r===null?null:r.events,r!==null))for(var o=0;o<r.length;o++){var s=r[o];s.ref.impl=s.nextImpl}Au(t,e,n),Nu(e),a&4&&(Tl(3,e,e.return),wl(3,e),Tl(5,e,e.return));break;case 1:Au(t,e,n),Nu(e),a&512&&(H||r===null||kl(r,r.return)),a&64&&su&&(e=e.updateQueue,e!==null&&(t=e.callbacks,t!==null&&(n=e.shared.hiddenCallbacks,e.shared.hiddenCallbacks=n===null?t:n.concat(t))));break;case 26:if(o=ju,Au(t,e,n),Nu(e),a&512&&(H||r===null||kl(r,r.return)),a&4){if(a=r===null?null:r.memoizedState,n=e.memoizedState,r===null){if(n===null){if(e.stateNode===null){if(su)e.stateNode=fp(e.type,e.memoizedProps,t.containerInfo,e);else{a:{t=e.type,n=e.memoizedProps,a=o.ownerDocument||o;b:switch(t){case`title`:r=a.getElementsByTagName(`title`)[0],(!r||r[zt]||r[Mt]||r.namespaceURI===`http://www.w3.org/2000/svg`||r.hasAttribute(`itemprop`))&&(r=a.createElement(t),a.head.insertBefore(r,a.querySelector(`head > title`))),np(r,t,n),r[Mt]=e,Gt(r),t=r;break a;case`link`:if(o=Gm(`link`,`href`,a).get(t+(n.href||``))){for(s=0;s<o.length;s++)if(r=o[s],r.getAttribute(`href`)===(n.href==null||n.href===``?null:n.href)&&r.getAttribute(`rel`)===(n.rel==null?null:n.rel)&&r.getAttribute(`title`)===(n.title==null?null:n.title)&&r.getAttribute(`crossorigin`)===(n.crossOrigin==null?null:n.crossOrigin)){o.splice(s,1);break b}}r=a.createElement(t),np(r,t,n),a.head.appendChild(r);break;case`meta`:if(o=Gm(`meta`,`content`,a).get(t+(n.content||``))){for(s=0;s<o.length;s++)if(r=o[s],r.getAttribute(`content`)===(n.content==null?null:``+n.content)&&r.getAttribute(`name`)===(n.name==null?null:n.name)&&r.getAttribute(`property`)===(n.property==null?null:n.property)&&r.getAttribute(`http-equiv`)===(n.httpEquiv==null?null:n.httpEquiv)&&r.getAttribute(`charset`)===(n.charSet==null?null:n.charSet)){o.splice(s,1);break b}}r=a.createElement(t),np(r,t,n),a.head.appendChild(r);break;default:throw Error(i(468,t))}r[Mt]=e,Gt(r),t=r}e.stateNode=t}}else su||Km(o,e.type,e.stateNode)}else e.stateNode=Bm(o,n,e.memoizedProps)}else a===n?n===null&&e.stateNode!==null&&Il(e,e.memoizedProps,r.memoizedProps):(a===null?(t=r.stateNode,t===null||H||t.parentNode.removeChild(t)):a.count--,n===null?su||Km(o,e.type,e.stateNode):Bm(o,n,e.memoizedProps))}break;case 27:Au(t,e,n),Nu(e),a&512&&(H||r===null||kl(r,r.return)),r!==null&&a&4&&Il(e,e.memoizedProps,r.memoizedProps);break;case 5:if(o=cu,cu=!1,Au(t,e,n),cu=o,Nu(e),a&512&&(H||r===null||kl(r,r.return)),e.flags&32){t=e.stateNode;try{vn(t,``),A=!0}catch(t){Z(e,e.return,t)}}a&4&&e.stateNode!=null&&(t=e.memoizedProps,Il(e,t,r===null?t:r.memoizedProps)),a&1024&&(lu=!0);break;case 6:if(Au(t,e,n),Nu(e),a&4){if(e.stateNode===null)throw Error(i(162));t=e.memoizedProps,n=e.stateNode;try{n.nodeValue=t,A=!0}catch(t){Z(e,e.return,t)}}break;case 3:if(A=!1,Wm=null,o=ju,ju=bm(t.containerInfo),Au(t,e,n),ju=o,Nu(e),a&4&&r!==null&&r.memoizedState.isDehydrated)try{Hh(t.containerInfo)}catch(t){Z(e,e.return,t)}lu&&(lu=!1,Pu(e)),A=!1;break;case 4:a=cu,cu=su,r=tn(),o=ju,ju=bm(e.stateNode.containerInfo),Au(t,e,n),Nu(e),ju=o,A&&pu&&(mu=!0),A=r,cu=a;break;case 12:Au(t,e,n),Nu(e);break;case 31:Au(t,e,n),Nu(e),a&4&&(t=e.updateQueue,t!==null&&(e.updateQueue=null,ku(e,t)));break;case 13:Au(t,e,n),Nu(e),e.child.flags&8192&&e.memoizedState!==null!=(r!==null&&r.memoizedState!==null)&&(hd=Xe()),a&4&&(t=e.updateQueue,t!==null&&(e.updateQueue=null,ku(e,t)));break;case 22:o=e.memoizedState!==null,s=r!==null&&r.memoizedState!==null;var c=su,l=H,u=cu;su=c||o,cu=u||o,H=l||s,Au(t,e,n),H=l,cu=u,su=c,Nu(e),a&8192&&(t=e.stateNode,t._visibility=o?t._visibility&-2:t._visibility|1,!o||r===null||s||su||H||(t=s||H,n=su,r=H,su=o||su,H=t,Ru(e,2),su=n,H=r),!o&&cu||yu(e,o)),a&4&&(t=e.updateQueue,t!==null&&(n=t.retryQueue,n!==null&&(t.retryQueue=null,ku(e,n))));break;case 19:Au(t,e,n),Nu(e),a&4&&(t=e.updateQueue,t!==null&&(e.updateQueue=null,ku(e,t)));break;case 30:a&512&&(H||r===null||kl(r,r.return)),a=tn(),o=pu,s=(n&335544064)===n,c=e.memoizedProps,pu=s&&Di(c.default,c.update)!==`none`,Au(t,e,n),Nu(e),s&&r!==null&&A&&(e.flags|=4),pu=o,A=a;break;case 21:break;case 7:a&512&&(H||r===null||kl(r,r.return)),r&&r.stateNode!==null&&(r.stateNode._fragmentFiber=e);default:Au(t,e,n),Nu(e)}}function Nu(e){var t=e.flags;if(t&2){try{for(var n,r=e.return;r!==null;){if(Ll(r)){n=r;break}r=r.return}r=null;for(var a=e.return;a!==null;){if(Pl(a)){var o=a.stateNode;r===null?r=[o]:r.push(o)}if(Nl(a))break;a=a.return}var s=r;if(n==null)throw Error(i(160));switch(n.tag){case 27:var c=n.stateNode;Bl(e,Rl(e),c,s);break;case 5:var l=n.stateNode;n.flags&32&&(vn(l,``),n.flags&=-33),Bl(e,Rl(e),l,s);break;case 3:case 4:var u=n.stateNode.containerInfo;zl(e,Rl(e),u,s);break;default:throw Error(i(161))}}catch(t){Z(e,e.return,t)}e.flags&=-3}t&4096&&(e.flags&=-4097)}function Pu(e){if(e.subtreeFlags&1024)for(e=e.child;e!==null;){var t=e;Pu(t),t.tag===5&&t.flags&1024&&(t=t.stateNode,gh=!0,t.reset(),gh=!1),e=e.sibling}}function Fu(e,t){if(t.subtreeFlags&9270)for(t=t.child;t!==null;)Iu(t,e),t=t.sibling;else ou(t,!1)}function Iu(e,t){var n=e.alternate;if(n===null)Ql(e,!1);else switch(e.tag){case 3:if(hu=fu=!1,Kl(),Fu(t,e),!fu&&!mu){if(e=Gl,e!==null)for(var r=0;r<e.length;r+=3){n=e[r];var i=e[r+1];Ep(n,e[r+2]),n=n.ownerDocument.documentElement,n!==null&&n.animate({opacity:[0,0],pointerEvents:[`none`,`none`]},{duration:0,fill:`forwards`,pseudoElement:`::view-transition-group(`+i+`)`})}e=t.containerInfo,e=e.nodeType===9?e.documentElement:e.ownerDocument.documentElement,e!==null&&e.style.viewTransitionName===``&&(e.style.viewTransitionName=`none`,e.animate({opacity:[0,0],pointerEvents:[`none`,`none`]},{duration:0,fill:`forwards`,pseudoElement:`::view-transition-group(root)`}),e.animate({width:[0,0],height:[0,0]},{duration:0,fill:`forwards`,pseudoElement:`::view-transition`})),hu=!0}Gl=null;break;case 5:Fu(t,e);break;case 4:r=fu,fu=!1,Fu(t,e),fu&&(mu=!0),fu=r;break;case 22:e.memoizedState===null&&(n.memoizedState===null?Fu(t,e):Ql(e,!1));break;case 30:r=fu,i=Kl(),fu=!1,Fu(t,e),fu&&(e.flags|=4);var a=e.memoizedProps,o=e.stateNode;t=Ti(a,o),o=Ti(n.memoizedProps,o);var s=Di(a.default,a.update);s===`none`?t=!1:(a=n.memoizedState,n.memoizedState=null,n=e.child,ql=0,t=au(e,n,t,o,s,a,!0),ql!==(a===null?0:a.length)&&(e.flags|=32)),e.flags&4&&t?(Nd(e,e.memoizedProps.onUpdate),Gl=i):i!==null&&(i.push.apply(i,Gl),Gl=i),fu=e.flags&32?!0:r;break;default:Fu(t,e)}}function Lu(e,t){if(t.subtreeFlags&8772)for(t=t.child;t!==null;)vu(e,t.alternate,t),t=t.sibling}function Ru(e,t){for(e=e.child;e!==null;){var n=e,r=t;switch(n.tag){case 0:case 11:case 14:case 15:Tl(4,n,n.return),Ru(n,r);break;case 1:kl(n,n.return);var i=n.stateNode;typeof i.componentWillUnmount==`function`&&Dl(n,n.return,i),Ru(n,r);break;case 27:r&2&&gm(n.stateNode,n.type,n.memoizedProps);case 5:kl(n,n.return),n.tag!==5&&n.tag!==27||Ml(n),Ru(n,r);break;case 6:Ml(n);break;case 26:kl(n,n.return),i=n.stateNode,n.memoizedState!==null||i===null||H||i.parentNode.removeChild(i),Ru(n,r);break;case 22:n.memoizedState===null&&Ru(n,r);break;case 30:kl(n,n.return),Ru(n,r);break;case 7:kl(n,n.return);default:Ru(n,r)}e=e.sibling}}function zu(e,t,n){for(n=t.subtreeFlags&8772?n:n&-2,t=t.child;t!==null;){var r=t.alternate,i=e,a=t,o=a.flags,s=!!(n&1);switch(a.tag){case 0:case 11:case 15:zu(i,a,n),wl(4,a);break;case 1:if(zu(i,a,n),r=a,i=r.stateNode,typeof i.componentDidMount==`function`)try{i.componentDidMount()}catch(e){Z(r,r.return,e)}if(r=a,i=r.updateQueue,i!==null){var c=r.stateNode;try{var l=i.shared.hiddenCallbacks;if(l!==null)for(i.shared.hiddenCallbacks=null,i=0;i<l.length;i++)Ao(l[i],c)}catch(e){Z(r,r.return,e)}}s&&o&64&&El(a),Ol(a,a.return);break;case 27:n&2&&Vl(a);case 5:a.tag!==5&&a.tag!==27||jl(a),zu(i,a,n),s&&r===null&&o&4&&Fl(a),Ol(a,a.return);break;case 6:jl(a);break;case 26:c=a.stateNode,a.memoizedState!==null||c===null||su||Km(bm(c.ownerDocument),a.type,c),zu(i,a,n),s&&r===null&&o&4&&Fl(a),Ol(a,a.return);break;case 12:zu(i,a,n);break;case 31:zu(i,a,n),s&&o&4&&Eu(i,a);break;case 13:zu(i,a,n),s&&o&4&&Du(i,a);break;case 22:a.memoizedState===null&&zu(i,a,n),Ol(a,a.return);break;case 30:zu(i,a,n),Ol(a,a.return);break;case 7:Ol(a,a.return);default:zu(i,a,n)}t=t.sibling}}function Bu(e,t){var n=null;e!==null&&e.memoizedState!==null&&e.memoizedState.cachePool!==null&&(n=e.memoizedState.cachePool.pool),e=null,t.memoizedState!==null&&t.memoizedState.cachePool!==null&&(e=t.memoizedState.cachePool.pool),e!==n&&(e!=null&&e.refCount++,n!=null&&za(n))}function Vu(e,t){e=null,t.alternate!==null&&(e=t.alternate.memoizedState.cache),t=t.memoizedState.cache,t!==e&&(t.refCount++,e!=null&&za(e))}function Hu(e,t,n,r){var i=(n&335544064)===n;if(t.subtreeFlags&(i?10262:10256))for(t=t.child;t!==null;)Uu(e,t,n,r),t=t.sibling;else i&&iu(t)}function Uu(e,t,n,r){var i=(n&335544064)===n;i&&t.alternate===null&&t.return!==null&&t.return.alternate!==null&&ru(t);var a=t.flags;switch(t.tag){case 0:case 11:case 15:Hu(e,t,n,r),a&2048&&wl(9,t);break;case 1:Hu(e,t,n,r);break;case 3:Hu(e,t,n,r),i&&hu&&(e=e.containerInfo,e=e.nodeType===9?e.body:e.nodeName===`HTML`?e.ownerDocument.body:e,e.style.viewTransitionName===`root`&&(e.style.viewTransitionName=``),e=e.ownerDocument.documentElement,e!==null&&e.style.viewTransitionName===`none`&&(e.style.viewTransitionName=``)),a&2048&&(a=null,t.alternate!==null&&(a=t.alternate.memoizedState.cache),t=t.memoizedState.cache,t!==a&&(t.refCount++,a!=null&&za(a)));break;case 12:if(a&2048){Hu(e,t,n,r),a=t.stateNode;try{var o=t.memoizedProps,s=o.id,c=o.onPostCommit;typeof c==`function`&&c(s,t.alternate===null?`mount`:`update`,a.passiveEffectDuration,-0)}catch(e){Z(t,t.return,e)}}else Hu(e,t,n,r);break;case 31:Hu(e,t,n,r);break;case 13:Hu(e,t,n,r);break;case 23:break;case 22:o=t.stateNode,s=t.alternate,t.memoizedState===null?(i&&s!==null&&s.memoizedState!==null&&ru(t),o._visibility&2?Hu(e,t,n,r):(o._visibility|=2,Wu(e,t,n,r,!!(t.subtreeFlags&10256)||!1))):(i&&s!==null&&s.memoizedState===null&&ru(s),o._visibility&2?Hu(e,t,n,r):Gu(e,t)),a&2048&&Bu(s,t);break;case 24:Hu(e,t,n,r),a&2048&&Vu(t.alternate,t);break;case 30:i&&(a=t.alternate,a!==null&&(Xl(a.child,!0),Xl(t.child,!0))),Hu(e,t,n,r);break;default:Hu(e,t,n,r)}}function Wu(e,t,n,r,i){for(i&&=!!(t.subtreeFlags&10256)||!1,t=t.child;t!==null;){var a=e,o=t,s=n,c=r,l=o.flags;switch(o.tag){case 0:case 11:case 15:Wu(a,o,s,c,i),wl(8,o);break;case 23:break;case 22:var u=o.stateNode;o.memoizedState===null?(u._visibility|=2,Wu(a,o,s,c,i)):u._visibility&2?Wu(a,o,s,c,i):Gu(a,o),i&&l&2048&&Bu(o.alternate,o);break;case 24:Wu(a,o,s,c,i),i&&l&2048&&Vu(o.alternate,o);break;default:Wu(a,o,s,c,i)}t=t.sibling}}function Gu(e,t){if(t.subtreeFlags&10256)for(t=t.child;t!==null;){var n=e,r=t,i=r.flags;switch(r.tag){case 22:Gu(n,r),i&2048&&Bu(r.alternate,r);break;case 24:Gu(n,r),i&2048&&Vu(r.alternate,r);break;default:Gu(n,r)}t=t.sibling}}var Ku=8192;function qu(e,t,n){if(e.subtreeFlags&Ku)for(e=e.child;e!==null;)Ju(e,t,n),e=e.sibling}function Ju(e,t,n){switch(e.tag){case 26:qu(e,t,n),e.flags&Ku&&(e.memoizedState===null?(e=e.stateNode,(t&335544128)===t&&Zm(n,e)):Qm(n,ju,e.memoizedState,e.memoizedProps));break;case 5:qu(e,t,n),e.flags&Ku&&(e=e.stateNode,(t&335544128)===t&&Zm(n,e));break;case 3:case 4:var r=ju;ju=bm(e.stateNode.containerInfo),qu(e,t,n),ju=r;break;case 22:e.memoizedState===null&&(r=e.alternate,r!==null&&r.memoizedState!==null?(r=Ku,Ku=16777216,qu(e,t,n),Ku=r):qu(e,t,n));break;case 30:if((e.flags&Ku)!==0&&(r=e.memoizedProps.name,r!=null&&r!==`auto`)){var i=e.stateNode;i.paired=null,Ul===null&&(Ul=new Map),Ul.set(r,i)}qu(e,t,n);break;default:qu(e,t,n)}}function Yu(e){var t=e.alternate;if(t!==null&&(e=t.child,e!==null)){t.child=null;do t=e.sibling,e.sibling=null,e=t;while(e!==null)}}function Xu(e){var t=e.deletions;if(e.flags&16){if(t!==null)for(var n=0;n<t.length;n++){var r=t[n];du=r,$u(r,e)}Yu(e)}if(e.subtreeFlags&10256)for(e=e.child;e!==null;)Zu(e),e=e.sibling}function Zu(e){switch(e.tag){case 0:case 11:case 15:Xu(e),e.flags&2048&&Tl(9,e,e.return);break;case 3:Xu(e);break;case 12:Xu(e);break;case 22:var t=e.stateNode;e.memoizedState!==null&&t._visibility&2&&(e.return===null||e.return.tag!==13)?(t._visibility&=-3,Qu(e)):Xu(e);break;default:Xu(e)}}function Qu(e){var t=e.deletions;if(e.flags&16){if(t!==null)for(var n=0;n<t.length;n++){var r=t[n];du=r,$u(r,e)}Yu(e)}for(e=e.child;e!==null;){switch(t=e,t.tag){case 0:case 11:case 15:Tl(8,t,t.return),Qu(t);break;case 22:n=t.stateNode,n._visibility&2&&(n._visibility&=-3,Qu(t));break;default:Qu(t)}e=e.sibling}}function $u(e,t){for(;du!==null;){var n=du;switch(n.tag){case 0:case 11:case 15:Tl(8,n,t);break;case 23:case 22:if(n.memoizedState!==null&&n.memoizedState.cachePool!==null){var r=n.memoizedState.cachePool.pool;r!=null&&r.refCount++}break;case 24:za(n.memoizedState.cache)}if(r=n.child,r!==null)r.return=n,du=r;else a:for(n=e;du!==null;){r=du;var i=r.sibling,a=r.return;if(Su(r),r===n){du=null;break a}if(i!==null){i.return=a,du=i;break a}du=a}}}var ed={getCacheForType:function(e){var t=Ma(P),n=t.data.get(e);return n===void 0&&(n=e(),t.data.set(e,n)),n},cacheSignal:function(){return Ma(P).controller.signal}},td=typeof WeakMap==`function`?WeakMap:Map,W=0,G=null,K=null,q=0,J=0,nd=null,rd=!1,id=!1,ad=!1,od=0,Y=0,sd=0,cd=0,ld=0,ud=0,dd=0,fd=null,pd=null,md=!1,hd=0,gd=0,_d=1/0,vd=null,yd=null,X=0,bd=null,xd=null,Sd=0,Cd=0,wd=null,Td=null,Ed=null,Dd=null,Od=null,kd=0,Ad=null;function jd(){return W&2&&q!==0?q&-q:T.T===null?kt():Pf()}function Md(){if(ud===0){if(!(q&536870912)||N){var e=pt;pt<<=1,!(pt&3932160)&&(pt=262144),ud=e}else ud=536870912}return e=Lo.current,e!==null&&(e.flags|=32),ud}function Nd(e,t){if(t!=null){var n=e.stateNode,r=n.ref;r===null&&(r=n.ref=Pp(Ti(e.memoizedProps,n))),Dd===null&&(Dd=[]),Dd.push(t.bind(null,r))}}function Pd(e,t,n){(e===G&&(J===2||J===9)||e.cancelPendingCommit!==null)&&(Vd(e,0),Rd(e,q,ud,!1)),St(e,n),W&2&&e===G||(e===G&&(!(W&2)&&(cd|=n),Y===4&&Rd(e,q,ud,!1)),Ef(e))}function Fd(e,t,n){if(W&6)throw Error(i(327));var r=!n&&!(t&127)&&(t&e.expiredLanes)===0||_t(e,t),a=r?Yd(e,t):qd(e,t,!0),o=r;do{if(a===0){id&&!r&&Rd(e,t,0,!1);break}if(n=e.current.alternate,o&&!Ld(n))a=qd(e,t,!1),o=!1;else{if(a===2){if(o=t,e.errorRecoveryDisabledLanes&o)var s=0;else s=e.pendingLanes&-536870913,s=s===0?s&536870912?536870912:0:s;if(s!==0){t=s;a:{var c=e;a=fd;var l=c.current.memoizedState.isDehydrated;if(l&&(Vd(c,s).flags|=256),s=qd(c,s,!1),s!==2&&s!==6){if(ad&&!l){c.errorRecoveryDisabledLanes|=o,cd|=o,a=4;break a}o=pd,pd=a,o!==null&&(pd===null?pd=o:pd.push.apply(pd,o))}a=s}if(o=!1,a!==2)continue}}if(a===1){Vd(e,0),Rd(e,t,0,!0);break}a:{switch(r=e,o=a,o){case 0:case 1:throw Error(i(345));case 4:if((t&4194048)!==t&&(t&62914560)!==t)break;case 6:Rd(r,t,ud,!rd);break a;case 2:pd=null;break;case 3:case 5:break;default:throw Error(i(329))}if((t&62914560)===t&&(a=hd+300-Xe(),10<a)){if(Rd(r,t,ud,!rd),gt(r,0,!0)!==0)break a;Sd=t,r.timeoutHandle=gp(Id.bind(null,r,n,pd,vd,md,t,ud,cd,dd,rd,o,`Throttled`,-0,0),a);break a}Id(r,n,pd,vd,md,t,ud,cd,dd,rd,o,null,-0,0)}break}}while(1);Ef(e)}function Id(e,t,n,r,i,a,o,s,c,l,u,d,f,p){e.timeoutHandle=-1;var m=t.subtreeFlags,h=(a&335544064)===a;d=null,(h||m&8192||(m&16785408)==16785408)&&(d={stylesheets:null,count:0,imgCount:0,imgBytes:0,suspenseyImages:[],waitingForImages:!0,waitingForViewTransition:!1,unsuspend:En},Ul=null,Ju(t,a,d),h&&(m=d,h=e.containerInfo,h=(h.nodeType===9?h:h.ownerDocument).__reactViewTransition,h!=null&&(m.count++,m.waitingForViewTransition=!0,m=nh.bind(m),h.finished.then(m,m))),m=(a&62914560)===a?hd-Xe():(a&4194048)===a?gd-Xe():0,m=eh(d,m),m!==null)?(Sd=a,e.cancelPendingCommit=m(nf.bind(null,e,t,a,n,r,i,o,s,c,l,u,d,null,f,p)),Rd(e,a,o,!l)):nf(e,t,a,n,r,i,o,s,c,l,u,d)}function Ld(e){for(var t=e;;){var n=t.tag;if((n===0||n===11||n===15)&&t.flags&16384&&(n=t.updateQueue,n!==null&&(n=n.stores,n!==null)))for(var r=0;r<n.length;r++){var i=n[r],a=i.getSnapshot;i=i.value;try{if(!Yr(a(),i))return!1}catch{return!1}}if(n=t.child,t.subtreeFlags&16384&&n!==null)n.return=t,t=n;else{if(t===e)break;for(;t.sibling===null;){if(t.return===null||t.return===e)return!0;t=t.return}t.sibling.return=t.return,t=t.sibling}}return!0}function Rd(e,t,n,r){t=vt(e,t),t&=~ld,t&=~cd,e.suspendedLanes|=t,e.pingedLanes&=~t,r&&(e.warmLanes|=t),r=e.expirationTimes;for(var i=t;0<i;){var a=31-ct(i),o=1<<a;r[a]=-1,i&=~o}n!==0&&wt(e,n,t)}function zd(){return W&6?!0:(Df(0,!1),!1)}function Bd(){if(K!==null){if(J===0)var e=K.return;else e=K,wa=Ca=null,ls(e),fo=null,po=0,e=K;for(;e!==null;)Cl(e.alternate,e),e=e.return;K=null}}function Vd(e,t){var n=e.timeoutHandle;return n!==-1&&(e.timeoutHandle=-1,_p(n)),n=e.cancelPendingCommit,n!==null&&(e.cancelPendingCommit=null,n()),Sd=0,Bd(),G=e,K=n=Hi(e.current,null),q=t,J=0,nd=null,rd=!1,id=_t(e,t),ad=!1,dd=ud=ld=cd=sd=Y=0,pd=fd=null,md=!1,od=vt(e,t),Mi(),n}function Hd(e,t){F=null,T.H=vc,t===to||t===ro?(t=lo(),J=3):t===no?(t=lo(),J=4):J=t===Ic?8:typeof t==`object`&&t&&typeof t.then==`function`?6:1,nd=t,K===null&&(Y=1,Ac(e,Xi(t,e.current)))}function Ud(){var e=Lo.current;return e===null?!0:(q&4194048)===q?Ro===null:(q&62914560)===q||q&536870912?e===Ro:!1}function Wd(){var e=T.H;return T.H=vc,e===null?vc:e}function Gd(){var e=T.A;return T.A=ed,e}function Kd(){Y=4,rd||(q&4194048)!==q&&Lo.current!==null||(id=!0),!(sd&134217727)&&!(cd&134217727)||G===null||Rd(G,q,ud,!1)}function qd(e,t,n){var r=W;W|=2;var i=Wd(),a=Gd();(G!==e||q!==t)&&(vd=null,Vd(e,t)),t=!1;var o=Y;a:do try{if(J!==0&&K!==null){var s=K,c=nd;switch(J){case 8:Bd(),o=6;break a;case 3:case 2:case 9:case 6:Lo.current===null&&(t=!0);var l=J;if(J=0,nd=null,$d(e,s,c,l),n&&id){o=0;break a}break;default:l=J,J=0,nd=null,$d(e,s,c,l)}}Jd(),o=Y;break}catch(t){Hd(e,t)}while(1);return t&&e.shellSuspendCounter++,wa=Ca=null,W=r,T.H=i,T.A=a,K===null&&(G=null,q=0,Mi()),o}function Jd(){for(;K!==null;)Zd(K)}function Yd(e,t){var n=W;W|=2;var r=Wd(),a=Gd();G!==e||q!==t?(vd=null,_d=Xe()+500,Vd(e,t)):id=_t(e,t);a:do try{if(J!==0&&K!==null){t=K;var o=nd;b:switch(J){case 1:J=0,nd=null,$d(e,t,o,1);break;case 2:case 9:if(ao(o)){J=0,nd=null,Qd(t);break}t=function(){J!==2&&J!==9||G!==e||(J=7),Ef(e)},o.then(t,t);break a;case 3:J=7;break a;case 4:J=5;break a;case 7:ao(o)?(J=0,nd=null,Qd(t)):(J=0,nd=null,$d(e,t,o,7));break;case 5:var s=null;switch(K.tag){case 26:s=K.memoizedState;case 5:case 27:var c=K;if(s?Ym(s):c.stateNode.complete){J=0,nd=null;var l=c.sibling;if(l!==null)K=l;else{var u=c.return;u===null?K=null:(K=u,ef(u))}break b}}J=0,nd=null,$d(e,t,o,5);break;case 6:J=0,nd=null,$d(e,t,o,6);break;case 8:Bd(),Y=6;break a;default:throw Error(i(462))}}Xd();break}catch(t){Hd(e,t)}while(1);return wa=Ca=null,T.H=r,T.A=a,W=n,K===null?(G=null,q=0,Mi(),Y):0}function Xd(){for(;K!==null&&!Je();)Zd(K)}function Zd(e){var t=hl(e.alternate,e,od);e.memoizedProps=e.pendingProps,t===null?ef(e):K=t}function Qd(e){var t=e,n=t.alternate;switch(t.tag){case 15:case 0:t=Yc(n,t,t.pendingProps,t.type,void 0,q);break;case 11:t=Yc(n,t,t.pendingProps,t.type.render,t.ref,q);break;case 5:ls(t);var r=t;r===da&&(N?(_a(r),r.tag===5&&r.stateNode!=null&&(M=r.stateNode)):(_a(r),N=!0));default:Cl(n,t),t=K=Ui(t,od),t=hl(n,t,od)}e.memoizedProps=e.pendingProps,t===null?ef(e):K=t}function $d(e,t,n,r){wa=Ca=null,ls(t),fo=null,po=0;var i=t.return;try{if(Fc(e,i,t,n,q)){Y=1,Ac(e,Xi(n,e.current)),K=null;return}}catch(t){if(i!==null)throw K=i,t;Y=1,Ac(e,Xi(n,e.current)),K=null;return}t.flags&32768?(N||r===1?e=!0:id||q&536870912?e=!1:(rd=e=!0,(r===2||r===9||r===3||r===6)&&(r=Lo.current,r!==null&&r.tag===13&&(r.flags|=16384))),tf(t,e)):ef(t)}function ef(e){var t=e;do{if(t.flags&32768){tf(t,rd);return}e=t.return;var n=xl(t.alternate,t,od);if(n!==null){K=n;return}if(t=t.sibling,t!==null){K=t;return}K=t=e}while(t!==null);Y===0&&(Y=5)}function tf(e,t){do{var n=Sl(e.alternate,e);if(n!==null){n.flags&=32767,K=n;return}if(n=e.return,n!==null&&(n.flags|=32768,n.subtreeFlags=0,n.deletions=null),!t&&(e=e.sibling,e!==null)){K=e;return}K=e=n}while(e!==null);Y=6,K=null}function nf(e,t,n,r,a,o,s,c,l,u,d,f){e.cancelPendingCommit=null;do df();while(X!==0);if(W&6)throw Error(i(327));if(t!==null){if(t===e.current)throw Error(i(177));e===G&&(K=G=null,q=0),xd=t,bd=e,Sd=n,wd=a,Td=r,rf(e,t,n,s,c,l,f)}}function rf(e,t,n,r,i,a,o){var s=t.lanes|t.childLanes;if(Cd=s,s|=ji,Ct(e,n,s,r,i,a),Dd=null,(n&335544064)===n?(Od=Ha(e),r=10262):(Od=null,r=10256),(t.subtreeFlags&r)!==0||(t.flags&r)!==0?(e.callbackNode=null,e.callbackPriority=0,yf(et,function(){return ff(),null})):(e.callbackNode=null,e.callbackPriority=0),Hl=!1,r=!!(t.flags&13878),t.subtreeFlags&13878||r){r=T.T,T.T=null,i=E.p,E.p=2,a=W,W|=4;try{gu(e,t,n)}finally{W=a,E.p=i,T.T=r}}X=1,Hl?Ed=Mp(o,e.containerInfo,Od,sf,cf,of,lf,ff,af,null,null):(sf(),cf(),lf())}function af(e){if(X!==0){var t=bd.onRecoverableError;t(e,{componentStack:null})}}function of(){X===3&&(X=0,Iu(xd,bd),X=4)}function sf(){if(X===1){X=0;var e=bd,t=xd,n=Sd,r=!!(t.flags&13878);if(t.subtreeFlags&13878||r){r=T.T,T.T=null;var i=E.p;E.p=2;var a=W;W|=4;try{pu=mu=!1,Mu(t,e,n),n=cp;var o=ti(e.containerInfo),s=n.focusedElem,c=n.selectionRange;if(o!==s&&s&&s.ownerDocument&&ei(s.ownerDocument.documentElement,s)){if(c!==null&&ni(s)){var l=c.start,u=c.end;if(u===void 0&&(u=l),`selectionStart`in s)s.selectionStart=l,s.selectionEnd=Math.min(u,s.value.length);else{var d=s.ownerDocument||document,f=d&&d.defaultView||window;if(f.getSelection){var p=f.getSelection(),m=s.textContent.length,h=Math.min(c.start,m),g=c.end===void 0?h:Math.min(c.end,m);!p.extend&&h>g&&(o=g,g=h,h=o);var _=$r(s,h),v=$r(s,g);if(_&&v&&(p.rangeCount!==1||p.anchorNode!==_.node||p.anchorOffset!==_.offset||p.focusNode!==v.node||p.focusOffset!==v.offset)){var y=d.createRange();y.setStart(_.node,_.offset),p.removeAllRanges(),h>g?(p.addRange(y),p.extend(v.node,v.offset)):(y.setEnd(v.node,v.offset),p.addRange(y))}}}}for(d=[],p=s;p=p.parentNode;)p.nodeType===1&&d.push({element:p,left:p.scrollLeft,top:p.scrollTop});for(typeof s.focus==`function`&&s.focus(),s=0;s<d.length;s++){var b=d[s];b.element.scrollLeft=b.left,b.element.scrollTop=b.top}}gh=!!sp,cp=sp=null}finally{W=a,E.p=i,T.T=r}}e.current=t,X=2}}function cf(){if(X===2){X=0;var e=bd,t=xd,n=!!(t.flags&8772);if(t.subtreeFlags&8772||n){n=T.T,T.T=null;var r=E.p;E.p=2;var i=W;W|=4;try{vu(e,t.alternate,t)}finally{W=i,E.p=r,T.T=n}}X=3}}function lf(){if(X===4||X===3){X=0;var e=Ed;Ed=null,Ye();var t=bd,n=xd,r=Sd,i=Td,a=(r&335544064)===r?10262:10256;if((n.subtreeFlags&a)!==0||(n.flags&a)!==0?X=5:(X=0,xd=bd=null,uf(t,t.pendingLanes)),a=t.pendingLanes,a===0&&(yd=null),Ot(r),n=n.stateNode,ot&&typeof ot.onCommitFiberRoot==`function`)try{ot.onCommitFiberRoot(at,n,void 0,(n.current.flags&128)==128)}catch{}if(i!==null){n=T.T,a=E.p,E.p=2,T.T=null;try{for(var o=t.onRecoverableError,s=0;s<i.length;s++){var c=i[s];o(c.value,{componentStack:c.stack})}}finally{T.T=n,E.p=a}}if(i=Dd,o=Od,Od=null,i!==null&&(Dd=null,o===null&&(o=[]),e!==null))for(c=0;c<i.length;c++)n=(0,i[c])(o),n!==void 0&&e.finished.finally(n);Sd&3&&df(),Ef(t),a=t.pendingLanes,r&261930&&a&42?t===Ad?kd++:(kd=0,Ad=t):(kd=0,Ad=null),Df(0,!1)}}function uf(e,t){(e.pooledCacheLanes&=t)===0&&(t=e.pooledCache,t!=null&&(e.pooledCache=null,za(t)))}function df(){return Ed!==null&&(Ed.skipTransition(),Ed=null),sf(),cf(),lf(),ff()}function ff(){if(X!==5)return!1;var e=bd,t=Cd;Cd=0;var n=Ot(Sd),r=T.T,a=E.p;try{E.p=32>n?32:n,T.T=null,n=wd,wd=null;var o=bd,s=Sd;if(X=0,xd=bd=null,Sd=0,W&6)throw Error(i(331));var c=W;if(W|=4,Zu(o.current),Uu(o,o.current,s,n),W=c,Df(0,!1),ot&&typeof ot.onPostCommitFiberRoot==`function`)try{ot.onPostCommitFiberRoot(at,o)}catch{}return!0}finally{E.p=a,T.T=r,uf(e,t)}}function pf(e,t,n){t=Xi(n,t),t=Mc(e.stateNode,t,2),e=wo(e,t,2),e!==null&&(St(e,2),Ef(e))}function Z(e,t,n){if(e.tag===3)pf(e,e,n);else for(;t!==null;){if(t.tag===3){pf(t,e,n);break}if(t.tag===1){var r=t.stateNode;if(typeof t.type.getDerivedStateFromError==`function`||typeof r.componentDidCatch==`function`&&(yd===null||!yd.has(r))){e=Xi(n,e),n=Nc(2),r=wo(t,n,2),r!==null&&(Pc(n,r,t,e),St(r,2),Ef(r));break}}t=t.return}}function mf(e,t,n){var r=e.pingCache;if(r===null){r=e.pingCache=new td;var i=new Set;r.set(t,i)}else i=r.get(t),i===void 0&&(i=new Set,r.set(t,i));i.has(n)||(ad=!0,i.add(n),e=hf.bind(null,e,t,n),t.then(e,e))}function hf(e,t,n){var r=e.pingCache;r!==null&&r.delete(t),e.pingedLanes|=e.suspendedLanes&n,e.warmLanes&=~n,G===e&&(q&n)===n&&(Y===4||Y===3&&(q&62914560)===q&&300>Xe()-hd?W&2?ld|=n:Vd(e,0):ld|=n,dd===q&&(dd=0)),Ef(e)}function gf(e,t){t===0&&(t=bt()),e=Fi(e,t),e!==null&&(St(e,t),Ef(e))}function _f(e){var t=e.memoizedState,n=0;t!==null&&(n=t.retryLane),gf(e,n)}function vf(e,t){var n=0;switch(e.tag){case 31:case 13:var r=e.stateNode,a=e.memoizedState;a!==null&&(n=a.retryLane);break;case 19:r=e.stateNode;break;case 22:r=e.stateNode._retryCache;break;default:throw Error(i(314))}r!==null&&r.delete(t),gf(e,n)}function yf(e,t){return Ke(e,t)}var bf=null,xf=null,Sf=!1,Cf=!1,wf=!1,Tf=0;function Ef(e){e!==xf&&e.next===null&&(xf===null?bf=xf=e:xf=xf.next=e),Cf=!0,Sf||(Sf=!0,Nf())}function Df(e,t){if(!wf&&Cf){wf=!0;do for(var n=!1,r=bf;r!==null;){if(!t){if(e!==0){var i=r.pendingLanes;if(i===0)var a=0;else{var o=r.suspendedLanes,s=r.pingedLanes;a=(1<<31-ct(42|e)+1)-1,a&=i&~(o&~s),a=a&201326741?a&201326741|1:a?a|2:0}a!==0&&(n=!0,Mf(r,a))}else a=q,a=gt(r,r===G?a:0,r.cancelPendingCommit!==null||r.timeoutHandle!==-1),!(a&3)||_t(r,a)||(n=!0,Mf(r,a))}r=r.next}while(n);wf=!1}}function Of(){kf()}function kf(){Cf=Sf=!1;var e=0;Tf!==0&&hp()&&(e=Tf);for(var t=Xe(),n=null,r=bf;r!==null;){var i=r.next,a=Af(r,t);a===0?(r.next=null,n===null?bf=i:n.next=i,i===null&&(xf=n)):(n=r,(e!==0||a&3)&&(Cf=!0)),r=i}X!==0&&X!==5||Df(e,!1),Tf!==0&&(Tf=0)}function Af(e,t){for(var n=e.suspendedLanes,r=e.pingedLanes,i=e.expirationTimes,a=e.pendingLanes&-62914561;0<a;){var o=31-ct(a),s=1<<o,c=i[o];c===-1?((s&n)===0||(s&r)!==0)&&(i[o]=yt(s,t)):c<=t&&(e.expiredLanes|=s),a&=~s}if(t=G,n=q,n=gt(e,e===t?n:0,e.cancelPendingCommit!==null||e.timeoutHandle!==-1),r=e.callbackNode,n===0||e===t&&(J===2||J===9)||e.cancelPendingCommit!==null)return r!==null&&r!==null&&qe(r),e.callbackNode=null,e.callbackPriority=0;if(!(n&3)||_t(e,n)){if(t=n&-n,t===e.callbackPriority)return t;switch(r!==null&&qe(r),Ot(n)){case 2:case 8:n=$e;break;case 32:n=et;break;case 268435456:n=nt;break;default:n=et}return r=jf.bind(null,e),n=Ke(n,r),e.callbackPriority=t,e.callbackNode=n,t}return r!==null&&r!==null&&qe(r),e.callbackPriority=2,e.callbackNode=null,2}function jf(e,t){if(X!==0&&X!==5)return e.callbackNode=null,e.callbackPriority=0,null;var n=e.callbackNode;if(df()&&e.callbackNode!==n)return null;var r=q;return r=gt(e,e===G?r:0,e.cancelPendingCommit!==null||e.timeoutHandle!==-1),r===0?null:(Fd(e,r,t),Af(e,Xe()),e.callbackNode!=null&&e.callbackNode===n?jf.bind(null,e):null)}function Mf(e,t){if(df())return null;Fd(e,t,!0)}function Nf(){bp(function(){W&6?Ke(Qe,Of):kf()})}function Pf(){if(Tf===0){var e=Ga;e===0&&(e=ft,ft<<=1,!(ft&261888)&&(ft=256)),Tf=e}return Tf}function Ff(e){return e==null||typeof e==`symbol`||typeof e==`boolean`?null:typeof e==`function`?e:Tn(e)}function If(e,t,n,r,i){if(t===`submit`&&n&&n.stateNode===i){var a=Ff((i[Nt]||null).action),o=r.submitter;o&&(t=(t=o[Nt]||null)?Ff(t.formAction):o.getAttribute(`formAction`),t!==null&&(a=t,o=null));var s=new qn(`action`,`action`,null,r,i);e.push({event:s,listeners:[{instance:null,listener:function(){if(r.defaultPrevented){if(Tf!==0){var e=new FormData(i,o);ic(n,{pending:!0,data:e,method:i.method,action:a},null,e)}}else typeof a==`function`&&(s.preventDefault(),e=new FormData(i,o),ic(n,{pending:!0,data:e,method:i.method,action:a},a,e))},currentTarget:i}]})}}for(var Lf=0;Lf<Si.length;Lf++){var Rf=Si[Lf];Ci(Rf.toLowerCase(),`on`+(Rf[0].toUpperCase()+Rf.slice(1)))}Ci(mi,`onAnimationEnd`),Ci(hi,`onAnimationIteration`),Ci(gi,`onAnimationStart`),Ci(`dblclick`,`onDoubleClick`),Ci(`focusin`,`onFocus`),Ci(`focusout`,`onBlur`),Ci(_i,`onTransitionRun`),Ci(vi,`onTransitionStart`),Ci(yi,`onTransitionCancel`),Ci(bi,`onTransitionEnd`),Xt(`onMouseEnter`,[`mouseout`,`mouseover`]),Xt(`onMouseLeave`,[`mouseout`,`mouseover`]),Xt(`onPointerEnter`,[`pointerout`,`pointerover`]),Xt(`onPointerLeave`,[`pointerout`,`pointerover`]),Yt(`onChange`,`change click focusin focusout input keydown keyup selectionchange`.split(` `)),Yt(`onSelect`,`focusout contextmenu dragend focusin keydown keyup mousedown mouseup selectionchange`.split(` `)),Yt(`onBeforeInput`,[`compositionend`,`keypress`,`textInput`,`paste`]),Yt(`onCompositionEnd`,`compositionend focusout keydown keypress keyup mousedown`.split(` `)),Yt(`onCompositionStart`,`compositionstart focusout keydown keypress keyup mousedown`.split(` `)),Yt(`onCompositionUpdate`,`compositionupdate focusout keydown keypress keyup mousedown`.split(` `));var zf=`abort canplay canplaythrough durationchange emptied encrypted ended error loadeddata loadedmetadata loadstart pause play playing progress ratechange resize seeked seeking stalled suspend timeupdate volumechange waiting`.split(` `),Bf=new Set(`beforetoggle cancel close invalid load scroll scrollend toggle`.split(` `).concat(zf));function Vf(e,t){t=!!(t&4);for(var n=0;n<e.length;n++){var r=e[n],i=r.event;r=r.listeners;a:{var a=void 0;if(t)for(var o=r.length-1;0<=o;o--){var s=r[o],c=s.instance,l=s.currentTarget;if(s=s.listener,c!==a&&i.isPropagationStopped())break a;a=s,i.currentTarget=l;try{a(i)}catch(e){Oi(e)}i.currentTarget=null,a=c}else for(o=0;o<r.length;o++){if(s=r[o],c=s.instance,l=s.currentTarget,s=s.listener,c!==a&&i.isPropagationStopped())break a;a=s,i.currentTarget=l;try{a(i)}catch(e){Oi(e)}i.currentTarget=null,a=c}}}}function Q(e,t){var n=t[Ft];n===void 0&&(n=t[Ft]=new Set);var r=e+`__bubble`;n.has(r)||(Gf(t,e,2,!1),n.add(r))}function Hf(e,t,n){var r=0;t&&(r|=4),Gf(n,e,r,t)}var Uf=`_reactListening`+Math.random().toString(36).slice(2);function Wf(e){if(!e[Uf]){e[Uf]=!0,qt.forEach(function(t){t!==`selectionchange`&&(Bf.has(t)||Hf(t,!1,e),Hf(t,!0,e))});var t=e.nodeType===9?e:e.ownerDocument;t===null||t[Uf]||(t[Uf]=!0,Hf(`selectionchange`,!1,t))}}function Gf(e,t,n,r){switch(Ch(t)){case 2:var i=_h;break;case 8:i=vh;break;default:i=yh}n=i.bind(null,t,n,e),i=void 0,!In||t!==`touchstart`&&t!==`touchmove`&&t!==`wheel`||(i=!0),r?i===void 0?e.addEventListener(t,n,!0):e.addEventListener(t,n,{capture:!0,passive:i}):i===void 0?e.addEventListener(t,n,!1):e.addEventListener(t,n,{passive:i})}function Kf(e,t,n,r,i){var a=r;if(!(t&1)&&!(t&2)&&r!==null)a:for(;;){if(r===null)return;var s=r.tag;if(s===3||s===4){var c=r.stateNode.containerInfo;if(c===i)break;if(s===4)for(s=r.return;s!==null;){var l=s.tag;if((l===3||l===4)&&s.stateNode.containerInfo===i)return;s=s.return}for(;c!==null;){if(s=k(c),s===null)return;if(l=s.tag,l===5||l===6||l===26||l===27){r=a=s;continue a}c=c.parentNode}}r=r.return}Nn(function(){var r=a,i=On(n),s=[];a:{var c=xi.get(e);if(c!==void 0){var l=qn,u=e;switch(e){case`keypress`:if(Hn(n)===0)break a;case`keydown`:case`keyup`:l=dr;break;case`focusin`:u=`focus`,l=nr;break;case`focusout`:u=`blur`,l=nr;break;case`beforeblur`:case`afterblur`:l=nr;break;case`click`:if(n.button===2)break a;case`auxclick`:case`dblclick`:case`mousedown`:case`mousemove`:case`mouseup`:case`mouseout`:case`mouseover`:case`contextmenu`:l=er;break;case`drag`:case`dragend`:case`dragenter`:case`dragexit`:case`dragleave`:case`dragover`:case`dragstart`:case`drop`:l=tr;break;case`touchcancel`:case`touchend`:case`touchmove`:case`touchstart`:l=mr;break;case mi:case hi:case gi:l=rr;break;case bi:l=hr;break;case`scroll`:case`scrollend`:l=Yn;break;case`wheel`:l=gr;break;case`copy`:case`cut`:case`paste`:l=ir;break;case`gotpointercapture`:case`lostpointercapture`:case`pointercancel`:case`pointerdown`:case`pointermove`:case`pointerout`:case`pointerover`:case`pointerup`:l=fr;break;case`submit`:l=pr;break;case`toggle`:case`beforetoggle`:l=_r}var d=!!(t&4),f=!d&&(e===`scroll`||e===`scrollend`),p=d?c===null?null:c+`Capture`:c;d=[];for(var m=r,h;m!==null;){var g=m;if(h=g.stateNode,g=g.tag,g!==5&&g!==26&&g!==27||h===null||p===null||(g=Pn(m,p),g!=null&&d.push(qf(m,g,h))),f)break;m=m.return}0<d.length&&(c=new l(c,u,null,n,i),s.push({event:c,listeners:d}))}}if(!(t&7)){a:{if(l=e===`mouseover`||e===`pointerover`,c=e===`mouseout`||e===`pointerout`,l&&n!==Dn&&(u=n.relatedTarget||n.fromElement)&&(k(u)||u[Pt]))break a;(c||l)&&(u=i.window===i?i:(l=i.ownerDocument)?l.defaultView||l.parentWindow:window,c?(l=n.relatedTarget||n.toElement,c=r,l=l?k(l):null,l!==null&&(f=o(l),d=l.tag,l!==f||d!==5&&d!==27&&d!==6)&&(l=null)):(c=null,l=r),c!==l&&(d=er,g=`onMouseLeave`,p=`onMouseEnter`,m=`mouse`,(e===`pointerout`||e===`pointerover`)&&(d=fr,g=`onPointerLeave`,p=`onPointerEnter`,m=`pointer`),f=c==null?u:Ut(c),h=l==null?u:Ut(l),u=new d(g,m+`leave`,c,n,i),u.target=f,u.relatedTarget=h,g=null,k(i)===r&&(d=new d(p,m+`enter`,l,n,i),d.target=h,d.relatedTarget=f,g=d),f=g,d=c&&l?C(c,l,Yf):null,c!==null&&Xf(s,u,c,d,!1),l!==null&&f!==null&&Xf(s,f,l,d,!0)))}a:{if(c=r?Ut(r):window,l=c.nodeName&&c.nodeName.toLowerCase(),l===`select`||l===`input`&&c.type===`file`)var _=Lr;else if(jr(c)){if(Rr)_=qr;else{_=Gr;var v=Wr}}else l=c.nodeName,!l||l.toLowerCase()!==`input`||c.type!==`checkbox`&&c.type!==`radio`?r&&Sn(r.elementType)&&(_=Lr):_=Kr;if(_&&=_(e,r)){Mr(s,_,n,i);break a}v&&v(e,c,r)}switch(v=r?Ut(r):window,e){case`focusin`:(jr(v)||v.contentEditable===`true`)&&(ii=v,ai=r,oi=null);break;case`focusout`:oi=ai=ii=null;break;case`mousedown`:si=!0;break;case`contextmenu`:case`mouseup`:case`dragend`:si=!1,ci(s,n,i);break;case`selectionchange`:if(ri)break;case`keydown`:case`keyup`:ci(s,n,i)}var y;if(yr)b:{switch(e){case`compositionstart`:var b=`onCompositionStart`;break b;case`compositionend`:b=`onCompositionEnd`;break b;case`compositionupdate`:b=`onCompositionUpdate`;break b}b=void 0}else Dr?Tr(e,n)&&(b=`onCompositionEnd`):e===`keydown`&&n.keyCode===229&&(b=`onCompositionStart`);b&&(Sr&&n.locale!==`ko`&&(Dr||b!==`onCompositionStart`?b===`onCompositionEnd`&&Dr&&(y=Vn()):(Rn=i,zn=`value`in Rn?Rn.value:Rn.textContent,Dr=!0)),v=Jf(r,b),0<v.length&&(b=new ar(b,e,null,n,i),s.push({event:b,listeners:v}),y?b.data=y:(y=Er(n),y!==null&&(b.data=y)))),(y=xr?Or(e,n):kr(e,n))&&(b=Jf(r,`onBeforeInput`),0<b.length&&(v=new ar(`onBeforeInput`,`beforeinput`,null,n,i),s.push({event:v,listeners:b}),v.data=y)),If(s,e,r,n,i)}Vf(s,t)})}function qf(e,t,n){return{instance:e,listener:t,currentTarget:n}}function Jf(e,t){for(var n=t+`Capture`,r=[];e!==null;){var i=e,a=i.stateNode;if(i=i.tag,i!==5&&i!==26&&i!==27||a===null||(i=Pn(e,n),i!=null&&r.unshift(qf(e,i,a)),i=Pn(e,t),i!=null&&r.push(qf(e,i,a))),e.tag===3)return r;e=e.return}return[]}function Yf(e){if(e===null)return null;do e=e.return;while(e&&e.tag!==5&&e.tag!==27);return e||null}function Xf(e,t,n,r,i){for(var a=t._reactName,o=[];n!==null&&n!==r;){var s=n,c=s.alternate,l=s.stateNode;if(s=s.tag,c!==null&&c===r)break;s!==5&&s!==26&&s!==27||l===null||(c=l,i?(l=Pn(n,a),l!=null&&o.unshift(qf(n,l,c))):i||(l=Pn(n,a),l!=null&&o.push(qf(n,l,c)))),n=n.return}o.length!==0&&e.push({event:t,listeners:o})}var Zf=/\r\n?/g,Qf=/\u0000|\uFFFD/g;function $f(e){return(typeof e==`string`?e:``+e).replace(Zf,`
+`).replace(Qf,``)}function ep(e,t){return t=$f(t),$f(e)===t}function $(e,t,n,r,a,o){switch(n){case`children`:if(typeof r==`string`)t===`body`||t===`textarea`&&r===``||vn(e,r);else if(typeof r==`number`||typeof r==`bigint`)t!==`body`&&vn(e,``+r);else return;break;case`className`:rn(e,`class`,r);break;case`tabIndex`:rn(e,`tabindex`,r);break;case`dir`:case`role`:case`viewBox`:case`width`:case`height`:rn(e,n,r);break;case`style`:xn(e,r,o);return;case`data`:if(t!==`object`){rn(e,`data`,r);break}case`src`:case`href`:if(r===``&&(t!==`a`||n!==`href`)||r==null||typeof r==`function`||typeof r==`symbol`||typeof r==`boolean`){e.removeAttribute(n);break}r=Tn(r),e.setAttribute(n,r);break;case`action`:case`formAction`:if(typeof r==`function`){e.setAttribute(n,`javascript:throw new Error('A React form was unexpectedly submitted. If you called form.submit() manually, consider using form.requestSubmit() instead. If you\\'re trying to use event.stopPropagation() in a submit event handler, consider also calling event.preventDefault().')`);break}if(typeof o==`function`&&(n===`formAction`?(t!==`input`&&$(e,t,`name`,a.name,a,null),$(e,t,`formEncType`,a.formEncType,a,null),$(e,t,`formMethod`,a.formMethod,a,null),$(e,t,`formTarget`,a.formTarget,a,null)):($(e,t,`encType`,a.encType,a,null),$(e,t,`method`,a.method,a,null),$(e,t,`target`,a.target,a,null))),r==null||typeof r==`symbol`||typeof r==`boolean`){e.removeAttribute(n);break}r=Tn(r),e.setAttribute(n,r);break;case`onClick`:r!=null&&(e.onclick=En);return;case`onScroll`:r!=null&&Q(`scroll`,e);return;case`onScrollEnd`:r!=null&&Q(`scrollend`,e);return;case`dangerouslySetInnerHTML`:if(r!=null){if(typeof r!=`object`||!(`__html`in r))throw Error(i(61));if(n=r.__html,n!=null){if(a.children!=null)throw Error(i(60));o?.__html!==n&&(e.innerHTML=n)}}break;case`multiple`:e.multiple=r&&typeof r!=`function`&&typeof r!=`symbol`;break;case`muted`:e.muted=r&&typeof r!=`function`&&typeof r!=`symbol`;break;case`suppressContentEditableWarning`:case`suppressHydrationWarning`:case`defaultValue`:case`defaultChecked`:case`innerHTML`:case`ref`:break;case`autoFocus`:break;case`xlinkHref`:if(r==null||typeof r==`function`||typeof r==`boolean`||typeof r==`symbol`){e.removeAttribute(`xlink:href`);break}n=Tn(r),e.setAttributeNS(`http://www.w3.org/1999/xlink`,`xlink:href`,n);break;case`contentEditable`:case`spellCheck`:case`draggable`:case`value`:case`autoReverse`:case`externalResourcesRequired`:case`focusable`:case`preserveAlpha`:r!=null&&typeof r!=`function`&&typeof r!=`symbol`?e.setAttribute(n,r):e.removeAttribute(n);break;case`inert`:case`allowFullScreen`:case`async`:case`autoPlay`:case`controls`:case`credentialless`:case`default`:case`defer`:case`disabled`:case`disablePictureInPicture`:case`disableRemotePlayback`:case`formNoValidate`:case`hidden`:case`loop`:case`noModule`:case`noValidate`:case`open`:case`playsInline`:case`readOnly`:case`required`:case`reversed`:case`scoped`:case`seamless`:case`itemScope`:r&&typeof r!=`function`&&typeof r!=`symbol`?e.setAttribute(n,``):e.removeAttribute(n);break;case`capture`:case`download`:!0===r?e.setAttribute(n,``):!1!==r&&r!=null&&typeof r!=`function`&&typeof r!=`symbol`?e.setAttribute(n,r):e.removeAttribute(n);break;case`cols`:case`rows`:case`size`:case`span`:r!=null&&typeof r!=`function`&&typeof r!=`symbol`&&!isNaN(r)&&1<=r?e.setAttribute(n,r):e.removeAttribute(n);break;case`rowSpan`:case`start`:r==null||typeof r==`function`||typeof r==`symbol`||isNaN(r)?e.removeAttribute(n):e.setAttribute(n,r);break;case`popover`:Q(`beforetoggle`,e),Q(`toggle`,e),nn(e,`popover`,r);break;case`xlinkActuate`:an(e,`http://www.w3.org/1999/xlink`,`xlink:actuate`,r);break;case`xlinkArcrole`:an(e,`http://www.w3.org/1999/xlink`,`xlink:arcrole`,r);break;case`xlinkRole`:an(e,`http://www.w3.org/1999/xlink`,`xlink:role`,r);break;case`xlinkShow`:an(e,`http://www.w3.org/1999/xlink`,`xlink:show`,r);break;case`xlinkTitle`:an(e,`http://www.w3.org/1999/xlink`,`xlink:title`,r);break;case`xlinkType`:an(e,`http://www.w3.org/1999/xlink`,`xlink:type`,r);break;case`xmlBase`:an(e,`http://www.w3.org/XML/1998/namespace`,`xml:base`,r);break;case`xmlLang`:an(e,`http://www.w3.org/XML/1998/namespace`,`xml:lang`,r);break;case`xmlSpace`:an(e,`http://www.w3.org/XML/1998/namespace`,`xml:space`,r);break;case`is`:nn(e,`is`,r);break;case`innerText`:case`textContent`:return;default:if(!(2<n.length)||n[0]!==`o`&&n[0]!==`O`||n[1]!==`n`&&n[1]!==`N`)n=Cn.get(n)||n,nn(e,n,r);else return}A=!0}function tp(e,t,n,r,a,o){switch(n){case`style`:xn(e,r,o);return;case`dangerouslySetInnerHTML`:if(r!=null){if(typeof r!=`object`||!(`__html`in r))throw Error(i(61));if(n=r.__html,n!=null){if(a.children!=null)throw Error(i(60));o?.__html!==n&&(e.innerHTML=n)}}break;case`children`:if(typeof r==`string`)vn(e,r);else if(typeof r==`number`||typeof r==`bigint`)vn(e,``+r);else return;break;case`onScroll`:r!=null&&Q(`scroll`,e);return;case`onScrollEnd`:r!=null&&Q(`scrollend`,e);return;case`onClick`:r!=null&&(e.onclick=En);return;case`suppressContentEditableWarning`:case`suppressHydrationWarning`:case`innerHTML`:case`ref`:return;case`innerText`:case`textContent`:return;default:if(!Jt.hasOwnProperty(n))a:{if(n[0]===`o`&&n[1]===`n`&&(a=n.endsWith(`Capture`),o=n.slice(2,a?n.length-7:void 0),t=e[Nt]||null,t=t==null?null:t[n],typeof t==`function`&&e.removeEventListener(o,t,a),typeof r==`function`)){typeof t!=`function`&&t!==null&&(n in e?e[n]=null:e.hasAttribute(n)&&e.removeAttribute(n)),e.addEventListener(o,r,a);break a}A=!0,n in e?e[n]=r:!0===r?e.setAttribute(n,``):nn(e,n,r)}return}A=!0}function np(e,t,n){switch(t){case`div`:case`span`:case`svg`:case`path`:case`a`:case`g`:case`p`:case`li`:break;case`img`:Q(`error`,e),Q(`load`,e);var r=!1,a=!1,o;for(o in n)if(n.hasOwnProperty(o)){var s=n[o];if(s!=null)switch(o){case`src`:r=!0;break;case`srcSet`:a=!0;break;case`children`:case`dangerouslySetInnerHTML`:throw Error(i(137,t));default:$(e,t,o,s,n,null)}}a&&$(e,t,`srcSet`,n.srcSet,n,null),r&&$(e,t,`src`,n.src,n,null);return;case`input`:Q(`invalid`,e);var c=o=s=a=null,l=null,u=null;for(r in n)if(n.hasOwnProperty(r)){var d=n[r];if(d!=null)switch(r){case`name`:a=d;break;case`type`:s=d;break;case`checked`:l=d;break;case`defaultChecked`:u=d;break;case`value`:o=d;break;case`defaultValue`:c=d;break;case`children`:case`dangerouslySetInnerHTML`:if(d!=null)throw Error(i(137,t));break;default:$(e,t,r,d,n,null)}}pn(e,o,c,l,u,s,a,!1);return;case`select`:for(a in Q(`invalid`,e),r=s=o=null,n)if(n.hasOwnProperty(a)&&(c=n[a],c!=null))switch(a){case`value`:o=c;break;case`defaultValue`:s=c;break;case`multiple`:r=c;default:$(e,t,a,c,n,null)}t=o,n=s,e.multiple=!!r,t==null?n!=null&&hn(e,!!r,n,!0):hn(e,!!r,t,!1);return;case`textarea`:for(s in Q(`invalid`,e),o=a=r=null,n)if(n.hasOwnProperty(s)&&(c=n[s],c!=null))switch(s){case`value`:r=c;break;case`defaultValue`:a=c;break;case`children`:o=c;break;case`dangerouslySetInnerHTML`:if(c!=null)throw Error(i(91));break;default:$(e,t,s,c,n,null)}_n(e,r,a,o);return;case`option`:for(l in n)if(n.hasOwnProperty(l)&&(r=n[l],r!=null))switch(l){case`selected`:e.selected=r&&typeof r!=`function`&&typeof r!=`symbol`;break;default:$(e,t,l,r,n,null)}return;case`dialog`:Q(`beforetoggle`,e),Q(`toggle`,e),Q(`cancel`,e),Q(`close`,e);break;case`iframe`:case`object`:Q(`load`,e);break;case`video`:case`audio`:for(r=0;r<zf.length;r++)Q(zf[r],e);break;case`image`:Q(`error`,e),Q(`load`,e);break;case`details`:Q(`toggle`,e);break;case`embed`:case`source`:case`link`:Q(`error`,e),Q(`load`,e);case`area`:case`base`:case`br`:case`col`:case`hr`:case`keygen`:case`meta`:case`param`:case`track`:case`wbr`:case`menuitem`:for(u in n)if(n.hasOwnProperty(u)&&(r=n[u],r!=null))switch(u){case`children`:case`dangerouslySetInnerHTML`:throw Error(i(137,t));default:$(e,t,u,r,n,null)}return;default:if(Sn(t)){for(d in n)n.hasOwnProperty(d)&&(r=n[d],r!==void 0&&tp(e,t,d,r,n,void 0));return}}for(c in n)n.hasOwnProperty(c)&&(r=n[c],r!=null&&$(e,t,c,r,n,null))}var rp={};function ip(e,t,n,r){switch(t){case`div`:case`span`:case`svg`:case`path`:case`a`:case`g`:case`p`:case`li`:break;case`input`:var a=null,o=null,s=null,c=null,l=null,u=null,d=null;for(m in n){var f=n[m];if(n.hasOwnProperty(m)&&f!=null)switch(m){case`checked`:break;case`value`:break;case`defaultValue`:l=f;default:r.hasOwnProperty(m)||$(e,t,m,null,r,f)}}for(var p in r){var m=r[p];if(f=n[p],r.hasOwnProperty(p)&&(m!=null||f!=null))switch(p){case`type`:m!==f&&(A=!0),o=m;break;case`name`:m!==f&&(A=!0),a=m;break;case`checked`:m!==f&&(A=!0),u=m;break;case`defaultChecked`:m!==f&&(A=!0),d=m;break;case`value`:m!==f&&(A=!0),s=m;break;case`defaultValue`:m!==f&&(A=!0),c=m;break;case`children`:case`dangerouslySetInnerHTML`:if(m!=null)throw Error(i(137,t));break;default:m!==f&&$(e,t,p,m,r,f)}}j(e,s,c,l,u,d,o,a);return;case`select`:for(o in m=s=c=p=null,n)if(l=n[o],n.hasOwnProperty(o)&&l!=null)switch(o){case`value`:break;case`multiple`:m=l;default:r.hasOwnProperty(o)||$(e,t,o,null,r,l)}for(a in r)if(o=r[a],l=n[a],r.hasOwnProperty(a)&&(o!=null||l!=null))switch(a){case`value`:o!==l&&(A=!0),p=o;break;case`defaultValue`:o!==l&&(A=!0),c=o;break;case`multiple`:o!==l&&(A=!0),s=o;default:o!==l&&$(e,t,a,o,r,l)}t=c,n=s,r=m,p==null?!!r!=!!n&&(t==null?hn(e,!!n,n?[]:``,!1):hn(e,!!n,t,!0)):hn(e,!!n,p,!1);return;case`textarea`:for(c in m=p=null,n)if(a=n[c],n.hasOwnProperty(c)&&a!=null&&!r.hasOwnProperty(c))switch(c){case`value`:break;case`children`:break;default:$(e,t,c,null,r,a)}for(s in r)if(a=r[s],o=n[s],r.hasOwnProperty(s)&&(a!=null||o!=null))switch(s){case`value`:a!==o&&(A=!0),p=a;break;case`defaultValue`:a!==o&&(A=!0),m=a;break;case`children`:break;case`dangerouslySetInnerHTML`:if(a!=null)throw Error(i(91));break;default:a!==o&&$(e,t,s,a,r,o)}gn(e,p,m);return;case`option`:for(var h in n)if(p=n[h],n.hasOwnProperty(h)&&p!=null&&!r.hasOwnProperty(h))switch(h){case`selected`:e.selected=!1;break;default:$(e,t,h,null,r,p)}for(l in r)if(p=r[l],m=n[l],r.hasOwnProperty(l)&&p!==m&&(p!=null||m!=null))switch(l){case`selected`:p!==m&&(A=!0),e.selected=p&&typeof p!=`function`&&typeof p!=`symbol`;break;default:$(e,t,l,p,r,m)}return;case`img`:case`link`:case`area`:case`base`:case`br`:case`col`:case`embed`:case`hr`:case`keygen`:case`meta`:case`param`:case`source`:case`track`:case`wbr`:case`menuitem`:for(var g in n)p=n[g],n.hasOwnProperty(g)&&p!=null&&!r.hasOwnProperty(g)&&$(e,t,g,null,r,p);for(u in r)if(p=r[u],m=n[u],r.hasOwnProperty(u)&&p!==m&&(p!=null||m!=null))switch(u){case`children`:case`dangerouslySetInnerHTML`:if(p!=null)throw Error(i(137,t));break;default:$(e,t,u,p,r,m)}return;default:if(Sn(t)){for(var _ in n)p=n[_],n.hasOwnProperty(_)&&p!==void 0&&!r.hasOwnProperty(_)&&tp(e,t,_,void 0,r,p);for(d in r)p=r[d],m=n[d],!r.hasOwnProperty(d)||p===m||p===void 0&&m===void 0||tp(e,t,d,p,r,m);return}}for(var v in n)p=n[v],n.hasOwnProperty(v)&&p!=null&&!r.hasOwnProperty(v)&&$(e,t,v,null,r,p);for(f in r)p=r[f],m=n[f],!r.hasOwnProperty(f)||p===m||p==null&&m==null||$(e,t,f,p,r,m)}function ap(e){switch(e){case`css`:case`script`:case`font`:case`img`:case`image`:case`input`:case`link`:return!0;default:return!1}}function op(){if(typeof performance.getEntriesByType==`function`){for(var e=0,t=0,n=performance.getEntriesByType(`resource`),r=0;r<n.length;r++){var i=n[r],a=i.transferSize,o=i.initiatorType,s=i.duration;if(a&&s&&ap(o)){for(o=0,s=i.responseEnd,r+=1;r<n.length;r++){var c=n[r],l=c.startTime;if(l>s)break;var u=c.transferSize,d=c.initiatorType;u&&ap(d)&&(c=c.responseEnd,o+=u*(c<s?1:(s-l)/(c-l)))}if(--r,t+=8*(a+o)/(i.duration/1e3),e++,10<e)break}}if(0<e)return t/e/1e6}return navigator.connection&&(e=navigator.connection.downlink,typeof e==`number`)?e:5}var sp=null,cp=null;function lp(e){return e.nodeType===9?e:e.ownerDocument}function up(e){switch(e){case`http://www.w3.org/2000/svg`:return 1;case`http://www.w3.org/1998/Math/MathML`:return 2;default:return 0}}function dp(e,t){if(e===0)switch(t){case`svg`:return 1;case`math`:return 2;default:return 0}return e===1&&t===`foreignObject`?0:e}function fp(e,t,n,r){return n=lp(n).createElement(e),n[Mt]=r,n[Nt]=t,np(n,e,t),Gt(n),n}function pp(e,t){return e===`textarea`||e===`noscript`||typeof t.children==`string`||typeof t.children==`number`||typeof t.children==`bigint`||typeof t.dangerouslySetInnerHTML==`object`&&t.dangerouslySetInnerHTML!==null&&t.dangerouslySetInnerHTML.__html!=null}var mp=null;function hp(){var e=window.event;return e&&e.type===`popstate`?e!==mp&&(mp=e,!0):(mp=null,!1)}var gp=typeof setTimeout==`function`?setTimeout:void 0,_p=typeof clearTimeout==`function`?clearTimeout:void 0,vp=typeof Promise==`function`?Promise:void 0,yp=typeof requestAnimationFrame==`function`?requestAnimationFrame:gp,bp=typeof queueMicrotask==`function`?queueMicrotask:vp===void 0?gp:function(e){return vp.resolve(null).then(e).catch(xp)};function xp(e){setTimeout(function(){throw e})}function Sp(e){return e===`head`}function Cp(e,t){var n=t,r=0;do{var i=n.nextSibling;if(e.removeChild(n),i&&i.nodeType===8){if(n=i.data,n===`/$`||n===`/&`){if(r===0){e.removeChild(i),Hh(t);return}r--}else if(n===`$`||n===`$?`||n===`$~`||n===`$!`||n===`&`)r++;else if(n===`html`)_m(e.ownerDocument.documentElement);else if(n===`head`){n=e.ownerDocument.head,_m(n);for(var a=n.firstChild;a;){var o=a.nextSibling,s=a.nodeName;a[zt]||s===`SCRIPT`||s===`STYLE`||s===`LINK`&&a.rel.toLowerCase()===`stylesheet`||n.removeChild(a),a=o}}else n===`body`&&_m(e.ownerDocument.body)}n=i}while(n);Hh(t)}function wp(e,t){var n=e;e=0;do{var r=n.nextSibling;if(n.nodeType===1?t?(n._stashedDisplay=n.style.display,n.style.display=`none`):(n.style.display=n._stashedDisplay||``,n.getAttribute(`style`)===``&&n.removeAttribute(`style`)):n.nodeType===3&&(t?(n._stashedText=n.nodeValue,n.nodeValue=``):n.nodeValue=n._stashedText||``),r&&r.nodeType===8){if(n=r.data,n===`/$`){if(e===0)break;e--}else n!==`$`&&n!==`$?`&&n!==`$~`&&n!==`$!`||e++}n=r}while(n)}function Tp(e,t,n){if(t=CSS.escape(t)===t?t:`r-`+btoa(t).replace(/=/g,``),e.style.viewTransitionName=t,n!=null&&(e.style.viewTransitionClass=n),n=getComputedStyle(e),n.display===`inline`){if(t=e.getClientRects(),t.length===1)var r=1;else for(var i=r=0;i<t.length;i++){var a=t[i];0<a.width&&0<a.height&&r++}r===1&&(e=e.style,e.display=t.length===1?`inline-block`:`block`,e.marginTop=`-`+n.paddingTop,e.marginBottom=`-`+n.paddingBottom)}}function Ep(e,t){e=e.style,t=t.style;var n=t==null?null:t.hasOwnProperty(`viewTransitionName`)?t.viewTransitionName:t.hasOwnProperty(`view-transition-name`)?t[`view-transition-name`]:null;e.viewTransitionName=n==null||typeof n==`boolean`?``:(``+n).trim(),n=t==null?null:t.hasOwnProperty(`viewTransitionClass`)?t.viewTransitionClass:t.hasOwnProperty(`view-transition-class`)?t[`view-transition-class`]:null,e.viewTransitionClass=n==null||typeof n==`boolean`?``:(``+n).trim(),e.display===`inline-block`&&(t==null?e.display=e.margin=``:(n=t.display,e.display=n==null||typeof n==`boolean`?``:n,n=t.margin,n==null?(n=t.hasOwnProperty(`marginTop`)?t.marginTop:t[`margin-top`],e.marginTop=n==null||typeof n==`boolean`?``:n,t=t.hasOwnProperty(`marginBottom`)?t.marginBottom:t[`margin-bottom`],e.marginBottom=t==null||typeof t==`boolean`?``:t):e.margin=n))}function Dp(e,t,n){return n=n.ownerDocument.defaultView,{rect:e,abs:t.position===`absolute`||t.position===`fixed`,clip:t.clipPath!==`none`||t.overflow!==`visible`||t.filter!==`none`||t.mask!==`none`||t.mask!==`none`||t.borderRadius!==`0px`,view:0<=e.bottom&&0<=e.right&&e.top<=n.innerHeight&&e.left<=n.innerWidth}}function Op(e){return Dp(e.getBoundingClientRect(),getComputedStyle(e),e)}function kp(e){var t=e.getBoundingClientRect();t=new DOMRect(t.x+2e4,t.y+2e4,t.width,t.height);var n=getComputedStyle(e);return Dp(t,n,e)}function Ap(e){return e.documentElement.clientHeight}function jp(e){this.addEventListener(`load`,e),this.addEventListener(`error`,e)}function Mp(e,t,n,r,i,a,o,s,c){var l=t.nodeType===9?t:t.ownerDocument;try{var u=l.startViewTransition({update:function(){var t=l.defaultView,n=t.navigation&&t.navigation.transition,o=l.fonts.status;r();var s=[];if(o===`loaded`&&(Ap(l),l.fonts.status===`loading`&&s.push(l.fonts.ready)),o=s.length,e!==null)for(var c=e.suspenseyImages,u=0,d=0;d<c.length;d++){var f=c[d];if(!f.complete){var p=f.getBoundingClientRect();if(0<p.bottom&&0<p.right&&p.top<t.innerHeight&&p.left<t.innerWidth){if(u+=Xm(f),u>$m){s.length=o;break}f=new Promise(jp.bind(f)),s.push(f)}}}if(0<s.length)return t=Promise.race([Promise.all(s),new Promise(function(e){return setTimeout(e,500)})]).then(i,i),(n?Promise.allSettled([n.finished,t]):t).then(a,a);if(i(),n)return n.finished.then(a,a);a()},types:n});l.__reactViewTransition=u;var d=[];return u.ready.then(function(){for(var e=l.documentElement.getAnimations({subtree:!0}),t=0;t<e.length;t++){var n=e[t],r=n.effect,i=r.pseudoElement;if(i!=null&&i.startsWith(`::view-transition`)){d.push(n),n=r.getKeyframes();for(var a=i=void 0,s=!0,c=0;c<n.length;c++){var u=n[c],f=u.width;if(i===void 0)i=f;else if(i!==f){s=!1;break}if(f=u.height,a===void 0)a=f;else if(a!==f){s=!1;break}delete u.width,delete u.height,u.transform===`none`&&delete u.transform}s&&i!==void 0&&a!==void 0&&(r.setKeyframes(n),s=getComputedStyle(r.target,r.pseudoElement),s.width!==i||s.height!==a)&&(s=n[0],s.width=i,s.height=a,s=n[n.length-1],s.width=i,s.height=a,r.setKeyframes(n))}}o()},function(e){l.__reactViewTransition===u&&(l.__reactViewTransition=null);try{if(typeof e==`object`&&e)switch(e.name){case`InvalidStateError`:(e.message===`View transition was skipped because document visibility state is hidden.`||e.message===`Skipping view transition because document visibility state has become hidden.`||e.message===`Skipping view transition because viewport size changed.`||e.message===`Transition was aborted because of invalid state`)&&(e=null)}e!==null&&c(e)}finally{r(),i(),o()}}),u.finished.finally(function(){for(var e=0;e<d.length;e++)d[e].cancel();l.__reactViewTransition===u&&(l.__reactViewTransition=null),s()}),u}catch{return r(),i(),o(),null}}function Np(e,t){this._scope=document.documentElement,this._selector=`::view-transition-`+e+`(`+t+`)`}Np.prototype.animate=function(e,t){return t=typeof t==`number`?{duration:t}:w({},t),t.pseudoElement=this._selector,this._scope.animate(e,t)},Np.prototype.getAnimations=function(){for(var e=this._scope,t=this._selector,n=e.getAnimations({subtree:!0}),r=[],i=0;i<n.length;i++){var a=n[i].effect;a!==null&&a.target===e&&a.pseudoElement===t&&r.push(n[i])}return r},Np.prototype.getComputedStyle=function(){return getComputedStyle(this._scope,this._selector)};function Pp(e){return{name:e,group:new Np(`group`,e),imagePair:new Np(`image-pair`,e),old:new Np(`old`,e),new:new Np(`new`,e)}}function Fp(e){this._fragmentFiber=e,this._observers=this._eventListeners=null}Fp.prototype.addEventListener=function(e,t,n){var r=null,i=null;if(!(n!=null&&typeof n!=`boolean`&&(r=n.signal||null,r!==null&&r.aborted))){this._eventListeners===null&&(this._eventListeners=[]);var a=this._eventListeners;if(Bp(a,e,t,n)===-1){var o=this,s=t;n!=null&&typeof n!=`boolean`&&!0===n.once&&(s=function(r){o.removeEventListener(e,t,n),typeof t==`function`?t.call(this,r):t.handleEvent(r)}),r!==null&&(i=o.removeEventListener.bind(o,e,t,n),r.addEventListener(`abort`,i,{once:!0}),i=r.removeEventListener.bind(r,`abort`,i)),r=Rp(n),a.push({type:e,listener:t,optionsOrUseCapture:n,attachedListener:s,cleanup:i}),h(this._fragmentFiber.child,!1,Ip,e,s,r)}this._eventListeners=a}};function Ip(e,t,n,r){return b(e).addEventListener(t,n,r),!1}Fp.prototype.removeEventListener=function(e,t,n){var r=this._eventListeners;if(r!==null&&(t=Bp(r,e,t,n),t!==-1)){var i=r[t];n=i.attachedListener;var a=i.cleanup;i=Rp(i.optionsOrUseCapture),h(this._fragmentFiber.child,!1,Lp,e,n,i),r.splice(t,1),a!==null&&a()}};function Lp(e,t,n,r){return b(e).removeEventListener(t,n,r),!1}function Rp(e){return e!=null&&typeof e!=`boolean`&&(!0===e.once||e.signal instanceof AbortSignal)?{capture:e.capture,passive:e.passive}:e}function zp(e){return e==null?`c=0`:typeof e==`boolean`?`c=`+(e?`1`:`0`):`c=`+(e.capture?`1`:`0`)}function Bp(e,t,n,r){if(e.length===0)return-1;r=zp(r);for(var i=0;i<e.length;i++){var a=e[i];if(a.type===t&&a.listener===n&&zp(a.optionsOrUseCapture)===r)return i}return-1}Fp.prototype.dispatchEvent=function(e){var t=g(this._fragmentFiber);if(t===null)return!0;t=b(t);var n=this._eventListeners;if(n!==null&&0<n.length||!e.bubbles){var r=t.nodeType===9?t.createComment(``):document.createTextNode(``);if(n)for(var i=0;i<n.length;i++){var a=n[i];r.addEventListener(a.type,a.attachedListener,Rp(a.optionsOrUseCapture))}if(t.appendChild(r),e=r.dispatchEvent(e),n)for(i=0;i<n.length;i++)a=n[i],r.removeEventListener(a.type,a.attachedListener,Rp(a.optionsOrUseCapture));return t.removeChild(r),e}return t.dispatchEvent(e)},Fp.prototype.focus=function(e){h(this._fragmentFiber.child,!0,Vp,e,void 0,void 0)};function Vp(e,t){return e.tag!==6&&(e=b(e),pm(e,t))}Fp.prototype.focusLast=function(e){var t=[];h(this._fragmentFiber.child,!0,Hp,t,void 0,void 0);for(var n=t.length-1;0<=n&&!Vp(t[n],e);n--);};function Hp(e,t){return t.push(e),!1}Fp.prototype.blur=function(){var e=g(this._fragmentFiber);e!==null&&(e=b(e),e=lp(e).activeElement,e!==null&&h(this._fragmentFiber.child,!1,Up,e,void 0,void 0))};function Up(e,t){return e.tag!==6&&(e=b(e),e===t||e.contains(t)?(t.blur(),!0):!1)}Fp.prototype.observeUsing=function(e){this._observers===null&&(this._observers=new Set),this._observers.add(e),h(this._fragmentFiber.child,!1,Wp,e,void 0,void 0)};function Wp(e,t){return e.tag===6||(e=b(e),t.observe(e)),!1}Fp.prototype.unobserveUsing=function(e){var t=this._observers;if(t!==null&&t.has(e)){t.delete(e),h(this._fragmentFiber.child,!1,Gp,e,void 0,void 0);for(var n=t=0;n<Kp.length;n++){var r=Kp[n];r.fragmentInstance===this&&r.observer===e?e.unobserve(r.instance):Kp[t++]=r}Kp.length=t}};function Gp(e,t){return e.tag===6||(e=b(e),t.unobserve(e)),!1}var Kp=[],qp=!1;function Jp(e,t,n){Kp.push({fragmentInstance:e,observer:t,instance:n}),qp||(qp=!0,mm(function(){qp=!1;var e=Kp;Kp=[];for(var t=0;t<e.length;t++){var n=e[t];n.observer.unobserve(n.instance)}}))}Fp.prototype.getClientRects=function(){var e=[];return h(this._fragmentFiber.child,!1,Yp,e,void 0,void 0),e};function Yp(e,t){if(e.tag===6){e=e.stateNode;var n=e.ownerDocument.createRange();n.selectNodeContents(e),t.push.apply(t,n.getClientRects())}else e=b(e),t.push.apply(t,e.getClientRects());return!1}Fp.prototype.getRootNode=function(e){var t=g(this._fragmentFiber);return t===null?this:b(t).getRootNode(e)},Fp.prototype.compareDocumentPosition=function(e){var t=g(this._fragmentFiber);if(t===null)return Node.DOCUMENT_POSITION_DISCONNECTED;var n=[];h(this._fragmentFiber.child,!1,Hp,n,void 0,void 0);var r=b(t);if(n.length===0){if(n=r,_(this._fragmentFiber)){a:{for(t=this._fragmentFiber.return;t!==null;){if(t.tag===4){t=t.stateNode.containerInfo;break a}if(t.tag===3||t.tag===5||t.tag===27)break;t=t.return}t=null}t!=null&&(n=t)}t=this._fragmentFiber;var i=r=n.compareDocumentPosition(e);return n===e?i=Node.DOCUMENT_POSITION_CONTAINS:r&Node.DOCUMENT_POSITION_CONTAINED_BY&&(n=v(t)[1],n===null?i=Node.DOCUMENT_POSITION_PRECEDING:(e=b(n).compareDocumentPosition(e),i=e===0||e&Node.DOCUMENT_POSITION_FOLLOWING?Node.DOCUMENT_POSITION_FOLLOWING:Node.DOCUMENT_POSITION_PRECEDING)),i|=Node.DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC}t=b(n[0]),i=b(n[n.length-1]);var a=_(this._fragmentFiber)?t.parentElement:r;if(a==null)return Node.DOCUMENT_POSITION_DISCONNECTED;r=a.compareDocumentPosition(t)&Node.DOCUMENT_POSITION_CONTAINED_BY,a=a.compareDocumentPosition(i)&Node.DOCUMENT_POSITION_CONTAINED_BY;var o=t.compareDocumentPosition(e),s=i.compareDocumentPosition(e),c=o&Node.DOCUMENT_POSITION_CONTAINED_BY||s&Node.DOCUMENT_POSITION_CONTAINED_BY;return s=r&&a&&o&Node.DOCUMENT_POSITION_FOLLOWING&&s&Node.DOCUMENT_POSITION_PRECEDING,t=r&&t===e||a&&i===e||c||s?Node.DOCUMENT_POSITION_CONTAINED_BY:!r&&t===e||!a&&i===e?Node.DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC:o,t&Node.DOCUMENT_POSITION_DISCONNECTED||t&Node.DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC||Xp(t,this._fragmentFiber,n[0],n[n.length-1],e)?t:Node.DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC};function Xp(e,t,n,r,i){var a=k(i);if(e&Node.DOCUMENT_POSITION_CONTAINED_BY){if(n=!!a)a:{for(;a!==null;){if(a.tag===7&&(a===t||a.alternate===t)){n=!0;break a}a=a.return}n=!1}return n}if(e&Node.DOCUMENT_POSITION_CONTAINS){if(a===null)return a=i.ownerDocument,i===a||i===a.documentElement||i===a.body;a:{for(a=t,t=g(t);a!==null;){if(!(a.tag!==5&&a.tag!==3&&a.tag!==27||a!==t&&a.alternate!==t)){a=!0;break a}a=a.return}a=!1}return a}return e&Node.DOCUMENT_POSITION_PRECEDING?((t=!!a)&&!(t=a===n)&&(t=C(n,a,S),t===null?t=!1:(h(t,!0,ne,a,n),a=ee,ee=null,t=a!==null)),t):e&Node.DOCUMENT_POSITION_FOLLOWING?((t=!!a)&&!(t=a===r)&&(t=C(r,a,S),t===null?t=!1:(h(t,!0,x,a,r),a=ee,te=ee=null,t=a!==null)),t):!1}function Zp(e,t){var n=e.ownerDocument.createRange();n.selectNodeContents(e),e=n.getBoundingClientRect(),window.scrollTo(window.scrollX+e.left,t?window.scrollY+e.top:window.scrollY+e.bottom-window.innerHeight)}Fp.prototype.scrollIntoView=function(e){if(typeof e==`object`)throw Error(i(566));var t=[];h(this._fragmentFiber.child,!1,Hp,t,void 0,void 0);var n=!1!==e;if(t.length===0){var r=v(this._fragmentFiber);if(r=n?r[1]||r[0]||g(this._fragmentFiber):r[0]||r[1],r===null)return;if(r.tag===6){e=b(r),Zp(e,n);return}if(r=b(r),r.nodeType!==9){if(r.nodeType===11){n=`host`in r?r.host:null,n!==null&&n.scrollIntoView(e);return}r.scrollIntoView(e)}}for(r=n?t.length-1:0;r!==(n?-1:t.length);){var a=t[r];a.tag===6?(a=b(a),Zp(a,n)):b(a).scrollIntoView(e),r+=n?-1:1}};function Qp(e,t){return e=b(e),$p(e,t),!1}function $p(e,t){e.reactFragments??=new Set,e.reactFragments.add(t)}function em(e,t){var n=t._eventListeners;if(n!==null)for(var r=0;r<n.length;r++){var i=n[r];e.addEventListener(i.type,i.attachedListener,Rp(i.optionsOrUseCapture))}e.nodeType!==3&&(n=t._observers,n!==null&&n.forEach(function(n){for(var r=0,i=0;i<Kp.length;i++){var a=Kp[i];(a.fragmentInstance!==t||a.observer!==n||a.instance!==e)&&(Kp[r++]=a)}Kp.length=r,n.observe(e)}),$p(e,t))}function tm(e,t){var n=t._eventListeners;if(n!==null)for(var r=0;r<n.length;r++){var i=n[r];e.removeEventListener(i.type,i.attachedListener,Rp(i.optionsOrUseCapture))}e.nodeType!==3&&(n=t._observers,n!==null&&n.forEach(function(n){typeof n.rootMargin==`string`?Jp(t,n,e):n.unobserve(e)}),e.reactFragments!=null&&e.reactFragments.delete(t))}function nm(e){var t=e.firstChild;for(t&&t.nodeType===10&&(t=t.nextSibling);t;){var n=t;switch(t=t.nextSibling,n.nodeName){case`HTML`:case`HEAD`:case`BODY`:nm(n),Vt(n);continue;case`SCRIPT`:case`STYLE`:continue;case`LINK`:if(n.rel.toLowerCase()===`stylesheet`)continue}e.removeChild(n)}}function rm(e,t,n,r){for(;e.nodeType===1;){var i=n;if(e.nodeName.toLowerCase()!==t.toLowerCase()){if(!r&&(e.nodeName!==`INPUT`||e.type!==`hidden`))break}else if(!r){if(t===`input`&&e.type===`hidden`){var a=i.name==null?null:``+i.name;if(i.type===`hidden`&&e.getAttribute(`name`)===a)return e}else return e}else if(!e[zt])switch(t){case`meta`:if(!e.hasAttribute(`itemprop`))break;return e;case`link`:if(a=e.getAttribute(`rel`),a===`stylesheet`&&e.hasAttribute(`data-precedence`)||a!==i.rel||e.getAttribute(`href`)!==(i.href==null||i.href===``?null:i.href)||e.getAttribute(`crossorigin`)!==(i.crossOrigin==null?null:i.crossOrigin)||e.getAttribute(`title`)!==(i.title==null?null:i.title))break;return e;case`style`:if(e.hasAttribute(`data-precedence`))break;return e;case`script`:if(a=e.getAttribute(`src`),(a!==(i.src==null?null:i.src)||e.getAttribute(`type`)!==(i.type==null?null:i.type)||e.getAttribute(`crossorigin`)!==(i.crossOrigin==null?null:i.crossOrigin))&&a&&e.hasAttribute(`async`)&&!e.hasAttribute(`itemprop`))break;return e;default:return e}if(e=lm(e.nextSibling),e===null)break}return null}function im(e,t,n){if(t===``)return null;for(;e.nodeType!==3;)if((e.nodeType!==1||e.nodeName!==`INPUT`||e.type!==`hidden`)&&!n||(e=lm(e.nextSibling),e===null))return null;return e}function am(e,t){for(;e.nodeType!==8;)if((e.nodeType!==1||e.nodeName!==`INPUT`||e.type!==`hidden`)&&!t||(e=lm(e.nextSibling),e===null))return null;return e}function om(e){return e.data===`$?`||e.data===`$~`}function sm(e){return e.data===`$!`||e.data===`$?`&&e.ownerDocument.readyState!==`loading`}function cm(e,t){var n=e.ownerDocument;if(e.data===`$~`)e._reactRetry=t;else if(e.data!==`$?`||n.readyState!==`loading`)t();else{var r=function(){t(),n.removeEventListener(`DOMContentLoaded`,r)};n.addEventListener(`DOMContentLoaded`,r),e._reactRetry=r}}function lm(e){for(;e!=null;e=e.nextSibling){var t=e.nodeType;if(t===1||t===3)break;if(t===8){if(t=e.data,t===`$`||t===`$!`||t===`$?`||t===`$~`||t===`&`||t===`F!`||t===`F`)break;if(t===`/$`||t===`/&`)return null}}return e}var um=null;function dm(e){e=e.nextSibling;for(var t=0;e;){if(e.nodeType===8){var n=e.data;if(n===`/$`||n===`/&`){if(t===0)return lm(e.nextSibling);t--}else n!==`$`&&n!==`$!`&&n!==`$?`&&n!==`$~`&&n!==`&`||t++}e=e.nextSibling}return null}function fm(e){e=e.previousSibling;for(var t=0;e;){if(e.nodeType===8){var n=e.data;if(n===`$`||n===`$!`||n===`$?`||n===`$~`||n===`&`){if(t===0)return e;t--}else n!==`/$`&&n!==`/&`||t++}e=e.previousSibling}return null}function pm(e,t){function n(){r=!0}if(e.ownerDocument.activeElement===e)return!0;var r=!1;try{e.ownerDocument.addEventListener(`focus`,n,!0),(e.focus||HTMLElement.prototype.focus).call(e,t)}finally{e.ownerDocument.removeEventListener(`focus`,n,!0)}return r}function mm(e){yp(function(){yp(function(t){return e(t)})})}function hm(e,t,n){switch(t=lp(n),e){case`html`:if(e=t.documentElement,!e)throw Error(i(452));return e;case`head`:if(e=t.head,!e)throw Error(i(453));return e;case`body`:if(e=t.body,!e)throw Error(i(454));return e;default:throw Error(i(451))}}function gm(e,t,n){for(var r in n){var i=n[r];n.hasOwnProperty(r)&&i!=null&&$(e,t,r,null,rp,i)}n.dangerouslySetInnerHTML!=null&&(e.textContent=``),e.onclick===En&&(e.onclick=null),Vt(e)}function _m(e){for(var t=e.attributes;t.length;)e.removeAttributeNode(t[0]);Vt(e)}var vm=new Map,ym=new Set;function bm(e){if(typeof e.getRootNode==`function`){var t=e.getRootNode();if(t.nodeType===9||t.nodeType===11)return t}return e.nodeType===9?e:e.ownerDocument}var xm=E.d;E.d={f:Sm,r:Cm,D:Em,C:Dm,L:Om,m:km,X:jm,S:Am,M:Mm};function Sm(){var e=xm.f(),t=zd();return e||t}function Cm(e){var t=Ht(e);t!==null&&t.tag===5&&t.type===`form`?oc(t):xm.r(e)}var wm=typeof document>`u`?null:document;function Tm(e,t,n){var r=wm;if(r&&typeof t==`string`&&t){var i=fn(t);i=`link[rel="`+e+`"][href="`+i+`"]`,typeof n==`string`&&(i+=`[crossorigin="`+n+`"]`),ym.has(i)||(ym.add(i),e={rel:e,crossOrigin:n,href:t},r.querySelector(i)===null&&(t=r.createElement(`link`),np(t,`link`,e),Gt(t),r.head.appendChild(t)))}}function Em(e){xm.D(e),Tm(`dns-prefetch`,e,null)}function Dm(e,t){xm.C(e,t),Tm(`preconnect`,e,t)}function Om(e,t,n){xm.L(e,t,n);var r=wm;if(r&&e&&t){var i=`link[rel="preload"][as="`+fn(t)+`"]`;t===`image`&&n&&n.imageSrcSet?(i+=`[imagesrcset="`+fn(n.imageSrcSet)+`"]`,typeof n.imageSizes==`string`&&(i+=`[imagesizes="`+fn(n.imageSizes)+`"]`)):i+=`[href="`+fn(e)+`"]`;var a=i;switch(t){case`style`:a=Pm(e);break;case`script`:a=Rm(e)}if(!(vm.has(a)||(e=w({rel:`preload`,href:t===`image`&&n&&n.imageSrcSet?void 0:e,as:t},n),vm.set(a,e),r.querySelector(i)!==null||t===`style`&&r.querySelector(Fm(a))||t===`script`&&r.querySelector(zm(a))))){var o=r.createElement(`link`);np(o,`link`,e),t===`style`&&(o[Bt]=!0,o.onload=o.onerror=function(){Kt(o)}),Gt(o),r.head.appendChild(o)}}}function km(e,t){xm.m(e,t);var n=wm;if(n&&e){var r=t&&typeof t.as==`string`?t.as:`script`,i=`link[rel="modulepreload"][as="`+fn(r)+`"][href="`+fn(e)+`"]`,a=i;switch(r){case`audioworklet`:case`paintworklet`:case`serviceworker`:case`sharedworker`:case`worker`:case`script`:a=Rm(e)}if(!vm.has(a)&&(e=w({rel:`modulepreload`,href:e},t),vm.set(a,e),n.querySelector(i)===null)){switch(r){case`audioworklet`:case`paintworklet`:case`serviceworker`:case`sharedworker`:case`worker`:case`script`:if(n.querySelector(zm(a)))return}r=n.createElement(`link`),np(r,`link`,e),Gt(r),n.head.appendChild(r)}}}function Am(e,t,n){xm.S(e,t,n);var r=wm;if(r&&e){var i=Wt(r).hoistableStyles,a=Pm(e);t||=`default`;var o=i.get(a);if(!o){var s={loading:0,preload:null};if(o=r.querySelector(Fm(a)))s.loading=5;else{e=w({rel:`stylesheet`,href:e,"data-precedence":t},n),(n=vm.get(a))&&Hm(e,n);var c=o=r.createElement(`link`);Gt(c),np(c,`link`,e),c._p=new Promise(function(e,t){c.onload=e,c.onerror=t}),c.addEventListener(`load`,function(){s.loading|=1}),c.addEventListener(`error`,function(){s.loading|=2}),s.loading|=4,Vm(o,t,r)}o={type:`stylesheet`,instance:o,count:1,state:s},i.set(a,o)}}}function jm(e,t){xm.X(e,t);var n=wm;if(n&&e){var r=Wt(n).hoistableScripts,i=Rm(e),a=r.get(i);a||(a=n.querySelector(zm(i)),a||(e=w({src:e,async:!0},t),(t=vm.get(i))&&Um(e,t),a=n.createElement(`script`),Gt(a),np(a,`link`,e),n.head.appendChild(a)),a={type:`script`,instance:a,count:1,state:null},r.set(i,a))}}function Mm(e,t){xm.M(e,t);var n=wm;if(n&&e){var r=Wt(n).hoistableScripts,i=Rm(e),a=r.get(i);a||(a=n.querySelector(zm(i)),a||(e=w({src:e,async:!0,type:`module`},t),(t=vm.get(i))&&Um(e,t),a=n.createElement(`script`),Gt(a),np(a,`link`,e),n.head.appendChild(a)),a={type:`script`,instance:a,count:1,state:null},r.set(i,a))}}function Nm(e,t,n,r){var a=(a=Me.current)?bm(a):null;if(!a)throw Error(i(446));switch(e){case`meta`:case`title`:return null;case`style`:return typeof n.precedence==`string`&&typeof n.href==`string`?(n=Pm(n.href),t=Wt(a).hoistableStyles,r=t.get(n),r||(r={type:`style`,instance:null,count:0,state:null},t.set(n,r)),r):{type:`void`,instance:null,count:0,state:null};case`link`:if(n.rel===`stylesheet`&&typeof n.href==`string`&&typeof n.precedence==`string`){e=Pm(n.href);var o=Wt(a).hoistableStyles,s=o.get(e);if(s||(a=a.ownerDocument||a,s={type:`stylesheet`,instance:null,count:0,state:{loading:0,preload:null}},o.set(e,s),(o=a.querySelector(Fm(e)))?o._p||(s.instance=o,s.state.loading=5):(o=vm.get(e),o||(o={rel:`preload`,as:`style`,href:n.href,crossOrigin:n.crossOrigin,integrity:n.integrity,media:n.media,hrefLang:n.hrefLang,referrerPolicy:n.referrerPolicy},vm.set(e,o)),Lm(a,e,o,s.state))),t&&r===null)throw Error(i(528,``));return s}if(t&&r!==null)throw Error(i(529,``));return null;case`script`:return t=n.async,n=n.src,typeof n==`string`&&t&&typeof t!=`function`&&typeof t!=`symbol`?(n=Rm(n),t=Wt(a).hoistableScripts,r=t.get(n),r||(r={type:`script`,instance:null,count:0,state:null},t.set(n,r)),r):{type:`void`,instance:null,count:0,state:null};default:throw Error(i(444,e))}}function Pm(e){return`href="`+fn(e)+`"`}function Fm(e){return`link[rel="stylesheet"][`+e+`]`}function Im(e){return w({},e,{"data-precedence":e.precedence,precedence:null})}function Lm(e,t,n,r){if(t=e.querySelector(`link[rel="preload"][as="style"][`+t+`]`)){if(!0!==t[Bt]){r.loading=1;return}}else t=e.createElement(`link`),t[Bt]=!0,t.onload=t.onerror=Kt.bind(null,t),np(t,`link`,n),Gt(t),e.head.appendChild(t);r.preload=t,t.addEventListener(`load`,function(){return r.loading|=1}),t.addEventListener(`error`,function(){return r.loading|=2})}function Rm(e){return`[src="`+fn(e)+`"]`}function zm(e){return`script[async]`+e}function Bm(e,t,n){if(t.count++,t.instance===null)switch(t.type){case`style`:var r=e.querySelector(`style[data-href~="`+fn(n.href)+`"]`);if(r)return t.instance=r,Gt(r),r;var a=w({},n,{"data-href":n.href,"data-precedence":n.precedence,href:null,precedence:null});return r=(e.ownerDocument||e).createElement(`style`),Gt(r),np(r,`style`,a),Vm(r,n.precedence,e),t.instance=r;case`stylesheet`:a=Pm(n.href);var o=e.querySelector(Fm(a));if(o)return t.state.loading|=4,t.instance=o,Gt(o),o;r=Im(n),(a=vm.get(a))&&Hm(r,a),o=(e.ownerDocument||e).createElement(`link`),Gt(o);var s=o;return s._p=new Promise(function(e,t){s.onload=e,s.onerror=t}),np(o,`link`,r),t.state.loading|=4,Vm(o,n.precedence,e),t.instance=o;case`script`:return o=Rm(n.src),(a=e.querySelector(zm(o)))?(t.instance=a,Gt(a),a):(r=n,(a=vm.get(o))&&(r=w({},n),Um(r,a)),e=e.ownerDocument||e,a=e.createElement(`script`),Gt(a),np(a,`link`,r),e.head.appendChild(a),t.instance=a);case`void`:return null;default:throw Error(i(443,t.type))}else t.type===`stylesheet`&&!(t.state.loading&4)&&(r=t.instance,t.state.loading|=4,Vm(r,n.precedence,e));return t.instance}function Vm(e,t,n){for(var r=n.querySelectorAll(`link[rel="stylesheet"][data-precedence],style[data-precedence]`),i=r.length?r[r.length-1]:null,a=i,o=0;o<r.length;o++){var s=r[o];if(s.dataset.precedence===t)a=s;else if(a!==i)break}a?a.parentNode.insertBefore(e,a.nextSibling):(t=n.nodeType===9?n.head:n,t.insertBefore(e,t.firstChild))}function Hm(e,t){e.crossOrigin??=t.crossOrigin,e.referrerPolicy??=t.referrerPolicy,e.title??=t.title}function Um(e,t){e.crossOrigin??=t.crossOrigin,e.referrerPolicy??=t.referrerPolicy,e.integrity??=t.integrity}var Wm=null;function Gm(e,t,n){if(Wm===null){var r=new Map,i=Wm=new Map;i.set(n,r)}else i=Wm,r=i.get(n),r||(r=new Map,i.set(n,r));if(r.has(e))return r;for(r.set(e,null),n=n.getElementsByTagName(e),i=0;i<n.length;i++){var a=n[i];if(!(a[zt]||a[Mt]||e===`link`&&a.getAttribute(`rel`)===`stylesheet`)&&a.namespaceURI!==`http://www.w3.org/2000/svg`){var o=a.getAttribute(t)||``;o=e+o;var s=r.get(o);s?s.push(a):r.set(o,[a])}}return r}function Km(e,t,n){e=e.ownerDocument||e,e.head.insertBefore(n,t===`title`?e.querySelector(`head > title`):null)}function qm(e,t,n){if(n===1||t.itemProp!=null)return!1;switch(e){case`meta`:case`title`:return!0;case`style`:if(typeof t.precedence!=`string`||typeof t.href!=`string`||t.href===``)break;return!0;case`link`:if(typeof t.rel!=`string`||typeof t.href!=`string`||t.href===``||t.onLoad||t.onError)break;switch(t.rel){case`stylesheet`:return e=t.disabled,typeof t.precedence==`string`&&e==null;default:return!0}case`script`:if(t.async&&typeof t.async!=`function`&&typeof t.async!=`symbol`&&!t.onLoad&&!t.onError&&t.src&&typeof t.src==`string`)return!0}return!1}function Jm(e,t){return e===`img`&&t.src!=null&&t.src!==``&&t.onLoad==null&&t.loading!==`lazy`}function Ym(e){return!(e.type===`stylesheet`&&!(e.state.loading&3))}function Xm(e){return(e.width||100)*(e.height||100)*(typeof devicePixelRatio==`number`?devicePixelRatio:1)*.25}function Zm(e,t){typeof t.decode==`function`&&(e.imgCount++,t.complete||(e.imgBytes+=Xm(t),e.suspenseyImages.push(t)),e=rh.bind(e),t.decode().then(e,e))}function Qm(e,t,n,r){if(n.type===`stylesheet`&&(typeof r.media!=`string`||!1!==matchMedia(r.media).matches)&&!(n.state.loading&4)){if(n.instance===null){var i=Pm(r.href),a=t.querySelector(Fm(i));if(a){t=a._p,typeof t==`object`&&t&&typeof t.then==`function`&&(e.count++,e=nh.bind(e),t.then(e,e)),n.state.loading|=4,n.instance=a,Gt(a);return}a=t.ownerDocument||t,r=Im(r),(i=vm.get(i))&&Hm(r,i),a=a.createElement(`link`),Gt(a);var o=a;o._p=new Promise(function(e,t){o.onload=e,o.onerror=t}),np(a,`link`,r),n.instance=a}e.stylesheets===null&&(e.stylesheets=new Map),e.stylesheets.set(n,t),(t=n.state.preload)&&!(n.state.loading&3)&&(e.count++,n=nh.bind(e),t.addEventListener(`load`,n),t.addEventListener(`error`,n))}}var $m=0;function eh(e,t){return e.stylesheets&&e.count===0&&ah(e,e.stylesheets),0<e.count||0<e.imgCount?function(n){var r=setTimeout(function(){if(e.stylesheets&&ah(e,e.stylesheets),e.unsuspend){var t=e.unsuspend;e.unsuspend=null,t()}},6e4+t);0<e.imgBytes&&$m===0&&($m=62500*op());var i=setTimeout(function(){if(e.waitingForImages=!1,e.count===0&&(e.stylesheets&&ah(e,e.stylesheets),e.unsuspend)){var t=e.unsuspend;e.unsuspend=null,t()}},(e.imgBytes>$m?50:800)+t);return e.unsuspend=n,function(){e.unsuspend=null,clearTimeout(r),clearTimeout(i)}}:null}function th(e){if(e.count===0&&(e.imgCount===0||!e.waitingForImages)){if(e.stylesheets)ah(e,e.stylesheets);else if(e.unsuspend){var t=e.unsuspend;e.unsuspend=null,t()}}}function nh(){this.count--,th(this)}function rh(){this.imgCount--,th(this)}var ih=null;function ah(e,t){e.stylesheets=null,e.unsuspend!==null&&(e.count++,ih=new Map,t.forEach(oh,e),ih=null,nh.call(e))}function oh(e,t){if(!(t.state.loading&4)){var n=ih.get(e);if(n)var r=n.get(null);else{n=new Map,ih.set(e,n);for(var i=e.querySelectorAll(`link[data-precedence],style[data-precedence]`),a=0;a<i.length;a++){var o=i[a];(o.nodeName===`LINK`||o.getAttribute(`media`)!==`not all`)&&(n.set(o.dataset.precedence,o),r=o)}r&&n.set(null,r)}i=t.instance,o=i.getAttribute(`data-precedence`),a=n.get(o)||r,a===r&&n.set(null,i),n.set(o,i),this.count++,r=nh.bind(this),i.addEventListener(`load`,r),i.addEventListener(`error`,r),a?a.parentNode.insertBefore(i,a.nextSibling):(e=e.nodeType===9?e.head:e,e.insertBefore(i,e.firstChild)),t.state.loading|=4}}var sh={$$typeof:ue,Provider:null,Consumer:null,_currentValue:Ee,_currentValue2:Ee,_threadCount:0};function ch(e,t,n,r,i,a,o,s,c){this.tag=1,this.containerInfo=e,this.pingCache=this.current=this.pendingChildren=null,this.timeoutHandle=-1,this.callbackNode=this.next=this.pendingContext=this.context=this.cancelPendingCommit=null,this.callbackPriority=0,this.expirationTimes=xt(-1),this.entangledLanes=this.shellSuspendCounter=this.errorRecoveryDisabledLanes=this.expiredLanes=this.warmLanes=this.pingedLanes=this.suspendedLanes=this.pendingLanes=0,this.entanglements=xt(0),this.hiddenUpdates=xt(null),this.identifierPrefix=r,this.onUncaughtError=i,this.onCaughtError=a,this.onRecoverableError=o,this.pooledCache=null,this.pooledCacheLanes=0,this.formState=c,this.transitionTypes=null,this.incompleteTransitions=new Map}function lh(e,t,n,r,i,a,o,s,c,l,u,d){return e=new ch(e,t,n,o,c,l,u,d,s),t=1,!0===a&&(t|=24),a=Bi(3,null,null,t),e.current=a,a.stateNode=e,t=Ra(),t.refCount++,e.pooledCache=t,t.refCount++,a.memoizedState={element:r,isDehydrated:n,cache:t},xo(a),e}function uh(e){return e?(e=Ri,e):Ri}function dh(e,t,n,r,i,a){i=uh(i),r.context===null?r.context=i:r.pendingContext=i,r=Co(t),r.payload={element:n},a=a===void 0?null:a,a!==null&&(r.callback=a),n=wo(e,r,t),n!==null&&(Pd(n,e,t),To(n,e,t))}function fh(e,t){if(e=e.memoizedState,e!==null&&e.dehydrated!==null){var n=e.retryLane;e.retryLane=n!==0&&n<t?n:t}}function ph(e,t){fh(e,t),(e=e.alternate)&&fh(e,t)}function mh(e){if(e.tag===13||e.tag===31){var t=Fi(e,67108864);t!==null&&Pd(t,e,67108864),ph(e,67108864)}}function hh(e){if(e.tag===13||e.tag===31){var t=jd();t=Dt(t);var n=Fi(e,t);n!==null&&Pd(n,e,t),ph(e,t)}}var gh=!0;function _h(e,t,n,r){var i=T.T;T.T=null;var a=E.p;try{E.p=2,yh(e,t,n,r)}finally{E.p=a,T.T=i}}function vh(e,t,n,r){var i=T.T;T.T=null;var a=E.p;try{E.p=8,yh(e,t,n,r)}finally{E.p=a,T.T=i}}function yh(e,t,n,r){if(gh){var i=bh(r);if(i===null)Kf(e,t,r,xh,n),Mh(e,r);else if(Ph(i,e,t,n,r))r.stopPropagation();else if(Mh(e,r),t&4&&-1<jh.indexOf(e)){for(;i!==null;){var a=Ht(i);if(a!==null)switch(a.tag){case 3:if(a=a.stateNode,a.current.memoizedState.isDehydrated){var o=ht(a.pendingLanes);if(o!==0){var s=a;for(s.pendingLanes|=2,s.entangledLanes|=2;o;){var c=1<<31-ct(o);s.entanglements[1]|=c,o&=~c}Ef(a),!(W&6)&&(_d=Xe()+500,Df(0,!1))}}break;case 31:case 13:s=Fi(a,2),s!==null&&Pd(s,a,2),zd(),ph(a,2)}if(a=bh(r),a===null&&Kf(e,t,r,xh,n),a===i)break;i=a}i!==null&&r.stopPropagation()}else Kf(e,t,r,null,n)}}function bh(e){return e=On(e),Sh(e)}var xh=null;function Sh(e){if(xh=null,e=k(e),e!==null){var t=o(e);if(t===null)e=null;else{var n=t.tag;if(n===13){if(e=s(t),e!==null)return e;e=null}else if(n===31){if(e=c(t),e!==null)return e;e=null}else if(n===3){if(t.stateNode.current.memoizedState.isDehydrated)return t.tag===3?t.stateNode.containerInfo:null;e=null}else t!==e&&(e=null)}}return xh=e,null}function Ch(e){switch(e){case`beforetoggle`:case`cancel`:case`click`:case`close`:case`contextmenu`:case`copy`:case`cut`:case`auxclick`:case`dblclick`:case`dragend`:case`dragstart`:case`drop`:case`focusin`:case`focusout`:case`input`:case`invalid`:case`keydown`:case`keypress`:case`keyup`:case`mousedown`:case`mouseup`:case`paste`:case`pause`:case`play`:case`pointercancel`:case`pointerdown`:case`pointerup`:case`ratechange`:case`reset`:case`seeked`:case`submit`:case`toggle`:case`touchcancel`:case`touchend`:case`touchstart`:case`volumechange`:case`change`:case`selectionchange`:case`textInput`:case`compositionstart`:case`compositionend`:case`compositionupdate`:case`beforeblur`:case`afterblur`:case`beforeinput`:case`blur`:case`fullscreenchange`:case`fullscreenerror`:case`focus`:case`hashchange`:case`popstate`:case`select`:case`selectstart`:return 2;case`drag`:case`dragenter`:case`dragexit`:case`dragleave`:case`dragover`:case`mousemove`:case`mouseout`:case`mouseover`:case`pointermove`:case`pointerout`:case`pointerover`:case`resize`:case`scroll`:case`touchmove`:case`wheel`:case`mouseenter`:case`mouseleave`:case`pointerenter`:case`pointerleave`:return 8;case`message`:switch(Ze()){case Qe:return 2;case $e:return 8;case et:case tt:return 32;case nt:return 268435456;default:return 32}default:return 32}}var wh=!1,Th=null,Eh=null,Dh=null,Oh=new Map,kh=new Map,Ah=[],jh=`mousedown mouseup touchcancel touchend touchstart auxclick dblclick pointercancel pointerdown pointerup dragend dragstart drop compositionend compositionstart keydown keypress keyup input textInput copy cut paste click change contextmenu reset`.split(` `);function Mh(e,t){switch(e){case`focusin`:case`focusout`:Th=null;break;case`dragenter`:case`dragleave`:Eh=null;break;case`mouseover`:case`mouseout`:Dh=null;break;case`pointerover`:case`pointerout`:Oh.delete(t.pointerId);break;case`gotpointercapture`:case`lostpointercapture`:kh.delete(t.pointerId)}}function Nh(e,t,n,r,i,a){return e===null||e.nativeEvent!==a?(e={blockedOn:t,domEventName:n,eventSystemFlags:r,nativeEvent:a,targetContainers:[i]},t!==null&&(t=Ht(t),t!==null&&mh(t)),e):(e.eventSystemFlags|=r,t=e.targetContainers,i!==null&&t.indexOf(i)===-1&&t.push(i),e)}function Ph(e,t,n,r,i){switch(t){case`focusin`:return Th=Nh(Th,e,t,n,r,i),!0;case`dragenter`:return Eh=Nh(Eh,e,t,n,r,i),!0;case`mouseover`:return Dh=Nh(Dh,e,t,n,r,i),!0;case`pointerover`:var a=i.pointerId;return Oh.set(a,Nh(Oh.get(a)||null,e,t,n,r,i)),!0;case`gotpointercapture`:return a=i.pointerId,kh.set(a,Nh(kh.get(a)||null,e,t,n,r,i)),!0}return!1}function Fh(e){var t=k(e.target);if(t!==null){var n=o(t);if(n!==null){if(t=n.tag,t===13){if(t=s(n),t!==null){e.blockedOn=t,At(e.priority,function(){hh(n)});return}}else if(t===31){if(t=c(n),t!==null){e.blockedOn=t,At(e.priority,function(){hh(n)});return}}else if(t===3&&n.stateNode.current.memoizedState.isDehydrated){e.blockedOn=n.tag===3?n.stateNode.containerInfo:null;return}}}e.blockedOn=null}function Ih(e){if(e.blockedOn!==null)return!1;for(var t=e.targetContainers;0<t.length;){var n=bh(e.nativeEvent);if(n===null){n=e.nativeEvent;var r=new n.constructor(n.type,n);Dn=r,n.target.dispatchEvent(r),Dn=null}else return t=Ht(n),t!==null&&mh(t),e.blockedOn=n,!1;t.shift()}return!0}function Lh(e,t,n){Ih(e)&&n.delete(t)}function Rh(){wh=!1,Th!==null&&Ih(Th)&&(Th=null),Eh!==null&&Ih(Eh)&&(Eh=null),Dh!==null&&Ih(Dh)&&(Dh=null),Oh.forEach(Lh),kh.forEach(Lh)}function zh(e,n){e.blockedOn===n&&(e.blockedOn=null,wh||(wh=!0,t.unstable_scheduleCallback(t.unstable_NormalPriority,Rh)))}var Bh=null;function Vh(e){Bh!==e&&(Bh=e,t.unstable_scheduleCallback(t.unstable_NormalPriority,function(){Bh===e&&(Bh=null);for(var t=0;t<e.length;t+=3){var n=e[t],r=e[t+1],i=e[t+2];if(typeof r!=`function`){if(Sh(r||n)===null)continue;break}var a=Ht(n);a!==null&&(e.splice(t,3),t-=3,ic(a,{pending:!0,data:i,method:n.method,action:r},r,i))}}))}function Hh(e){function t(t){return zh(t,e)}Th!==null&&zh(Th,e),Eh!==null&&zh(Eh,e),Dh!==null&&zh(Dh,e),Oh.forEach(t),kh.forEach(t);for(var n=0;n<Ah.length;n++){var r=Ah[n];r.blockedOn===e&&(r.blockedOn=null)}for(;0<Ah.length&&(n=Ah[0],n.blockedOn===null);)Fh(n),n.blockedOn===null&&Ah.shift();if(n=(e.ownerDocument||e).$$reactFormReplay,n!=null)for(r=0;r<n.length;r+=3){var i=n[r],a=n[r+1],o=i[Nt]||null;if(typeof a==`function`)o||Vh(n);else if(o){var s=null;if(a&&a.hasAttribute(`formAction`)){if(i=a,o=a[Nt]||null)s=o.formAction;else if(Sh(i)!==null)continue}else s=o.action;typeof s==`function`?n[r+1]=s:(n.splice(r,3),r-=3),Vh(n)}}}function Uh(){function e(e){e.canIntercept&&e.info===`react-transition`&&e.intercept({handler:function(){return new Promise(function(e){return i=e})},focusReset:`manual`,scroll:`manual`})}function t(){i!==null&&(i(),i=null),r||setTimeout(n,20)}function n(){if(!r&&!navigation.transition){var e=navigation.currentEntry;e&&e.url!=null&&navigation.navigate(e.url,{state:e.getState(),info:`react-transition`,history:`replace`})}}if(typeof navigation==`object`){var r=!1,i=null;return navigation.addEventListener(`navigate`,e),navigation.addEventListener(`navigatesuccess`,t),navigation.addEventListener(`navigateerror`,t),setTimeout(n,100),function(){r=!0,navigation.removeEventListener(`navigate`,e),navigation.removeEventListener(`navigatesuccess`,t),navigation.removeEventListener(`navigateerror`,t),i!==null&&(i(),i=null)}}}function Wh(e){this._internalRoot=e}Gh.prototype.render=Wh.prototype.render=function(e){var t=this._internalRoot;if(t===null)throw Error(i(409));var n=t.current;dh(n,jd(),e,t,null,null)},Gh.prototype.unmount=Wh.prototype.unmount=function(){var e=this._internalRoot;if(e!==null){this._internalRoot=null;var t=e.containerInfo;dh(e.current,2,null,e,null,null),zd(),t[Pt]=null}};function Gh(e){this._internalRoot=e}Gh.prototype.unstable_scheduleHydration=function(e){if(e){var t=kt();e={blockedOn:null,target:e,priority:t};for(var n=0;n<Ah.length&&t!==0&&t<Ah[n].priority;n++);Ah.splice(n,0,e),n===0&&Fh(e)}};var Kh=n.version;if(Kh!==`19.3.1`)throw Error(i(527,Kh,`19.3.1`));E.findDOMNode=function(e){var t=e._reactInternals;if(t===void 0)throw typeof e.render==`function`?Error(i(188)):(e=Object.keys(e).join(`,`),Error(i(268,e)));return e=d(t),e=e===null?null:p(e),e=e===null?null:e.stateNode,e};var qh={bundleType:0,version:`19.3.1`,rendererPackageName:`react-dom`,currentDispatcherRef:T,reconcilerVersion:`19.3.1`};if(typeof __REACT_DEVTOOLS_GLOBAL_HOOK__<`u`){var Jh=__REACT_DEVTOOLS_GLOBAL_HOOK__;if(!Jh.isDisabled&&Jh.supportsFiber)try{at=Jh.inject(qh),ot=Jh}catch{}}e.createRoot=function(e,t){if(!a(e))throw Error(i(299));var n=!1,r=``,o=Dc,s=Oc,c=kc;return t!=null&&(!0===t.unstable_strictMode&&(n=!0),t.identifierPrefix!==void 0&&(r=t.identifierPrefix),t.onUncaughtError!==void 0&&(o=t.onUncaughtError),t.onCaughtError!==void 0&&(s=t.onCaughtError),t.onRecoverableError!==void 0&&(c=t.onRecoverableError)),t=lh(e,1,!1,null,null,n,r,null,o,s,c,Uh),e[Pt]=t.current,Wf(e),new Wh(t)}})),g=o(((e,t)=>{function n(){if(typeof __REACT_DEVTOOLS_GLOBAL_HOOK__<`u`&&typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE==`function`)try{__REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE(n)}catch(e){console.error(e)}}n(),t.exports=h()})),_=c(u(),1),v=g();function y(){return{async:!1,breaks:!1,extensions:null,gfm:!0,hooks:null,pedantic:!1,renderer:null,silent:!1,tokenizer:null,walkTokens:null}}var b=y();function ee(e){b=e}var te={exec:()=>null};function ne(e){let t=[];return n=>{let r=Math.max(0,Math.min(3,n-1)),i=t[r];return i||(i=e(r),t[r]=i),i}}function x(e,t=``){let n=typeof e==`string`?e:e.source,r={replace:(e,t)=>{let i=typeof t==`string`?t:t.source;return i=i.replace(C.caret,`$1`),n=n.replace(e,i),r},getRegex:()=>new RegExp(n,t)};return r}var S=((e=``)=>{try{return!!RegExp(`(?<=1)(?<!1)`+e)}catch{return!1}})(),C={codeRemoveIndent:/^(?: {0,3}\t| {1,4})/gm,listInterruptsParagraph:/^ {0,3}(?:[*+-]|1[.)])[ \t]+[^ \t\n]/,outputLinkReplace:/\\([\[\]])/g,indentCodeCompensation:/^(\s+)(?:```)/,beginningSpace:/^\s+/,endingHash:/#$/,startingSpaceChar:/^ /,endingSpaceChar:/ $/,endingSpaceTabChar:/[ \t]$/,nonSpaceChar:/[^ ]/,newLineCharGlobal:/\n/g,tabCharGlobal:/\t/g,leadingSpaceTab:/^[ \t]+/,multipleSpaceGlobal:/\s+/g,blankLine:/^[ \t]*$/,doubleBlankLine:/\n[ \t]*\n[ \t]*$/,blockquoteStart:/^ {0,3}>/,blockquoteSetextReplace:/\n {0,3}((?:=+|-+)[ \t]*)(?=\n|$)/g,blockquoteSetextReplace2:/^ {0,3}>[ \t]?/gm,blockquoteMarkerWhitespace:/^( {0,3}>)([ \t]+)/gm,listReplaceNesting:/^ {1,4}(?=( {4})*[^ ])/g,listIsTask:/^\[[ xX]\][ \t]+\S/,listReplaceTask:/^\[[ xX]\][ \t]+/,listTaskCheckbox:/\[[ xX]\]/,anyLine:/\n.*\n/,hrefBrackets:/^<(.*)>$/,tableDelimiter:/[:|]/,tableAlignChars:/^\||\| *$/g,tableRowBlankLine:/\n[ \t]*$/,tableAlignRight:/^ *-+: *$/,tableAlignCenter:/^ *:-+: *$/,tableAlignLeft:/^ *:-+ *$/,startATag:/^<a /i,endATag:/^<\/a>/i,startPreScriptTag:/^<(pre|code|kbd|script)(\s|>)/i,endPreScriptTag:/^<\/(pre|code|kbd|script)(\s|>)/i,startAngleBracket:/^</,endAngleBracket:/>$/,pedanticHrefTitle:/^([^'"]*[^\s])\s+(['"])(.*)\2/,unicodeAlphaNumeric:/[\p{L}\p{N}]/u,numericCharacterReference:/&#(?:(\d{1,7})|[Xx]([A-Fa-f0-9]{1,6}));/,numericCharacterReferenceOrAmpersand:/&#(?:(\d{1,7})|[Xx]([A-Fa-f0-9]{1,6}));|&(?!(#\d{1,7}|#[Xx][a-fA-F0-9]{1,6}|\w+);)/g,escapeTest:/[&<>"']/,escapeReplace:/[&<>"']/g,escapeTestNoEncode:/[<>"']|&(?!(#\d{1,7}|#[Xx][a-fA-F0-9]{1,6}|\w+);)/,escapeReplaceNoEncode:/[<>"']|&(?!(#\d{1,7}|#[Xx][a-fA-F0-9]{1,6}|\w+);)/g,caret:/(^|[^\[])\^/g,percentDecode:/%25/g,findPipe:/\|/g,splitPipe:/ \|/,slashPipe:/\\\|/g,carriageReturn:/\r\n|\r/g,spaceLine:/^ +$/gm,notSpaceStart:/^\S*/,endingNewline:/\n$/,listItemRegex:e=>RegExp(`^( {0,3}${e})((?:[	 ][^\\n]*)?(?:\\n|$))`),nextBulletRegex:ne(e=>RegExp(`^ {0,${e}}(?:[*+-]|\\d{1,9}[.)])((?:[ 	][^\\n]*)?(?:\\n|$))`)),hrRegex:ne(e=>RegExp(`^ {0,${e}}((?:-[ 	]*){3,}|(?:_[ 	]*){3,}|(?:\\*[ 	]*){3,})(?:\\n+|$)`)),fencesBeginRegex:ne(e=>RegExp(`^ {0,${e}}(?:\`\`\`|~~~)`)),headingBeginRegex:ne(e=>RegExp(`^ {0,${e}}#{1,6}(?:\\s|$)`)),pedanticHeadingBeginRegex:ne(e=>RegExp(`^ {0,${e}}#`)),htmlBeginRegex:ne(e=>RegExp(`^ {0,${e}}(?:</?(?:${ge})(?: +|$|/?>)|<(?:(?:script|pre|style|textarea)(?:[\\s>]|$)|!--)|<\\?|<![A-Za-z]|<!\\[CDATA\\[)`,`i`)),blockquoteBeginRegex:ne(e=>RegExp(`^ {0,${e}}>`)),nestedContainerMarkers:/^(?: {0,3}(?:(?:[*+-]|\d{1,9}[.)])[ \t]+|>[ \t]?))+/},w=/^(?:[ \t]*(?:\n|$))+/,re=/^((?: {4}| {0,3}\t)[^\n]+(?:\n(?:[ \t]*(?:\n|$))*)?)+/,ie=/^ {0,3}(`{3,}(?=[^`\n]*(?:\n|$))|~{3,})([^\n]*)(?:\n|$)(?:|([\s\S]*?)(?:\n|$))(?: {0,3}(?:(?=`)\1`*|(?=~)\1~*) *(?=\n|$)|$)/,ae=/^ {0,3}((?:-[\t ]*){3,}|(?:_[ \t]*){3,}|(?:\*[ \t]*){3,})(?:\n+|$)/,oe=/^ {0,3}(#{1,6})(?=\s|$)(.*)(?:\n+|$)/,se=/ {0,3}(?:[*+-]|\d{1,9}[.)])/,ce=/^(?!bull |blockCode|fences|blockquote|heading|html|table)((?:.|\n(?!\s*?\n|bull |fences|blockquote|heading|hr|html|table))+?)\n {0,3}(=+|-+)[ \t]*(?:\n+|$)/,le=x(ce).replace(/bull/g,se).replace(/blockCode/g,/(?: {4}| {0,3}\t)/).replace(/fences/g,/ {0,3}(?:`{3,}|~{3,})/).replace(/blockquote/g,/ {0,3}>/).replace(/heading/g,/ {0,3}#{1,6}(?:\s|$)/).replace(/hr/g,/ {0,3}(?:(?:-[\t ]*){3,}|(?:_[ \t]*){3,}|(?:\*[ \t]*){3,})(?:\n+|$)/).replace(/html/g,/ {0,3}<[^\n>]+>\n/).replace(/\|table/g,``).getRegex(),ue=x(ce).replace(/bull/g,se).replace(/blockCode/g,/(?: {4}| {0,3}\t)/).replace(/fences/g,/ {0,3}(?:`{3,}|~{3,})/).replace(/blockquote/g,/ {0,3}>/).replace(/heading/g,/ {0,3}#{1,6}(?:\s|$)/).replace(/hr/g,/ {0,3}(?:(?:-[\t ]*){3,}|(?:_[ \t]*){3,}|(?:\*[ \t]*){3,})(?:\n+|$)/).replace(/html/g,/ {0,3}<[^\n>]+>\n/).replace(/table/g,/ {0,3}\|?(?:[:\- ]*\|)+[\:\- ]*\n/).getRegex(),de=/^([^\n]+(?:\n(?!hr|heading|lheading|blockquote|fences|list|html|table|[ \t]+\n)[^\n]+)*)/,fe=/^[^\n]+/,pe=/(?!\s*\])(?:\\[\s\S]|[^\[\]\\\n]|\n(?![ \t]*\n))+/,me=x(/^ {0,3}\[(label)\]: *(?:\n[ \t]*)?([^<\s][^\s]*|<.*?>)(?:(?: +(?:\n[ \t]*)?| *\n[ \t]*)(title))? *(?:\n+|$)/).replace(`label`,pe).replace(`title`,/(?:"(?:\\[\s\S]|[^"\\])*"|'(?:\\[\s\S]|[^'\\\n]|\n(?!\n))*'|\((?:\\[\s\S]|[^()\\])*\))/).getRegex(),he=x(/^(bull)([ \t][^\n]*?)?(?:\n|$)/).replace(/bull/g,se).getRegex(),ge=`address|article|aside|base|basefont|blockquote|body|caption|center|col|colgroup|dd|details|dialog|dir|div|dl|dt|fieldset|figcaption|figure|footer|form|frame|frameset|h[1-6]|head|header|hr|html|iframe|legend|li|link|main|menu|menuitem|meta|nav|noframes|ol|optgroup|option|p|param|search|section|summary|table|tbody|td|tfoot|th|thead|title|tr|track|ul`,_e=/<!--(?:-?>|[\s\S]*?(?:-->|$))/,ve=x(`^ {0,3}(?:<(script|pre|style|textarea)[\\s>][\\s\\S]*?(?:</\\1>[^\\n]*\\n*|$)|comment[^\\n]*(\\n+|$)|<\\?[\\s\\S]*?(?:\\?>[^\\n]*\\n*|$)|<![A-Z][\\s\\S]*?(?:>[^\\n]*\\n*|$)|<!\\[CDATA\\[[\\s\\S]*?(?:\\]\\]>[^\\n]*\\n*|$)|</?(tag)(?:[ \\t]+|\\n|/?>|$)[\\s\\S]*?(?:(?:\\n[ 	]*)+\\n|$)|<(?!(?:script|pre|style|textarea)(?![a-z0-9-]))([a-z][a-z0-9-]*)(?:attribute)*? */?>(?=[ \\t]*(?:\\n|$))[\\s\\S]*?(?:(?:\\n[ 	]*)+\\n|$)|</[a-z][a-z0-9-]*\\s*>(?=[ \\t]*(?:\\n|$))[\\s\\S]*?(?:(?:\\n[ 	]*)+\\n|$))`,`i`).replace(`comment`,_e).replace(`tag`,ge).replace(`attribute`,/ +[a-zA-Z:_][\w.:-]*(?: *= *"[^"\n]*"| *= *'[^'\n]*'| *= *[^\s"'=<>`]+)?/).getRegex(),ye=e=>x(de).replace(`hr`,ae).replace(`heading`,` {0,3}#{1,6}(?:\\s|$)`).replace(`|lheading`,``).replace(`|table`,``).replace(`blockquote`,` {0,3}>`).replace(`fences`," {0,3}(?:`{3,}(?=[^`\\n]*(?:\\n|$))|~~~)[^\\n]*(?:\\n|$)").replace(`list`,e).replace(`html`,` {0,3}(?:</?(?:tag)(?: +|\\n|/?>)|<(?:(?:script|pre|style|textarea)(?:[\\s>]|$)|!--)|<\\?|<![A-Za-z]|<!\\[CDATA\\[)`).replace(`tag`,ge).getRegex(),be=ye(/ {0,3}(?:[*+-]|1[.)])[ \t]+[^ \t\n]/),xe=ye(/ {0,3}(?:[*+-]|\d{1,9}[.)])(?:[ \t]|\n|$)/),Se={blockquote:x(/^( {0,3}> ?(?:(?![ \t]*(?:\n|$))(paragraph)|[^\n]*)(?:\n|$))+/).replace(`paragraph`,xe).getRegex(),code:re,def:me,fences:ie,heading:oe,hr:ae,html:ve,lheading:le,list:he,newline:w,paragraph:be,table:te,text:fe},Ce=x(`^ *([^\\n ].*)\\n {0,3}((?:\\| *)?:?-+:? *(?:\\| *:?-+:? *)*(?:\\| *)?)(?:\\n((?:(?! *\\n|hr|heading|blockquote|code|fences|list|html).*(?:\\n|$))*)\\n*|$)`).replace(`hr`,ae).replace(`heading`,` {0,3}#{1,6}(?:\\s|$)`).replace(`blockquote`,` {0,3}>`).replace(`code`,`(?: {4}| {0,3}	)[^\\n]`).replace(`fences`," {0,3}(?:`{3,}(?=[^`\\n]*(?:\\n|$))|~~~)[^\\n]*(?:\\n|$)").replace(`list`,` {0,3}(?:[*+-]|1[.)])[ \\t]`).replace(`html`,` {0,3}(?:</?(?:tag)(?: +|\\n|/?>)|<(?:(?:script|pre|style|textarea)(?:[\\s>]|$)|!--)|<\\?|<![A-Za-z]|<!\\[CDATA\\[)`).replace(`tag`,ge).getRegex(),we={...Se,lheading:ue,table:Ce,paragraph:x(de).replace(`hr`,ae).replace(`heading`,` {0,3}#{1,6}(?:\\s|$)`).replace(`|lheading`,``).replace(`table`,Ce).replace(`blockquote`,` {0,3}>`).replace(`fences`," {0,3}(?:`{3,}(?=[^`\\n]*(?:\\n|$))|~~~)[^\\n]*(?:\\n|$)").replace(`list`,` {0,3}(?:[*+-]|1[.)])[ \\t]+[^ \\t\\n]`).replace(`html`,` {0,3}(?:</?(?:tag)(?: +|\\n|/?>)|<(?:(?:script|pre|style|textarea)(?:[\\s>]|$)|!--)|<\\?|<![A-Za-z]|<!\\[CDATA\\[)`).replace(`tag`,ge).getRegex()},Te={...Se,html:x(`^ *(?:comment(?: *\\n|\\s*$)|<(tag)[\\s\\S]+?</\\1>(?: *\\n{2,}|\\s*$)|<tag(?:"[^"]*"|'[^']*'|\\s[^'"/>\\s]*)*?/?>(?: *\\n{2,}|\\s*$))`).replace(`comment`,_e).replace(/tag/g,`(?!(?:a|em|strong|small|s|cite|q|dfn|abbr|data|time|code|var|samp|kbd|sub|sup|i|b|u|mark|ruby|rt|rp|bdi|bdo|span|br|wbr|ins|del|img)\\b)\\w+(?!:|[^\\w\\s@]*@)\\b`).getRegex(),def:/^ *\[([^\]]+)\]: *<?([^\s>]+)>?(?: +(["(][^\n]+[")]))? *(?:\n+|$)/,heading:/^(#{1,6})(.*)(?:\n+|$)/,fences:te,lheading:/^(.+?)\n {0,3}(=+|-+) *(?:\n+|$)/,paragraph:x(de).replace(`hr`,ae).replace(`heading`,` *#{1,6} *[^
+]`).replace(`lheading`,le).replace(`|table`,``).replace(`blockquote`,` {0,3}>`).replace(`|fences`,``).replace(`|list`,``).replace(`|html`,``).replace(`|tag`,``).getRegex()},T=/^\\([!"#$%&'()*+,\-./:;<=>?@\[\]\\^_`{|}~])/,E=/^(`+)([^`]|[^`][\s\S]*?[^`])\1(?!`)/,Ee=/^( {2,}|\\)\n(?!\s*$)[ \t]*/,De=/^(`+|[^`])(?:(?= {2,}\n)|[\s\S]*?(?:(?=[\\<!\[`*_]|\b_|$)|[^ ](?= {2,}\n)))/,Oe=/[\p{P}\p{S}]/u,ke=/[\s\p{P}\p{S}]/u,D=/[^\s\p{P}\p{S}]/u,O=x(/^((?![*_])punctSpace)/,`u`).replace(/punctSpace/g,ke).getRegex(),Ae=/[\p{Pi}\p{Ps}"']/u,je=/(?!~)[\p{P}\p{S}]/u,Me=/(?!~)[\s\p{P}\p{S}]/u,Ne=/(?:[^\s\p{P}\p{S}]|~)/u,Pe=x(/link|precode-code|html/,`g`).replace(`link`,/\[(?:[^\[\]`]|(?<a>`+)[^`]+\k<a>(?!`))*?\]\((?:\\[\s\S]|[^\\\(\)]|\((?:\\[\s\S]|[^\\\(\)])*\))*\)/).replace(`precode-`,S?"(?<!`)()":"(^^|[^`])").replace(`code`,/(?<b>`+)[^`]+\k<b>(?!`)/).replace(`html`,/<(?! )[^<>]*?>/).getRegex(),Fe=/^(?:\*+(?:((?!\*)punct)|([^\s*]))?)|^_+(?:((?!_)punct)|([^\s_]))?/,Ie=x(Fe,`u`).replace(/punct/g,Oe).getRegex(),Le=x(Fe,`u`).replace(/punct/g,je).getRegex(),Re=x(/^(?:\*+(?:((?!\*)(?!openQuote)punct)|([^\s*]))?)|^_+(?:((?!_)(?!openQuote)punct)|([^\s_]))?/,`u`).replace(/openQuote/g,Ae).replace(/punct/g,Oe).getRegex(),ze=`^[^_*]*?__[^_*]*?\\*[^_*]*?(?=__)|[^*]+(?=[^*])|(?!\\*)punct(\\*+)(?=[\\s]|$)|notPunctSpace(\\*+)(?!\\*)(?=punctSpace|$)|(?!\\*)punctSpace(\\*+)(?=notPunctSpace)|[\\s](\\*+)(?!\\*)(?=punct)|(?!\\*)punct(\\*+)(?!\\*)(?=punct)|notPunctSpace(\\*+)(?=notPunctSpace)`,Be=x(ze,`gu`).replace(/notPunctSpace/g,D).replace(/punctSpace/g,ke).replace(/punct/g,Oe).getRegex(),Ve=x(ze,`gu`).replace(/notPunctSpace/g,Ne).replace(/punctSpace/g,Me).replace(/punct/g,je).getRegex(),He=x(`^[^_*]*?__[^_*]*?\\*[^_*]*?(?=__)|[^*]+(?=[^*])|(?!\\*)punct(\\*+)(?=[\\s]|$)|notPunctSpace(\\*+)(?!\\*)(?=punctSpace|$)|(?!\\*)[\\s](\\*+)(?=notPunctSpace)|[\\s](\\*+)(?!\\*)(?=punct)|(?!\\*)punct(\\*+)(?!\\*)(?=punct)|(?:(?!\\*)punct|notPunctSpace)(\\*+)(?!\\*)(?=notPunctSpace)`,`gu`).replace(/notPunctSpace/g,D).replace(/punctSpace/g,ke).replace(/punct/g,Oe).getRegex(),Ue=x(`^[^_*]*?\\*\\*[^_*]*?_[^_*]*?(?=\\*\\*)|[^_]+(?=[^_])|(?!_)punct(_+)(?=[\\s]|$)|notPunctSpace(_+)(?!_)(?=punctSpace|$)|(?!_)punctSpace(_+)(?=notPunctSpace)|[\\s](_+)(?!_)(?=punct)|(?!_)punct(_+)(?!_)(?=punct)`,`gu`).replace(/notPunctSpace/g,D).replace(/punctSpace/g,ke).replace(/punct/g,Oe).getRegex(),We=x(`^[^_*]*?\\*\\*[^_*]*?_[^_*]*?(?=\\*\\*)|[^_]+(?=[^_])|(?!_)punct(_+)(?=[\\s]|$)|notPunctSpace(_+)(?!_)(?=punctSpace|$)|(?!_)[\\s](_+)(?=notPunctSpace)|[\\s](_+)(?!_)(?=punct)|(?!_)punct(_+)(?!_)(?=punct)|(?:(?!_)punct|notPunctSpace)(_+)(?!_)(?=notPunctSpace)`,`gu`).replace(/notPunctSpace/g,D).replace(/punctSpace/g,ke).replace(/punct/g,Oe).getRegex(),Ge=x(/^~~?(?:((?!~)punct)|[^\s~])/,`u`).replace(/punct/g,Oe).getRegex(),Ke=x(`^[^~]+(?=[^~])|(?!~)punct(~~?)(?=[\\s]|$)|notPunctSpace(~~?)(?!~)(?=punctSpace|$)|(?!~)punctSpace(~~?)(?=notPunctSpace)|[\\s](~~?)(?!~)(?=punct)|(?!~)punct(~~?)(?!~)(?=punct)|notPunctSpace(~~?)(?=notPunctSpace)`,`gu`).replace(/notPunctSpace/g,D).replace(/punctSpace/g,ke).replace(/punct/g,Oe).getRegex(),qe=x(/\\(punct)/,`gu`).replace(/punct/g,Oe).getRegex(),Je=x(/(`+)(?:[^`]|[^`][\s\S]*?[^`])\1(?!`)|`+|\\(punct)/,`gu`).replace(/punct/g,Oe).getRegex(),Ye=x(/^<(scheme:[^\s\x00-\x1f<>]*|email)>/).replace(`scheme`,/[a-zA-Z][a-zA-Z0-9+.-]{1,31}/).replace(`email`,/[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+(@)[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+(?![-_])/).getRegex(),Xe=x(_e).replace(`(?:-->|$)`,`-->`).getRegex(),Ze=x(`^comment|^</[a-zA-Z][a-zA-Z0-9-]*\\s*>|^<[a-zA-Z][a-zA-Z0-9-]*(?:attribute)*?\\s*/?>|^<\\?[\\s\\S]*?\\?>|^<![a-zA-Z]+\\s[\\s\\S]*?>|^<!\\[CDATA\\[[\\s\\S]*?\\]\\]>`).replace(`comment`,Xe).replace(`attribute`,/\s+[a-zA-Z:_][\w.:-]*(?:\s*=\s*"[^"]*"|\s*=\s*'[^']*'|\s*=\s*[^\s"'=<>`]+)?/).getRegex(),Qe=/\[(?:\\[\s\S]|[^\[\]\\])*\]/,$e=x(/(?:\[(?:brackets|\\[\s\S]|[^\[\]\\])*\]|\\[\s\S]|`+(?!`)[^`]*?`+(?!`)|``+(?=\])|[^\[\]\\`])*?/).replace(`brackets`,Qe).getRegex(),et=x(/^!?\[(label)\]\([ \t\n]*(href)(?:(?:[ \t]+(?:\n[ \t]*)?|\n[ \t]*)(title))?[ \t\n]*\)/).replace(`label`,$e).replace(`href`,/<(?:\\.|[^\n<>\\])+>|[^ \t\n\x00-\x1f]+|(?=\))/).replace(`title`,/"(?:\\[\s\S]|[^"\\])*"|'(?:\\[\s\S]|[^'\\])*'|\((?:\\[\s\S]|[^)\\])*\)/).getRegex(),tt=x(/^!?\[(label)\]\[(ref)\]/).replace(`label`,$e).replace(`ref`,pe).getRegex(),nt=x(/^!?\[(ref)\](?:\[\])?/).replace(`ref`,pe).getRegex(),rt=/(?!\s*\])(?:\\[\s\S]|[^\[\]\\]){1,999}/,it=x(/(?:[^\[\]\\`]*(?:\[(?:brackets|\\[\s\S]|[^\[\]\\])*\]|\\[\s\S]|`+(?!`)[^`]*?`+(?!`)|``+(?=\]))){0,999}?[^\[\]\\`]*?/).replace(`brackets`,Qe).getRegex(),at=x(`reflink|nolink(?!\\()`,`g`).replace(`reflink`,x(/^!?\[(label)\]\[(ref)\]/).replace(`label`,it).replace(`ref`,rt).getRegex()).replace(`nolink`,x(/^!?\[(ref)\](?:\[\])?/).replace(`ref`,rt).getRegex()).getRegex(),ot=/[hH][tT][tT][pP][sS]?|[fF][tT][pP]/,st=x(/(?:mailto:email|xmpp:email(?:\/[A-Za-z0-9@.]+)?)/).replace(/email/g,/[A-Za-z0-9._+-]+@[a-zA-Z0-9-_]+(?:\.[a-zA-Z0-9-_]*[a-zA-Z0-9])+(?![\w-])/).getRegex(),ct={_backpedal:te,anyPunctuation:qe,anyPunctuationOutsideCode:Je,autolink:Ye,blockSkip:Pe,br:Ee,code:E,del:te,delLDelim:te,delRDelim:te,emStrongLDelim:Ie,emStrongRDelimAst:Be,emStrongRDelimUnd:Ue,escape:T,link:et,nolink:nt,punctuation:O,reflink:tt,reflinkSearch:at,tag:Ze,text:De,url:te},lt={...ct,emStrongLDelim:Re,emStrongRDelimAst:He,emStrongRDelimUnd:We,link:x(/^!?\[(label)\]\((.*?)\)/).replace(`label`,$e).getRegex(),reflink:x(/^!?\[(label)\]\s*\[([^\]]*)\]/).replace(`label`,$e).getRegex()},ut={...ct,emStrongRDelimAst:Ve,emStrongLDelim:Le,delLDelim:Ge,delRDelim:Ke,url:x(/^emailProtocol|^((?:protocol):\/\/|www\.)(?:[a-zA-Z0-9\-]+\.?)+[^\s<]*|^email/).replace(`emailProtocol`,st).replace(`protocol`,ot).replace(`email`,/[A-Za-z0-9._+-]+(@)[a-zA-Z0-9-_]+(?:\.[a-zA-Z0-9-_]*[a-zA-Z0-9])+(?![\w-])/).getRegex(),_backpedal:/(?:[^?!.,:;*_'"~()&]+|\([^)]*\)|&(?![a-zA-Z0-9]+;$)|[?!.,:;*_'"~)]+(?!$))+/,del:/^(~~?)(?=[^\s~])((?:\\[\s\S]|[^\\])*?(?:\\[\s\S]|[^\s~\\]))\1(?=[^~]|$)/,text:x(/^(?:[^a-zA-Z0-9](?=emailProtocol)|(`+|~+|[^`~])(?:(?=[`~])|(?= {2,}\n)|(?=[a-zA-Z0-9.!#$%&'*+\/=?_`{\|}~-]+@)|[\s\S]*?(?:(?=[\\<!\[`*~_]|\b_|protocol:\/\/|wwwStart|$)|[^ ](?= {2,}\n)|[^a-zA-Z0-9](?=emailProtocol)|[^a-zA-Z0-9.!#$%&'*+\/=?_`{\|}~-](?=[a-zA-Z0-9.!#$%&'*+\/=?_`{\|}~-]+@))))/).replace(`protocol`,ot).replace(/emailProtocol/g,/(?:mailto|xmpp):/).replace(`wwwStart`,S?`(?<![^\\s*_~(])www\\.`:`www\\.`).getRegex()},dt={...ut,br:x(Ee).replace(`{2,}`,`*`).getRegex(),text:x(ut.text).replace(`\\b_`,`\\b_| {2,}\\n`).replace(/\{2,\}/g,`*`).getRegex()},ft={normal:Se,gfm:we,pedantic:Te},pt={normal:ct,gfm:ut,breaks:dt,pedantic:lt},mt={"&":`&amp;`,"<":`&lt;`,">":`&gt;`,'"':`&quot;`,"'":`&#39;`},ht=e=>mt[e];function gt(e,t){if(t){if(C.escapeTest.test(e))return e.replace(C.escapeReplace,ht)}else if(C.escapeTestNoEncode.test(e))return e.replace(C.escapeReplaceNoEncode,ht);return e}function _t(e){return C.numericCharacterReference.test(e)?e.replace(C.numericCharacterReferenceOrAmpersand,(e,t,n)=>{if(t===void 0&&n===void 0)return`&amp;`;let r=t===void 0?Number.parseInt(n,16):Number.parseInt(t,10);return r===0||r>1114111||r>=55296&&r<=57343?`�`:r===38?`&amp;`:String.fromCodePoint(r)}):e}function vt(e){try{e=encodeURI(e).replace(C.percentDecode,`%`)}catch{return null}return e}function yt(e,t){let n=e.replace(C.findPipe,(e,t,n)=>{let r=!1,i=t;for(;--i>=0&&n[i]===`\\`;)r=!r;return r?`|`:` |`}).split(C.splitPipe),r=0;if(n[0].trim()||n.shift(),n.length>0&&!n.at(-1)?.trim()&&n.pop(),t){if(n.length>t)n.splice(t);else for(;n.length<t;)n.push(``)}for(;r<n.length;r++)n[r]=n[r].trim().replace(C.slashPipe,`|`);return n}function bt(e,t,n){let r=e.length;if(r===0)return``;let i=0;for(;i<r;){let a=e.charAt(r-i-1);if(a===t&&!n)i++;else if(a!==t&&n)i++;else break}return e.slice(0,r-i)}function xt(e){let t=e.split(`
+`),n=t.length-1;for(;n>=0&&C.blankLine.test(t[n]);)n--;return t.length-n<=2?e:t.slice(0,n+1).join(`
+`)}function St(e){return e.trim().replace(C.multipleSpaceGlobal,` `).toLowerCase().toUpperCase().toLowerCase()}function Ct(e,t){if(e.indexOf(t[0])===-1&&e.indexOf(t[1])===-1)return-1;let n=0;for(let r=0;r<e.length;r++)if(e[r]===`\\`)r++;else if(e[r]===t[0])n++;else if(e[r]===t[1]&&(n--,n<0))return r;return n>0?-2:-1}var wt=new WeakMap;function Tt(e){let t={"*":-1,_:-1},n=-1,r=e.length;for(let i=0;i<r;i++){let a=e[i];if(a!==`*`&&a!==`_`&&a!==`~`)continue;let o=i===0?`
+`:e[i-1],s=i+1;for(;s<r&&e[s]===a;)s++;o!==` `&&o!==`	`&&o!==`
+`&&o!==`\r`&&o!==`\f`&&(a===`~`?n=i:t[a]=i),i=s-1}return{maskedSrc:e,lastPossibleEmStrongCloserIndex:t,lastPossibleDelCloserIndex:n}}function Et(e,t){let n=Tt(t),r=wt.get(e);r?r.push(n):wt.set(e,[n])}function Dt(e){let t=wt.get(e);t&&(t.pop(),t.length===0&&wt.delete(e))}function Ot(e,t,n){let r=wt.get(e)?.at(-1);return r&&r.maskedSrc===t?r.lastPossibleEmStrongCloserIndex[n]:Tt(t).lastPossibleEmStrongCloserIndex[n]}function kt(e,t){let n=wt.get(e)?.at(-1);return n&&n.maskedSrc===t?n.lastPossibleDelCloserIndex:Tt(t).lastPossibleDelCloserIndex}function At(e,t=0){let n=t,r=``;for(let t of e)if(t===`	`){let e=4-n%4;r+=` `.repeat(e),n+=e}else r+=t,n++;return r}function jt(e,t,n,r,i){let a=t.href,o=t.title||null,s=e[1].replace(i.other.outputLinkReplace,`$1`),c=e[0].charAt(0)===`!`,l=r.state.inLink,u=r.state.linkEmitted,d=r.state.inRawBlock;r.state.inLink=!0,r.state.linkEmitted=!1;let f=r.inlineTokens(s),p=r.state.linkEmitted;if(r.state.linkEmitted=u,r.state.inLink=l,!c){if(p){r.state.inRawBlock=d;return}r.state.linkEmitted=!0}return{type:c?`image`:`link`,raw:n,href:a,title:o,text:s,tokens:f}}function Mt(e,t,n){let r=e.match(n.other.indentCodeCompensation);if(r===null)return t;let i=r[1];return t.split(`
+`).map(e=>{let t=e.match(n.other.beginningSpace);if(t===null)return e;let[r]=t;return e.slice(Math.min(r.length,i.length))}).join(`
+`)}function Nt(e,t,n,r){if(!t.includes(`<`))return!1;for(let i=0;i<t.length;i++){if(t[i]===`\\`){i++;continue}if(t[i]==="`"){let e=r.inline.code.exec(t.slice(i));if(e){i+=e[0].length-1;continue}}if(t[i]!==`<`)continue;let a=e.slice(n+i),o=r.inline.tag.exec(a)||r.inline.autolink.exec(a);if(o){if(o[0].length>t.length-i)return!0;i+=o[0].length-1}}return!1}var Pt=class{options;rules;lexer;constructor(e){this.options=e||b}space(e){let t=this.rules.block.newline.exec(e);if(t&&t[0].length>0)return{type:`space`,raw:t[0]}}code(e){let t=this.rules.block.code.exec(e);if(t){let e=this.options.pedantic?t[0]:xt(t[0]);return{type:`code`,raw:e,codeBlockStyle:`indented`,text:e.replace(this.rules.other.codeRemoveIndent,``)}}}fences(e){let t=this.rules.block.fences.exec(e);if(t){let e=t[0],n=Mt(e,t[3]||``,this.rules);return{type:`code`,raw:e,lang:t[2]?t[2].trim().replace(this.rules.inline.anyPunctuation,`$1`):t[2],text:n}}}heading(e){let t=this.rules.block.heading.exec(e);if(t){let e=t[2].trim();if(this.rules.other.endingHash.test(e)){let t=bt(e,`#`);(this.options.pedantic||!t||this.rules.other.endingSpaceTabChar.test(t))&&(e=t.trim())}return{type:`heading`,raw:bt(t[0],`
+`),depth:t[1].length,text:e,tokens:this.lexer.inline(e)}}}hr(e){let t=this.rules.block.hr.exec(e);if(t)return{type:`hr`,raw:bt(t[0],`
+`)}}blockquote(e){let t=this.rules.block.blockquote.exec(e);if(t){let e=bt(t[0],`
+`).split(`
+`),n=``,r=``,i=[];for(;e.length>0;){let t=!1,a=[],o=0;for(;o<e.length;o++)if(this.rules.other.blockquoteStart.test(e[o]))a.push(e[o]),t=!0;else if(!t)a.push(e[o]);else break;e=e.slice(o);let s=a.join(`
+`),c=s.replace(this.rules.other.blockquoteMarkerWhitespace,(e,t,n)=>t+At(n,t.length)).replace(this.rules.other.blockquoteSetextReplace,`
+    $1`).replace(this.rules.other.blockquoteSetextReplace2,``);n=n?`${n}
+${s}`:s,r=r?`${r}
+${c}`:c;let l=this.lexer.state.top;if(this.lexer.state.top=!0,this.lexer.blockTokens(c,i,!0),this.lexer.state.top=l,e.length===0)break;let u=i.at(-1);if(u?.type===`code`||u?.type===`heading`||u?.type===`hr`||u?.type===`html`||u?.type===`table`)break;if(u?.type===`blockquote`){let t=u,a=e.join(`
+`),o=t.raw+`
+`+a.replace(this.rules.other.blockquoteSetextReplace2,``),s=this.blockquote(o);i[i.length-1]=s;let c=o.substring(s.raw.length).replace(/^\n/,``),l=c?c.split(`
+`).length:0,d=l?e.slice(0,-l):e;if(d.length>0&&(n=`${n}
+${d.join(`
+`)}`),r=r.substring(0,r.length-t.text.length)+s.text,e=e.slice(d.length),e.length>0&&this.rules.other.blockquoteStart.test(e[0]))continue;break}if(u?.type===`list`){let t=u,a=t.raw+`
+`+e.join(`
+`),o=this.list(a);i[i.length-1]=o;let s=o.raw.length>t.raw.length?a.slice(t.raw.length+1,o.raw.length).split(`
+`).length:0;if(s>0){let t=e.slice(0,s).join(`
+`);n=`${n}
+${t}`,r=`${r}
+${t}`}e=e.slice(s)}}return{type:`blockquote`,raw:n,tokens:i,text:r}}}list(e){let t=this.rules.block.list.exec(e);if(t){if(!this.options.pedantic&&this.lexer.state.lastToken?.type===`text`&&!this.rules.other.listInterruptsParagraph.test(e))return;let n=e,r=()=>n.length-e.length,i=t[1].trim(),a=i.length>1,o={type:`list`,raw:``,ordered:a,start:a?+i.slice(0,-1):``,loose:!1,items:[]};i=a?`\\d{1,9}\\${i.slice(-1)}`:`\\${i}`,this.options.pedantic&&(i=a?i:`[*+-]`);let s=this.rules.other.listItemRegex(i),c=!1;for(;e;){let i=!1,a=``;if(!(t=s.exec(e))||this.rules.block.hr.test(e))break;let l=r();e=e.substring(t[0].length);let u=t[2].split(`
+`,1)[0],d=t[1].length,f=this.options.pedantic?At(u,d):u.replace(this.rules.other.leadingSpaceTab,e=>At(e,d)),p=e.split(`
+`,1)[0],m=!f.trim(),h=0;if(this.options.pedantic?(h=2,a=f.trimStart()):m?h=d+1:(h=f.search(this.rules.other.nonSpaceChar),h=h>4?1:h,a=f.slice(h),h+=d),m&&this.rules.other.blankLine.test(p)&&(e=e.substring(p.length+1),i=!0),!i){let t=this.rules.other.nextBulletRegex(h),n=this.rules.other.hrRegex(h),r=this.rules.other.fencesBeginRegex(h),i=this.options.pedantic?this.rules.other.pedanticHeadingBeginRegex(h):this.rules.other.headingBeginRegex(h),o=this.rules.other.htmlBeginRegex(h),s=this.rules.other.blockquoteBeginRegex(h),c=!1;for(;e;){let l=e.split(`
+`,1)[0],u;if(p=l,this.options.pedantic?(p=p.replace(this.rules.other.listReplaceNesting,`  `),u=p):u=p.replace(this.rules.other.leadingSpaceTab,e=>At(e)),r.test(p)||i.test(p)||o.test(p)||s.test(p)||t.test(p)||n.test(p))break;if(u.search(this.rules.other.nonSpaceChar)>=h||!p.trim())a+=`
+`+u.slice(h),c=!1;else{if(m||f.replace(this.rules.other.tabCharGlobal,`    `).search(this.rules.other.nonSpaceChar)>=4||r.test(f)||i.test(f)||o.test(f)||n.test(f))break;if(!this.options.pedantic&&!c){let e=f.replace(this.rules.other.nestedContainerMarkers,``);if(this.rules.block.fences.test(e)||this.rules.block.heading.test(e)||this.rules.block.hr.test(e))break}let e=!this.options.pedantic&&/^ {0,3}(?:=+|-+) *$/.test(p)&&this.rules.block.lheading.test(`${f}
+${p}`)?`    ${u.replace(/^ {0,3}/,``)}`:p;a+=`
+`+e,c=!0}m=!p.trim(),e=e.substring(l.length+1),f=u.slice(h)}}let g=n.slice(l,r());o.loose||(c?o.loose=!0:this.rules.other.doubleBlankLine.test(g)&&(c=!0)),o.items.push({type:`list_item`,raw:g,task:!!this.options.gfm&&this.rules.other.listIsTask.test(a),loose:!1,text:a,tokens:[]})}let l=o.items.at(-1);if(l)l.raw=l.raw.trimEnd(),l.text=l.text.trimEnd();else return;o.raw=n.slice(0,r()).trimEnd();for(let e of o.items)if(this.lexer.state.top=!1,e.tokens=this.lexer.blockTokens(e.text,[]),!o.loose){let t=e.tokens.filter(e=>e.type===`space`);o.loose=t.length>0&&t.some(e=>this.rules.other.anyLine.test(e.raw))}for(let e of o.items){let t=e.tokens[0];if(e.task&&(t?.type===`text`||t?.type===`paragraph`)){e.text=e.text.replace(this.rules.other.listReplaceTask,``),t.raw=t.raw.replace(this.rules.other.listReplaceTask,``),t.text=t.text.replace(this.rules.other.listReplaceTask,``);for(let e=this.lexer.inlineQueue.length-1;e>=0;e--)if(this.rules.other.listIsTask.test(this.lexer.inlineQueue[e].src)){this.lexer.inlineQueue[e].src=this.lexer.inlineQueue[e].src.replace(this.rules.other.listReplaceTask,``);break}let n=this.rules.other.listTaskCheckbox.exec(e.raw);if(n){let t={type:`checkbox`,raw:n[0]+` `,checked:n[0]!==`[ ]`};e.checked=t.checked,o.loose?e.tokens[0]&&[`paragraph`,`text`].includes(e.tokens[0].type)&&`tokens`in e.tokens[0]&&e.tokens[0].tokens?(e.tokens[0].raw=t.raw+e.tokens[0].raw,e.tokens[0].text=t.raw+e.tokens[0].text,e.tokens[0].tokens.unshift(t)):e.tokens.unshift({type:`paragraph`,raw:t.raw,text:t.raw,tokens:[t]}):e.tokens.unshift(t)}}else e.task&&=!1}if(o.loose)for(let e of o.items){e.loose=!0;for(let t of e.tokens)t.type===`text`&&(t.type=`paragraph`)}return o}}html(e){let t=this.rules.block.html.exec(e);if(t){let e=xt(t[0]);return{type:`html`,block:!0,raw:e,pre:t[1]===`pre`||t[1]===`script`||t[1]===`style`,text:e}}}def(e){let t=this.rules.block.def.exec(e);if(t){if(!this.rules.other.startAngleBracket.test(t[2])&&Ct(t[2],`()`)!==-1)return;let e=St(t[1]),n=t[2]?t[2].replace(this.rules.other.hrefBrackets,`$1`).replace(this.rules.inline.anyPunctuation,`$1`):``,r=t[3]?t[3].substring(1,t[3].length-1).replace(this.rules.inline.anyPunctuation,`$1`):t[3];return{type:`def`,tag:e,raw:bt(t[0],`
+`),href:n,title:r}}}table(e){let t=this.rules.block.table.exec(e);if(!t||!this.rules.other.tableDelimiter.test(t[2]))return;let n=yt(t[1]),r=t[2].replace(this.rules.other.tableAlignChars,``).split(`|`),i=t[3]?.trim()?t[3].replace(this.rules.other.tableRowBlankLine,``).split(`
+`):[],a={type:`table`,raw:bt(t[0],`
+`),header:[],align:[],rows:[]};if(n.length===r.length){for(let e of r)this.rules.other.tableAlignRight.test(e)?a.align.push(`right`):this.rules.other.tableAlignCenter.test(e)?a.align.push(`center`):this.rules.other.tableAlignLeft.test(e)?a.align.push(`left`):a.align.push(null);for(let e=0;e<n.length;e++)a.header.push({text:n[e],tokens:this.lexer.inline(n[e]),header:!0,align:a.align[e]});for(let e of i)a.rows.push(yt(e,a.header.length).map((e,t)=>({text:e,tokens:this.lexer.inline(e),header:!1,align:a.align[t]})));return a}}lheading(e){let t=this.rules.block.lheading.exec(e);if(t){let e=t[1].trim();return{type:`heading`,raw:bt(t[0],`
+`),depth:t[2].charAt(0)===`=`?1:2,text:e,tokens:this.lexer.inline(e)}}}paragraph(e){let t=this.rules.block.paragraph.exec(e);if(t){let e=t[1].charAt(t[1].length-1)===`
+`?t[1].slice(0,-1):t[1];return{type:`paragraph`,raw:t[0],text:e,tokens:this.lexer.inline(e)}}}text(e){let t=this.rules.block.text.exec(e);if(t)return{type:`text`,raw:t[0],text:t[0],tokens:this.lexer.inline(t[0])}}escape(e){let t=this.rules.inline.escape.exec(e);if(t)return{type:`escape`,raw:t[0],text:t[1]}}tag(e){let t=this.rules.inline.tag.exec(e);if(t)return!this.lexer.state.inLink&&this.rules.other.startATag.test(t[0])?this.lexer.state.inLink=!0:this.lexer.state.inLink&&this.rules.other.endATag.test(t[0])&&(this.lexer.state.inLink=!1),!this.lexer.state.inRawBlock&&this.rules.other.startPreScriptTag.test(t[0])?this.lexer.state.inRawBlock=!0:this.lexer.state.inRawBlock&&this.rules.other.endPreScriptTag.test(t[0])&&(this.lexer.state.inRawBlock=!1),{type:`html`,raw:t[0],inLink:this.lexer.state.inLink,inRawBlock:this.lexer.state.inRawBlock,block:!1,text:t[0]}}link(e){if(this.lexer.state.linkParenPossible===!1)return;let t=this.rules.inline.link.exec(e);if(t){let n=t[0].charAt(0)===`!`?2:1;if(!this.options.pedantic&&Nt(e,t[1],n,this.rules))return;let r=t[2].trim();if(!this.options.pedantic&&this.rules.other.startAngleBracket.test(r)){if(!this.rules.other.endAngleBracket.test(r))return;let e=bt(r.slice(0,-1),`\\`);if((r.length-e.length)%2==0)return}else{let e=Ct(t[2],`()`);if(e===-2)return;if(e>-1){let n=(t[0].indexOf(`!`)===0?5:4)+t[1].length+e;t[2]=t[2].substring(0,e),t[0]=t[0].substring(0,n).trim(),t[3]=``}}let i=bt(t[0].slice(0,-1),`\\`);if((t[0].length-i.length)%2==0)return;let a=t[2],o=``;if(this.options.pedantic){let e=this.rules.other.pedanticHrefTitle.exec(a);e&&(a=e[1],o=e[3])}else o=t[3]?t[3].slice(1,-1):``;return a=a.trim(),this.rules.other.startAngleBracket.test(a)&&(a=this.options.pedantic&&!this.rules.other.endAngleBracket.test(r)?a.slice(1):a.slice(1,-1)),jt(t,{href:a&&a.replace(this.rules.inline.anyPunctuation,`$1`),title:o&&o.replace(this.rules.inline.anyPunctuation,`$1`)},t[0],this.lexer,this.rules)}}reflink(e,t){let n;if((n=this.rules.inline.reflink.exec(e))||(n=this.rules.inline.nolink.exec(e))){let r=n[0].charAt(0)===`!`?2:1;if(!this.options.pedantic&&Nt(e,n[1],r,this.rules))return;let i=t[St(n[2]||n[1])];if(!i){let e=n[0].charAt(0);return{type:`text`,raw:e,text:e}}return jt(n,i,n[0],this.lexer,this.rules)}}emStrong(e,t,n=``){let r=this.rules.inline.emStrongLDelim.exec(e);if(!r||!r[1]&&!r[2]&&!r[3]&&!r[4])return;let i=r[0][0],a=n===i,o=t.length-e.length,s=o;for(;!this.options.pedantic&&s>0&&t[s-1]===i;)s--;let c=[...t.slice(Math.max(0,s-2),s)].at(-1)??``,l=c===`*`||c===`_`||!!this.rules.inline.punctuation.exec(c);s<o&&(n=c);let u=s<o?l:n===`*`||n===`_`||!!this.rules.inline.punctuation.exec(n);if(r[4]&&n.match(this.rules.other.unicodeAlphaNumeric))return;let d=r[1]||r[3]||``;if(!d||!n||u){let n=[...r[0]].length-1,u,f,p=n,m=0,h=o-s+n,g=!this.options.pedantic&&!!c.trim()&&(!!d||i===`*`&&!l);if(i!==`*`&&i!==`_`)return;let _=i===`*`?this.rules.inline.emStrongRDelimAst:this.rules.inline.emStrongRDelimUnd,v=Ot(this,t,i),y=t.length-e.length+n;if(v<y)return;t=t.slice(-1*e.length+n);let b=v-y;for(_.lastIndex=0;(r=_.exec(t))!==null&&!(r.index>b);){if(u=r[1]||r[2]||r[3]||r[4]||r[5]||r[6],!u)continue;if(f=[...u].length,r[3]||r[4]){p+=f;continue}if(r[5]||r[6]||g){if(a&&(r[5]||r[6]))break;if(h%3&&!((h+f)%3)){m+=f;continue}}if(p-=f,p>0)continue;f=Math.min(f,f+p+m);let t=[...r[0]][0].length,i=e.slice(0,n+r.index+t+f);if(Math.min(n,f)%2){let e=i.slice(1,-1);return{type:`em`,raw:i,text:e,tokens:this.lexer.inlineTokens(e)}}let o=i.slice(2,-2);return{type:`strong`,raw:i,text:o,tokens:this.lexer.inlineTokens(o)}}}}codespan(e){let t=this.rules.inline.code.exec(e);if(t){let e=t[2].replace(this.rules.other.newLineCharGlobal,` `),n=this.rules.other.nonSpaceChar.test(e),r=this.rules.other.startingSpaceChar.test(e)&&this.rules.other.endingSpaceChar.test(e);return n&&r&&(e=e.substring(1,e.length-1)),{type:`codespan`,raw:t[0],text:e}}}br(e){let t=this.rules.inline.br.exec(e);if(t)return{type:`br`,raw:t[0]}}del(e,t,n=``){let r=this.rules.inline.delLDelim.exec(e);if(r&&(!r[1]||!n||this.rules.inline.punctuation.exec(n))){let n=[...r[0]].length-1,i,a,o=n,s=this.rules.inline.delRDelim,c=kt(this,t),l=t.length-e.length+n;if(c<l)return;t=t.slice(-1*e.length+n);let u=c-l;for(s.lastIndex=0;(r=s.exec(t))!==null&&!(r.index>u);){if(i=r[1]||r[2]||r[3]||r[4]||r[5]||r[6],!i||(a=[...i].length,a!==n))continue;if(r[3]||r[4]){o+=a;continue}if(o-=a,o>0)continue;a=Math.min(a,a+o);let t=[...r[0]][0].length,s=e.slice(0,n+r.index+t+a),c=s.slice(n,-n);return{type:`del`,raw:s,text:c,tokens:this.lexer.inlineTokens(c)}}}}autolink(e){let t=this.rules.inline.autolink.exec(e);if(t){let e,n;return t[2]===`@`?(e=t[1],n=`mailto:`+e):(e=t[1],n=e),{type:`link`,raw:t[0],text:e,href:n,autolink:!0,tokens:[{type:`text`,raw:e,text:e}]}}}url(e){let t;if(t=this.rules.inline.url.exec(e)){let e,n;if(t[2]===`@`)e=t[0],n=`mailto:`+e;else{let r;do r=t[0],t[0]=this.rules.inline._backpedal.exec(t[0])?.[0]??``;while(r!==t[0]);e=t[0],n=t[1]===`www.`?`http://`+t[0]:t[0]}return{type:`link`,raw:t[0],text:e,href:n,autolink:!0,tokens:[{type:`text`,raw:e,text:e}]}}}inlineText(e){let t=this.rules.inline.text.exec(e);if(t){let e=this.lexer.state.inRawBlock;return{type:`text`,raw:t[0],text:e?t[0]:_t(t[0]),escaped:e}}}},Ft=class e{tokens;options;state;inlineQueue;tokenizer;constructor(e){this.tokens=[],this.tokens.links=Object.create(null),this.options=e||b,this.options.tokenizer=this.options.tokenizer||new Pt,this.tokenizer=this.options.tokenizer,this.tokenizer.options=this.options,this.tokenizer.lexer=this,this.inlineQueue=[],this.state={inLink:!1,inRawBlock:!1,linkEmitted:!1,linkParenPossible:!0,top:!0};let t={other:C,block:ft.normal,inline:pt.normal};this.options.pedantic?(t.block=ft.pedantic,t.inline=pt.pedantic):this.options.gfm&&(t.block=ft.gfm,t.inline=this.options.breaks?pt.breaks:pt.gfm),this.tokenizer.rules=t}static get rules(){return{block:ft,inline:pt}}static lex(t,n){return new e(n).lex(t)}static lexInline(t,n){return new e(n).inlineTokens(t)}lex(e){e=e.replace(C.carriageReturn,`
+`),this.blockTokens(e,this.tokens);for(let e=0;e<this.inlineQueue.length;e++){let t=this.inlineQueue[e];this.state.inRawBlock=!1,this.inlineTokens(t.src,t.tokens)}return this.inlineQueue=[],this.tokens}blockTokens(e,t=[],n=!1){this.tokenizer.lexer=this;let r=this.state.lastToken;this.options.pedantic&&(e=e.replace(C.tabCharGlobal,`    `).replace(C.spaceLine,``));let i=1/0;for(;e;){if(e.length<i)i=e.length;else{this.infiniteLoopError(e.charCodeAt(0));break}this.state.lastToken=t.at(-1);let r;if(this.options.extensions?.block?.some(n=>(r=n.call({lexer:this},e,t))?(e=e.substring(r.raw.length),t.push(r),!0):!1))continue;if(r=this.tokenizer.space(e)){e=e.substring(r.raw.length);let n=t.at(-1);r.raw.length===1&&n!==void 0?n.raw+=`
+`:t.push(r);continue}if(r=this.tokenizer.code(e)){e=e.substring(r.raw.length);let n=t.at(-1);n?.type===`paragraph`||n?.type===`text`?(n.raw+=(n.raw.endsWith(`
+`)?``:`
+`)+r.raw,n.text+=`
+`+r.text,this.inlineQueue.at(-1).src=n.text):t.push(r);continue}if((r=this.tokenizer.fences(e))||(r=this.tokenizer.heading(e))||(r=this.tokenizer.hr(e))||(r=this.tokenizer.blockquote(e))||(r=this.tokenizer.list(e))||(r=this.tokenizer.html(e))){e=e.substring(r.raw.length),t.push(r);continue}if(r=this.tokenizer.def(e)){e=e.substring(r.raw.length);let n=t.at(-1);n?.type===`paragraph`||n?.type===`text`?(n.raw+=(n.raw.endsWith(`
+`)?``:`
+`)+r.raw,n.text+=`
+`+r.raw,this.inlineQueue.at(-1).src=n.text):(this.tokens.links[r.tag]||(this.tokens.links[r.tag]={href:r.href,title:r.title}),t.push(r));continue}if((r=this.tokenizer.table(e))||(r=this.tokenizer.lheading(e))){e=e.substring(r.raw.length),t.push(r);continue}let a=e;if(this.options.extensions?.startBlock){let t=1/0,n=e.slice(1),r;this.options.extensions.startBlock.forEach(e=>{r=e.call({lexer:this},n),typeof r==`number`&&r>=0&&(t=Math.min(t,r))}),t<1/0&&t>=0&&(a=e.substring(0,t+1))}if(this.state.top&&(r=this.tokenizer.paragraph(a))){let i=t.at(-1);n&&i?.type===`paragraph`?(i.raw+=(i.raw.endsWith(`
+`)?``:`
+`)+r.raw,i.text+=`
+`+r.text,this.inlineQueue.pop(),this.inlineQueue.at(-1).src=i.text):t.push(r),n=a.length!==e.length,e=e.substring(r.raw.length)}else if(r=this.tokenizer.text(e)){e=e.substring(r.raw.length);let n=t.at(-1);n?.type===`text`?(n.raw+=(n.raw.endsWith(`
+`)?``:`
+`)+r.raw,n.text+=`
+`+r.text,this.inlineQueue.pop(),this.inlineQueue.at(-1).src=n.text):t.push(r)}else if(e){this.infiniteLoopError(e.charCodeAt(0));break}}return this.state.top=!0,this.state.lastToken=r,t}inline(e,t=[]){return this.inlineQueue.push({src:e,tokens:t}),t}linkInText(e){if(!e.includes(`[`))return!1;let t=this.tokenizer.rules.inline.link;for(let n of e.matchAll(this.tokenizer.rules.inline.blockSkip))if(t.test(n[0])&&e.charAt(n.index-1)!==`!`)return!0;for(let t of e.matchAll(this.tokenizer.rules.inline.reflinkSearch)){let e=t[0],n=e.lastIndexOf(`[`);if(e.charAt(0)!==`!`&&Object.hasOwn(this.tokens.links,St(e.slice(n+1,-1)))&&!(n>1&&this.linkInText(e.slice(1,n-1))))return!0}return!1}inlineTokens(e,t=[]){this.tokenizer.lexer=this;let n=this.state.linkParenPossible;this.state.linkParenPossible=n&&e.includes(`)`);try{return this.#e(e,t)}finally{this.state.linkParenPossible=n}}#e(e,t){let n=e.includes(`*`)||e.includes(`_`)||e.includes(`~`)||this.options.hooks?.emStrongMask||this.tokenizer.emStrong!==Pt.prototype.emStrong||this.tokenizer.del!==Pt.prototype.del?this.#r(e):e;Et(this.tokenizer,n);try{return this.#t(e,n,t)}finally{Dt(this.tokenizer)}}#t(e,t,n){let r=!1,i=``,a=1/0;for(;e;){if(e.length<a)a=e.length;else{this.infiniteLoopError(e.charCodeAt(0));break}r||(i=``),r=!1;let o;if(this.options.extensions?.inline?.some(t=>(o=t.call({lexer:this},e,n))?(e=e.substring(o.raw.length),n.push(o),!0):!1))continue;if((o=this.tokenizer.escape(e))||(o=this.tokenizer.tag(e))||(o=this.tokenizer.link(e))){e=e.substring(o.raw.length),n.push(o);continue}if(o=this.tokenizer.reflink(e,this.tokens.links)){e=e.substring(o.raw.length);let t=n.at(-1);o.type===`text`&&t?.type===`text`?(t.raw+=o.raw,t.text+=o.text):n.push(o);continue}if((o=this.tokenizer.emStrong(e,t,i))||(o=this.tokenizer.codespan(e))||(o=this.tokenizer.br(e))||(o=this.tokenizer.del(e,t,i))||(o=this.tokenizer.autolink(e))||!this.state.inLink&&(o=this.tokenizer.url(e))){e=e.substring(o.raw.length),n.push(o);continue}let s=e;if(this.options.extensions?.startInline){let t=1/0,n=e.slice(1),r;this.options.extensions.startInline.forEach(e=>{r=e.call({lexer:this},n),typeof r==`number`&&r>=0&&(t=Math.min(t,r))}),t<1/0&&t>=0&&(s=e.substring(0,t+1))}if(o=this.tokenizer.inlineText(s)){e=e.substring(o.raw.length),o.raw.slice(-1)!==`_`&&(i=o.raw.slice(-1)),r=!0;let t=n.at(-1);t?.type===`text`?(t.raw+=o.raw,t.text+=o.text):n.push(o)}else if(e){this.infiniteLoopError(e.charCodeAt(0));break}}return n}#n(e){let{blockSkip:t,tag:n,autolink:r}=this.tokenizer.rules.inline,i=``,a=0,o;for(t.lastIndex=0;o=t.exec(e);){let s=o.index+(o[2]?o[2].length:0),c=o.index+o[0].length;if(e.charAt(s)===`<`){let i=e.slice(s),a=n.exec(i)||r.exec(i);if(!a){t.lastIndex=s+1;continue}c=s+a[0].length,t.lastIndex=c}i+=e.slice(a,s)+`[`+`a`.repeat(c-s-2)+`]`,a=c}return i+e.slice(a)}#r(e){let t=e;if(this.tokens.links&&e.includes(`[`)){let e=this.tokenizer.rules.inline.reflinkSearch,n=t=>{let r=t.lastIndexOf(`[`);if(!Object.hasOwn(this.tokens.links,St(t.slice(r+1,-1))))return t;if(r>1&&t.charAt(0)!==`!`){let i=t.slice(1,r-1);if(this.linkInText(i))return`[`+i.replace(e,n)+`][`+`a`.repeat(t.length-r-2)+`]`}return`[`+`a`.repeat(t.length-2)+`]`};t=t.replace(e,n)}return t=t.replace(this.tokenizer.rules.inline.anyPunctuationOutsideCode,(e,t,n)=>n?`+`.repeat(e.length):t?t+e.slice(t.length,-t.length).replace(/`/g,`+`)+t:e),t=this.#n(t),t=this.options.hooks?.emStrongMask?.call({lexer:this},t)??t,t}infiniteLoopError(e){let t=`Infinite loop on byte: `+e;if(this.options.silent)console.error(t);else throw Error(t)}},It=class{options;parser;constructor(e){this.options=e||b}space(e){return``}code({text:e,lang:t,escaped:n}){let r=(t||``).match(C.notSpaceStart)?.[0],i=e?e.replace(C.endingNewline,``)+`
+`:``;return r?`<pre><code class="language-`+gt(r)+`">`+(n?i:gt(i,!0))+`</code></pre>
+`:`<pre><code>`+(n?i:gt(i,!0))+`</code></pre>
+`}blockquote({tokens:e}){return`<blockquote>
+${this.parser.parse(e)}</blockquote>
+`}html({text:e}){return e}def(e){return``}heading({tokens:e,depth:t}){return`<h${t}>${this.parser.parseInline(e)}</h${t}>
+`}hr(e){return`<hr>
+`}list(e){let t=e.ordered,n=e.start,r=``;for(let t=0;t<e.items.length;t++){let n=e.items[t];r+=this.listitem(n)}let i=t?`ol`:`ul`,a=t&&n!==1?` start="`+n+`"`:``;return`<`+i+a+`>
+`+r+`</`+i+`>
+`}listitem(e){return`<li>${this.parser.parse(e.tokens)}</li>
+`}checkbox({checked:e}){return`<input `+(e?`checked="" `:``)+`disabled="" type="checkbox"> `}paragraph({tokens:e}){return`<p>${this.parser.parseInline(e)}</p>
+`}table(e){let t=``,n=``;for(let t=0;t<e.header.length;t++)n+=this.tablecell(e.header[t]);t+=this.tablerow({text:n});let r=``;for(let t=0;t<e.rows.length;t++){let i=e.rows[t];n=``;for(let e=0;e<i.length;e++)n+=this.tablecell(i[e]);r+=this.tablerow({text:n})}return r&&=`<tbody>${r}</tbody>`,`<table>
+<thead>
+`+t+`</thead>
+`+r+`</table>
+`}tablerow({text:e}){return`<tr>
+${e}</tr>
+`}tablecell(e){let t=this.parser.parseInline(e.tokens),n=e.header?`th`:`td`;return(e.align?`<${n} align="${e.align}">`:`<${n}>`)+t+`</${n}>
+`}strong({tokens:e}){return`<strong>${this.parser.parseInline(e)}</strong>`}em({tokens:e}){return`<em>${this.parser.parseInline(e)}</em>`}codespan({text:e}){return`<code>${gt(e,!0)}</code>`}br(e){return`<br>`}del({tokens:e}){return`<del>${this.parser.parseInline(e)}</del>`}link({href:e,title:t,text:n,tokens:r,autolink:i}){let a=i?gt(n,!0):this.parser.parseInline(r),o=vt(e);if(o===null)return a;e=gt(o,i);let s=`<a href="`+e+`"`;return t&&(s+=` title="`+gt(t)+`"`),s+=`>`+a+`</a>`,s}image({href:e,title:t,text:n,tokens:r}){r&&(n=this.parser.parseInline(r,this.parser.textRenderer));let i=vt(e);if(i===null)return gt(n);e=i;let a=`<img src="${gt(e)}" alt="${gt(n)}"`;return t&&(a+=` title="${gt(t)}"`),a+=`>`,a}text(e){return`tokens`in e&&e.tokens?this.parser.parseInline(e.tokens):`escaped`in e&&e.escaped?e.text:gt(e.text)}},Lt=class{parser;strong({text:e,tokens:t}){return t?this.parser.parseInline(t,this):e}em({text:e,tokens:t}){return t?this.parser.parseInline(t,this):e}codespan({text:e}){return e}del({text:e,tokens:t}){return t?this.parser.parseInline(t,this):e}html({text:e}){return e}text({text:e}){return e}link({text:e,tokens:t}){return t?this.parser.parseInline(t,this):e}image({text:e,tokens:t}){return t?this.parser.parseInline(t,this):e}br(){return`
+`}checkbox({raw:e}){return e}},Rt=class e{options;renderer;textRenderer;constructor(e){this.options=e||b,this.options.renderer=this.options.renderer||new It,this.renderer=this.options.renderer,this.renderer.options=this.options,this.renderer.parser=this,this.textRenderer=new Lt,this.textRenderer.parser=this}static parse(t,n){return new e(n).parse(t)}static parseInline(t,n){return new e(n).parseInline(t)}parse(e){this.renderer.parser=this;let t=``;for(let n=0;n<e.length;n++){let r=e[n];if(this.options.extensions?.renderers?.[r.type]){let e=r,n=this.options.extensions.renderers[e.type].call({parser:this},e);if(n!==!1||![`space`,`hr`,`heading`,`code`,`table`,`blockquote`,`list`,`checkbox`,`html`,`def`,`paragraph`,`text`].includes(e.type)){t+=n===!1?``:n??``;continue}}let i=r;switch(i.type){case`space`:t+=this.renderer.space(i);break;case`hr`:t+=this.renderer.hr(i);break;case`heading`:t+=this.renderer.heading(i);break;case`code`:t+=this.renderer.code(i);break;case`table`:t+=this.renderer.table(i);break;case`blockquote`:t+=this.renderer.blockquote(i);break;case`list`:t+=this.renderer.list(i);break;case`checkbox`:t+=this.renderer.checkbox(i);break;case`html`:t+=this.renderer.html(i);break;case`def`:t+=this.renderer.def(i);break;case`paragraph`:t+=this.renderer.paragraph(i);break;case`text`:t+=this.renderer.text(i);break;default:{let e=`Token with "`+i.type+`" type was not found.`;if(this.options.silent)return console.error(e),``;throw Error(e)}}}return t}parseInline(e,t=this.renderer){this.renderer.parser=this;let n=``;for(let r=0;r<e.length;r++){let i=e[r];if(this.options.extensions?.renderers?.[i.type]){let e=this.options.extensions.renderers[i.type].call({parser:this},i);if(e!==!1||![`escape`,`html`,`link`,`image`,`checkbox`,`strong`,`em`,`codespan`,`br`,`del`,`text`].includes(i.type)){n+=e===!1?``:e??``;continue}}let a=i;switch(a.type){case`escape`:n+=t.text(a);break;case`html`:n+=t.html(a);break;case`link`:n+=t.link(a);break;case`image`:n+=t.image(a);break;case`checkbox`:n+=t.checkbox(a);break;case`strong`:n+=t.strong(a);break;case`em`:n+=t.em(a);break;case`codespan`:n+=t.codespan(a);break;case`br`:n+=t.br(a);break;case`del`:n+=t.del(a);break;case`text`:n+=t.text(a);break;default:{let e=`Token with "`+a.type+`" type was not found.`;if(this.options.silent)return console.error(e),``;throw Error(e)}}}return n}},zt=class{options;block;constructor(e){this.options=e||b}static passThroughHooks=new Set([`preprocess`,`postprocess`,`processAllTokens`,`emStrongMask`]);static passThroughHooksRespectAsync=new Set([`preprocess`,`postprocess`,`processAllTokens`]);preprocess(e){return e}postprocess(e){return e}processAllTokens(e){return e}emStrongMask(e){return e}provideLexer(e=this.block){return e?Ft.lex:Ft.lexInline}provideParser(e=this.block){return e?Rt.parse:Rt.parseInline}};function Bt(e,t){if(Array.isArray(t))for(let n=0;n<t.length;n++)e.push(t[n]);else e.push(t)}var Vt=new class{defaults=y();options=this.setOptions;parse=this.parseMarkdown(!0);parseInline=this.parseMarkdown(!1);Parser=Rt;Renderer=It;TextRenderer=Lt;Lexer=Ft;Tokenizer=Pt;Hooks=zt;constructor(...e){this.use(...e)}walkTokens(e,t){let n=[];for(let r of e)switch(Bt(n,t.call(this,r)),r.type){case`table`:{let e=r;for(let r of e.header)Bt(n,this.walkTokens(r.tokens,t));for(let r of e.rows)for(let e of r)Bt(n,this.walkTokens(e.tokens,t));break}case`list`:{let e=r;Bt(n,this.walkTokens(e.items,t));break}default:{let e=r;this.defaults.extensions?.childTokens?.[e.type]?this.defaults.extensions.childTokens[e.type].forEach(r=>{let i=e[r].flat(1/0);Bt(n,this.walkTokens(i,t))}):e.tokens&&Bt(n,this.walkTokens(e.tokens,t))}}return n}use(...e){let t=this.defaults.extensions||{renderers:Object.create(null),childTokens:Object.create(null)};return e.forEach(e=>{let n={...e};if(n.async=this.defaults.async||n.async||!1,e.extensions&&(e.extensions.forEach(e=>{if(!e.name)throw Error(`extension name required`);if(`renderer`in e){let n=t.renderers[e.name];n?t.renderers[e.name]=function(...t){let r=e.renderer.apply(this,t);return r===!1&&(r=n.apply(this,t)),r}:t.renderers[e.name]=e.renderer}if(`tokenizer`in e){if(!e.level||e.level!==`block`&&e.level!==`inline`)throw Error(`extension level must be 'block' or 'inline'`);let n=t[e.level];n?n.unshift(e.tokenizer):t[e.level]=[e.tokenizer],e.start&&(e.level===`block`?t.startBlock?t.startBlock.push(e.start):t.startBlock=[e.start]:e.level===`inline`&&(t.startInline?t.startInline.push(e.start):t.startInline=[e.start]))}`childTokens`in e&&e.childTokens&&(t.childTokens[e.name]=e.childTokens)}),n.extensions=t),e.renderer){let t=this.defaults.renderer||new It(this.defaults);for(let n in e.renderer){if(!(n in t))throw Error(`renderer '${n}' does not exist`);if([`options`,`parser`].includes(n))continue;let r=n,i=e.renderer[r],a=t[r];t[r]=(...e)=>{let n=i.apply(t,e);return n===!1&&(n=a.apply(t,e)),n===!1?``:n??``}}n.renderer=t}if(e.tokenizer){let t=this.defaults.tokenizer||new Pt(this.defaults);for(let n in e.tokenizer){if(!(n in t))throw Error(`tokenizer '${n}' does not exist`);if([`options`,`rules`,`lexer`].includes(n))continue;let r=n,i=e.tokenizer[r],a=t[r];t[r]=(...e)=>{let n=i.apply(t,e);return n===!1&&(n=a.apply(t,e)),n}}n.tokenizer=t}if(e.hooks){let t=this.defaults.hooks||new zt;for(let n in e.hooks){if(!(n in t))throw Error(`hook '${n}' does not exist`);if([`options`,`block`].includes(n))continue;let r=n,i=e.hooks[r],a=t[r];t[r]=zt.passThroughHooks.has(n)?e=>{if(t.options.async&&zt.passThroughHooksRespectAsync.has(n))return(async()=>{let n=await i.call(t,e);return a.call(t,n)})();let r=i.call(t,e);return a.call(t,r)}:(...e)=>{if(t.options.async)return(async()=>{let n=await i.apply(t,e);return n===!1&&(n=await a.apply(t,e)),n})();let n=i.apply(t,e);return n===!1&&(n=a.apply(t,e)),n}}n.hooks=t}if(e.walkTokens){let t=this.defaults.walkTokens,r=e.walkTokens;n.walkTokens=function(e){let n=[];return Bt(n,r.call(this,e)),t&&Bt(n,t.call(this,e)),n}}this.defaults={...this.defaults,...n}}),this}setOptions(e){return this.defaults={...this.defaults,...e},this}lexer(e,t){return Ft.lex(e,t??this.defaults)}parser(e,t){return Rt.parse(e,t??this.defaults)}parseMarkdown(e){return(t,n)=>{let r={...n},i={...this.defaults,...r},a=this.onError(!!i.silent,!!i.async);if(this.defaults.async===!0&&r.async===!1)return a(Error(`marked(): The async option was set to true by an extension. Remove async: false from the parse options object to return a Promise.`));if(typeof t>`u`||t===null)return a(Error(`marked(): input parameter is undefined or null`));if(typeof t!=`string`)return a(Error(`marked(): input parameter is of type `+Object.prototype.toString.call(t)+`, string expected`));if(i.hooks&&(i.hooks.options=i,i.hooks.block=e),i.async)return(async()=>{let n=i.hooks?await i.hooks.preprocess(t):t,r=await(i.hooks?await i.hooks.provideLexer(e):e?Ft.lex:Ft.lexInline)(n,i),a=i.hooks?await i.hooks.processAllTokens(r):r;i.walkTokens&&await Promise.all(this.walkTokens(a,i.walkTokens));let o=await(i.hooks?await i.hooks.provideParser(e):e?Rt.parse:Rt.parseInline)(a,i);return i.hooks?await i.hooks.postprocess(o):o})().catch(a);try{i.hooks&&(t=i.hooks.preprocess(t));let n=(i.hooks?i.hooks.provideLexer(e):e?Ft.lex:Ft.lexInline)(t,i);i.hooks&&(n=i.hooks.processAllTokens(n)),i.walkTokens&&this.walkTokens(n,i.walkTokens);let r=(i.hooks?i.hooks.provideParser(e):e?Rt.parse:Rt.parseInline)(n,i);return i.hooks&&(r=i.hooks.postprocess(r)),r}catch(e){return a(e)}}}onError(e,t){return n=>{if(n.message+=`
+Please report this to https://github.com/markedjs/marked.`,e){let e=`<p>An error occurred:</p><pre>`+gt(n.message+``,!0)+`</pre>`;return t?Promise.resolve(e):e}if(t)return Promise.reject(n);throw n}}};function k(e,t){return Vt.parse(e,t)}k.options=k.setOptions=function(e){return Vt.setOptions(e),k.defaults=Vt.defaults,ee(k.defaults),k},k.getDefaults=y,k.defaults=b;function Ht(...e){return Vt.use(...e),k.defaults=Vt.defaults,ee(k.defaults),k}k.use=Ht,k.walkTokens=function(e,t){return Vt.walkTokens(e,t)},k.parseInline=Vt.parseInline,k.Parser=Rt,k.parser=Rt.parse,k.Renderer=It,k.TextRenderer=Lt,k.Lexer=Ft,k.lexer=Ft.lex,k.Tokenizer=Pt,k.Hooks=zt,k.parse=k,k.options,k.setOptions,k.walkTokens,k.parseInline,Rt.parse,Ft.lex;var Ut=Object.entries(Object.assign({"../../00_Overview/Exam_Pattern.md":`# SEBI Grade A — Exam Pattern (IT Stream)
+
+Verified against the official SEBI notification + SEBI's published cut-off documents
+(sebi.gov.in careerfiles PDFs, 2022/2024/2025 cycles). Re-verify when the next
+notification drops.
+
+## How the cutoff system works (read this first)
+
+There are **NO sectional cutoffs anywhere in this exam.** Each paper has ONE minimum
+percentage, plus a combined ("aggregate") minimum. Think of it as 3 gates per phase:
+
+1. Gate 1: minimum marks in Paper 1
+2. Gate 2: minimum marks in Paper 2
+3. Gate 3: minimum marks in Paper 1 + Paper 2 combined
+
+Fail ANY one gate → out, even if the other two are cleared comfortably.
+
+## Stage 1 — Phase 1 / Prelims (Screening)
+
+Two objective papers, same day. **Qualifying only — marks never enter the merit list.**
+
+| Paper | Contents | Duration | Questions | Marks | Minimum to clear |
+|---|---|---|---|---|---|
+| Paper 1 | GA (incl. financial sector) + English + Quant + Reasoning — **20 Qs each, equal 25-mark sections** | 60 min | 80 × 1.25 | 100 | **30 marks (30%)** — on the WHOLE paper, not per section |
+| Paper 2 | IT stream subjects (MCQ) | 40 min | 50 × 2 | 100 | **40 marks (40%)** |
+| **Aggregate** | Paper 1 + Paper 2 | — | 200 | **80 marks (40%)** |
+
+- Negative marking: **−¼ mark** per wrong answer, both papers.
+- All sections bilingual (Hindi/English) except the English test.
+- Paper 1's 30% is on the total of all 4 sections combined. You could score 0 in
+  Quant and still clear Paper 1 if GA + English + Reasoning total ≥ 30. (Still a bad
+  strategy — but that's what "no sectional cutoff" means.)
+
+**Example:** Paper 1 = 35, Paper 2 = 40 → aggregate = 75 < 80 → FAIL (aggregate gate).
+Paper 1 = 35, Paper 2 = 50 → aggregate = 85 → PASS all three gates.
+
+## Stage 2 — Phase 2 / Mains
+
+| Paper | Contents | Duration | Marks | Minimum to clear | Merit weight |
+|---|---|---|---|---|---|
+| Paper 1 | English Descriptive: Essay (30) + Precis (30) + Comprehension (40) | 60 min | 100 | **30 marks (30%)** | 1/3 |
+| Paper 2 | IT stream — MCQs on programming logic, dry-run outputs, debugging, syntax, data analysis | 180 min | 100 | **40 marks (40%)** | 2/3 |
+| **Aggregate (TWS)** | (Paper 1 × 1/3) + (Paper 2 × 2/3) | — | 100 | **50 marks (50%)** | — |
+
+- TWS = "Total Weighted Score" — this is the formula SEBI itself prints on cut-off PDFs.
+- Negative marking −¼ applies to Paper 2 (objective). Paper 1 is descriptive — no negative.
+- Descriptive answers are typed on screen — practice typing + structured writing.
+
+**Example:** Paper 1 = 45, Paper 2 = 60 → TWS = (45/3) + (60×2/3) = 15 + 40 = **55** ≥ 50 → qualified.
+But Phase 2 shortlists only ~3× vacancies **by merit on TWS** — clearing 50 is the floor,
+not the target. Recent IT-stream merit cutoffs ran ~75–85 TWS (UR).
+
+## Stage 3 — Interview
+
+- Shortlist ≈ 3× vacancies, ranked by Phase 2 TWS.
+- Final merit = **Phase 2 TWS (85%) + Interview (15%)**.
+
+## Exact minimums — quick card
+
+| Stage | Paper 1 | Paper 2 | Aggregate |
+|---|---|---|---|
+| Phase 1 | 30/100 | 40/100 | 80/200 (40%) |
+| Phase 2 | 30/100 | 40/100 | 50/100 TWS (50%) |
+
+REMEMBER: **30–40–40** for Phase 1 (P1 min, P2 min, aggregate %) and **30–40–50** for
+Phase 2. No per-section bar exists — the "sectional cutoff" idea is a myth carried
+over from banking exams like SBI PO/IBPS.
+
+## Minimum questions to attempt (the −¼ negative-marking math)
+
+With negative marking, score = correct × marks − wrong × (marks/4). So "attempts
+needed" depends on your accuracy — here's the honest math:
+
+| Paper | Questions × marks | Marks needed | If 100% accurate | If ~85% accurate | Safe attempt target |
+|---|---|---|---|---|---|
+| Ph1 Paper 1 | 80 × 1.25 (20/section) | 30 | 24 att | ~30 att | **50–60 att** → lands ~50+ marks, clears the gate AND comfortably feeds the 80/200 aggregate |
+| Ph1 Paper 2 (IT) | 50 × 2 | 40 | 20 att | ~25 att | **30–35 att** at ≥80% → ~45–55 marks |
+| Ph2 Paper 1 (English) | 3 descriptive (30+30+40) | 30 | — all 3 compulsory — | | Attempt ALL; skipping one means needing ~45%+ on the other two |
+| Ph2 Paper 2 (IT) | 100 × 1 | 40 | 40 att | ~50 att | **90+ att** — because merit needs ~80+, not 40 |
+
+How to read this: at 85% accuracy every attempted question earns only ~0.81 of its
+marks (1 × 0.85 − 0.25 × 0.15 for a 1-mark question). So you always need ~20% more
+attempts than the bare minimum — plus buffer.
+
+Two rules that follow:
+1. **Blind guessing is negative-EV** (−¼): guess only when you can eliminate 2+ options.
+2. The gate numbers above are floors. Phase 2 Paper 2's real bar is the ~75–85 TWS
+   merit cutoff → there you attempt nearly everything and accuracy is king.
+
+## Implications for prep
+
+1. Phase 1 is pure screening — the real goal is ≥ 40% in Paper 2 (IT), since Paper 1's
+   30% bar is low and there's no section-wise requirement.
+2. Phase 2 Paper 2 is where merit is decided (2/3 weight) → IT depth matters most.
+3. Descriptive English is 1/3 of TWS and the most-neglected paper — a weak essay can
+   drag TWS below merit even with a strong Paper 2.
+4. Since merit cutoffs for IT run ~75–85 TWS, target Paper 2 ≈ 80+ in practice, not 40.
+`,"../../00_Overview/Progress_Tracker.md":`# Progress Tracker
+
+Update weekly (Sundays). Scores = percentage.
+
+## Diagnostics (Block A)
+
+| Mock | Paper 1 (R/Q/E/GA) | Paper 2 IT | Gate misses (P1<30 / P2<40 / agg<80) | Date |
+|---|---|---|---|---|
+| Baseline 1 | | | | |
+| Baseline 2 | | | | |
+
+**Top weak areas:**
+1.
+2.
+3.
+
+## Subject confidence (update monthly)
+
+| Subject (official wt, Phase-1 P2) | Phase | Status | Next action |
+|---|---|---|---|
+| Programming Concepts (30%) | 1/2 | | |
+| DS & Algorithms (10% P1 · 70% P2) | 1/2 | | |
+| DBMS & SQL (20%) | 1/2 | | |
+| Data Analytics Python/R (10%) | 1 | | |
+| Networks (10%) | 1 | | |
+| Info Security (10%) | 1 | | |
+| Data Warehousing + Shell (10%) | 1 | | |
+| OS/SE/Emerging trivia (~0%, Day-40 buffer only) | 1 | | |
+| Reasoning | 1 | | |
+| Quant | 1 | | |
+| English | 1/2 | | |
+| GA / Financial | 1 | | |
+
+## Mock log (Block D)
+
+| Date | Paper 1 % | Paper 2 % | Gate missed? (P1<30/P2<40) | Top error source |
+|---|---|---|---|---|
+
+## Descriptive English log
+
+| Date | Task (essay/precis/comp) | Self-score /10 | Issue found |
+|---|---|---|---|
+`,"../../00_Overview/Study_Plan.md":`# 49-Day Plan — Syllabus Complete by Dec 31, 2026\r
+\r
+Starts Nov 13, ends Dec 31. ~3 hrs/day weekdays, **~5–6 hrs on Saturdays and Sundays**\r
+— weekends carry the heavy load (see below). Everything you need is already written\r
+in this folder — open the day's Notes.md file, study it, do the drills, done.\r
+Every ClickUp task card spells out the exact sequence, file paths, and DONE-WHEN\r
+criteria for that day — the card is the executable version of this plan.\r
+\r
+## Daily non-negotiables (every single day)\r
+\r
+| Block | Time | What |\r
+|---|---|---|\r
+| Main IT block | 90 min | The day's topic: read the Notes.md section → do the listed drills/questions |\r
+| **Back-revision** | **15 min** | **NON-NEGOTIABLE. Rewrite one section/table from memory of LAST WEEK's subject — see the rotation below. No re-reading first; write → then check → mark gaps.** |\r
+| Paper 1 rotation | 45 min | Mon/Wed/Fri = Quant & Reasoning sets · Tue = English MCQ set + 20 vocab words + **typed descriptive drill (20 min)** — precis paragraph OR 5 comprehension answers, self-scored vs \`03_Phase2_Paper1_English/Descriptive_Guide.md\` rubric · Thu = English sets + 20 vocab words · Sat = \`Financial_Awareness/SEBI_Markets_Notes.md\` read-through — use \`Quantitative_Aptitude/Formula_Sheet.md\`, \`Reasoning/Tricks.md\`, \`English_Language/Rules_And_Vocab.md\`, \`General_Awareness/GA_Checklist.md\` (first 10 min = rewrite formulas/tricks from memory) |\r
+| GA drip | 20 min | Banking GA PDF (Adda247/GKToday) + SEBI press releases → log 3–5 bullets to \`01_Phase1_Paper1/General_Awareness/Monthly_Logs/<Month_Year>.md\` (Nov & Dec pre-created; copy \`_TEMPLATE.md\` for later months) |\r
+| **Paper-1 drill bank** | **35 min TIMED set** | **~40 Qs/day as ONE timed sitting (strict timer, no pausing, ~90s/question - this IS your daily test) - see the "PAPER-1 DRILL BANK" ClickUp card: 10 Quant + 10 Reasoning + 10 English + 10 GA self-quiz. Source = one section/day cannibalized from unused Full Test (Phase I) #6+ (112 free sectionals), or chapter tests for weak topics.** |\r
+| Error log | 5 min | Every wrong/guessed Q → \`06_Mocks_and_Practice/Error_Log.md\` |\r
+\r
+## Weekend load (every Saturday & Sunday — non-negotiable)\r
+\r
+Saturdays and Sundays are **heavier than weekdays (~5–6 hrs)**, not lighter:\r
+\r
+- **Weekly test days land on Saturdays.** Days 7/14/21/28/35/42 are weekly-review\r
+  tasks but are *scheduled on the following Saturday* (Nov 21, Nov 28, Dec 5,\r
+  Dec 12, Dec 19, Dec 26). The Thursday they were originally dated is now a\r
+  buffer/catch-up day for any overflow from the week.\r
+- Every Sat/Sun adds a **WEEKEND LOAD block** on top of the normal day:\r
+  one timed sectional (Quant/Reasoning/English rotating), one extra puzzle or\r
+  RC set, weekly GA recall (15 facts from the week's log), a descriptive piece\r
+  (essay or precis, alternating), and a redo of the week's error-log entries.\r
+- **Saturday from Week 3 (Day 15) onward also adds a Phase-2-format timed set**:\r
+  Days 21/28 = 50-Q mixed IT set (90 min) · Days 35/42/44 = full **100-Q IT timed\r
+  set (180 min)** using \`04_Phase2_Paper2_IT/Practice_Questions.md\` + Testbook\r
+  Full Tests Phase II. The ⅔-weighted paper needs volume, not just coverage.\r
+- Sunday = lighter of the two weekend days only in that its test block is a\r
+  sectional rather than a full mock — the total hours stay the same.\r
+\r
+## The strict back-revision rule (what makes this plan work)\r
+\r
+Reading a subject once = learning it. **Rewriting it weeks later = owning it.** The exam tests what you can produce from memory in 90 seconds — this block builds exactly that.\r
+\r
+**Rotation — always revise the subject you FINISHED the week before:**\r
+\r
+| Your current week | Back-revision subject (15 min/day) |\r
+|---|---|\r
+| Days 1–7 | — (nothing to revise yet; use the time for extra drills) |\r
+| Days 8–14 | DBMS & SQL — one section/day: keys/closure → NF tree → SQL ops → ACID/isolation → indexing → redo a wrong question |\r
+| Days 15–21 | Networks — OSI table → device map → port table → TCP/UDP → subnetting drill → email trio |\r
+| Days 22–28 | InfoSec — CIA → attack list → crypto table → auth factors → defenses → audit |\r
+| Days 29–35 | Programming + Data Analytics — dry-run a snippet → param passing → OOP pillars → exception table → pandas slicing → regex |\r
+| Days 36–42 | DSA — sorting table → tree formulas → graph formulas → hashing → paradigms → string ops |\r
+| Days 43–49 | Weakest-first from error log + ALL memory tables (the blitz week already is revision) |\r
+\r
+**Rules of the block:**\r
+1. **Write before you look.** Blank page → write the table/section from memory → THEN open the notes and mark what you missed. The gap is tomorrow's target.\r
+2. Rotating, not perfectionist — each day hits a different section; over a week the whole subject cycles.\r
+3. If a section produces 2+ gaps two days running → that topic goes into the error log as a weak topic and gets a real re-study session on the next weekly day.\r
+4. **Notes-upgrade rule (non-negotiable, 15 min inside the 90-min IT block):** while reading the day's notes, pick ONE section and rewrite it teaching-style — plain-English line + tiny example + the exam trap (the DBMS Notes format). Only DBMS and this rewritten material go into exam-week revision; compressed notes are inputs, not the product.\r
+\r
+## Weeks at a glance\r
+\r
+| Days | IT subject (weight order) | Output |\r
+|---|---|---|\r
+| 1–7 | DBMS & SQL | topic test + 1 essay + Tue descriptive drill |\r
+| 8–14 | Networks (3d, compressed) + **Programming starts (2d)** | topic test + FT Phase-I #1 (baseline) + 1 precis + Tue drill |\r
+| 15–21 | InfoSec (3d, compressed) + **Programming (2d)** | topic test + FT Phase-I #2 + 50-Q Phase-2 set + 1 essay + Tue drill |\r
+| 22–28 | **Programming Concepts (30% — biggest block: 9 days total) + DA-1** | topic test + FT Phase-I #3 + 50-Q Phase-2 set + 1 precis + Tue drill |\r
+| 29–35 | DS/Algo + Programming drills (Phase-2 foundation) | combined test + FT Phase-I #4 + **100-Q Phase-2 set** + full mock + 1 essay + Tue drill |\r
+| 36–42 | DW (1d) + DA-2 + Shell (1d) + Phase-2-format drills | full Paper-2 test + FT Phase-I #5 + **100-Q Phase-2 set** + full mock + 1 essay + Tue drill |\r
+| 43–49 | PYQ blitz + revision | 3 PYQ sets + 2 full Phase-2 FTs + error-log clearing |\r
+\r
+## Day-by-day\r
+\r
+| Day | IT task | Weekly task |\r
+|---|---|---|\r
+| 1 | DBMS Notes §1–2: keys, closure, normalization 1NF–BCNF | |\r
+| 2 | §3 SQL pt 1: SELECT/joins — hand-write 10 queries | |\r
+| 3 | §3 SQL pt 2: GROUP BY/HAVING, subqueries, nth-highest pattern | |\r
+| 4 | §4 ACID, isolation levels, locks, 2PL | |\r
+| 5 | §5 indexing, ER→tables + 20 GATE DBMS PYQs | |\r
+| 6 | DBMS topic test (25 Qs) + redo wrongs | |\r
+| 7 | — | **Weekly → Sat Nov 21**: mini IT mock + Reasoning sectional + Essay #1 + revise week |\r
+| 8 | Networks §1: OSI vs TCP/IP layers + full port table (merged day — write layers from memory) | |\r
+| 9 | §2 subnetting + IP addressing — 10 drills until /25–/30 is mental | |\r
+| 10 | §3–5 merged: TCP vs UDP, routing (RIP/OSPF/BGP), data link, devices/firewall/DMZ | |\r
+| 11 | Networks topic test (25 Qs) + redo wrongs | |\r
+| 12 | **Prog-1** §1: control flow, loops, operators — 20 dry-run output Qs | |\r
+| 13 | **Prog-2** §2: functions, scope/binding, parameter passing (value vs ref) — recursion traces | |\r
+| 14 | — | **Weekly → Sat Nov 28**: Paper 1 timed sectional + Precis #1 + revise week (Checkpoint #1: baseline) |\r
+| 15 | InfoSec §1: CIA triad + symmetric vs asymmetric (DES/AES/RSA/DH) | |\r
+| 16 | §2 hashing, digital signatures, certs/PKI | |\r
+| 17 | §3–5 merged: attacks + defenses + access control/biometrics (write lists from memory) | |\r
+| 18 | InfoSec topic test (25 Qs) + redo wrongs | |\r
+| 19 | **Prog-3** §3: OOP pillars — class/object, constructors, inheritance, polymorphism | |\r
+| 20 | **Prog-4** §4: exceptions, overloading vs overriding + output-prediction drills | |\r
+| 21 | — | **Weekly → Sat Dec 5**: full Paper 1 timed + Essay #2 + revise week (Checkpoint #2: +10) |\r
+| 22 | **Prog-5** §5: C pointers + pointer tracing — 15 programs | |\r
+| 23 | **Prog-6** §6: Java/Python idioms + output traps (string pool, autoboxing, mutability) | |\r
+| 24 | **Prog-7** §7: recursion + backtracking dry-runs (fib, factorial, subsets) | |\r
+| 25 | DA-1 \`Data_Analytics_Shell_DW/Notes.md\`: pandas slicing, dict/set ops, regex, file modes | |\r
+| 26 | **Prog-8**: output marathon — 50 C/Java/Python traces, error-log every miss | |\r
+| 27 | Programming topic test (30 Qs, output-heavy) + redo wrongs | |\r
+| 28 | — | **Weekly → Sat Dec 12**: Paper 1 sectional + IT sectional + Precis #2 (Checkpoint #3: 35–45) |\r
+| 29 | DS §1: arrays/strings, stack/queue/LL + 5 infix→postfix & evals | |\r
+| 30 | §2 trees — traversals, BST ops, heap trace, AVL rotations | |\r
+| 31 | §3 graphs (BFS/DFS/MST/Dijkstra) + hashing | |\r
+| 32 | Algo: complexity + sort/search table + paradigms (greedy/DP/D&C) | |\r
+| 33 | Programming §2: C pointer/output tracing — 15 programs + debugging MCQs | |\r
+| 34 | DSA + Programming combined topic test (30 Qs) + redo wrongs | |\r
+| 35 | — | **Weekly → Sat Dec 19**: FULL mock both papers + Essay #3 (Checkpoint #4: +20, all sections ≥ 30% buffer) |\r
+| 36 | DW cram: ETL, metadata, cube/mart, OLAP ops, star/snowflake, SCD — definitions cold | |\r
+| 37 | DA-2: reshaping, groupby/merge, charts/graphs, R basics, data-mining defs + drills | |\r
+| 38 | Shell cram: grep/awk/sed/chmod/cron/pipes — 15 command drills | |\r
+| 39 | Phase-2-format drills: logic-flow completion + debugging MCQs + coding insurance (\`04_Phase2_Paper2_IT/Practice_Questions.md\` §A/B + A-POOL daily) | |\r
+| 40 | Trivia buffer: OS/SE/Emerg one-pagers + mixed IT-trivia drill — stray-Q insurance only | |\r
+| 41 | FULL Paper-2 timed test (50 Qs) + redo wrongs | |\r
+| 42 | — | **Weekly → Sat Dec 26**: FULL Phase-1 sim + Essay #4 + error-log review (Checkpoint #5: P1 ≥60%, P2 ≥55–60%) |\r
+| 43 | PYQ set 1 — both papers, timed → log every error | **BLITZ** |\r
+| 44 | PYQ set 2 + redo ALL error-log entries 14+ days old | |\r
+| 45 | Deep-patch weakest 3 topics (error log decides) + GA intensive | |\r
+| 46 | SEBI_Markets_Notes full revision + write all tables from memory (sorting, OSI, ports, subnet masks) | |\r
+| 47 | PYQ set 3 + timed Essay #5 + Precis #3 | |\r
+| 48 | Skim every Notes.md + error log final read + GA revision | |\r
+| 49 | Light day: tables from memory, browse Interview folder, done | ✅ Syllabus complete |\r
+\r
+## Phase 2 (Mains) coverage — runs inside the same 49 days\r
+\r
+- **Paper 1 English** (1/3 of merit — treated as a first-class subject, not a weekend garnish):\r
+  - **Weekly long piece** (Days 7/14/21/28/35/42): essay and precis alternating, timed, typed on a real keyboard.\r
+  - **Tuesday descriptive drill** (Days 5/12/19/26/33/40, 20 min): precis paragraph OR 5 comprehension answers — self-scored against the \`/10\` rubric in \`Descriptive_Guide.md\`; scores logged with mock scores.\r
+  - **Every precis/essay gets scored, never just written** — the rubric is the feedback loop (structure + grammar + word-limit discipline).\r
+  - FT: English Descriptive tests slot into Days 44–48 as the final volume push.\r
+- **Paper 2 IT** (2/3 of merit): official split = Data Structures 40% / Algorithms 30% / OOP 20% / Strings 10%.\r
+  - Notes: \`04_Phase2_Paper2_IT/Phase2_IT_Notes.md\` (the "second layer" — trace-by-hand skills)\r
+  - Practice: \`04_Phase2_Paper2_IT/Practice_Questions.md\` (Section A = 2026 MCQ dry-run/debug style, Section B = 2024 coding style)\r
+  - **From Day 29 onward: +30 min/day — 3–5 questions from Practice_Questions.md**\r
+  - **Phase-2 timed-set ladder (the volume fix):** Day 21 & 28 Sat = 50-Q set (90 min) → Day 35/42 Sat = full 100-Q set (180 min) → Days 44 & 47 = Full Test Phase II on Testbook. Track Phase-2 scores separately — the merit cutoff lives here, not in Phase 1.\r
+  - Days 29–34 (DSA + Programming week) are the Phase 2 foundation — study those Notes at mains depth, not just MCQ depth\r
+  - Days 44 & 47: Full Test (Phase II) IT Stream on Testbook\r
+\r
+## Official weightage → day allocation (full audit: \`00_Overview/Topic_Priority.md\`)\r
+\r
+- **Programming Concepts = 30% of Phase-1 Paper 2 + 20% of Phase-2** → 5 days (22–25 + 33), the largest single-topic block.\r
+- **DSA = 10% Phase-1 + 70% Phase-2** → 4 core days (29–32) + Phase-2-format drill days (38–39) — the paper that decides merit.\r
+- **DBMS + SQL = 20%** → Days 1–6. **Data Analytics = 10%** → Days 26 + 37. **DW + Shell = 10%** → Day 36.\r
+- **OS / Software Engg / Emerging Tech are NOT in the official Phase-1 IT syllabus** — they only surface as ~0–3 stray trivia Qs, so they get one trivia-buffer day (40), not dedicated weeks. Linux-command trivia is folded into that day.\r
+- Phase 2 IT format: MCQ dry-run/debugging (2026 pattern) — keep \`Pattern_Practice_Questions.md\` Section I in rotation; verify at 2027 notification.\r
+\r
+## Score checkpoints — the plan measures itself\r
+\r
+Mocks aren't just practice — they're the instrument that tells you if the plan is working. Record every score in \`06_Mocks_and_Practice/\` (or the dashboard tracker).\r
+\r
+| Checkpoint | Test | Target | If below target |\r
+|---|---|---|---|\r
+| **Day 14** | Full Test (Phase I) #1 | Baseline — record it, no target yet | Identify weakest section; that's your Paper-1 rotation focus |\r
+| **Day 21** | Full Test (Phase I) #2 | Combined ≥ +10 over baseline | Swap one IT block → weak-section drilling |\r
+| **Day 28** | Paper 2 IT chapter/subject tests + 50-Q Phase-2 set | ≥ 50% raw on IT tests; Phase-2 set ≥ 45% | Next week's lighter topic gets traded for re-study |\r
+| **Day 35** | Full Test (Phase I) #4 | Combined ≥ +20 over baseline; every section ≥ 30% as a safety buffer (no sectional rule — but balanced strength clears the aggregate easily) | Panic-check: a failing section gets 2 of its drills daily, not 1 |\r
+| **Day 42** | Full Phase-1 sim + 100-Q Phase-2 set | On track: Paper 1 ≥ 60%, Paper 2 ≥ 55–60%; Phase-2 set ≥ 55% | Blitz week becomes weak-area week — PYQs only on strong topics |\r
+\r
+Rule: **below target twice in a row → the plan bends, not breaks.** Trade the next lighter IT topic day for the weak area; never drop mocks to "make time" — the mock IS the measurement.\r
+\r
+## Missed-day protocol (strict)\r
+\r
+1. **One rule:** a missed day's content folds into the NEXT day's back-revision slot — never carry a full day, never double days.\r
+2. **Weekly mock days NEVER move.** They're pinned to Saturdays — that's why they're on weekends. Everything else bends around them; the Thursday slot is the week's overflow buffer.\r
+3. Miss 2+ days in a row → drop that week's lowest-weightage IT topic section (the trivia-buffer day first, then DW/Shell), keep everything else.\r
+4. A missed day is data, not failure — note WHY in the tracker; if the same cause repeats, it's a schedule problem to fix, not a discipline problem.\r
+\r
+## Rules\r
+\r
+- **Back-revision is non-negotiable.** It's the difference between having studied the syllabus and knowing it on exam day.\r
+- Reading notes is the minimum. If time allows, more questions > more re-reading.\r
+- Every weekly-test Saturday (the Day 7/14/21/28/35/42 tasks): update \`Progress_Tracker.md\` + record checkpoint scores.\r
+- Jan 2027 → exam: 2 mocks/week + GA drip + descriptive weekly + this folder's notes as revision base. That plan gets built on Day 49.\r
+`,"../../00_Overview/Syllabus_IT.md":`# IT Stream Syllabus — Topic Checklist
+
+Mark coverage level: \` \` = not started, \`~\` = revised once, \`x\` = confident (can solve PYQs).
+Topics marked with official Phase-1 weightage (from the notification's syllabus annexure).
+
+## Phase 1 — Paper 2 IT (official syllabus, 9 topics)
+
+### Programming Concepts — 30% (biggest topic)
+- [ ] Control flow, iteration, recursion, functions
+- [ ] Variable scope & binding, parameter passing
+- [ ] OOP: class/object, constructors, inheritance, polymorphism
+- [ ] Exception handling; Java/C/C++ output & dry-run tracing
+
+### Database Concepts — 10%
+- [ ] ER model, relational algebra, tuple calculus, integrity constraints
+- [ ] Normal forms, file organization, indexing (B/B+ trees)
+- [ ] Transactions & concurrency control (ACID, locks, 2PL)
+
+### SQL Queries — 10%
+- [ ] SELECT/joins (inner, outer), aggregate functions
+- [ ] UNION/INTERSECT/EXCEPT, IN/EXISTS, nested queries
+- [ ] DDL vs DML vs TCL (view, truncate, delete, update, alter)
+
+### Data Analytics Languages (Python/R) — 10%
+- [ ] Regex, slicing, data reshaping, DataFrames
+- [ ] Dictionaries & sets, file management, classes & functions
+- [ ] Data mining, lists, import/export, charts & graphs
+
+### Algorithms for Problem Solving — 10%
+- [ ] Tree/graph traversals, connected components, spanning trees
+- [ ] Shortest paths, hashing, sorting, searching
+- [ ] Paradigms: greedy, dynamic programming, divide-&-conquer
+
+### Networking Concepts — 10%
+- [ ] ISO/OSI stack, LAN tech (Ethernet, Token Ring), TCP/UDP, IP
+- [ ] Switches/gateways/routers, app-layer protocols (DNS/SMTP/POP/FTP/HTTP)
+- [ ] Firewalls
+
+### Information & Cyber Security — 10%
+- [ ] Cyber attacks, CIA triad, authentication
+- [ ] Software development security, network security
+- [ ] Network audit, systems audit
+
+### Data Warehousing — 5%
+- [ ] ETL (extract/clean/transform/load), metadata
+- [ ] Data cube, data mart, data models, OLAP ops
+
+### Shell Programming — 5%
+- [ ] Shell scripting basics, variables, arguments
+- [ ] Loops, if statements, return, basic UNIX commands
+
+## Phase 2 — Paper 2 IT (official split)
+
+### Data Structures — 40%
+- [ ] Arrays, linked lists, stacks, queues
+- [ ] Trees (BST, AVL, heaps), graphs
+
+### Algorithms — 30%
+- [ ] Sorting/searching + complexity, DP, greedy
+
+### OOP — 20%
+- [ ] Same pillars as Phase-1 Programming, deeper dry-run/debug level
+
+### String Manipulation — 10%
+- [ ] Reversal, palindromes, substring ops, char-count patterns
+
+## Trivia buffer (NOT official syllabus — ~0–3 stray Qs, Day-40 skim only)
+
+- [ ] OS: process states, Linux cmds (ps/kill/chmod), paging basics
+- [ ] Software Engg: SDLC model names, agile terms, testing levels
+- [ ] Emerging: cloud IaaS/PaaS/SaaS, big data, blockchain, UPI/CBDC
+
+## Paper 1 — General (Phase 1 only, 20 Qs × 1.25 each section)
+
+- [ ] GA: current affairs (~6 months), banking & financial awareness, SEBI/RBI news, budget & economic survey, static GK
+- [ ] English: RC, error spotting, double fillers, sentence improvement, para jumbles
+- [ ] Quant: approximation, number series, arithmetic (%/ratios/SI-CI/T&W/TSD), DI sets
+- [ ] Reasoning: puzzle/seating sets (bulk of section), syllogism, inequality, coding-decoding, blood relations, statement-assumption
+`,"../../00_Overview/Topic_Priority.md":`# Topic Priority Matrix — where the marks actually are
+
+Sources: official SEBI syllabus weightages (published in the notification's syllabus
+annexure), official exam handout (Jan-2026, sebi.gov.in), Jan-2026 Phase-1 memory-based
+analysis, and Phase-2 official topic split. Weightages ARE official — treat ≈Qs as the
+expected count, ±1–2 questions.
+
+## Phase 1 — Paper 1 aptitude (80 Qs × 1.25 marks, 60 min, all 4 sections = 25 marks each)
+
+Section split is OFFICIAL (exam handout): **20 questions per section — GA / English /
+Quant / Reasoning are equal-weighted.** Within each section, though, the ROI is very
+uneven:
+
+| Section | 20 Qs | Priority inside the section | Tier |
+|---|---|---|---|
+| **GA** | Direct factual MCQs: ~6-months affairs, SEBI/RBI/regulator facts, market terms, budget, schemes | **Highest ROI in the paper** — zero solving time, pure recall. 15+ marks for someone who logs GA daily; nearly free | **S** |
+| English | RC 5, error spotting 4–5, double fillers 4–5, sentence improvement 3–4, para jumble 4 | Easy–moderate, predictable archetypes — fillers/error-spotting are fast marks; do RC second | A |
+| Quant | Approximation 5, wrong-series 4–5, arithmetic 5–6, line-graph DI 5, caselet DI 5 | **Do quick marks first:** approximation + series (~9 Qs) then ONE DI set; heavy arithmetic is a time sink — skip under pressure | B |
+| Reasoning | ~15 puzzle/seating Qs + ~5 singles (assumption, syllogism, coding, series, blood relation) | **Puzzle-heavy = most time-expensive.** Do all singles + the ONE easiest set; a hard set can eat 8 min for 4 marks | C |
+
+**Attempt recipe** (hits ~50+ marks vs the 30 floor): GA 18–20 att · English 15–18 att ·
+Quant 8–12 att · Reasoning 8–12 att ≈ 50–60 attempts. GA + English alone ≈ 30+ marks
+if accurate — that's the whole Paper-1 gate cleared by the two cheapest sections.
+
+## Phase 1 — Paper 2 IT (50 Qs × 2 marks, 40 min)
+
+| # | Topic | Official wt | ≈Qs | Marks | What it costs to earn |
+|---|---|---|---|---|---|
+| 1 | **Programming Concepts (Java/C/C++)** | **30%** | **15** | 30 | Output-tracing/dry-run questions — needs daily drill reps, not just reading |
+| 2 | Database Concepts | 10% | 5 | 10 | Theory recall — cheap marks once NF/keys/ACID/indexing are cold |
+| 3 | SQL Queries | 10% | 5 | 10 | Query-output questions — cheap marks, pairs with #2 |
+| 4 | Data Analytics (Python/R) | 10% | 5 | 10 | pandas/regex/slicing output Qs — newer topic, least predictable |
+| 5 | Algorithms | 10% | 5 | 10 | Traversals, sort/search complexity, paradigms — feeds Phase 2 |
+| 6 | Networking | 10% | 5 | 10 | Pure recall — OSI, protocols, devices. Cheapest marks on the paper |
+| 7 | Information & Cyber Security | 10% | 5 | 10 | Pure recall — CIA, attacks, auth. Cheap marks |
+| 8 | Data Warehousing | 5% | 2–3 | ~5 | Definitions only — ETL, metadata, cube/mart, OLAP ops |
+| 9 | Shell Programming | 5% | 2–3 | ~5 | Basic commands, variables, loops |
+| — | Stray IT trivia (UNIX, ADS, etc.) | unofficial | ~2 | ~4 | Comes inside the programming/misc bucket — broad computer awareness |
+
+## Phase 2 — Paper 2 IT (100 Qs, 180 min) — official split
+
+| Topic | Weight | Note |
+|---|---|---|
+| Data Structures | 40% | NOT a Phase-1 topic — pure Phase-2 value, biggest single merit driver |
+| Algorithms | 30% | Overlaps Phase-1 topic #5 — one study block serves both phases |
+| OOP | 20% | Overlaps Phase-1 topic #1 — same story |
+| String Manipulation | 10% | Sits inside DSA study naturally |
+
+Phase 2 Paper 2 is 2/3 of final merit → anything that scores here is worth ~2× a
+Phase-1 mark (which is screening-only and never enters the merit list).
+
+## Paper-1 daily-time priority
+
+| Priority | Block | Why |
+|---|---|---|
+| 1 | GA drip (20 min/day, every day) | Feeds the single cheapest 25-mark section — compounds daily |
+| 2 | Paper-1 drill bank (40 Qs/day: 10 each) | Volume = speed on the predictable archetypes |
+| 3 | Weekly full Paper-1 timed | Measures the 50-mark target, not the 30 floor |
+
+## The priority ranking (marks + effort + phase synergy)
+
+| Tier | Topic | Why |
+|---|---|---|
+| **S — highest ROI** | Programming Concepts | 30% of Phase-1 P2 AND 20% of Phase-2 P2. Highest single-topic value in the whole exam |
+| **S** | Data Structures + Algorithms | Only 10% in Phase 1 but **70% of Phase-2 P2** — the paper that decides merit |
+| A | DBMS + SQL | 20% of Phase-1 P2 for relatively little effort; concepts don't change |
+| A | Data Analytics (Python/R) | 10% — pandas output Qs can't be winged; needs its own drills |
+| B | Networking, InfoSec | 10% each, pure recall — good marks but shouldn't take 6 days each |
+| C | DW + Shell | 10% combined — 1–2 day definitions cram is enough |
+| **D — trap** | **OS, Software Engg, Emerging Tech** | **NOT in the official Phase-1 IT syllabus at all.** Only appear as ~0–3 stray trivia Qs. No dedicated days — fold into misc drills |
+
+## Plan audit — current vs recommended day allocation
+
+| Topic | Official wt (P1) | Days now | Recommended | Verdict |
+|---|---|---|---|---|
+| Programming | 30% | 2 (d33–34) | **5–6** | ⚠ under-allocated — biggest topic gets fewest days |
+| DBMS + SQL | 20% | 6 (d1–6) | 5 | ~OK, slightly heavy |
+| DSA | 10% P1 + 70% P2 | 4 (d29–32) | **6–7** | ⚠ under-allocated — ignores its Phase-2 weight |
+| Data Analytics | 10% | ~⅓ of d26 | 2 | ⚠ under-allocated |
+| Networking | 10% | 6 (d8–13) | 3–4 | ✂ over-allocated for a recall topic |
+| InfoSec | 10% | 6 (d15–20) | 3–4 | ✂ over-allocated |
+| DW + Shell | 10% | ~⅔ of d26 | 1–2 | ~OK |
+| OS | 0% | 4 (d22–25) | 0–1 | ✂ 4 days on a non-syllabus topic |
+| Software Engg | 0% | 3 (d36–38) | 0–1 | ✂ non-syllabus |
+| Emerging Tech | 0% | 2 (d39–40) | 0–1 | ✂ non-syllabus (blockchain/UPI is GA trivia at best) |
+
+**Net finding:** ~9 days sit on topics with no official Phase-1 weightage (OS, SE,
+Emerging) while the 30% Programming topic gets 2 days and Phase-2-defining DSA gets 4.
+Reallocating OS/SE/Emerg days → Programming + DSA + Data Analytics roughly doubles
+expected Phase-2 Paper-2 score without adding a single study day.
+
+Suggested swap (keeps the weekly-test spine intact):
+- d22–25 (OS, 4d) → Programming deep block 1: OOP + dry-run drills
+- d26 stays DA/Shell/DW but give DA a full day, DW+Shell a half
+- d29–34 DSA+Prog block grows to 8–9 days
+- d36–41 (SE/Emerg, 6d) → Phase-2-format drills: MCQ dry-runs, debugging sets,
+  string manipulation + early descriptive-coding insurance practice
+- Keep 1 "trivia buffer" day before the Blitz for OS/SE/cloud one-pagers if time allows
+
+REMEMBER: Phase-1 marks only open the door; Phase-2 Paper 2 (DS 40 / Algo 30 /
+OOP 20 / Strings 10) is 2/3 of merit. Prioritise for the paper that ranks you,
+not just the paper that screens you.
+`,"../../00_Overview/clickup_task_ids.md":`# ClickUp task ID map — "49-Day Study Plan" list (1300420000096398)
+
+D1=t8 D2=t9 D3=ta D4=tb D5=tc D6=td D7=te(W) D8=tf D9=tg D10=th
+D11=tj D12=tk D13=tm D14=tn(W) D15=tp D16=tq D17=tr D18=tt D19=tu
+D20=tv D21=tw(W) D22=tx D23=ty D24=tz D25=u0 D26=u1 D27=u2 D28=u3(W)
+D29=u4 D30=u5 D31=u6 D32=u7 D33=u8 D34=u9 D35=ua(W) D36=ub D37=uc
+D38=ud D39=ue D40=uf D41=ug D42=uh(W) D43=uj D44=uk D45=um D46=un
+D47=up D48=uq D49=ur
+
+Meta cards: PACE=14yq6g325y3 DRILL_BANK=14yq6g325zn LINKS=14yq6g32608
+
+P1 rotation by weekday (from card descriptions):
+Fri/Mon/Wed = Quant+Rsn · Sat = Markets · Sun = RC · Tue = English
+
+TITLE RENAME (P1 rotation + GA made visible). DONE markers appended.
+`,"../../01_Phase1_Paper1/English_Language/Rules_And_Vocab.md":`# English Language — Learn the Rules (Understand + Remember version)\r
+\r
+> Phase 1 Paper 1 English = **20 questions, ~15 min**. Most scoring section. Target: 16+.\r
+> **Real exam split (2024 + Jan-2026 papers):** RC 5–7 · Error spotting 4–5 · Double fillers 4–5 · Sentence improvement 3–4 · Para jumbles 4–5.\r
+\r
+## How to use this file\r
+Every rule below has three parts:\r
+- **WHY** — the plain-English logic, so the rule makes sense instead of being memorised blindly\r
+- **REMEMBER** — a one-line hook/mnemonic\r
+- **Example** — ✗ wrong vs ✓ right\r
+\r
+Read it through 2–3 times. After that, each time you get a question wrong, come back to the rule it broke — that's how the rules permanently move into your head.\r
+\r
+---\r
+\r
+\r
+## DAILY MAP — which type + which rule block, per plan day\r
+Tuesday = English day; Sunday = RC day. Study the type section first, then drill it.\r
+\r
+- **D5**  Type 1 (error spotting) + Rules 1-11 (agreement/tense) + collocations vocab\r
+- **D12** Type 2 (fillers) + Rules 15-20 (preposition/connector) + idioms vocab\r
+- **D19** Types 1+2 mixed + phrasal-verbs vocab\r
+- **D26** Type 3 (improvement) + Rules 12-13/21-23 + one-word substitutions\r
+- **D33** Types 2+3 + root-words vocab\r
+- **D40** weakest type (error log) + full vocab-log review + Type 6 if not yet covered\r
+- **Every Sunday** Type 5 (RC set) + the week's vocab words as self-quiz\r
+- Type 4 (jumbles), 6 (cloze), 7 (match-column): no fixed day -- drill 1 set inside the daily 40-Q quota whenever that type appears in the error log.\r
+\r
+# PART 1 — THE GRAMMAR RULEBOOK (understand version)\r
+\r
+## AGREEMENT RULES (verb matches subject)\r
+\r
+**Rule 1 — Verb follows the SUBJECT, not the nearest word.**\r
+- WHY: Grammar only sees the subject. In "the list of items", the thing on the desk is the *list* — "of items" is just decoration describing the list.\r
+- REMEMBER: **"Cross out the middle."** When you see \`subject + of/along with + words + verb\`, mentally delete the middle and check.\r
+- ✗ The list of items **are** on the desk → ✓ The list of items **is** on the desk.\r
+\r
+**Rule 2 — each / every / one of / either / neither → SINGULAR.**\r
+- WHY: "Each" literally means "every single ONE". You're talking about one item at a time, even if there are hundreds.\r
+- REMEMBER: **"Each ONE is single."**\r
+- ✓ Each of the boys **has** a pen. ✓ One of my friends **is** a doctor.\r
+\r
+**Rule 3 — "a number of" = plural · "the number of" = singular.**\r
+- WHY: "A number of students" is just a fancy way of saying "many students" → plural. But "the number of students" means the *count itself* — a number is one thing → singular.\r
+- REMEMBER: **A number = many people. THE number = one digit.**\r
+- ✓ A number of students **were** absent. ✓ The number of students **is** rising.\r
+\r
+**Rule 4 — "along with / as well as / together with" → verb follows the FIRST subject only.**\r
+- WHY: These phrases are side-comments, not real additions. "The captain, along with his men, was rescued" — the sentence is still about the captain; "his men" is extra info between commas.\r
+- REMEMBER: **The tagalong doesn't count.**\r
+- ✓ The captain, along with his men, **was** rescued.\r
+\r
+**Rule 5 — Collective nouns (team, jury, committee, board) → SINGULAR.**\r
+- WHY: When the group acts as one unit (the team *wins*, the board *decides*), it's one thing. Only split to plural when members act separately — SEBI almost never tests that case.\r
+- REMEMBER: **One team = one thing.**\r
+- ✓ The jury **has** given its verdict.\r
+\r
+## NOUN RULES\r
+\r
+**Rule 6 — Uncountable nouns stay singular, never take "-s" or "a".**\r
+- WHY: You can't count them — there's no such thing as "one furniture, two furnitures". Furniture/information/advice/luggage/news are lumps, not units.\r
+- REMEMBER: **Can't count it? Can't add "s".** (Use "a piece of advice", "items of furniture".)\r
+- ✗ The furnitures **are** new → ✓ The furniture **is** new. ✗ an advice → ✓ a piece of advice.\r
+\r
+**Rule 7 — Some nouns are ALWAYS plural (take plural verbs).**\r
+- WHY: They're born plural — scissors have two blades, trousers two legs, premises is a set of buildings, police/cattle/people are groups by definition.\r
+- REMEMBER: **"Police in trousers with scissors entered the premises and counted the people's cattle."** (One silly sentence holds the whole group.)\r
+- ✓ The police **have** arrested him.\r
+\r
+**Rule 8 — "The + adjective" = a plural group of people.**\r
+- WHY: "The poor" is short for "poor *people*" — many people hidden inside one word.\r
+- REMEMBER: **The poor = poor PEOPLE.**\r
+- ✓ The rich **get** richer.\r
+\r
+## TENSE RULES\r
+\r
+**Rule 9 — since = a POINT in time · for = a LENGTH of time → both take perfect tense.**\r
+- WHY: "Since" answers "*since when?*" → a starting dot (Monday, 2019, childhood). "For" answers "*for how long?*" → a stretch (5 years). Both describe something that started in the past and continues → present perfect (*has worked*).\r
+- REMEMBER: **SINCE = Starting point. FOR = Full length.** (S→S, F→F.)\r
+- ✓ He **has worked** here since 2019 / for five years. ✗ He works here since 2019.\r
+\r
+**Rule 10 — yesterday / ago / last week / in 2020 → SIMPLE past only. Never "has/have".**\r
+- WHY: The perfect tense is for unfinished/unspecified time. The moment you name a finished time, you force simple past.\r
+- REMEMBER: **Named the year? Kill "has".**\r
+- ✗ He **has left** yesterday → ✓ He **left** yesterday.\r
+\r
+**Rule 11 — Two past actions: the EARLIER one wears "had".**\r
+- WHY: Past perfect ("had + V3") exists only to show which action came first when two past events meet.\r
+- REMEMBER: **In a past story, "had" = it happened before that.**\r
+- ✓ When I reached, the train **had left**. (Train left first.)\r
+- Special fixed pairs: **No sooner …than** / **Hardly, Scarcely …when**: ✓ No sooner had he left **than** it rained. (Never mix: "no sooner when" is wrong — pair them correctly.)\r
+\r
+## STRUCTURE RULES\r
+\r
+**Rule 12 — Parallel structure: everything in a list wears the same uniform.**\r
+- WHY: A list joined by "and/or/but" is a team — members must be the same form (all -ing, or all base verbs, or all nouns). Mixing = grammatical foul.\r
+- REMEMBER: **Same list = same costume.**\r
+- ✗ He likes reading, writing and **to swim** → ✓ …and **swimming**.\r
+\r
+**Rule 13 — Correlative partners come in fixed pairs.**\r
+- WHY: These are married couples — each first-half has ONE legal partner: either→or, neither→nor, not only→but also, both→and, whether→or.\r
+- REMEMBER: **Neither brings NOR. Not only brings BUT ALSO.** Mixing pairs is the #1 trap.\r
+- ✗ Not only he is smart **and also** kind → ✓ …**but also** kind.\r
+- Bonus: with either…or / neither…nor, the verb follows the NEARER subject: Neither the boys nor the teacher **is** here.\r
+\r
+**Rule 14 — Articles: "an" goes by SOUND, not letter.**\r
+- WHY: The article exists to make speech flow — it's the *sound* that matters, not the spelling.\r
+- REMEMBER: **Say it aloud — "university" = "yoo-niversity" → starts with a consonant SOUND → "a university". "Hour" = "our" → vowel sound → "an hour".**\r
+- ✓ a European, a one-rupee note, an MBA, an honest man.\r
+- "the" = specific/unique/second-mention (the RBI, the sun, the boy *I told you about*).\r
+\r
+## COMPARISON RULES\r
+\r
+**Rule 15 — "than" needs a comparative; never double up.**\r
+- WHY: "More" and "-er" are two ways of doing the same job — using both is like saying "more better-er".\r
+- REMEMBER: **One comparison per word.** taller than ✓ · more taller ✗.\r
+- ✗ He is **more faster** → ✓ He is **faster**.\r
+\r
+**Rule 16 — senior / junior / superior / inferior / prefer → take "to", not "than".**\r
+- WHY: These come from Latin where the comparison is built in — they don't need "than" at all; English pairs them with "to".\r
+- REMEMBER: **The senior citizens and the superior officers all go TO the party — never THAN.**\r
+- ✓ She is senior **to** me. ✓ I prefer tea **to** coffee.\r
+\r
+## PREPOSITION RULES\r
+\r
+**Rule 17 — Fixed prepositions are married pairs — memorise, no logic.**\r
+- WHY: Collocations are habit, not rules — "different from" is correct simply because English speakers agreed on it.\r
+- REMEMBER (chunk them): **differ-FROM · comply-WITH · consist-OF · insist-ON · depend-ON · good-AT · interested-IN · capable-OF · accused-OF · suffer-FROM · married-TO · listen-TO · look forward to + V-ing.**\r
+- ✗ different **than** → ✓ different **from**.\r
+\r
+**Rule 18 — Some verbs already have the preposition inside — adding one is wrong.**\r
+- WHY: "Discuss" = "talk **about**". "Enter" = "go **into**". "Reach" = "arrive **at**". The preposition is built into the verb's meaning — adding it doubles it.\r
+- REMEMBER: **The word swallowed its preposition:** discuss(about) ✗ · enter(into a room) ✗ · reach(at) ✗ · comprise(of) ✗ · order(for food) ✗.\r
+- ✗ We discussed **about** the plan → ✓ We discussed the plan.\r
+- (Careful: "enter into an agreement/contract" IS correct — a real phrase. The ban is only for physical entering.)\r
+\r
+## CONNECTOR RULES\r
+\r
+**Rule 19 — "Unless" already means "if…NOT" — never add another negative.**\r
+- WHY: Two negatives cancel. "Unless you do not work hard" literally means "if you work hard" — the opposite of what you meant.\r
+- REMEMBER: **Unless = if-NOT. The "not" is built in.**\r
+- ✗ Unless you **do not** work → ✓ Unless you work.\r
+\r
+**Rule 20 — One bridge per gap: although…yet ✗, because…so ✗, since…therefore ✗.**\r
+- WHY: Each connector does the whole job alone. "Although" already sets up contrast — adding "yet/but" puts two doors in one doorway.\r
+- REMEMBER: **One sentence = one connector.** Keep either side, drop the other.\r
+- ✗ Although he is rich, **yet** he is sad → ✓ Although he is rich, he is sad. (Or: He is rich, yet sad.)\r
+\r
+## PRONOUN & MODIFIER RULES\r
+\r
+**Rule 21 — After a preposition, use the OBJECT form (me/him/whom/us).**\r
+- WHY: Prepositions only hold objects — "between you and me", "to whom". "I" and "who" are only for doers.\r
+- REMEMBER: **Test trick — split it: "between me" ✓ sounds right, "between I" ✗ sounds wrong. Your ear already knows.**\r
+- ✗ between you and **I** → ✓ between you and **me**. ✗ **Who** did you give it to? → ✓ **Whom** did you give it to?\r
+\r
+**Rule 22 — Dangling modifier: the doer stands right after the comma.**\r
+- WHY: An opening "-ing/having" phrase describes whoever comes next. "Walking down the road, a snake bit him" claims *the snake* was walking.\r
+- REMEMBER: **After the comma → the actor.** If the actor can't do the action, the sentence is broken.\r
+- ✗ Walking down the road, **a snake bit him** → ✓ Walking down the road, **he saw a snake**.\r
+\r
+**Rule 23 — Pronouns agree with their owner.**\r
+- WHY: "Everyone/each/someone" is one person → singular pronoun (his or her).\r
+- ✓ Everyone should do **his or her** best.\r
+- Reflexive (myself/himself) needs the same person doing the action: ✗ He **myself** did it → ✓ He **himself** did it.\r
+\r
+## MEANING-TRAP RULES\r
+\r
+**Rule 24 — Redundancy: words that repeat their own meaning.**\r
+- WHY: "Return" = go **back**. "Repeat" = do **again**. The second word is the meaning of the first — saying both = saying it twice.\r
+- REMEMBER (the dirty dozen): **return back · repeat again · revert back · refer back · recall back · free gift · past history · future plans · advance planning · true fact · end result · both alike.**\r
+- ✗ Please return **back** my book → ✓ Please return my book.\r
+\r
+**Rule 25 — Adjective vs adverb: linking verbs take adjectives.**\r
+- WHY: "He drives *carefully*" — carefully describes the driving (verb → adverb). But "the soup tastes *good*" — good describes the SOUP, not the tasting. Verbs like is/seem/feel/look/taste/smell/sound just *link* to a description of the subject.\r
+- REMEMBER: **"Tastes good" describes the soup, not the taste-buds. Soup isn't performing an action → adjective.**\r
+- ✗ The food tastes **well** → ✓ The food tastes **good**.\r
+- ✗ He drives **careful** → ✓ He drives **carefully**.\r
+\r
+**Rule 26 — Conditionals: the more imaginary, the more past.**\r
+- WHY: English pushes tense backward as reality fades:\r
+  - Real possibility → If it **rains**, I **will** stay. (present → will)\r
+  - Imaginary now → If I **were** you… (past form for present fantasy — always *were*, never "was")\r
+  - Impossible past → If he **had studied**, he **would have passed**. (past perfect → would have)\r
+- REMEMBER: **Each step away from real = one step back in tense. "If I were…" — wishes always take *were*.**\r
+\r
+**Rule 27 — hardly/scarcely/few/little already carry a negative — don't double it.**\r
+- WHY: "Hardly" = almost NOT. "Doesn't hardly" = not-almost-not = meaning flips.\r
+- REMEMBER: **Hardly IS the "not" — ✗ doesn't hardly → ✓ hardly works.**\r
+- Few vs a few: **few = almost none** (negative vibe), **a few = some** (positive). ✓ Few officers passed = almost nobody passed. Same for little/a little.\r
+\r
+**Rule 28 — "It is high time" + PAST tense.**\r
+- WHY: The phrase means "this should have happened already" — the action is overdue, so English dresses it in past form.\r
+- REMEMBER: **High time = overdue = past.**\r
+- ✓ It is high time we **went** home.\r
+\r
+**Rule 29 — "had better / would rather" + bare verb.**\r
+- WHY: They're fixed modal-like phrases that take the verb raw, no "to", no "-ing".\r
+- ✓ You **had better leave** now. ✓ I **would rather stay**.\r
+\r
+---\r
+\r
+# PART 2 — THE 5 QUESTION TYPES (with mini walkthroughs)\r
+\r
+## Type 1 — Error Spotting (4–5 Qs)\r
+Sentence split into (A)(B)(C)(D), pick the wrong part, or (E) No error. Variant: pick the one correct sentence of four.\r
+**Method — run the checklist in this order:**\r
+1. Find subject → agreement (Rules 1–5)\r
+2. Spot time words (since/for/yesterday) → tense (9–11)\r
+3. Spot a list → parallelism (12–13)\r
+4. Spot trap words → than/to, preposition, unless, although (15–20)\r
+5. Nothing? "No error" is a real answer (~1 in 5).\r
+\r
+## Type 2 — Double Fillers (4–5 Qs)\r
+One sentence, two blanks, word-pair options.\r
+**Method — grammar first, meaning second:**\r
+1. Kill options by verb-form/plural grammar on blank 1 (usually halves the options).\r
+2. Same on blank 2.\r
+3. Still tied? Read tone — "although" → opposites, "and/because" → same direction.\r
+4. BOTH words must fit — a pair with one perfect + one iffy is a trap.\r
+**Why this works:** SEBI writes options so 2–3 pairs die on pure grammar before meaning is even tested.\r
+\r
+## Type 3 — Sentence Improvement (3–4 Qs)\r
+Underlined part + 5 replacements (one = "no improvement").\r
+**Method:** it's error spotting on the underlined part only — same checklist. Check the WHOLE sentence with the swap in, not just the swapped words. "No improvement" is right ~1 in 5 — don't force a fix.\r
+\r
+## Type 4 — Para Jumbles (4 Qs)\r
+5–6 scrambled sentences, find the order (or "which is 2nd/3rd").\r
+**The pairing method — remember "OPC":**\r
+- **O — Opener:** the sentence needing nothing before it. Kill sentences starting with he/this/they (pronouns need an earlier noun), but/however/also/thus (connectors need a previous idea), the + noun already introduced.\r
+- **P — Pairs (the real engine):** hunt links —\r
+  - pronoun → its noun ("the move" → the sentence introducing the move)\r
+  - "a X" before "the X" (indefinite introduces, definite refers back)\r
+  - name first → surname/pronoun later\r
+  - question → answer · problem → solution · general → example · date order\r
+- **C — Check:** read your chain once. A wrong order *feels* broken mid-way — trust that bump.\r
+Closer = conclusion words (thus, finally, overall).\r
+\r
+## Type 5 — Reading Comprehension (5–7 Qs)\r
+~300–400 word passage + detail/inference/vocab/tone questions.\r
+**Method:**\r
+1. **90-sec skim** — first + last sentence of each para only. You now have the map.\r
+2. Vocab-in-context questions first (easiest marks): re-read the exact sentence, slot each option in — pick what keeps the meaning (NOT the dictionary meaning).\r
+3. Detail Qs: scan back for the keyword. Answer ONLY from the passage — outside knowledge is a trap.\r
+4. Inference Qs: one logical step beyond the text, not two.\r
+5. Kill options with **always/never/completely/entirely** unless the passage literally says it.\r
+6. Tone: SEBI passages are usually **analytical/cautionary**. Praise words → optimistic; flaw words → critical; just facts → neutral.\r
+**6-minute hard cap. If a question needs re-reading the whole passage → guess, flag, move.**\r
+\r
+\r
+## Type 6 - Cloze Test (0-5 Qs - rotates in some years)\r
+A short passage with 5 numbered blanks; each blank gets 5 word options.\r
+**Method:**\r
+1. Read the whole passage WITHOUT filling anything - get the story direction first (a blank's word depends on sentences around it, not its own line).\r
+2. Then per blank: grammar test first (blank after "the" wants a noun; after "to" wants base verb), tone test second (positive/negative story direction kills half the options).\r
+3. Consecutive blanks often share one connector logic - "not only X but Y", "although X, Y" - solve them as pairs.\r
+WHY this works: a cloze is just 5 double-filler questions wearing a passage - Type 2 method on each blank.\r
+REMEMBER: *Story first, blanks second - a cloze punishes line-by-line reading.*\r
+\r
+## Type 7 - Match the Column / Phrase Replacement (0-4 Qs - rotates)\r
+Two columns (sentence starts A-D vs endings i-v), pick the matching combination. Variant: replace a phrase so the sentence becomes correct.\r
+**Method:**\r
+1. Match by grammar hard-locks first - an ending starting with a verb only fits a start ending in a subject; tense and number must agree across the join.\r
+2. Then meaning-check the survivors (usually only 1-2 combos survive grammar).\r
+3. For phrase-replacement: it is Type 3 (improvement) on a fragment - same checklist, "no replacement needed" is a real option.\r
+REMEMBER: *Grammar locks, meaning checks - never match on vibes alone.*\r
+\r
+---\r
+# PART 2B — WORKED EXAMPLES (every question type, solved the way you'd solve it in the exam)\r
+\r
+## Type 1 — Error Spotting (solve in 25–35 sec each)\r
+\r
+**Ex 1.** *"One of my friend (A)/ has gone (B)/ to Delhi (C)/ for a conference. (D)/ No error (E)"*\r
+→ **(A) — "friends."** Rule 2: one of + PLURAL noun + singular verb. *Trap: "has gone" looks fine, so people hunt B.*\r
+\r
+**Ex 2.** *"He as well as his brothers (A)/ were present (B)/ at the meeting. (C)/ No error (D)"*\r
+→ **(B) — "was present."** Rule 4: tagalong doesn't count — verb follows "He" only.\r
+\r
+**Ex 3.** *"I have been (A)/ working here (B)/ since five years. (C)/ No error (D)"*\r
+→ **(C) — "for five years."** Rule 9: since = point, for = length. Five years is a stretch.\r
+\r
+**Ex 4.** *"The teacher asked the students (A)/ that why they (B)/ were late. (C)/ No error (D)"*\r
+→ **(B) — drop "that."** Indirect questions take no extra conjunction: "asked them why they were late." *SEBI's favourite double-connector trap.*\r
+\r
+**Ex 5.** *"Scarcely he had (A)/ reached the station (B)/ when the train left. (C)/ No error (D)"*\r
+→ **(A) — "Scarcely had he."** Negative openers (scarcely/hardly/no sooner/never) flip subject-verb — inversion, like a question.\r
+\r
+## Type 2 — Double Fillers (30–40 sec each)\r
+\r
+**Ex 1.** *"The company decided to ____ its workforce after the merger led to ____ losses."*\r
+(a) expand/minimal (b) **trim/heavy** (c) hire/expected (d) retain/negligible\r
+→ **(b).** Meaning first: merger + losses → cutting, not growing → kills (a)(c)(d) on direction alone.\r
+\r
+**Ex 2.** *"____ the evidence was strong, the court acquitted him as guilt was not proved ____ reasonable doubt."*\r
+(a) Since/within (b) **Although/beyond** (c) Because/above (d) Unless/in\r
+→ **(b).** Contrast opener → "although"; "beyond reasonable doubt" is a legal COLLOCATION — the vocab bank just earned a mark.\r
+\r
+**Ex 3.** *"The RBI's move is expected to ____ inflation and ____ investor confidence."*\r
+(a) raise/dent (b) fuel/erode (c) **curb/boost** (d) worsen/raise\r
+→ **(c).** Both verbs are collocation pairs from the bank (curb inflation, boost confidence). (a) and (d) make one blank right each — the classic one-perfect-one-iffy trap.\r
+\r
+**Ex 4.** *"He is so ____ that even his closest friends ____ him."*\r
+(a) generous/admire (b) **arrogant/avoid** (c) kind/respect (d) humble/praise\r
+→ **(b).** "so…that even" sets a negative extreme — only (b) has both blanks going the same negative direction.\r
+\r
+## Type 3 — Sentence Improvement (25–35 sec each)\r
+\r
+**Ex 1.** *"He denied <u>to help</u> me."* → (a) for helping (b) **helping** (c) to be helping (d) no improvement\r
+→ **(b) "denied helping."** Deny takes the -ing form; refuse takes "to". Know which verb owns which costume.\r
+\r
+**Ex 2.** *"I am living in Mumbai <u>since</u> 2019."* → (a) from (b) **have been living** (c) lived (d) no improvement\r
+→ The swap must fix the VERB too, not just the preposition → **(b) "I have been living in Mumbai since 2019."** *Trap: changing only "since→for" is still wrong — the tense is the real error.*\r
+\r
+**Ex 3.** *"No sooner did the bell ring than the students rushed out."* → (a) when (b) then (c) before (d) **no improvement**\r
+→ **(d).** Already correct — "no sooner…than" is the legal pair. "No improvement" is right ~1 in 5 — checking it saves you from forcing fake fixes.\r
+\r
+## Type 4 — Para Jumbles (one full walkthrough)\r
+\r
+*"Arrange: (A) Such trust is what keeps money flowing into markets. (B) SEBI was set up in 1988 to protect investors' interests. (C) Since then, its role has expanded to cover intermediaries and new products. (D) Without such oversight, investors would hesitate to part with their savings. (E) It received statutory powers in 1992."*\r
+\r
+**Solve with OPC:**\r
+- **O:** Only B introduces SEBI by name — E's "It", C's "its", D's "such oversight", A's "Such trust" all need something before → **B first**.\r
+- **P:** B(1988) → E("It" = SEBI, and 1992 continues the date chain) → C("Since then" = since 1992) → D("such oversight" = C's expanded role) → A("Such trust" = the confidence D's investors gain).\r
+- **C:** B→E→C→D→A reads clean — intro, legal status, growth, why it matters, payoff.\r
+→ **Order: B-E-C-D-A.** *The marks are in the links (It→SEBI, Since then→1992, such oversight→expanded role, Such trust→confidence) — never order by "feel".*\r
+\r
+## Type 5 — RC (mini-passage + the 4 question species)\r
+\r
+*"Algorithmic trading now executes most orders on Indian exchanges in microseconds. It has narrowed spreads and deepened liquidity. Yet regulators worry the same speed can amplify crashes when machines sell simultaneously. SEBI's response has been measured — kill-switch norms and circuit filters rather than outright bans."*\r
+\r
+1. **Vocab-in-context:** "amplify" here means → **magnify/intensify** (not "cause" — the crash exists, algo makes it bigger). *Slot each option into the sentence and keep the one that survives.*\r
+2. **Tone:** → **analytical/cautionary** — lists benefits AND concerns, ends with a balanced regulator. (SEBI passages are almost always this tone, never "hysterical".)\r
+3. **Inference:** → **SEBI prefers safeguards over prohibition** — one step beyond "measured response", not two. ("SEBI wants to ban algos" = two steps too far.)\r
+4. **Detail kill-option:** *"Algo trading has been banned in India"* → false — passage says the opposite. *Options that flip or exceed the text are the trap design.*\r
+\r
+---\r
+\r
+# PART 3 — VOCAB BANK (fillers + RC vocab questions live here)\r
+\r
+## Collocations examiners love (English pairs words certain ways — this IS what fillers test)\r
+- **Verb+noun:** take a decision · make an effort · commit a crime · raise a question · pay attention · pose a threat · meet demand · bridge the gap · take measures · express concern · implement reforms · tighten norms · curb inflation · safeguard interests · boost confidence · exercise caution\r
+- **Adj+noun:** heavy rain · strong tea (never "powerful tea") · high price (never "tall price") · vast majority · keen interest · stiff competition · grave concern · pressing need · sweeping changes\r
+- **Phrases:** at large · in vain · on behalf of · in lieu of · at stake · in the wake of · on the verge of · in tandem with · in compliance with\r
+\r
+## Root-word cheat (decode unknown words on sight)\r
+| Root | Means | So you can guess… |\r
+|---|---|---|\r
+| bene- | good | benefit, benevolent = well-wishing |\r
+| mal- | bad | malice, malfunction = bad-working |\r
+| cred- | believe | credible = believable, credulous = believes anything |\r
+| dict- | say | predict = say-before, verdict |\r
+| pre-/post- | before/after | precaution, postpone |\r
+| anti- | against | antidote, antagonist |\r
+| -phile/-phobe | loves/fears | bibliophile (book-lover), claustrophobia |\r
+| ambi- | both | ambidextrous, ambiguous |\r
+| sub-/super- | below/above | subordinate, superior |\r
+\r
+## High-frequency idioms\r
+a blessing in disguise · beat around the bush · bite the bullet · burn the midnight oil · call a spade a spade · cut corners · get cold feet · hit the nail on the head · in a nutshell · let the cat out of the bag · on cloud nine · once in a blue moon · pull someone's leg · red tape · sit on the fence · spill the beans · the ball is in your court · through thick and thin · turn a blind eye · under the weather · white elephant · a wild goose chase\r
+\r
+## Phrasal verbs (learn the meaning shift)\r
+abide by · account for · back up · bank on · break down/off · bring about · call off · carry on/out · come across · cut down on · deal with · do away with · figure out · get away with · give in/up · keep up with · look after/into/up to · make up for · put off · put up with · set aside · take after/off/up · turn down/up · work out\r
+\r
+## One-word substitutions (top 20)\r
+omnipotent (all-powerful) · omniscient (all-knowing) · altruist (selfless) · philanthropist (loves mankind) · misanthrope (hates mankind) · incorrigible (can't be corrected) · invincible (can't be defeated) · inevitable (can't be avoided) · insolvent (can't pay debts) · posthumous (after death) · anonymous (nameless) · versatile (many skills) · gullible (easily fooled) · epilogue/prologue (closing/opening) · ambidextrous · simultaneous · inflammable · introvert/extrovert\r
+\r
+## Daily vocab log (add 10/day from mocks/RCs)\r
+| Word | Meaning | Syn | Ant | Sentence |\r
+|---|---|---|---|---|\r
+| | | | | |\r
+\r
+---\r
+\r
+# PART 4 — EXAM-DAY GAME PLAN\r
+\r
+**Order:** fillers (4 min) → error spotting (5) → improvement (3) → jumbles (4) → RC last (6, vocab Qs first).\r
+**Rules of thumb:** "No error"/"No improvement" is right ~20% of the time — don't force one. Fillers: both words must earn their place. RC: passage only, never outside knowledge. −0.25 marking → 50/50 guesses worth it, blind ones not.\r
+\r
+**Daily drill:** 10 min — 5 rules from Part 1, rewritten from memory with your own example. 15 min — 20 mixed MCQs (Testbook chapter tests, real weightage). 5 min — log every wrong answer with the rule number it broke.\r
+`,"../../01_Phase1_Paper1/General_Awareness/Financial_Awareness/SEBI_Markets_Notes.md":`# Financial Awareness — SEBI & Capital Markets (exam-critical GA)
+
+> GA = **20 questions** in Paper 1 and the cheapest marks in the exam (pure recall, ~30 sec/question).
+> Markets/SEBI facts are the highest-yield chunk of Tier-1 GA — SEBI examines its own ecosystem.
+
+## SATURDAY MAP — one section per pass
+- **D2** §1 SEBI Essentials · **D9** §2 Laws & Concepts · **D16** §3 Market Infrastructure
+- **D23** §4 Recent Trends · **D30** §5 RBI & Economy · **D37** weak-section re-read · **D44** full pass, everything
+- Daily GA drip (current affairs) lives in \`Monthly_Logs/\` — THIS file is the static foundation it hangs on.
+
+---
+
+## §1 — SEBI Essentials (memorize verbatim — direct MCQs come from here)
+
+**The 30-second story:** SEBI was born as an advisory body (1988), got legal teeth in 1992 after the Harshad Mehta scam exposed how unregulated the market was, and today polices everyone who touches India's securities market.
+
+- **Established:** April 12, **1988** — as a NON-statutory body (no law backing it yet). Statutory power from the **SEBI Act, 1992**.
+  REMEMBER: *1988 born, 1992 armed.* The 4-year gap is a favourite MCQ trap.
+- **HQ:** Mumbai (Bandra-Kurla). Regional offices: Ahmedabad, Kolkata, Chennai, New Delhi.
+- **Chairman:** appointed by the Govt of India — check the current name in the monthly log near the exam.
+- **Board:** Chairman + 8 members (incl. nominees from RBI and the Finance Ministry).
+- **Objectives (3 — asked as "which is NOT"):**
+  1. Protect the interests of **investors**
+  2. **Develop** the securities market
+  3. **Regulate** the securities market
+- **Regulates:** stock exchanges, brokers/sub-brokers, merchant bankers, mutual funds, FPIs, credit rating agencies, depositories & their participants, investment advisers, REITs/InvITs, AIFs.
+- **Regulator → domain (the classic match-column question):**
+  | Regulator | Territory |
+  |---|---|
+  | SEBI | securities market + commodity derivatives (since 2015, FMC merged in) |
+  | RBI | banks, NBFCs, monetary policy, payment systems |
+  | IRDAI | insurance |
+  | PFRDA | pensions (NPS) |
+  | MCA | companies (Company Law itself) |
+  | CCI | competition/mergers |
+  TRAP: commodity derivatives moved from FMC to **SEBI in 2015** — "SEBI doesn't regulate commodities" is WRONG now.
+- **Powers:** quasi-judicial — can investigate, issue directions, impound proceeds, levy penalties, suspend intermediaries. Powers of a civil court for evidence.
+- **Appeals path:** SEBI order → **SAT** (Securities Appellate Tribunal) → **Supreme Court** (on questions of law).
+  REMEMBER: *SEBI judges, SAT appeals, SC final.*
+
+---
+
+## §2 — Key Laws & Market Concepts
+
+**Laws (know each one's one-line job):**
+- **SEBI Act, 1992** — creates and empowers SEBI itself.
+- **SCRA, 1956** (Securities Contracts Regulation Act) — governs stock exchanges and what counts as a legal "securities contract" (used to kill illegal dabba/bucket-shop trading).
+- **Depositories Act, 1996** — legal base for holding shares electronically (demat); created NSDL/CDSL framework.
+- **Companies Act, 2013** — the company side (board duties, accounts); MCA's turf, not SEBI's.
+- **SEBI (PIT) Regulations, 2015** — insider trading rules. **UPSI** = unpublished price-sensitive information. Trading on UPSI = insider trading — SEBI's signature enforcement area.
+- **LODR Regulations, 2015** (Listing Obligations & Disclosure Requirements) — what listed companies must disclose, and how fast.
+- **ICDR Regulations** — the IPO rulebook (who can list, disclosure, allocation).
+- **Takeover/SAST Regulations, 2011** — rules when someone acquires a big stake (open-offer triggers at 25%+).
+- **MF Regulations 1996 · AIF 2012 · REIT/InvIT 2014** — one line each: which vehicle they govern.
+
+**IPO mechanics (asked almost every cycle):**
+- Flow: **DRHP** (draft red herring prospectus, filed with SEBI) → SEBI observations → **RHP** (final, with price/dates) → issue opens → listing.
+  SEBI vets the DOCUMENT for disclosure adequacy — it does NOT approve the price or the company. REMEMBER: *SEBI checks the paperwork, not the worth.*
+- **Book building** (price discovered via bids) vs **fixed price** issue.
+- **ASBA** — money blocked in your own bank account, not paid upfront.
+- **Anchor investors** — QIBs allotted a day before the public issue.
+- **Investor buckets:** QIB ≤50% · NII (non-institutional) ≥15% · Retail ≥35% of a typical book-built offer.
+- **Green-shoe option** = over-allotment — lets the issuer sell up to 15% extra to stabilize post-listing price.
+- **OFS** (offer for sale = existing holders sell) vs **fresh issue** (new shares) vs **FPO** (already-listed co raises again).
+
+**Market-safety concepts:**
+- **Circuit breakers:** index-wide halts at 10/15/20% Nifty/Sensex moves; stock-level price bands 2/5/10/20%.
+- **Insider trading** = trading on UPSI. Connected persons (directors, employees, advisers) have restricted windows + pre-clearance duties.
+- **STT** (Securities Transaction Tax) — tax charged on every buy/sell at the exchange level.
+- **Short selling** — selling borrowed shares; allowed with delivery obligations; naked shorting banned.
+- **Buyback** (tender vs open-market route) · **rights issue** (existing shareholders get first dibs) · **bonus issue** (free shares, no cash — price adjusts) · **stock split** (face value cut — e.g. ₹10→₹1; different from bonus: split changes face value, bonus doesn't).
+  TRAP: bonus vs split — both increase share count, only a split changes face value.
+
+**Fund vehicles:**
+- **Mutual funds** — pooled money, NAV = (assets − liabilities)/units. Categories: equity, debt, hybrid, **ELSS** (tax-saving, 3-yr lock-in), index/ETF (passive).
+- **AIFs** — Category I (VC/social infra — gets incentives), II (PE/debt — plain vanilla), III (hedge-style, leverage allowed).
+- **REITs / InvITs** — listed trusts holding real estate / infrastructure assets; distribute rent/toll income. **SM REITs** (small & medium, <₹50 cr assets) added 2024.
+- **FPI vs FDI:** FPI = passive market money (typically <10% stake, hot money); FDI = strategic stake with control intent. FPIs register with SEBI via custodians.
+
+---
+
+## §3 — Market Infrastructure (the plumbing — real PYQs live here)
+
+- **Exchanges:**
+  - **BSE** — est. **1875**, Asia's oldest stock exchange. **Sensex** = 30 stocks, launched 1986, base year 1978-79 = 100.
+  - **NSE** — est. **1992**, trading from 1994. **Nifty 50** = 50 stocks, since 1996. Largest by volume.
+  - **MCX** — commodity derivatives (metals/energy). Also NCDEX (agri).
+  - Index method: **free-float market-cap weighted** — only tradable shares count.
+- **Depositories (hold shares demat):**
+  - **NSDL** — est. **1996**, promoted by NSE/IDBI/UTI.
+  - **CDSL** — est. **1999**, **promoted by BSE** ← a REAL asked PYQ.
+  - DPs (depository participants: banks/brokers) are your interface; the depository holds the actual records.
+- **Clearing corporations (guarantee the trade):** NCL (NSE), ICCL (BSE) — they become counterparty to both sides, so a default can't cascade. REMEMBER: *Exchange matches, depository stores, clearing corp guarantees.*
+- **Settlement:** **T+1** since Jan 2023 (India among the first globally); **T+0** optional beta rolling out (2024). Funds/shares settle next day.
+- **ISIN** — the 12-char ID for each security (IN + 10 chars). Demat/remat = to/from electronic form.
+- **Other terms that appear as definition MCQs:** market cap, free float, P/E ratio, dividend yield, margin, MTM, auction (when seller fails delivery), SME platforms (NSE Emerge, BSE SME), **GIFT City** IFSC exchanges (NSE IX, India INX).
+
+---
+
+## §4 — Recent-Trend Topics (SEBI loves current regs — re-verify in the monthly log near exam)
+
+- **T+0 settlement** — optional same-day settlement beta (top-500 scrips phased from 2024).
+- **F&O crackdown:** SEBI's study showed ~**89% of retail F&O traders lose money** → weekly expiries rationalized to ONE per exchange (Nifty weekly on NSE, Sensex on BSE), contract lot sizes raised (min ₹15 lakh), extra margins on expiry day.
+- **Finfluencer rules (2024):** SEBI-registered intermediaries can't take any association/referral from unregistered finfluencers.
+- **CSCRF** — Cyber Security & Cyber Resilience Framework for regulated entities (MOST relevant to IT stream — read its 5 goals: anticipate, withstand, contain, recover, evolve).
+- **Retail algo trading norms (2025):** algos via broker APIs need exchange-registered algorithms; no unregulated algo platforms.
+- **Jane Street (Jul 2025):** SEBI interim order — ~₹4,843 cr of alleged unlawful gains impounded; index/stock-options manipulation allegations. Know the name + the charge.
+- **Hindenburg–Adani (2023):** short-seller report → SC-monitored SEBI probe. Headline-level knowledge only.
+- **Social Stock Exchange (SSE)** — platform for NGOs/social enterprises to raise listed funds (within NSE/BSE).
+- **Delisting framework revamp (2024)** — fixed-price delisting option added alongside reverse book building.
+- **Mutual Fund Lite** framework for passive-only AMCs; BRSR/ESG disclosure requirements expanding.
+
+---
+
+## §5 — RBI & Economy Quick Facts
+
+- **RBI:** est. **1935** (RBI Act 1934), nationalized **1949**, HQ Mumbai. Governor appointed by Govt.
+- **MPC** = 6 members (3 RBI + 3 external Govt nominees), chaired by Governor (casting vote). Meets ~6×/yr.
+- **Inflation target:** **4% ± 2%** CPI — the number SEBI/RBI MCQs keep returning to.
+- **Rate corridor (learn the ORDER):** MSF/Bank rate (ceiling) > Repo > SDF > Reverse repo (floor).
+  - Repo = RBI lends to banks (the headline policy rate) · SDF = banks park money at RBI *without* collateral · MSF = emergency overnight borrowing *above* repo.
+  - **CRR** = cash banks must keep at RBI · **SLR** = liquid assets banks must hold (gold/g-secs).
+  - Policy effect chain: repo ↑ → loans dearer → demand ↓ → inflation ↓.
+- **Inflation metrics:** CPI (retail — the MPC target) vs WPI (wholesale). Core = CPI minus food & fuel.
+- **GDP:** base year 2011-12; released by NSO (MoSPI). Fiscal deficit = borrowings to bridge spend > income.
+- **Banking terms:** NPA (loan overdue 90 days), SARFAESI Act (asset recovery without court), PCA framework (weak-bank restrictions), priority-sector lending.
+- **NPCI** runs UPI/RuPay/IMPS/NACH. **CBDC (Digital Rupee)** = RBI's e₹, retail + wholesale pilots.
+- **FEMA 1999** (regulates forex — replaced draconian FERA 1973). Forex reserves held by RBI (~$600-700bn range — update monthly).
+- **Rating agencies registered with SEBI:** CRISIL, ICRA, CARE, India Ratings, Acuité, Infomerics — rating = creditworthiness opinion, regulated since 1999.
+
+---
+
+## Update log
+- Add dated bullets here weekly from SEBI press releases + financial news + the daily GA drip.
+`,"../../01_Phase1_Paper1/General_Awareness/GA_Checklist.md":`# GA — Topic Checklist & Monthly Log\r
+\r
+GA in SEBI ≈ banking GA: ~70% financial/current affairs + ~30% static GK.\r
+Coverage window: **last 5–6 months** before exam. Financial news >>> everything else.\r
+\r
+## Priority order (mark coverage %)\r
+\r
+### Tier 1 — SEBI-specific (most marks per minute)\r
+- [ ] SEBI chairman, board members, HQ, est. year, Act\r
+- [ ] Recent SEBI regulations/circulars (press releases — weekly skim)\r
+- [ ] SEBI enforcement actions & penalties (headline level)\r
+- [ ] New products/rules: T+1/T+0 settlement, F&O changes, IPO reforms, REIT/InvIT updates\r
+- [ ] Committees appointed by SEBI + their purpose\r
+- [ ] Cyber security framework for market entities (IT-stream relevant — has been asked)\r
+\r
+### Tier 2 — Financial system\r
+- [ ] RBI: governor/deputies, MPC decisions (repo, CRR, SLR), inflation numbers\r
+- [ ] Other regulators: IRDAI, PFRDA, CCI, NABARD, SIDBI — heads + role\r
+- [ ] Budget + Economic Survey: fiscal deficit, key schemes, allocations\r
+- [ ] NPCI: UPI milestones, new payment products\r
+- [ ] NSE/BSE news: indices, new listings, record highs/lows\r
+- [ ] NBFC/banking headlines, mergers, NPAs\r
+\r
+### Tier 3 — General current affairs\r
+- [ ] Appointments: govt heads, international orgs (IMF/WB/WTO)\r
+- [ ] Awards: national (Bharat Ratna, Padma), sports, science\r
+- [ ] Summits: G20, BRICS, COP — host + theme + outcome line\r
+- [ ] Govt schemes: launch year, ministry, target group, budget\r
+- [ ] Reports/rankings where India appears\r
+- [ ] Sports: major winners (cricket, Olympics/para, chess)\r
+- [ ] Books, obituaries (famous), days & themes (major ones)\r
+\r
+### Static GK (finite, finish once)\r
+- [ ] Capital markets basics — in \`Financial_Awareness/SEBI_Markets_Notes.md\`\r
+- [ ] National parks, dams, cities on rivers (India, banking-exam usuals)\r
+- [ ] Countries-capitals-currencies (major)\r
+- [ ] Headquarters of organizations (UN, IMF, WB, WTO, ADB, AIIB, NDB, BIS)\r
+- [ ] Census/demography basics, constitutional bodies list\r
+\r
+## Monthly compilation log (fill as you go)\r
+\r
+| Month | Key events noted | Revised? |\r
+|---|---|---|\r
+| Nov 2026 | | |\r
+| Dec 2026 | | |\r
+| Jan 2027 | | |\r
+| Feb 2027 (Budget!) | | |\r
+| Mar 2027 | | |\r
+| Apr 2027 | | |\r
+| May–Aug 2027 | rolling — most important window | |\r
+\r
+## Daily 20-min source stack\r
+1. Any banking GA PDF: AffairsCloud / GKToday / Adda247 daily\r
+2. SEBI press releases (sebi.gov.in → media) — 5-min skim, weekly\r
+3. Economic headlines only — skip politics/entertainment noise\r
+\r
+---\r
+\r
+## Sample Questions — the actual recall format SEBI uses\r
+\r
+GA isn't solved, it's recalled — but seeing the exact formats trains what to notice while reading news. These mirror real paper styles:\r
+\r
+**Ex 1 — SEBI structure.** "SEBI was given statutory powers in which year? (a) 1988 (b) 1992 (c) 1995 (d) 2000"\r
+**Ans: 1992** (established 1988, statutory 1992 — the two dates get swapped as distractors. This is THE most-asked SEBI fact.)\r
+\r
+**Ex 2 — regulator jurisdiction.** "Which entity regulates collective investment schemes in India?"\r
+**Ans: SEBI** — and the flip: insurance→IRDAI, banks→RBI, pension→PFRDA, telecom→TRAI. Regulator↔domain is a guaranteed 1–2 questions.\r
+\r
+**Ex 3 — market instrument.** "A company raising capital from public for the first time issues a/an ___."\r
+**Ans: IPO.** Variants: FPO (further offer), rights issue (existing shareholders), QIP (institutional), OFS (offer for sale).\r
+\r
+**Ex 4 — SEBI terminology.** "Green Shoe option in an IPO refers to ___."\r
+**Ans: over-allotment option** — lets underwriters sell extra shares to stabilize post-listing price.\r
+\r
+**Ex 5 — RBI/monetary.** "Repo rate is the rate at which ___."\r
+**Ans: RBI lends to commercial banks** (reverse repo = RBI borrows FROM banks). Repo↑ = tighter money; the direction question recurs.\r
+\r
+**Ex 6 — scheme in news.** "PM-JDY relates to ___." / "Stand-Up India targets ___."\r
+**Ans: financial inclusion (bank accounts) / loans to SC-ST & women entrepreneurs.** Budget + flagship schemes = 2–3 questions/paper.\r
+\r
+**Ex 7 — index/report.** "India's rank in the latest [Ease of Doing Business–style] report / which body publishes Financial Stability Report?"\r
+**Ans: know the publisher, not just the rank** — FSR = RBI (half-yearly). WEF=World Economic Forum, HDI=UNDP. Publisher is the safer bet.\r
+\r
+**Ex 8 — appointment.** "Who is the current SEBI Chairperson / RBI Governor / Finance Minister?"\r
+**Ans: the three names change — maintain in the monthly log.** Appointment questions always use options who held the post 1–2 terms back.\r
+\r
+**Ex 9 — static GK (the long tail).** "Headquarters of SEBI / BSE location / currency of Japan."\r
+**Ans: Mumbai / Mumbai / Yen.** HQ questions cluster around: SEBI Mumbai, RBI Mumbai, IRDAI Hyderabad, NABARD Mumbai.\r
+\r
+**Ex 10 — current-affairs-in-depth.** "Recent SEBI action: the 2024–25 rules on finfluencers / F&O curbs were aimed at ___."\r
+**Ans: protecting retail investors from unregistered advice / speculative derivative losses.** SEBI's own news IS the syllabus — its press releases are the highest-yield GA source for this exam.\r
+\r
+### How to use\r
+When you read daily affairs, mentally convert each item into one of these 10 formats ("who/which/year/HQ/purpose?"). That conversion is the whole GA skill — you're not reading news, you're collecting future MCQs.\r
+\r
+`,"../../01_Phase1_Paper1/General_Awareness/Monthly_Logs/August_2026.md":`# GA Log — August 2026
+
+> Backfilled from monthly banking-exam digests (AffairsMap/MintAffairs) + official SEBI/RBI/PIB sources. Same rule: one line per MCQ-able fact.
+
+## SEBI & Markets (Tier 1 — every SEBI circular/press release)
+- [x] **Aug 14:** SEBI modified regulatory framework for **Online Bond Platform Providers (OBPPs)** — ease of doing business measures
+- [x] **Aug 14:** SEBI standardized **Net Distributable Cash Flow (NDCF)** calculation framework for **InvITs** — uniform cash-distribution disclosure
+- [x] **Aug:** SEBI proposed overhaul of **Portfolio Managers Regulations 2020** via consultation (→ became PMS Regs 2026 in Sep)
+- [x] **Chairman's Statement (Aug bulletin):** Project **SUDARSAN** launched — SupTech tool to monitor unsolicited financial ads/finfluencers; Investor Survey found **62% of investors influenced by finfluencers**; **SEBI Check** + validated UPI handles for verifying registered intermediaries; first-of-its-kind **Google Play verified-app label** partnership for trading apps
+- [x] **IPO context:** SEBI extended IPO-approval validity expiring Apr–Sep → Sep 30 (West Asia war had frozen primary market) — triggered the Sep–Oct IPO rush
+
+## RBI / Monetary Policy (rates, reports, committees)
+- [x] **Aug 3–5, 62nd MPC:** repo held **5.25%** — 4th consecutive hold; stance **neutral**; SDF 5.00%, MSF & Bank Rate 5.50%; Gov. Sanjay Malhotra chaired
+- [x] **Aug 5 developmental policies → Aug 12 draft:** RBI (Interest Rates on Loans & Advances) Directions, 2026 — harmonized principles-based framework for ALL REs (banks + NBFCs + RRBs + co-op banks); comments by Sep 11
+- [x] **Upper Layer NBFCs (Scale-Based Regulation) FY27:** list expanded to **17** (from 15) — Tata Sons retained; REC, PFC, IRFC added
+- [x] **RBI delayed** loan-recovery-agent norms to **Jan 1, 2027** (3-month extension; agent certification + conduct rules)
+- [x] **Niyo Forex** got perpetual **AD Category-II** licence; Indel Money's Indel Remit approved for trade remittances up to ₹25 lakh
+
+## Schemes / Budget / Economy
+- [x] **Aug 6 Cabinet:** GOBARdhan National Circular Bioenergy Scheme — **₹23,731 cr** (FY27–FY36), Compressed Biogas push (launched Oct 1)
+- [x] **Cabinet:** National Offshore Exploration Scheme "**Samudra Manthan**" — **₹84,084 cr** till FY31, energy security
+- [x] **Cabinet (Jul, logged now):** PM Surya Sarovar Yojana — floating solar PV, **₹5,070 cr**
+- [x] **PM-VBRY** (PM Viksit Bharat Rojgar Yojana, launched Aug 2025): 72 lakh first-time workers formalized
+- [x] **PM-AJAY** (SC welfare): 47,328 villages selected nationwide (435 in Telangana)
+- [x] **Nasha Mukt Yuva for Viksit Bharat Sankalp Abhiyan** launched — anti-drug youth campaign, 1 crore+ youth, 28,000 locations
+- [x] **Aug 19:** CCEA approved 4 railway multi-tracking projects **₹9,450 cr**
+- [x] **Tamil Nadu:** first TVK-government budget — target **$1.5 trillion economy by 2031**, ~9% growth path; FM N. Marie Wilson
+
+## Appointments / Awards / Summits
+- [x] **Aug 1:** Varsha Ashok Aglawe — **54th DG, Geological Survey of India** — FIRST WOMAN to head GSI (founded 1851); succeeded Asit Saha
+- [x] **Aug 3:** Willie Walsh — **IndiGo CEO** (ex-IATA DG, ex-IAG/BA chief), succeeding Pieter Elbers
+- [x] **Aug 3:** Monisha Chakraborty — **RBI Executive Director** — heads Foreign Exchange Dept + Financial Markets Regulation Dept
+- [x] **Prasanta Mahapatra** — **Executive Director, SEBI**
+- [x] **Aug 5:** Cabinet Secy **T.V. Somanathan** & Home Secy **Govind Mohan** — 1-year extensions
+- [x] **Aug 3:** Vishwesh Negi — Ambassador to Iran
+- [x] **Aug:** Standard Chartered — IFSCA approval to distribute capital-market products from **GIFT City**
+
+## Sports / Books / Obituaries (the long tail — 5 min max)
+- [ ] *(fill from weekly GA compilations)*
+
+## Reports / Indices / Rankings (note the PUBLISHER — that's what's asked)
+- [x] **SEBI Investor Survey (Aug):** 62% of investors influenced by finfluencers — publisher SEBI
+
+## Static GK spotted while reading
+- [x] GSI HQ: Kolkata (Min. of Mines); founded 1851
+- [x] AD Cat-I = banks (full forex); AD Cat-II = FFMCs/money changers (limited: trade + family remittances)
+- [x] SEBI Chairman: Tuhin Kanta Pandey (since Mar 2025 — verify still current on sebi.gov.in)
+
+---
+**Weekly recall check:** cover this file, write 10 facts from memory, mark misses → Error_Log
+`,"../../01_Phase1_Paper1/General_Awareness/Monthly_Logs/December_2026.md":`﻿# GA Log — December 2026\r
+\r
+> Fill daily (10-15 min). One line per item — the fact, not the story. Convert each into an MCQ mentally: "who/which/year/HQ/purpose?"\r
+> Sources: PIB, SEBI press releases (highest yield — SEBI's own news IS the syllabus), RBI notifications, one daily GA compilation.\r
+\r
+## SEBI & Markets (Tier 1 — every SEBI circular/press release)\r
+- [ ] \r
+\r
+## RBI / Monetary Policy (rates, reports, committees)\r
+- [ ] \r
+\r
+## Schemes / Budget / Economy\r
+- [ ] \r
+\r
+## Appointments / Awards / Summits\r
+- [ ] \r
+\r
+## Sports / Books / Obituaries (the long tail — 5 min max)\r
+- [ ] \r
+\r
+## Reports / Indices / Rankings (note the PUBLISHER — that's what's asked)\r
+- [ ] \r
+\r
+## Static GK spotted while reading\r
+- [ ] \r
+\r
+---\r
+**Weekly recall check (every Sunday):** cover this file, write 10 facts from memory, mark misses →\r
+`,"../../01_Phase1_Paper1/General_Awareness/Monthly_Logs/November_2026.md":`﻿# GA Log — November 2026\r
+\r
+> Fill daily (10-15 min). One line per item — the fact, not the story. Convert each into an MCQ mentally: "who/which/year/HQ/purpose?"\r
+> Sources: PIB, SEBI press releases (highest yield — SEBI's own news IS the syllabus), RBI notifications, one daily GA compilation.\r
+> **Daily update:** ask Devin "update GA" — fresh items are fetched and appended under the right section with date tags.\r
+\r
+## SEBI & Markets (Tier 1 — every SEBI circular/press release)\r
+- [x] **Nov 7:** SEBI (Settlement of Administrative and Civil Proceedings) Regulations, 2026 in force — notified Oct 8; settlement possible at ANY stage; online application portal + settlement calculator + helpdesk launched; replaces 2018 framework\r
+- [x] **Nov 11:** SEBI circular — intermediaries must update KYC/CDD systems for FATCA & CRS reporting under new Income-tax Act 2025 + IT Rules 2026 (AEOI framework)\r
+- [x] **Nov 5:** SEBI revised limits for underlying-exposure requirement in currency derivatives contracts\r
+- [x] **Oct 28:** Jio Platforms listed — India's LARGEST-ever IPO (₹30,188 cr); issue ₹1,119 → listed ₹1,358 (+21%); subscribed 22×; bids ₹4.9 lakh cr\r
+- [x] **Sep–Oct:** 46 mainboard IPOs raised ~₹85,000 cr — record; NSE's own IPO was ₹22,563 cr\r
+- [x] **Nov 11 close:** Sensex 81,879 (+773), Nifty 25,255 (+210); Nifty +8–9% since Nov 1 on 7-session rally; heavy FII buying, IPO pipeline paused\r
+- [x] **Context:** SEBI had extended IPO-approval validity (Apr–Sep expiries → Sep 30) after West Asia war froze primary market\r
+\r
+## RBI / Monetary Policy (rates, reports, committees)\r
+- [x] **Oct 7 MPC (63rd, Gov. Sanjay Malhotra):** repo +25 bps → **5.50%** — FIRST HIKE since Feb 2023; SDF 5.25%, MSF & Bank Rate 5.75%, fixed reverse repo 3.35%; stance → **calibrated tightening**; CRR 3.00% (daily maintenance raised 90%→99%), SLR 18%\r
+- [x] **MPC projections:** FY27 GDP 6.7%, CPI 5.2% (Q3 6.0%, Q4 5.7%); next MPC **Dec 2–4** — watch for revision (Nov reports cite RBI FY27 GDP up to 7.1%)\r
+- [x] **Oct CPI (expected):** ~6% — 2-year high, near RBI's upper band (Sept was 5.54%); food inflation ~9%\r
+- [x] **Q2 FY27 GDP:** SBI Research est. 7.8% vs RBI 7.2% — official data due end-Nov\r
+- [x] **Bank credit:** +19.4% YoY, broad money +16.5% — fastest since 2012-13 (inflation concern flagged)\r
+- [x] **MCLR hikes post-hike:** SBI +15 bps (Oct 15), PNB +10 bps (Nov 1), HDFC +5–15 bps (Nov 7), Canara/BoB +5–20 bps (Nov 12)\r
+- [x] **Rupee:** ~93.7–93.9/USD — record-weak zone (Nov 11)\r
+\r
+## Schemes / Budget / Economy\r
+- [x] **Nov 11 Cabinet:** Yuge Yugeen Bharat Museum ₹3,230 cr — Min. of Culture, adaptive reuse of North & South Block (Raisina Hill)\r
+- [x] **Nov 11 Cabinet:** Noida–Greater Noida Metro Aqua Line ext. ₹2,390 cr — 8.5 km elevated, 5 stations, 4 yrs\r
+- [x] **Nov 11 Cabinet:** NBS fertilizer subsidy Rabi 2026-27 ₹62,370 cr (+64% vs last Rabi)\r
+- [x] **Nov 11 Cabinet:** Credit Guarantee Fund for Micro Units (CGFMU) extended to Mar 2031 — ₹5,000 cr corpus → ₹12.6 lakh cr MUDRA loans\r
+- [x] **Nov 11 Cabinet:** Stand-Up India extended to Mar 2031 — ₹4,111 cr corpus, 2.5 lakh new beneficiaries (women + SC/ST — NOTE: ST-relevant)\r
+- [x] **Nov 4 Cabinet:** CAPEX support scheme for critical minerals ₹2,814 cr — 30% cap-subsidy; 2 lithium + 2 nickel processing plants\r
+- [x] **Nov 3:** Swachh Bharat Mission (Gramin) Phase-II extended to Mar 2028 (~₹7,000 cr) — ODF Plus villages target\r
+\r
+## Appointments / Awards / Summits\r
+- [x] **Nov 2:** Gopal Vittal (Bharti Airtel EVP) re-elected GSMA Chair for 2027–28\r
+- [x] **Nov 1:** Dinesh V. Ganvir — 55th DG, Geological Survey of India (Min. of Mines)\r
+- [x] **Nov 3:** Dr. Venkata Ramana Akkaraju — VC, Indian Maritime University, Chennai\r
+- [x] **Nov 3:** Balaji Nuthalapadi — interim CEO, Equitas Small Finance Bank (pending RBI approval)\r
+- [x] **Static+current:** RBI Governor Sanjay Malhotra (chair of MPC); SEBI Chairman — verify current holder on sebi.gov.in\r
+\r
+## Sports / Books / Obituaries (the long tail — 5 min max)\r
+- [ ] *(fill as encountered in daily GA compilation)*\r
+\r
+## Reports / Indices / Rankings (note the PUBLISHER — that's what's asked)\r
+- [x] **Moody's:** India FY27 GDP forecast raised to **7%** (from 6.5%); also 7% for CY2026 & CY2027 — publisher Moody's Ratings\r
+- [x] **OECD:** FY27 GDP +80 bps → **7.1%**; World Bank 7.1%; ADB/S&P/Fitch ~7% — India's the fastest major economy\r
+- [x] **SBI Research:** Q2 FY27 GDP est. 7.8% (54 high-frequency indicators model)\r
+- [x] **Moody's caution:** deficient SW monsoon + strengthening El Niño → farm output & rural demand risk\r
+\r
+## Static GK spotted while reading\r
+- [x] MPC = 6 members (3 RBI + 3 external), Governor chairs; repo decisions by majority\r
+- [x] LAF corridor: SDF (floor) — repo — MSF (ceiling); SDF replaced fixed reverse repo as floor since Apr 2022\r
+- [x] RBI inflation target: 4% ± 2% band (CPI)\r
+\r
+---\r
+**Weekly recall check (every Sunday):** cover this file, write 10 facts from memory, mark misses → Error_Log\r
+`,"../../01_Phase1_Paper1/General_Awareness/Monthly_Logs/October_2026.md":`# GA Log — October 2026
+
+> Backfilled from monthly banking-exam digests (Blackbook/ExamVeda/AffairsMap) + official SEBI/RBI/PIB sources. One line per MCQ-able fact.
+
+## SEBI & Markets (Tier 1 — every SEBI circular/press release)
+- [x] **Oct 6–8:** **Settlement of Administrative & Civil Proceedings Regulations, 2026 NOTIFIED** — the Sep 24 board decision formalized; in force **Nov 7**; fast-track two types: violation-based + monetary-threshold (≤₹10 lakh); RRT = Remedial & Regulatory Terms (replaces "non-monetary terms")
+- [x] **Oct 7:** **Credit Risk-o-Meter** introduced — additional disclosure mechanism for debt securities
+- [x] **Oct 7:** Exemption from mandatory **merchant banker** appointment for privately-placed debt by certain listed issuers
+- [x] **Oct 15:** **Closing Auction Session (CAS) revised** — new window **3:30–3:40 pm**, 3 phases; most changes effective **Dec 7, 2026**; unexecuted limit/iceberg order transfers from **Feb 8, 2027**; CAS itself introduced Jan 2026; consultation drew 20,000+ comments
+- [x] **Oct 22:** **Margin waiver** on subsequent buy/sell after **Early Pay-In (EPI)** in cash segment
+- [x] **Oct 23:** Call-record maintenance rules relaxed for **Research Analysts'** institutional clients
+- [x] **Oct 30:** **FPI KYC-review periodicity rationalized**; digital-accessibility compliance timeline extended
+- [x] **Oct 27:** Debenture Trustees get more time for outside-SEBI activity compliance
+- [x] **Oct 28:** **Jio Platforms listed** — see November log (listed Oct 28; ₹30,188 cr = largest Indian IPO)
+
+## RBI / Monetary Policy (rates, reports, committees)
+- [x] **Oct 5–7, 63rd MPC:** repo **+25 bps → 5.50%** — first hike since Feb 2023; SDF 5.25%, MSF & Bank Rate 5.75%; stance → **calibrated tightening**; CRR daily-maintenance 90%→**99%**; FY27 CPI 5.2%, GDP 6.7%; two external members dissented (wanted neutral stance)
+- [x] **RBI approved Anup Kumar Saha** as **Kotak Mahindra Bank MD & CEO** — 3 yrs from **Jan 1, 2027**, succeeding Ashok Vaswani (bank filed Oct 1)
+
+## Schemes / Budget / Economy
+- [x] **Oct 1:** **GOBARdhan** Central Sector Scheme LAUNCHED, New Delhi (approved Aug 6, ₹23,731 cr — Compressed Biogas)
+- [x] **Oct 2:** **People's Plan Campaign 2026-27** began — theme "**Sabki Yojana, Sabka Vikas**"; GPDPs for FY28
+- [x] **Oct 28 Cabinet:** **PM Viksit Gram Swaraj Yojana (PM VGSY)** — ₹7,395.55 cr (2026-31), panchayats/local bodies
+- [x] **Oct 28 Cabinet:** **Container Manufacturing Promotion Scheme** — ₹10,000 cr till FY 2039-40
+- [x] **Oct 28 Cabinet:** **Khelo India Sports Goods Manufacturing Scheme** — ₹1,856.67 cr till FY34
+- [x] **Oct 15 Cabinet:** National Social Assistance Programme (**NSAP**) continued 2026-31; railway PLB ₹2,009.61 cr
+- [x] **TN:** "**Vetri Payanam Thittam**" (ex-Vidiyal Payanam) expanded — free bus travel for women & transgender persons
+- [x] **Oct 22–Nov 30:** **Khet Bachao Abhiyan** ran nationwide (Soil Health Card-based fertilizer use)
+
+## Appointments / Awards / Summits
+- [x] **Oct 12:** President Murmu appointed **6 Governors** — Sudha Yadav (Karnataka), Braj Mohan Ram (Odisha), Dhal Singh Bisen (Uttarakhand), Dushyant Gautam (Sikkim), Mathur (Keralam), Arlekar (Tamil Nadu)
+- [x] **Oct 16:** **FSIB reconstituted** — S.C.L. Das (ex-MSME Secy) Chairperson, 3 yrs — picks PSB/FI heads
+- [x] **Oct 6:** 3 new SC judges sworn in (strength 37/38); **CJI: Justice Surya Kant**
+- [x] **Oct 10:** Prakash Rajpurohit — Deputy Election Commissioner (till Apr 2030)
+- [x] **Oct 1:** Bimal N. Patel sworn in **ITLOS judge** (Hamburg, 9 yrs, succeeding Neeru Chadha); Maurice Kamga = ITLOS President
+- [x] **Oct 16:** Sudhakar Dalela — Ambassador to Nepal
+- [x] **Oct 13:** L. Murugan resigned as MoS I&B & Rajya Sabha MP — to work for BJP in Tamil Nadu
+- [x] **Oct 11:** Achyuta Samanta (KIIT-KISS) — first President, Indian UniSport Federation
+- [x] **Oct:** INCOIS Director T.M. Balakrishnan Nair — Chair, UNESCO-IOC Indian Ocean body IOCINDIO
+- [x] **Oct 6:** **Smriti Mandhana** — India women's cricket captain (succeeds Harmanpreet Kaur); UNICEF Celebrity Advocate Oct 11
+- [x] **Oct:** Rajeshwari Kumari (trap shooter) — Olympic Council of Asia Athletes' Commission
+
+## Sports / Books / Obituaries (the long tail — 5 min max)
+- [x] Smriti Mandhana — women's cricket captain (above); Rajeshwari Kumari — OCA Athletes' Commission
+
+## Reports / Indices / Rankings (note the PUBLISHER — that's what's asked)
+- [x] *(Major rating/forecast items logged under Sep–Nov — JCR A− in Sep, Moody's 7% in Nov)*
+
+## Static GK spotted while reading
+- [x] **Kerala officially renamed "Keralam"** (2026) — seen in governor appointment lists
+- [x] FSIB = Financial Services Institutions Bureau — recommends chiefs of PSU banks/insurers/FIs
+- [x] ITLOS = International Tribunal for the Law of the Sea, Hamburg, Germany
+- [x] CAS = Closing Auction Session — determines closing prices via call auction (like pre-open)
+
+---
+**Weekly recall check:** cover this file, write 10 facts from memory, mark misses → Error_Log
+`,"../../01_Phase1_Paper1/General_Awareness/Monthly_Logs/September_2026.md":`# GA Log — September 2026
+
+> Backfilled from monthly banking-exam digests + official SEBI/RBI/PIB sources. One line per MCQ-able fact.
+
+## SEBI & Markets (Tier 1 — every SEBI circular/press release)
+- [x] **Sep 24 — SEBI Board Meeting #3 of 2026** (Mar 23, Jun 19 earlier) — 12 agenda items approved; the month's biggest GA event:
+- [x] **Sep 24:** Approved NEW **Settlement Proceedings Regulations** replacing 2018 — formula: **Settlement Amount = Base × (S + R + G + A − M) + Legal Costs** (Stage, Regulatory action, Gravity, Aggravating, Mitigating); wrongful gains disgorged SEPARATELY (no double counting); settlement notice possible BEFORE SCN (60 days); post-SCN window raised 60→**90 days**; fast-track for amounts ≤ **₹10 lakh**; one-time 90-day window for old rejected applicants (+20%)
+- [x] **Sep 24:** Approved **SEBI (Portfolio Managers) Regulations, 2026** replacing 2020 regs — PMS can invest in IPOs/primary debt; discretionary PMS up to **10% AUM in unlisted investment-grade NCDs**
+- [x] **Sep 24:** FPIs allowed in **Exchange Traded Commodity Derivatives (ETCDs)**
+- [x] **Sep 24:** **Depository Receipts on units of REITs & InvITs** approved (framework issued Nov 2)
+- [x] **Sep 24:** Expanded scope of **Vault Managers Regulations, 2021**; Common Advertisement Code for SEBI-regulated entities; CAPSM Regs 2007 amendment; Accredited Investor framework review; AIF investor protection extended to all AIF forms
+- [x] **Sep 12:** SEBI consultation on **Closing Auction Session** changes — drew 20,000+ comments (revised circular came Oct 15)
+
+## RBI / Monetary Policy (rates, reports, committees)
+- [x] **No MPC in Sep** (meets Aug, Oct, Dec, Feb, Apr, Jun) — repo stayed 5.25% through the month
+- [x] **RBI WMA Advisory Committee report (Chair: I.S.N. Prasad):** recommended states' WMA limit **₹61,008 cr → ₹67,839 cr** (+11.2%); annual revision capped at 4% of revenue receipts; FY26 usage: 19 states SDF, 11 WMA, 10 OD
+- [x] **Q1 FY27 BoP:** CAD **$4.2 bn (0.5% of GDP)** vs $3.4 bn (0.4%) a year ago; capital account net OUTFLOW $5.5 bn; FPI outflow $9.6 bn — first capital-outflow quarter in a while
+
+## Schemes / Budget / Economy
+- [x] **OECD Interim Outlook (Sep):** India FY27 GDP forecast raised **+80 bps → 7.1%** (from 6.3%); FY28 ~6.5%
+- [x] **JCR (Japan Credit Rating Agency):** upgraded India sovereign rating **BBB+ → A−** — FIRST upgrade in 35 years, stable outlook
+- [x] **Semicon 2.0** (approved Jul 15, PIB push in Sep): **₹1,27,500 cr** outlay — 6 pillars: R&D, chip design, machines/materials, more fabs, talent, ATMP/OSAT
+- [x] **Tamil Nadu CM C. Joseph Vijay (TVK govt):** announced world-class **Olympic City in Chennai**
+- [x] **Khet Bachao Abhiyan** announced (National Agriculture Conference–Rabi 2026): nationwide Oct 22–Nov 30, Soil Health Card-based fertilizer use
+- [x] **Corporate:** Vodafone Idea relaunched brand identity — **Shah Rukh Khan brand ambassador**; shares hit 25-month high
+
+## Appointments / Awards / Summits
+- [x] *(Sep items covered under monthly appointments — check Oct/Nov files for cross-month items like GSI DG change Nov 1)*
+
+## Sports / Books / Obituaries (the long tail — 5 min max)
+- [ ] *(fill from weekly GA compilations)*
+
+## Reports / Indices / Rankings (note the PUBLISHER — that's what's asked)
+- [x] **JCR** — India sovereign A− (35-year first upgrade)
+- [x] **OECD Economic Outlook Interim** — India FY27 GDP 7.1%
+- [x] **PRS Monthly Policy Review** — Q1 FY27 CAD 0.5% of GDP
+
+## Static GK spotted while reading
+- [x] SEBI board meets ~quarterly; 2026 meetings: Mar 23, Jun 19, Sep 24
+- [x] Sovereign rating scale reminder: A− > BBB+ (India was lowest-investment-grade BBB− at S&P/Fitch/Moody's; JCR now higher)
+- [x] WMA = RBI's short-term lending to states/centre for cash-flow mismatches; SDF & OD are the other two legs
+- [x] TVK = Tamilaga Vettri Kazhagam — Vijay's party; TN changed government in 2026 elections
+
+---
+**Weekly recall check:** cover this file, write 10 facts from memory, mark misses → Error_Log
+`,"../../01_Phase1_Paper1/General_Awareness/Monthly_Logs/_TEMPLATE.md":`﻿# GA Log — MONTH YEAR
+
+> Fill daily (10-15 min). One line per item — the fact, not the story. Convert each into an MCQ mentally: "who/which/year/HQ/purpose?"
+> Sources: PIB, SEBI press releases (highest yield — SEBI's own news IS the syllabus), RBI notifications, one daily GA compilation.
+
+## SEBI & Markets (Tier 1 — every SEBI circular/press release)
+- [ ] 
+
+## RBI / Monetary Policy (rates, reports, committees)
+- [ ] 
+
+## Schemes / Budget / Economy
+- [ ] 
+
+## Appointments / Awards / Summits
+- [ ] 
+
+## Sports / Books / Obituaries (the long tail — 5 min max)
+- [ ] 
+
+## Reports / Indices / Rankings (note the PUBLISHER — that's what's asked)
+- [ ] 
+
+## Static GK spotted while reading
+- [ ] 
+
+---
+**Weekly recall check (every Sunday):** cover this file, write 10 facts from memory, mark misses →\r
+`,"../../01_Phase1_Paper1/Quantitative_Aptitude/Formula_Sheet.md":`# Quantitative Aptitude — Learn the Tricks (Understand + Remember version)\r
+\r
+> Phase 1 Paper 1 Quant = **20 questions**. Good attempt: 15–16.\r
+> **Real exam split (2024 + Jan-2026):** DI ~10 Qs (line graph + caselet + table) · Wrong-number series 4–5 · Approximation 5 · Quadratic-compare 0–4 · Arithmetic 5–6.\r
+>\r
+> **Every trick below: WHY it works → REMEMBER hook → worked examples covering each pattern the exam actually uses.**\r
+\r
+\r
+---\r
+## DAILY MAP — which TYPE section for which plan day\r
+Open the listed TYPE(s) that day; the day's Reasoning single + puzzle type are in \`Reasoning/Tricks.md\` DAILY MAP.\r
+\r
+- **D1** TYPE 1 + TYPE 2 · **D4** TYPE 3 + TYPE 1 · **D6** TYPE 2 + TYPE 4 (mini-DI)\r
+- **D8** TYPE 1 + TYPE 4 · **D11** TYPE 2 + TYPE 3 · **D13** TYPE 1 + TYPE 4\r
+- **D15** TYPE 1 + TYPE 4 · **D18** TYPE 2 + TYPE 3 · **D20** TYPE 1 + TYPE 4\r
+- **D22** TYPE 2 + TYPE 1 · **D25** TYPE 5 (P&L + SI/CI) · **D27** TYPE 5 + TYPE 4\r
+- **D29** TYPE 2 + TYPE 1 · **D32** TYPE 5 (T&W + TSD) · **D34** TYPE 1 + TYPE 4\r
+- **D36** TYPE 2 + TYPE 1 · **D39** TYPE 5 (Ages + Mixture) · **D41** TYPE 1 + TYPE 4\r
+- **D43** TYPE 2 + TYPE 3 · **D46** TYPE 1 + TYPE 4 · **D48** TYPE 2 + TYPE 3\r
+- Arithmetic rotating topic on non-arithmetic days: keep the TYPE 5 formula card warm via the first 10 min of the rotation block (rewrite from memory).\r
+\r
+# PART 0 — SPEED FOUNDATION (memorise until reflex)\r
+\r
+## The fraction table — learn it as FAMILIES, not 20 numbers\r
+- WHY: Every fraction in a family is half of the one before it. Memorise the parent's % and halve your way down.\r
+- **1/3 family:** 1/3 = 33.33% → 1/6 = 16.66% (half) → 1/12 = 8.33% (half) → 1/24 = 4.17%\r
+- **1/4 family:** 1/4 = 25% → 1/8 = 12.5% → 1/16 = 6.25%\r
+- **1/5 family:** 1/5 = 20% → 1/10 = 10% → 1/20 = 5%\r
+- **1/7 family:** 1/7 = 14.28% → 1/14 = 7.14% (→1/21 ≈ 4.76%)\r
+- **1/9 family:** 1/9 = 11.11% → 1/11 = 9.09% (close cousin — remember "9 gives 11", "11 gives 9")\r
+- Remaining singles: 1/13 = 7.69% · 1/15 = 6.66% · 1/17 = 5.88% · 1/19 = 5.26% · 1/25 = 4%\r
+- REMEMBER: **"Halve the family, halve the percent."** Only ~6 parents to memorise.\r
+- USAGE: 8.33% of 240 = 240÷12 = **20**. Any ugly % → nearest fraction → single division.\r
+\r
+## Squares/cubes — the only numbers worth memorising\r
+- Squares 1–30, cubes 1–15. Drill daily until they're reflex, like tables.\r
+- Squaring near-100: 97² — WHY: (100−3)² = 100² − 2·100·3 + 3². In practice: **97 is 3 below 100 → subtract 3 → 94, then square the 3 → 09 → 9409.** (103² → add 3 → 106, +09 → 10609.)\r
+- Numbers ending in 5: 75² = 7×8=56, stick 25 → **5625**. WHY: (10a+5)² = 100a(a+1)+25 — the "25" is free, just do a×(a+1).\r
+- REMEMBER: **"5 at the end → multiply the front by itself-plus-one, glue a 25."**\r
+- Cube-root reverse: last digit of the answer ↔ last digit of the cube (1↔1, 8↔2, 2↔8, 7↔3, 3↔7, 4↔4, 5↔5, 6↔6, 9↔9, 0↔0). WHY: each digit cubes to a unique last digit — the mapping is a lookup, not a computation.\r
+\r
+## Fast multiply — each has one idea behind it\r
+- **×5:** 5 is half of 10 → ×10 then ÷2. 48×5 = 480/2 = **240**. REMEMBER: *"add a zero, cut in half."*\r
+- **×25:** 25 is a quarter of 100 → ×100 then ÷4. 36×25 = 3600/4 = **900**. REMEMBER: *"two zeros, quarter it."*\r
+- **×125:** 125 is an eighth of 1000 → ×1000 then ÷8. 64×125 = 64000/8 = **8000**.\r
+- **×11:** WHY it works — 11 = 10+1, so a×11 = a×10 + a → digits sandwich their sum. 43×11 = 4 | (4+3) | 3 = **473**. Middle ≥10 carries: 79×11 = 7|16|9 = **869**.\r
+- **×99/×999:** WHY — 99 = 100−1 → overpay by 100 then refund the number. 47×99 = 4700−47 = **4653**.\r
+- **Same-tens pair (units sum to 10):** 53×57 → tens 5, units 3+7=10 → front 5×6=30, back 3×7=21 → **3021**. WHY: (50+3)(50+7) = 50·50 + 50·(3+7) + 21 = 50·60+21. REMEMBER: *"front jumps to next ten, backs multiply."*\r
+\r
+## % change — the two traps SEBI loves\r
+- **Successive a% then b%** → net = a + b + ab/100. WHY: the second % acts on the NEW bigger/smaller amount, not the original — the ab/100 term is that overlap.\r
+  - 20%↑ then 30%↑ → 20+30+6 = **56%** (not 50%).\r
+- **+a% then −a% always LOSES** = −a²/100. WHY: the discount applies to the inflated amount, so you fall below start. +20%→−20% = −4%. REMEMBER: *"Up then down never lands back home."*\r
+- **"A is x% MORE than B" → B is x/(100+x)% LESS than A.** WHY: the base flipped — same gap measured against a bigger number. A is 25% more → B is 25/125 = **20%** less. REMEMBER: *"Percentages are relative to WHOSE size you're measuring."* (Exam trap of the decade.)\r
+\r
+---\r
+\r
+# PART 1 — THE QUESTION TYPES (format + patterns + worked examples)\r
+\r
+## TYPE 1 — Approximation (5 Qs — free marks, bank all of them)\r
+**Format:** \`89.9% of 460 + 13.2 × 8.9 ≈ ?\` — options far apart on purpose.\r
+**WHY the trick works:** the paper WANTS you to round — spaced-out options mean precision is wasted effort.\r
+**Patterns asked:** (a) % of a number + product, (b) ÷ with decimals, (c) √ or cube inside, (d) chained +−×.\r
+**Method:** round each number to a friendly cousin (table-fraction, perfect square, multiple of 5) → compute → pick closest.\r
+\r
+**WORKED EXAMPLES:**\r
+1. \`15.9% of 299.8 + √168.7 × 2.9\` ≈ 16% of 300 + 13×3 = 48+39 = **87** → √168.7 ≈ √169 = 13. *Rule: park roots at nearest perfect square first.*\r
+2. \`449.8 ÷ 14.95 + 12.1 × 7.9\` ≈ 450÷15 + 12×8 = 30+96 = **126**. *Rule: division rounds BOTH sides together — 450÷15 is clean.*\r
+3. \`79.9% of 599.5 − 24.9% of 239.8\` ≈ 80% of 600 − 25% of 240 = 480−60 = **420**. *Rule: each % maps to its fraction family (80%=4/5, 25%=1/4).*\r
+4. \`(17.9)² + (12.1)² − 219.8\` ≈ 18² + 12² − 220 = 324+144−220 = **248**. *Rule: squares round to nearest integer you know cold.*\r
+\r
+**Cap:** 35 sec/question — highest marks-per-second in the section.\r
+\r
+## TYPE 2 — Wrong Number Series (4–5 Qs every year)\r
+**Format:** one term breaks the pattern — find it.\r
+**The hunt order — check patterns in this sequence (covers ~95%):**\r
+1. **Gaps:** differences constant or growing by fixed steps (most common).\r
+2. **×k:** each term ≈ k× previous (×2, ×3, ×1.5).\r
+3. **×k+c:** ×2+1, ×2+2, ×2+3… — SEBI's favourite.\r
+4. **Squares/cubes ± k:** n²+1, n³−2.\r
+5. **Sum of previous:** each = sum of last two (Fibonacci-type).\r
+6. **Two interleaved series:** odd positions one rule, even another.\r
+\r
+**WHY this order:** patterns ranked by frequency in real papers — checking in this order finds the rule fastest on average.\r
+\r
+**WORKED EXAMPLES — one per pattern:**\r
+1. **Gaps:** \`7, 12, 22, 38, 57, 82\` → gaps 5,10,**16**,20,25 — expected 15 → **38 is wrong** (should be 37). *Rule: write the gaps; one wrong term corrupts TWO gaps — the term between the two bad gaps is the culprit.*\r
+2. **×k:** \`5, 15, 45, 135, 415, 1215\` → all ×3; 135×3 = 405 ≠ 415 → **415 wrong**.\r
+3. **×k+c:** \`3, 8, 18, 38, 78, 160\` → ×2+2 each; 78×2+2 = 158 ≠ 160 → **160 wrong**. *Rule: SEBI's favourite — check this right after gaps.*\r
+4. **Squares ±k:** \`5, 10, 17, 26, 37, 49\` → n²+1 (2²+1=5 … 7²+1=50) → **49 wrong** (should be 50). *Spot: terms hug famous squares.*\r
+5. **Fibonacci:** \`4, 6, 10, 16, 26, 44\` → each = sum of previous two; 16+26 = 42 ≠ 44 → **44 wrong**.\r
+6. **Interleaved:** \`2, 5, 4, 10, 6, 15, 10, 20\` → odd positions ×2 (2,4,6→8?) — actually odd: 2,4,6,10 should be 8 → **10 wrong**. *Rule: if no single rule fits, split odd/even positions.*\r
+\r
+**REMEMBER: "Gaps first, multiply second, square third."** If none works, interleave or second-difference.\r
+\r
+## TYPE 3 — Quadratic Compare (0–4 Qs)\r
+**Format:** \`I. x²−7x+12=0   II. y²−9y+20=0\` → compare x and y.\r
+**WHY the shortcut works:** in \`x² − Sx + P\`, roots ADD to S, MULTIPLY to P — factoring is just un-wrapping that pair.\r
+**Sign decoder (learn as a poem):**\r
+- \`−Sx +P\` → **both roots positive** ("minus middle, positive pair")\r
+- \`+Sx +P\` → **both roots negative**\r
+- \`±Sx −P\` → **one + one −** (bigger root takes the middle sign)\r
+\r
+**WORKED EXAMPLES — all four answer outcomes:**\r
+1. **x < y:** I: x²−7x+12=0 → 3,4. II: y²−9y+20=0 → 4,5 → every x ≤ y, and x=4=y → **x ≤ y**. *Trap: equal counts — it's ≤, not <.*\r
+2. **x > y:** I: x²−11x+30=0 → 5,6. II: y²−5y+6=0 → 2,3 → **x > y**.\r
+3. **No relation (CND):** I: x²−9x+18=0 → 3,6. II: y²−9y+20=0 → 4,5 → y sits INSIDE x's range → **CND**. *Rule: overlapping ranges = cannot determine, always.*\r
+4. **Sign trick instant-kill:** I: x²+8x+15=0 → both negative (−3,−5). II: y²−8y+15=0 → both positive (3,5) → **x < y without factoring fully**. *Rule: all-negative vs all-positive answers itself.*\r
+\r
+**Cap:** 45 sec. Daily drill: 10 factor-pairs ("sum 7, product 12 → 3,4").\r
+\r
+## TYPE 4 — Data Interpretation (~10 Qs = HALF the section)\r
+**Formats actually asked:** (a) line graph (two companies over years — most frequent), (b) caselet (paragraph → YOU build the table), (c) table, (d) pie/bar occasionally.\r
+**Universal method:**\r
+1. **Units first** — lakh vs thousand, % vs absolute, per-month vs cumulative. Most marks die here.\r
+2. Read questions → they tell you which 4–5 numbers matter; ignore the rest.\r
+3. Any % → fraction table. "X exceeded Y by what %" = (X−Y)/**Y** ×100 — the classic trap is dividing by X. REMEMBER: **"Compare against what it was, not what it became."**\r
+4. Ratios → cancel before multiplying.\r
+5. Caselet → write the mini-table while reading, never in your head.\r
+\r
+**WORKED EXAMPLES — one per sub-format:**\r
+\r
+**Ex 1 — Table Q (the "which base" trap):**\r
+Table: Company A sold 840 units, B sold 1050, C sold 630. *Q: A sold what % less than B?*\r
+Base = B (the thing after "than"): (1050−840)/1050 = 210/1050 = 1/5 = **20%**. *Trap: dividing by A gives 25% — the wrong answer sitting in the options. Identify the base BEFORE computing.*\r
+\r
+**Ex 2 — Line graph (% increase YoY):**\r
+Sales: 2023: 420, 2024: 504, 2025: 630. *Q: biggest % jump year?*\r
+2024: 84/420 = 20%. 2025: 126/504 = 25% (=1/4 — fraction table!). **2025**. *Rule: don't compute decimals — 84/420 cancels to 1/5 instantly.*\r
+\r
+**Ex 3 — Caselet (the marks-eater — build the table):**\r
+*"A school has 1200 students. 60% are boys. 40% of boys play cricket; 30% of girls play cricket; rest play chess."*\r
+Build: Boys 720 (cricket 288, chess 432) · Girls 480 (cricket 144, chess 336).\r
+Now ANY question = lookup: total cricketers 432, chess 768, boys-in-chess as % of girls-in-cricket = 432/144 = **300%**. *Rule: caselet = 60 sec building the table, then every question is free.*\r
+\r
+**Ex 4 — Pie chart (% of total):**\r
+Expenses pie: Rent 25%, Food 30%, Travel 15%, Misc 30%. Total ₹40,000. *Q: Food+Travel spent?*\r
+45% of 40,000 = 45/100 × 40000 — use fraction: 40,000 × 0.45 = **₹18,000**. *Rule: add pie-% first, THEN multiply once — never two multiplications.*\r
+\r
+**Cap:** 4 min per 5-Q set. Do DI last — a stubborn caselet eats the section.\r
+\r
+## TYPE 5 — Arithmetic (5–6 Qs, one per classic topic)\r
+\r
+### Profit & Loss — THE spine: \`MP −discount→ SP →vs CP = profit\`\r
+**Patterns usually asked:** (a) find CP or SP given profit%, (b) marked above + sold at discount, (c) successive discounts, (d) dishonest dealer / false weights, (e) same SP, +p% and −p% → net loss.\r
+- WHY everything hangs on CP: **profit% is measured against what you PAID** — CP is always the base.\r
+- Successive discounts d₁,d₂ → effective = d₁+d₂−d₁d₂/100 (same overlap idea as % change).\r
+- "Marked x% above CP, sold at d% off" → profit% = **x−d−xd/100**.\r
+- Dishonest dealer (sells "at cost" but gives 900g for 1kg): profit% = shortfall/given ×100 = 100/900 = **11.11%**. WHY: he profits on what he DOESN'T give, measured against what he gives.\r
+- Same SP, one at +p%, one at −p% → **always net loss** = p²/100.\r
+\r
+**WORKED EXAMPLES:**\r
+1. *SP ₹540 at 20% profit → CP?* CP = 540/1.2 = **₹450**. *Rule: divide by (1+p/100) — never take 20% of SP.*\r
+2. *MP marked 40% above CP, sold at 20% discount → profit%?* 40−20−(40×20)/100 = 40−20−8 = **12%**.\r
+3. *Two discounts 10% then 20% — better than single 30%?* Effective = 10+20−2 = **28%** — the single 30% is CHEAPER for the buyer. *Rule: successive discounts always shrink — the overlap term saves the seller.*\r
+4. *Two items each sold ₹990 — one +10%, one −10% → net?* Loss = 10²/100 = **1% → ₹20 loss** (CPs were 900 + 1100 = 2000; sold 1980).\r
+5. *Trader uses 800g weight for 1kg, sells "at cost" → profit%?* 200/800 = **25%**. *Trap: denominator is what he GIVES, not what he claims.*\r
+\r
+### SI & CI\r
+**Patterns asked:** (a) direct SI/CI compute, (b) CI−SI gap → find P, (c) amount doubling/tripling time, (d) CI when compounding half-yearly (R halves, T doubles).\r
+- SI = PRT/100; CI = P(1+R/100)ᵀ − P.\r
+- **CI−SI over 2 yrs = P(R/100)²** — "the gap is interest on the interest."\r
+- Half-yearly: rate ÷2, time ×2.\r
+\r
+**WORKED EXAMPLES:**\r
+1. *SI on ₹8,000 at 6% for 3 yrs?* 8000×6×3/100 = **₹1,440**.\r
+2. *CI−SI for 2 yrs at 10% = ₹200 → P?* 200 = P(0.1)² = P/100 → **P = ₹20,000**. *Rule: the gap formula solves P in one line.*\r
+3. *SI doubles in 8 yrs → triples in?* **16 yrs** (interest is linear — each 8 yrs adds one P).\r
+4. *₹10,000 at 20% p.a. compounded half-yearly for 1 yr → CI?* Rate 10%/half-yr, 2 periods: 10000×1.1² = 12,100 → CI = **₹2,100**. *Rule: half-yearly = the sneaky version — always convert BOTH R and T.*\r
+\r
+### Time & Work — think in WORK UNITS, not fractions\r
+**Patterns asked:** (a) A+B together, (b) A leaves midway, (c) M₁D₁H₁ chains, (d) pipes with inlet+outlet.\r
+- WHY LCM: convert days → units. A in 12d, B in 15d → work = LCM(12,15) = 60 units; A = 5u/d, B = 4u/d.\r
+- Pipes: inlet +, outlet −, net rate = sum.\r
+\r
+**WORKED EXAMPLES:**\r
+1. *A in 12d, B in 15d — together?* 60u; A=5, B=4 → 9u/d → **6⅔ days**.\r
+2. *A in 10d, B in 15d; both work 4d, then A leaves → B alone?* Work = 30u; A=3, B=2. 4 days together = 20u done, 10u left → B takes 10/2 = **5 more days**. *Pattern: "leaves midway" = split the work into two phases.*\r
+3. *6 men in 12 days → 8 men?* 6×12 = 8×D → **9 days** (MDH inverse — more men, fewer days).\r
+4. *Pipe A fills in 6h, B empties in 10h → tank fills?* In 30 units: A=+5/h, B=−3/h → net +2/h → **15 hours**. *Trap: outlet goes NEGATIVE — forgetting the sign is the #1 pipes error.*\r
+\r
+### Speed & Distance\r
+**Patterns asked:** (a) average speed equal distances, (b) train crossing pole vs platform, (c) two trains opposite/same direction, (d) boat up/downstream.\r
+- Equal-distance avg speed = 2ab/(a+b) — harmonic, leans LOW (more time at slow speed).\r
+- **"A pole is a dot"**: pole → distance = train length; platform → train + platform.\r
+- Opposite direction → speeds ADD; same direction → SUBTRACT.\r
+- Boat = (down+up)/2; stream = (down−up)/2.\r
+- km/h ↔ m/s: ×5/18 to convert TO m/s; ×18/5 back.\r
+\r
+**WORKED EXAMPLES:**\r
+1. *60 km/h out, 40 km/h back → avg speed?* 2×60×40/100 = **48 km/h** — NOT 50. *Rule: avg < midpoint, always.*\r
+2. *Train 240m crosses a pole in 8s → speed?* 240/8 = 30 m/s × 18/5 = **108 km/h**.\r
+3. *Same train (108 km/h, 240m) crosses 320m platform → time?* Distance = 240+320 = 560m; 560/30 = **18.67 s**. *Rule: platform problems add BOTH lengths.*\r
+4. *Boat: down 18 km/h, up 12 km/h → boat & stream?* Boat = (18+12)/2 = **15 km/h**; stream = (18−12)/2 = **3 km/h**.\r
+\r
+### Mixture & Alligation — the diagonal cross\r
+**Patterns asked:** (a) mix two priced items to hit a mean price, (b) milk-water ratio via alligation, (c) repeated replacement (V(1−f)ⁿ).\r
+\`\`\`\r
+   dearer d        cheaper c\r
+        \\          /\r
+          mean m\r
+        /          \\\r
+ qty(d) : qty(c)  =  (m−c) : (d−m)     ← differences on the diagonal, FLIPPED\r
+\`\`\`\r
+\r
+**WORKED EXAMPLES:**\r
+1. *₹40 & ₹60 rice → ₹52 mix, ratio?* (60−52):(52−40) = 8:12 = **2:3** — ₹40 rice gets the ₹60-side difference (cross is the point).\r
+2. *Free water + milk ₹48/L → ₹40 mix, water:milk?* Water costs 0: (48−40):(40−0) = 8:40 = **1:5** water:milk. *Rule: free ingredient = price 0 — alligation handles it the same.*\r
+3. *20L milk; 4L removed & replaced by water, twice → milk left?* 20×(1−4/20)² = 20×(0.8)² = **12.8 L**. *Rule: V(1−f)ⁿ — f is the FRACTION removed each round.*\r
+\r
+### Percentage / Ratio / Averages / Ages / Partnership / Mensuration\r
+**Patterns asked:** (a) bridging ratios, (b) join/leave average shifts, (c) age equations in one timeframe, (d) partnership capital×months, (e) formula-only mensuration.\r
+\r
+**WORKED EXAMPLES:**\r
+1. *A:B = 2:3, B:C = 4:5 → A:B:C?* Equalize B → A:B:C = 8:12:15. *Rule: shared term wears same number in both ratios.*\r
+2. *Avg age of 10 players = 25; a 40-yr-old leaves and a newcomer joins → new avg = 24. Newcomer's age?* Old total = 250; after leaver = 210; new total = 10×24 = 240 → newcomer = 240−210 = **30**. *Rule: track the SUM through each step, not the person.*\r
+3. *Father : son = 7:3 now; after 10 yrs ratio 9:5 → father's age?* 7x+10 : 3x+10 = 9:5 → 35x+50 = 27x+90 → 8x = 40 → x=5 → father = **35**.\r
+4. *A puts ₹8,000 for 12m, B ₹12,000 for 6m → profit ₹7,700, A's share?* Capitals×months: 96:72 = 4:3 → A = 7700×4/7 = **₹4,400**.\r
+5. *Path 2m wide around 12×8m garden → path area?* Outer = 16×12 = 192; garden = 96 → path = **96 m²**. *Rule: path area = outer − inner; extend BOTH sides by twice the width.*\r
+\r
+---\r
+\r
+# PART 2 — EXAM-DAY GAME PLAN\r
+\r
+**Order:** approximation (3 min) → series (4) → arithmetic easy-picks (4) → DI last (4 per set, pick the clean table/line graph over the caselet).\r
+**Hard cap: ~15 min.** Any DI set with no table forming in 3 min = skip.\r
+\r
+**Daily drill:**\r
+- 10 min — fraction families + squares/cubes from memory (reflex, not recall).\r
+- 10 series + 10 approximation, ≤40 sec each.\r
+- 5 arithmetic rotating topics (P&L → SI/CI → T&W → TSD → mixture).\r
+- 1 DI set twice a week.\r
+- Error log: name WHICH trick failed — "didn't recall 1/16", "checked gaps but not ×k+c", "forgot the outlet goes negative" — that's your fix-list.\r
+\r
+---\r
+\r
+# APPENDIX — PATTERN FREQUENCY CHEAT SHEET (what SEBI actually asks)\r
+\r
+| Type | Qs | Top sub-patterns (in order) |\r
+|---|---|---|\r
+| DI | ~10 | line graph YoY %s · caselet table-build · table ratios/% · pie |\r
+| Wrong series | 4–5 | gaps → ×k+c → squares±k → Fibonacci → interleaved |\r
+| Approximation | ~5 | %-of + product · ÷ decimals · √ park · chained ops |\r
+| Quadratic | 0–4 | both-positive · both-negative · mixed (instant-kill) · CND overlap |\r
+| Arithmetic | 5–6 | P&L (mark-up+discount, dishonest dealer) · SI/CI (gap formula) · T&W (leaves midway) · TSD (trains/boats) · mixture (replacement) · ages/partnership |\r
+`,"../../01_Phase1_Paper1/Reasoning/Tricks.md":`# Reasoning Ability — Learn the Methods (Understand + Remember version)
+
+> Phase 1 Paper 1 Reasoning = **20 questions**. Moderate difficulty, the most time-hungry section. Good attempt: 15–17.
+> **Real exam data (2024 + Jan-2026):** Puzzles/seating = **12–18 of 20 questions** (month+variable, box stack, linear/double row, height/rank order, circular, square). Remaining singles: blood relations, alphanumeric series, statement-assumption, data sufficiency.
+>
+> **One diagram earns 4–5 marks. Master the puzzle method once — it works on every set.**
+
+## DAILY MAP — which skeleton + which single, per plan day
+Study the day's skeleton first (3 min), then drill that type from the patterns bank. (Matches the DRILL BANK card exactly.)
+
+- **D1** Type A + Syllogism · **D4** Type B + Blood Relations · **D6** Type C + Coding
+- **D8** Type C + Inequality · **D11** Type D + Direction · **D13** Type E + Alphanumeric
+- **D15** Type E + Stmt-Assumption · **D18** Type F + Data Sufficiency · **D20** mixed + singles review
+- **D22** Type A + Syllogism · **D25** Type B + Blood Rel · **D27** Type C + Coding
+- **D29** Type D + Direction · **D32** Type E + Alphanumeric · **D34** Type F + Stmt-Assumption
+- **D36** Type A + Data Suff · **D39** Type B + singles review · **D41** weakest type (error log)
+- **D43** Type C + weakest · **D46** Type D + weakest · **D48** weakest of the week
+
+---
+
+# PART 1 — THE UNIVERSAL PUZZLE METHOD (works on every type)
+
+All puzzles are the same game: clues fix positions. The only skill is **the order you use the clues**.
+
+## The 6 steps — WHY each one exists
+
+**Step 1 — Read ALL clues before drawing anything.**
+WHY: Clue 7 often makes clue 1 definite. Starting placement on clue 1 wastes cases you'd have to redraw.
+REMEMBER: *"Survey the whole board before moving a piece."*
+
+**Step 2 — Draw the skeleton that matches the type** (row, circle, stack, table — each below).
+
+**Step 3 — DEFINITE clues first.**
+WHY: "X sits 3rd from left", "Y is in March" — these are anchors. Everything else hangs off them.
+REMEMBER: *"Anchors first, relatives next, negatives last."*
+
+**Step 4 — RELATIVE clues second.** "P right of Q", "2 between A and B" — slot them around the anchors.
+
+**Step 5 — TWO-CASE rule.** When a clue allows 2 placements, draw BOTH cases side by side.
+WHY: guessing one case = 50% chance of a wrong diagram = 4–5 wrong answers. Drawing both is slower but certain — a later clue always kills one.
+REMEMBER: *"Never guess a case — branch it, let a clue kill it."*
+
+**Step 6 — NEGATIVE clues last + auto-complete.**
+"Z not at an end" only makes sense after positions exist. Then the last leftover person fills the last leftover slot — puzzles finish themselves.
+
+**Time discipline: one set = 4–5 min for 4–5 marks. If a set still has 2 unresolved cases at 6 min → take the sure answers, move on.**
+
+---
+
+## THE PUZZLE TYPES — skeleton + the ONE trap each
+
+### Type A — Linear / Double-Row Seating (appeared both years, 4–5 Qs)
+\`\`\`
+North-facing row:   1 _ _ _ _ _ _ 8     (their left = your left)
+Two rows facing each other:
+  Row1 (faces SOUTH):  8 7 6 5 4 3 2 1   ← mirrored!
+  Row2 (faces NORTH):  1 2 3 4 5 6 7 8
+  Seat k in Row2 faces seat k in Row1.
+\`\`\`
+**THE trap:** a SOUTH-facing person's left = YOUR right — mirrored. WHY: turn around and face the opposite way; your left hand now points the other direction. REMEMBER: *"Facing away? Their left is your mirror."* Write facing-direction arrows on the diagram BEFORE placing anyone.
+
+**Trap variant — "uncertain number of persons"** (asked 2024, the notorious time-eater): derive the count from gap clues ("3 sit between A and B" ⇒ at least 5 people). If the count doesn't resolve in 2 clues — take the sure answers and skip.
+
+**Variable rows** ("each likes a colour"): keep variables in a second row under the diagram — never in your head.
+
+### Type B — Month/Day + Variable (Jan-2026, 4–5 Qs)
+**Skeleton — always a table, never prose:**
+\`\`\`
+| Month | Date | Person | Likes |
+| Jan   |      |        |       |
+\`\`\`
+WHY a table: month puzzles are fixed-slot puzzles — you fill cells, not positions. Clues like "2 months between P and Q" → mark both possibilities in the table.
+**THE trap:** months have boundaries — "2 months after May" is impossible (no July). Boundary months kill cases instantly — use them.
+REMEMBER: *"Months can't stretch — check the edges."*
+
+### Type C — Box + Variable Stack (Jan-2026, 3 Qs)
+\`\`\`
+| Pos | Box | Colour |
+|  7  |     |        |   ← top
+|  1  |     |        |   ← bottom
+\`\`\`
+Blocks: "X is 2 above Y" → movable block \`Y _ X\`. "One box between" → \`X _ Y\` or \`Y _ X\`.
+**THE trap (most misread clue in all of SEBI reasoning):** "**somewhere above**" ≠ "**immediately above**".
+WHY: "somewhere above" only fixes ORDER (X higher than Y, any distance). "Immediately above" glues them (X = Y+1 exactly).
+REMEMBER: *"Somewhere = just order. Immediately = glued."*
+
+### Type D — Height/Rank-Order (Jan-2026, 3–5 Qs)
+No diagram — one inequality chain. "T taller than P but shorter than R" → \`R > T > P\`.
+Merge every new clue into the chain at a shared person; when two fragments share a name, weld them.
+**Worked:** R>T>P · S shorter than P · Q between T and R → \`R > Q > T > P > S\` — all 5 answers fall out of one line.
+**THE trap:** "Q between T and R" = T>Q>R **or** R>Q>T — both live until a clue fixes direction. Don't assume.
+
+### Type E — Circular / Square Seating (2024)
+**Skeleton:** draw the circle/square, fix ONE person first — circles have no "ends", everything is relative.
+- Facing centre: a person's LEFT = clockwise on your page. Facing outside: mirrored.
+- "Opposite" in an 8-circle = exactly 4 seats away.
+- Square: 4 corners + 4 side-midpoints; corners face diagonally.
+**Trap:** MIXED facing ("some in, some out") — draw a small arrow per person; hardest variant → do LAST.
+
+### Type F — Floor / Stacked-Building (drill rotation from W3)
+**Skeleton — numbered floors in a table, top = highest number:**
+\`\`\`
+| Floor | Person | Variable |
+|  8    |        |          |   <- top
+|  1    |        |          |   <- ground
+\`\`\`
+Clue forms: "X on floor 5" (anchor) · "Y immediately above X" (glued block \`XY\`) · "Z somewhere above X" (ORDER ONLY — same trap as box stack) · "two floors between P and Q" → |diff| = 3 · "P on an even-numbered floor" · "P below Q but not the lowest".
+**THE trap:** numbering direction — confirm ground = floor 1 BEFORE placing; and "somewhere above" vs "immediately above" (the box-stack trap in vertical form).
+REMEMBER: *"Floors are just a vertical box-stack — same rules, rotated 90 degrees."*
+**Mixed variant** (flat A1/A2/A3 on each floor): keep the flat-variable in the table's third column — never in your head.
+
+### Type G — Scheduling / Day-Event (rotation, cheap marks)
+**Skeleton — a day table, Mon→Sun (or given dates):**
+\`\`\`
+| Day   | Person/Event | Variable |
+| Mon   |              |          |
+\`\`\`
+Clue forms: "P's exam before Q's, not on Mon" · "two days between X and Y" → |diff| = 3 · "Y on the day immediately after X" (glued \`XY\` block) · "X on a working day".
+**THE trap:** week boundaries — "the day after Sunday" doesn't exist in a Mon–Sun set; "two days before Tuesday" needs Sunday to exist in your week. Check the ends exactly like month puzzles.
+REMEMBER: *"Days are a tiny row of 7 — same linear rules, smaller board."*
+
+---
+
+# PART 2 — THE SINGLES (fast standalone marks)
+
+## Blood Relations (3 Qs in 2024)
+**Method — DRAW a tree, never think it.** WHY: relations are spatial; your brain drops a generation when holding 4+ people in words.
+\`\`\`
+□ male · ○ female · ─ couple · | parent–child · ═ siblings
+\`\`\`
+**Worked:** "She is the daughter of my grandfather's only son" → grandfather's only son = my father → his daughter = **my sister**.
+**Traps:** "only son/daughter" collapses branches · maternal = mother's side · brother-in-law needs a drawn marriage line.
+**Coded form** ("A+B = A is father of B"): decode symbols into the SAME tree, left to right.
+
+## Alphanumeric / Word Series (1–3 Qs — the 20-second marks, do FIRST)
+\`4 & R 9 K # T 2 @ B …\` — "how many letters preceded by symbol AND followed by digit": slide a mental 3-char window, count hits.
+Word questions: "EXAMINE alphabetically" → E A E I M N X → answer position Qs. Pure scanning, no thinking.
+
+## Statement & Assumption / Inference (2–3 Qs every year)
+- **Assumption test — NEGATE it:** WHY: an assumption is what the statement can't survive without. Negate the option; if the statement dies → it's an assumption.
+  > "Join our yoga classes to be healthy." Option "yoga improves health" → negate → "yoga doesn't improve health" → the pitch dies ✓ it IS assumed.
+- **Inference:** must-follow = true. Kill options that exceed the passage's scope, use always/never, or merely restate a given fact.
+- **Strong/weak argument:** strong = directly addresses the issue with a real consequence; weak = emotional, vague, one-sided, "some people feel".
+
+## Data Sufficiency (2 Qs in 2024)
+Judge CAN the data solve it — don't solve it. Test stmt-1 alone → stmt-2 alone → combined. SEBI trap: each statement gives partial seating — only combined resolves. You're grading sufficiency, not finding the answer.
+
+## Rotation topics (0 Qs lately — keep alive at low cost, they return unannounced)
+- **Syllogism:** draw minimum circles — All A⊂B · Some A∩B · No A (separate). A conclusion holds only if true in EVERY valid drawing. **Patterns asked:** definite (all/some/no) · possibility ("is a possibility" — passes if ANY drawing allows it) · either-or complementary pairs. See Ex 6, 15, 16.
+- **Inequality:** chain \`>\` \`≥\` \`=\` — a conclusion follows only if symbols link end-to-end pointing the same way. **Patterns asked:** direct-chain compare · coded symbols (@,#,$ decode first — Ex 17).
+- **Coding:** shifts (+2/−3), reverse, position swap; word-codes = find shared word ↔ shared code (Ex 18).
+- **Direction:** draw N-up; turns are relative to CURRENT facing; final displacement by net movement. **Patterns asked:** net displacement (Ex 10) · shortest-path (√) · shadow/facing tricks.
+- **Input-output:** identify the step-rule (sort by length? alternate?) then apply mechanically (Ex 19).
+
+---
+
+# PART 3 — EXAM-DAY GAME PLAN
+
+**Order:** singles first (series, blood relation, assumptions — 30–60 sec each) → easiest puzzle set (most definite clues) → second set → hard sets last.
+**Cap: 18 min.** One diagram = 4–5 marks, but a stuck set is a mark-sink — branch cases or leave.
+
+**Daily drill:**
+- 1 full puzzle set timed (target ≤5 min) — rotate A→B→C→D→E types.
+- 10 singles mixed.
+- Error log: which CLUE TYPE stalled you — "two cases became four", "missed south-facing mirror", "uncertain count" — that clue type is tomorrow's set.
+
+---
+
+# PART 4 — WORKED EXAMPLES (full solves, one per question type)
+
+**Ex 1 — linear seating (single row, north-facing).** "6 people A–F in a row facing north. A sits 2nd from left. C is immediate right of A. Only one person between C and F. B is not at any end."
+**Solve:** Fix A at position 2 → C at 3. "One between C and F" → F at 5. B not at ends → B at 4. Remaining D, E → ends 1 and 6 (either order — that ambiguity IS a valid answer if a question asks only about fixed people).
+**Ans pattern:** 4-5 follow-up questions all fall out of this one diagram. *(Rule used: definite anchors first, "between X" counts the gap.)*
+
+**Ex 2 — the trap clue.** "P sits somewhere above Q" vs "P sits immediately above Q" in a floor puzzle.
+**Solve:** "somewhere above" = P on ANY higher floor (order only). "Immediately above" = P glued on top of Q (movable block \`QP\`). Treating "somewhere" as "immediately" is the #1 way puzzle sets collapse.
+**REMEMBER: "somewhere = order only; immediately = glued."**
+
+**Ex 3 — circular seating (facing centre).** "8 people around a circle facing centre. A faces B. C is 2nd to A's left."
+**Solve:** Facing centre → THEIR left = YOUR right on paper. Place A at top, B opposite (bottom). A's left on the page = clockwise side → count 2 seats clockwise from A → C. **Draw arrows for facing before placing anyone.**
+
+**Ex 4 — blood relation decode.** "Pointing to a photo, Ravi says: 'She is the daughter of my grandfather's only son.' How is she related to Ravi?"
+**Solve:** grandfather's only son = Ravi's father → his daughter = **Ravi's sister.** *(Rule: decode inside-out — "grandfather's only son" first.)*
+
+**Ex 5 — coded blood relation.** "A + B means A is B's mother. A − B means A is B's brother. What is P + Q − R to R?"
+**Solve:** P + Q → P is Q's mother. Q − R → Q is R's brother. So P is mother of R's brother → **P is R's mother.**
+
+**Ex 6 — syllogism.** "Statements: All pens are books. Some books are desks. Conclusion: Some pens are desks."
+**Solve:** draw books ⊃ pens; desks overlap books SOMEWHERE (not necessarily on pens). Could desks touch pens? Maybe — but "maybe" ≠ "definitely." **Conclusion: does NOT follow.** *(Rule: a conclusion holds only if true in EVERY valid diagram.)*
+
+**Ex 7 — inequality chain.** "T > P, R > T, S < P, T > Q > P. Order all five?"
+**Solve:** merge links → R > T > Q > P > S. Every pair comparison from the options is answered by this one chain. *(Rule: chain first, questions after — never compare pairs one-by-one.)*
+
+**Ex 8 — statement & assumption (negation test).** "Statement: 'Enroll in our crash course to crack SEBI.' Assumption: 'A crash course can help crack SEBI.'"
+**Solve:** negate → "a crash course CANNOT help" → the ad's whole pitch dies → **assumption is implicit.** If negating doesn't kill the statement, it isn't assumed.
+
+**Ex 9 — data sufficiency.** "Q: Who is tallest among A, B, C? (1) A > B (2) B > C."
+**Solve:** stmt 1 alone → A vs B only, C unknown → insufficient. Stmt 2 alone → insufficient. Combined → A > B > C → sufficient. **Answer: both together needed.** Trap: picking stmt 1 because it names A — it never places C.
+
+**Ex 10 — direction sense.** "A man walks 3 km north, turns right walks 4 km, turns right walks 3 km. Where is he from start?"
+**Solve:** north 3 → east 4 → south 3 → net = 4 km east of start. Draw the L-path; the two 3 km legs cancel. **Ans: 4 km east.**
+
+**Ex 11 — alphanumeric series.** "Find next: Z1A, Y2B, X3C, ?"
+**Solve:** letters step back Z→Y→X→**W**; digits step up 1→2→3→**4**; trailing letters step forward A→B→C→**D** → **W4D.** Split into parallel sub-series — never try to see one rule across the whole string.
+
+**Ex 12 — month + variable puzzle (full table solve, two live cases).** "Five people P,Q,R,S,T have birthdays in Jan–May, one per month. P is in March. Exactly one month lies between P and Q. R is immediately before T. S is not in January."
+**Solve:** P→Mar. "One month between" → |diff| = 2 → Q ∈ {Jan, May} → **two cases:**
+- **Case A (Q=Jan):** R,T need an adjacent pair in remaining {Feb,Apr,May} → R=Apr, T=May → S=Feb ✓
+- **Case B (Q=May):** remaining {Jan,Feb,Apr} → R=Jan, T=Feb → S=Apr ✓
+Both valid — so answer only what's fixed in BOTH: *"Who was born in April?"* → S in both → **S**. *"Who in Feb?"* → S (A) vs T (B) → can't determine.
+**Rules:** "one month between" = difference of 2, not 1 · branch cases side by side · only answer what's identical across all surviving cases.
+
+**Ex 13 — box stack.** "5 boxes A–E stacked 1(bottom)–5(top). A is immediately above B. C is at the bottom. D is somewhere above E."
+**Solve:** pos1=C. Block \`BA\` (B under A) is movable → sits at {2,3},{3,4} or {4,5}. "D above E" = order only. Try block at {2,3}: B2,A3 → remaining pos 4,5 → E4,D5 fits (D above E ✓). **Stack: C,B,A,E,D.** If a second valid arrangement existed, the question would ask only fixed cells — same rule as Ex 12.
+**Rule:** glued block \`BA\` first, "somewhere above" is order-only — test the block's positions against remaining slots.
+
+**Ex 14 — two-case branching (the discipline that saves sets).** "4 people in a row. X is left of Y. Z is at an end."
+**Solve:** two live cases — Z at pos1 (X,Y fill 2–4 keeping X left of Y) or Z at pos4. **Draw both skeletons side by side; don't pick.** Next clue "Z is left of X" kills pos4 case → Z1, then X2/3, Y after. *Rule: never guess a case — branch it and let a clue kill the loser.*
+
+**Ex 15 — syllogism: possibility conclusion.** "All pens are books. Some books are desks. Conclusion: Some pens being desks is a possibility."
+**Solve:** the definite conclusion failed (Ex 6) — but could desks' overlap with books TOUCH the pens circle? Yes, a valid drawing exists where they overlap → **possibility follows.** *Rule: "possibility" conclusions pass if ANY valid drawing allows them — almost everything not explicitly impossible is possible.*
+
+**Ex 16 — syllogism: either-or (complementary pair).** "All cats are dogs. No dog is a fish. Conclusions: (1) Some cats are fish (2) No cat is a fish."
+**Solve:** cats ⊂ dogs, fish separate from dogs → cats can't touch fish → (1) false, (2) TRUE → simple "only 2 follows." *The either-or variant:* "Some cats are fish" vs "Some cats are not fish" when NEITHER is definite — the pair is complementary (exactly one must hold) → answer "either 1 or 2." *Rule: complementary pairs = 'All X are Y' vs 'Some X are not Y', or 'Some X are Y' vs 'No X is Y' — if neither alone follows, either-or is the answer.*
+
+**Ex 17 — coded inequality.** "A @ B means A > B · A # B means A ≥ B · A $ B means A = B · A & B means A < B. Given P @ Q, Q # R, R $ S → compare P and S."
+**Solve:** decode the chain → P > Q ≥ R = S → **P > S**, definite. *Rule: translate codes into one plain chain FIRST — never compare inside the symbols.*
+
+**Ex 18 — word-coding decode.** "In a code, 'market rises today' = 'pa qa ra', 'today market falls' = 'qa sa pa'. Code for 'market'?"
+**Solve:** both sentences share 'market today' → shared codes {pa, qa}. 'today' appears in both → but which code? First has unique word 'rises'↔ unique code 'ra'; second unique 'falls'↔'sa'. So {pa,qa} = {market,today} — can't fully separate with two lines; a third sentence would. If options force one, test each. *Rule: shared word ↔ shared code; unique word ↔ unique code.*
+
+**Ex 19 — input-output.** "Input: 84 cat 23 dog 51 ant  Step I: 84 cat 51 dog 23 ant (sorted descending by number within pairs)."
+**Solve:** identify the rule from Step I→II (usually ascending/descending sort, or alternate word/number shifts), then apply mechanically to each next step. *Rule: don't predict all steps — find the ONE transformation and repeat.*
+
+**Ex 20 — uncertain number of persons.** "Some people in a row. 3 sit between A and B; 2 between B and C; C sits at an end."
+**Solve:** derive the range — A,B need ≥5 people; C at end + 2 between B,C pins C and B → count resolves to 6–8 depending on A's side. If it stays ambiguous after 2 clues → **take only the certain answers, skip the rest — this type is a deliberate time-sink.**
+`,"../../01_Phase1_Paper1/Strategy_Notes.md":`# Paper 1 Strategy Notes (Reasoning / Quant / English / GA)
+
+Paper 1 is a screening paper — the goal is a safe total (well above the 30/100 minimum), not a top score. There is NO sectional cutoff: only the Paper-1 total ≥ 30 and Paper-1+Paper-2 aggregate ≥ 80/200 matter.
+
+## Reasoning (high accuracy, predictable patterns)
+- Priority sets: syllogisms, inequalities, coding-decoding, blood relations, direction sense, series — all pattern-based, near-100% accuracy possible.
+- Puzzles & seating (linear, circular, floor, box, comparison) = the scoring chunk: practice 3/day. Learn the standard template: draw, fix definite info first, branch on ambiguous.
+- Input-output (machine), alphanumeric series, order & ranking.
+- Strategy: attempt all non-puzzle questions first (fast marks), then the one easiest puzzle, skip the hardest.
+
+## Quantitative Aptitude
+- Core arithmetic: percentages, profit-loss, ratio-proportion, averages, mixtures/alligation, SI-CI, time & work, pipes, speed-time-distance (incl. trains/boats), ages, partnerships.
+- DI sets (tables, bar, pie, line) = biggest scoring chunk — 2 sets/day. Fast percentage↔fraction table mandatory (1/2 to 1/20).
+- Number series (missing + wrong), quadratic equations (factorize both, compare roots), approximation, simplification (BODMAS + % tricks).
+- Memorize: squares 1–40, cubes 1–20, fraction-percent conversions, Vedic-style shortcuts for ×25/×50/×125.
+
+## English Language
+- Reading comprehension: 2 passages typical — read questions first, hunt keywords. Don't over-think "inference" options containing extreme words (always/never).
+- Error spotting: check subject-verb agreement, tense consistency, parallelism, article/preposition — covers 80% of errors.
+- Para jumbles: find opener (introduces topic, no pronoun references), then mandatory pairs (pronoun→noun, chronological, general→specific).
+- Cloze test, fillers (single/double), sentence improvement, synonyms/antonyms, idioms, one-word substitutions.
+- Vocab: 20 words/day from previous banking exam lists; maintain a running sheet.
+
+## General Awareness — the differentiator for SEBI
+- **Financial awareness ≫ general GK.** Focus areas:
+  - SEBI itself: chairman, HQ (Mumbai), est. 1988, statutory 1992 (SEBI Act), functions, recent regulations/circulars, penalties imposed, committee reports.
+  - Markets: NSE/BSE, indices (Sensex 30, Nifty 50), F&O, IPO process, mutual funds, REITs/InvITs, demat, circuit limits, insider trading rules, takeovers.
+  - RBI: repo/CRR/SLR, MPC meetings, OMOs, priority sector, NBFCs.
+  - Budget + Economic Survey highlights, govt schemes, ratings/rankings India, appointments (RBI gov, SEBI chair, heads of regulators — IRDAI, PFRDA, CCI, NABARD).
+  - Current affairs: last 5–6 months, focus economy/finance/awards/summits.
+- Sources: daily 20 min — any banking GA PDF (Adda247/GKToday affairs) + SEBI press releases skim weekly.
+
+## Paper 1 execution plan
+- Attempt target: ~50–60 of 80 questions at ≥85% accuracy → lands ~50+ marks, safely above the 30/100 gate and feeds the 80/200 aggregate. (24 correct = bare minimum; ~30 attempts needed at 85% accuracy. Section recipe: GA 18–20 · English 15–18 · Quant 8–12 · Reasoning 8–12.)
+- Order (suggested): English (warm-up) → GA (no solving time) → Reasoning non-puzzle → Quant arithmetic → DI → puzzles last.
+- Don't fully blank-out a section even though there's no sectional rule — every mark counts toward the 30/100 and 80/200 aggregate gates, and a dead section makes both harder to reach.
+- Negative marking 1/4 → blind guessing is negative-EV; guess only when you can eliminate 2+ options.
+`,"../../02_Phase1_Paper2_IT/Computer_Networks/Notes.md":`# Computer Networks — Full Study Notes (10% of Paper 2)
+
+> **Official syllabus:** ISO/OSI stack · LAN technologies (Ethernet, Token Ring) · TCP/UDP · IP · switches, gateways, routers · application-layer protocols (DNS, SMTP, POP, FTP, HTTP) · firewalls.
+>
+> **How SEBI tests it:** layer↔protocol/device matching, port numbers, TCP vs UDP, subnetting numerics, "which layer does X" MCQs. Mostly fact-recall + one numeric type (subnetting).
+
+**How to read:** every topic goes *plain-English explanation → a tiny example you can see → the exam rule/trap*. Networks sound abstract until you attach them to a postal system or a phone call — the analogies below are doing real work, not decoration.
+
+---
+
+## 1. The OSI Model — the single highest-yield table
+
+**Plain words:** sending data across a network is too big a job for one piece of software, so it's split into 7 layers — like sending a parcel involves a letter-writer, an envelope, a postbox, sorting office, trucks, and the recipient's letterbox. Each layer does ONE job, talks only to the layers directly above/below it, and can be swapped out (change from cable to Wi-Fi) without breaking the rest.
+
+**See it — sending a WhatsApp message:**
+- You type text (the app's job — top layer)
+- It gets formatted/encrypted (presentation)
+- A "conversation" is opened (session)
+- It's chopped into numbered pieces for delivery (transport)
+- Each piece gets a destination IP and is routed across the internet (network)
+- Each hop frames it with MAC addresses for the next device (data link)
+- Finally it's actual voltages/radio on a wire/air (physical)
+
+| # | Layer | Does what | Protocols/devices | PDU name |
+|---|---|---|---|---|
+| 7 | **Application** | user-facing services | HTTP, FTP, SMTP, DNS, DHCP | data |
+| 6 | **Presentation** | format/encrypt/compress | SSL/TLS (conceptually), JPEG, ASCII | data |
+| 5 | **Session** | open/manage/end conversations | NetBIOS, sockets | data |
+| 4 | **Transport** | end-to-end delivery, ports | **TCP, UDP** | **segment** |
+| 3 | **Network** | routing, logical addressing | **IP, ICMP, routers**, OSPF | **packet** |
+| 2 | **Data Link** | framing, MAC, error detection | switches, bridges, Ethernet, PPP | **frame** |
+| 1 | **Physical** | bits on the wire | hubs, repeaters, cables | bits |
+
+- REMEMBER (mnemonic, top-down): **"All People Seem To Need Data Processing."** (Bottom-up: Please Do Not Throw Sausage Pizza Away.)
+- **Encapsulation = the envelope trick:** each layer wraps what it receives in its own header — your message inside a TCP header inside an IP header inside an Ethernet frame. That's why the "box" has a different name per layer (segment → packet → frame) — a real MCQ ("PDU at layer 3?" → packet).
+- **TCP/IP model (4 layers) = OSI compressed:** Application (OSI 7+6+5) → Transport → Internet (3) → Network Access/Link (2+1). SEBI asks both — be able to map them.
+
+### The device↔layer map (asked every cycle) — think of your home network
+- **Hub** → L1: a dumb loudspeaker — every bit that arrives goes out EVERY port. (Ancient; nobody buys them.)
+- **Repeater** → L1: just a signal booster for long cables.
+- **Switch/Bridge** → L2: a smart receptionist — learns which MAC address lives on which port, forwards only where needed. Switch = multiport bridge, and splitting traffic kills collisions.
+- **Router** → L3: the border post — reads IP addresses and moves packets between DIFFERENT networks (your LAN ↔ the internet). Also stops broadcast chatter from leaking across.
+- **Gateway** → up to L7: a translator — converts between entirely different protocols/formats (e.g., email-to-SMS gateway).
+- REMEMBER: *"Hub hears bits, Switch sees MACs, Router reads IPs, Gateway translates languages."*
+- **Collision vs broadcast domain:** hub keeps both (one big shouting room); switch splits collision domains (each port = private line) but keeps broadcasts; **router splits BOTH** — the classic MCQ distinction.
+
+---
+
+## 2. IP Addressing & Subnetting — the numeric question
+
+### IPv4 basics — what an address actually is
+**Plain words:** an IPv4 address is a 32-bit house number for a device on a network, written as 4 decimal chunks (octets) of 0–255: \`192.168.1.10\`. The address has two parts — the *network* part (which street) and the *host* part (which house). The subnet mask or \`/n\` tells you where the split is.
+
+- **Private ranges** (addresses that can only live inside LANs — routers drop them on the internet): \`10.x.x.x\`, \`172.16.x.x–172.31.x.x\`, \`192.168.x.x\`. Your home laptop's \`192.168.1.x\` never appears on the internet — NAT translates it. MCQ: "which is private?" → know all three ranges.
+- **Loopback** \`127.0.0.1\` = "myself" (ping it to test your own stack).
+- **APIPA/link-local** \`169.254.x.x\` = the address Windows self-assigns when DHCP fails → a favourite "diagnose the problem" MCQ.
+- **Classes** (legacy but asked): A = 1–126 (/8), B = 128–191 (/16), C = 192–223 (/24), D = 224–239 (multicast), E = 240+ (experimental). First octet tells the class. REMEMBER: *"A big, B medium, C small — /8 /16 /24."*
+- **IPv6** = 128 bits, written in hex with colons, \`::\` compresses zero-runs, NO broadcast (multicast instead).
+
+### Subnetting — the 30-second method
+**Plain words:** \`/n\` says the first n bits are the network; the remaining \`32−n\` bits name hosts inside it. Each "borrowed" bit doubles the number of subnets and halves the hosts per subnet — the trade-off IS the question.
+
+- **Usable hosts = 2^(32−n) − 2** — minus 2 because the first address names the network and the last is the broadcast shout-to-everyone. So /24 → 254, /26 → 62, /30 → 2 (point-to-point links — an MCQ favourite because "only 2 hosts" feels wrong).
+- **Block size** = 256 − last-interesting-octet-of-mask. /26 → mask 255.255.255.192 → block 64 → subnet boundaries at .0 .64 .128 .192.
+- **Worked example, slowly:** \`192.168.1.0/26\` → block 64 → subnets: \`.0–.63\`, \`.64–.127\`, \`.128–.191\`, \`.192–.255\`. In the first subnet: network \`.0\`, usable \`.1–.62\`, broadcast \`.63\`. "How many usable?" → **62**.
+- REMEMBER: *"Borrow bits for subnets — each borrowed bit doubles the count and halves the hosts."*
+- **Default gateway** = your LAN's router IP — the exit door to other networks. Diagnostic MCQ: "pings local machines, can't reach internet" → wrong/missing gateway.
+
+---
+
+## 3. TCP vs UDP — the guaranteed question
+
+**Plain words:** both live at the Transport layer and both deliver your data — the difference is *how much they promise*. **TCP = a phone call:** dial first (handshake), confirm every sentence, re-say anything that was lost, keep order — slower but trustworthy. **UDP = shouting a message / a postcard:** no setup, no confirmation, no resend — fast and fine when losing a tiny piece doesn't matter (a skipped video frame).
+
+| | **TCP** | **UDP** |
+|---|---|---|
+| Connection | connection-oriented (3-way handshake) | connectionless (fire & forget) |
+| Reliability | guaranteed, ordered, retransmits | no guarantee, no order |
+| Speed/overhead | slower, 20-byte header | faster, 8-byte header |
+| Use cases | HTTP(S), FTP, SMTP, SSH | DNS, DHCP, streaming, VoIP, TFTP |
+
+- **3-way handshake as a dialogue:** client: "SYN — can we talk?" → server: "SYN-ACK — yes, can you?" → client: "ACK — confirmed." Memorise the exact order — real MCQ. Teardown: FIN-ACK-FIN-ACK.
+- TCP extras: flow control = sliding window (receiver says how much it can take); congestion control = slow start.
+- REMEMBER: *"TCP calls first and confirms every letter; UDP shouts into the crowd."*
+- "Which uses UDP?" — anything real-time (video call, live game, DNS lookups) where speed beats perfection.
+
+### TCP state names for dry-runs
+\`ESTABLISHED\`, \`LISTEN\`, \`TIME_WAIT\` (waits 2×MSL after close so stragglers die), \`SYN_SENT\` — showing up in newer netstat-style questions.
+
+---
+
+## 4. Ports & Application Protocols — pure-memory marks
+
+**Plain words:** the IP gets the packet to the right *computer*; the **port** gets it to the right *program* on that computer — like an apartment number inside a building. Port 80's program is the web server, port 25's is the mail sender.
+
+| Port | Protocol | Does |
+|---|---|---|
+| 20/21 | **FTP** | file transfer (21 = commands, 20 = the actual data) |
+| 22 | **SSH** | secure remote shell |
+| 23 | Telnet | same job, unencrypted — "insecure SSH" |
+| 25 | **SMTP** | SENDING email (server→server and client→server) |
+| 53 | **DNS** | name↔IP resolution (UDP for lookups, TCP for zone transfers) |
+| 67/68 | **DHCP** | hands out IP addresses automatically |
+| 69 | TFTP | bare-bones file transfer over UDP |
+| 80 | **HTTP** | web pages |
+| 110 | **POP3** | downloads mail to ONE device, deletes from server |
+| 143 | **IMAP** | mail stays ON the server, syncs to every device |
+| 161/162 | SNMP | monitors/manages network devices |
+| 443 | **HTTPS** | HTTP encrypted over TLS |
+| 3389 | RDP | remote desktop |
+
+- **SMTP vs POP3 vs IMAP — the trio they always test:** think of mail flowing two ways. **SMTP pushes** (sending). **POP3 pulls and pockets** — downloads to your laptop and removes from the server, so your phone sees nothing. **IMAP keeps everything on the server** — phone, laptop, web all show the same synced inbox. REMEMBER: *"SMTP Sends, POP Pulls-off, IMAP Is-online."*
+- **DNS** = the internet's phonebook: resolver walks root → TLD (.com) → authoritative server to turn \`sebi.gov.in\` into an IP. Record types: A (IPv4), AAAA (IPv6), MX (mail server), CNAME (alias/nickname).
+- **DHCP DORA:** Discover → Offer → Request → Acknowledge — a device broadcasts "anyone got an IP for me?", server offers, device requests it, server confirms. Real-style MCQ.
+- **HTTP methods:** GET (read), POST (submit/create), PUT (replace), DELETE, HEAD (headers only), OPTIONS. **Status codes:** 2xx ok · 3xx redirect · 4xx YOUR fault (404 not found, 403 forbidden, 401 unauthorized) · 5xx SERVER's fault (500 error, 502 bad gateway, 503 unavailable).
+
+---
+
+## 5. LAN Technologies (named in the syllabus — guaranteed 1–2 Qs)
+
+- **Ethernet (IEEE 802.3):** the LAN standard that won. Every NIC has a burned-in 48-bit **MAC address**. Classic shared-cable Ethernet used **CSMA/CD** = "Carrier Sense, Multiple Access, Collision Detect" — literally *listen before talking*; if two devices talk at once (collision), both back off a random time and retry. Like polite dinner-table conversation. Modern switched Ethernet runs full-duplex on private port links → no collisions at all.
+- **Token Ring (IEEE 802.5):** IBM's alternative — a small "token" frame circulates the ring; only the station HOLDING the token may transmit. No collisions, perfectly fair, deterministic — but lost the market to cheaper Ethernet. REMEMBER: *"Ethernet shouts when quiet; Token Ring waits for the talking stick."*
+- **IEEE numbers to memorise:** 802.3 Ethernet · 802.5 Token Ring · 802.11 Wi-Fi · 802.15 Bluetooth/WPAN · 802.16 WiMAX.
+- **MAC vs IP:** MAC = the device's hardware ID (L2, like a person's name — travels with them); IP = logical address (L3, like a current address — changes when they move networks). **ARP** maps IP→MAC; **RARP** the reverse.
+- **VLAN** = slicing one physical switch into separate logical LANs — broadcast domains without buying routers.
+
+---
+
+## 6. Routing & WAN
+
+**Plain words:** routers keep tables of "to reach network X, forward to neighbour Y" and swap notes with other routers. HOW they swap notes defines the protocol.
+
+- **Static** = an admin types routes by hand (tiny networks only) vs **dynamic** protocols below.
+- **RIP** — distance-vector: asks neighbours "how many hops to X?" and believes them. Max **15 hops — 16 = unreachable** (classic MCQ — that's why RIP can't scale).
+- **OSPF** — link-state: every router maps the WHOLE network, then runs **Dijkstra** for shortest paths. "Which protocol uses Dijkstra?" → OSPF, every time.
+- **BGP** — the protocol BETWEEN ISPs (autonomous systems) — the internet's exterior glue, path-vector.
+- **NAT** — your home router translating the private \`192.168.x.x\` to one public IP; it's why a whole house shares one internet address.
+- **ICMP** — the network's error-messaging layer: \`ping\` and \`traceroute\` ride on it ("ping uses which protocol?" → ICMP, not TCP/UDP — a classic trap).
+
+---
+
+## 7. Firewalls (syllabus line + InfoSec overlap)
+
+**Plain words:** a firewall = a bouncer checking packets against a guest list.
+
+- **Packet-filtering** (L3/L4) — checks only the envelope (source/dest IP, port). Fast, dumb.
+- **Stateful** — remembers connections ("this packet belongs to a conversation a user started") → much safer.
+- **Application-layer / proxy** (L7) — opens the letter and reads it (inspects actual content, can block specific URLs or malware).
+- **DMZ** = the buffer zone between public internet and private LAN — public-facing servers (web, mail) live THERE so a breach doesn't expose the internal network. "Where do you put the web server?" → DMZ.
+- **IDS** = a CCTV alarm — detects and alerts but doesn't stop. **IPS** = a guard that blocks inline. **Honeypot** = a decoy server left juicy on purpose to study attackers.
+
+---
+
+## Question types SEBI asks here
+1. Layer ↔ protocol/device matching (OSI table above = your answer key).
+2. Port-number recall (the ports table).
+3. TCP-vs-UDP use-case choice.
+4. Subnetting numerics (usable hosts, block size, identify subnet).
+5. LAN tech definitions (Ethernet CSMA/CD, Token Ring token, IEEE numbers).
+6. Email trio (SMTP/POP3/IMAP roles).
+
+## Drills (Days 8–13)
+- Day 8: redraw the OSI table + device map from memory; TCP/IP mapping.
+- Day 9: 10 subnetting problems (usable hosts, network/broadcast, block size) — time each ≤60s.
+- Day 10: port table + email trio + TCP/UDP — write from memory, check.
+- Day 11: routing protocols + LAN tech (IEEE numbers).
+- Day 12: 20 GATE-style MCQs (GateOverflow networks / Sanfoundry CN tests — see Practice Links) + weak-area review.
+- Day 13: Testbook "Networking" chapter test — log misses by table-row.
+
+---
+
+## Worked Examples — 10 solved in exam pattern
+
+**Ex 1 — subnetting.** "192.168.1.0/26 — how many usable host addresses?"
+**Ans: 62.** /26 leaves 6 host bits → 2⁶=64 addresses, minus network + broadcast = 62. *(Rule: usable = 2^(host bits) − 2, always.)*
+
+**Ex 2 — IP class.** "Class of 172.16.5.4? Is it private?"
+**Ans: Class B (128–191) — and YES, private** (172.16–172.31 is the private Class B range). Trap: 172.x looks "random" but sits inside private space.
+
+**Ex 3 — device-to-layer.** "Router, switch, hub, repeater — which OSI layers?"
+**Ans: Router=L3 (Network), Switch=L2 (Data link), Hub=L1 (Physical), Repeater=L1.** *(REMEMBER: hub shouts at everyone — no intelligence; switch learns MACs; router reads IPs.)*
+
+**Ex 4 — port matching.** "HTTPS, SSH, FTP control, DNS — port numbers?"
+**Ans: 443, 22, 21, 53.** Full set: HTTP 80, Telnet 23, SMTP 25, DHCP 67/68, POP3 110, IMAP 143, SNMP 161.
+
+**Ex 5 — TCP or UDP?** "Live video call / file download where every byte must arrive — which protocol each?"
+**Ans: video = UDP (speed over perfection), download = TCP (reliability).** UDP has no handshake, no retransmit, no ordering — exactly why it's fast.
+
+**Ex 6 — OSI function.** "Which layer does routing? Which does encryption/compression? Which gives end-to-end delivery?"
+**Ans: Network (L3), Presentation (L6), Transport (L4).** Mnemonic bottom-up: **P**hysical **D**ata **N**etwork **T**ransport — "Please Do Not Throw Sausage Pizza Away".
+
+**Ex 7 — subnet count.** "Class C network subnetted with 3 borrowed bits — how many subnets?"
+**Ans: 8 (2³)** — each borrowed bit doubles subnets, halves hosts. 3 borrowed → 8 subnets × 30 usable hosts.
+
+**Ex 8 — email protocol.** "User reads mail on phone AND laptop, wants it synced everywhere — POP3 or IMAP?"
+**Ans: IMAP (143).** POP3 (110) downloads and typically removes from server; IMAP keeps mail on the server and syncs.
+
+**Ex 9 — handshake order.** "Correct TCP connection sequence?"
+**Ans: SYN → SYN-ACK → ACK.** Client says SYN, server says SYN+ACK, client says ACK. *(REMEMBER: "ask, acknowledge-ask-back, confirm" — 3 steps, never 2 or 4.)*
+
+**Ex 10 — protocol purpose.** "Which protocol maps IP→MAC? Which maps name→IP? Which gives auto-IP?"
+**Ans: ARP, DNS, DHCP.** RARP does MAC→IP (the reverse). DHCP = "plug in and it just works".
+`,"../../02_Phase1_Paper2_IT/DBMS_SQL/Notes.md":`# DBMS & SQL — Full Study Notes (20% of Paper 2 combined: DB Concepts 10% + SQL 10%)
+
+> **Official syllabus:** ER model · relational model (relational algebra, tuple calculus) · integrity constraints · normal forms · file organization · indexing (B & B+ trees) · transactions & concurrency control — **plus** SQL: SELECT, VIEW, TRUNCATE, DELETE, UPDATE, ALTER, inner/outer joins, aggregates, UNION/INTERSECT/EXCEPT, IN & EXISTS, nested queries.
+>
+> **How SEBI tests it (real style):** SQL output questions, "which normal form?" given FDs, candidate keys via closure, ACID/isolation scenario MCQs, B-Tree used for DB indexing (real recalled Q), difference MCQs (DELETE/TRUNCATE/DROP, WHERE/HAVING, clustered/non-clustered).
+
+**How to read these notes:** every concept follows the same loop — *what it is in plain words → a tiny example you can see → the exam rule/trap*. Read the example tables slowly; the rules make sense only after the example clicks.
+
+---
+
+## PART 1 — DATABASE CONCEPTS
+
+### 1. ER Model (Entity–Relationship)
+
+**What it is (plain words):** Before anyone builds database tables, they draw a picture of what the business has — *things* (entities), *facts about those things* (attributes), and *how things connect* (relationships). The ER model is that picture. SEBI asks how the picture converts into tables.
+
+**Example — a college database:**
+- **Entity** = a real-world "thing" we store: \`STUDENT\`, \`COURSE\`. A **weak entity** can't exist alone: a \`DEPENDENT\` (employee's child) means nothing without its owner \`EMPLOYEE\` — it has no full key of its own, so it borrows the owner's key.
+- **Attributes** — types are asked directly:
+  - simple vs composite → \`name\` can split into \`first_name\` + \`last_name\` (composite)
+  - stored vs derived → we store \`DOB\`; \`age\` is *derived* (computed, not stored)
+  - single vs **multivalued** → one student can have 3 phone numbers → in tables, multivalued attributes become their own table
+- **Relationship cardinalities** = how many of one side connect to the other:
+  - 1:1 — one person : one passport
+  - 1:N — one department : many employees
+  - M:N — many students : many courses
+
+**ER → tables mapping (THE exam question):**
+| In the picture | Becomes |
+|---|---|
+| Strong entity | its own table |
+| Weak entity | table containing the owner's PK as part of its key |
+| **M:N relationship** | **always its OWN table** (e.g. ENROLLS with both PKs) |
+| 1:N relationship | NO new table — put the FK on the "many" side |
+| Multivalued attribute | separate table (entity PK + the value) |
+
+*Why:* an M:N can't live inside either table — where would "student X took course Y" go without repeating everything? So it gets its own table. REMEMBER: *"Many-to-many gets its own table; one-to-many borrows the key."*
+
+### 2. Relational Model & Keys
+
+**Plain words:** a *relation* = a table. **Tuple** = row, **attribute** = column. Two vocabulary traps SEBI loves: **degree** = number of COLUMNS, **cardinality** = number of ROWS (backwards from intuition — a table with 5 columns and 100 rows has degree 5, cardinality 100).
+
+**Keys — learn them on one example.** Table EMP:
+
+| emp_id | email | dept | name |
+|---|---|---|---|
+| E1 | a@x.com | IT | Asha |
+| E2 | b@x.com | HR | Bala |
+
+- **Super key** = ANY combination that uniquely identifies a row: \`{emp_id}\`, \`{emp_id, name}\`, \`{email, dept}\`… lots of them.
+- **Candidate key** = the *minimal* ones — remove any attribute and it stops working: \`{emp_id}\` and \`{email}\` (assuming emails unique). \`{emp_id, name}\` is a super key but NOT candidate — \`name\` is dead weight.
+- **Primary key** = the one candidate key you actually pick → \`emp_id\`. UNIQUE + NOT NULL.
+- **Alternate key** = the runner-up candidates → \`email\`.
+- **Foreign key** = a column that points at another table's PK (dept → DEPT table). CAN be NULL; the column it points to MUST be unique.
+- REMEMBER: *"Super is the family, candidates are the minimal members, primary is the chosen one, alternate are the leftovers."*
+
+**Integrity constraints = rules the DB enforces automatically:**
+- Entity integrity — PK can never be NULL (a row with no identity isn't a row)
+- Referential integrity — an FK must point at a real PK or be NULL (can't put an employee in a department that doesn't exist)
+- Domain constraint — values inside the column's allowed set (age can't be -5)
+- \`ON DELETE CASCADE\` (delete the parent → children die too) vs \`SET NULL\` vs \`RESTRICT\` — MCQ territory.
+
+### 3. Functional Dependencies & Closure
+
+**Plain words:** \`X → Y\` means *"if you know X, you know Y."* In table terms: **whenever two rows agree on X, they must agree on Y.**
+
+**See it:**
+| sid | course | instructor |
+|---|---|---|
+| S1 | DBMS | Rao |
+| S2 | DBMS | Rao |
+| S3 | OS | Iyer |
+
+Here \`course → instructor\` holds (every DBMS row says Rao). \`sid → course\` does NOT (S1's sid is unique, nothing repeats to prove it — but the real test is: two S1 rows could legally have different courses). "Trivial" FD = Y is a subset of X (\`{A,B}→A\`) — always true, never interesting.
+
+**Attribute closure (X)⁺ = everything X determines — THE tool for candidate keys:**
+1. Attributes that appear ONLY on left sides of FDs (or nowhere) → they MUST be in every key (nothing can produce them).
+2. Grow a set: write X, keep adding whatever its FDs produce, until you have all attributes.
+- **Worked example:** FDs \`A→B\`, \`B→C\`, attributes {A,B,C,D}: start with A → A gives B → B gives C → A⁺={A,B,C}. D appears on no right side → D must be in the key. Try AD: AD⁺={A,B,C,D} ✓ → **AD is the candidate key** (full solve in Ex 1).
+- **Prime attribute** = belongs to SOME candidate key — needed for the 3NF rule below.
+
+### 4. Normalization — "which normal form?" questions
+
+**Plain words:** normalization = rules for splitting fat tables into smaller ones so data isn't repeated. Repeated data = three classic disasters: **insertion anomaly** (can't record "new dept HR" until it has an employee), **deletion anomaly** (firing the last HR employee erases the dept), **update anomaly** (dept phone stored 100 times → change it 100 times, miss one → inconsistent).
+
+**See each NF as a broken table:**
+
+**1NF — every cell holds ONE value.** Violation:
+| sid | phones |
+|---|---|
+| S1 | 90001, 90002 | ← list in a cell = NOT 1NF
+
+Fix: one phone per row (or a PHONES table).
+
+**2NF — 1NF + no partial dependency.** Only bites when the PK is *composite* (multiple columns). A non-key column must depend on the WHOLE key, not a piece of it.
+| sid | course | sname | ← key {sid,course}; but sname needs only sid
+Fix: split → STUDENT(sid, sname) + ENROLL(sid, course). *Think: "don't let part of a composite key carry facts alone."*
+
+**3NF — 2NF + no transitive dependency.** A non-key column must not depend on ANOTHER non-key column.
+| eid | dept | dept_loc | ← eid→dept and dept→dept_loc, so eid→dept_loc transitively
+Fix: EMP(eid, dept) + DEPT(dept, dept_loc). *Formal rule: every FD X→Y needs X a superkey OR Y prime.*
+
+**BCNF — the strict version: for EVERY non-trivial FD X→Y, X must be a superkey. No exceptions.** 3NF tolerates a non-superkey LHS when Y is prime; BCNF doesn't. Cost: **BCNF can lose dependency preservation; 3NF never does** (classic MCQ line).
+
+**The chain:** each NF adds a rule — 3NF ⊃ 2NF ⊃ 1NF (can't be 3NF without 2NF). **Lossless join** = split tables must rebuild the original exactly (required); **dependency preserving** = all FDs still checkable inside the pieces (desired).
+
+**Quick decision tree for "which NF?":** non-atomic cell? → violates 1NF. Part-of-key dependency? → only 1NF. Non-key→non-key FD? → only 2NF. FD whose LHS isn't a superkey but RHS is prime? → 3NF, not BCNF. Every LHS a superkey? → BCNF.
+
+### 5. Relational Algebra & Tuple Calculus
+
+**Plain words:** relational algebra is the *math underneath SQL* — operators that take tables and return tables. You only need symbol → meaning:
+
+| Symbol | Name | Means | SQL cousin |
+|---|---|---|---|
+| σ | select | pick ROWS by condition | \`WHERE\` |
+| π | project | pick COLUMNS | \`SELECT col\` |
+| ⋈ | join | combine tables on a condition | \`JOIN\` |
+| ∪ ∩ − | set ops | union, intersection, difference | \`UNION/INTERSECT/EXCEPT\` |
+| × | cartesian product | every row × every row | \`CROSS JOIN\` |
+| ÷ | division | "for ALL" queries | (no direct SQL — the trick) |
+
+- **Division ÷ is the MCQ favourite:** "students enrolled in ALL courses" is exactly division — \`ENROLLS ÷ COURSES\`.
+- **Natural join** ⋈ matches same-named columns automatically and keeps only one copy of the join column.
+- **Tuple relational calculus** = the *declarative* cousin ("what to get", not "how to get it") — \`{t | P(t)}\`. Domain calculus = same idea with column variables. Recalled pattern: "which is non-procedural?" → **tuple calculus**.
+
+### 6. File Organization & Indexing (B/B+ trees — named in the syllabus)
+
+**Plain words:** without an index, finding row #5,000,000 means reading all 5 million — a "full table scan." An index is a separate sorted structure that points to rows, like a book's index pointing to pages.
+
+- **Ordered index types:** *primary* (index on the sorted key field), *clustered* (index on a sorted NON-key field — groups equal values), *secondary* (index on an unordered field — needs a dense index: one entry per record).
+- **Dense** = an index entry for every record · **sparse** = one per disk block (only possible when data is sorted).
+- **Clustered index = the table's physical row order follows the index → only ONE per table.** Non-clustered = a side structure with pointers → many allowed. *Think: a dictionary is "clustered" on the word; its index of topics is "non-clustered."*
+
+**B-Tree vs B+ Tree — the exam pair:**
+- B-Tree: keys AND record-pointers live in every node.
+- **B+ Tree: record-pointers live ONLY in the leaves, and the leaves are linked like a chain.** Internal nodes are pure signposts → more keys fit per node → shorter, faster tree; and following the leaf-chain makes **range queries** ("salary 50k–80k") trivial — find 50k, walk right.
+- *That's why every real DBMS uses B+ trees.* Real recalled Q: "data structure for database indexing" → **B-Tree (B+ family)**.
+- **Hash index:** perfect for \`=\` lookups O(1), useless for ranges (nothing is sorted) — another recalled pattern.
+
+### 7. Transactions & Concurrency
+
+**Plain words:** a *transaction* = a unit of work that must behave as one indivisible action. The classic story: transferring ₹500 = debit A + credit B. If the power dies between them, money vanishes — transactions exist so that can't happen.
+
+**ACID — on that transfer:**
+- **A**tomicity — both updates happen or neither does (ROLLBACK undoes partial work)
+- **C**onsistency — the DB moves only valid-state → valid-state (total money conserved)
+- **I**solation — two simultaneous transfers behave as if they ran one-after-another
+- **D**urability — once COMMIT says "done", even a crash can't undo it (log/WAL)
+- REMEMBER: *"All Complete Isolated Data persists."*
+
+**Concurrency problems — see each as a tiny timeline:**
+- **Dirty read** — T2 writes X=50 (not committed), T1 reads 50, T2 rolls back → T1 believed a value that never officially existed. *Read = uncommitted.*
+- **Non-repeatable read** — T1 reads X=10; T2 UPDATEs X=20 and commits; T1 reads X again → 20. Same query, different answer. *Changed, not newborn.*
+- **Phantom read** — T1 runs \`WHERE age>30\` → 5 rows; T2 INSERTs an age-40 row; T1 re-runs → 6 rows. A new ROW appeared, not a changed value. *Phantom = newborn row.*
+- REMEMBER: *"Dirty = uncommitted, non-repeatable = changed, phantom = newborn."*
+
+**Isolation levels (weakest → strongest) — memorize the ladder:**
+\`Read Uncommitted\` (allows dirty) → \`Read Committed\` (stops dirty) → \`Repeatable Read\` (stops non-repeatable) → \`Serializable\` (stops everything, incl. phantom). MCQs ask "which level prevents X?" — walk the ladder.
+
+**Serializability:** a schedule is correct if it's equivalent to running the transactions in some serial order. Test: draw a **precedence graph** (arrow T1→T2 when T1's conflicting op comes first); **a cycle = NOT serializable.**
+
+**Recoverable < cascadeless < strict** (strictness order is an MCQ): recoverable = nobody commits before the transactions they read uncommitted data from commit; cascadeless = only ever read committed data; strict = read AND write only committed values.
+
+**Locks:** **S**hared (for reading — many can hold S together) vs e**X**clusive (for writing — nobody else can hold anything). S+S compatible; X with nothing.
+- **2PL (two-phase locking):** growing phase (take locks, release none) → shrinking phase (release, take none). Guarantees serializability but CAN deadlock. **Strict 2PL** = keep X locks until commit → also cascadeless.
+- **Deadlock** = circular waiting (T1 holds A wants B; T2 holds B wants A). Detect via a cycle in the *wait-for graph*. Timestamp fixes: **wait-die** (older transaction waits; younger is killed — polite, non-preemptive) vs **wound-wait** (older KILLS younger — aggressive, preemptive). "Wound" = the elder wounds the young.
+
+---
+
+## PART 2 — SQL QUERIES (10% — the most practical section)
+
+### Execution order — the mental model (learn this and every output question gets easy)
+
+SQL is written in one order but EXECUTED in another:
+\`\`\`
+FROM (incl. JOINs) → WHERE (filter rows) → GROUP BY → HAVING (filter groups)
+→ SELECT (incl. aggregates) → DISTINCT → ORDER BY → LIMIT/OFFSET
+\`\`\`
+**Why this matters:** aggregates exist only *after* GROUP BY — so \`WHERE\` can't see them (WHERE runs earlier). That's the entire reason **HAVING exists**: WHERE filters *rows*, HAVING filters *groups*. Every WHERE-vs-HAVING MCQ is this one fact.
+REMEMBER: **"Freddie Wore Green Hats, So Dad Ordered Lunch."**
+
+### SELECT & filtering — small rules that are direct questions
+- \`WHERE col IS NULL\` — never \`= NULL\`. NULL means "unknown," and even \`NULL = NULL\` evaluates false → classic trap.
+- \`BETWEEN a AND b\` is INCLUSIVE of both ends.
+- \`LIKE '%x'\` = ends with x · \`_\` = exactly one wildcard char.
+- \`NOT IN\` with a NULL inside the list → returns NOTHING (NULL poisons the comparison).
+- \`DISTINCT\` removes duplicate rows.
+
+### Joins — what survives
+
+| Join | Returns |
+|---|---|
+| INNER | only rows that match on both sides |
+| LEFT [OUTER] | ALL left rows + matches (NULLs fill the right side) |
+| RIGHT [OUTER] | ALL right rows + matches |
+| FULL [OUTER] | everything from both sides |
+| CROSS | cartesian product (m×n rows) |
+| SELF | table joined to itself (employee ↔ manager) |
+| NATURAL | auto-matches same-named columns, drops the duplicate column |
+
+- **Count the preserved side:** LEFT JOIN with 5 left rows, only 3 matching → result still has **5 rows** (left always survives). That's the whole "how many rows?" trick.
+- Trap: a \`WHERE\` condition on the right-side column of a LEFT JOIN silently throws away the NULL-padded rows → converts it back to an INNER JOIN. Keep right-side conditions in \`ON\` instead.
+
+### Aggregates & GROUP BY
+- \`COUNT(*)\` counts ALL rows (NULLs included) · \`COUNT(col)\` skips NULLs · \`COUNT(DISTINCT col)\` = unique non-nulls — the difference is asked every cycle.
+- \`SUM\`/\`AVG\`/\`MAX\`/\`MIN\` silently skip NULLs (AVG of {10, NULL} = 10, not 5).
+- Rule: every non-aggregated column in SELECT must appear in GROUP BY.
+\`\`\`sql
+SELECT dept, COUNT(*) FROM emp
+WHERE salary > 30000          -- row filter FIRST
+GROUP BY dept
+HAVING COUNT(*) > 5;          -- group filter SECOND
+\`\`\`
+
+### Nested queries & set ops
+- \`IN\` — value is in the subquery's list · \`EXISTS\` — the subquery returns ≥1 row · \`ANY/SOME\` — true if it beats ANY member · \`ALL\` — true only vs EVERY member.
+- **Correlated subquery** references the outer row → re-runs once PER OUTER ROW (slower, more powerful). \`EXISTS\` questions are usually correlated.
+- \`UNION\` dedupes · \`UNION ALL\` keeps duplicates (faster) · \`INTERSECT\` common rows only · \`EXCEPT\`/\`MINUS\` = left minus right. Column counts & types must match.
+- Classic output trap: \`UNION\` of 3+3 rows sharing 1 identical value → **5 rows, not 6**.
+
+### DML / DDL / DCL / TCL — the classification MCQ
+- **DDL** (structure): CREATE, ALTER, DROP, TRUNCATE, RENAME — auto-commit, can't roll back.
+- **DML** (data): INSERT, UPDATE, DELETE (SELECT is sometimes its own DQL) — transactional, roll-back-able.
+- **DCL** (permissions): GRANT, REVOKE.
+- **TCL** (transactions): COMMIT, ROLLBACK, SAVEPOINT.
+- **DELETE vs TRUNCATE vs DROP (asked every cycle):**
+  | | DELETE | TRUNCATE | DROP |
+  |---|---|---|---|
+  | Removes | chosen rows | ALL rows | table + structure |
+  | WHERE? | yes | no | n/a |
+  | Type | DML, logged, rollback-able | DDL, fast, resets identity | DDL |
+  | REMEMBER | *"Delete picks rows, Truncate empties the box, Drop burns the box."* |
+
+### Views & misc
+- **View** = a stored query — a *virtual* table holding no data. **Materialized view** = the result physically stored → fast reads but needs refreshing.
+- \`WITH CHECK OPTION\` — blocks inserts/updates through the view that would violate the view's own WHERE.
+- \`ALTER\` ops: ADD / DROP / MODIFY column. \`UPDATE ... SET ... WHERE\` — forget the WHERE and you update EVERY row.
+- \`LIMIT n\` / \`FETCH FIRST n\` / \`TOP n\` = dialect variants for top-N.
+- **Nth highest salary (the classic):** \`SELECT DISTINCT sal FROM emp ORDER BY sal DESC LIMIT 1 OFFSET n-1\`, or correlated \`WHERE n-1 = (SELECT COUNT(DISTINCT s2) FROM emp WHERE s2 > sal)\` — reads "exactly n-1 salaries are bigger."
+- **Find duplicates:** \`GROUP BY col HAVING COUNT(*) > 1\`.
+
+---
+
+## Question types SEBI asks here (mapped to drills)
+1. **SQL output** — trace with execution order; watch COUNT variants, joins, NULLs.
+2. **"Which NF?"** — run the decision tree on the FDs.
+3. **Candidate key via closure** — left-only attributes first.
+4. **ACID / isolation-level scenarios** — dirty/non-repeatable/phantom matching.
+5. **Difference MCQs** — DELETE/TRUNCATE/DROP, WHERE/HAVING, clustered/non-clustered, B vs B+.
+6. **Real recalled:** "data structure for DB indexing" → B-Tree. "JSON→string in Python" → json.dumps() (cross-topic alert).
+
+## Drills (Days 1–6)
+- Day 1–2: keys + closure problems (5) + NF decision tree (5).
+- Day 3–4: hand-write 15 SQL — joins, group-by/having, nested, nth-highest, duplicates, self-join. Run them free at TrySQL (see Practice Links).
+- Day 5: indexing + transactions MCQs (GATE CS DBMS on GateOverflow — identical depth).
+- Day 6: Testbook chapter tests "DB Concepts" + "SQL Queries" — log every miss with the rule number.
+
+---
+
+## Worked Examples — 10 solved in exam pattern
+
+**Ex 1 — candidate key via closure.** R(A,B,C,D), FDs: A→B, B→C. Find the key.
+**Ans: AD.** A⁺={A,B,C} — D never appears on any right side, so D must be in EVERY key. AD⁺={A,B,C,D} covers all → AD is the candidate key. *(Rule: whatever no FD produces must be in the key.)*
+
+**Ex 2 — which normal form?** STUDENT(sid, sname, course, instructor), key={sid,course}, FD: sid→sname.
+**Ans: 1NF only — violates 2NF.** sname depends on PART of the composite key (sid alone). Fix: split into STUDENT(sid,sname) + ENROLL(sid,course,instructor). *(Rule: 2NF = no partial dependency on part of a composite key.)*
+
+**Ex 3 — transitive dependency → 3NF.** EMP(eid, dept, dept_loc), eid→dept, dept→dept_loc.
+**Ans: violates 3NF.** dept_loc depends on dept which depends on eid — a transitive chain. Fix: EMP(eid,dept) + DEPT(dept,dept_loc).
+
+**Ex 4 — SQL output.** \`SELECT dept, COUNT(*) FROM emp WHERE sal>50000 GROUP BY dept HAVING COUNT(*)>3;\`
+**Ans: departments having MORE THAN 3 employees who earn >50k.** Trap: HAVING filters groups AFTER grouping; WHERE filters rows BEFORE. Can't use WHERE for COUNT.
+
+**Ex 5 — JOIN row count.** emp has 10 rows (each with dept_id), dept has 3 rows, every dept_id matches.
+**Ans: INNER JOIN → 10 rows; CROSS JOIN → 30 rows.** Trap answer: inner join = 13 (that's a UNION-style guess).
+
+**Ex 6 — DELETE vs TRUNCATE vs DROP.** "Remove all rows fast, keep the table structure, no rollback needed?"
+**Ans: TRUNCATE.** DELETE removes row-by-row (logged, can rollback, WHERE allowed); TRUNCATE deallocates (fast, no WHERE); DROP removes the table itself.
+
+**Ex 7 — ER mapping.** A M:N relationship between STUDENT and COURSE — how many tables?
+**Ans: 3** (STUDENT, COURSE, + ENROLLS relationship table with both FKs). For 1:N, NO extra table — put the FK on the N (many) side.
+
+**Ex 8 — ACID identification.** "Either the whole transfer happens or nothing does" / "a committed change survives a crash."
+**Ans: Atomicity / Durability.** Map: all-or-nothing=A, valid-state-to-valid-state=C, concurrent-as-if-serial=I, survives-crash=D.
+
+**Ex 9 — index type.** "Queries are mostly range scans (salary BETWEEN x AND y) — B+ tree or hash index?"
+**Ans: B+ tree.** Hash indexes only support equality lookups; B+ trees keep data sorted → ranges work. Also: clustered index changes physical row order → only ONE per table.
+
+**Ex 10 — concurrency problem.** "T1 reads a value, T2 updates it, T1 re-reads and gets a different value."
+**Ans: non-repeatable read.** (Dirty read = read uncommitted data; phantom = re-query returns new ROWS.) Isolation fix: repeatable-read level or higher.
+`,"../../02_Phase1_Paper2_IT/Data_Analytics_Shell_DW/Notes.md":"# Data Analytics (Python/R) + Shell + Data Warehousing — Full Study Notes (20% combined)\n\n> **Official weightage:** Data Analytics Languages (Python/R) 10% · Data Warehousing 5% · Shell Programming 5%. Together = **a fifth of Paper 2** — and most candidates skip it, so these are cheap marks for you.\n>\n> **How SEBI tests it (real recalled):** Python slicing `abc[1:4]`, slicing time complexity O(k), triple-quoted multiline strings, `__init__`, `json.dumps()` returns `str`, pandas/DataFrame basics, shell variables, OLAP operations, star schema.\n\n**How to read:** every snippet below can be traced by hand — do it. Python questions are output-prediction: you only learn them by executing the code mentally line by line.\n\n---\n\n# PART A — PYTHON (the bulk of the 10%)\n\n## 1. Core data types — the recall table\n\n**Plain words:** Python gives you four built-in containers. The only questions that matter: *can you change it after creation (mutable)?* and *does it remember order?*\n\n| Type | Ordered? | Mutable? | Syntax | Use |\n|---|---|---|---|---|\n| `list` | yes | yes | `[1,2,3]` | general sequences |\n| `tuple` | yes | **no** | `(1,2,3)` | fixed records, dict keys |\n| `dict` | yes (insertion order, Py3.7+) | yes | `{'k':v}` | key→value maps |\n| `set` | no | yes | `{1,2,3}` | unique members, fast membership |\n| `str` | yes | **no** | `'abc'` | text |\n| `frozenset` | no | **no** | `frozenset()` | hashable set |\n\n- **See the mutability rule in action:**\n  ```python\n  l = [1, 2, 3];  l[0] = 9   # works → [9, 2, 3]\n  t = (1, 2, 3);  t[0] = 9   # TypeError — tuples can't change\n  s = 'abc';      s[0] = 'x' # TypeError — strings can't change either\n  ```\n- REMEMBER: **\"Lists change, tuples stay.\"** That's why `s[0]='x'` errors but `l[0]='x'` works — the classic MCQ.\n- dict keys must be *hashable* (immutable) → lists can't be keys, tuples can. `d[['a']] = 1` → TypeError.\n\n## 2. Slicing — SEBI's favourite Python question\n\n**Plain words:** `s[start:stop:step]` cuts a piece of a sequence. Two facts decide every MCQ: indexes start at **0**, and **stop is EXCLUSIVE** — `s[1:4]` grabs positions 1, 2, 3 (never 4).\n\n```python\ns = 'abcdef'\n#      012345   ← index positions\ns[1:4]   → 'bcd'      # real recalled Q — positions 1,2,3\ns[:3]    → 'abc'      # empty start = from the beginning\ns[::2]   → 'ace'      # every 2nd char\ns[::-1]  → 'fedcba'   # negative step = walk backwards → REVERSE (memorise)\ns[-1]    → 'f'        # negative index = count from the right\n```\n- Slicing a list of size k → **O(k)** time (it copies the elements — real recalled Q).\n- Multiline strings use **triple quotes `'''` or `\"\"\"`** (real recalled Q) — regular quotes can't span lines.\n\n## 3. Comprehensions, dicts, sets\n\n**Plain words:** a comprehension is a one-line for-loop that builds a container. Read `[x*x for x in range(5)]` as \"square each x in 0..4\" → `[0,1,4,9,16]`.\n- With a filter: `[x for x in l if x%2==0]` = \"keep only evens\" — the `if` acts as a gate.\n- dict version `{k: v for ...}`, set version `{...}` (same braces as dict but no colon).\n- dict methods: `.keys() .values() .items() .get(k, default)` (safe lookup — no error if missing) `.pop(k)`; `d['k']=v` adds or updates.\n- set ops: `|` union, `&` intersection, `-` difference, `^` symmetric difference; `.add() .remove()`; dedupe trick `list(set(l))`.\n\n## 4. Functions, classes, files\n\n- `def f(a, *args, **kwargs)` — `*args` scoops extra positional args into a tuple, `**kwargs` scoops keyword args into a dict. `f(1,2,3,x=4)` → args=(2,3), kwargs={'x':4}.\n- `lambda x: x*2` — a one-line anonymous function; used inside `map/filter/sorted(key=...)`.\n- `map(f, l)` applies f to everything · `filter(f, l)` keeps items where f is True · `zip(l1, l2)` pairs elements.\n- **Classes:** `__init__` = the constructor — runs automatically when you create an object (real Q). `self` = \"this object\" — Python makes you write it explicitly. A child class that redefines a parent's method → **the child's version wins** (real Q — overriding).\n- File I/O: `with open('f.txt','r') as f:` — modes `r w a r+ rb wb`; `read() readline() readlines()`; `with` auto-closes the file even on error — *that's the \"why `with`?\" MCQ answer*.\n- `json.dumps(obj)` → **str** (real Q); `json.loads(str)` → Python object. REMEMBER: dumps = \"dump to String\".\n\n## 5. pandas & data (the \"data analytics\" part)\n\n**Plain words:** a `DataFrame` = an Excel table in code (rows × labeled columns). A `Series` = a single column.\n\n- Read/write: `pd.read_csv() .to_csv() .read_excel() .read_json()` — \"importing and exporting data\" is a syllabus line.\n- **Selection — the loc/iloc distinction (asked):** `df['col']` picks a column; `df.loc[row_label, 'col']` selects by LABELS; `df.iloc[0:5, 1:3]` selects by POSITIONS (like slicing). loc = label, iloc = integer index.\n- Filtering: `df[df['sal'] > 50000]` keeps rows where the condition is True — a boolean mask.\n- Reshaping (syllabus keyword): `.groupby().agg() .pivot() .melt() .merge() .concat() .sort_values() .dropna() .fillna()` — know each name's job.\n- Inspection: `.head() .describe() .value_counts() .shape .dtypes`.\n- Charts: `matplotlib.pyplot` → `plt.plot() .bar() .hist() .scatter() .show()`; seaborn wraps it prettier (name-level).\n\n## 6. R (lighter coverage — a few Qs possible)\n- Vectors `c(1,2,3)`, `data.frame`, factors; `<-` is the assignment arrow; `sapply/lapply` apply functions; `ggplot2` for charts; `dplyr` verbs (`filter() select() mutate() group_by() summarise()`); `read.csv()`. Names + what each does is enough.\n\n## 7. Regex (syllabus line — know the symbols)\n\n**Plain words:** regex = a pattern language for matching text. `^[0-9]+$` reads as: start `^`, digit `[0-9]`, one-or-more `+`, end `$` → \"the whole string is digits only.\"\n\n| Symbol | Meaning | Symbol | Meaning |\n|---|---|---|---|\n| `.` | any char | `\\d` `\\w` `\\s` | digit / word char / space |\n| `*` `+` `?` | 0+ / 1+ / 0-or-1 | `^` `$` | start / end |\n| `[abc]` `[^abc]` | set / NOT-set | `{n,m}` | repeat range |\n| `()` | group | `|` | or |\n\n- Python: `re.match()` tries matching ONLY at string start; `re.search()` scans anywhere (the asked difference); `re.findall()` returns all matches; `re.sub()` replaces.\n\n---\n\n# PART B — DATA WAREHOUSING (5%)\n\n## Core concepts\n\n**Plain words:** your daily systems (OLTP) record transactions one-by-one — fast, small, current. A **data warehouse** is a separate giant library where all that data gets dumped, cleaned, and organized for ANALYSIS — big slow questions over years of history. That's **OLAP**.\n\n| OLTP | OLAP |\n|---|---|\n| current data, small transactions | historical, complex analysis |\n| normalized, many small writes | denormalized, bulk reads |\n| fast single-row ops (a withdrawal) | aggregations over millions (yearly trends) |\n\n- **ETL** = Extract → Transform → Load — pull data out, clean/shape it, store it in the warehouse. **ELT** = load first, transform inside (modern cloud style). The ORDER is the MCQ.\n- **Data mart** = a smaller warehouse for ONE subject/department (sales mart, HR mart) — \"DW for a department.\" Direction gets tested: mart ⊂ warehouse.\n- **Metadata** = data about data (schemas, definitions, lineage) — literally a syllabus keyword.\n\n## Schemas — the diagram questions\n\n**Plain words:** a warehouse stores business events in a **FACT** table (numbers: sales amount, qty) and the context in **DIMENSION** tables (who/what/when/where: product, store, date).\n\n- **Star schema:** one central fact table with dimensions DIRECTLY attached — looks like a star. Dimensions stay denormalized (wide) → fewer joins, faster.\n- **Snowflake schema:** dimensions split further into sub-tables (product → category → department) — the star's \"points\" branch. Saves space, costs more joins.\n- REMEMBER: *\"Star = flat dimensions around the fact; snowflake = the points of the star split further.\"*\n\n## Data cube & OLAP operations (recalled pattern — know all five)\n\n**Plain words:** picture sales data as a 3-D cube — product × region × time. Every OLAP operation is just a way of looking at the cube:\n\n- **Roll-up** — zoom OUT to coarser level (city → country, month → year) — climb the hierarchy, more aggregation.\n- **Drill-down** — zoom IN to finer detail (year → quarter → month) — the opposite.\n- **Slice** — fix ONE dimension (sales where year=2024) → cut one \"slice\" off the cube.\n- **Dice** — fix MULTIPLE dimensions (year=2024 AND region=West) → a smaller sub-cube.\n- **Pivot/rotate** — swap rows↔columns — same data, different viewpoint.\n- REMEMBER: *\"Roll-up climbs the hierarchy, drill-down digs into it, slice picks one layer, dice picks a box.\"*\n\n## Data models & misc\n- Fact table = numeric measures + foreign keys; dimension = descriptive context.\n- **Slowly Changing Dimensions (SCD):** how to handle a customer's changed city — Type 1 overwrites (no history), Type 2 adds a new row (full history), Type 3 adds a column (last value only). Occasional MCQ.\n- Data cleaning (missing/dupes/outliers), transformation (formats, aggregations), loading (full vs incremental) — the ETL sub-steps are the syllabus itself.\n\n---\n\n# PART C — SHELL PROGRAMMING (5%)\n\n## Essentials — the likely-asked lines\n\n**Plain words:** a shell script is a text file of terminal commands run top-to-bottom. The odd bits exams probe are its special variables and quoting rules.\n\n- **Shebang** `#!/bin/bash` — first line, tells the OS which interpreter to use.\n- Variables: `x=10` — **NO spaces around `=`** (`x = 10` fails — classic trap); use it as `$x` or `${x}`.\n- Special variables (memorise the set): `$0` script name · `$1 $2…` arguments · `$#` arg count · **`$?` last command's exit code — 0 = success** (THE most-asked) · `$$` PID · `$@` all args.\n- Command substitution `$(cmd)` or backticks — runs a command and captures its output into a variable: `files=$(ls)`.\n- **Quotes:** `\"$x\"` expands the variable; `'$x'` prints the literal text `$x` — the difference is asked.\n- Conditionals: `if [ \"$x\" -gt 5 ]; then … fi` — numeric compares use FLAGS: `-eq -ne -lt -le -gt -ge`; string compares `= != -z`(empty) `-n`; file tests `-f -d -e -r -w -x`.\n- Loops: `for i in 1 2 3; do … done` · `while [ cond ]; do … done` · `until`.\n- Arithmetic: `$((a + b))` or `expr`.\n- **The core toolset — know each one's job:** `grep` finds matching LINES · `sed` edits streams (`sed 's/old/new/'` substitutes) · `awk` processes COLUMNS (`awk '{print $1}'`) · `cut -d: -f1` cuts fields · `sort` `uniq -c` `wc -l` count/sort. *One-line rule: grep=find lines, sed=substitute text, awk=pick columns.*\n- **Pipes `|`** chain stdout→stdin — an assembly line: `cat log | grep ERROR | wc -l` = \"how many ERROR lines\". `>` overwrite · `>>` append · `2>` redirect errors · `<` input.\n- Permissions: `chmod 755` → rwx r-x r-x (r=4, w=2, x=1 summed per owner/group/other); `chmod 644` = rw-r--r--; octal math is the MCQ. (Full detail in the OS notes.)\n- `cron` schedules jobs; `export VAR` makes a variable visible to child shells.\n\n## Tiny script archetypes they test\n- Sum 1..n loop, file-exists check `[ -f name ]`, word count `wc -w`, print args `$@`.\n- \"What does `echo $?` show after a successful command?\" → **0**.\n\n---\n\n## Real recalled cross-topic Qs (in this file's scope)\n- Python slice `abc[1:4]` → `'bcd'` · slicing O(k) · triple-quote multiline · `__init__` · child method wins · `json.dumps()` → `str`.\n- B-Tree for DB indexing (DBMS notes), adjacency matrix for dense graphs (DSA notes) — mains mixes topics; revise all tables together.\n\n## Drills (Day 26)\n- Python: trace 15 slicing/dict/comprehension snippets; write json + file + pandas snippets by hand.\n- DW: draw star vs snowflake from memory; drill the 5 OLAP ops.\n- Shell: memorize variable/`$?`/permission/loop basics + what grep/sed/awk each do.\n- Testbook chapter tests: \"Data Analytics\" + \"Shell Programming\" + \"Data Warehousing\".\n\n---\n\n## Worked Examples — 10 solved in exam pattern\n\n**Ex 1 — Python slicing.** `s = \"PROGRAM\"; s[1:4]`, `s[::2]`, `s[::-1]`?\n**Ans: `ROG`, `PORM`, `MARGORP`.** slice = [start:stop:step]; stop is EXCLUDED. `::-1` = reversed — the classic \"reverse a string\" answer.\n\n**Ex 2 — list comprehension.** `[x*x for x in range(5) if x % 2]`?\n**Ans: `[1, 9]`.** range(5)=0..4; odd x only (x%2 is truthy → keeps 1 and 3) → 1² and 3².\n\n**Ex 3 — mutability trap.** `t = (1, 2, 3); t[0] = 9` — what happens?\n**Ans: TypeError — tuples are immutable.** Lists mutate, tuples and strings don't. \"Which is immutable?\" is the recurring MCQ.\n\n**Ex 4 — pandas.** `df[df['sal'] > 50000]['name']` — what does it return?\n**Ans: names of rows where sal > 50000.** Boolean filter inside brackets; second bracket picks the column. `groupby('dept')['sal'].mean()` = average salary per department — the workhorse pattern.\n\n**Ex 5 — shell variables.** `echo $?` after a successful command? What are `$0`, `$1`, `$#`?\n**Ans: 0 (exit status — 0 = success, non-zero = failed); script name; first argument; argument count.** `$?` is THE most-asked shell variable.\n\n**Ex 6 — right command for the job.** \"Print only the 2nd column of a file / replace 'old' with 'new' / find lines containing ERROR.\"\n**Ans: `awk '{print $2}'` / `sed 's/old/new/'` / `grep ERROR`.** awk=columns, sed=substitute, grep=find lines.\n\n**Ex 7 — OLAP operation.** \"Analyst zooms from yearly sales → quarterly → monthly\" vs \"pulls out just the Electronics category\" vs \"swaps rows and columns.\"\n**Ans: drill-down / slice / pivot (rotate).** Up = roll-up (aggregate), down = drill-down (detail), slice = one dimension fixed, dice = sub-cube, pivot = rotate view.\n\n**Ex 8 — star vs snowflake.** \"Dim tables further normalized into sub-tables — which schema? Denormalized single-level dims — which?\"\n**Ans: snowflake / star.** Star = denormalized (fewer joins, more storage); snowflake = normalized (saves space, more joins).\n\n**Ex 9 — ETL order.** \"Data pulled from sources, cleaned & converted, stored in warehouse — name the stages.\"\n**Ans: Extract → Transform → Load.** A data MART = smaller warehouse for one department (subset of warehouse — direction gets tested).\n\n**Ex 10 — regex.** `^[0-9]+$` — what does it match?\n**Ans: strings that are entirely digits.** `^`=start, `[0-9]`=digit class, `+`=one or more, `$`=end. `.*` = anything.\n","../../02_Phase1_Paper2_IT/Data_Structures_Algorithms/Notes.md":`# Data Structures & Algorithms — Full Study Notes (10% Paper 2 · ~55% of Mains PYQs)
+
+> **Official syllabus (Paper 2):** tree & graph traversals · connected components · spanning trees · shortest paths · hashing · sorting · searching · design techniques (greedy, DP, divide-and-conquer).
+>
+> **Why this file is huge:** it's only 10% of Phase-1 Paper 2, but memory-based Mains PYQs show **~55% of Phase-2 IT questions come from here** (sorting, trees, graphs, hashing). Every hour spent here pays twice — once in Phase 1, again in Phase 2 where it's 2/3 of your final score.
+
+**How to read:** every structure is a physical thing — array = a row of numbered boxes, linked list = a treasure hunt, stack = a pile of plates, queue = a ticket line, hash table = a locker wall. Learn the picture first, then the table of facts.
+
+---
+
+## PART 1 — COMPLEXITY & BIG-O
+
+**Plain words:** Big-O answers "if my input doubles, how much slower does the code get?" — the worst-case growth curve. You drop constants and small terms because for big n they don't matter: O(2n+100) = O(n) — at n=1,000,000, doubling is doubling.
+
+- **The ladder (memorise cold):** O(1) < O(log n) < O(√n) < O(n) < O(n log n) < O(n²) < O(2ⁿ) < O(n!).
+- **See the loop rules:**
+  \`\`\`python
+  for i in range(n):          # n steps → O(n)
+  for i in range(n):
+      for j in range(n//2):   # n × n/2 steps → still O(n²) — constants die (real Q)
+  i = n
+  while i > 1: i //= 2        # halves each time → O(log n)
+  i = 1
+  while i < n: i *= 2         # doubles each time → O(log n)
+  \`\`\`
+- **Recurrences:** T(n) = 2T(n/2) + O(n) → **merge sort = O(n log n)** — splitting in half + linear merge work = n log n (real recalled Q — know this recurrence by sight).
+- Binary search halves the space each step → O(log n). Naive recursive Fibonacci recomputes → O(2ⁿ).
+- Ω = best case, Θ = tight bound (both asked interchangeably).
+
+---
+
+## PART 2 — LINEAR STRUCTURES
+
+### Arrays — a row of numbered boxes
+**Plain words:** contiguous memory — every element sits shoulder-to-shoulder, so jumping to \`a[i]\` is instant math (\`base + i×size\`) → **O(1) access** (real Q). The price: inserting in the middle means shoving everyone down → O(n).
+- \`a[i]\` ≡ \`*(a+i)\`; \`a[3][4]\` third element of first row = \`a[0][2]\` — zero-indexed (real Q).
+
+### Linked List — a treasure hunt
+**Plain words:** nodes scattered in memory, each holding data + a pointer to the next. To find node 50 you follow the chain → O(n) search (no random access). But inserting at the head means just rewiring one pointer → **O(1)** (real Q).
+- Singly (next) / doubly (next + prev — backward traversal, more memory) / circular.
+- Slow-fast pointer tricks: fast moves 2×, slow lands on the middle; if they ever meet, there's a cycle (Floyd's).
+
+### Stack (LIFO) & Queue (FIFO)
+- **Stack = a pile of plates:** last one placed comes off first — \`push, pop, peek\` (real Q). Wherever "undo" or "go back" logic exists → stack: function calls/recursion, infix→postfix conversion, bracket matching, **DFS** (real Q).
+- **Queue = a ticket line:** first in, first served — \`enqueue, dequeue, front\` (real Q). Wherever "serve in arrival order" exists → queue: **BFS**, CPU scheduling, buffers. Java's \`LinkedList\` implements Queue (real Q).
+- **Infix→postfix (real Q):** scan left→right; operands go straight to output; on an operator → **pop while stack-top has ≥ precedence**, then push; \`(\` pushes, \`)\` pops until \`(\`.
+- Priority queue = a heap underneath. Deque = insert/delete at both ends.
+
+---
+
+## PART 3 — HASHING (recalled heavily)
+
+**Plain words:** a hash table is a wall of numbered lockers. A hash function maps each key → a locker number → average **O(1) insert/search** (real Q: best-case search = O(1)). The problem: two keys can map to the SAME locker — a **collision** — and how you handle it is the exam question.
+
+- **Separate chaining** — each locker holds a **linked list** of whatever landed there (real Q). Load factor α = n/m (items ÷ slots) — **can exceed 1** (real Q — chains just grow).
+- **Open addressing** — keep everything in the table; if your slot's taken, probe for the next free one: linear probing (i+1, i+2… creates primary clustering — long runs of taken slots), quadratic (i² jumps → secondary clustering), double hashing (best spread). Load factor must stay < 1 or there's no free slot to find.
+- **Why hash tables are bad at range queries:** they maintain no order — "all keys between 100 and 200" means scanning everything → O(n) (real Q — that's why databases use B+ trees).
+- Good hash = uniform spread; \`h(k) = k mod m\` with prime m is the classic choice.
+
+---
+
+## PART 4 — TREES (the recalled-PYQ goldmine)
+
+**Plain words:** a tree = a hierarchy — one root, children below, no cycles. A binary tree caps every node at 2 children.
+
+### Terminology & formulas (memorise — 4+ real Qs from here)
+- Binary tree with N nodes → **N−1 edges** (every node except root has exactly one parent — real Q).
+- Max nodes in a binary tree of height h = **2^(h+1) − 1** (a perfect tree — real Q, exact phrasing).
+- Min height with n nodes = ⌊log₂ n⌋; a complete tree packs nodes left-to-right.
+- **Strict/full binary tree** (every node has 0 or 2 children): leaves L → total nodes = **2L − 1**. Real Q: 8 leaves → **15 nodes**.
+- **Traversals — learn on one tree:**
+  \`\`\`
+        A              preorder  A B D E C   (Root→L→R — used to COPY trees)
+       / \\             inorder   D B E A C   (L→Root→R — SORTED order in a BST!)
+      B   C            postorder D E B C A   (L→R→Root — used to DELETE trees: real Q)
+     / \\               level     A B C D E   (BFS with a queue)
+    D   E
+  \`\`\`
+- **BST rebuild drill (real Q — verbatim SEBI pattern):** given preorder of a BST \`16, 11, 13, 12, 17, 20, 21\`, find postorder. Method: first element = root (16); everything < 16 goes left \`{11,13,12}\`, everything > 16 goes right \`{17,20,21}\`; recurse inside each; then read postorder → \`12, 13, 11, 21, 20, 17, 16\`. **Practice this — it's a verbatim pattern.**
+
+### BST — binary search tree
+Left < node < right at every node → an inorder walk always yields sorted order. Search/insert/delete O(h): O(log n) when balanced, O(n) when skewed — sorted input \`1,2,3,4,5\` degenerates into a leaning list (why self-balancing trees exist).
+
+### AVL (self-balancing BST)
+**Plain words:** a BST that rotates itself back into balance whenever any node gets too lopsided.
+- **Balance factor** = height(left) − height(right) ∈ **{−1, 0, +1}** at EVERY node (real Q: "balance factor −1/0/1" → AVL).
+- Fix violations by rotation: LL → right rotate; RR → left rotate; LR → left+right; RL → right+left.
+- Height stays ~1.44·log₂(n+2) → real Q: **max height with 12 nodes = 4**.
+
+### Heap
+- Complete binary tree stored in an array: parent at ⌊i/2⌋, children at 2i, 2i+1.
+- Min-heap → smallest always at root (priority queues, heapsort). Build-heap O(n); insert/extract O(log n).
+
+### B-Tree / B+ Tree
+- M-way search tree, all leaves at the same level → keeps DB indexes shallow → **real Q: B-Tree = the data structure for database indexing**. B+ stores data only in leaves + links them for range scans (full story in DBMS notes §6).
+
+---
+
+## PART 5 — GRAPHS (heavily recalled)
+
+**Plain words:** a graph = dots (vertices) and lines (edges) — cities and roads, people and friendships. Two questions dominate: how to walk it (BFS/DFS) and how to represent it.
+
+### Representation
+- **Adjacency matrix** — V×V grid marking edges — O(1) "is there an edge?" but V² space → **best for DENSE graphs** (real Q).
+- **Adjacency list** — each vertex lists its neighbours — V+E space → best for sparse graphs.
+
+### Traversals — two ways to walk the same map
+- **BFS** — a queue; visit the start, then ALL its neighbours, then THEIR neighbours — ripple outward level by level → finds shortest path in UNWEIGHTED graphs. (Real Q: "traversal unique for binary tree" → BFS/level-order.)
+- **DFS** — a stack/recursion; dive as deep as possible down one path, backtrack → cycle detection, topological sort, connected components.
+- **Connected components** (syllabus line) = how many separate "islands" exist — count restarts of DFS/BFS on unvisited vertices.
+
+### Graph formulas (3 real Qs!)
+- **Euler's formula for planar graphs: V − E + F = 2.** Real Q: E=30, F=20 → V = 2+E−F = **12**.
+- **k-regular graph** (every vertex has degree k): edges = n·k/2. Real Q: 5-regular, 6 vertices → 5×6/2 = **15 edges** — handshaking lemma in disguise.
+- Handshaking: Σdegrees = 2E (every edge touches two vertices). Complete graph Kₙ = n(n−1)/2 edges.
+- Indegree zero for ALL vertices → edgeless/null graph (real Q). Regular = every vertex same degree (real Q — definition).
+
+### Spanning trees & shortest paths
+- **MST** = the cheapest way to connect all cities — V−1 edges, minimum total weight.
+  - **Prim's** — grow one tree: repeatedly add the cheapest edge leaving the tree. **Greedy** (real Q: "Prim's works on which principle?").
+  - **Kruskal's** — sort ALL edges, add cheapest that doesn't close a cycle (union-find). Greedy too.
+- **Dijkstra** — shortest path from ONE source, greedy — **no negative weights allowed** (greedy can't revisit decisions). O((V+E) log V) with a heap.
+- **Bellman-Ford** — the fix for negative edges — relaxes every edge V−1 times; also detects negative cycles. DP-flavoured.
+- **Floyd-Warshall** — shortest paths between ALL pairs — triple loop, O(V³).
+- **Topological sort** — linear ordering of a DAG (finish prerequisites before dependents); DFS finish-times or Kahn's indegree-0 queue.
+
+---
+
+## PART 6 — SORTING & SEARCHING (the #1 recalled block)
+
+### The master sorting table (memorise entirely — multiple real Qs from it)
+
+**How each works in one line:** Bubble = swap wrong-order neighbours, biggest bubbles to the end. Selection = repeatedly pick the minimum, place it at front. Insertion = take each card, slip it into its place in the sorted hand. Merge = split in halves, sort each, zip together. Quick = pick a pivot, smaller left / bigger right, recurse. Heap = build a heap, keep extracting the root.
+
+| Algorithm | Best | Avg | Worst | Space | Stable? | Key idea |
+|---|---|---|---|---|---|---|
+| Bubble | O(n) | O(n²) | O(n²) | O(1) | Yes | swap adjacent if wrong order; biggest bubbles to end |
+| Selection | O(n²) | O(n²) | O(n²) | O(1) | No | pick min of unsorted, swap to front (real Q) |
+| Insertion | O(n) | O(n²) | O(n²) | O(1) | Yes | insert each element into sorted left part (real Q) |
+| Merge | O(n log n) | O(n log n) | O(n log n) | O(n) | **Yes** (real Q) | divide, sort halves, merge; T(n)=2T(n/2)+O(n) |
+| Quick | O(n log n) | O(n log n) | **O(n²)** | O(log n) | No | partition around pivot |
+| Heap | O(n log n) | O(n log n) | O(n log n) | O(1) | No | extract-min/max repeatedly |
+
+- **Stable** = equal elements keep their original order. Stable trio: Bubble, Insertion, Merge — "BIM keeps twins in line."
+- **Real recalled answers:** QuickSort worst case = O(n²) — when the pivot is always smallest/largest (sorted array + bad pivot). "Why merge over quick?" → **stability + guaranteed O(n log n)**.
+- **Bucket sort / radix sort** — near-linear O(n+k) **only when elements are uniformly distributed** (real recalled Q). Counting sort: O(n+k), needs a small integer range.
+
+### Searching
+- Linear: O(n), works anywhere. Binary: O(log n), SORTED arrays only (real Q: large sorted random-access array → binary).
+- **Interpolation search** — guesses position by value (like opening a dictionary near "S") — best for **uniformly distributed** data (real Q — this exact fact appeared twice!).
+- Jump search O(√n); exponential search = find the range, then binary inside.
+
+### String matching (in mains PYQs)
+- Naive O(nm). **KMP** precomputes the **LPS array** (longest proper prefix that's also a suffix) → skips re-matching → O(n+m) (real Q). **Rabin-Karp** = rolling hash → **used in plagiarism detection** (real Q).
+
+---
+
+## PART 7 — DESIGN TECHNIQUES (syllabus line, real Qs)
+
+| Technique | Idea | Examples | SEBI fact |
+|---|---|---|---|
+| **Divide & Conquer** | split → solve each → combine | merge/quick sort, binary search, Strassen | Strassen matrix mult = **O(n^log₂7) ≈ O(n^2.81)** (real Q) |
+| **Greedy** | take the locally best choice every step | Prim, Kruskal, Dijkstra, Huffman, fractional knapsack, activity selection | works only when the greedy-choice property holds |
+| **Dynamic Programming** | overlapping subproblems → cache answers (memo/table) | 0/1 knapsack, LCS, coin change, Fibonacci-memo | key property = **optimal substructure** (real Q — exact wording) |
+| **Backtracking** | try → hit dead end → undo & try next | N-queens, Sudoku, graph coloring | N-queens rule: no shared row/col/diagonal (real Q) |
+
+- REMEMBER DP vs D&C: *"D&C subproblems are independent; DP's overlap — that's why it caches."*
+- Greedy vs DP: greedy never revisits choices; DP explores & combines sub-solutions — when choices interact (0/1 knapsack: taking item A changes whether B is worth it), greedy fails and you need DP.
+
+---
+
+## Real recalled SEBI questions — the lock-list
+DFS→stack · queue ops (enqueue/dequeue/front) · stack ops (push/pop/peek) · infix-lower-precedence pop rule · LinkedList implements Queue · LL head-insert O(1) · binary search O(log n) · interpolation for uniform data · N×N/2 loops = O(N²) · merge sort recurrence 2T(n/2)+O(n) · merge sort stable · quicksort worst O(n²) when bad pivots · bubble sort avg O(n²) · Strassen O(n^2.81) · Rabin-Karp plagiarism · KMP LPS array · DP optimal substructure · N-Queen backtracking · separate chaining linked list · α=n/m can >1 · hash search O(1) · hash bad for ranges · B-tree = DB index · AVL balance {−1,0,1} · AVL 12 nodes → height 4 · tree nodes 2^(k+1)−1 · N nodes → N−1 edges · strict tree 8 leaves → 15 · postorder L-R-Root · preorder-BST→postorder rebuild · BFS unique for binary tree · adjacency matrix for dense graphs · 5-regular 6V → 15 edges · planar E=30 F=20 → V=12 · all-indegree-0 → null graph · regular = same degree · Prim's = greedy.
+
+## Question types + drills
+1. Complexity identification (loops, recurrences).
+2. Traversal outputs + BST reconstruction — do 5 preorder→postorder rebuilds.
+3. Sorting table MCQs (stability, worst case, space) — rewrite the table from memory weekly.
+4. Graph formula plug-ins (Euler, handshaking, regular) — 10 drills.
+5. Hashing concept MCQs.
+6. GATE CS DSA PYQs on GateOverflow + Testbook "Data Structures" chapter tests.
+
+---
+
+## Worked Examples — 10 solved in exam pattern
+
+**Ex 1 — best algorithm for nearly-sorted data.** "Array is already 90% sorted — fastest simple sort?"
+**Ans: Insertion sort — O(n) on nearly-sorted input.** Its inner while-loop barely moves when elements are near their place. Trap: picking quicksort (its worst case is sorted input with bad pivots).
+
+**Ex 2 — stability question.** "Which of these is stable: merge sort, quick sort, heap sort, selection sort?"
+**Ans: merge sort.** Equal elements keep their original order. Quick/heap/selection are all unstable. *(REMEMBER stable trio: Bubble, Insertion, Merge — "BIM keeps twins in line".)*
+
+**Ex 3 — BST traversal output.** Insert 50, 30, 70, 20, 40, 60, 80 into a BST. What does inorder give?
+**Ans: 20 30 40 50 60 70 80 — always sorted order for a BST.** That's the free mark: inorder(BST) = sorted. Preorder would start 50 30 20…
+
+**Ex 4 — AVL height bound.** "Min number of nodes in an AVL tree of height 3?"
+**Ans: 7** via N(h) = N(h-1) + N(h-2) + 1 with N(0)=1, N(1)=2 → N(2)=4, N(3)=7. Fibonacci-style — the reason AVL stays O(log n).
+
+**Ex 5 — infix to postfix.** Convert \`A + B * C\`.
+**Ans: \`A B C * +\`.** \`*\` has higher precedence → applied first in postfix. Parenthesized \`(A+B)*C\` → \`A B + C *\`. Different answers — precedence/parens decide, not left-to-right.
+
+**Ex 6 — postfix evaluation.** Evaluate \`2 3 4 * +\`.
+**Ans: 14.** Stack: push 2, push 3, push 4; \`*\` pops 4,3 → push 12; \`+\` pops 12,2 → 14. *(Rule: operands push, operators pop-two-compute-push.)*
+
+**Ex 7 — graph edge counts.** "Complete undirected graph on 10 vertices — how many edges? A tree on 10 vertices?"
+**Ans: 45 and 9.** Complete = n(n−1)/2; tree = n−1 always. (Also: connected graph needs ≥ n−1 edges.)
+
+**Ex 8 — heap extract.** Min-heap {2, 5, 9, 7, 6}: extract-min twice — what comes out, what remains at root?
+**Ans: removes 2 then 5; root becomes 6.** After each extraction the LAST element moves to root and sift-down restores the heap — trace the swaps, don't guess.
+
+**Ex 9 — Big-O of code.** \`for(i=1;i<n;i*=2)\` — how many iterations?
+**Ans: O(log n)** — i doubles each step: 1,2,4,8… reaches n in log₂n steps. *(Rule: multiply/shrink by a constant → log n; +k steps → linear.)*
+
+**Ex 10 — collision resolution.** Hash table size 10, hash(x)=x mod 10, linear probing. Insert 12, 22, 32.
+**Ans: slots 2, 3, 4.** All hash to slot 2 → probe forward to next free slot (22→3, 32→4). Clustering is the weakness linear probing is famous for.
+`,"../../02_Phase1_Paper2_IT/Emerging_Tech/Notes.md":`# Emerging Tech & Misc — Study Notes (supporting topic)
+
+> Cloud, big data, AI/ML, blockchain, payments — SEBI sprinkles 1–3 "awareness" questions. Pure recall — cheap marks. One focused read + the memory tables below is enough.
+
+**How to read:** these are buzzword questions — you only need to know what each thing IS plus one distinguishing fact. Every entry below gives the plain-English idea, then the exam hook.
+
+---
+
+## 1. Cloud Computing
+
+**Plain words:** cloud = renting computing over the internet instead of buying machines. The three service models are best seen as a **pizza**:
+- **IaaS** (Infrastructure) = buy the ingredients and cook at home — you rent raw machines/storage (AWS EC2), you manage everything above the metal.
+- **PaaS** (Platform) = they provide base + oven — you bring your code, they manage servers (Heroku, Google App Engine).
+- **SaaS** (Software) = pizza delivered — finished software you just use (Gmail, Salesforce).
+
+REMEMBER: *"IaaS = hardware, PaaS = platform, SaaS = software."* Each layer up = you manage less, they manage more.
+
+- **Deployment models:** public (shared provider) / private (one org only — banks) / hybrid (both — the standard MCQ scenario) / community (several orgs with shared concerns).
+- NIST traits: on-demand, elasticity (grow/shrink instantly), pay-per-use, resource pooling, measured service.
+- **Virtualization** = the tech underneath — one physical machine pretending to be many. Hypervisor Type-1 = bare-metal (runs on hardware); Type-2 = hosted (runs on an OS).
+
+## 2. Big Data
+
+**Plain words:** big data = datasets too large/fast/messy for normal databases. The "V's" describe what makes it "big":
+- **Volume** (how much), **Velocity** (how fast it arrives), **Variety** (how many shapes — text, video, logs) — the classic "3 V's" answer; Veracity & Value get added sometimes.
+
+- **Hadoop** = the classic big-data framework: **HDFS** stores (splits files across machines — NameNode is the master/index, DataNodes hold chunks) + **MapReduce** processes (batch jobs — map the work out, reduce results together). **Spark** = the faster successor — in-memory processing, handles streaming.
+- **NoSQL types — match DB→type:** key-value (Redis — a giant dictionary), document (MongoDB — JSON blobs), column-family (Cassandra/HBase — huge sparse tables), graph (Neo4j — relationships first).
+- **Data lake vs warehouse (the pair):** lake = raw data dumped as-is, schema decided when you READ (flexible, cheap); warehouse = cleaned structured data, schema decided when you WRITE (fast queries).
+
+## 3. AI / ML
+
+**Plain words:** machine learning = programs that learn patterns from data instead of being hand-coded with rules. Three learning styles:
+- **Supervised** — learn from LABELED examples (10,000 emails marked spam/not-spam → filter). Classification (categories) and regression (numbers).
+- **Unsupervised** — no labels, find structure yourself (cluster customers into segments — k-means).
+- **Reinforcement** — learn by reward/penalty like training a dog (game agents, robots).
+
+- **Key terms:** training/test split (never judge on the data it memorized), **overfitting** (99% on training, fails new data — memorized, didn't generalize), NLP (language), LLM/GenAI (text generators), hallucination (confident wrong answers).
+- **SEBI-flavored AI:** algo trading, market surveillance for manipulation, robo-advisory — plausible "application" MCQ.
+
+## 4. Blockchain
+
+**Plain words:** a shared ledger copied across many computers. Each new "block" of transactions contains the previous block's **hash** — so editing history breaks every link after it; tampering is instantly visible. That's the whole security idea.
+
+- **Consensus = how the network agrees on the next block:**
+  - **PoW** (Proof of Work) — miners race to solve a puzzle; energy-hungry (Bitcoin).
+  - **PoS** (Proof of Stake) — validators lock coins as collateral (Ethereum now).
+  - PBFT — for permissioned chains.
+- **Public** (Bitcoin — anyone joins) vs **private/permissioned** (Hyperledger — invited members only).
+- **Smart contracts** = self-executing code on the chain (Ethereum pioneered — Bitcoin doesn't have full ones).
+- **CBDC (Digital Rupee/e₹)** = RBI-issued digital currency — CENTRALIZED, not a cryptocurrency (a nice SEBI-adjacent trap).
+
+## 5. Payments & fintech (SEBI-adjacent recall)
+
+**Plain words:** India has several payment "rails" — they differ on speed and amount:
+
+- **UPI** — NPCI's instant 24×7 transfer using a VPA handle (name@bank); runs on IMPS rails.
+- **NEFT** — settles in batches (half-hourly windows, now 24×7) — not truly instant.
+- **RTGS** — real-time gross settlement — each transaction settles individually, instantly — built for BIG amounts (min ₹2 lakh).
+- **IMPS** — instant, 24×7, any amount.
+- REMEMBER: *"NEFT batches, RTGS settles big instantly, IMPS/UPI instant small."*
+- Also know: NACH (bulk debits/credits), AePS (Aadhaar-enabled payments), BBPS (bill payments), eKYC.
+- **Regulators map (asked):** RBI (payments, banks, monetary policy) · SEBI (securities markets) · IRDAI (insurance) · PFRDA (pensions) · NPCI (operates retail payment systems — an operator, NOT a regulator).
+
+## 6. Quick tech trivia (seen in papers)
+- IoT = sensors + connectivity (MQTT is its lightweight messaging protocol). Edge computing = process data near where it's generated. 5G traits: low latency, high bandwidth, network slicing.
+- Digital signature (crypto-based) vs generic e-signature; OTP-based eKYC.
+- Cyber terms live in the InfoSec notes — don't double-study.
+
+## Drills (Days 38–40 — light)
+- Write the 3 tables (cloud models, V's, payments) from memory; 10 recall MCQs on Testbook/GA overlap.
+
+---
+
+## Worked Examples — 8 solved in exam pattern
+
+**Ex 1 — cloud service model.** "AWS EC2 (rent virtual machines) / Google App Engine (deploy code, they manage servers) / Gmail."
+**Ans: IaaS / PaaS / SaaS.** *(REMEMBER the pizza analogy: IaaS = buy ingredients, PaaS = base+oven provided, SaaS = pizza delivered.)*
+
+**Ex 2 — NoSQL type.** "MongoDB / Redis / Cassandra / Neo4j — which category each?"
+**Ans: document / key-value / column-family / graph.** Pick by data shape: JSON docs→document, cache→key-value, huge columns→column, relationships→graph.
+
+**Ex 3 — ML type.** "Email labeled spam/not-spam learns a filter" / "customers grouped into segments with no labels" / "game agent learns by reward."
+**Ans: supervised (classification) / unsupervised (clustering) / reinforcement.** Labeled data = supervised; finding groups = clustering; reward/punishment = RL.
+
+**Ex 4 — overfitting.** "Model scores 99% on training data, 60% on new data — problem? Fix?"
+**Ans: overfitting — it memorized, didn't generalize.** Fixes: more data, regularization, simpler model, cross-validation, dropout.
+
+**Ex 5 — Hadoop component.** "Where does data live vs where is it processed in Hadoop?"
+**Ans: HDFS stores (NameNode = master metadata, DataNodes = workers) / MapReduce or Spark processes.** NameNode down = cluster blind — single point of failure in classic Hadoop.
+
+**Ex 6 — blockchain consensus.** "Bitcoin's miners solving puzzles vs Ethereum's validators staking coins."
+**Ans: Proof of Work / Proof of Stake.** Smart contract = self-executing code on the chain (Ethereum pioneered it — Bitcoin doesn't have full ones).
+
+**Ex 7 — payment rails.** "Instant 24×7 UPI transfer vs high-value ₹5 lakh corporate payment vs old batch-wise settlement."
+**Ans: UPI or IMPS (instant) / RTGS (≥₹2 lakh, real-time gross) / NEFT (was batch, now 24×7 but settles in half-hour windows).** UPI runs ON IMPS rails — NPCI operates both.
+
+**Ex 8 — deployment model.** "Bank's private cloud for core systems + public cloud for the marketing site."
+**Ans: hybrid cloud.** Private = one org only; public = shared provider; community = several orgs with shared concerns; hybrid = mix.
+`,"../../02_Phase1_Paper2_IT/Information_Security/Notes.md":`# Information & Cyber Security — Full Study Notes (10% of Paper 2)
+
+> **Official syllabus:** cyber attacks · software development security · network security · authentication · CIA triad (Confidentiality, Integrity, Availability) · network audit · systems audit.
+>
+> **How SEBI tests it:** name-the-attack MCQs, CIA-triad scenario matching, crypto type (symmetric/asymmetric/hash), authentication factors, security definitions. Mostly recall + scenario matching — high marks-per-hour.
+
+**How to read:** security is a vocabulary-heavy topic — the trick is that every attack/defense is just a story. Each entry below gives the story, then the one-line exam rule. When two things look alike (virus/worm/trojan, SQLi/XSS/CSRF), the "who gets hurt" question separates them.
+
+---
+
+## 1. CIA Triad — the foundation everything hangs on
+
+**Plain words:** security has exactly three goals. Picture your bank account:
+- **Confidentiality** — only YOU can see your balance (a hacker reading it = C broken)
+- **Integrity** — the balance is CORRECT (someone editing ₹500→₹50,000 = I broken)
+- **Availability** — the ATM actually works when you need it (DDoS knocking the bank offline = A broken)
+
+| | Means | Broken by | Protected by |
+|---|---|---|---|
+| **C**onfidentiality | only authorized eyes see it | eavesdropping, data breach | encryption, access control |
+| **I**ntegrity | data isn't tampered | MITM edits, unauthorized changes | hashing, digital signatures, checksums |
+| **A**vailability | service is up when needed | DDoS, ransomware, hardware failure | redundancy, backups, anti-DDoS |
+
+- **Scenario MCQ method:** ask "what got hurt?" — stolen data = C, altered data = I, service down = A. Real exam phrasing: "attacker floods the server so users can't access" → **Availability**.
+- The extended triad adds **Authenticity + Non-repudiation** (non-repudiation = you can't later deny doing it → digital signatures provide it).
+
+---
+
+## 2. Cyber Attacks — name every one (the highest-yield block)
+
+**How to learn this list:** don't memorise 30 definitions — learn the *axes* they differ on: how it spreads (virus needs a host file, worm doesn't), what it pretends to be (trojan = fake legit app), what channel it uses (email vs SMS vs voice), who's the target (everyone vs one person vs the CEO), and who it attacks (the DB vs users vs your session).
+
+### The must-know attack list
+
+| Attack | The story | Key sign |
+|---|---|---|
+| **Phishing** | mass fake emails/sites stealing credentials — "verify your SBI password" | look-alike login page |
+| **Spear phishing** | same trick but crafted for ONE target — uses your real name/role | personalized bait |
+| **Whaling** | spear phishing aimed at the CEO/CFO — the "big fish" | executive target |
+| **Vishing/Smishing** | phishing via voice call / SMS | phone channel |
+| **Virus** | malicious code that RIDES a host file — needs you to run it to spread | file-infecting, needs human |
+| **Worm** | self-replicates across the network ALONE — no host file, no human | spreads by itself |
+| **Trojan** | pretends to be legit software (a "free PDF tool") but carries a payload; doesn't self-replicate | disguise |
+| **Ransomware** | encrypts your files, demands payment — WannaCry is the famous one | locked files + ransom note |
+| **Spyware** | silently watches — keyloggers steal every keystroke | invisible monitoring |
+| **Adware** | floods you with ads, usually bundled with free apps | pop-ups |
+| **Rootkit** | hides deep in the OS (kernel/boot) for persistent admin access | invisible even to antivirus |
+| **Botnet/Zombie** | an army of infected machines remotely controlled — the workforce behind DDoS | thousands of devices acting together |
+| **DoS / DDoS** | flood a target until real users can't get in; DDoS uses a botnet so blocking one source fails | pure availability attack |
+| **MITM** | attacker secretly sits BETWEEN two parties relaying (and editing) messages — the postman who opens your letters | rogue Wi-Fi hotspot, ARP poison |
+| **SQL Injection** | typing SQL into an input field — \`' OR 1=1 --\` makes a login check always-true | attacks the DATABASE |
+| **XSS** | injecting a malicious script into a page OTHER USERS view — it runs in their browser, steals cookies | attacks USERS via the site |
+| **CSRF** | your logged-in browser gets tricked into firing a request you never meant (a hidden "transfer money" link on another site) | abuses YOUR logged-in session |
+| **Zero-day** | exploit of a bug nobody knew about — no patch exists yet | no defense available |
+| **Brute force** | try EVERY combination — slow but guaranteed | aaaa, aaab… |
+| **Dictionary attack** | try a list of common words/passwords | faster, might miss |
+| **Password spraying** | one common password ("Winter2026!") tried across MANY accounts — stays under lockout limits | few tries per account |
+| **Social engineering** | hacking the HUMAN — pretexting (fake story), baiting (infected USB left in parking lot), tailgating (following staff through a door) | weakest link = people |
+| **Shoulder surfing** | literally watching your screen/keyboard | physical |
+| **Watering hole** | infect a site your TARGETS visit, wait for them to come | ambush, not chase |
+| **Cryptojacking** | secretly mines crypto on your CPU | device slow, hot, fans loud |
+| **APT** | advanced persistent threat — patient, well-funded (often nation-state) intruders inside for months | long stealth campaign |
+| **Spoofing** | faking a source identity — fake sender IP, fake "From:" email, fake MAC | forged identity |
+| **ARP poisoning** | fake ARP replies telling the LAN "the gateway is at MY MAC" → traffic reroutes through attacker → enables MITM | gateway MAC hijack |
+| **DNS poisoning** | corrupting a DNS cache so the real domain resolves to a fake IP — you type the right URL, land on the wrong site | wrong IP served |
+| **Session hijacking** | stealing a session cookie/token = becoming you without needing your password | skips the login entirely |
+
+- REMEMBER virus vs worm vs trojan: *"Virus rides a file, Worm walks alone, Trojan wears a disguise."*
+- **SQLi vs XSS vs CSRF — the exam trio:** ask "who's the victim?" SQLi attacks the **database** (through inputs — defend with parameterized queries/prepared statements). XSS attacks **other users** (through the page — defend with input sanitization + output encoding + CSP). CSRF attacks **your logged-in session** (from another site — defend with anti-CSRF tokens + SameSite cookies).
+- REMEMBER password attacks: *"Brute tries everything, dictionary tries words, spraying tries one password everywhere."*
+
+---
+
+## 3. Cryptography — the second pillar
+
+### Symmetric vs Asymmetric — THE comparison question
+
+**Plain words — two kinds of locks:**
+- **Symmetric** = one shared key, like the single house key both roommates carry. Fast and great for bulk data — but there's a chicken-and-egg problem: how do you *give* your partner the key without a stranger intercepting the copy?
+- **Asymmetric** = a key PAIR. Think of a mailbox: the **public key** is the mail slot — anyone can drop a letter in (encrypt). The **private key** is the only key that opens the box (decrypt). The key-distribution problem vanishes — the public key can be posted on a billboard.
+
+| | **Symmetric** | **Asymmetric** |
+|---|---|---|
+| Keys | ONE shared key | key PAIR (public + private) |
+| Speed | fast, bulk data | slow, small data |
+| Examples | **AES**, DES, 3DES, Blowfish, RC4 | **RSA**, ECC, DSA, Diffie-Hellman |
+| Problem | key distribution — sharing the secret safely | solved — public key is meant to be public |
+
+- **DES** = 56-bit key, broken, insecure. **3DES** = DES run three times, legacy. **AES** = 128/192/256-bit — THE current standard (the MCQ answer for "standard symmetric cipher").
+- **RSA** = security rests on factoring huge primes being hard. **ECC** = same strength with much smaller keys → mobile and TLS.
+- **Diffie-Hellman** = a key-EXCHANGE protocol — two strangers build a shared secret over a channel everyone's watching (it's not encryption itself — it makes the key for it).
+
+### Hashing — one-way, no key
+
+**Plain words:** a hash is a fingerprint of data — feed anything in, get a fixed-length code out. It's a meat grinder: easy to grind the cow into mince, impossible to rebuild the cow. Any tiny input change → avalanche of output change.
+
+- **MD5** (128-bit) = BROKEN (collisions found). **SHA-1** = deprecated. **SHA-256/SHA-3** = current standards. "Which hash is still safe?" → SHA-256+.
+- Uses: file-integrity checks, password storage (always **+ salt** — a random value stirred in so precomputed "rainbow tables" of hashes become useless — classic MCQ), digital signatures.
+- **Hashing ≠ encryption:** encryption is reversible with the right key; hashing never reverses.
+
+### Digital signature vs digital certificate
+
+- **Digital signature:** you sign with YOUR PRIVATE key → anyone verifies with your PUBLIC key. Since only you hold the private key, a verified signature proves it came from you and wasn't altered → gives **integrity + authenticity + non-repudiation** (all three — favourite multi-answer). *Direction trap: signing = sender's private; encrypting a secret for someone = receiver's public.*
+- **Digital certificate:** a CA (Certificate Authority) vouches "this public key really belongs to sebi.gov.in" — binding an identity to a key. The system of CAs + certificates = **PKI**. X.509 is the certificate format standard.
+- **How HTTPS/TLS actually works (the one-para version):** asymmetric crypto is used ONLY for the handshake — verify the certificate + exchange a fresh session key — then fast SYMMETRIC (AES) encryption carries the real data. *"Asymmetric knocks on the door, symmetric carries the boxes."*
+- SSL is dead — **TLS** is the live protocol (1.2/1.3). HTTPS = HTTP + TLS on port 443.
+
+---
+
+## 4. Authentication — factors & systems
+
+**Plain words:** authentication = proving you are who you claim. There are only THREE kinds of proof:
+- **Something you KNOW** — password, PIN, security question.
+- **Something you HAVE** — phone (receiving OTP), hardware token, smart card.
+- **Something you ARE** — biometrics: fingerprint, iris, face.
+
+- **2FA/MFA = combining ≥2 DIFFERENT factors.** ATM card + PIN = genuine 2FA (have + know). Password + security question = still ONE factor — both are "know" — the classic trap answer.
+- **Biometric accuracy metrics:** **FAR** = false acceptance rate — lets an impostor IN (the dangerous direction); **FRR** = false rejection rate — locks a legit user OUT (the annoying direction). **CER/EER** = the error rate where the two curves cross → lower = better system (asked!).
+- **Kerberos** — ticket-based network authentication: a KDC issues time-stamped tickets so passwords never cross the wire. **SSO** = one login, many services. **OAuth** = delegated AUTHORIZATION (letting an app act for you — not authentication). **SAML** = enterprise SSO assertions.
+- Password storage rule: **salted + hashed** (bcrypt/Argon2), never plaintext, never reversible encryption.
+
+---
+
+## 5. Network & Systems Security
+
+- **Firewall generations (dumb → smart):** packet-filtering (reads only IP/port headers, stateless) → stateful inspection (knows which packets belong to conversations a user started) → application proxy/NGFW (L7, understands content — can block a malicious URL). **WAF** = web-application firewall, the L7 kind that catches SQLi/XSS.
+- **DMZ** = the screened buffer subnet between the internet and your LAN — where public-facing servers (web, mail) live so a breach there doesn't expose the inside.
+- **IDS vs IPS:** IDS = CCTV + alarm — watches and alerts but can't stop (passive, off to the side). IPS = a guard standing IN the doorway — blocks inline (active). Detection styles: **signature-based** (matches known attack patterns — reliable but blind to new attacks) vs **anomaly-based** (flags behaviour deviations — catches zero-days but cries wolf).
+- **Honeypot** = a deliberately juicy decoy server to lure attackers and study their methods.
+- **VPN** = an encrypted tunnel through the public internet — outsiders see scrambled traffic. **IPSec** = L3 VPN; SSL/TLS VPN works through the browser.
+- **802.1X / NAC / MAC filtering** = "prove you belong here before the port opens" — network admission control ideas.
+- **Security models (name-level but asked):** **Bell-LaPadula** = confidentiality model for classified systems — "no read UP, no write DOWN" (a corporal can't read top-secret files; a general can't write secrets into unclassified ones — prevents leaking downward). **Biba** = the integrity mirror — "no read down, no write up". Plus: least privilege, defense in depth, **zero trust** = "never trust, always verify" — even inside the network.
+
+### Software development security (syllabus line)
+- **Secure SDLC** — security built into every phase, not bolted on at the end ("shift left").
+- **OWASP Top 10** — the famous web-risk list: injection, broken authentication, XSS, insecure design — know the top few names.
+- **SAST** = static analysis — scans source code without running it. **DAST** = dynamic — attacks the RUNNING app. **Fuzzing** = throwing malformed/random input to find crashes.
+
+---
+
+## 6. Network & Systems Audit (in the syllabus — 1–2 easy Qs)
+
+**Plain words:** an audit = an independent check that your controls actually work — not whether they exist on paper.
+
+- Types: internal, external, compliance.
+- **Network audit** — reviews firewall rules, access controls, configs, open vulnerabilities.
+- **VA vs pentest (the MCQ pair):** vulnerability assessment = scanning to FIND holes ("your lock looks weak"); penetration testing = authorized experts actively EXPLOITING them ("we picked the lock to prove it").
+- **Systems audit** — OS/app controls: patching levels, user rights, logging, change management.
+- **Audit trail/logs** = the who-did-what-when evidence — supports non-repudiation.
+- **COBIT / ISO 27001** = governance & security-management frameworks (name-level only).
+
+---
+
+## Question types SEBI asks here
+1. Name-the-attack (phishing vs spear vs whaling; virus vs worm vs trojan).
+2. CIA scenario → which pillar broke.
+3. Symmetric vs asymmetric + algorithm ID (AES, RSA, DES facts).
+4. Hashing facts (MD5/SHA broken or not, salt purpose).
+5. Digital signature/cert/PKI — who signs with which key.
+6. Auth factors (2FA = two DIFFERENT types; FAR/FRR).
+7. Defenses (IDS vs IPS, DMZ, firewall generations).
+
+## Drills (Days 15–20)
+- Day 15: CIA + crypto core (symmetric/asymmetric/hash) — write the three comparison tables from memory.
+- Day 16: hashing, signatures, PKI/TLS — draw the handshake flow once.
+- Day 17: write the FULL attack list from memory (names + one line each) — that's the real drill.
+- Day 18: defenses + authentication factors.
+- Day 19: audit + software-security + 20 MCQs mixed (Sanfoundry cyber-security tests — see Practice Links).
+- Day 20: Testbook "Cyber Security" chapter test — log every misnamed attack.
+
+---
+
+## Worked Examples — 10 solved in exam pattern
+
+**Ex 1 — name the attack.** "Employee gets a fake 'IT dept' email asking them to 'verify' their password on a lookalike page."
+**Ans: Phishing** (spear phishing if targeted). Email spoofed + credential harvesting — not MITM (that's interception), not vishing (that's voice).
+
+**Ex 2 — CIA property.** "Attacker alters a transaction amount mid-transfer." / "Server flooded until legitimate users can't reach it."
+**Ans: Integrity / Availability.** Altered data = integrity broken; knocked offline = availability broken. Leaked = confidentiality.
+
+**Ex 3 — symmetric vs asymmetric.** "Why does HTTPS use BOTH?"
+**Ans: asymmetric (RSA/ECC) for the handshake/key-exchange, symmetric (AES) for the bulk data** — symmetric is ~1000× faster but can't solve "how do we share the key safely"; asymmetric solves exactly that.
+
+**Ex 4 — digital signature direction.** "Alice signs a document for Bob — encrypts with which key? Bob verifies with which?"
+**Ans: Alice's PRIVATE key signs; Alice's PUBLIC key verifies.** Trap: reversing it. *(REMEMBER: confidentiality = encrypt with receiver's public; authenticity/signature = encrypt with sender's private.)*
+
+**Ex 5 — hash property.** "Why is a hash used for password storage instead of encryption?"
+**Ans: hashing is one-way — can't be reversed; encryption is meant to be decrypted.** MD5/SHA-1 are broken; SHA-256/bcrypt acceptable. Salt defeats rainbow tables.
+
+**Ex 6 — firewall type.** "Firewall that inspects per-packet headers only vs one that tracks full connection state vs one that understands HTTP."
+**Ans: packet-filtering / stateful inspection / application (proxy) firewall** — dumb→smart, fast→thorough.
+
+**Ex 7 — IDS vs IPS.** "System sits offline and raises alerts vs sits inline and blocks."
+**Ans: IDS detects + alerts / IPS prevents + blocks inline.** DMZ = the buffer network between internet and internal LAN where public servers live.
+
+**Ex 8 — factor counting.** "Password + OTP sent to your phone — how many factors? Password + security question?"
+**Ans: 2 factors / 1 factor.** OTP = possession (your phone). Security question = knowledge again — same category doesn't stack. Factors: know (password), have (token/phone), are (biometric).
+
+**Ex 9 — web-attack trio.** "Script injected into a page that steals other users' cookies" vs "attacker's site makes your logged-in browser fire a hidden request" vs "' OR 1=1-- in a login field."
+**Ans: XSS / CSRF / SQL injection.** XSS targets users via the site; CSRF abuses your logged-in session; SQLi attacks the database through input.
+
+**Ex 10 — TLS/PKI role.** "Who vouches that a website's public key is really theirs?"
+**Ans: the Certificate Authority (CA)** — it signs the site's certificate; your browser trusts the CA chain. Expired/self-signed cert = the browser warning you know.
+`,"../../02_Phase1_Paper2_IT/Operating_Systems/Notes.md":`# Operating Systems + Linux — Full Study Notes
+
+> **Why this file matters:** OS isn't in the *official* Phase-1 syllabus list, but **memory-based SEBI papers include OS and Linux/Unix questions** — scheduling, deadlocks, paging, Linux commands. Treat it as a real topic: ~1 week in the plan (Days 22–25), medium-high return per hour.
+>
+> **What's testable:** process states & fork(), scheduling numerics, deadlock/Banker's, paging/TLB/page-replacement, RAID levels, Linux commands & file system, chmod permissions.
+
+**How to read:** OS concepts are just stories about a manager (the OS) juggling workers (processes), a shared kitchen (memory), and one chef (the CPU). Each topic below: the story → the example you can see → the exam trap.
+
+---
+
+## 1. Processes & Threads
+
+**Plain words:** a **program** is a recipe sitting on disk — dead text. A **process** is that recipe being COOKED — a running program with its own allocated memory. A **thread** is a lighter execution unit living *inside* a process — like one cook following two steps of the same recipe at once, sharing the same kitchen and ingredients (memory).
+
+- **WHY threads exist:** switching between two processes means swapping entire memory maps — expensive, like moving to a different kitchen. Switching threads stays inside the same kitchen — cheap. The cost of sharing: one thread can scribble on another's data (no isolation).
+- **REMEMBER:** *"Threads share, processes separate."*
+
+### Process states — draw this once, the transitions ARE the question
+
+**Plain words:** at any moment a process is in exactly one state — being born, standing in line for the CPU, actually running, parked while it waits for something slow (disk/network), or finished.
+
+\`\`\`
+New → Ready → Running → Terminated
+         ↑  ↘        ↙
+           Waiting (blocked on I/O)
+\`\`\`
+
+- Ready → Running: the **dispatcher** (the OS's CPU-scheduler arm) picks you from the line.
+- Running → Waiting: process asks for slow I/O (disk read) — it can't use the CPU anyway, so it steps aside.
+- Waiting → Ready: the I/O finishes → back in line (NOT straight to Running — the CPU may be busy).
+- Running → Ready: your time-slice expired — the OS yanks the CPU (**preemption**) so everyone gets turns.
+- **Trap:** "process waiting for I/O" = *Waiting/Blocked*, NOT Ready. Ready means "I only need the CPU."
+
+### Key terms MCQs love
+- **PCB (Process Control Block)** = the process's saved file — registers, program counter, state, priority. **Context switch** = save current process's PCB, load the next one's. It's pure overhead — the switch itself does zero user work.
+- **\`fork()\`** creates a child process — an almost-copy of the parent. Its return value is the trick: **0 to the child, child's PID to the parent** — that's how the two copies know who's who.
+  - Classic numeric: "how many processes after n \`fork()\` calls?" → **2ⁿ** — every call doubles the family (each existing process makes a copy of itself). 3 forks → 8.
+  - REMEMBER: *"Every fork doubles the family."*
+- **Zombie** = child finished but parent hasn't collected its exit code yet — a corpse entry in the process table. **Orphan** = parent died first; the child gets adopted by \`init\`/\`systemd\` (PID 1). *(Zombie = dead child, living parent. Orphan = living child, dead parent.)*
+- **IPC** = how processes talk: pipes (parent↔child), **shared memory** (fastest — no kernel copying, just both mapped to the same region), message queues, sockets (across machines), semaphores (synchronization).
+
+---
+
+## 2. CPU Scheduling — the numeric questions
+
+**Plain words:** one CPU, many processes in line — the scheduler picks who runs next and for how long. Different picking rules = different algorithms, and each has a characteristic failure the exam loves.
+
+### The three metrics (memorise — every numeric uses them)
+- **Turnaround time (TAT)** = completion − arrival. *"From joining the queue to fully done."*
+- **Waiting time (WT)** = TAT − burst. *"How long it sat in line, not counting its own work."*
+- **Response time** = first-run − arrival. *"How long till it got served the FIRST time."*
+
+### The five algorithms
+
+| Algorithm | Rule | The trap/strength |
+|---|---|---|
+| **FCFS** | first-come, first-served — the honest queue | **convoy effect** — one long job blocks everyone behind it, like a truck on a single-lane road |
+| **SJF** | shortest burst first, non-preemptive | provably **optimal average waiting time** — but needs to know burst lengths in advance (the future!) |
+| **SRTF** | preemptive SJF — shortest *remaining* time | a newly-arrived short job evicts whoever's running |
+| **Round Robin** | cyclic, fixed time quantum each | quantum too big → degenerates into FCFS; too small → context-switch overhead eats everything |
+| **Priority** | highest priority first | low-priority jobs can **starve** → fixed by **aging** (priority rises the longer you wait — classic MCQ) |
+
+**REMEMBER starvation fix:** *"Old age earns respect — aging fixes starvation."*
+
+### Worked example — never compute in your head, draw the Gantt chart
+
+P1 (arrival 0, burst 8), P2 (arrival 1, burst 4), P3 (arrival 2, burst 9) — **SJF non-preemptive**:
+
+\`\`\`
+0────────8────12────────21
+|   P1   | P2 |    P3    |
+\`\`\`
+
+- t=0: only P1 exists → must run P1 (0–8). *Non-preemptive means once started, it finishes.*
+- t=8: P2 (burst 4) vs P3 (burst 9) → shorter wins → P2 (8–12), then P3 (12–21).
+- TAT: P1=8−0=8, P2=12−1=11, P3=21−2=19 → avg **12.67**. WT = TAT − burst: 0, 7, 10.
+
+**Same set under SRTF** gives a different chart (P2 preempts P1 at t=1 because 4 < 7 remaining) — always re-draw; never reuse a chart across algorithms.
+
+---
+
+## 3. Synchronization & Deadlock
+
+**Plain words:** two processes updating the same data = a **race condition** — the answer depends on who ran last (two cooks both adding "one spoon of salt" reading the counter as 5 → it becomes 6, not 7). Fix = **mutual exclusion**: only one process in the **critical section** (the code touching shared data) at a time.
+
+- **Semaphore** = an integer counter you can only \`wait()\` (decrement, blocks if 0) or \`signal()\` (increment, wakes a waiter) — Dijkstra's **P** (try to pass) and **V** (release).
+  - **Binary** semaphore (0/1) ≈ a **mutex** — one key to one bathroom.
+  - **Counting** semaphore = N identical resources — e.g., 5 printer keys on the hook.
+  - Classic MCQ: "semaphore initial value for 5 printers?" → **5**.
+- **Mutex vs semaphore trap:** a mutex has *ownership* — only the locker can unlock it (the key-holder). A semaphore is a *signaling* tool — any process can signal it (anyone can hang a key back).
+
+### Deadlock — the 4 Coffman conditions (ALL four must hold simultaneously)
+
+**The story:** Process A holds the printer and wants the scanner; Process B holds the scanner and wants the printer. Neither lets go, neither proceeds — forever. For this to happen, four things must ALL be true:
+
+1. **M**utual exclusion — resources can't be shared (one printer at a time)
+2. **H**old and wait — you're allowed to hold one resource while waiting for another
+3. **N**o preemption — the OS can't yank a resource back by force
+4. **C**ircular wait — the wait chain loops: A→B→…→A
+
+**REMEMBER: "My Hungry Neighbor Circles"** — break ANY single condition → deadlock impossible. "Which is NOT required for deadlock?" is a recurring MCQ (they'll write "preemption allowed" as a fake — the real condition is NO preemption).
+
+### Handling strategies
+
+| Strategy | Idea | Key term |
+|---|---|---|
+| **Prevention** | design so a condition can't hold | request ALL resources at once → kills hold-and-wait |
+| **Avoidance** | grant a request only if the system stays **safe** | **Banker's algorithm** — simulates "could everyone still finish?" before granting |
+| **Detection** | let it happen, find it after | cycle in the resource-allocation graph (with single-instance resources, cycle = deadlock) |
+| **Recovery** | kill processes / preempt resources | rollback |
+
+- **Safe vs unsafe trap:** unsafe ≠ deadlock — unsafe just means "deadlock *could* happen, not that it did." Safe = at least one sequence exists where every process finishes.
+- **Deadlock vs starvation:** deadlock = circular waiting forever; starvation = being bypassed forever (everyone cuts in line) → fixed by aging, the same fix as priority scheduling.
+
+---
+
+## 4. Memory Management
+
+**Plain words:** RAM is limited; the OS must hand it out fairly. **Paging** chops physical memory into fixed-size **frames** and every program into identical-size **pages** — like slicing every loaf into same-size pieces so any piece fits any slot. No wasted gaps between slices → **no external fragmentation**; but the last page may be half-used → small **internal fragmentation**.
+
+- **Segmentation** = the opposite idea — split by *logical meaning* (code segment, data segment, stack) in variable sizes → fits better conceptually but leaves gaps → **external fragmentation returns**.
+- **REMEMBER:** *"Pages are equal slices — no gaps between them. Segments are natural chunks — gaps return."*
+- **Virtual memory** = the trick that runs programs bigger than RAM — only the pages you're actually using sit in memory; the rest waits on disk. **Demand paging** = fetch a page only when touched. Touch a missing page → **page fault** → OS pauses, fetches it from disk (SLOW — that's why locality matters).
+- **Thrashing** = the system spends more time shuffling pages than running programs — too many processes for the RAM available. The machine crawls. Classic MCQ.
+- **TLB** = a tiny ultra-fast cache of recently-used page-table entries — without it every memory access needs a second access just to read the page table. "What speeds up logical→physical address translation?" → TLB.
+- **EAT** (effective access time) = hit-ratio math: \`EAT = h×(t_TLB + t_mem) + (1−h)×(t_TLB + 2·t_mem)\`.
+
+### Page replacement — the MCQ trio
+
+**Plain words:** frames are full and a new page arrives — SOMEONE must be evicted. Which page? Each algorithm answers differently:
+
+| Algorithm | Rule | The fact that gets asked |
+|---|---|---|
+| **FIFO** | evict the page that arrived earliest | **Belady's anomaly** — giving FIFO *more* frames can cause *more* faults (bizarre but real; LRU can never do this) |
+| **LRU** | evict the page unused longest — "past predicts future" | near-optimal; expensive to implement perfectly (needs timestamps) |
+| **Optimal** | evict the page needed farthest in the future | impossible in practice — exists only as the theoretical benchmark |
+
+**REMEMBER:** *"Belady's bad luck: FIFO punished for getting more frames."*
+
+---
+
+## 5. Storage, RAID & File Systems
+
+### RAID — memorize cold, appears as level↔property questions
+
+**Plain words:** RAID = combining multiple physical disks into one system for speed and/or safety. Three techniques combine into the levels: **striping** (data spread across disks — fast, one disk per piece), **mirroring** (every disk has an identical twin — safe, half the capacity), **parity** (extra check-data letting you rebuild one dead disk — clever middle ground).
+
+| Level | Method | Min disks | Survives | Usable capacity |
+|---|---|---|---|---|
+| **RAID 0** | striping only | 2 | 0 disks — one dies, everything lost | 100% |
+| **RAID 1** | mirroring | 2 | 1 disk | 50% |
+| **RAID 5** | striping + distributed parity | **3** | 1 disk | (n−1)/n |
+| **RAID 6** | double parity | 4 | **2** disks | (n−2)/n |
+| **RAID 10** | mirror + stripe (1+0) | 4 | 1 per mirror pair | 50% |
+
+- **Trap:** RAID 0 = speed with ZERO redundancy — "best performance, no fault tolerance" = RAID 0. "Balance of safety + capacity for databases" = RAID 5/10. "Survive TWO simultaneous failures" = RAID 6.
+- **File systems:** FAT32 (4 GB max file size — classic MCQ), NTFS (Windows, journaling), ext4 (Linux, journaling — journaling = log of pending writes so a crash can't corrupt). **inode** = Unix's per-file metadata block — stores everything about a file EXCEPT its name (names live in directories).
+- **Disk scheduling:** FCFS, SSTF (shortest-seek-first — can starve far-away requests), **SCAN** (the "elevator" — sweeps one direction serving everything, reverses), C-SCAN (serves one direction then jumps back — more uniform waiting).
+- **Spooling** = Simultaneous Peripheral Operations OnLine — the print-queue idea: jobs buffer to disk so the CPU isn't held hostage by a slow device.
+
+---
+
+## 6. Linux / Unix Essentials — recalled in SEBI papers
+
+### The file system tree — one root, everything hangs off \`/\`
+
+**Plain words:** unlike Windows' C:\\ D:\\, Linux has ONE tree starting at \`/\` — every device, config, and file hangs somewhere on it. "In Unix, everything is a file" — even your terminal and disks appear as files under \`/dev\`.
+
+| Dir | Holds |
+|---|---|
+| \`/\` | root of everything |
+| \`/bin\`, \`/sbin\` | essential user / system binaries |
+| \`/etc\` | config files (passwd, fstab) |
+| \`/home\` | user directories |
+| \`/var\` | logs, spool, variable data |
+| \`/tmp\` | temp files, cleared on reboot |
+| \`/dev\` | device files — disks, terminals |
+| \`/proc\` | live kernel/process info (a virtual FS — nothing is stored) |
+
+**REMEMBER:** *"In Unix everything is a file — /dev holds devices, /proc holds the living kernel."*
+
+### Process & system commands — the MCQ set
+
+| Command | Does |
+|---|---|
+| \`ps\` | snapshot of processes (\`ps aux\` = all users, all processes) |
+| \`top\` / \`htop\` | LIVE refreshing view of processes + CPU + memory |
+| \`kill PID\` | send a signal; \`kill -9\` = SIGKILL (force, can't be caught); \`kill -15\` = SIGTERM (polite default — "please exit") |
+| \`nice\` / \`renice\` | set / change priority (range −20 highest … +19 lowest — negative = MORE priority, the trap) |
+| \`fg\` / \`bg\` / \`jobs\` | foreground / background / list suspended jobs (\`Ctrl+Z\` suspends, \`&\` starts in background) |
+| \`free\` / \`df\` / \`du\` | RAM usage / disk free per filesystem / disk used per directory |
+| \`chmod\` / \`chown\` / \`chgrp\` | permissions / owner / group |
+| \`ln -s\` | symbolic (soft) link — a shortcut storing a PATH; hard link = a second name for the same inode |
+
+- **Soft vs hard link trap:** a soft link stores a path — delete the original, it dangles dead. A hard link points at the same inode — data survives until the LAST link dies.
+- **Signal trap:** SIGKILL (9) can't be caught, blocked, or ignored — the unblockable kill.
+
+### Permissions — \`chmod\` numerics come up
+
+**Plain words:** every file has three permission groups — **owner → group → others** — and each can have **r**ead (4), **w**rite (2), e**x**ecute (1). Sum the numbers per group → one digit → three digits = the octal code.
+
+- \`chmod 755 file\` → owner rwx (7), group r-x (5), others r-x (5) — the standard for scripts/directories.
+- \`chmod 644\` → owner rw- (6), group r-- (4), others r-- (4) — standard for files.
+- \`chmod 777\` = everyone, everything — the "never do this" answer in security questions.
+- Reading backwards: \`rwxr-xr--\` = owner 7, group 5, others 4 → **754**.
+- For directories the letters change meaning: \`x\` = may *enter* it, \`r\` = may *list* it, \`w\` = may *create/delete inside* it — subtle but asked.
+
+### Boot & core concepts
+- Boot chain: BIOS/UEFI → **bootloader (GRUB)** → kernel → **init/systemd (PID 1)** → login.
+- **Kernel** = the OS core (process/memory/device/file management); **shell** = the command interpreter wrapped around it — "kernel vs shell" is a classic MCQ.
+- **Runlevels/targets** = system modes (multi-user vs graphical); \`systemctl\` manages services.
+- **Cron** = scheduled jobs (\`crontab -e\`); format = \`min hour day month weekday command\`.
+
+---
+
+## Question types (from recalled papers + pattern)
+1. Gantt-chart numerics — WT/TAT under a named algorithm → **draw it**.
+2. Deadlock conditions ("which is NOT required"), Banker's safe/unsafe.
+3. Paging/TLB/Belady's anomaly concept MCQs.
+4. RAID level ↔ property/capacity.
+5. \`fork()\` count, process-state transitions, zombie/orphan.
+6. **Linux commands** — \`ps\`/\`kill\`/\`chmod\`/\`nice\`/\`ln\`, file-system dirs, soft vs hard links.
+7. Semaphore initial values, mutex vs semaphore.
+
+## Drills (Days 22–25)
+- 5 scheduling Gantt problems across FCFS/SJF/SRTF/RR.
+- Deadlock: write the 4 conditions from memory; one Banker's safe-sequence check.
+- Page replacement: 10 fault-count problems (FIFO vs LRU on the same string — feel Belady's).
+- RAID + process-state + fork() tables rewritten from memory.
+- **Linux:** write the dir tree + top-10 command table from memory; convert \`rwxr-x---\` ↔ 750 and back both ways.
+- Testbook: OS + Unix/Linux chapter tests on Days 26–27 (Sanfoundry OS tests for overflow — see Practice Links).
+
+---
+
+## Worked Examples — 10 solved in exam pattern
+
+**Ex 1 — Gantt numeric (FCFS).** P1(0,4) P2(0,3) P3(0,5) all arrive at 0, FCFS.
+**Ans: chart P1(0–4), P2(4–7), P3(7–12). TAT = 4, 7, 12 → avg 7.67; WT = 0, 4, 7.** Always draw the timeline — arithmetic slips are free marks lost.
+
+**Ex 2 — fork() count.** \`main(){ fork(); fork(); fork(); }\` — how many total processes?
+**Ans: 8 (2³).** Every fork doubles the family; n forks → 2ⁿ. Trap answers: 4 or 7 (counting only some branches).
+
+**Ex 3 — deadlock conditions.** "Which is NOT one of the four Coffman conditions: mutual exclusion / hold-and-wait / preemption allowed / circular wait?"
+**Ans: 'preemption allowed'** — the condition is NO preemption. Exams flip one word like this constantly.
+
+**Ex 4 — Belady's anomaly.** "FIFO page replacement: same reference string, 3 frames gives 9 faults, 4 frames gives 10 faults. Anomaly?"
+**Ans: YES — Belady's.** More frames → more faults is abnormal and only FIFO-type algorithms show it; LRU can never do this.
+
+**Ex 5 — RAID pick.** "Survive one disk failure with good capacity, minimum 3 disks?"
+**Ans: RAID 5** (striping + distributed parity). Needs 2-disk survival → RAID 6. Pure speed, no safety → RAID 0.
+
+**Ex 6 — chmod translation.** \`rwxr-x---\` as octal? And what does \`chmod 640 file\` give?
+**Ans: 750** (7=owner rwx, 5=group r-x, 0=others none). \`640\` = \`rw-r-----\` — owner rw, group r, others nothing.
+
+**Ex 7 — right Linux command.** "Live view of processes eating CPU / kill a stuck process by PID / list suspended jobs."
+**Ans: \`top\` / \`kill <pid>\` / \`jobs\`.** \`ps\` = snapshot, \`top\` = live. \`kill -9\` = force (SIGKILL can't be caught).
+
+**Ex 8 — semaphore init.** "4 identical printers managed by a counting semaphore — initial value?"
+**Ans: 4.** Binary for mutual exclusion (=1); counting = number of resources. Each \`wait()\` decrements; at 0, next process blocks.
+
+**Ex 9 — process state.** "Process requests disk I/O mid-execution — which state does it enter?"
+**Ans: Waiting/Blocked** — NOT ready (it's not waiting for the CPU, it's waiting for an event). Returns to Ready (not Running) when I/O completes.
+
+**Ex 10 — link types.** "Original file deleted — which link still opens the data: \`ln\` (hard) or \`ln -s\` (soft)?"
+**Ans: hard link.** It points to the same inode — data survives until ALL links die. Soft link stores a path → dangles dead.
+`,"../../02_Phase1_Paper2_IT/Programming_Concepts/Notes.md":`# Programming Concepts — Full Study Notes (30% of Paper 2 — the biggest topic)
+
+> **Official syllabus:** program control (iteration, recursion, functions) · scope & binding of variables · parameter passing · functional & logic programming · OOP (classes, objects, inheritance, constructors) · exception handling — across **Java, C, C++**.
+>
+> **How SEBI tests it (real recalled questions):** program dry-run output (C static vars, pointers, Java overridden vs hidden methods), pure-virtual functions, interface \`default\` methods, anonymous inner classes, hierarchical inheritance, static method hiding, \`substr()\`/\`strlen()\`/\`indexOf()\` function names.
+>
+> **30% of the paper = ~15 of 50 questions. This file is your single highest-ROI study material in Paper 2.**
+
+**How to read:** programming questions are dry-runs — you're asked what code prints. You learn that by tracing variables line-by-line, never by guessing. Every concept below: the plain-English idea → a code example you can trace → the exam trap.
+
+---
+
+## 1. Program Control: loops, recursion, functions
+
+### Loops — the dry-run skill (SEBI's #1 format)
+A dry-run question hands you code and asks the output. The winning method is boring and foolproof:
+1. **Trace variables in a table** — one column per variable, one row per iteration. Never hold values in your head.
+2. Watch **loop boundaries**: \`i < n\` runs n times (0..n−1); \`i <= n\` runs n+1.
+3. Watch **post/pre increment**: \`i++\` uses-then-adds; \`++i\` adds-then-uses.
+
+**Worked:**
+\`\`\`c
+int s = 0;
+for (int i = 1; i <= 5; i++) s += i;
+// i:1→s:1 · i:2→s:3 · i:3→s:6 · i:4→s:10 · i:5→s:15 → prints 15
+\`\`\`
+
+### Recursion — always trace with a call-stack drawing
+**Plain words:** recursion = a function calling itself with a smaller input until it hits a **base case** that stops it. Like standing between two mirrors — each image smaller, and without a smallest one it goes forever (stack overflow).
+
+- Every recursion needs: **base case** (stops) + **recursive case** (smaller input).
+- **Trace method:** stack each call as a frame, resolve on the way back up.
+
+\`\`\`c
+int f(int n) { return n <= 1 ? 1 : n * f(n-1); }
+// f(4): 4×f(3) → 4×3×f(2) → 4×3×2×f(1)=1 → unwinds to 24 (factorial)
+\`\`\`
+- Tail recursion: the recursive call is the LAST thing the function does → compilers can flatten it to a loop.
+- Naive recursive Fibonacci = O(2ⁿ) — every call spawns two more (a favourite complexity MCQ).
+- **Real SEBI-style MCQ:** "Recursion uses which data structure internally?" → **Stack** (the call stack — memorise this one-liner).
+
+### Functions
+- \`return\` exits immediately — code after it never runs.
+- C has **no function overloading**. C++/Java do (same name, different parameters — resolved at COMPILE time = static polymorphism).
+
+---
+
+## 2. Scope, Binding, Parameter Passing (directly in the syllabus — expect 3–4 Qs)
+
+### Scope of variables
+**Plain words:** scope = where a variable is *alive*. Local variables die when their function ends; globals live for the whole file.
+
+- **Local:** exists inside its block/function only. **Global:** visible everywhere (and therefore dangerous — anyone can touch it).
+- **Static local (C)** — the hybrid that SEBI loves: declared inside a function but initialized ONCE and keeps its value between calls:
+  \`\`\`c
+  int next_even(void) {
+      static int n = 0;   // runs ONCE only — not reset per call
+      n += 2; return n;
+  }
+  // call 1 → 2, call 2 → 4, call 3 → 6   ← real recalled SEBI pattern
+  \`\`\`
+- **Shadowing:** an inner variable with the same name hides the outer one inside its scope.
+- **Block scope (Java/C++):** the variable dies at its closing \`}\`.
+
+### Binding — when the "which function runs?" decision is made
+- **Static (early) binding:** decided at COMPILE time — overloaded functions, \`static\`/\`private\`/\`final\` methods in Java, non-virtual functions in C++.
+- **Dynamic (late) binding:** decided at RUNTIME by the actual object — virtual functions (C++), overridden instance methods (Java).
+- **REMEMBER:** *"Compile-time binding = overload, runtime binding = override."*
+
+### Parameter passing — the #1 dry-run trap
+
+**Plain words — the photocopy vs the house key:**
+- **Pass by value** (C default, Java always): the function gets a PHOTOCOPY of your variable. Whatever it scribbles on the copy never touches the original.
+- **Pass by reference** (C++ \`&\`, C pointers): you hand over the actual memory address — the house key. The function writes into YOUR variable.
+
+- **Java is ALWAYS pass-by-value** — the subtlety: for objects, the *reference* is what's copied. So a function can modify the object's fields (it has a copy of the key — same house!) but can't reseat which object the caller's variable points to. Classic exam trap.
+
+**Real recalled SEBI question (Phase-1 style):**
+\`\`\`c
+void update(int a, int *b) { int t = a; a = *b; *b = t; }
+int main() { int x = 3, y = 7; update(x, &y); printf("%d %d", x, y); }
+// x passed by VALUE → the copy swaps, x stays 3.
+// b holds y's ADDRESS → *b = 3 writes into y itself.
+// Output: 3 3
+\`\`\`
+WHY: swapping needs the address; value-params only swap photocopies.
+
+---
+
+## 3. C Output-Tracing — the drills that win 30%
+
+**Pointer facts (memorise):**
+- A pointer = a variable that stores a memory ADDRESS. \`int *p = &x\` (p holds x's address); \`*p\` dereferences — "go to that address" — so \`*p = 20\` writes INTO x.
+- \`p++\` on an \`int*\` advances by \`sizeof(int)\` (usually 4 bytes) — pointer arithmetic counts in ELEMENTS, not bytes.
+- An array name ≈ a pointer to its first element; \`a[i]\` ≡ \`*(a+i)\` — which is why \`i[a]\` also compiles (exam trick!).
+- 1D arrays are stored **contiguously** — every element shoulder-to-shoulder (real recalled Q).
+- \`a[3][4]\` — third element of first row = \`a[0][2]\` (real Q — indexes start at 0).
+
+**String functions table (recalled directly):**
+| Function | Lang | Returns |
+|---|---|---|
+| \`strlen(s)\` | C | length (excludes '\\0') |
+| \`strchr(s,c)\` | C | first occurrence of char |
+| \`strcpy/strncpy\` | C | copy string |
+| \`strcmp\` | C | 0 if equal, <0/>0 else |
+| \`substr(pos,len)\` | C++ | substring |
+| \`length()\` / \`size()\` | C++ | string length |
+| \`indexOf()\` | Java | index of substring |
+| \`charAt(i)\` | Java | char at index |
+| \`substring(a,b)\` | Java | chars a..b−1 (b EXCLUSIVE — trap) |
+
+**Common C dry-run traps:**
+- \`printf\` RETURNS the number of chars printed — \`printf("%d", printf("hi"))\` prints \`hi2\`.
+- \`=\` vs \`==\` inside \`if\` — \`if(x=5)\` ASSIGNS 5 (truthy) → always true.
+- \`sizeof\` is compile-time; \`sizeof('a')\` = 4 in C (char literals are ints) but 1 in C++.
+- Integer division truncates: \`7/2 = 3\`, \`7.0/2 = 3.5\`.
+- \`register\` suggests CPU-register storage (hint only, can't take its address).
+
+---
+
+## 4. OOP — The Four Pillars (2/3 of Phase-2 questions touch these)
+
+**Plain words — the analogies that make the names stick:**
+- **Encapsulation** = a capsule — data + the methods that touch it sealed together inside one class, outsiders go through the controlled interface (private fields + getters/setters).
+- **Abstraction** = a car's steering wheel — you know WHAT turning it does, you don't see HOW the steering rack works (abstract classes & interfaces show the "what", hide the "how").
+- **Inheritance** = family — a child class inherits the parent's members and adds its own (\`extends\` in Java, \`:\` in C++).
+- **Polymorphism** = same name, different behaviour — "drive()" means something different on a Car vs a Plane. Compile-time = overloading; runtime = overriding.
+
+| Pillar | Plain meaning | Mechanism | SEBI trap |
+|---|---|---|---|
+| **Encapsulation** | bundle data + methods | private + getters/setters | real Q: "Encapsulation = binding data and methods together" |
+| **Abstraction** | show WHAT, hide HOW | abstract class, interface | abstract class can't be instantiated |
+| **Inheritance** | child reuses parent | \`extends\` / \`:\` | Java: NO multiple CLASS inheritance — only via interfaces (real Q) |
+| **Polymorphism** | same name, different behavior | overload (compile) / override (runtime) | virtual functions = runtime polymorphism (real Q) |
+
+### Inheritance types (real Q: hierarchical = one base → many derived)
+- Single: A→B · Multilevel: A→B→C · **Hierarchical: A→{B,C}** (one parent, many children — the asked one) · Multiple {A,B}→C (C++ only — Java forbids it because of diamond ambiguity) · Hybrid: a mix.
+- Java 8's \`default\` keyword → interfaces CAN carry concrete methods (real recalled Q — memorise).
+- **Constructor order: parent runs FIRST, then child** (the child ctor's hidden first line is \`super()\`). Destructor order in C++ = child first, then parent — the reverse.
+
+### Overriding vs overloading vs hiding (the dry-run goldmine)
+
+**The story:** \`Parent p = new Child()\` creates a Child object but references it through a Parent variable. What runs depends on WHAT you're calling:
+
+- **Overload:** same name, different SIGNATURE, resolved at COMPILE time — like two different functions sharing a name.
+- **Override:** same signature in parent & child, INSTANCE method → at runtime the OBJECT's version wins — the Child's \`show()\` runs. This is dynamic dispatch (Java/C++ vtable).
+- **Hiding:** a \`static\` method or a FIELD in both classes → follows the REFERENCE type (the left side) — **the parent's version runs** (real recalled SEBI Q — statics aren't overridden, they're hidden).
+\`\`\`java
+Base b = new Child();
+b.name  → "base"      // field: reference type (left) wins
+b.who() → "Child.who" // instance method: object type (right) wins
+Base.tag() → "Base.tag" // static: always compile-time class
+\`\`\`
+REMEMBER: *"Methods follow the OBJECT, fields & statics follow the REFERENCE."*
+
+### C++ specifics
+- \`virtual\` = opt-in for runtime dispatch (the vtable). **Real Q: virtual function = runtime polymorphism.**
+- **Pure virtual** \`virtual void f() = 0;\` → makes the class **abstract** — can't instantiate, derived classes MUST override it (real Q).
+- Friend function: a non-member allowed into the private section — breaks encapsulation (MCQ fact).
+- \`this\` = pointer to the calling object; \`new\`/\`delete\` vs \`malloc\`/\`free\` — \`new\` calls the constructor too (MCQ fact).
+
+### Java specifics
+- **Anonymous inner class** = an unnamed one-off implementation written inline (real Q — "implement it once, throw it away").
+- \`final\` = "stop": on a class → can't extend; on a method → can't override; on a variable → constant.
+- Abstract class vs interface: abstract can hold state + constructors; interface is a pure contract (pre-Java8 all-abstract; Java8+ \`default\`/\`static\`; Java9+ \`private\` methods allowed).
+- \`super()\` calls the parent ctor (must be the first line); \`super.x\` reaches the parent's member.
+- **String is IMMUTABLE** — every concat creates a NEW object; without assignment the change evaporates (use \`StringBuilder\` in loops).
+- \`LinkedList\` implements \`Queue\` (real recalled Q).
+- **Exceptions:** \`try-catch-finally\` — finally ALWAYS runs (except System.exit). Checked (IOException) must be caught/declared; unchecked (NullPointer, \`/0\`) are runtime. \`throw\` raises an exception; \`throws\` declares it. Multiple catches: specific BEFORE general — a parent-class catch above a child catch makes the child catch **unreachable** (compile error — classic MCQ).
+
+### Python OOP (for DA + mains)
+- Constructor = \`__init__()\` (real Q — double underscores). Child overrides parent method → child's version runs (real Q). \`self\` = explicit first parameter.
+
+### Functional & logic programming (syllabus line — 1 Q possible)
+- **Functional:** pure functions (same input → same output, no side effects), functions as values, immutability — Haskell/Lisp style; Java lambdas, Python \`map/filter/lambda\` are the flavour in your languages.
+- **Logic:** declare facts + rules, ask queries — Prolog; resolution & unification are the mechanism words. Name-level is enough.
+
+---
+
+## 5. Exception Handling — quick rules
+- try→catch→finally; \`finally\` runs no matter what (the classic trap: even when catch returns, finally still executes).
+- Java: \`throw\` (raise one exception object) vs \`throws\` (declare it in the signature).
+- C++: \`catch(...)\` — the ellipsis catches anything; \`throw\` can throw any type.
+- Catch order: child→parent — reverse it and the child catch is unreachable code → compile error.
+
+---
+
+## Real recalled SEBI questions — lock these answers
+| Q | A |
+|---|---|
+| Virtual function used for? | Runtime polymorphism |
+| Pure virtual function? | \`=0\`, makes class abstract |
+| Encapsulation = ? | Binding data + methods together |
+| NOT an OOP pillar? | (the 4: abstraction, encapsulation, inheritance, polymorphism — anything else is wrong) |
+| Good design principle? | High cohesion, low coupling |
+| Java multiple inheritance? | Only via interfaces |
+| Java 8 concrete interface methods? | \`default\` keyword |
+| Anonymous inner class? | Unnamed one-time interface/subclass impl |
+| Hierarchical inheritance? | One base → multiple derived |
+| Static method via base ref? | Parent's version runs (not overridden) |
+| C++ substring / length | \`substr()\` / \`length()\` or \`size()\` |
+| C string length / find char | \`strlen()\` / \`strchr()\` |
+| Java substring index | \`indexOf()\` |
+| Python constructor | \`__init__()\` |
+| Child calls shared method name (Python) | Child's version runs |
+| Java class implementing Queue | \`LinkedList\` |
+
+## Question types SEBI asks here
+1. **Dry-run output** (C pointers/static/loop, Java override-vs-field-vs-static) — trace in a table.
+2. **Function-name recall** (substr, strlen, indexOf…).
+3. **Concept one-liners** (encapsulation, cohesion/coupling, pillars).
+4. **Spot-the-error** (unreachable catch, = vs ==).
+5. **Pick-correct-syntax** (pure virtual decl, default method, __init__).
+
+## Drills
+- Hand-trace 15 C pointer/static programs + 10 Java override programs per week (Testbook chapter tests — Programming; Sanfoundry C/Java/Python tests for overflow — see Practice Links).
+- Write the 4 pillars + real-Q table from memory every Programming day.
+- GATE CS C-programming PYQs (GateOverflow) — same depth.
+
+---
+
+## Worked Examples — 10 solved in exam pattern
+
+**Ex 1 — pointer output (C).** \`int x=10; int *p=&x; *p=20; printf("%d",x);\`
+**Ans: 20.** \`*p=20\` writes through the pointer into x itself. *(Rule: \`*p\` IS x — same memory.)*
+
+**Ex 2 — pre/post increment.** \`int a=5; int b=a++; printf("%d %d",a,b);\`
+**Ans: 6 5.** \`a++\` hands over the OLD value (5) then increments. With \`++a\` it'd be 6 6. *(REMEMBER: post = "use first, grow later".)*
+
+**Ex 3 — static local variable.** \`void f(){ static int c=0; c++; printf("%d ",c);} int main(){f();f();f();}\`
+**Ans: 1 2 3.** \`static\` keeps its value between calls — initialised once, lives for the whole program. Trap answer: \`1 1 1\` (that's a normal local).
+
+**Ex 4 — Java dynamic dispatch.** \`class P{void show(){print("P")}} class C extends P{void show(){print("C")}} P obj = new C(); obj.show();\`
+**Ans: C.** Instance methods resolve by the OBJECT (right side of \`new\`), not the reference type. *(Rule: fields/statics use the LEFT type; instance methods use the RIGHT type.)*
+
+**Ex 5 — the flip side: field hiding.** Same setup but \`int x=1\` in P and \`int x=2\` in C; print \`obj.x\`.
+**Ans: 1.** Fields don't polymorph — reference type P wins. This is the #1 "gotcha" paired with Ex 4.
+
+**Ex 6 — constructor chain.** \`new C()\` where C extends P, both have constructors printing their name.
+**Ans: prints P then C.** Parent constructor always runs first (implicit \`super()\` on line 1 of child ctor).
+
+**Ex 7 — String immutability.** \`String s="abc"; s.concat("def"); print(s);\`
+**Ans: abc.** \`concat\` returns a NEW string — without \`s = s.concat(...)\`, the result is thrown away. Strings never change in place.
+
+**Ex 8 — exception flow.** \`try{ int x=1/0; print("A"); } catch(ArithmeticException e){ print("B"); } finally{ print("C"); }\`
+**Ans: B C.** "A" is skipped (exception aborts try), matching catch runs, and \`finally\` ALWAYS runs — even on exception, even on \`return\`.
+
+**Ex 9 — overload vs override resolution.** \`void m(int i)\` and \`void m(double d)\` exist; call \`m(5)\`.
+**Ans: m(int).** Overloads resolve at COMPILE time by the declared argument types — exact match wins over widening. (Override resolves at RUN time — don't confuse the two.)
+
+**Ex 10 — abstract/interface legality.** "Which is legal? (a) \`new AbstractClass()\` (b) \`new Interface()\` (c) class extending a \`final\` class (d) class implementing an interface"
+**Ans: only (d).** Abstract classes and interfaces can't be instantiated; \`final\` blocks inheritance.
+`,"../../02_Phase1_Paper2_IT/Software_Engineering/Notes.md":`# Software Engineering — Study Notes (supporting topic)
+
+> SE is not a named section in the official Paper 2 syllabus, but "software development security" (InfoSec), project-process and design-principle questions do appear — and real mains PYQs asked **"high cohesion, low coupling"**. Cover the famous models + testing levels + a few metrics; that's enough.
+
+**How to read:** software engineering is just "how do teams build big software without chaos?" Every model below is a different answer to that — learn the story each model tells, and the matching MCQs become trivial.
+
+---
+
+## 1. SDLC models — match model to description (the classic MCQ format)
+
+**Plain words:** SDLC = Software Development Life Cycle — the pipeline: requirements → design → build → test → deploy → maintain. The models differ in *how strictly* you walk it.
+
+| Model | The story | Use when |
+|---|---|---|
+| **Waterfall** | like building a house — finish blueprints before laying bricks; once a phase ends, no going back | requirements fully known & fixed |
+| **V-model** | waterfall bent into a V — every build stage on the left has a matching test stage on the right (design ↔ system test, code ↔ unit test) | high-reliability systems |
+| **Iterative/Incremental** | build v1.0 rough, then keep improving in cycles — like releasing an app then patching it | evolving requirements |
+| **Spiral** | iterate, but every loop starts with risk analysis — "what could kill this project this round?" | large, risky projects |
+| **Prototyping** | build a quick throwaway mock first so the client can say "yes, that" or "not that" | unclear requirements |
+| **Agile** | short sprints shipping working pieces + constant customer feedback | changing requirements |
+| **RAD** | rapid prototyping + heavy reuse of existing components | tight deadlines |
+
+- REMEMBER: *"Waterfall never looks back, Spiral fears risk, Agile sprints."*
+
+## 2. Agile (the most-asked modern model)
+
+**Plain words:** instead of 18 months of silence then a big reveal, Agile ships working software every few weeks and lets the customer steer.
+
+- **Manifesto:** individuals & interactions > processes · working software > documentation · customer collaboration > contracts · responding to change > following plans. (The ">" matters — it says "value left over right," not "right is worthless.")
+- **Scrum:** work happens in **sprints** (2–4 weeks). Roles: **Product Owner** (owns the backlog — the prioritized feature list), **Scrum Master** (removes blockers — a servant-leader, not a boss), the team. Ceremonies: daily stand-up (15 min), sprint planning, review, retrospective.
+- **XP (Extreme Programming):** pair programming, TDD (write the test FIRST, then code), continuous integration, small releases.
+- **Kanban** = a visual board of work-in-progress with WIP limits — pull work only when a slot frees.
+
+## 3. Testing — level order is the question
+
+**Plain words:** test small pieces first, then pieces-together, then the whole machine, then hand it to the customer.
+**Unit → Integration → System → Acceptance** — REMEMBER: **"U-I-S-A — unit inside, acceptance outside."**
+
+- **Unit** = one function/module alone (the dev does it).
+- **Integration** = do the modules talk correctly? Top-down (test high-level first, fake the missing lower pieces with **stubs**) vs bottom-up (test leaves first, fake the missing callers with **drivers**). *Stub = below you, driver = above you* — an MCQ pair.
+- **System** = whole product vs the spec. **Acceptance** (UAT) = the customer signs off.
+- **Black-box** = test inputs/outputs WITHOUT seeing code — techniques: equivalence partitioning (group inputs into classes), **boundary value analysis** (test at the edges — the favourite term). **White-box** = test with the code visible — path/statement/branch coverage.
+- **Regression** = re-test after any change (did we break old stuff?). **Smoke** = quick sanity build check. **Alpha** = in-house users, **Beta** = real outside users.
+- **Cyclomatic complexity** V(G) = number of independent paths through the code = the MINIMUM tests for full coverage. Easiest formula: **decision points + 1** (equivalent: E − N + 2 on the flow graph).
+- **Verification** vs **Validation** (V&V wording MCQ): verification = "are we building it RIGHT?" (reviews, against spec) · validation = "did we build the RIGHT THING?" (actual testing, against user needs).
+
+## 4. Design principles & metrics
+
+- **High cohesion, low coupling** (real recalled mains Q!) — the golden rule of module design. **Cohesion** = how focused a module is internally (does it do ONE thing?). **Coupling** = how tangled modules are with each other. You want laser-focused modules that barely know each other exist.
+  - Cohesion ranked best→worst: functional > sequential > communicational > procedural > temporal > logical > coincidental.
+  - Coupling ranked best→worst: data < stamp < control < external < common < content.
+- **UML diagrams (name-level):** use-case (actors & goals), class (static structure), sequence (time-ordered messages), activity (the flowchart-looking one), ER.
+- **COCOMO** = effort/cost estimation (basic/intermediate/detailed). **Function points** = sizing a system by its inputs/outputs/files.
+- **Software quality (ISO 9126/SQuaRE):** reliability, usability, efficiency, maintainability, portability — memorise the set.
+- **Maintenance types:** corrective (fix bugs), adaptive (survive new OS/environment), perfective (add improvements), preventive (future-proof) — match-the-type MCQ.
+- **CMMI maturity ladder:** 1 Initial → 2 Managed → 3 Defined → 4 Quantitatively Managed → 5 Optimizing.
+
+## Question types
+1. Model ↔ description matching. 2. Testing-level order + black/white techniques. 3. Cyclomatic numeric. 4. Cohesion/coupling + maintenance types. 5. Agile terms (sprint, backlog, scrum master).
+
+## Drills (Days 36–37 — light)
+- Write the model table + testing levels from memory once; 15 MCQs (GATE-SE / Testbook SE chapter); cyclomatic on 2 flow graphs.
+
+---
+
+## Worked Examples — 8 solved in exam pattern
+
+**Ex 1 — pick the model.** "Requirements are fixed, well-understood, and changes are costly" vs "high-risk project needing risk analysis each loop" vs "client wants a quick visual demo first."
+**Ans: Waterfall / Spiral / Prototype.** Waterfall = rigid sequential; Spiral = risk-driven iterations; Prototype = build a throwaway mock-up to clarify requirements.
+
+**Ex 2 — cyclomatic complexity.** Code has 3 decision points (2 ifs + 1 loop). V(G) = ?
+**Ans: 4.** V(G) = number of predicates + 1. (Equivalent: E − N + 2 on the flow graph.) It counts independent paths = minimum test cases for full branch coverage.
+
+**Ex 3 — testing level.** "Dev tests one function alone" / "two modules' interaction verified" / "whole system vs the spec" / "client runs it before sign-off."
+**Ans: unit / integration / system / acceptance (UAT).** Order: unit → integration → system → acceptance.
+
+**Ex 4 — black vs white box.** "Tester checks outputs for input classes WITHOUT seeing code" vs "tester designs tests to cover every branch of the code."
+**Ans: black-box (equivalence partitioning / boundary value) / white-box (statement, branch, path coverage).**
+
+**Ex 5 — stub vs driver.** "Testing a top module before the lower module exists — what stands in?"
+**Ans: a STUB** (fake lower module, top-down). Driver = fake CALLING module for bottom-up. Stub is below you, driver is above you.
+
+**Ex 6 — agile facts.** "In Scrum, who owns the product backlog? How long is a daily standup? What ends each sprint?"
+**Ans: Product Owner / 15 minutes / sprint review + retrospective.** Scrum Master removes blockers — doesn't manage the team.
+
+**Ex 7 — UML diagram.** "Diagram showing objects and their relationships" vs "showing time-ordered message exchange" vs "user goals/actors."
+**Ans: class / sequence / use-case.** Activity diagram = flowchart of logic — the one that looks like a flowchart.
+
+**Ex 8 — CMMI level.** "Processes are quantitatively measured & statistically controlled — which CMMI level?"
+**Ans: Level 4 (Quantitatively Managed).** Ladder: 1 Initial, 2 Managed, 3 Defined, 4 Quantitatively Managed, 5 Optimizing.
+`,"../../03_Phase2_Paper1_English/Descriptive_Guide.md":`# Descriptive English — Guide (Phase 2 Paper 1, 1/3 of merit)
+
+You type the answers on a computer. Speed + structure > literary flair.
+Weekly practice pieces go in \`Essays/\`, \`Precis/\`, \`Comprehension/\`.
+
+## Essay (~400 words typically)
+Structure:
+1. **Intro** — define the topic + your stance (3–4 lines)
+2. **Body 1** — strongest argument + example
+3. **Body 2** — second argument / other side addressed
+4. **Conclusion** — balanced close, forward-looking line
+
+Rules: one idea per paragraph, no slang, no abbreviations, link with connectives (however, moreover, consequently).
+
+**Bank on these SEBI-flavored topics:**
+- Role of technology in financial markets / AI in market surveillance
+- Cybersecurity in the Indian financial system
+- Retail investor participation & F&O risks
+- Digital payments & financial inclusion (UPI story)
+- ESG investing / green finance in India
+- Regulator's dilemma: innovation vs investor protection
+- Cryptocurrency regulation debate
+- Financial literacy in India
+- Insider trading & market integrity
+- Data privacy and fintech
+
+Write one on each of the above during the plan — that's 10 ready frameworks.
+
+## Precis (~1/3 of original length)
+- Read twice → identify the ONE central idea → list supporting points → write in YOUR words → title (4–6 words) → count words strictly.
+- Never: copy sentences, add opinions, use first person, exceed word limit, add examples of your own.
+- Marks lost mostly on: exceeding length and adding outside opinion.
+
+## Reading Comprehension
+- Answers come verbatim-ish from passage — quote/paraphrase, don't opine.
+- "According to the passage" answers exist in text; "infer" = closest logical step only.
+- Practice: 1 passage/day in final month, 10-min cap each.
+
+## Self-scoring rubric (/10)
+- Structure clear: /3 | Grammar & spelling: /3 | Within word limit: /2 | Relevance: /2
+- Log every piece in \`Progress_Tracker.md\` descriptive log.
+
+## Typing drill
+- Target 35+ wpm with accuracy. 10-min daily free-typing (any topic) if below that.
+
+## Detailed deduction checklist — score each piece against THIS, not vibes
+
+**Essay (/10) — deduct one point each for:**
+- [ ] No clear thesis in paragraph 1 (examiner should know your stance in 30 sec)
+- [ ] Paragraph without a topic sentence
+- [ ] Any paragraph over 5–6 lines (wall of text)
+- [ ] Generic filler ("in today's fast-paced world") more than once
+- [ ] Spelling/grammar error ×2 (pool them — every 2nd error = −1)
+- [ ] Missing conclusion or conclusion introduces NEW arguments
+- [ ] Outside facts you're not sure of (a wrong fact costs more than no fact)
+- [ ] Over word limit by >10%
+
+**Precis (/10) — deduct one point each for:**
+- [ ] Copied phrase of 4+ words from the passage
+- [ ] Your opinion/example anywhere (precis = compression, not commentary)
+- [ ] Missing title or title >8 words
+- [ ] Beyond 1/3 of original length
+- [ ] Lost the passage's ONE central idea (the #1 killer)
+
+**Scored example:** An essay with clear thesis, 4 clean paragraphs, one grammar slip, 15 words over limit → −1 (length) −1 (grammar pair pending) = **8/10. Log it that way in Progress_Tracker.md.**
+
+**Feedback loop upgrade:** paste your essay into any LLM/chat with "score this SEBI descriptive essay /10 against: thesis clarity, structure, grammar, word limit" — second opinion beats self-grading alone.\r
+`,"../../04_Phase2_Paper2_IT/Phase2_IT_Notes.md":`# Phase 2 Paper 2 — IT Mains Notes
+
+Official weightage: **Data Structures 40% | Algorithms 30% | OOP 20% | String Manipulation 10%**
+
+Format (Feb-2026 notification): MCQs — logic flow completion, program dry-run
+outputs, debugging, syntax understanding, data analysis. 100 marks, 180 min, 40% cutoff.
+Older format (≤2024) was a descriptive coding test — keep light coding practice as insurance.
+
+Depth level: everything in \`02_Phase1_Paper2_IT/\` PLUS the below. Phase 2 assumes
+Phase 1 notes are already solid — these are the "second layer" topics.
+
+## 1. Data Structures (40% — the core of this paper)
+
+### Must be able to trace by hand
+- Linked list: reverse (iterative+recursive), detect/return cycle start, merge 2 sorted, remove nth-from-end, palindrome check, middle node — know the pointer dance cold
+- Stacks/queues: 2-stack queue, 2-queue stack, min-stack (O(1) getMin), balanced parens variants, next-greater-element (monotonic stack)
+- Trees: build from inorder+preorder/postorder, level-order via queue, LCA in BST and binary tree, diameter, height-balanced check, kth smallest in BST (inorder count), mirror/invert
+- BST: insert+delete trace, floor/ceil, validate BST (min/max bounds — NOT just parent check)
+- Heaps: heapify trace, extract-max sequence, kth largest/smallest, merge k sorted lists concept, median of stream (two heaps)
+- AVL: insert a sequence and name each rotation (LL/RR/LR/RL) — SEBI loves AVL insert traces
+- Hashing: collision-resolution trace (linear/quadratic probing, chaining), first non-repeating char
+- Tries: insert/search, autocomplete concept
+- Graph DS adjacency list vs matrix: when which, BFS/DFS output order given a graph, topo sort output, connected components count
+
+### Dry-run hotspots
+- Recursion into trees (print order of calls), pointer updates in LL code, in-place array ops (rotate, dedupe, two-pointer)
+- Postfix/prefix conversions, infix→both directions
+- Sorting trace: state of array after k passes of selection/bubble/insertion; quicksort partition result
+
+## 2. Algorithms (30%)
+
+- Sorting internals (not just table): partition step trace, merge step, counting/radix passes
+- Searching variants: binary search on rotated array, first/last occurrence, peak element
+- **DP patterns** (know the recurrence for each): fibonacci (2024 PYQ!), climbing stairs, coin change (min coins + count ways), 0/1 knapsack, LCS, LIS, edit distance, matrix chain (concept), subset sum — practice filling the DP table by hand
+- Greedy: activity selection, fractional knapsack, Huffman codes, job sequencing — and know WHEN greedy fails (0/1 knapsack counterexample)
+- D&C: binary search, merge/quick sort, max-subarray (Kadane is also DP — know both), Strassen concept
+- Backtracking: N-queens placements, subsets/permutations generation order, sudoku logic
+- Graph algos: BFS/DFS, topo sort (Kahn + DFS), Dijkstra trace (table of distances), Bellman-Ford vs Dijkstra, Prim vs Kruskal trace, union-find operations
+- String algos: KMP prefix table, Rabin-Karp hashing idea, naive pattern match complexity
+- Complexity: recurrences via Master theorem, amortized analysis basics
+
+## 3. OOP (20%)
+
+- Beyond definitions: predict behavior — virtual function dispatch (C++ vtable vs Java dynamic dispatch), constructor call order in inheritance chains (base→derived), destructor order
+- Overloading resolution: which method called for \`f(int)\` vs \`f(double)\` vs \`f(long)\`; default args; ambiguity errors
+- Abstract class vs interface deep: Java 8 default/static interface methods, diamond problem, \`super()\` chaining
+- Copy semantics: shallow vs deep copy, copy constructor, C++ rule of three
+- Access specifiers table (C++ vs Java), \`final\`/\`finally\`/\`finalize\`, static binding vs dynamic binding
+- Design-level: singleton implementation, composition vs inheritance ("prefer composition"), SOLID basics (know each letter + 1-line meaning)
+
+## 4. String Manipulation (10%)
+
+- C: \`strlen/strcpy/strcat/strcmp/strncpy/strchr/strstr\` — return values & edge cases; \`strcmp\` sign convention
+- Java: immutability traps, \`StringBuilder\` methods, \`equals\` vs \`==\` vs \`compareTo\`, \`split/join/substring/charAt\`, \`String.format\`
+- Python: slicing idioms, \`split/join/replace/find/count\`, \`strip\`, f-strings
+- Common problems: reverse words in sentence, palindrome variants, anagram check (count array), longest common prefix, remove duplicates, run-length encode
+- Regex in code: validation problems (email, phone), find/replace semantics
+
+## 5. Dry-run / debug technique (the 2026 MCQ format)
+
+- **Dry run**: build a variable-state table per iteration — write it, don't do it in your head. Options usually include off-by-one answers.
+- **Debug questions**: look for the classic bug family first — uninitialized var, wrong loop bound (\`<=\` vs \`<\`), missing break in switch, \`=\` vs \`==\` in condition, integer division, shadowed variable, missing return, pointer/reference misuse.
+- **Logic flow completion**: read the 3 lines around the blank — variable usage usually pins it down; check the "else" side too.
+- **Output of recursive functions**: draw the call tree; note print placement (before/after recursive call).
+
+## Where Phase 1 notes end vs where this starts
+Phase 1 = "what is it + simple trace". Phase 2 = "multi-step trace, bug hunt,
+produce code/logic yourself". Drill \`Practice_Questions.md\` weekly from Day 29 on.
+
+---
+
+## Worked Examples — mains-level solves (the 2026 MCQ format)
+
+**Ex 1 — AVL insert trace.** Insert 30, 20, 10 into an empty AVL tree — which rotation fixes it?
+**Solve:** 30 root; 20 goes left; 10 goes left-of-20 → left-left chain, balance factor +2 at 30 → **single right rotation (LL case)** → 20 becomes root, 10 left, 30 right. Continue inserting and name each rotation — SEBI asks "after inserting X, which rotation occurred?"
+
+**Ex 2 — DP table by hand.** Fibonacci with memoization — what does the table hold at fib(5)?
+**Solve:** fill bottom-up: f(0)=0, f(1)=1, f(2)=1, f(3)=2, f(4)=3, f(5)=5 → **5.** Recurrence f(n)=f(n-1)+f(n-2). This was a literal 2024 PYQ — DP questions at mains are recurrence + table-fill, not theory.
+
+**Ex 3 — dry-run with state table.** \`int s=0; for(i=1;i<=4;i++) s+=i*i; printf(s);\`
+**Solve:** i:1→s=1, i:2→s=5, i:3→s=14, i:4→s=30 → **30.** Write the table; options will include 28/32 (off-by-one bait).
+
+**Ex 4 — quicksort partition result.** Array [8,3,7,1,5] pivot=last(5), one Lomuto partition — array after?
+**Solve:** scan placing elements ≤5 left of pivot slot: swap 3 forward, then 1 → [3,1,8,7,5] → swap pivot into place → **[3,1,5,8,7].** "Array state after k partitions/passes" is a recurring mains format.
+
+**Ex 5 — bug hunt.** \`for(i=0;i<=n;i++) sum+=a[i];\` on an n-element array — what's wrong?
+**Ans: \`<=\` should be \`<\`** — reads one past the end (a[n]). The debug family: off-by-one bounds, \`=\` vs \`==\`, missing \`break\`, uninitialized var, integer division \`5/2=2\`.
+
+**Ex 6 — overload resolution.** \`f(int)\` and \`f(double)\` exist; call \`f(5)\` vs \`f(5.0)\` vs \`f(5L)\`.
+**Ans: int version / double version / double version** (long widens to double — no long overload). Compile-time matching by declared arg types — don't confuse with runtime dispatch.
+
+**Ex 7 — recursion trace.** \`void f(int n){ if(n==0)return; print(n); f(n-1); print(n);} f(3)\` — output?
+**Solve:** descend printing 3,2,1 → hit n=0 → ascend printing 1,2,3 → **3 2 1 1 2 3.** Print placement before vs after the recursive call is the whole game — draw the call tree.
+
+**Ex 8 — Dijkstra trace.** Graph A→B(4), A→C(1), C→B(2), B→D(1), C→D(5). Shortest A→D?
+**Solve:** dist[C]=1 first; relax C→B: 1+2=3 <4 update; relax C→D: 1+5=6. Then B: B→D = 3+1=**4.** Trace the table — greedy picks smallest unvisited each round; never revisit.\r
+`,"../../04_Phase2_Paper2_IT/Practice_Questions.md":`# Phase 2 Practice — Mains-style Questions
+
+Two sections: **A** = 2026-format MCQs (dry run / debug / logic fill) and
+**B** = 2024-format coding problems (practice as insurance — SEBI has flipped formats).
+
+**How the sets map to the plan (same as ClickUp cards):**
+- **SET-1 = 50 Qs** → Day 21 Saturday, 90 min timed. Target ≥ 45%.
+- **SET-2 = 50 Qs** → Day 28 Saturday, 90 min timed. Target ≥ 45%.
+- **SET-3 = 100 Qs** → Day 35 Sunday, 180 min timed (full mains simulation). Target ≥ 50%.
+- **SET-4 = 100 Qs** → Day 42 Sunday, 180 min timed. Target ≥ 55%.
+- **Daily pool (A-POOL)** → 3–5/day from Day 29 onward, untimed, error-log every miss.
+- Q1–Q10 below = warm-up pool (any day).
+
+Topic mix inside every set follows the Phase-2 model: DS ~40% · Algorithms ~30% · OOP/language ~20% · Strings + SQL/analytics ~10%. 5 options, -0.25 real marking when self-scoring.
+
+## A. Warm-up pool + timed sets
+
+**Q1.** Output of:
+\`\`\`c
+int a[] = {4, 9, 1, 7, 3}; int m = a[0];
+for (int i = 1; i < 5; i++) if (a[i] < m) m = a[i];
+printf("%d", m);
+\`\`\`
+(1) 9 (2) 1 (3) 4 (4) 7 (5) 3
+
+**Q2.** Debug — function should return sum of even numbers:
+\`\`\`c
+int sumEven(int a[], int n) {
+    int s;
+    for (int i = 0; i <= n; i++)
+        if (a[i] % 2 = 0) s += a[i];
+    return s;
+}
+\`\`\`
+How many distinct bugs? (1) 1 (2) 2 (3) 3 (4) 4 (5) 0
+
+**Q3.** Fill the blank to reverse the array:
+\`\`\`c
+for (i = 0; i < n / 2; i++) { int t = a[i]; a[i] = _____; a[n-1-i] = t; }
+\`\`\`
+(1) a[n-i] (2) a[n-1-i] (3) a[i-1] (4) a[n] (5) a[i+1]
+
+**Q4.** Dry run recursion:
+\`\`\`c
+int f(int n) { if (n <= 1) return 1; return n * f(n - 2); }
+\`\`\`
+\`f(6)\` returns? (1) 48 (2) 720 (3) 15 (4) 30 (5) 6
+
+**Q5.** Java output:
+\`\`\`java
+String s = "SEBI"; s.concat("2027"); System.out.println(s);
+\`\`\`
+(1) SEBI2027 (2) SEBI (3) compile error (4) 2027 (5) null
+
+**Q6.** Python output: \`print("abcdef"[::2] + "x"[0:0])\`
+(1) 'ace' (2) 'bdf' (3) 'acex' (4) 'ace ' (5) error
+
+**Q7.** Which bug makes this print nothing?
+\`\`\`c
+int i = 0;
+while (i < 5); { printf("%d", i); i++; }
+\`\`\`
+(1) \`while\` needs {} (2) semicolon after while (3) i never initialized
+(4) printf wrong (5) no bug
+
+**Q8.** AVL: insert 30, 20, 10 into empty tree. Rotation needed at root 30?
+(1) RR (2) LL (3) LR (4) RL (5) none
+
+**Q9.** Postfix of \`a + b * c - d\` :
+(1) abc*+d- (2) ab+cd*- (3) abc+*d- (4) -+a*bcd (5) abcd+*-
+
+**Q10.** Dry run: linked list \`1→2→3→4\`, code moves \`p\` two steps at a time printing each visited node's data starting at head. Output?
+(1) 1 2 3 4 (2) 1 3 (3) 2 4 (4) 1 2 3 (5) 1 3 4
+
+## B. Coding-test problems (2024 format: Simple 10M / Moderate 20M / Hard 30M)
+
+Write in your strongest language (C++/Java/Python). Time-box: simple 15 min, moderate 25 min, hard 40 min.
+
+### Simple tier
+- **B1.** Nth Fibonacci via DP (2024 PYQ — n ≤ 30)
+- **B2.** Reverse a singly linked list (iterative)
+- **B3.** Check palindrome string ignoring non-alphanumerics & case
+- **B4.** Count frequency of each char in a string (hashing)
+
+### Moderate tier
+- **B5.** Implement queue using two stacks; analyze per-op complexity
+- **B6.** Kth largest element in array (heap or quickselect)
+- **B7.** Detect cycle in linked list + return cycle start node
+- **B8.** Coin change: min coins for amount (DP table by hand first)
+- **B9.** Inorder tree traversal iteratively (no recursion)
+
+### Hard tier
+- **B10.** Longest common subsequence of two strings + print the LCS
+- **B11.** 0/1 knapsack — max value + which items chosen
+- **B12.** Merge k sorted arrays efficiently (heap)
+- **B13.** Regex-free: validate email format (rules you define)
+
+---
+
+## Answers
+
+**A1**-(2) tracks minimum · **A2**-(3) bugs: \`s\` uninitialized, \`i<=n\` overrun, \`=\` vs \`==\` → 3 · **A3**-(2) · **A4**-(1) 6×4×2×1=48 · **A5**-(2) Strings immutable; concat result discarded — classic trap · **A6**-(1) "x"[0:0] is empty string · **A7**-(2) \`;\` makes while empty → infinite/empty body (prints nothing) · **A8**-(2) LL rotation · **A9**-(1) · **A10**-(2) visits nodes 1 and 3
+
+**B-tier approach hints:** B1 — memo/tab array, base 0,1 · B2 — prev/curr/next pointers · B3 — two pointers · B4 — int freq[256] or dict · B5 — enqueue stack1, dequeue via stack2 transfer-on-empty · B6 — min-heap of size k · B7 — Floyd's then reset ptr to head · B8 — dp[a] = min(dp[a-coin]+1) · B9 — stack + go-left loop · B10 — classic 2D table, backtrack for string · B11 — 2D table w[i][W], backtrack picks · B12 — min-heap of (val, arrayIdx, elemIdx) · B13 — check single @, dot after @, valid chars
+
+---
+
+## SET-1 — 50 Qs, 90 min timed (Day 21). Target >= 45%.
+
+**S1-1.** Inorder traversal of BST built by inserting 50, 30, 70, 20, 40, 60, 80 in that order gives:
+(1) 50 30 20 40 70 60 80 (2) 20 30 40 50 60 70 80 (3) 20 40 30 60 80 70 50 (4) 50 30 70 20 40 60 80 (5) 80 60 70 40 20 30 50
+
+**S1-2.** Stack ops: push 1, push 2, push 3, pop, push 4, pop, pop. Values popped in order:
+(1) 3 4 1 (2) 3 4 2 (3) 4 3 2 (4) 3 2 4 (5) 1 4 3
+
+**S1-3.** Queue: enqueue 5, 6, 7; dequeue once; enqueue 8. Front element?
+(1) 5 (2) 7 (3) 6 (4) 8 (5) queue empty
+
+**S1-4.** Slow/fast pointer finds the middle of \`1→2→3→4→5\`. Middle node value:
+(1) 2 (2) 4 (3) 3 (4) 5 (5) cannot determine
+
+**S1-5.** Binary search for 16 in \`[2,5,8,12,16,23,38]\` takes how many comparisons?
+(1) 2 (2) 4 (3) 3 (4) 5 (5) 1
+
+**S1-6.** Chaining hash table, \`h(k)=k mod 10\`. Keys 12, 18, 13, 2, 3, 23, 5, 15. Keys in bucket 3:
+(1) 13 (2) 13, 3 (3) 13, 3, 23 (4) 3, 23 (5) 13, 23
+
+**S1-7.** Min-heap \`[10,20,15,40,50,100]\`. After one delete-min, root is:
+(1) 20 (2) 100 (3) 15 (4) 40 (5) 50
+
+**S1-8.** Tree: root 1; left child 2 has children 4,5; right child 3. Postorder:
+(1) 1 2 3 4 5 (2) 4 5 2 3 1 (3) 4 2 5 3 1 (4) 1 3 2 5 4 (5) 4 5 3 2 1
+
+**S1-9.** In a max-heap, the second-largest element is always:
+(1) last leaf (2) a child of the root (3) rightmost node (4) root's right child only (5) anywhere
+
+**S1-10.** Circular queue, size 5, front=0, rear=4. After 2 successful enqueues, rear =
+(1) 0 (2) 1 (3) 4 (4) 2 (5) overflow
+
+**S1-11.** Any tree with 10 nodes has exactly how many edges?
+(1) 10 (2) 11 (3) 9 (4) 8 (5) depends on shape
+
+**S1-12.** Inorder predecessor of node 40 in BST [50,30,70,20,40,60,80]:
+(1) 20 (2) 50 (3) 30 (4) 60 (5) none
+
+**S1-13.** Evaluate postfix \`2 3 4 * +\` :
+(1) 24 (2) 9 (3) 14 (4) 20 (5) 10
+
+**S1-14.** Evaluate prefix \`- * 2 3 4\` :
+(1) 24 (2) 2 (3) -24 (4) 10 (5) 6
+
+**S1-15.** O(1) random access is guaranteed by:
+(1) singly linked list (2) stack (3) array (4) queue (5) BST
+
+**S1-16.** DFS on an undirected graph uses which structure (explicitly or via recursion)?
+(1) queue (2) heap (3) stack (4) hash map only (5) deque
+
+**S1-17.** A complete binary tree with 10 nodes stored in a 1-indexed array: children of node at index 3 are at:
+(1) 4,5 (2) 6,7 (3) 7,8 (4) 5,6 (5) 3,4
+
+**S1-18.** \`p\` walks list \`1→2→3→4→5→6\` printing every node, moving one step at a time but skipping each node whose data is even. Output:
+(1) 1 3 5 (2) 2 4 6 (3) 1 2 3 4 5 6 (4) 1 3 (5) 1 5
+
+**S1-19.** Deleting the only node between head and tail in \`1→2→3\` requires updating which pointer(s)?
+(1) tail only (2) head only (3) node's own next (4) head.next (5) none
+
+**S1-20.** BFS from A in graph A-B, A-C, B-C (alphabetical neighbor order):
+(1) A C B (2) A B C (3) B A C (4) C A B (5) A B C A
+
+**S1-21.** Bubble sort on 5 elements, worst case, number of passes:
+(1) 5 (2) 4 (3) 6 (4) 3 (5) 10
+
+**S1-22.** Merge sort time complexity in ALL cases:
+(1) O(n^2) (2) O(n) (3) O(n log n) (4) O(log n) (5) O(n^3)
+
+**S1-23.** Quicksort hits O(n^2) when the pivot is consistently:
+(1) median (2) random (3) smallest or largest element (4) middle index (5) duplicated
+
+**S1-24.** Which sort is stable?
+(1) quicksort (2) selection sort (3) heap sort (4) merge sort (5) none
+
+**S1-25.** Counting sort runs in O(n+k) and is best when:
+(1) k >> n (2) k is small relative to n (3) data is float (4) data is reverse-sorted (5) n is even
+
+**S1-26.** Insertion sort best case (already sorted input):
+(1) O(n log n) (2) O(n^2) (3) O(1) (4) O(n) (5) O(log n)
+
+**S1-27.** Selection sort on n elements performs at most how many swaps?
+(1) n^2 (2) n (3) n-1 (4) 2n (5) n/2
+
+**S1-28.** DP applies when a problem has:
+(1) sorted input (2) overlapping subproblems + optimal substructure (3) no recursion (4) unique elements (5) cycles
+
+**S1-29.** Greedy gives optimal for fractional knapsack but NOT for:
+(1) activity selection (2) Huffman coding (3) 0/1 knapsack (4) MST (5) coin change with canonical coins
+
+**S1-30.** \`f(n) = 3n^2 + 2n + 5\` is:
+(1) O(n) (2) O(n^3) (3) Theta(n^2) (4) O(2^n) (5) O(log n)
+
+**S1-31.** \`T(n) = 2T(n/2) + n\` solves to:
+(1) O(n) (2) O(n log n) (3) O(n^2) (4) O(log n) (5) O(1)
+
+**S1-32.** \`T(n) = T(n/2) + 1\` solves to:
+(1) O(n) (2) O(n log n) (3) O(log n) (4) O(1) (5) O(n^2)
+
+**S1-33.** Merge step in merge sort of two sorted halves of sizes 3 and 4 takes at most how many comparisons?
+(1) 7 (2) 6 (3) 12 (4) 4 (5) 3
+
+**S1-34.** Binary search on 1000 elements needs at most about:
+(1) 100 comparisons (2) 50 (3) 10 (4) 500 (5) 32
+
+**S1-35.** Which is TRUE about linear vs binary search?
+(1) binary works on unsorted (2) linear needs sorted (3) binary needs sorted; linear does not (4) both need sorted (5) binary is always slower
+
+**S1-36.** Java: \`int x = 7 / 2;\` gives x =
+(1) 3.5 (2) 4 (3) 3 (4) error (5) 0
+
+**S1-37.** Java: \`"hi" == "hi"\` (both literals) evaluates to:
+(1) false (2) true (3) compile error (4) runtime error (5) undefined
+
+**S1-38.** Java: \`new String("hi") == new String("hi")\` evaluates to:
+(1) true (2) false (3) compile error (4) NaN (5) exception
+
+**S1-39.** C: \`int *p; *p = 5;\` — this is:
+(1) fine (2) compile error (3) undefined behavior — p uninitialized (4) prints 5 (5) stack overflow
+
+**S1-40.** In C, \`sizeof('a')\` returns:
+(1) 1 (2) 2 (3) 4 (4) 8 (5) compile error
+
+**S1-41.** Python: \`print(2 ** 3 ** 2)\` outputs:
+(1) 64 (2) 512 (3) 36 (4) error (5) 12
+
+**S1-42.** Python: \`x=[1,2,3]; y=x; y[0]=9; print(x[0])\` outputs:
+(1) 1 (2) 9 (3) error (4) [9,2,3] (5) None
+
+**S1-43.** Same method signature redefined in a subclass is:
+(1) overloading (2) overriding (3) shadowing a field (4) abstraction (5) compile error
+
+**S1-44.** Python: \`print(type([]) is list)\` outputs:
+(1) False (2) True (3) error (4) list (5) None
+
+**S1-45.** A constructor in Java/C++ runs:
+(1) at class load only (2) on every method call (3) once per object at creation (4) at program end (5) only with new
+
+**S1-46.** Python: \`"SEBI"[::-1]\` gives:
+(1) 'IBES' (2) 'SEBI' (3) error (4) 'BES' (5) 'SEB'
+
+**S1-47.** C: \`strlen("a\\0bc")\` returns:
+(1) 4 (2) 3 (3) 1 (4) 0 (5) compile error
+
+**S1-48.** Correct SQL to count rows where \`col\` is NULL:
+(1) COUNT(col=NULL) (2) WHERE col = NULL (3) WHERE col IS NULL (4) WHERE col == NULL (5) WHERE NULL(col)
+
+**S1-49.** pandas \`df['col'].mean()\` by default:
+(1) errors on NaN (2) counts NaN as 0 (3) skips NaN (4) returns NaN always (5) drops the column
+
+**S1-50.** \`json.dumps({'a':1})\` returns a value of type:
+(1) dict (2) bytes (3) str (4) JSON object (5) list
+
+### SET-1 Answer Key
+1-(2) inorder of BST = sorted · 2-(2) pop order 3,4,2 · 3-(3) 5 leaves, front=6 · 4-(3) slow lands on 3 · 5-(3) mid 12→23→16 = 3 probes · 6-(3) 13,3,23 all mod 10 = 3 · 7-(3) 100 sinks, 15 rises · 8-(2) left-right-root · 9-(2) second largest is a level-1 node · 10-(2) wraps to index 1 · 11-(3) tree = n-1 edges · 12-(3) inorder: 20,30,40 — predecessor 30 · 13-(3) 3*4+2 = 14 · 14-(2) (2*3)-4 = 2 · 15-(3) · 16-(3) · 17-(2) children at 2i,2i+1 = 6,7 · 18-(1) skips evens → 1 3 5 · 19-(4) head.next must bypass node 2 · 20-(2) · 21-(2) n-1 passes · 22-(3) · 23-(3) extreme pivot → O(n^2) · 24-(4) merge is stable · 25-(2) · 26-(4) sorted input = n-1 comparisons · 27-(3) one swap per pass · 28-(2) · 29-(3) 0/1 knapsack needs DP · 30-(3) · 31-(2) master theorem case 2 · 32-(3) · 33-(2) m+n-1 = 6 max · 34-(3) log2(1000) ~ 10 · 35-(3) · 36-(3) integer division · 37-(2) string pool shares literal · 38-(2) new objects = different refs · 39-(3) wild pointer · 40-(3) char literal is int in C · 41-(2) right-assoc: 2^9=512 · 42-(2) alias, not copy · 43-(2) · 44-(2) · 45-(3) · 46-(1) reverse slice · 47-(3) strlen stops at \\0 · 48-(3) NULL needs IS · 49-(3) NaN skipped · 50-(3) dumps → string (real PYQ)\r
+
+---
+
+## SET-2 — 50 Qs, 90 min timed (Day 28). Target >= 45%.
+
+**S2-1.** Insert 10, 5, 15, 3, 7 into an empty BST. Root-to-leaf path to reach 7:
+(1) 10-5-7 (2) 10-15-7 (3) 5-7 (4) 10-5-3-7 (5) 10-3-7
+
+**S2-2.** B-tree (min degree t=2) can hold at most how many keys per node?
+(1) 2 (2) 4 (3) 3 (4) 1 (5) 5
+
+**S2-3.** Inorder successor of node 30 in BST [50,30,70,20,40,60,80]:
+(1) 20 (2) 40 (3) 50 (4) 35 (5) none
+
+**S2-4.** Heap-sort on max-heap \`[50,30,40,10,20]\`: after first extract-max + heapify, array root =
+(1) 30 (2) 40 (3) 20 (4) 10 (5) 50
+
+**S2-5.** A trie is preferred over a hash table when you need:
+(1) O(1) lookup (2) prefix queries like autocomplete (3) sorted deletion (4) less memory always (5) numeric keys
+
+**S2-6.** Adjacency matrix of a graph with V vertices uses space:
+(1) O(V) (2) O(E) (3) O(V^2) (4) O(V+E) (5) O(1)
+
+**S2-7.** In a doubly linked list, deleting middle node \`n\` (not head/tail) updates how many pointers?
+(1) 1 (2) 4 (3) 2 (4) 3 (5) 0
+
+**S2-8.** Deque allows O(1) operations at:
+(1) front only (2) rear only (3) both ends (4) middle (5) none
+
+**S2-9.** Deleting a node with TWO children in a BST replaces its key with:
+(1) largest in right subtree (2) smallest in left subtree (3) inorder successor (smallest of right subtree) (4) parent key (5) any leaf
+
+**S2-10.** A full binary tree with 15 internal nodes has how many leaves?
+(1) 15 (2) 16 (3) 14 (4) 30 (5) 8
+
+**S2-11.** Open addressing probe sequence \`h(k)+1, +2, +3...\` describes:
+(1) chaining (2) quadratic probing (3) linear probing (4) double hashing (5) rehashing
+
+**S2-12.** In array heap (1-indexed), parent of index 7 is:
+(1) 4 (2) 3 (3) 14 (4) 6 (5) 2
+
+**S2-13.** Level-order traversal of a tree equals which graph traversal?
+(1) DFS (2) BFS (3) inorder (4) topological (5) none
+
+**S2-14.** \`for (i=0;i<n;i++) for(j=0;j<i;j++)\` runs the inner body how many times total?
+(1) n^2 (2) n(n-1)/2 (3) n log n (4) 2n (5) n-1
+
+**S2-15.** Stack \`push 5,push 3,push 8,pop,push 1\`: top =
+(1) 8 (2) 3 (3) 1 (4) 5 (5) empty
+
+**S2-16.** Queue of \`A,B,C,D\`: dequeue, dequeue, enqueue E, dequeue. Remaining front-to-rear:
+(1) C D (2) D E (3) B C (4) E (5) C D E
+
+**S2-17.** Worst structure for repeatedly finding "minimum then delete it":
+(1) min-heap (2) unsorted array (3) BST (4) sorted LL (5) deque
+
+**S2-18.** Cycle detection in linked list: Floyd's uses:
+(1) two pointers same speed (2) visited-array (3) slow+fast pointers (4) recursion stack (5) hashing only
+
+**S2-19.** Singly linked list \`1→2→3→4\`, reverse gives head =
+(1) 1 (2) 4 (3) 3 (4) 2 (5) unchanged
+
+**S2-20.** Balanced BST height for n=1000 is about:
+(1) 1000 (2) 500 (3) 10 (4) 100 (5) 31
+
+**S2-21.** Merge sort on \`[38,27,43,3]\`: after first full merge pass the array is:
+(1) 27 38 3 43 (2) 3 27 38 43 (3) 38 27 43 3 (4) 27 38 43 3 (5) 3 43 38 27
+
+**S2-22.** Dijkstra's algorithm fails when the graph has:
+(1) cycles (2) negative edge weights (3) few edges (4) undirected edges (5) self loops only
+
+**S2-23.** BFS/DFS on a graph with V vertices, E edges (adjacency list): O(?)
+(1) O(V^2) (2) O(E) (3) O(V+E) (4) O(V*E) (5) O(log V)
+
+**S2-24.** Topological sort applies to:
+(1) any graph (2) undirected only (3) DAG only (4) trees only (5) complete graphs
+
+**S2-25.** Kruskal's MST algorithm is a classic example of:
+(1) dynamic programming (2) divide & conquer (3) greedy (4) backtracking (5) branch & bound
+
+**S2-26.** Binary search fails on \`[5,3,8,1]\` because:
+(1) duplicates (2) not sorted (3) too small (4) odd length (5) works fine actually
+
+**S2-27.** Insertion at HEAD of singly linked list is:
+(1) O(n) (2) O(log n) (3) O(1) (4) O(n log n) (5) O(n^2)
+
+**S2-28.** \`O(1) < O(log n) < O(n) < O(n log n) < O(n^2) < O(2^n)\` — correct ordering is:
+(1) as written (2) log n before 1 (3) n log n before n (4) 2^n before n^2 (5) n^2 before n log n
+
+**S2-29.** Recursion without a base case leads to:
+(1) heap overflow (2) stack overflow (3) compile error (4) infinite CPU-free loop (5) wrong answer only
+
+**S2-30.** Space complexity of merge sort (auxiliary):
+(1) O(1) (2) O(log n) (3) O(n) (4) O(n log n) (5) O(n^2)
+
+**S2-31.** Quick sort average case:
+(1) O(n^2) (2) O(n) (3) O(n log n) (4) O(log n) (5) O(n^3)
+
+**S2-32.** Partition (Lomuto) of \`[3,8,2,5,1]\` with pivot 1 gives pivot final index (0-based):
+(1) 4 (2) 0 (3) 2 (4) 1 (5) 3
+
+**S2-33.** Huffman coding assigns shortest codes to:
+(1) rarest symbols (2) first symbols (3) most frequent symbols (4) all equal (5) last symbols
+
+**S2-34.** Fibonacci naive recursion \`f(n)=f(n-1)+f(n-2)\` is roughly:
+(1) O(n) (2) O(n^2) (3) O(2^n) (4) O(log n) (5) O(n log n)
+
+**S2-35.** Memoizing fib reduces it to:
+(1) O(2^n) (2) O(n^2) (3) O(n) (4) O(1) (5) O(log n)
+
+**S2-36.** Python mutable-default trap: \`def f(x=[]): x.append(1); return x\`. Calling \`f(); f(); f()\` returns:
+(1) [1] (2) [1,1,1] (3) [] (4) error (5) None
+
+**S2-37.** Java: \`finally\` block after try/catch runs:
+(1) only on exception (2) only on success (3) always (4) never (5) only with return
+
+**S2-38.** C++: \`int& r = x; r = 10;\` — x becomes:
+(1) unchanged (2) 10 (3) error (4) address of r (5) copy
+
+**S2-39.** Java autoboxing converts \`int\` to:
+(1) Object (2) Integer (3) Long (4) String (5) Number only
+
+**S2-40.** \`static\` method in Java can access directly:
+(1) instance fields (2) this (3) only static members (4) any field (5) local vars of main
+
+**S2-41.** A \`virtual\` function in C++ enables:
+(1) compile-time binding (2) runtime polymorphism (3) faster code always (4) private access (5) templates
+
+**S2-42.** Python generator function differs by using:
+(1) return (2) yield (3) gen() (4) async only (5) lambda
+
+**S2-43.** Python: \`print(bool('0'))\` outputs:
+(1) False (2) True (3) 0 (4) error (5) None
+
+**S2-44.** \`this\` in Java refers to:
+(1) parent class (2) current object (3) static class (4) caller method (5) package
+
+**S2-45.** Python: \`list('abc') == ['a','b','c']\` gives:
+(1) False (2) True (3) error (4) None (5) 'abc'
+
+**S2-46.** \`"race"\` and \`"care"\` are anagrams — fastest check is comparing:
+(1) lengths only (2) sorted characters / char frequency (3) first letters (4) hashes of raw strings (5) substring test
+
+**S2-47.** C: \`char s[]="abc"; s[1]='X';\` then s is:
+(1) "abc" (2) "aXc" (3) error (4) "Xbc" (5) "abX"
+
+**S2-48.** SQL: \`GROUP BY dept HAVING COUNT(*) > 5\` filters:
+(1) rows before grouping (2) groups after aggregation (3) columns (4) joins (5) nulls only
+
+**S2-49.** \`INNER JOIN\` returns:
+(1) all rows both tables (2) only matching rows (3) left table all (4) right table all (5) cartesian product
+
+**S2-50.** pandas \`pd.merge(df1,df2,on='id',how='left')\` keeps:
+(1) only matches (2) all df2 rows (3) all df1 rows (4) union of both (5) intersection
+
+### SET-2 Answer Key
+1-(1) 7 < 10 → left; > 5 → right of 5 · 2-(3) max keys = 2t-1 = 3 · 3-(2) inorder ...30,40... · 4-(2) 50 out, 40 rises · 5-(2) prefix = trie's edge · 6-(3) V×V matrix · 7-(3) prev.next + next.prev = 2 · 8-(3) deque = double-ended · 9-(3) inorder successor · 10-(2) leaves = internal+1 = 16 · 11-(3) linear probing · 12-(2) floor(7/2)=3 · 13-(2) level-order = BFS · 14-(2) sum 0..n-1 · 15-(3) top=1 · 16-(2) A,B out; C out; D,E left → D E · 17-(2) O(n) scan each time — worst · 18-(3) slow/fast meet = cycle · 19-(2) reversed head = old tail · 20-(3) log2(1000) ~ 10 · 21-(1) pairs merged: [27 38][3 43] · 22-(2) negative weights break greedy · 23-(3) · 24-(3) DAG only · 25-(3) · 26-(2) · 27-(3) · 28-(1) · 29-(2) · 30-(3) merge needs O(n) aux · 31-(3) · 32-(2) pivot 1 is smallest → index 0 · 33-(3) frequent → short codes · 34-(3) exponential tree · 35-(3) memo = linear · 36-(2) default list persists — classic trap · 37-(3) finally always runs · 38-(2) reference = alias · 39-(2) int→Integer · 40-(3) static can't touch instance · 41-(2) vtable → runtime dispatch · 42-(2) yield makes generator · 43-(2) non-empty string = truthy · 44-(2) · 45-(2) list('abc') explodes to chars · 46-(2) sort/freq compare · 47-(2) mutable char array · 48-(2) HAVING = post-aggregation filter · 49-(2) · 50-(3) left join keeps all left rows\r
+
+---
+
+## SET-3 — 100 Qs, 180 min timed (Day 35 — full mains sim). Target >= 50%.
+
+**S3-1.** Dry run:
+\`\`\`c
+int i, s = 0;
+for (i = 1; i <= 4; i++) s += i * i;
+printf("%d", s);
+\`\`\`
+(1) 10 (2) 30 (3) 24 (4) 55 (5) 16
+
+**S3-2.** Dry run:
+\`\`\`c
+int a = 5, b = 2;
+printf("%d", a / b * b + a % b);
+\`\`\`
+(1) 5 (2) 4 (3) 6 (4) 7 (5) 2
+
+**S3-3.** Output:
+\`\`\`c
+int x = 10;
+{ int x = 20; printf("%d ", x); }
+printf("%d", x);
+\`\`\`
+(1) 10 10 (2) 20 20 (3) 20 10 (4) 10 20 (5) error
+
+**S3-4.** \`int f(int n){ return n==0?0:n+f(n-1);}\` — f(4) returns:
+(1) 4 (2) 10 (3) 6 (4) 24 (5) infinite
+
+**S3-5.** Debug — should print 1..5 but prints 1 forever:
+\`\`\`c
+int i = 1;
+while (i <= 5)
+    printf("%d ", i);
+    i++;
+\`\`\`
+Bug is:
+(1) wrong loop (2) missing braces — i++ outside loop (3) i never init (4) printf wrong (5) no bug
+
+**S3-6.** Fill blank so \`isSorted\` returns 1 for ascending array:
+\`\`\`c
+for (i = 0; i < n - 1; i++)
+    if (a[i] > a[i+1]) return ____;
+return 1;
+\`\`\`
+(1) 1 (2) -1 (3) 0 (4) i (5) break
+
+**S3-7.** Python: \`print([x*2 for x in range(5) if x%2==0])\` outputs:
+(1) [0,2,4,6,8] (2) [0,4,8] (3) [2,4] (4) [0,2,4] (5) error
+
+**S3-8.** Python: \`d={'a':1}; d.get('b',5)\` returns:
+(1) None (2) KeyError (3) 5 (4) 1 (5) 'b'
+
+**S3-9.** Java:
+\`\`\`java
+int[] a = {1,2,3};
+System.out.println(a[3]);
+\`\`\`
+(1) 3 (2) 0 (3) ArrayIndexOutOfBoundsException (4) null (5) compile error
+
+**S3-10.** Output:
+\`\`\`c
+int i = 0;
+do { printf("%d ", i); i++; } while (i < 3);
+\`\`\`
+(1) 0 1 2 (2) 1 2 3 (3) 0 1 2 3 (4) nothing (5) infinite
+
+**S3-11.** Swap gone wrong:
+\`\`\`c
+void swap(int a, int b) { int t = a; a = b; b = t; }
+\`\`\`
+After \`swap(x,y)\` the caller's x,y are:
+(1) swapped (2) unchanged — pass by value (3) compile error (4) x only swapped (5) undefined
+
+**S3-12.** Python: \`print(10 // 3, 10 % 3)\` outputs:
+(1) 3 1 (2) 3.33 1 (3) 3 3 (4) 4 1 (5) error
+
+**S3-13.** Recursion trace: \`int g(int n){ if(n<1) return 0; return 1 + g(n/2);}\` — g(8) =
+(1) 8 (2) 4 (3) 3 (4) 2 (5) 1
+
+**S3-14.** Python string: \`s='hello'; s[0]='H'\` causes:
+(1) 'Hello' (2) TypeError — strings immutable (3) 'hello' (4) 'H' (5) works fine
+
+**S3-15.** Java: \`ArrayList<Integer> l = new ArrayList<>(); l.add(1); l.add(2); l.remove(0);\` then l.get(0) =
+(1) 1 (2) 2 (3) 0 (4) exception (5) null
+
+**S3-16.** Two-sum style: \`a=[2,7,11,15], t=9\` — indexes summing to t:
+(1) 1,2 (2) 0,1 (3) 2,3 (4) 0,3 (5) none
+
+**S3-17.** \`while\` loop that must run AT LEAST once should be:
+(1) while (2) for (3) do-while (4) if (5) recursion
+
+**S3-18.** Python: \`print(len('a\\tb'))\` outputs:
+(1) 4 (2) 3 (3) 2 (4) 5 (5) error
+
+**S3-19.** C pointers: \`int a=5; int *p=&a; *p=9;\` — a is now:
+(1) 5 (2) 9 (3) address (4) error (5) 0
+
+**S3-20.** \`int arr[5]={1,2,3};\` — arr[4] is:
+(1) garbage (2) 3 (3) 0 (4) error (5) 1
+
+**S3-21.** BST: minimum element is always at:
+(1) root (2) rightmost node (3) leftmost node (4) deepest leaf (5) any leaf
+
+**S3-22.** Tree with only left children (skewed) of 5 nodes: inorder prints:
+(1) reverse of insertion (2) sorted ascending (3) deepest first (4) root last always (5) depends
+
+**S3-23.** AVL rotations: after inserting 1,2,3 into empty AVL tree, root is:
+(1) 1 (2) 3 (3) 2 (4) unbalanced 1 (5) 0
+
+**S3-24.** Max nodes at level L (root = level 0) of binary tree:
+(1) 2^L (2) L^2 (3) 2L (4) L (5) 2^(L-1)
+
+**S3-25.** Detecting if a number is power of 2 in O(1) uses:
+(1) n % 2 (2) n & (n-1) == 0 (3) n / 2 (4) log loop only (5) n | 1
+
+**S3-26.** Stack is best suited for:
+(1) BFS (2) undo feature / expression eval (3) priority scheduling (4) hashing (5) sorting
+
+**S3-27.** Which data structure for "serving print jobs in arrival order":
+(1) stack (2) heap (3) queue (4) tree (5) hash
+
+**S3-28.** \`p->next->next = p\` in a 3-node list 1→2→3 creates:
+(1) deletion (2) cycle 2→3→2 (3) null (4) copy (5) error
+
+**S3-29.** Time to find element in balanced BST, worst case:
+(1) O(n) (2) O(log n) (3) O(1) (4) O(n log n) (5) O(n^2)
+
+**S3-30.** Skewed BST (sorted inserts) search degrades to:
+(1) O(log n) (2) O(1) (3) O(n) (4) O(n log n) (5) O(n^2)
+
+**S3-31.** DFS of triangle graph A-B, B-C, C-A starting at A (alphabetical neighbors) visits:
+(1) A B C (2) A C B (3) B A C (4) depends — both A B C possible (5) A B C A
+
+**S3-32.** Dijkstra from A: edges A-B=2, A-C=5, B-C=1. Shortest A→C:
+(1) 5 (2) 3 (3) 6 (4) 2 (5) 1
+
+**S3-33.** MST of a connected graph with V vertices has exactly:
+(1) V edges (2) V-1 edges (3) V+1 edges (4) E edges (5) depends
+
+**S3-34.** Which finds shortest path in UNWEIGHTED graph optimally:
+(1) DFS (2) Dijkstra needed (3) BFS (4) A* only (5) Prim
+
+**S3-35.** Topological order of A→B, A→C, B→D, C→D (one valid):
+(1) A B C D (2) D C B A (3) B A C D (4) A D B C (5) none exists
+
+**S3-36.** Backtracking classic example:
+(1) merge sort (2) N-Queens (3) binary search (4) hashing (5) BFS
+
+**S3-37.** Best structure for LRU cache:
+(1) array only (2) hash map + doubly linked list (3) stack (4) BST (5) trie
+
+**S3-38.** Amortized cost of dynamic-array append:
+(1) O(n) always (2) O(1) amortized (3) O(log n) (4) O(n^2) (5) O(n!) worst
+
+**S3-39.** Two pointers on sorted array find pair summing to T in:
+(1) O(n^2) (2) O(n log n) (3) O(n) (4) O(log n) (5) O(1)
+
+**S3-40.** Sliding window of size 3 on array of 7 produces how many windows:
+(1) 7 (2) 5 (3) 4 (4) 3 (5) 21
+
+**S3-41.** SQL \`SELECT DISTINCT dept FROM emp\` returns:
+(1) all rows (2) unique dept values (3) first row only (4) count (5) error
+
+**S3-42.** \`WHERE salary > 50000 AND dept='IT' OR dept='HR'\` — precedence bug? Rows from dept HR with low salary included because:
+(1) syntax error (2) AND binds tighter than OR (3) OR binds tighter (4) no issue (5) NULL
+
+**S3-43.** 2NF requires 1NF plus:
+(1) no transitive deps (2) no partial dependency on part of composite key (3) BCNF first (4) unique index (5) FK mandatory
+
+**S3-44.** Transitive dependency (A→B→C, so A→C indirectly) violates:
+(1) 1NF (2) 2NF (3) 3NF (4) BCNF only (5) none
+
+**S3-45.** \`DELETE\` vs \`TRUNCATE\`: key difference is:
+(1) same (2) DELETE can have WHERE & logs rows; TRUNCATE removes all, faster (3) TRUNCATE keeps rows (4) DELETE is DDL (5) TRUNCATE is DML
+
+**S3-46.** Primary key vs unique key: PK additionally means:
+(1) allows NULL (2) no NULL + only one per table (3) duplicates ok (4) many allowed (5) indexed twice
+
+**S3-47.** Foreign key enforces:
+(1) uniqueness (2) referential integrity (3) fast search (4) default values (5) sorting
+
+**S3-48.** \`SELECT e.name, d.name FROM emp e LEFT JOIN dept d ON e.did=d.id\` — employees with no dept show dept:
+(1) excluded (2) NULL (3) error (4) 'unknown' (5) 0
+
+**S3-49.** \`COUNT(col)\` vs \`COUNT(*)\` differ because:
+(1) same (2) COUNT(col) skips NULLs (3) COUNT(*) skips NULLs (4) COUNT(col) counts distinct (5) error
+
+**S3-50.** ACID's Isolation means:
+(1) all-or-nothing (2) concurrent txns don't see each other's partial work (3) durability after crash (4) constraints hold (5) logging
+
+### SET-3 (part 1) continues below — Q51–Q100 next block.\r
+
+**S3-51.** OSI model has how many layers:
+(1) 4 (2) 5 (3) 7 (4) 6 (5) 8
+
+**S3-52.** TCP vs UDP: TCP provides:
+(1) faster delivery (2) connectionless (3) reliable ordered delivery (4) broadcast (5) no handshake
+
+**S3-53.** HTTPS default port:
+(1) 80 (2) 21 (3) 443 (4) 22 (5) 25
+
+**S3-54.** DNS translates:
+(1) IP→MAC (2) domain→IP (3) port→service (4) MAC→IP (5) URL→file
+
+**S3-55.** Subnet mask 255.255.255.0 means host portion is:
+(1) first 8 bits (2) last 8 bits (3) 16 bits (4) whole (5) none
+
+**S3-56.** In OSI, routing happens at which layer:
+(1) data link (2) transport (3) network (4) session (5) application
+
+**S3-57.** Symmetric vs asymmetric crypto: asymmetric uses:
+(1) one shared key (2) public/private key pair (3) no keys (4) hashing only (5) faster speed
+
+**S3-58.** Hashing (SHA-256) is mainly used for:
+(1) encryption (2) integrity/one-way verification (3) compression (4) authentication of sender identity (5) key exchange
+
+**S3-59.** SQL injection is prevented mainly by:
+(1) encryption (2) parameterized queries/prepared statements (3) firewalls (4) HTTPS (5) hashing input
+
+**S3-60.** A digital signature provides:
+(1) confidentiality only (2) integrity + authenticity + non-repudiation (3) availability (4) compression (5) anonymity
+
+**S3-61.** Phishing primarily exploits:
+(1) protocol flaw (2) human factor/social engineering (3) buffer overflow (4) SQL (5) weak crypto
+
+**S3-62.** Firewall operates mainly by:
+(1) encrypting traffic (2) filtering packets by rules (3) routing (4) resolving DNS (5) compression
+
+**S3-63.** Two-factor authentication adds which factor type:
+(1) same type twice (2) something you have/are beyond password (3) longer password (4) VPN (5) encryption
+
+**S3-64.** pandas: \`df.groupby('dept')['sal'].mean()\` produces:
+(1) new df rows (2) Series of per-group means (3) scalar (4) error (5) sorted df
+
+**S3-65.** pandas \`df.dropna()\` default drops:
+(1) columns with NaN (2) rows with any NaN (3) nothing (4) duplicates (5) first row
+
+**S3-66.** \`df[df['x']>5]\` returns:
+(1) count (2) filtered DataFrame (3) Series of bools only (4) error (5) first match
+
+**S3-67.** \`pd.read_csv\` default treats first row as:
+(1) data (2) header (3) index (4) skipped (5) types
+
+**S3-68.** Data warehouse vs OLTP DB: DW is optimized for:
+(1) transactions (2) analytics/aggregates on history (3) small writes (4) real-time ops (5) single row reads
+
+**S3-69.** Star schema center table is the:
+(1) dimension (2) fact table (3) bridge (4) lookup (5) index
+
+**S3-70.** ETL order is:
+(1) extract-load-transform (2) transform-extract-load (3) extract-transform-load (4) load-extract-transform (5) none
+
+**S3-71.** Shell: \`grep 'error' log.txt | wc -l\` does:
+(1) prints errors (2) counts matching lines (3) deletes lines (4) sorts (5) counts words only
+
+**S3-72.** Shell: \`chmod 755 file\` gives owner:
+(1) read only (2) rwx (3) rw- (4) --x (5) none
+
+**S3-73.** Shell \`ls -l | awk '{print $9}'\` prints:
+(1) sizes (2) filenames column (3) permissions (4) dates (5) first row
+
+**S3-74.** \`find . -name "*.log"\` does:
+(1) deletes logs (2) lists matching files recursively (3) greps content (4) archives (5) errors
+
+**S3-75.** Shell pipe \`cmd1 | cmd2\` sends:
+(1) stderr (2) stdout of cmd1 to stdin of cmd2 (3) files (4) return code (5) args
+
+**S3-76.** Python: \`def f(a, b=2, *args, **kwargs)\` — calling \`f(1,2,3,4,x=5)\` puts 3,4 in:
+(1) b (2) kwargs (3) args tuple (4) error (5) x
+
+**S3-77.** Java: method signature that can be overloaded differs in:
+(1) return type only (2) parameter list (3) access modifier (4) name (5) throws
+
+**S3-78.** OOP: encapsulation is enforced mainly via:
+(1) inheritance (2) private fields + public accessors (3) static (4) abstract (5) packages
+
+**S3-79.** Abstract class vs interface (Java 8+): interface can now have:
+(1) constructors (2) instance fields (3) default methods (4) multiple inheritance of state (5) none
+
+**S3-80.** \`super()\` in a Java/Python subclass calls:
+(1) this method (2) parent constructor/method (3) static block (4) main (5) destructor
+
+**S3-81.** C++ object slicing happens when:
+(1) pointer used (2) derived assigned to base BY VALUE (3) virtual called (4) new fails (5) delete twice
+
+**S3-82.** Python \`self\` refers to:
+(1) class (2) instance (3) module (4) parent (5) nothing — optional
+
+**S3-83.** Constructor overloading allows:
+(1) two identical ctors (2) multiple ctors with different params (3) ctor in interface (4) virtual ctor (5) none
+
+**S3-84.** Python: \`is\` vs \`==\` — \`is\` compares:
+(1) values (2) identity (same object) (3) types (4) length (5) hash
+
+**S3-85.** Java \`StringBuilder\` vs \`String\` in loops — preferred because:
+(1) immutable (2) mutable — avoids object churn (3) faster compile (4) thread-safe always (5) shorter
+
+**S3-86.** Python tuple vs list: tuple is:
+(1) mutable (2) immutable (3) slower always (4) unordered (5) string-only
+
+**S3-87.** \`try/except/finally\` in Python: finally skipped when:
+(1) exception (2) return (3) os._exit() or interpreter kill (4) break (5) never skipped
+
+**S3-88.** Exception raised but not caught leads to:
+(1) silent continue (2) program termination with traceback (3) retry (4) compile error (5) warning
+
+**S3-89.** Java checked vs unchecked: checked exceptions must be:
+(1) ignored (2) declared or caught at compile time (3) runtime only (4) logged (5) static
+
+**S3-90.** Python \`with open('f') as fp:\` guarantees:
+(1) faster read (2) file closed even on error (3) binary mode (4) append (5) lock
+
+**S3-91.** String \`"a2b3"\` → expand to \`"aabbb"\` — first step is:
+(1) regex replace (2) iterate char+digit pairs (3) sort (4) split (5) hash
+
+**S3-92.** Python \`'abcabc'.find('bc')\` returns:
+(1) 1 (2) 2 (3) -1 (4) 0 (5) 4
+
+**S3-93.** C string compare: \`strcmp("apple","apply")\` returns:
+(1) 0 (2) positive (3) negative (4) true (5) 1
+
+**S3-94.** Reversing words in "the sky blue" → "blue sky the" best uses:
+(1) char array only (2) split + reverse list + join (3) regex (4) stack of chars (5) sort
+
+**S3-95.** Longest common prefix of ["flower","flow","flight"]:
+(1) "fl" (2) "flow" (3) "flo" (4) "f" (5) ""
+
+**S3-96.** \`int f(int n){int c=0; while(n){c+=n%10; n/=10;} return c;}\` — f(1234) returns:
+(1) 1234 (2) 10 (3) 24 (4) 4 (5) 0
+
+**S3-97.** Count set bits in n=13 (binary 1101):
+(1) 2 (2) 3 (3) 4 (4) 13 (5) 1
+
+**S3-98.** \`x = a & b; y = a | b;\` for a=12 (1100), b=10 (1010): x,y =
+(1) 8,14 (2) 14,8 (3) 4,10 (4) 12,10 (5) 0,22
+
+**S3-99.** Missing number in array 0..n with one absent — XOR trick gives it in:
+(1) O(n^2) (2) O(n) time O(1) space (3) O(log n) (4) O(n log n) (5) needs sort
+
+**S3-100.** Kadane's algorithm finds:
+(1) sort order (2) max subarray sum in O(n) (3) median (4) min element (5) duplicates
+
+### SET-3 Answer Key (all 100)
+1-(2) 1+4+9+16=30 · 2-(1) (5/2)*2 + 1 = 4+1=5 · 3-(3) inner shadows, outer stays 10 · 4-(2) 4+3+2+1=10 · 5-(2) missing braces = infinite loop · 6-(3) return 0 on inversion · 7-(2) evens*2 = 0,4,8 · 8-(3) get default 5 · 9-(3) AIOOBE · 10-(1) do-while runs first · 11-(2) pass by value — caller unchanged (trap) · 12-(1) 3 and 1 · 13-(3) 8→4→2→1 = 3 levels · 14-(2) immutable strings · 15-(2) [2] left · 16-(2) 2+7=9 · 17-(3) do-while · 18-(2) \\t is one char → 3 · 19-(2) *p writes through · 20-(3) partial init → rest 0 · 21-(3) leftmost = min · 22-(3) left-skew inorder = deepest/last inserted first · 23-(3) LL case → right rotate → root 2 · 24-(1) 2^L · 25-(2) n&(n-1) clears lowest bit · 26-(2) LIFO = undo/eval · 27-(3) FIFO · 28-(2) 2.next.next=2 loops 2↔3 · 29-(2) · 30-(3) skewed = linked list · 31-(1) DFS A→B→C via stack · 32-(2) 2+1=3 via B · 33-(2) V-1 edges in MST · 34-(3) BFS = shortest hops unweighted · 35-(1) A,B,C,D valid topo · 36-(2) N-Queens = backtracking · 37-(2) O(1) both ops · 38-(2) doubling → amortized O(1) · 39-(3) converge two pointers · 40-(2) n-k+1 = 5 · 41-(2) · 42-(2) AND first → HR rows bypass salary check (trap) · 43-(2) no partial dep on composite key · 44-(3) transitive → 3NF · 45-(2) DELETE logged/WHERE vs TRUNCATE wholesale · 46-(2) PK: not null, unique, one per table · 47-(2) referential integrity · 48-(2) LEFT join → NULL dept · 49-(2) COUNT(col) skips nulls · 50-(2) isolation = concurrent invisibility · 51-(3) 7 layers · 52-(3) TCP reliable/ordered · 53-(3) 443 · 54-(2) domain→IP · 55-(2) /24 = last octet hosts · 56-(3) network layer routes · 57-(2) pub/priv pair · 58-(2) integrity one-way · 59-(2) parameterized queries · 60-(2) sign = integrity+auth+nonrepudiation · 61-(2) social engineering · 62-(2) packet filtering · 63-(2) different factor class · 64-(2) groupby+agg = Series · 65-(2) drops NaN rows · 66-(2) boolean mask → filtered df · 67-(2) header row · 68-(2) analytics vs OLTP ops · 69-(2) fact table center · 70-(3) E-T-L · 71-(2) count matching lines · 72-(2) 7=rwx owner · 73-(2) $9 = filename col · 74-(2) recursive find · 75-(2) stdout→stdin · 76-(3) *args catches extra positionals · 77-(2) overload = param list differs · 78-(2) private+getters = encapsulation · 79-(3) default methods since Java 8 · 80-(2) super() = parent · 81-(2) value copy slices derived part · 82-(2) instance ref · 83-(2) differing params allowed · 84-(2) is = identity · 85-(2) mutable avoids copies · 86-(2) tuple immutable · 87-(3) hard exit kills finally · 88-(2) uncaught → traceback exit · 89-(2) checked = compile-time must · 90-(2) context manager closes · 91-(2) pair char+count loop · 92-(1) index 1 · 93-(3) 'e'<'y' → negative · 94-(2) split-reverse-join · 95-(1) common prefix "fl" · 96-(2) digit sum 1+2+3+4=10 · 97-(2) 1101 has 3 bits · 98-(1) AND=8, OR=14 · 99-(2) XOR all = O(n)/O(1) · 100-(2) Kadane max subarray\r
+
+---
+
+## SET-4 — 100 Qs, 180 min timed (Day 42). Target >= 55%.
+
+**S4-1.** Dry run:
+\`\`\`c
+int a[] = {5, 2, 9, 1, 7}, i, m = a[0];
+for (i = 1; i < 5; i++) if (a[i] > m) m = a[i];
+printf("%d", m);
+\`\`\`
+(1) 1 (2) 5 (3) 9 (4) 7 (5) 24
+
+**S4-2.** Output:
+\`\`\`c
+int i;
+for (i = 0; i < 3; i++);
+printf("%d", i);
+\`\`\`
+(1) 0 (2) 2 (3) 3 (4) compile error (5) 012
+
+**S4-3.** Dry run:
+\`\`\`c
+int x = 1;
+while (x < 100) x *= 10;
+printf("%d", x);
+\`\`\`
+(1) 10 (2) 100 (3) 90 (4) infinite (5) 1
+
+**S4-4.** \`int f(int n){if(n<=0)return 0; return n%10+f(n/10);}\` — f(987) =
+(1) 987 (2) 24 (3) 17 (4) 789 (5) 3
+
+**S4-5.** Debug — should copy array but corrupts:
+\`\`\`c
+for (i = 0; i <= n; i++) b[i] = a[i];
+\`\`\`
+Bug:
+(1) wrong direction (2) off-by-one — a[n],b[n] out of bounds (3) type mismatch (4) no bug (5) needs pointer
+
+**S4-6.** Fill blank — binary search update when target > mid element:
+\`\`\`c
+if (a[mid] < t) _____; else hi = mid - 1;
+\`\`\`
+(1) hi = mid (2) lo = mid (3) lo = mid + 1 (4) return mid (5) hi = mid + 1
+
+**S4-7.** Python: \`print(sorted('dcba'))\` outputs:
+(1) 'abcd' (2) ['a','b','c','d'] (3) ['d','c','b','a'] (4) error (5) 'dcba'
+
+**S4-8.** Python: \`print({1,2,3} & {2,3,4})\` outputs:
+(1) {1,2,3,4} (2) {2,3} (3) error (4) {1,4} (5) True
+
+**S4-9.** Java: \`int x = (int)9.99;\` gives:
+(1) 10 (2) 9 (3) 9.99 (4) error (5) 0
+
+**S4-10.** Output:
+\`\`\`java
+String s = "ab";
+s = s + "cd" + 12;
+System.out.println(s);
+\`\`\`
+(1) abcd12 (2) ab16 (3) abcd3 (4) error (5) abcd
+
+**S4-11.** Recursion:
+\`\`\`c
+int h(int n){ if(n==1) return 1; return 2*h(n-1); }
+\`\`\`
+h(5) = 
+(1) 10 (2) 16 (3) 32 (4) 25 (5) 5
+
+**S4-12.** Which terminates: \`int i=10; while(i>=0) i-=3;\` prints sequence ending when i is:
+(1) 0 (2) -2 (3) 1 (4) -1 (5) infinite
+
+**S4-13.** Python: \`print(list(range(2,10,3)))\` outputs:
+(1) [2,5,8] (2) [2,6,9] (3) [3,6,9] (4) [2,10] (5) [5,8]
+
+**S4-14.** C: \`printf("%d", 5 > 3 > 1)\` gives:
+(1) 1 (2) 0 (3) error (4) true (5) 5
+
+**S4-15.** Ternary: \`printf("%c", (4%2==0) ? 'E' : 'O')\` prints:
+(1) E (2) O (3) 0 (4) error (5) 4
+
+**S4-16.** Python: \`x = [1,2]*2; print(x)\` outputs:
+(1) [2,4] (2) [1,2,1,2] (3) [1,2,2] (4) error (5) [[1,2],[1,2]]
+
+**S4-17.** Off-by-one: printing first n elements should loop:
+(1) i<=n (2) i<n starting i=0 (3) i<n starting i=1 (4) i<=n-1 starting 1 (5) any
+
+**S4-18.** Java: \`char c = 'A' + 1;\` c is:
+(1) 'A' (2) 'B' (3) 66 only as int — needs cast, compile error (4) '1' (5) error-free prints B always
+
+**S4-19.** Python: \`print('5' + '3')\` vs \`print(5 + 3)\`:
+(1) 8 and 8 (2) 53 and 8 (3) error both (4) 8 and 53 (5) 53 and 53
+
+**S4-20.** \`int a=1,b=2; a ^= b; b ^= a; a ^= b;\` — a,b are now:
+(1) 1,2 (2) 2,1 (3) 0,3 (4) 3,0 (5) 2,2
+
+**S4-21.** Height of empty tree vs single node (edges convention):
+(1) 0,0 (2) -1,0 (3) 1,1 (4) 0,1 (5) undefined,0
+
+**S4-22.** Insertion order 40,20,60,10,30,50,70 into BST — tree is:
+(1) skewed (2) perfectly balanced (3) random (4) heap (5) linear
+
+**S4-23.** Which traversal prints BST keys in descending order:
+(1) inorder (2) reverse inorder (right-root-left) (3) preorder (4) postorder (5) level
+
+**S4-24.** Heap after inserting 40,35,30,10 into max-heap — root:
+(1) 35 (2) 30 (3) 40 (4) 10 (5) depends
+
+**S4-25.** Building heap from n-element array (bottom-up heapify) costs:
+(1) O(n log n) (2) O(n) (3) O(log n) (4) O(n^2) (5) O(1)
+
+**S4-26.** Undirected graph max edges with V vertices:
+(1) V (2) V-1 (3) V(V-1)/2 (4) V^2 (5) 2V
+
+**S4-27.** A graph with V=5, E=8 is:
+(1) sparse (2) tree (3) dense-ish but valid (4) impossible (> max 10? no—possible) (5) must have cycle
+
+**S4-28.** Linked list vs array for frequent mid-insertions:
+(1) array (2) linked list (3) equal (4) hash (5) stack
+
+**S4-29.** Reversing a stack's effect on sequence is best done using:
+(1) queue (2) another stack or recursion (3) heap (4) array only (5) hash
+
+**S4-30.** Sparse matrix is best stored as:
+(1) full 2D array (2) list of (row,col,val) triples (3) tree (4) stack (5) queue
+
+**S4-31.** Hash collision resolution that keeps all entries inside table:
+(1) chaining (2) open addressing (3) rehashing to new table (4) linked tables (5) none
+
+**S4-32.** Load factor of hash table = 
+(1) size/keys (2) keys/tableSize (3) collisions/size (4) probes/keys (5) size*keys
+
+**S4-33.** Doubly vs singly linked list main advantage:
+(1) less memory (2) backward traversal + O(1) delete-given-node (3) faster search (4) sorting (5) none
+
+**S4-34.** Tree traversal that gives postfix expression from expression tree:
+(1) inorder (2) preorder (3) postorder (4) level (5) none
+
+**S4-35.** In a complete binary tree array (1-indexed), node i's parent:
+(1) 2i (2) i/2 (3) i-1 (4) 2i+1 (5) i+1
+
+**S4-36.** BFS uses queue; using a stack instead produces:
+(1) BFS still (2) DFS order (3) random (4) error (5) heap order
+
+**S4-37.** Minimum comparison sort on n elements lower bound:
+(1) O(n) (2) O(n log n) (3) O(log n) (4) O(n^2) (5) O(1)
+
+**S4-38.** Radix sort complexity with d digits, base b:
+(1) O(n^2) (2) O(d*(n+b)) (3) O(n log n) (4) O(d^n) (5) O(b)
+
+**S4-39.** Activity selection greedy picks next activity by:
+(1) earliest start (2) shortest duration (3) earliest finish (4) latest start (5) random
+
+**S4-40.** Memoization vs tabulation:
+(1) same (2) top-down recursion + cache vs bottom-up table (3) memo is iterative (4) tab uses stack (5) tab slower
+
+**S4-41.** \`T(n) = T(n-1) + n\` solves to:
+(1) O(n) (2) O(n^2) (3) O(log n) (4) O(n log n) (5) O(1)
+
+**S4-42.** \`T(n) = 2T(n/2) + 1\` solves to:
+(1) O(n) (2) O(n log n) (3) O(log n) (4) O(n^2) (5) O(1)
+
+**S4-43.** Which is NOT divide & conquer:
+(1) merge sort (2) quicksort (3) binary search (4) bubble sort (5) Karatsuba
+
+**S4-44.** Finding kth smallest — quickselect average:
+(1) O(n log n) (2) O(n) (3) O(k log n) (4) O(n^2) always (5) O(k)
+
+**S4-45.** Prim's MST differs from Kruskal mainly in:
+(1) result differs (2) grows one tree from a vertex vs forest of edges (3) works on DAG only (4) uses BFS (5) slower always
+
+**S4-46.** Detect cycle in DIRECTED graph needs DFS plus:
+(1) queue (2) recursion-stack (on-path) marking (3) sorting (4) BFS only (5) heap
+
+**S4-47.** Bellman-Ford over Dijkstra is needed when:
+(1) unweighted (2) negative edges present (3) dense (4) small graph (5) DAG
+
+**S4-48.** Floyd-Warshall computes:
+(1) single-source shortest (2) all-pairs shortest paths (3) MST (4) topo order (5) cycles only
+
+**S4-49.** Amortized stack with multipop remains:
+(1) O(n) per op (2) O(1) amortized per op (3) O(log n) (4) O(n^2) (5) undefined
+
+**S4-50.** Hashing average lookup assumes:
+(1) sorted keys (2) uniform hash distribution + low load factor (3) chaining banned (4) prime keys (5) small table
+
+### SET-4 part 1 ends — Q51–Q100 next.\r
+
+**S4-51.** SQL: which finds employees paid more than their manager:
+(1) self-join on emp/mgr (2) GROUP BY (3) UNION (4) subquery on dept only (5) impossible
+
+**S4-52.** Second-highest salary — correct approach:
+(1) MAX(salary) (2) LIMIT 1 OFFSET 1 on DESC distinct / MAX < overall max (3) AVG (4) MIN (5) COUNT
+
+**S4-53.** \`IN\` vs \`EXISTS\`: EXISTS is usually better for:
+(1) small lists (2) correlated subquery existence checks (3) constants (4) joins (5) indexes
+
+**S4-54.** Index speeds up SELECT but slows:
+(1) reads (2) INSERT/UPDATE/DELETE (3) commit (4) nothing (5) joins only
+
+**S4-55.** BCNF stricter than 3NF because:
+(1) no transitive at all (2) every determinant must be a candidate key (3) allows partial deps (4) more tables (5) denormalized
+
+**S4-56.** ACID Atomicity means:
+(1) visible instantly (2) all-or-nothing transaction (3) no locks (4) logged (5) replicated
+
+**S4-57.** Dirty read happens when txn reads:
+(1) committed data (2) uncommitted data of another txn (3) own writes (4) index (5) nulls
+
+**S4-58.** \`SELECT dept, AVG(sal) FROM emp GROUP BY dept\` — non-aggregated column in SELECT not in GROUP BY causes:
+(1) wrong avg (2) SQL error in strict mode (3) nulls (4) crash (5) first value
+
+**S4-59.** Natural join matches on:
+(1) specified columns (2) all same-named columns (3) PK only (4) first column (5) none
+
+**S4-60.** Denormalization in a warehouse is done for:
+(1) integrity (2) fewer joins → faster reads (3) less storage (4) security (5) transactions
+
+**S4-61.** TCP three-way handshake order:
+(1) SYN, SYN-ACK, ACK (2) ACK, SYN, FIN (3) SYN, ACK, FIN (4) FIN, ACK, SYN (5) SYN, ACK, ACK
+
+**S4-62.** MAC address operates at which OSI layer:
+(1) physical (2) data link (3) network (4) transport (5) session
+
+**S4-63.** Private IP range includes:
+(1) 8.8.8.8 (2) 192.168.x.x (3) 172.33.x.x (4) 11.0.0.1 (5) 200.1.1.1
+
+**S4-64.** \`ping\` uses which protocol:
+(1) TCP (2) UDP (3) ICMP (4) HTTP (5) ARP
+
+**S4-65.** Subnet /26 leaves how many usable host addresses per subnet (roughly):
+(1) 64 (2) 62 (3) 30 (4) 126 (5) 32
+
+**S4-66.** SSL/TLS sits conceptually between:
+(1) app and transport (2) data link and network (3) physical (4) above app (5) inside TCP
+
+**S4-67.** ARP resolves:
+(1) domain→IP (2) IP→MAC (3) MAC→IP (4) port→IP (5) host→domain
+
+**S4-68.** Default port of SSH:
+(1) 21 (2) 23 (3) 22 (4) 25 (5) 80
+
+**S4-69.** Diffie-Hellman solves:
+(1) authentication (2) key exchange over insecure channel (3) hashing (4) signing (5) compression
+
+**S4-70.** Brute-force defense that slows each login attempt:
+(1) MD5 (2) bcrypt/PBKDF2 + rate limiting (3) base64 (4) ROT13 (5) CRC
+
+**S4-71.** XSS injects malicious:
+(1) SQL (2) client-side script into pages others view (3) packets (4) headers only (5) emails
+
+**S4-72.** CSRF exploits:
+(1) stolen password (2) authenticated user's browser session (3) open ports (4) weak TLS (5) SQL
+
+**S4-73.** Principle of least privilege means:
+(1) admin for all (2) minimum access needed for the task (3) no access (4) shared accounts (5) root daily
+
+**S4-74.** Certificate Authority's role:
+(1) encrypts data (2) vouches public key ownership via signed certs (3) blocks ports (4) issues IPs (5) scans viruses
+
+**S4-75.** Honeypot is a:
+(1) firewall rule (2) decoy system to study/lure attackers (3) antivirus (4) VPN (5) proxy
+
+**S4-76.** pandas \`df.iloc[0]\` vs \`df.loc[0]\`:
+(1) same always (2) iloc = position, loc = label (3) loc faster (4) iloc = label (5) error
+
+**S4-77.** \`df.isnull().sum()\` shows:
+(1) total rows (2) NaN count per column (3) dtypes (4) memory (5) shape
+
+**S4-78.** pandas \`df['a'].fillna(0)\`:
+(1) drops NaN (2) replaces NaN with 0 (3) errors (4) converts to str (5) sorts
+
+**S4-79.** \`pd.concat([a,b])\` vs merge:
+(1) same (2) concat stacks rows/cols; merge joins on keys (3) concat joins on keys (4) merge stacks (5) error
+
+**S4-80.** \`df.corr()\` returns:
+(1) column names (2) pairwise correlation matrix (3) sums (4) groups (5) covariance scalar
+
+**S4-81.** OLAP cube operation that summarizes upward:
+(1) drill-down (2) roll-up (3) slice (4) pivot (5) dice
+
+**S4-82.** Slowly changing dimension (SCD) Type 2 keeps:
+(1) latest only (2) full history via new rows (3) separate table only (4) no history (5) flags only
+
+**S4-83.** Snowflake vs star schema: snowflake has:
+(1) denormalized dims (2) normalized dimension tables (3) no facts (4) fewer tables (5) no PKs
+
+**S4-84.** Shell \`echo $?\` shows:
+(1) PID (2) last command's exit status (3) date (4) user (5) path
+
+**S4-85.** Shell \`command > file 2>&1\` does:
+(1) only stdout (2) stdout+stderr to file (3) stderr to screen (4) append (5) error
+
+**S4-86.** \`sed 's/old/new/g' file\` replaces:
+(1) first match per file (2) all matches per line (3) deletes lines (4) renames file (5) case-sensitive only flag needed
+
+**S4-87.** \`tail -f log\` is used for:
+(1) first lines (2) live-follow file growth (3) delete (4) search (5) sort
+
+**S4-88.** \`xargs\` primarily:
+(1) kills process (2) builds command args from stdin (3) exports vars (4) archives (5) loops
+
+**S4-89.** \`crontab\` schedules:
+(1) one-time tasks (2) recurring jobs (3) users (4) kernels (5) backups only
+
+**S4-90.** \`awk -F: '{print $1}' /etc/passwd\` prints:
+(1) UIDs (2) usernames (3) shells (4) home dirs (5) GIDs
+
+**S4-91.** Python: \`"a-b-c".split('-', 1)\` returns:
+(1) ['a','b','c'] (2) ['a','b-c'] (3) ['a-b','c'] (4) 'a' (5) error
+
+**S4-92.** First unique char in "aabbcdd" is at index:
+(1) 0 (2) 4 (3) 3 (4) 2 (5) none
+
+**S4-93.** Palindrome check ignoring case for "Level" returns:
+(1) False (2) True (3) error (4) 'level' (5) 0
+
+**S4-94.** \`'abc'.upper().isupper()\` in Python:
+(1) False (2) True (3) error (4) None (5) 'ABC'
+
+**S4-95.** Longest palindromic substring of "babad" could be:
+(1) bab or aba (2) babad (3) ab (4) d (5) none
+
+**S4-96.** Bitwise: \`n << 1\` equals:
+(1) n/2 (2) n*2 (3) n+1 (4) n^2 (5) -n
+
+**S4-97.** Swap last two digits logic for n=1234 → extract last digit uses:
+(1) n/10 (2) n%10 (3) n-4 (4) n>>1 (5) n&1
+
+**S4-98.** Counting duplicates in array via hash map costs:
+(1) O(n^2) (2) O(n) time O(n) space (3) O(1) (4) O(log n) (5) sort first required
+
+**S4-99.** Dutch national flag (3-way partition) sorts 0s/1s/2s in:
+(1) O(n log n) (2) O(n) single pass (3) O(n^2) (4) O(1) (5) O(2^n)
+
+**S4-100.** Reservoir/two-sum variant needing O(1) extra space on sorted input uses:
+(1) hash map (2) two pointers (3) heap (4) DFS (5) stack
+
+### SET-4 Answer Key (all 100)
+1-(3) max = 9 · 2-(3) \`for...;\` empty body — i ends at 3 (classic trap) · 3-(2) 1→10→100 stops · 4-(2) 7+8+9 = 24 digit sum · 5-(2) i<=n writes one past end · 6-(3) lo = mid+1 when target right · 7-(2) sorted returns list of chars · 8-(2) & = set intersection · 9-(2) cast truncates · 10-(1) string concat left-to-right · 11-(2) 2^4 = 16 · 12-(4) 10,7,4,1,-2 — ends at -2 wait 1-3 = -2 → option (4)-1? compute: 10-3=7, 7-3=4, 4-3=1, 1-3=-2 stops → last i = -2; but option (4) is -1 — sequence actually: while i>=0 prints? no print inside — i ends -2; closest listed: (4) -1 is wrong, (2) -2 correct → 12-(2) · 13-(1) step 3 from 2 → 2,5,8 · 14-(2) (5>3)=1, 1>1 = 0 — chained compare trap in C · 15-(1) 4%2==0 → 'E' · 16-(2) list repeat · 17-(2) i<n from 0 covers n items · 18-(3) char+int needs cast in Java — 'A'+1 is int 66; assigning to char without cast = compile error → 18-(3) · 19-(2) '53' vs 8 · 20-(2) XOR swap → 2,1 · 21-(2) convention: empty=-1, single=0 edges · 22-(2) median-first inserts → balanced · 23-(2) right-root-left · 24-(3) 40 stays root · 25-(2) heapify = O(n) · 26-(3) V(V-1)/2 · 27-(5) tree max V-1=4 edges; 8 edges must contain cycles → also valid graph, but (5) guaranteed · 28-(2) pointer fix vs shifting · 29-(2) stack reverses → another stack/recursion · 30-(2) triples save space · 31-(2) open addressing stays in table · 32-(2) n/size · 33-(2) backward walk + O(1) delete node · 34-(3) postorder = postfix · 35-(2) i/2 · 36-(2) stack → DFS · 37-(2) comparison-sort bound · 38-(2) O(d(n+b)) · 39-(3) earliest finish = optimal · 40-(2) top-down vs bottom-up · 41-(2) sum 1..n · 42-(1) n leaves, O(n) work total · 43-(4) bubble doesn't divide · 44-(2) avg O(n) · 45-(2) vertex-grown vs edge-forest · 46-(2) gray/black marking catches back-edge · 47-(2) negative weights · 48-(2) all-pairs · 49-(2) amortized constant · 50-(2) uniform + low α · 51-(1) self-join e.mgr = m.id · 52-(2) second distinct max · 53-(2) correlated existence · 54-(2) writes must update index · 55-(2) every determinant = candidate key · 56-(2) all-or-nothing · 57-(2) uncommitted data = dirty · 58-(2) strict mode errors — must aggregate or group it · 59-(2) same-named cols · 60-(2) read speed · 61-(1) SYN→SYN-ACK→ACK · 62-(2) data link = MAC · 63-(2) 192.168.x.x private · 64-(3) ICMP echo · 65-(2) /26 → 64-2 = 62 usable · 66-(1) between app & transport · 67-(2) IP→MAC · 68-(3) SSH = 22 · 69-(2) key agreement · 70-(2) slow KDF + throttle · 71-(2) script injection · 72-(2) rides user's session · 73-(2) least privilege · 74-(2) CA binds key→identity · 75-(2) decoy · 76-(2) iloc positional / loc label · 77-(2) per-column NaN counts · 78-(2) fill NaN with 0 · 79-(2) stacking vs key join · 80-(2) correlation matrix · 81-(2) roll-up aggregates up · 82-(2) Type 2 = versioned rows · 83-(2) normalized dims · 84-(2) $? = exit status · 85-(2) 2>&1 merges stderr · 86-(2) g flag = per-line global · 87-(2) follow mode · 88-(2) stdin → args · 89-(2) recurring cron jobs · 90-(2) field 1 = username · 91-(2) maxsplit=1 → ['a','b-c'] · 92-(2) 'c' at index 4 is unique first · 93-(2) casefold compare = True · 94-(2) 'ABC'.isupper() True · 95-(1) 'bab' or 'aba' both valid · 96-(2) left shift doubles · 97-(2) %10 = last digit · 98-(2) single pass hash · 99-(2) DNF = one pass 3 pointers · 100-(2) sorted + two pointers = O(1) space\r
+
+---
+
+## A-POOL — Daily practice (3-5/day from Day 29, untimed, error-log every miss)
+
+**P1.** \`int f(int n){return n<2?n:f(n-1)+f(n-2);}\` — f(6) = (1) 8 (2) 13 (3) 5 (4) 21 (5) 6
+**P2.** Python \`print(7//2*2)\` = (1) 7 (2) 6 (3) 7.0 (4) 6.0 (5) 8
+**P3.** Java \`int a = 1; a += a++ + ++a;\` a = (1) 4 (2) 5 (3) 6 (4) 3 (5) undefined
+**P4.** Stack pop sequence of pushed 1,2,3,4 fully: (1) 1,2,3,4 (2) 4,3,2,1 (3) 2,1,4,3 (4) any (5) 1,3,4,2
+**P5.** Inorder of BST [8,3,10,1,6,14] = (1) sorted 1 3 6 8 10 14 (2) 8 3 1 6 10 14 (3) 1 3 6 8 14 10 (4) random (5) 14 10 8 6 3 1
+**P6.** \`printf("%d", 'a')\` in C prints (1) a (2) 97 (3) error (4) 0 (5) address
+**P7.** Python \`print('ab'*0)\` = (1) 'ab' (2) '' (3) error (4) 0 (5) None
+**P8.** Queue dequeue on empty = (1) null always (2) underflow/error (3) last item (4) wraps (5) 0
+**P9.** Binary search requires data: (1) linked (2) sorted + random access ideally (3) hashed (4) reversed (5) unsorted ok
+**P10.** \`T(n)=T(n-1)+1\` = (1) O(n) (2) O(1) (3) O(log n) (4) O(n^2) (5) O(2^n)
+**P11.** Java \`System.out.println(1 + 2 + "3")\` = (1) "33" (2) "123" (3) "15" (4) error (5) 6
+**P12.** But \`println("1" + 2 + 3)\` = (1) "15" (2) "33" (3) "123" (4) 6 (5) error
+**P13.** Python \`print(bool([]))\` = (1) True (2) False (3) error (4) None (5) []
+**P14.** Leaf count of full binary tree with 7 nodes: (1) 3 (2) 4 (3) 7 (4) 2 (5) 1
+**P15.** \`while(n)\` in C loops until n is (1) negative (2) 0 (3) 1 (4) true (5) even
+**P16.** Python \`a, b = b, a\` performs (1) error (2) swap via tuple packing (3) copy (4) alias (5) sort
+**P17.** Quick worst on already-sorted w/ last-element pivot: (1) O(n log n) (2) O(n^2) (3) O(n) (4) O(log n) (5) O(1)
+**P18.** Stable sort preserves (1) speed (2) relative order of equal keys (3) memory (4) duplicates (5) indexes
+**P19.** \`int *p = malloc(4); free(p); *p=1;\` = (1) fine (2) use-after-free UB (3) compile error (4) leak (5) realloc
+**P20.** DFS on tree pre/in/post — preorder prints root (1) last (2) first (3) middle (4) never (5) twice
+**P21.** Python \`d={'x':1,'y':2}; list(d)\` = (1) values (2) keys (3) pairs (4) error (5) sorted keys
+**P22.** \`O(log n)\` algorithms halve the problem each step — example: (1) linear (2) binary search (3) bubble (4) merge full (5) DFS
+**P23.** C \`for(;;)\` is (1) error (2) infinite loop (3) skips body (4) runs once (5) zero loops
+**P24.** Which is a collision-resolution method: (1) indexing (2) chaining (3) sorting (4) paging (5) caching
+**P25.** Java \`int[] a = new int[3]; a[3]=1;\` (1) ok (2) AIOOBE (3) 1 stored (4) null (5) compile error
+**P26.** Python \`s = 'hello'; s[1:4]\` = (1) 'ell' (2) 'hel' (3) 'ello' (4) 'llo' (5) error
+**P27.** Priority queue best implemented via (1) stack (2) heap (3) array scan (4) LL (5) deque
+**P28.** \`n % 2 == 0\` tests (1) odd (2) even (3) prime (4) divisible 4 (5) positive
+**P29.** Tree edges for 21 nodes: (1) 21 (2) 20 (3) 22 (4) 19 (5) 10
+**P30.** C \`a++\` vs \`++a\` difference matters when (1) never (2) value is used in expression (3) loops only (4) pointers (5) chars
+**P31.** Java \`Math.floor(-2.5)\` = (1) -2 (2) -3 (3) -2.5 (4) 2 (5) -2.0→-3.0 same? floor(-2.5)=-3.0
+**P32.** Python \`'abc' in 'xabcy'\` = (1) False (2) True (3) error (4) 1 (5) index
+**P33.** Depth-first on DAG for topo sort uses finish times ordered (1) ascending (2) descending (3) random (4) by edges (5) equal
+**P34.** Linked list tail insertion WITHOUT tail pointer costs (1) O(1) (2) O(n) (3) O(log n) (4) O(n^2) (5) 0
+**P35.** \`int x = 5 / 0\` in Java (1) inf (2) ArithmeticException (3) 0 (4) NaN (5) compile error
+**P36.** But \`5.0 / 0\` in Java gives (1) exception (2) Infinity (3) 0 (4) NaN (5) error
+**P37.** Python \`divmod(17,5)\` = (1) (3,2) (2) (2,3) (3) 3 (4) (5,17) (5) error
+**P38.** XOR of a number with itself = (1) n (2) 0 (3) 1 (4) -n (5) 2n
+**P39.** BFS shortest-path guarantee holds only when edges are (1) weighted (2) unweighted/unit cost (3) negative (4) directed (5) dense
+**P40.** \`sizeof(int)\` typically on 64-bit Linux gcc = (1) 8 (2) 4 (3) 2 (4) 16 (5) 64
+**P41.** Python \`print(0.1+0.2==0.3)\` = (1) True (2) False — float trap (3) 0.3 (4) error (5) None
+**P42.** C \`char *s="abc"; s[0]='x';\` = (1) "xbc" (2) UB — string literal (3) fine (4) error (5) copies
+**P43.** Java interface can contain (1) instance fields (2) abstract + default/static methods (3) constructors (4) private state (5) main only
+**P44.** Number of comparisons to find max AND min together (pairwise trick) ≈ (1) 2n (2) 1.5n (3) n log n (4) n^2 (5) 3n
+**P45.** \`deque.appendleft()\` exists in (1) Java only (2) Python collections (3) C std (4) JS array (5) none
+**P46.** Postfix \`5 1 2 + 4 * + 3 -\` = (1) 14 (2) 40 (3) 11 (4) 10 (5) 23
+**P47.** \`git\`-like undo via two stacks models (1) queue (2) undo/redo (3) heap (4) trie (5) hash
+**P48.** Recursion depth of balanced-BST search = (1) n (2) log n (3) 1 (4) n^2 (5) 2^n
+**P49.** Python \`{x: x*x for x in range(3)}\` = (1) {0:0,1:1,2:4} (2) [0,1,4] (3) {0,1,4} (4) error (5) {(0,0)}
+**P50.** Which DS for phone-book prefix search "sho"→"shobhit,shona": (1) hash (2) trie (3) stack (4) queue (5) array
+**P51.** SQL \`WHERE x IN (SELECT ...)\` returns rows matching (1) all (2) any listed (3) none (4) distinct only (5) sums
+**P52.** \`UNION\` vs \`UNION ALL\`: UNION removes (1) nulls (2) duplicates (3) columns (4) order (5) rows
+**P53.** Java \`String s=null; s.length()\` = (1) 0 (2) NullPointerException (3) null (4) error compile (5) -1
+**P54.** Python \`sorted(d.items(), key=lambda x: x[1])\` sorts dict by (1) key (2) value (3) index (4) length (5) hash
+**P55.** Adjacency list space = (1) O(V^2) (2) O(V+E) (3) O(E^2) (4) O(V) (5) O(1)
+**P56.** C \`int a[]={1,2,3}; printf("%d", *(a+1))\` = (1) 1 (2) 2 (3) 3 (4) address (5) error
+**P57.** Deadlock needs which condition among: (1) no locks (2) circular wait (3) fast CPU (4) single thread (5) GC
+**P58.** Python \`l.sort()\` vs \`sorted(l)\`: sort() (1) returns new list (2) sorts in place, returns None (3) same (4) errors (5) copies
+**P59.** Which traversal detects a cycle via "back edge" in DFS: (1) white/gray/black coloring (2) BFS level (3) inorder (4) heap (5) none
+**P60.** Merging two sorted linked lists efficiently uses (1) sort again (2) two-pointer merge O(m+n) (3) hash (4) stack (5) O(m*n)
+
+### A-POOL Answer Key
+P1-(1) fib(6)=8 · P2-(2) 7//2=3, *2=6 int math · P3-(2) Java: a += (1)+(3) → 1+1+3=5 (eval order trap) · P4-(2) LIFO · P5-(1) · P6-(2) char literal → int 97 · P7-(2) *0 = empty · P8-(2) underflow · P9-(2) · P10-(1) linear · P11-(1) 3 then concat → "33" · P12-(3) "1"+2+3 = "123" (left-to-right) · P13-(2) empty list falsy · P14-(2) (7+1)/2 = 4 · P15-(2) · P16-(2) tuple swap · P17-(2) · P18-(2) · P19-(2) use-after-free · P20-(2) pre = root first · P21-(2) iter(dict) = keys · P22-(2) · P23-(2) · P24-(2) · P25-(2) index 3 OOB · P26-(1) slice 1..3 = 'ell' · P27-(2) heap = O(log n) · P28-(2) · P29-(2) n-1 · P30-(2) pre/post differ in expr value · P31-(2) floor goes DOWN = -3.0 · P32-(2) substring test · P33-(2) descending finish times · P34-(2) must walk to end · P35-(2) int /0 throws · P36-(2) float /0 = Infinity · P37-(1) (3,2) · P38-(2) x^x=0 · P39-(2) unit costs only · P40-(2) int stays 4B · P41-(2) 0.1+0.2 = 0.30000000000000004 · P42-(2) literal in read-only · P43-(2) abstract+default+static ok · P44-(2) 3n/2 pairwise · P45-(2) collections.deque · P46-(1) 5+12-3 = 14 · P47-(2) two stacks = undo/redo · P48-(2) depth = height ~ log n · P49-(1) dict comprehension · P50-(2) trie prefix · P51-(2) · P52-(2) UNION dedupes · P53-(2) NPE on null · P54-(2) sort by value · P55-(2) · P56-(2) *(a+1) = a[1] = 2 · P57-(2) circular wait = deadlock condition · P58-(2) in-place, returns None (trap) · P59-(1) gray→gray edge = cycle · P60-(2) merge walk O(m+n)
+
+---
+
+## B. Coding-test problems — extended set
+
+Same rules: Simple 15 min / Moderate 25 / Hard 40. Added mains-insurance problems:
+
+### Simple tier (new)
+- **B14.** Move all zeros to end, keep order (two pointers)
+- **B15.** First non-repeating char in string
+- **B16.** Merge two sorted arrays in place/into result
+- **B17.** Valid parentheses via stack
+- **B18.** Count digits / sum digits / reverse integer (overflow care)
+
+### Moderate tier (new)
+- **B19.** Rotate array right by k (reversal algorithm)
+- **B20.** Two-sum on sorted array + unsorted (both variants)
+- **B21.** Level-order traversal printing each level on its own line
+- **B22.** Find cycle start in linked list + count cycle length
+- **B23.** LRU-cache skeleton (describe hash+DLL design, implement ops)
+- **B24.** Group anagrams from word list (hash by sorted key)
+- **B25.** Next greater element for each array position (monotonic stack)
+
+### Hard tier (new)
+- **B26.** Kth largest in a stream (running input) — size-k min-heap
+- **B27.** LCA of two nodes in BST + in plain binary tree
+- **B28.** Serialize/deserialize BST or binary tree (explain format)
+- **B29.** Max sliding-window values (deque) — describe the deque invariant
+- **B30.** Edit distance between two strings (DP table)
+
+**B-hints:** B14 write-pointer swap · B15 freq map + second scan · B16 two-pointer walk · B17 push open, pop on close · B18 careful: reverse can overflow → use long/build in result type · B19 reverse thrice · B20 sorted→2ptr, unsorted→hash · B21 queue + level-size counter · B22 Floyd's + reset · B23 map→node, DLL for order · B24 sorted-string key · B25 stack holds indexes of pending smaller elements · B26 min-heap of k seen so far · B27 BST: split point; BT: recursion returns node or null · B28 preorder + nulls markers · B29 deque stores decreasing candidates; front = max · B30 dp[i][j] = min(insert,delete,replace)+1\r
+`,"../../04_Phase2_Paper2_IT/README.md":`# Phase 2 Paper 2 — IT (the merit-deciding paper)
+
+Same subjects as Phase 1 Paper 2, but deeper: multi-step SQL output questions,
+scheduling/page-replacement numerics, subnetting problems, crypto reasoning,
+code output tracing — and longer question stems.
+
+Use this folder for material that goes BEYOND the Phase 1 notes in
+\`02_Phase1_Paper2_IT/\`:
+
+- Hard GATE-level problems per subject (one \`Practice_<subject>.md\` each)
+- Your own derivations/worked solutions — writing these IS the prep
+- Phase 2 PYQs (keep in \`05_PYQs\`, log here which topics Phase 2 repeats)
+
+Weight reminder: Phase 2 = Paper 1 English (1/3) + this paper (2/3).
+Every extra hour of IT depth here beats an extra hour of GA.
+`,"../../05_PYQs/Mains_IT_PYQ_Bank.md":`# SEBI IT Mains PYQ Bank — Real Memory-Based Questions (Phase 2 Paper 2)
+
+> Source: recalled questions from actual SEBI Grade A IT Mains candidates (2025–2026 cycle), grouped by topic with verified answers. These are **real exam questions** — the pattern, phrasing, and difficulty you'll actually face. Drill these until every answer is reflex.
+>
+> **Distribution from recall:** DSA ~55% · OOP (C++/Java/Python) ~25% · Complexity/algorithm design ~12% · DBMS/indexing ~8%.
+> Phase 2 IT = 100 MCQs in 180 min, −¼ negative marking, cutoff 40%, weightage 2/3 of final merit.
+
+---
+
+## 01 · Sorting (answer after covering)
+
+| Q | A |
+|---|---|
+| How does Insertion Sort work? | Inserts each element into its correct position in the sorted part |
+| How does Selection Sort work? | Repeatedly selects the minimum of the unsorted part and swaps it in |
+| Is Merge Sort stable? | Yes |
+| Why prefer Merge Sort over Quick Sort? | Stability + guaranteed O(n log n) |
+| Worst-case time complexity of Quick Sort? | O(n²) |
+| When does Quick Sort hit worst case? | Pivot always smallest/largest → unbalanced partitions (e.g., sorted input) |
+| Average time complexity of Bubble Sort? | O(n²) |
+| Time complexity of Merge Sort? | O(n log n) |
+| Recurrence relation of Merge Sort? | T(n) = 2T(n/2) + O(n) |
+| Sort efficient only when elements are uniformly distributed? | Bucket sort |
+
+## 02 · Searching & Complexity
+| Q | A |
+|---|---|
+| Time complexity of Binary Search? | O(log n) |
+| Best search for uniformly distributed data? | Interpolation search |
+| Best search for large sorted random-access array? | Binary search |
+| Nested loops N × N/2 complexity? | O(N²) |
+| Strassen's matrix multiplication complexity? | O(n^log₂7) ≈ O(n^2.81) |
+| Algorithm used in plagiarism detection? | Rabin–Karp |
+| Which algorithm uses the LPS array? | KMP |
+| Key property of Dynamic Programming? | Optimal substructure |
+| Technique for Sudoku / N-Queen? | Backtracking |
+| N-Queen valid-placement condition? | No two queens share row, column, or diagonal |
+
+## 03 · Hashing
+| Q | A |
+|---|---|
+| Hashing technique using linked lists? | Separate chaining |
+| Load factor in separate chaining? | α = n/m, can exceed 1 |
+| Hash table best-case search? | O(1) |
+| Why are range queries slow in hash tables? | Order not maintained → O(n) |
+
+## 04 · Stacks, Queues, Linked Lists
+| Q | A |
+|---|---|
+| DFS uses which data structure? | Stack |
+| Stack operations? | Push, Pop, Peek |
+| In infix→postfix, lower-precedence operator arrives → ? | Pop higher-precedence ops until stack top is lower or '(' found |
+| Queue operations? | Enqueue, Dequeue, Front |
+| Java class implementing Queue? | LinkedList |
+| Insert at beginning of linked list? | O(1) |
+
+## 05 · Trees (BST, AVL, B-Tree)
+| Q | A |
+|---|---|
+| Max height of AVL with 12 nodes? | 4 (AVL height ≈ 1.44·log₂(n+2)) |
+| 2^(k+1) − 1 represents? | Max nodes in binary tree of height k |
+| Binary tree with N nodes → edges? | N − 1 |
+| Strict/full binary tree, 8 leaves → total nodes? | 15 |
+| Balance factor −1, 0, +1 at every node? | AVL tree |
+| Data structure for database indexing? | B-Tree |
+| Postorder traversal order? | Left → Right → Root |
+| BST preorder 16,11,13,12,17,20,21 → postorder? | 12, 13, 11, 21, 20, 17, 16 |
+| Traversal unique for binary tree? | BFS (level-order) |
+
+## 06 · Graphs
+| Q | A |
+|---|---|
+| Best representation for a dense graph? | Adjacency matrix |
+| 5-regular graph, 6 vertices → edges? | 15 (= 5×6/2) |
+| Planar graph E=30, F=20 → vertices? | 12 (Euler: V − E + F = 2) |
+| Indegree zero for all vertices? | Edgeless/null graph |
+| What is a regular graph? | Every vertex has the same degree |
+| Prim's MST works on which principle? | Greedy — adds nearest vertex not in MST |
+
+## 07 · OOP — C++, Java, Python
+| Q | A |
+|---|---|
+| Virtual function in C++ used for? | Runtime polymorphism |
+| Pure virtual function? | \`=0\`; makes class abstract, must be overridden |
+| Encapsulation means? | Binding data + the methods operating on it together |
+| NOT part of OOP? | Anything outside the 4 pillars (abstraction, encapsulation, inheritance, polymorphism) |
+| Good software design principle? | High cohesion, low coupling |
+| Java multiple inheritance? | Only through interfaces |
+| Java 8 keyword for concrete interface methods? | \`default\` |
+| Java Anonymous Inner Class? | Unnamed one-time implementation of interface/subclass |
+| Hierarchical inheritance? | One base class → multiple derived classes |
+| Static method in base & derived, called via base reference → ? | Parent's version runs (statics are hidden, not overridden) |
+
+## 08 · Strings & Language Functions
+| Q | A |
+|---|---|
+| C++ substring function? | \`substr()\` |
+| C++ string length? | \`length()\` / \`size()\` |
+| C string length? | \`strlen()\` |
+| C first occurrence of a char? | \`strchr()\` |
+| Java substring index? | \`indexOf()\` |
+
+## 09 · Arrays, Python, JSON
+| Q | A |
+|---|---|
+| 1D array storage in C? | Contiguous memory |
+| a[3][4]: third element of first row? | \`a[0][2]\` |
+| Java 2D array — column length of a row? | \`array[row].length\` |
+| Python slicing example? | \`abc[1:4]\` → \`'bcd'\` |
+| Python slice of size k — complexity? | O(k) |
+| Python multiline strings? | Triple quotes \`'''\` or \`"""\` |
+| Python constructor? | \`__init__()\` |
+| Child calls shared method name (Python)? | Child's version runs |
+| JSON → string in Python? | \`json.dumps()\` → returns \`str\` |
+
+## 10 · Dry-run / Logic-flow pattern (new Mains format)
+The Feb-2026 notification defines the IT paper as: *"logic flow completion, program dry-run outputs, debugging, syntax understanding, data analysis."* Expect questions like:
+
+\`\`\`c
+int next_even(void) {
+    static int n = 0;
+    n = n + 2;
+    return n;
+}
+void update(int a, int *b) { int t = a; a = *b; *b = t; }
+int main(void) {
+    int x = 3, y = 7;
+    update(x, &y);
+    next_even();
+    printf("%d %d %d", x, y, next_even());
+}
+\`\`\`
+**Answer: \`3 3 4\`** — x passed by value stays 3; *b writes 3 into y; static n persists: first call returns 2 (discarded), second returns 4.
+
+\`\`\`java
+Base b = new Child();
+// b.name → "base"   (field follows reference type)
+// b.who() → "Child.who"  (method follows object type — overridden)
+// Base.tag() → "Base.tag" (static follows compile-time class)
+\`\`\`
+
+**Drill protocol:** cover the answer column, go top-to-bottom, check each. Any hesitation → re-read that section in the Notes file. Repeat until the whole bank is reflex — these exact one-liners ARE the exam.
+`,"../../05_PYQs/Pattern_Practice_Questions.md":`# Pattern Practice Questions — SEBI IT style
+
+Questions written in the actual SEBI pattern (from PYQ analysis). Work untimed
+first, then re-do timed (~48s each). Answers at the bottom — attempt before checking.
+
+## A. Code output / dry run (Programming Concepts — 30% of Paper 2!)
+
+**Q1.** C: What is printed?
+\`\`\`c
+void f() { static int i = 0; i++; printf("%d ", i); }
+int main() { f(); f(); f(); return 0; }
+\`\`\`
+(1) 1 1 1  (2) 1 2 3  (3) 0 1 2  (4) garbage  (5) None
+
+**Q2.** Java: What is printed?
+\`\`\`java
+try { int a = 10/0; } catch (ArithmeticException e) { System.out.print("A"); }
+finally { System.out.print("F"); }
+\`\`\`
+(1) A  (2) F  (3) AF  (4) exception propagates  (5) compile error
+
+**Q3.** Python: \`print([x*x for x in range(6) if x % 2])\` outputs?
+(1) [0,1,4,9,16,25] (2) [1,9,25] (3) [0,4,16] (4) [1,4,9,16,25] (5) error
+
+**Q4.** Python: \`s="SEBIGRADE"; print(s[2:6] + s[::-1][:3])\` outputs?
+(1) BIGEEDA (2) BIGREDA (3) BIGEEDAR (4) BIGEDA (5) BIGEDAR
+
+**Q5.** C: \`int a=5; printf("%d %d", a++, ++a);\` (assume left-to-right eval)
+(1) 5 6 (2) 5 7 (3) 6 7 (4) 6 6 (5) undefined behavior — which is the most precise answer?
+
+## B. SQL (10%)
+
+**Q6.** \`emp(id, name, dept, salary)\` — which returns the 2nd highest salary?
+(1) \`SELECT MAX(salary) FROM emp;\`
+(2) \`SELECT MAX(salary) FROM emp WHERE salary < (SELECT MAX(salary) FROM emp);\`
+(3) \`SELECT salary FROM emp ORDER BY salary LIMIT 1;\`
+(4) \`SELECT TOP 2 salary FROM emp;\`  (5) None
+
+**Q7.** \`SELECT dept, COUNT(*) FROM emp GROUP BY dept HAVING COUNT(*) > 5\` — HAVING filters:
+(1) rows before grouping (2) groups after aggregation (3) duplicates only (4) NULLs (5) join results
+
+**Q8.** DELETE vs TRUNCATE: which is TRUE?
+(1) DELETE removes schema (2) TRUNCATE can use WHERE (3) DELETE is DDL
+(4) TRUNCATE removes all rows, resets identity (5) both identical
+
+## C. DBMS concepts (10%)
+
+**Q9.** R(A,B,C,D), FDs: A→B, B→C, C→D. Candidate key?
+(1) A (2) B (3) C (4) D (5) AB
+
+**Q10.** BCNF requires:
+(1) no partial dependency (2) no transitive dependency (3) every determinant is a superkey
+(4) atomic values only (5) 2NF + unique PK
+
+**Q11.** Dirty read occurs when a transaction reads:
+(1) committed data twice (2) uncommitted data of another txn (3) phantom rows (4) locked rows (5) its own writes
+
+## D. Python / Data Analytics (10%)
+
+**Q12.** \`re.findall(r"\\d+", "a1b22c333")\` returns?
+(1) ['a','b','c'] (2) ['1','22','333'] (3) [1,22,333] (4) '123' (5) error
+
+**Q13.** pandas: \`df.iloc[0, 1]\` selects by:
+(1) labels (2) integer positions (3) column name only (4) index name (5) regex
+
+**Q14.** \`with open("f.txt","a") as f:\` mode "a" means:
+(1) read only (2) overwrite (3) append, create if missing (4) read+write truncate (5) binary
+
+## E. Algorithms (10%)
+
+**Q15.** Stable sort among these:
+(1) quick sort (2) heap sort (3) merge sort (4) selection sort (5) none
+
+**Q16.** BFS uses which DS?
+(1) stack (2) queue (3) heap (4) tree (5) hash table
+
+**Q17.** 0/1 knapsack is solved optimally by:
+(1) greedy (2) divide & conquer (3) dynamic programming (4) backtracking only (5) BFS
+
+## F. Networks (10%)
+
+**Q18.** Router operates at which OSI layer?
+(1) 1 (2) 2 (3) 3 (4) 4 (5) 7
+
+**Q19.** Which protocol uses UDP?
+(1) HTTP (2) FTP (3) DNS (4) SMTP (5) SSH
+
+**Q20.** 192.168.1.0/26 — usable hosts?
+(1) 64 (2) 62 (3) 32 (4) 30 (5) 126
+
+## G. Security (10%)
+
+**Q21.** "Attacker relays messages between two parties who believe they talk directly" =
+(1) phishing (2) MITM (3) replay (4) XSS (5) CSRF
+
+**Q22.** Digital signature provides primarily:
+(1) confidentiality (2) integrity + non-repudiation (3) availability (4) anonymity (5) compression
+
+**Q23.** Defense against SQL injection:
+(1) HTTPS (2) parameterized queries (3) firewall (4) CAPTCHA (5) patching OS
+
+## H. Data Warehouse + Shell (10%)
+
+**Q24.** "Fixed single dimension showing one slice of the cube" OLAP op =
+(1) dice (2) slice (3) roll-up (4) pivot (5) drill-down
+
+**Q25.** Star schema has:
+(1) normalized dims (2) denormalized dims around one fact table (3) multiple fact tables only
+(4) no fact table (5) only metadata
+
+**Q26.** In shell, \`$?\` after a command returns:
+(1) PID (2) arg count (3) exit status (4) last arg (5) script name
+
+## I. Phase-2-style dry run / debugging (MCQ format per 2026 pattern)
+
+**Q27.** Dry run: \`for(i=1;i<=3;i++){ for(j=1;j<=i;j++) printf("*"); }\` prints how many \`*\`?
+(1) 3 (2) 6 (3) 9 (4) 5 (5) 4
+
+**Q28.** Debug: \`int sum(int a[], int n){ int s; for(i=0;i<n;i++) s+=a[i]; return s; }\` — bug?
+(1) loop bound wrong (2) \`s\` uninitialized (3) missing return type (4) a[] should be *a (5) no bug
+
+**Q29.** Logic flow: to find MAX of array, the missing condition \`if(___) max=a[i];\` is:
+(1) a[i] < max (2) a[i] > max (3) a[i] == max (4) a[i] != max (5) i > max
+
+**Q30.** Dry run: \`x=0; while(x<100){x=x+40;} print(x)\` outputs?
+(1) 100 (2) 120 (3) 80 (4) 40 (5) infinite
+
+---
+
+## Answer key
+1-(2) static persists · 2-(3) catch then finally · 3-(2) odd x only · 4-(2) s[2:6]="BIGR", s[::-1][:3]="EDA" → "BIGREDA" · 5-(5) UB (sequence point) — SEBI accepts UB as answer when offered · 6-(2) · 7-(2) · 8-(4) · 9-(1) A+ = {A,B,C,D} · 10-(3) · 11-(2) · 12-(2) findall returns strings · 13-(2) · 14-(3) · 15-(3) · 16-(2) · 17-(3) · 18-(3) · 19-(3) DNS uses UDP · 20-(2) · 21-(2) · 22-(2) · 23-(2) · 24-(2) · 25-(2) · 26-(3) · 27-(2) 1+2+3=6 · 28-(2) · 29-(2) · 30-(2) 0→40→80→120
+
+Score: ___/30. Under 20 → redo the corresponding Notes.md sections before topic tests.
+`,"../../05_PYQs/Practice_Links.md":`# Phase 1 Paper 2 — Question Types + Free Practice Links
+
+Researched Nov 2026 from ixamBee, Oliveboard exam analyses, EduTap, and memory-based
+PYQ compilations. SEBI never releases official papers — everything below is
+memory-based but cross-verified across multiple sources.
+
+## Question types actually asked (Phase 1 Paper 2, 50 Qs / 40 min)
+
+| Type | Share | Example from memory-based sets |
+|---|---|---|
+| Direct conceptual recall | ~40% | "Which layer does a router work at?", "CIA = ?", "Which NF removes transitive dependency?" |
+| Code/output prediction | ~20% | C++ constructor order, Java override dispatch, Python slicing/comprehension output |
+| SQL output & meaning | ~10% | "What does this GROUP BY + HAVING return?", join-type identification |
+| Small numerics | ~10% | Subnet host counts, scheduling AT/WT, page-fault counts, Big-O of a snippet |
+| Match/scenario | ~15% | Scenario→attack name, protocol→port, OLAP op→name, algorithm→paradigm |
+| Which-is-true / NOT | ~5% | "Which is NOT a property of B+ tree?" — read the stem twice |
+
+**Weightage (official, indicative):** Programming Concepts ≈30 · DBMS Concepts 10 ·
+SQL 10 · Data Analytics (Python/R) 10 · Algorithms 10 · Networking 10 ·
+InfoSec 10 · Data Warehousing 5 · Shell Programming 5.
+
+Jan 2026 Phase-1 analysis (Oliveboard): questions seen on C++ constructors, Python
+basics, SQL aggregate functions, data warehousing terms, sorting — applied-basics
+level, not GATE depth. **Difficulty: easy-moderate; speed is the real filter.**
+
+## Free practice links — by topic
+
+| Topic | Link | What it is |
+|---|---|---|
+| ALL CS subjects (hub) | https://www.geeksforgeeks.org/interview-experiences/quiz-corner-gq/ | GeeksforGeeks Quiz Corner — topic-wise MCQ mock tests (DBMS, OS, CN, DSA, algorithms, C, Java) |
+| DBMS + SQL | https://test.sanfoundry.com/dbms-tests/ | Sanfoundry timed MCQ tests, negative marking like the real exam |
+| DBMS | https://www.geeksforgeeks.org/quizzes/50-dbms-mcqs-with-answers/ | 50 curated DBMS MCQs with answers |
+| SQL | https://www.geeksforgeeks.org/sql/sql-quiz/ | GFG SQL quiz — output/meaning style |
+| SQL hands-on | https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all | TrySQL — run live queries in browser, free |
+| Computer Networks | https://test.sanfoundry.com/computer-network-tests/ | Timed CN tests (OSI, TCP/IP, subnetting) |
+| Operating Systems | https://test.sanfoundry.com/operating-system-tests/ | Scheduling, deadlock, paging MCQs |
+| Cyber Security | https://test.sanfoundry.com/cyber-security-tests/ | Attacks, crypto, auth MCQs |
+| DSA + Algorithms | https://test.sanfoundry.com/data-structure-tests/ and https://test.sanfoundry.com/algorithm-tests/ | Traversals, sorting, complexity |
+| C / Java / Python output | https://test.sanfoundry.com/c-tests/ · /java-tests/ · /python-tests/ | Output-prediction style questions |
+| GATE-level PYQs (deeper) | https://gateoverflow.in | Filter by subject — DBMS/OS/CN/DSA; harder than SEBI but identical patterns |
+| Mixed CS MCQs | https://www.indiabix.com | Classic MCQ bank, all subjects, free |
+| Python/R quick check | https://www.w3schools.com/quiztest/ | W3Schools quizzes (Python, Java, SQL, R) |
+| Quick fun quizzes | https://quff.in/quiz | Short 6-Q quizzes per topic — good for GA-drip-style warmups |
+
+## SEBI-specific sources (closest to the real paper)
+
+| Source | Link | Use |
+|---|---|---|
+| ixamBee PYP PDFs | https://static.ixambee.com/miscellaneous-pdf/1786022839PYP-SEBI-Phase-II-Paper-2.pdf | Memory-based Phase-2 paper — the closest thing to real questions that exists |
+| ixamBee IT exam guide | https://www.ixambee.com/miscellaneous-pdf/sebi_grade_a_it_complete_exam_guide1718269996.pdf | Official topic split + syllabus detail |
+| ixamBee PYQ video series | https://www.ixambee.com (search "SEBI IT Phase 1 Previous Year") | Solved memory-based Phase-1 IT questions |
+| EduTap PYQ PDFs | https://edutap.in/sebi-grade-a/previous-year-questions/ | 5 years of memory-based Phase 1+2 papers (free, form-gated) |
+| Memory-based PYQ bank | https://www.piyushwairale.com/blog/sebi-grade-a-it-officer-pyq-2026 | 100+ solved mains questions topic-wise |
+| Testbook (paid, already in plan) | Testbook SEBI Grade A pack | 33 Phase-I FTs + 20 Phase-II + chapter tests + PYQs |
+
+## How to use this file
+
+- **Weekday gaps**: if a day's quota finishes early → 10 Sanfoundry/GFG MCQs on
+  the current week's subject (timed, log misses in Error_Log.md).
+- **Sunday warm-up**: one quff.in or W3Schools quiz before the real session.
+- **After each IT week ends**: 25 GateOverflow PYQs on that subject = your real
+  difficulty check. If GateOverflow feels easy, SEBI Paper 2 will be easy.
+`,"../../05_PYQs/Question_Patterns.md":`# SEBI Grade A IT — Question Pattern Bible
+
+Compiled from official SEBI notifications (2024 & Feb-2026), memory-based PYQs
+(2020/2022/2024/2025), and prep-platform exam analyses. Verify at the 2027 notification.
+
+---
+
+## PHASE 1 — Paper 1 (General aptitude, 100 marks, 60 min)
+
+Official handout split (Jan-2026, sebi.gov.in): **80 Qs × 1.25 marks — exactly 20 questions per section**, equal 25-mark sections. Cutoffs: Paper-1 total ≥ 30% (NO sectional cutoff) + Paper-2 ≥ 40% + aggregate ≥ 40% (80/200). Negative marking 1/4.
+
+| Section | 20 Qs break down as (Jan-2026 real paper) |
+|---|---|
+| GA | Last ~6 months affairs; SEBI/RBI/regulator facts (chair, HQ, est.), market terms (T+1, IPO, MF), budget/eco survey, schemes — all direct factual MCQs |
+| Reasoning | ~15 puzzle/seating Qs (month+subject, box+color, double-row, height) + ~5 singles (statement-assumption, syllogism, inequality, coding, blood relation, series) |
+| Quant | Approximation 5, wrong number series 4–5, arithmetic word problems 5–6, line-graph DI 5, caselet DI 5 |
+| English | RC passage 5, error spotting 4–5, double fillers 4–5, sentence improvement 3–4, para jumble 4 |
+
+## PHASE 1 — Paper 2 IT (50 MCQs, 100 marks, 40 min)
+
+~48 seconds/question. Official topic weightage (2024 notification):
+
+| Topic | Weight | ≈Qs | Archetype |
+|---|---|---|---|
+| **Programming Concepts (Java/C/C++)** | **30%** | **15** | Code output / dry run, scope, parameter passing, OOP, constructors, exception handling, recursion + broad IT trivia (real PYQs: "UNIX mounting means…", "full form of ADS") |
+| Database Concepts | 10% | 5 | Normal forms, keys, ER→relations, ACID, indexing (B/B+), concurrency |
+| SQL Queries | 10% | 5 | Query output, joins, aggregates, UNION/INTERSECT/EXCEPT, IN/EXISTS, nested queries, DDL vs DML vs TCL |
+| Data Analytics (Python/R) | 10% | 5 | Pandas DataFrames, slicing, regex, dict/set ops, file modes, list comprehension, data mining defs |
+| Algorithms | 10% | 5 | Traversals, shortest path, MST, hashing, sort/search complexity, greedy vs DP vs D&C |
+| Networking | 10% | 5 | OSI stack, TCP vs UDP, IP, switches/routers/gateways, DNS/SMTP/POP/FTP/HTTP, firewalls |
+| Info & Cyber Security | 10% | 5 | CIA triad, attack identification, authentication, network+software security, system audit |
+| Data Warehousing | 5% | 2–3 | ETL, metadata, data cube/mart, OLAP ops (roll-up, drill-down, slice-dice) |
+| Shell Programming | 5% | 2–3 | Basic commands, shell variables, scripting basics |
+
+**Trap 1:** real papers include IT trivia beyond the listed topics (Windows ADS, UNIX
+commands) — broad "computer awareness" MCQs. Testbook chapter tests cover these wells.
+
+**Trap 2:** OS, Software Engineering and Emerging Tech are NOT in the official
+Phase-1 syllabus — they surface only as ~0–3 stray trivia Qs. Don't budget dedicated
+study days for them. Full priority ranking + plan audit: \`00_Overview/Topic_Priority.md\`.
+
+## PHASE 2 — Paper 1 English Descriptive (100 marks, 60 min, typed)
+
+- Essay: 1 of ~3–4 topics, ~200–270 words
+- Precis: 1 passage → 1/3 length + title
+- Reading comprehension: ~5 questions
+- Past essay topics skew financial: asset reconstruction, financial literacy, market regulation.
+
+## PHASE 2 — Paper 2 IT (100 marks, 180 min, cutoff 40%, weight 2/3) — TWO formats
+
+- **2020–2024: descriptive CODING test** (C++/Java/Python). 9 questions, pick 6:
+  4 simple (attempt 3 × 10), 3 moderate (attempt 2 × 20), 2 hard (attempt 1 × 30).
+  Topic split: Data Structures 40%, Algorithms 30%, OOP 20%, String manipulation 10%.
+  Real 2024 Q: "Nth Fibonacci via DP (10 marks)".
+- **Feb-2026 notification (latest): objective MCQs** — "mix of logic flow completion,
+  program dry-run outputs, debugging, syntax understanding, data analysis" — 180 min.
+
+**Prep for both:** daily dry-run/debugging drills serve the MCQ format AND sharpen the
+coding format. Keep easy–medium hand-coding practice (linked list, strings, sorting,
+DP basics) as insurance — SEBI has flipped formats before.
+
+## Practice prescription (pattern → where to drill)
+
+| Pattern | Drill source |
+|---|---|
+| Code output/dry-run/debugging | Testbook "Programming Concepts" chapter tests + GateOverflow "output" questions + Pattern_Practice_Questions.md |
+| SQL query output | Testbook "SQL Queries" chapter test + DBMS notes drills |
+| Pandas/Python/regex | New notes file: \`02_Phase1_Paper2_IT/Data_Analytics_Shell_DW/Notes.md\` |
+| DW/OLAP + Shell | Same file (5% each, learn definitions cold) |
+| Paper 1 sections | Testbook chapter tests (Reasoning/Quant/English) + Full Tests Phase I |
+| Descriptive | Testbook "FT: English Descriptive" (20 tests) — 1/week |
+| Everything | 33 Full Tests Phase I + 20 Full Tests Phase II + 2 MBT on Testbook |
+`,"../../05_PYQs/Trusted_Sources.md":`# PYQs — Trusted Sources & How to Use
+
+## Where the real papers are
+- **SEBI Grade A 2020, 2022, 2024 papers** (Phase 1 + Phase 2, memory-based) — circulated by prep platforms; grab the IT-stream compilations.
+- **Testbook / Oliveboard / Adda247 / ixamBee** — SEBI Grade A mock series + PYQ compilations (paid but closest to real exam).
+- **GateOverflow (GATE CS PYQs)** — the single best free question bank for IT subjects. SEBI IT paper difficulty ≈ mid-level GATE. Use subject filters: DBMS, OS, CN, DS/Algo, TOC-lite.
+- **iQuanta / Smartkeeda / PracticeMock** — Paper 1 (banking-style Reasoning/Quant/English) mocks; SEBI Paper 1 ≈ IBPS PO style.
+- **SEBI website** → Careers/Recruitment — official syllabus & any sample papers; also press releases (GA goldmine).
+
+## PYQ workflow (non-negotiable)
+1. Solve under time. Mark: ✔ knew / ~ guessed / ✘ wrong.
+2. Every \`~\` and \`✘\` → row in \`06_Mocks_and_Practice/Error_Log.md\` with the topic.
+3. Redo ALL logged questions after 14 days. Still wrong → goes on the weak-list for next revision cycle.
+4. When a PYQ topic isn't in the Notes.md files → add a 2-line bullet to the relevant notes file (notes grow toward coverage).
+
+## PYQ paper log
+| Paper | Date done | Score | Weakest subject | Redo date |
+|---|---|---|---|---|
+`,"../../06_Mocks_and_Practice/Error_Log.md":`# Error Log
+
+One entry per wrong/guessed question. Review weekly; redo each entry after ~2 weeks.
+
+| Date | Source (mock/PYQ/topic test) | Subject | Topic | Why wrong (concept gap / silly / time / guess) | Fixed? |
+|---|---|---|---|---|---|
+`,"../../README.md":"# SEBI Grade A 2027 — IT Stream\n\nStudy workspace for SEBI Grade A (Assistant Manager) — IT stream.\n\n## Folder map\n\n| Folder | Purpose |\n|---|---|\n| `00_Overview` | Exam pattern, syllabus, study plan, progress tracker — start here |\n| `01_Phase1_Paper1` | Reasoning, Quant, English, General/Financial Awareness (screening paper) |\n| `02_Phase1_Paper2_IT` | IT subject-wise notes and topic tests for Phase 1 |\n| `03_Phase2_Paper1_English` | Descriptive English: essays, precis, comprehension practice |\n| `04_Phase2_Paper2_IT` | Advanced/deeper IT prep for Phase 2 |\n| `05_PYQs` | Previous year questions (Phase 1 + Phase 2), sorted by subject |\n| `06_Mocks_and_Practice` | Mock test logs, score analysis, error notebook |\n| `07_Interview` | HR answers, SEBI knowledge, DAF preparation |\n| `08_Resources` | Book list, useful links, reference PDFs |\n\n## Workflow\n\n1. Read `00_Overview/Exam_Pattern.md` and `Syllabus_IT.md` once.\n2. Follow `00_Overview/Study_Plan.md` — it's sequenced for someone who has attempted before.\n3. Update `00_Overview/Progress_Tracker.md` weekly.\n4. Every mock goes in `06_Mocks_and_Practice` with an error log — the error log is the highest-value artifact in this folder.\n\n## Dashboard (React UI)\n\nA visual dashboard lives in `dashboard/` — it reads these `.md` files directly (no duplication), shows the 49-day plan as a clickable tracker, and saves day-completion in your browser.\n\n```powershell\ncd dashboard\nnpm run dev     # then open http://localhost:5173\n```\n"})).map(([e,t])=>{let n=e.replace(/^\.\.\/\.\.\//,``),r=n.split(`/`),i=r[r.length-1].replace(`.md`,``),a=r.length>1?r[r.length-2]:``,o=[`notes`,`index`,`readme`].includes(i.toLowerCase());return{path:n,folder:r[0],name:(o&&a?a:i).replace(/_/g,` `),text:t}}),Wt={"00_Overview":`Overview & Plan`,"01_Phase1_Paper1":`Phase 1 — Paper 1 (Aptitude)`,"02_Phase1_Paper2_IT":`Phase 1 — Paper 2 (IT)`,"03_Phase2_Paper1_English":`Phase 2 — English Descriptive`,"04_Phase2_Paper2_IT":`Phase 2 — IT Mains`,"05_PYQs":`PYQs & Patterns`,"06_Mocks_and_Practice":`Mocks & Error Log`,"07_Interview":`Interview`,"08_Resources":`Resources`},Gt=Object.keys(Wt).map(e=>({folder:e,label:Wt[e],docs:Ut.filter(t=>t.folder===e).sort((e,t)=>e.path.localeCompare(t.path))})).filter(e=>e.docs.length>0);function Kt(e){return Ut.find(t=>t.path===e)}var qt=[{d:1,date:`Nov 13`,title:`DBMS: keys, closure, normalization (1NF–BCNF)`,sub:`DBMS`,tb:``},{d:2,date:`Nov 14`,title:`DBMS: SQL part 1 (SELECT, joins)`,sub:`DBMS`,tb:``},{d:3,date:`Nov 15`,title:`DBMS: SQL part 2 (GROUP BY/HAVING, subqueries)`,sub:`DBMS`,tb:``},{d:4,date:`Nov 16`,title:`DBMS: ACID, isolation, locks, 2PL`,sub:`DBMS`,tb:``},{d:5,date:`Nov 17`,title:`DBMS: indexing, ER→tables + 20 GATE PYQs`,sub:`DBMS`,tb:``},{d:6,date:`Nov 18`,title:`DBMS topic test (25 Qs) + redo wrongs`,sub:`DBMS`,tb:`Chapter Tests — DB Concepts + SQL Queries`},{d:7,date:`Nov 21`,title:`WEEKLY (Sat): mini IT mock + Reasoning sectional + Essay #1`,sub:`Weekly`,tb:`Chapter Tests — Reasoning`},{d:8,date:`Nov 20`,title:`Networks: OSI vs TCP/IP layers + full port table`,sub:`Networks`,tb:``},{d:9,date:`Nov 21`,title:`Networks: subnetting + IP addressing (10 drills)`,sub:`Networks`,tb:``},{d:10,date:`Nov 22`,title:`Networks: TCP vs UDP, routing, devices/firewall/DMZ`,sub:`Networks`,tb:``},{d:11,date:`Nov 23`,title:`Networks topic test (25 Qs) + redo wrongs`,sub:`Networks`,tb:`Chapter Test — Networking`},{d:12,date:`Nov 24`,title:`Prog-1: control flow, loops, operators — 20 dry-runs`,sub:`Prog`,tb:``},{d:13,date:`Nov 25`,title:`Prog-2: functions, scope/binding, param passing + recursion`,sub:`Prog`,tb:``},{d:14,date:`Nov 28`,title:`WEEKLY (Sat): Paper 1 timed sectional + Precis #1`,sub:`Weekly`,tb:`Full Test (Phase I) #1`},{d:15,date:`Nov 27`,title:`InfoSec: CIA triad + symmetric/asymmetric crypto`,sub:`InfoSec`,tb:``},{d:16,date:`Nov 28`,title:`InfoSec: hashing, digital signatures, certs/PKI`,sub:`InfoSec`,tb:``},{d:17,date:`Nov 29`,title:`InfoSec: attacks + defenses + access control (merged)`,sub:`InfoSec`,tb:``},{d:18,date:`Nov 30`,title:`InfoSec topic test (25 Qs) + redo wrongs`,sub:`InfoSec`,tb:`Chapter Test — Cyber Security`},{d:19,date:`Dec 1`,title:`Prog-3: OOP pillars — constructors, inheritance, polymorphism`,sub:`Prog`,tb:``},{d:20,date:`Dec 2`,title:`Prog-4: exceptions, overloading + output-prediction drills`,sub:`Prog`,tb:``},{d:21,date:`Dec 5`,title:`WEEKLY (Sat): full Paper 1 timed + Essay #2`,sub:`Weekly`,tb:`Full Test (Phase I) #2`},{d:22,date:`Dec 4`,title:`Prog-5: C pointers + pointer tracing (15)`,sub:`Prog`,tb:``},{d:23,date:`Dec 5`,title:`Prog-6: Java/Python idioms + output traps`,sub:`Prog`,tb:``},{d:24,date:`Dec 6`,title:`Prog-7: recursion + backtracking dry-runs`,sub:`Prog`,tb:``},{d:25,date:`Dec 7`,title:`DA-1: pandas slicing, dict/set ops, regex, file modes`,sub:`DA/Shell/DW`,tb:`Chapter Test — Data Analytics`},{d:26,date:`Dec 8`,title:`Prog-8: output marathon — 50 C/Java/Python traces`,sub:`Prog`,tb:``},{d:27,date:`Dec 9`,title:`Programming topic test (30 Qs, output-heavy) + redo wrongs`,sub:`Prog`,tb:`Chapter Tests — Programming Concepts`},{d:28,date:`Dec 12`,title:`WEEKLY (Sat): Paper 1 sectional + IT sectional + Precis #2`,sub:`Weekly`,tb:`Full Test (Phase I) #3`},{d:29,date:`Dec 11`,title:`DS: arrays/strings, stack/queue/LL + infix→postfix drills`,sub:`DSA`,tb:``},{d:30,date:`Dec 12`,title:`DS: trees — traversals, BST ops, heap trace, AVL rotations`,sub:`DSA`,tb:``},{d:31,date:`Dec 13`,title:`DS: graphs (BFS/DFS/MST/Dijkstra) + hashing`,sub:`DSA`,tb:``},{d:32,date:`Dec 14`,title:`Algo: complexity + sort/search table + paradigms`,sub:`DSA`,tb:``},{d:33,date:`Dec 15`,title:`Programming: C pointer/output tracing (15) + debugging MCQs`,sub:`Prog`,tb:``},{d:34,date:`Dec 16`,title:`DSA + Programming combined test (30 Qs) + redo wrongs`,sub:`DSA`,tb:`Chapter Tests — Programming + Algos + Python`},{d:35,date:`Dec 19`,title:`WEEKLY (Sat): FULL mock (both papers) + Essay #3`,sub:`Weekly`,tb:`Full Test (Phase I) #4 + Subject Test IT`},{d:36,date:`Dec 18`,title:`DW cram: ETL, OLAP, star/snowflake, SCD — definitions cold`,sub:`DA/Shell/DW`,tb:`Chapter Test — Data Warehouse`},{d:37,date:`Dec 19`,title:`DA-2: reshaping, groupby/merge, charts, R basics`,sub:`DA/Shell/DW`,tb:``},{d:38,date:`Dec 20`,title:`Shell cram: grep/awk/sed/chmod/cron + 15 command drills`,sub:`DA/Shell/DW`,tb:`Chapter Test — Shell`},{d:39,date:`Dec 21`,title:`Phase-2 drills: logic-flow, debugging MCQs + coding insurance`,sub:`Ph2Drills`,tb:``},{d:40,date:`Dec 22`,title:`Trivia buffer: OS/SE/Emerg one-pagers + mixed IT-trivia drill`,sub:`Trivia`,tb:``},{d:41,date:`Dec 23`,title:`FULL Paper-2 timed test (50 Qs) + redo wrongs`,sub:`Prog`,tb:`Subject Test — IT (full Paper 2)`},{d:42,date:`Dec 26`,title:`WEEKLY (Sat): FULL Phase-1 sim mock + Essay #4`,sub:`Weekly`,tb:`Full Test (Phase I) #5 + FT English Descriptive`},{d:43,date:`Dec 25`,title:`PYQ set 1 (both papers, timed) + log errors`,sub:`Blitz`,tb:`SEBI PYQs + Full Test (Phase I)`},{d:44,date:`Dec 26`,title:`PYQ set 2 + redo error log 14+ days`,sub:`Blitz`,tb:`Full Test (Phase II) IT + English Descriptive`},{d:45,date:`Dec 27`,title:`Deep-patch weakest 3 topics + GA intensive`,sub:`Blitz`,tb:``},{d:46,date:`Dec 28`,title:`SEBI_Markets_Notes + all tables from memory`,sub:`Blitz`,tb:``},{d:47,date:`Dec 29`,title:`PYQ set 3 + timed Essay #5 + Precis #3`,sub:`Blitz`,tb:`Full Test (Phase II) IT + Descriptive #2`},{d:48,date:`Dec 30`,title:`Full revision: skim all Notes + error log + GA`,sub:`Blitz`,tb:``},{d:49,date:`Dec 31`,title:`SYLLABUS COMPLETE — light tables + Jan plan`,sub:`Milestone`,tb:`MBT 1 + MBT 2`}],Jt={DBMS:`#388d3c`,Networks:`#0f9d9f`,InfoSec:`#4466ff`,"DA/Shell/DW":`#ff9800`,DSA:`#795548`,Prog:`#9c6dd9`,Ph2Drills:`#ff6d00`,Trivia:`#607d8b`,Weekly:`#f8ae00`,Blitz:`#1b5e20`,Milestone:`#e040fb`},Yt=e=>e<=7?null:e<=14?{sub:`DBMS & SQL`,path:`02_Phase1_Paper2_IT/DBMS_SQL/Notes.md`}:e<=21?{sub:`Networks`,path:`02_Phase1_Paper2_IT/Computer_Networks/Notes.md`}:e<=28?{sub:`InfoSec`,path:`02_Phase1_Paper2_IT/Information_Security/Notes.md`}:e<=35?{sub:`Programming + Data Analytics`,path:`02_Phase1_Paper2_IT/Programming_Concepts/Notes.md`}:e<=42?{sub:`DSA`,path:`02_Phase1_Paper2_IT/Data_Structures_Algorithms/Notes.md`}:{sub:`Weakest topics (error log)`,path:`06_Mocks_and_Practice/Error_Log.md`},Xt={Jan:0,Feb:1,Mar:2,Apr:3,May:4,Jun:5,Jul:6,Aug:7,Sep:8,Oct:9,Nov:10,Dec:11},Zt=e=>({name:`GA log (${e})`,path:`01_Phase1_Paper1/General_Awareness/Monthly_Logs/${e}_2026.md`}),Qt={quant:`01_Phase1_Paper1/Quantitative_Aptitude/Formula_Sheet.md`,rsn:`01_Phase1_Paper1/Reasoning/Tricks.md`,eng:`01_Phase1_Paper1/English_Language/Rules_And_Vocab.md`,desc:`03_Phase2_Paper1_English/Descriptive_Guide.md`,markets:`01_Phase1_Paper1/General_Awareness/Financial_Awareness/SEBI_Markets_Notes.md`,ga:`01_Phase1_Paper1/General_Awareness/GA_Checklist.md`},$t=[`approximation + wrong no. series · syllogism · linear-order puzzle`,`quadratic compare + approximation · blood relations · month-table puzzle`,`right/wrong series + mini DI · coding-decoding · box-stack puzzle`,`approximation + DI set · inequality · box-stack puzzle`,`wrong series + quadratic compare · direction-ranking · height-order`,`approximation + DI set · alphanumeric series · circular puzzle`,`approximation + DI set · statement-assumption · circular puzzle`,`series + quadratic compare · data sufficiency · floor puzzle`,`approximation + DI set · odd-one-out · mixed set`,`series + approximation · syllogism · linear-order puzzle`,`arithmetic: P&L + SI-CI · blood relations · month-table puzzle`,`arithmetic + DI · coding-decoding · box-stack puzzle`,`series + approximation · direction-ranking · height-order`,`arithmetic: T&W + TSD · alphanumeric series · circular puzzle`,`approximation + DI set · statement-assumption · floor puzzle`,`series + approximation · data sufficiency · linear-order puzzle`,`arithmetic: ages + mixture · odd-one-out · month-table puzzle`,`approximation + DI set · weakest single · weakest puzzle type`,`series + quadratic compare · weakest single · box-stack puzzle`,`approximation + DI set · weakest single · height-order puzzle`,`series + quadratic compare · weakest single · weakest puzzle`],en=[`SEBI Essentials — who/what/why, objectives, powers`,`laws & regulations — SEBI Act, SCRA, Depositories Act`,`market infrastructure — exchanges, depositories, clearing corps`,`recent trends — T+1 settlement, F&O changes, new products`,`RBI + economy — rates, inflation, banking basics`,`weak-section re-read (from your error log)`,`full-notes pass — every section, quick recall`],A=[`economy passage + last-week GA fact recall`,`markets passage + last-week GA fact recall`,`tech/policy passage + last-week GA fact recall`,`economy passage — vocab-in-context focus`,`markets passage — inference-question focus`,`timed RC pair (2 passages) + full GA recall`,`weakest passage type (from your error log)`],tn=[`error spotting + collocations vocab + precis para (score /10)`,`double fillers + idioms vocab + precis para (score /10)`,`phrasal verbs + para jumble + comprehension answers (score /10)`,`sentence improvement + one-word subs + precis (score /10)`,`root-words vocab + cloze test + comprehension answers (score /10)`,`mixed review — weakest archetype + precis (score /10)`,`timed English section (20 Q) + essay outline (score /10)`],nn=e=>/weekly/i.test(e.title),rn=e=>{let[t,n]=e.date.trim().split(/\s+/);return new Date(2026,Xt[t],+n).getDay()},an=e=>{if(nn(e))return{label:`weekly test day (Paper-1 IS the task)`,detail:``,links:[],patterns:!1};let[t]=e.date.trim().split(/\s+/),n=rn(e),r=[1,3,5].includes(n)?`qr`:n,i=qt.slice(0,qt.indexOf(e)).filter(e=>{if(nn(e))return!1;let t=rn(e);return r===`qr`?[1,3,5].includes(t):t===n}).length,a=e=>e[Math.min(i,e.length-1)];switch(n){case 0:return{label:`RC set + GA recall`,detail:a(A),links:[{name:`English Rules & Vocab`,path:Qt.eng},Zt(t)],patterns:!0};case 2:return{label:`English + vocab + descriptive drill`,detail:a(tn),links:[{name:`English Rules & Vocab`,path:Qt.eng},{name:`Descriptive Guide`,path:Qt.desc}],patterns:!0};case 4:return{label:`GA + mixed drills (buffer day)`,detail:`redo the week's error log + weekly GA recall`,links:[{name:`GA Checklist`,path:Qt.ga},Zt(t)],patterns:!1};case 6:return{label:`Markets + drill bank`,detail:`SEBI_Markets_Notes — ${a(en)}`,links:[{name:`SEBI Markets Notes`,path:Qt.markets},Zt(t)],patterns:!1};default:return{label:`Quant + Reasoning`,detail:a($t),links:[{name:`Quant Formula Sheet`,path:Qt.quant},{name:`Reasoning Tricks`,path:Qt.rsn}],patterns:!0}}},on=[{day:14,test:`Full Test (Phase I) #1`,target:`Baseline — just record it`},{day:21,test:`Full Test (Phase I) #2`,target:`≥ +10 over baseline`},{day:28,test:`Paper 2 IT tests + 50-Q Phase-2 set`,target:`>= 50% raw; Phase-2 set >= 45%`},{day:35,test:`Full Test (Phase I) #4 + 100-Q Phase-2 set`,target:`>= +20 over baseline; Phase-2 set >= 50%`},{day:42,test:`Full Phase-1 sim + 100-Q Phase-2 set`,target:`Paper 1 >= 60%, Paper 2 >= 55-60%; Phase-2 set >= 55%`}],sn={DBMS:`02_Phase1_Paper2_IT/DBMS_SQL/Notes.md`,Networks:`02_Phase1_Paper2_IT/Computer_Networks/Notes.md`,InfoSec:`02_Phase1_Paper2_IT/Information_Security/Notes.md`,"DA/Shell/DW":`02_Phase1_Paper2_IT/Data_Analytics_Shell_DW/Notes.md`,DSA:`02_Phase1_Paper2_IT/Data_Structures_Algorithms/Notes.md`,Prog:`02_Phase1_Paper2_IT/Programming_Concepts/Notes.md`,Ph2Drills:`04_Phase2_Paper2_IT/Practice_Questions.md`,Trivia:`05_PYQs/Question_Patterns.md`,Weekly:`00_Overview/Progress_Tracker.md`,Blitz:`05_PYQs/Question_Patterns.md`,Milestone:`00_Overview/Study_Plan.md`},cn=[{group:`SEBI-specific — closest to the real paper`,links:[{name:`ixamBee — Phase 2 IT memory-based paper (PDF)`,url:`https://static.ixambee.com/miscellaneous-pdf/1786022839PYP-SEBI-Phase-II-Paper-2.pdf`,note:`Real memory-based questions w/ answers`},{name:`ixamBee — Complete IT exam guide (PDF)`,url:`https://www.ixambee.com/miscellaneous-pdf/sebi_grade_a_it_complete_exam_guide1718269996.pdf`,note:`Official topic weightage`},{name:`EduTap — 5 yrs of memory-based PYQs`,url:`https://edutap.in/sebi-grade-a/previous-year-questions/`,note:`Free PDFs (form-gated)`},{name:`Piyush Wairale — 100+ solved IT PYQs`,url:`https://www.piyushwairale.com/blog/sebi-grade-a-it-officer-pyq-2026`,note:`Topic-wise, solved`},{name:`Oliveboard — Phase-1 exam analysis`,url:`https://www.oliveboard.in/blog/sebi-grade-a-phase-1-exam-analysis/`,note:`What was actually asked`}]},{group:`Timed MCQ tests — negative marking like the exam (Sanfoundry)`,links:[{name:`DBMS tests`,url:`https://test.sanfoundry.com/dbms-tests/`,note:`Timed · -1 per wrong`},{name:`Computer Networks tests`,url:`https://test.sanfoundry.com/computer-network-tests/`},{name:`Operating Systems tests`,url:`https://test.sanfoundry.com/operating-system-tests/`},{name:`Cyber Security tests`,url:`https://test.sanfoundry.com/cyber-security-tests/`},{name:`Data Structures tests`,url:`https://test.sanfoundry.com/data-structure-tests/`},{name:`Algorithms tests`,url:`https://test.sanfoundry.com/algorithm-tests/`},{name:`C tests (output prediction)`,url:`https://test.sanfoundry.com/c-tests/`,note:`also /java-tests/ and /python-tests/`},{name:`Java tests`,url:`https://test.sanfoundry.com/java-tests/`},{name:`Python tests`,url:`https://test.sanfoundry.com/python-tests/`}]},{group:`Quick drills & quizzes`,links:[{name:`GeeksforGeeks Quiz Corner (all subjects)`,url:`https://www.geeksforgeeks.org/interview-experiences/quiz-corner-gq/`,note:`Topic-wise mock tests`},{name:`GFG — 50 DBMS MCQs`,url:`https://www.geeksforgeeks.org/quizzes/50-dbms-mcqs-with-answers/`},{name:`GFG — SQL Quiz`,url:`https://www.geeksforgeeks.org/sql/sql-quiz/`},{name:`IndiaBIX — CS MCQ bank`,url:`https://www.indiabix.com`},{name:`W3Schools Quizzes`,url:`https://www.w3schools.com/quiztest/`,note:`Python, Java, SQL, R`},{name:`QUFF — quick 6-Q quizzes`,url:`https://quff.in/quiz`,note:`Sunday warm-ups`}]},{group:`Hands-on & GATE-level ceiling check`,links:[{name:`TrySQL — run live SQL in browser`,url:`https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all`,note:`Free, no signup`},{name:`GateOverflow — GATE PYQs by subject`,url:`https://gateoverflow.in`,note:`If these feel easy, SEBI P2 is easy`}]}],ln=[{section:`Quantitative Aptitude`,qs:20,marks:25,color:`#f59e0b`,topics:[{name:`Approximation`,qs:5,tag:`free marks — bank all`,patterns:[[`% of number + product`,`15.9% of 299.8 + 13.2 × 8.9 → round to 16% of 300 + 13×9`],[`Division with decimals`,`Round BOTH sides to a clean pair: 449.8 ÷ 14.95 → 450 ÷ 15`],[`√ / ³√ inside expression`,`Park at nearest perfect square/cube first: √168.7 → √169 = 13`],[`Chained +−× in one line`,`Round each term to a friendly cousin, compute, pick closest option`]]},{name:`Wrong Number Series`,qs:`4–5`,tag:`hunt patterns in order`,patterns:[[`Differences growing`,`Write the gaps — the wrong term corrupts two gaps`],[`×k multiplier`,`5, 15, 45, 135, 415 — all ×3 → 415 wrong (should be 405)`],[`×k + c (SEBI favourite)`,`×2+1, ×2+2, ×2+3… check right after gaps`],[`n²/n³ ± k`,`Terms hugging famous squares: 5, 10, 17, 26, 37, 49 → 49 wrong`],[`Sum of previous / interleaved`,`Fibonacci-type; if no rule fits, split odd/even positions`]]},{name:`Arithmetic word problems`,qs:`5–6`,tag:`pick the easy ones first`,patterns:[[`Profit & Loss`,`CP/SP/markup/discount, successive discount, dishonest dealer using false weights`],[`SI & CI`,`Difference between SI and CI for 2 yrs, half-yearly compounding, effective rate`],[`Mixture & Alligation`,`Replacement problems (milk-water), alligation cross for two prices/concentrations`],[`Mensuration`,`Area/volume formula plug-in — cylinder, cone, sphere; sometimes "ratio of volumes"`],[`Percentage-family`,`Successive % change (x+y+xy/100), salary/election/population two-step problems`],[`T&W / TSD / Ages (roster)`,`Efficiency-ratio work, train-crossing speed, ratio-based ages — whichever topic rotates in`]]},{name:`DI — Line Graph`,qs:5,tag:`units check first`,patterns:[[`YoY % change`,`Biggest % jump year — cancel to fractions (84/420 = 1/5), don't compute decimals`],[`Average of years/companies`,`Add the 4–5 relevant values only — read question before the graph`],[`Ratio of two years/lines`,`Cancel before multiplying`],[`% of total`,`X as % of sum — watch lakh vs thousand, % vs absolute unit traps`]]},{name:`DI — Caselet`,qs:5,tag:`build table → every Q free`,patterns:[[`Paragraph → table`,`60 sec building the mini-table while reading; never hold it in your head`],[`Two-category split`,`"60% boys; 40% of boys play cricket…" → fill boys/girls × cricket/chess cells`],[`% more/less — base trap`,`"A is what % less than B" divides by B — the wrong base sits in options`],[`Multi-step lookup`,`Once table exists, all 5 Qs are lookups — slowest start, fastest finish`]]},{name:`Quadratic compare`,qs:`0–4`,tag:`swings year to year`,patterns:[[`Sign-decoder instant kill`,`x²+8x+15=0 → both roots negative vs y²−8y+15 → both positive: x<y without factoring`],[`Factor & compare`,`Roots add to S, multiply to P — unwrap the pair`],[`CND overlap trap`,`Ranges overlapping = "cannot be determined" — most-picked wrong answer`]]}]},{section:`Reasoning Ability`,qs:20,marks:25,color:`#8b5cf6`,note:`~15 Qs come in puzzle sets of 3–5; only ~5 are standalone. Sets decide the section.`,topics:[{name:`Puzzle — Month/attribute table`,qs:`4–5`,tag:`Jan-2026: month+subject+6 persons`,patterns:[[`Fixed-grid puzzle`,`N persons × months/dates × one attribute — lock direct clues, derive rest`],[`Two-condition clue`,`"A attends before B but after the Physics exam" — order + category combined`],[`Between/count clue`,`"Exactly 2 persons between X and Y" — position maths, not trial-and-error`]]},{name:`Puzzle — Box + colour stack`,qs:`2–3`,tag:`floor/box ordering`,patterns:[[`Vertical ordering`,`Boxes stacked 1–8; colour + item attributes — draw the column, mark fixed cells`],[`Gap clues`,`"Two boxes between red and blue" — same position-maths family as seating gaps`]]},{name:`Seating — linear / double row`,qs:`4–5`,tag:`direction facing matters`,patterns:[[`Single row, mixed facing`,`Some face north, some south — left/right flips per person`],[`Two rows facing each other`,`Row A south-facing vs Row B north-facing — "opposite of" adds a pairing dimension`],[`End/position clues`,`"Sits second to the left of the one at extreme end" — anchor from edges inward`]]},{name:`Puzzle — height/order ranking`,qs:`3–5`,tag:`pure ordering`,patterns:[[`Height/weight/rank ordering`,`N persons ranked; clues are relative ("taller than A but shorter than B")`],[`Definite-position clue`,`"Third tallest wears red" — bridge between order and attribute`]]},{name:`Singles (rotating)`,qs:`3–5`,tag:`cheap marks — do first`,patterns:[[`Statement & Assumption`,`Jan-2026: 3 Qs — "is the assumption implicit?" — learn the definitely-follows test`],[`Syllogism`,`2–3 statements; only-a-few/all-being types — Venn or 50-100 rule`],[`Blood relations`,`Coded or paragraph — draw the family tree, watch gender-unstated traps`],[`Coding / alphanumeric series`,`Letter-shift, word-coding, or mixed alpha-num term finding — 2024 had 1–2 each`],[`Direction sense`,`Walk + turns → final distance/direction — trace on paper, 2023 had 2–3`]]}]},{section:`English Language`,qs:20,marks:25,color:`#10b981`,note:`Easiest section per 2024 analysis (10 easy Qs). Most scoring of the QRE trio.`,topics:[{name:`Reading Comprehension`,qs:`5–7`,tag:`eco/tech/abstract theme`,patterns:[[`Direct factual`,`Most Qs answerable straight from the passage — no inference gymnastics`],[`Vocab-in-context`,`Synonym/antonym of a word AS USED in the passage — not the dictionary sense`],[`Inference / tone / title`,`1–2 per passage — "author's attitude", "best title" — eliminate extremes`]]},{name:`Error spotting`,qs:`4–5`,tag:`4-5 part split sentence`,patterns:[[`Subject-verb agreement`,`The trap verb sits far from its subject — find the real subject first`],[`Tense/parallelism`,`"has given rise for" — wrong preposition/tense mixing (real handout Q)`],[`Article/preposition/idiom`,`"gain access to", "lack the means" — collocation errors, not grammar logic`],[`No-error option`,`~1 in 5 sentences is clean — option E is a real answer, not a trap`]]},{name:`Fillers (single/double)`,qs:`4–5`,tag:`vocab + connector fit`,patterns:[[`Double fillers`,`Pick the PAIR — each word alone may fit one blank, only one pair fits both`],[`Context clue word`,`"most depressing" tells you the blank needs a negative word — eliminate by polarity`],[`Connector fillers`,`although/therefore/moreover — read the logic flow, not just grammar`]]},{name:`Sentence improvement`,qs:`3–4`,tag:`phrase replacement`,patterns:[[`Idiomatic replacement`,`Underlined phrase → choose the grammatically + idiomatically correct version`],[`Redundancy/conciseness`,`Right answer is often the SHORTEST correct option`]]},{name:`Para jumble`,qs:`4–5`,tag:`5-6 sentence ordering`,patterns:[[`Opener identification`,`Definite article/pronoun can't open — "This policy…" needs an earlier antecedent`],[`Mandatory pairs`,`Find the pair that must stay together (pronoun→noun, cause→effect) then check options`],[`2024: 4 Qs as "Rearrangement"`,`Listed separately from jumbles — same skill, sentence-level`]]},{name:`Odd one / match column (roster)`,qs:`0–2`,tag:`2024: zero asked`,patterns:[[`Cloze test`,`Passage with numbered blanks — appeared in 2022, absent 2024 — keep it warm, don't over-invest`],[`Match the column`,`Phrase pairs / sentence starters — in official syllabus, low frequency`]]}]},{section:`General Awareness`,qs:20,marks:25,color:`#ef4444`,note:`Pure recall — zero solving time. Most Qs from 3–4 months back, some 5–8 months. No statement-based questions in 2024.`,topics:[{name:`Government schemes`,qs:4,tag:`largest single source`,patterns:[[`Scheme → ministry/feature`,`"S in SID stands for?" (Scheme), NSC max limit, Atal incubation timeline`],[`Eligibility/limit`,`ITR-4 income cap ₹50L — numeric limits are favourite facts`],[`Finance-linked schemes`,`Prioritise schemes touching markets/banking over general welfare`]]},{name:`Finance static`,qs:4,tag:`SEBI-home territory`,patterns:[[`Regulator → domain`,`"Who regulates REITs?" → SEBI (real 2024 Q) — map every regulator to its products`],[`Market terms`,`T+1 settlement, IPO types, MF basics, depositories ("CDSL promoted by BSE" — real Q)`],[`Banking products`,`Recurring deposit rules, DigiLocker scope — product-level facts`]]},{name:`Awards / firsts / sports / places`,qs:`~8`,tag:`who-what-where recall`,patterns:[[`Award → recipient`,`Abel Prize → Varadhan; Mandela Lifetime → first Indian recipient (both real 2024 Qs)`],[`First-in-news`,`"First Indian city in UNESCO City of Literature" → Kozhikode`],[`Sports events/hosts`,`FIFA Women's WC 2027 host → Brazil; medal counts, winners`],[`Places in news`,`Highest bridge → Chenab; summits, exercises, index-linked cities`]]},{name:`Finance current affairs + reports`,qs:`2+2`,tag:`RBI/SEBI + indices`,patterns:[[`Regulator actions`,`RBI repo decisions, SEBI circulars, new regulations in the window`],[`Index → rank + publisher`,`Tourism Index, brand valuations ("Kroll → Virat Kohli" — real Q) — always learn rank + who publishes`],[`Org facts`,`BIS members, WTO — "all of the above" answers appear repeatedly`]]}]}],un=[{topic:`Programming Concepts (Java / C / C++)`,weight:`30%`,qs:`~15`,color:`#38bdf8`,note:`Official #1 weightage. Also feeds Phase-2 Paper 2 — studied twice, paid twice.`,patterns:[[`Code output / dry-run (dominant)`,`Short snippet → "what does it print?" — trace variable state line by line`],[`OOP concepts`,`Inheritance types, polymorphism (overloading vs overriding), constructor call order, virtual functions`],[`Exception handling`,`try/catch flow — which line runs, output when exception thrown, finally behaviour`],[`Recursion trace`,`Unwind call stack on paper — base case first, then count returns`],[`Scope & parameter passing`,`Local vs global shadowing, call-by-value vs reference — pointer/reference trap is the classic`],[`Operator precedence / string ops`,`++i vs i++, bitwise ops, string functions in C/Java`],[`IT trivia mixed in`,`"UNIX mounting means…", "full form of ADS" — broad computer-awareness MCQs ride along`]]},{topic:`DBMS Concepts`,weight:`10%`,qs:`~5`,color:`#34d399`,patterns:[[`Normal forms identification`,`Given dependencies → which NF violated? 2NF (partial dep), 3NF (transitive), BCNF`],[`Keys`,`Count candidate keys; super vs primary vs foreign — small-relation exercises`],[`Indexing — B/B+ trees`,`Real Feb-2026 Qs: "which DS implements DB indexes" → B-Tree; B+ Tree for range queries (vs hash = point lookup only)`],[`ACID / transactions`,`Property identification by scenario; serializability, locks, deadlock basics`],[`ER → relations`,`Weak entities, mapping cardinality, attributes → schema`]]},{topic:`SQL Queries`,weight:`10%`,qs:`~5`,color:`#34d399`,patterns:[[`Query output prediction`,`THE dominant pattern — given tables + query → pick resulting rows/count`],[`Joins`,`INNER vs LEFT JOIN row counts; NULL-padding; self-join for manager-style relations`],[`Aggregates + GROUP BY/HAVING`,`COUNT(*) vs COUNT(col) NULL trap; HAVING vs WHERE order-of-execution`],[`Set ops`,`UNION vs UNION ALL (dedup!), INTERSECT, EXCEPT/MINUS`],[`Subqueries`,`IN vs EXISTS, correlated subquery evaluation order`],[`DDL/DML/TCL classify`,`DELETE vs TRUNCATE vs DROP — rollback-able or not is the trap`]]},{topic:`Data Analytics (Python / R)`,weight:`10%`,qs:`~5`,color:`#f472b6`,patterns:[[`Pandas code output`,`df.loc/iloc slicing, groupby→agg result, merge — predict the DataFrame`],[`Python data structures`,`dict/set/list ops, comprehension output — real Feb-2026 Q: json.dumps() → returns a STRING`],[`Regex`,`Pattern matching MCQs — what does r"\\d+" capture`],[`File handling`,`open() modes r/w/a/r+, read vs readlines`],[`Data-mining defs`,`Clustering vs classification vs association — definition-matching MCQs`]]},{topic:`Algorithms`,weight:`10%`,qs:`~5`,color:`#fbbf24`,patterns:[[`Complexity identification`,`Big-O of a given sort/search/loop — best vs worst case is the trap axis`],[`Sort pass-by-pass`,`State of array after N passes of bubble/selection/insertion`],[`Traversal output`,`Inorder/preorder/postorder of a drawn tree; BFS vs DFS order`],[`Which algorithm?`,`"Shortest path in weighted graph" → Dijkstra; MST → Kruskal/Prim — map problem→algo`],[`Paradigm classify`,`Greedy vs DP vs Divide&Conquer — real Phase-2 asks incl. Strassen's, quicksort/mergesort`]]},{topic:`Computer Networks`,weight:`10%`,qs:`~5`,color:`#fb923c`,patterns:[[`OSI layer mapping`,`"Which layer handles routing/encryption/framing?" — the #1 pattern every year`],[`TCP vs UDP`,`Connectionless vs oriented, reliability, which app uses which (DNS uses both!)`],[`Protocol → port/purpose`,`HTTP 80, DNS 53, SMTP 25, POP3 110, FTP 21 — plus what each does`],[`Device → layer`,`Hub=physical, switch=data-link, router=network — matching MCQs`],[`IP basics`,`Class A/B/C ranges, private IPs, simple subnetting`]]},{topic:`Info & Cyber Security`,weight:`10%`,qs:`~5`,color:`#f87171`,patterns:[[`Attack identification`,`Scenario → name the attack: phishing, MITM, SQLi, DDoS, ransomware — the dominant pattern`],[`CIA triad`,`Confidentiality/Integrity/Availability — which property does a control protect`],[`Crypto basics`,`Symmetric vs asymmetric, digital signatures (authenticity+integrity), hashing vs encryption`],[`Authentication`,`Factor types — something you know/have/are; 2FA combos`],[`Security controls/audit`,`Firewall types, IDS vs IPS, system-audit purpose`]]},{topic:`Data Warehousing`,weight:`5%`,qs:`2–3`,color:`#a78bfa`,patterns:[[`OLAP operations`,`Roll-up / drill-down / slice / dice — scenario → operation name is THE classic`],[`ETL steps`,`Extract→Transform→Load order and what happens in each`],[`Schema types`,`Star vs snowflake — dimension normalisation difference`],[`Mart vs warehouse`,`Subject-specific subset vs enterprise-wide`]]},{topic:`Shell Programming`,weight:`5%`,qs:`2–3`,color:`#a78bfa`,patterns:[[`Command → purpose`,`grep/chmod/ls flags/awk basics — "which command does X"`],[`Permissions`,`chmod 755 → rwxr-xr-x — octal permission decoding`],[`Script syntax`,`$var, #!/bin/sh, positional params $1 $2, loop/condition syntax`]]},{topic:`CS trivia buffer (non-syllabus)`,weight:`0–3 Qs`,qs:`0–3`,color:`#64748b`,note:`OS/SE/Emerging-tech aren't in the official syllabus — they surface only as trivia. Don't budget study days.`,patterns:[[`Number conversions`,`Real PYQs: decimal 59 → hex (3B), A3D → decimal, binary ↔ octal ↔ hex`],[`History/inventors`,`C by Dennis Ritchie 1972 — real PYQ`],[`Fundamentals`,`ASCII 7-bit, compiler vs interpreter, machine-language translator`],[`OS trivia`,`UNIX mounting, file-system basics — appear but tiny share`]]}],dn={"0-0-0":[{q:`15.9% of 299.8 + 13.2 x 8.9 = ?`,o:[`140`,`155`,`165`,`178`,`192`],a:2,x:`16% of 300 = 48; 13 x 9 = 117; 48 + 117 = 165. Round each piece to a friendly cousin.`},{q:`79.9% of 599.5 - 24.9% of 239.8 = ?`,o:[`380`,`400`,`420`,`440`,`465`],a:2,x:`80% of 600 = 480; 25% of 240 = 60; 480 - 60 = 420. Map each % to its fraction family (80% = 4/5, 25% = 1/4).`},{q:`24.9% of 480.2 - 11.1 x 3.9 = ?`,o:[`62`,`70`,`76`,`84`,`96`],a:2,x:`25% of 480 = 120; 11 x 4 = 44; 120 - 44 = 76.`},{q:`44.9% of 440.1 + 8.2 x 5.9 = ?`,o:[`218`,`232`,`246`,`258`,`272`],a:2,x:`45% of 440 = 198; 8 x 6 = 48; 198 + 48 = 246.`},{q:`62.4% of 800.3 + 4.9 x 9.1 = ?`,o:[`518`,`532`,`545`,`558`,`575`],a:2,x:`62.5% = 5/8, so 5/8 of 800 = 500; 5 x 9 = 45; 500 + 45 = 545.`}],"0-0-1":[{q:`449.8 / 14.95 + 12.1 x 7.9 = ?`,o:[`110`,`118`,`126`,`135`,`144`],a:2,x:`450/15 = 30; 12 x 8 = 96; 30 + 96 = 126. Division: round BOTH sides to a clean pair.`},{q:`719.6 / 23.9 + 4.8 x 6.2 = ?`,o:[`46`,`53`,`60`,`68`,`76`],a:2,x:`720/24 = 30; 5 x 6 = 30; 30 + 30 = 60.`},{q:`899.1 / 29.8 - 13.2 x 4.9 = ?`,o:[`-45`,`-35`,`-28`,`25`,`35`],a:1,x:`900/30 = 30; 13 x 5 = 65; 30 - 65 = -35. Watch sign: product term is bigger.`},{q:`359.7 / 11.9 + 19.8 x 2.1 = ?`,o:[`55`,`62`,`70`,`78`,`86`],a:2,x:`360/12 = 30; 20 x 2 = 40; 30 + 40 = 70.`},{q:`629.5 / 20.9 + 8.9 x 8.1 = ?`,o:[`88`,`95`,`102`,`110`,`119`],a:2,x:`630/21 = 30; 9 x 8 = 72; 30 + 72 = 102.`}],"0-0-2":[{q:`sqrt(168.7) + 12.9 x 3.1 = ?`,o:[`44`,`48`,`52`,`57`,`62`],a:2,x:`sqrt(169) = 13; 13 x 3 = 39; 13 + 39 = 52. Park roots at the nearest perfect square FIRST.`},{q:`15.9% of 299.8 + sqrt(168.7) x 2.9 = ?`,o:[`72`,`80`,`87`,`96`,`105`],a:2,x:`16% of 300 = 48; sqrt(169) = 13, 13 x 3 = 39; 48 + 39 = 87.`},{q:`sqrt(440.8) x 1.9 + (9.9)^2 = ?`,o:[`128`,`135`,`142`,`150`,`159`],a:2,x:`sqrt(441) = 21, 21 x 2 = 42; 10^2 = 100; 42 + 100 = 142.`},{q:`cbrt(728.9) + 15.1 x 4.9 = ?`,o:[`74`,`79`,`84`,`89`,`95`],a:2,x:`cbrt(729) = 9; 15 x 5 = 75; 9 + 75 = 84. Nearest perfect cube: 9^3 = 729.`},{q:`sqrt(360.5) + 24.9% of 320.2 = ?`,o:[`88`,`93`,`99`,`105`,`113`],a:2,x:`sqrt(361) = 19; 25% of 320 = 80; 19 + 80 = 99. 361 = 19^2 is worth knowing cold.`}],"0-0-3":[{q:`89.9% of 460 + 13.2 x 8.9 - 24.9% of 240 = ?`,o:[`452`,`462`,`471`,`484`,`498`],a:2,x:`90% of 460 = 414; 13 x 9 = 117; 25% of 240 = 60; 414 + 117 - 60 = 471. Handle each chunk separately, then chain.`},{q:`59.8 x 2.1 + 39.9% of 200.2 - 11.9 x 4.1 = ?`,o:[`142`,`150`,`158`,`167`,`178`],a:2,x:`60 x 2.1 ~ 126; 40% of 200 = 80; 12 x 4 = 48; 126 + 80 - 48 = 158. Keep one decimal where the option gaps are tight.`},{q:`(17.9)^2 + (12.1)^2 - 219.8 = ?`,o:[`228`,`238`,`248`,`259`,`270`],a:2,x:`18^2 = 324; 12^2 = 144; 324 + 144 - 220 = 248. Squares round to integers you know cold.`},{q:`34.9% of 600.2 + 9.8 x 9.2 - 19.9 x 3.1 = ?`,o:[`218`,`228`,`238`,`250`,`262`],a:2,x:`35% of 600 = 210; 10 x 9 = 90; 20 x 3 = 60; 210 + 90 - 62 ~ 238.`},{q:`499.8 / 24.9 + 14.9% of 400.1 - 7.9 x 6.2 = ?`,o:[`20`,`26`,`31`,`38`,`45`],a:2,x:`500/25 = 20; 15% of 400 = 60; 8 x 6 = 48; 20 + 60 - 49 = 31.`}],"0-1-0":[{q:`Find the wrong term: 7, 12, 22, 38, 57, 82`,o:[`12`,`22`,`38`,`57`,`82`],a:2,x:`Gaps: 5, 10, 16, 20, 25 — expected +5 steps gives 15 after 10. Wrong term sits between the two bad gaps -> 38 should be 37.`},{q:`Find the wrong term: 4, 9, 19, 38, 79, 159`,o:[`9`,`19`,`38`,`79`,`159`],a:2,x:`Gaps double: 5, 10, 20, 40, 80. 19 + 20 = 39, not 38 -> 38 is wrong.`},{q:`Find the wrong term: 11, 13, 17, 19, 23, 30`,o:[`13`,`17`,`19`,`23`,`30`],a:4,x:`All primes in order: 11, 13, 17, 19, 23, 29. 30 breaks the prime run.`},{q:`Find the wrong term: 2, 6, 12, 20, 32, 42`,o:[`6`,`12`,`20`,`32`,`42`],a:3,x:`n^2 + n: 2, 6, 12, 20, 30, 42. Gaps 4, 6, 8, 10, 12 — 32 should be 30.`},{q:`Find the wrong term: 100, 97, 91, 82, 71, 55`,o:[`97`,`91`,`82`,`71`,`55`],a:3,x:`Drops: -3, -6, -9, -12, -15. 82 - 12 = 70, not 71 -> 71 is wrong.`}],"0-1-1":[{q:`Find the wrong term: 5, 15, 45, 135, 415, 1215`,o:[`15`,`45`,`135`,`415`,`1215`],a:3,x:`All x3: 135 x 3 = 405, not 415. 405 x 3 = 1215 confirms it.`},{q:`Find the wrong term: 3, 15, 75, 375, 1875, 9376`,o:[`15`,`75`,`375`,`1875`,`9376`],a:4,x:`All x5: 1875 x 5 = 9375, not 9376.`},{q:`Find the wrong term: 7, 14, 28, 56, 112, 225`,o:[`14`,`28`,`56`,`112`,`225`],a:4,x:`All x2: 112 x 2 = 224, not 225.`},{q:`Find the wrong term: 6, 12, 36, 144, 719, 4320`,o:[`12`,`36`,`144`,`719`,`4320`],a:3,x:`Multipliers grow: x2, x3, x4, x5, x6. 144 x 5 = 720, not 719.`},{q:`Find the wrong term: 9, 18, 54, 108, 322, 648`,o:[`18`,`54`,`108`,`322`,`648`],a:3,x:`Alternating x2, x3: 108 x 3 = 324, not 322. 324 x 2 = 648 checks.`}],"0-1-2":[{q:`Find the wrong term: 3, 8, 18, 38, 78, 160`,o:[`8`,`18`,`38`,`78`,`160`],a:4,x:`x2 + 2 each: 78 x 2 + 2 = 158, not 160. SEBI favourite — check right after gaps.`},{q:`Find the wrong term: 5, 11, 23, 47, 96, 191`,o:[`11`,`23`,`47`,`96`,`191`],a:3,x:`x2 + 1 each: 47 x 2 + 1 = 95, not 96. 95 x 2 + 1 = 191 checks.`},{q:`Find the wrong term: 2, 7, 17, 37, 77, 158`,o:[`7`,`17`,`37`,`77`,`158`],a:4,x:`x2 + 3 each: 77 x 2 + 3 = 157, not 158.`},{q:`Find the wrong term: 4, 9, 20, 43, 90, 183`,o:[`9`,`20`,`43`,`90`,`183`],a:4,x:`Constants grow: x2+1, x2+2, x2+3, x2+4, x2+5. 90 x 2 + 5 = 185, not 183.`},{q:`Find the wrong term: 6, 13, 28, 59, 120, 249`,o:[`13`,`28`,`59`,`120`,`249`],a:3,x:`x2+1, x2+2, x2+3, x2+4, x2+5: 59 x 2 + 4 = 122, not 120. 122 x 2 + 5 = 249 checks.`}],"0-1-3":[{q:`Find the wrong term: 5, 10, 17, 26, 37, 49`,o:[`10`,`17`,`26`,`37`,`49`],a:4,x:`n^2 + 1 (2^2+1 ... 7^2+1): 7^2 + 1 = 50, not 49. Terms hugging famous squares = check this pattern.`},{q:`Find the wrong term: 3, 8, 15, 24, 36, 48`,o:[`8`,`15`,`24`,`36`,`48`],a:3,x:`n^2 - 1: 2, 3, 4, 5, 6, 7 squared minus 1. 6^2 - 1 = 35, not 36.`},{q:`Find the wrong term: 2, 5, 10, 17, 26, 38`,o:[`5`,`10`,`17`,`26`,`38`],a:4,x:`n^2 + 1: 1,2,3,4,5,6 squared +1 -> 37, not 38.`},{q:`Find the wrong term: 8, 27, 64, 125, 216, 344`,o:[`27`,`64`,`125`,`216`,`344`],a:4,x:`Perfect cubes 2^3 to 7^3: 7^3 = 343, not 344.`},{q:`Find the wrong term: 10, 17, 26, 37, 51, 65`,o:[`17`,`26`,`37`,`51`,`65`],a:3,x:`n^2 + 1 starting at 3^2: 7^2 + 1 = 50, not 51.`}],"0-1-4":[{q:`Find the wrong term: 4, 6, 10, 16, 26, 44`,o:[`6`,`10`,`16`,`26`,`44`],a:4,x:`Each = sum of previous two: 16 + 26 = 42, not 44.`},{q:`Find the wrong term: 3, 5, 8, 13, 22, 34`,o:[`5`,`8`,`13`,`22`,`34`],a:3,x:`Fibonacci-type: 13 + 21 = 34 works, so 22 should be 21 (8 + 13 = 21).`},{q:`Find the wrong term: 2, 5, 4, 10, 6, 15, 10, 20`,o:[`5`,`4`,`6`,`10`,`20`],a:3,x:`Interleaved: odd positions 2, 4, 6, ? go +2 -> should be 8, so 10 is wrong. Even positions 5, 10, 15, 20 are fine.`},{q:`Find the wrong term: 1, 4, 3, 8, 6, 12, 7, 16`,o:[`4`,`3`,`6`,`12`,`16`],a:2,x:`Odd positions 1, 3, 5, 7 (+2): the 6 should be 5. Even 4, 8, 12, 16 fine.`},{q:`Find the wrong term: 10, 20, 15, 25, 20, 30, 26, 35`,o:[`20`,`15`,`20`,`26`,`35`],a:3,x:`Odd positions 10, 15, 20, 25 (+5): 26 should be 25. Even 20, 25, 30, 35 fine. If no single rule fits, split odd/even.`}],"0-2-0":[{q:`A trader marks goods 40% above CP and gives 10% discount. Profit %?`,o:[`24%`,`26%`,`30%`,`33%`,`36%`],a:1,x:`SP = 140 x 0.9 = 126 -> 26%. Successive: +40 -10 - (40x10/100) = +26.`},{q:`A dishonest dealer sells at CP but uses 900g for 1kg. Profit %?`,o:[`9%`,`10%`,`11.11%`,`12.5%`,`15%`],a:2,x:`Pays for 900g, charges for 1000g -> gain = 100/900 = 11.11%. Classic trap: divide by WEIGHT GIVEN (900), not 1000.`},{q:`Selling at Rs 540 gives 20% profit. What price gives 30% profit?`,o:[`Rs 585`,`Rs 600`,`Rs 610`,`Rs 620`,`Rs 648`],a:0,x:`CP = 540/1.2 = 450; 30% -> 450 x 1.3 = 585.`},{q:`Two successive discounts of 20% and 10% equal a single discount of?`,o:[`28%`,`30%`,`32%`,`26%`,`25%`],a:0,x:`100 -> 80 -> 72. Net = 28%. Formula: 20 + 10 - (20x10/100) = 28.`},{q:`An article sold at Rs 960 earns same % profit as the loss at Rs 640. CP?`,o:[`Rs 780`,`Rs 800`,`Rs 820`,`Rs 840`,`Rs 750`],a:1,x:`Same % profit and loss -> CP = average = (960+640)/2 = 800.`}],"0-2-1":[{q:`SI on Rs 6000 at 8% for 3 years?`,o:[`Rs 1200`,`Rs 1440`,`Rs 1560`,`Rs 1600`,`Rs 1720`],a:1,x:`SI = 6000 x 8 x 3 / 100 = 1440. Straight formula plug.`},{q:`Difference between CI and SI on Rs 10000 at 10% for 2 years?`,o:[`Rs 90`,`Rs 100`,`Rs 110`,`Rs 120`,`Rs 150`],a:1,x:`Shortcut: diff = P x (r/100)^2 = 10000 x 0.01 = 100. Memorise this 2-yr formula — it appears constantly.`},{q:`Rs 8000 at 10% p.a. compounded half-yearly for 1 year gives CI of?`,o:[`Rs 800`,`Rs 810`,`Rs 820`,`Rs 840`,`Rs 880`],a:2,x:`Half-yearly: rate halves to 5%, periods double to 2. 8000 x 1.05^2 = 8000 x 1.1025 = 8820 -> CI = 820.`},{q:`A sum doubles in 8 years at SI. In how many years will it triple?`,o:[`12`,`14`,`16`,`18`,`24`],a:2,x:`Doubling means 100% interest in 8 yrs -> 12.5%/yr. Tripling needs 200% -> 16 yrs. SI logic, no formula needed.`},{q:`CI on Rs 5000 at 20% for 2 years?`,o:[`Rs 2000`,`Rs 2100`,`Rs 2200`,`Rs 2400`,`Rs 2500`],a:2,x:`Two-step: yr1 interest 1000 -> 6000; yr2 interest 1200 -> 7200. CI = 2200. Fractions: 20% = 1/5, so 5/6 squared -> 5000 x 36/25 = 7200.`}],"0-2-2":[{q:`From 40L milk, 8L is drawn and replaced with water, twice. Milk left?`,o:[`25.6L`,`28.8L`,`30L`,`32.4L`,`33.6L`],a:0,x:`Replacement formula: 40 x (1 - 8/40)^2 = 40 x 0.64 = 25.6L.`},{q:`Rice at Rs 40/kg mixed with Rs 60/kg to get Rs 48/kg. Ratio?`,o:[`1:1`,`2:1`,`3:2`,`4:3`,`5:4`],a:2,x:`Alligation cross: (60-48):(48-40) = 12:8 = 3:2. Cheap:dearer = (dearer-mean):(mean-cheap).`},{q:`A 60L mix has milk:water = 2:1. Water to add for 1:1?`,o:[`15L`,`20L`,`25L`,`30L`,`40L`],a:1,x:`Milk = 40L stays fixed. Need water = 40 -> add 20L. Keep the unchanged component fixed.`},{q:`Spirit at 25% mixed with spirit at 50% to get 30L at 40%. Amount of 25%?`,o:[`10L`,`12L`,`15L`,`18L`,`20L`],a:1,x:`Alligation: (50-40):(40-25) = 10:15 = 2:3. 25%-part = 2/5 x 30 = 12L.`},{q:`60L of 30% alcohol. How much replaced by pure alcohol to make 50%?`,o:[`12L`,`15L`,`17.14L`,`20L`,`24L`],a:2,x:`Alcohol now = 18L; need 30L. Each litre replaced adds 0.7L net alcohol. x = 12/0.7 = 17.14L.`}],"0-2-3":[{q:`Cylinder radius 7cm, height 10cm. Volume? (pi = 22/7)`,o:[`1440 cm3`,`1540 cm3`,`1480 cm3`,`1600 cm3`,`1700 cm3`],a:1,x:`V = pi r2 h = 22/7 x 49 x 10 = 1540. With r=7 always use 22/7 — 7 cancels.`},{q:`Cone and cylinder share radius and height. Volume ratio?`,o:[`1:2`,`1:3`,`1:4`,`2:3`,`3:4`],a:1,x:`Cone = (1/3)pi r2 h -> ratio 1:3. Pure formula fact.`},{q:`Rectangle 12 x 8. Diagonal?`,o:[`13`,`14.42`,`15`,`16`,`10`],a:1,x:`d = sqrt(144+64) = sqrt(208) = 4sqrt13 = 14.42. Pythagorean triple check: near 8-?-? family.`},{q:`Cube of side 5cm. Total surface area?`,o:[`125 cm2`,`150 cm2`,`100 cm2`,`175 cm2`,`250 cm2`],a:1,x:`TSA = 6a2 = 6 x 25 = 150. Volume = 125 is the classic wrong option — it is sitting at A.`},{q:`Two circles have radii ratio 3:4. Area ratio?`,o:[`3:4`,`6:8`,`9:16`,`4:3`,`9:12`],a:2,x:`Areas scale by square: 9:16. Any "ratio of areas/volumes" Q = square/cube the linear ratio.`}],"0-2-4":[{q:`Price rises 25% then falls 20%. Net change?`,o:[`+5%`,`0%`,`-5%`,`+10%`,`-2%`],a:1,x:`x + y + xy/100 = 25 - 20 - 5 = 0%. Successive % formula — equal % up then down never cancels to zero except paired values like these.`},{q:`Population 8000 grows 10% yearly. After 2 years?`,o:[`8800`,`9600`,`9680`,`9800`,`10400`],a:2,x:`8000 x 1.1 x 1.1 = 9680. Second year grows on the NEW base — that is the trap vs SI-style 9600.`},{q:`In an election, winner got 55% of 4000 valid votes. Margin over loser?`,o:[`200`,`300`,`400`,`440`,`500`],a:2,x:`Winner 2200, loser 1800 -> margin 400 = 10% of total. Election Qs: margin% x total.`},{q:`Salary cut 20%. What % raise restores it?`,o:[`20%`,`22%`,`25%`,`30%`,`33.33%`],a:2,x:`Restore % = x/(100-x) = 20/80 = 25%. Cut-then-restore never equals the cut.`},{q:`A is 40% more than B. B is what % less than A?`,o:[`40%`,`28.57%`,`33.33%`,`25%`,`30%`],a:1,x:`Base flips: less% = 40/140 = 28.57%. "Compare against what it was" — divide by the larger new value.`}],"0-2-5":[{q:`A does work in 12 days, B in 18 days. Together?`,o:[`6.5 days`,`7 days`,`7.2 days`,`7.5 days`,`8 days`],a:2,x:`LCM 36 units: A=3/day, B=2/day -> 36/5 = 7.2 days. Convert to LCM units — never add days.`},{q:`A train 240m long crosses a pole in 12 sec. Speed?`,o:[`60 km/h`,`66 km/h`,`72 km/h`,`75 km/h`,`80 km/h`],a:2,x:`Speed = 240/12 = 20 m/s x 18/5 = 72 km/h. m/s to km/h: multiply by 18/5.`},{q:`Ages of father:son = 7:3. After 10 yrs the ratio becomes 2:1. Father's present age?`,o:[`56`,`63`,`70`,`77`,`84`],a:2,x:`(7x+10)/(3x+10) = 2 -> 7x+10 = 6x+20 -> x = 10 -> father = 70. Ratio ages: one equation from the FUTURE ratio; or test options backwards.`},{q:`Avg of 5 numbers is 20. Removing one drops avg to 18. Removed number?`,o:[`24`,`26`,`28`,`30`,`32`],a:2,x:`Total 100 -> 4 numbers sum 72. Removed = 100 - 72 = 28.`},{q:`A boat goes 24km downstream in 2h, upstream same distance in 3h. Boat speed in still water?`,o:[`9 km/h`,`10 km/h`,`11 km/h`,`12 km/h`,`14 km/h`],a:1,x:`Down 12, up 8. Boat = (12+8)/2 = 10 km/h; stream = 2. Average of the two speeds.`}],"0-3-0":[{q:`Sales: 2022=400, 2023=460, 2024=575, 2025=690. Biggest % jump year?`,o:[`2023`,`2024`,`2025`,`2023 and 2025 equal`,`Cannot say`],a:1,x:`2023: 60/400=15%; 2024: 115/460=25%; 2025: 115/690=16.7%. Cancel to fractions — 115/460 = 1/4 instantly.`},{q:`Output 2023=250, 2024=300. % increase?`,o:[`16.7%`,`18%`,`20%`,`22%`,`25%`],a:2,x:`50/250 = 1/5 = 20%. Divide by the OLD value — the classic base trap.`},{q:`Price fell from 80 (2023) to 60 (2024). % decrease?`,o:[`20%`,`25%`,`30%`,`33.3%`,`15%`],a:1,x:`20/80 = 25%. Options include 33.3% (20/60) — the wrong-base trap answer.`},{q:`Revenue: Q1=120, Q2=150, Q3=135, Q4=180. Which quarter saw % drop?`,o:[`Q1`,`Q2`,`Q3`,`Q4`,`None`],a:2,x:`Only Q3 (150->135) decreased: -10%. Scan direction before computing.`},{q:`Profit 2024=450, 2025=540. What % more?`,o:[`16.7%`,`18%`,`20%`,`22%`,`25%`],a:2,x:`90/450 = 1/5 = 20%. Fraction table beats long division every time.`}],"0-3-1":[{q:`Sales 2021-25: 200, 240, 280, 320, 360. Average?`,o:[`270`,`280`,`290`,`300`,`310`],a:1,x:`AP series: average = middle term = 280. Symmetric data -> take the centre.`},{q:`Production 3 yrs: 150, 180, 210. Average?`,o:[`175`,`180`,`185`,`190`,`195`],a:1,x:`Sum 540/3 = 180.`},{q:`Two branches over 3 yrs — A: 100, 140, 160 and B: 120, 130, 170. Difference of averages?`,o:[`5`,`6.67`,`10`,`13.33`,`20`],a:1,x:`A avg = 400/3 = 133.33; B avg = 420/3 = 140; diff = 6.67. Sum first, divide once — decimal answers are fine in DI.`},{q:`Marks: 72, 85, 68, 90, 75. Average?`,o:[`76`,`78`,`80`,`77`,`79`],a:1,x:`Sum = 390/5 = 78. Add in pairs: 72+68=140, 85+75=160, +90 = 390.`},{q:`Exports 4 yrs avg 250; three yrs are 240, 260, 230. 4th year?`,o:[`250`,`260`,`270`,`280`,`240`],a:2,x:`Total = 1000; known = 730; missing = 270.`}],"0-3-2":[{q:`Company A sold 450, B sold 600 in 2024. Ratio A:B?`,o:[`2:3`,`3:4`,`4:5`,`5:6`,`3:5`],a:1,x:`450:600 -> divide by 150 = 3:4. Cancel before anything else.`},{q:`2023 sales 360, 2024 sales 450. 2023 as % of 2024?`,o:[`75%`,`80%`,`85%`,`90%`,`125%`],a:1,x:`360/450 = 4/5 = 80%. "X as % of Y" -> Y is the base.`},{q:`Imports:exports = 5:4. Exports = 240. Imports?`,o:[`280`,`300`,`320`,`200`,`250`],a:1,x:`240/4 = 60 per part; imports = 5 x 60 = 300.`},{q:`Branch X sold 315, Y sold 420. X is what % less than Y?`,o:[`20%`,`25%`,`33.3%`,`75%`,`105%`],a:1,x:`(420-315)/420 = 105/420 = 1/4 = 25%. Base = Y, the thing after "than".`},{q:`Total 900 split between P and Q in ratio 2:3. Q gets?`,o:[`360`,`450`,`540`,`600`,`480`],a:2,x:`Q = 3/5 x 900 = 540.`}],"0-3-3":[{q:`Total production 50,000 units; Plant B = 8,500. B is what % of total?`,o:[`15%`,`16%`,`17%`,`18%`,`19%`],a:2,x:`8500/50000 = 17/100 = 17%. Watch the zeros.`},{q:`Table in THOUSANDS: Dept X = 45, total = 300. Actual % of X?`,o:[`12%`,`13%`,`14%`,`15%`,`16%`],a:3,x:`45/300 = 15%. Units trap: thousand vs lakh cancels only if SAME units — check headers first.`},{q:`Revenue Rs 2.4 lakh; cost Rs 1.8 lakh. Cost is what % of revenue?`,o:[`70%`,`72%`,`75%`,`80%`,`85%`],a:2,x:`1.8/2.4 = 3/4 = 75%.`},{q:`Employees: HR 60, Tech 300, Ops 240. Tech is what % more than Ops?`,o:[`20%`,`25%`,`30%`,`60%`,`80%`],a:1,x:`60/240 = 25%. Options include 60 (raw difference) — the trap.`},{q:`Budget: dept gets 18% of Rs 5,50,000. Amount?`,o:[`Rs 90,000`,`Rs 95,000`,`Rs 99,000`,`Rs 1,00,000`,`Rs 1,08,000`],a:2,x:`18% = 20% - 2% = 1,10,000 - 11,000 = 99,000. Split % into friendly pieces.`}],"0-4-0":[{q:`School: 1200 students, 60% boys. 40% of boys play cricket, 30% of girls play cricket. Total cricketers?`,o:[`400`,`420`,`432`,`450`,`480`],a:2,x:`Boys 720 -> cricket 288; girls 480 -> cricket 144. 288+144 = 432. Build the 2x2 table first; then every Q is a lookup.`},{q:`Office 500 staff: 55% men. 60% of men and 50% of women are married. Married staff?`,o:[`260`,`265`,`270`,`277.5`,`280`],a:3,x:`Men = 275 -> married 165; women = 225 -> married 112.5; total 277.5. SEBI occasionally leaves fractional people — answer what the math says, not the roundest option.`},{q:`800 voters: 45% urban. 70% urban + 55% rural voted. Total votes cast?`,o:[`480`,`494`,`510`,`524`,`540`],a:1,x:`Urban 360 -> 252; rural 440 -> 242; total 494. Two-category split, then apply rates to each cell.`},{q:`Library 2000 books: 30% fiction. 25% fiction and 10% non-fiction issued. Issued books?`,o:[`260`,`280`,`290`,`300`,`310`],a:2,x:`Fiction 600 -> 150; non-fiction 1400 -> 140; total 290.`},{q:`900 employees: 2/3 in shift A. 50% of A and 40% of B take canteen. Canteen users?`,o:[`400`,`410`,`420`,`430`,`440`],a:2,x:`A=600 -> 300; B=300 -> 120; total 420. Fractions inside caselets: 2/3 of 900 is instant.`}],"0-4-1":[{q:`Class: 240 students play one sport. 5/8 cricket; of cricketers 40% also swim (dual allowed). Cricket-only?`,o:[`80`,`90`,`96`,`100`,`108`],a:1,x:`Cricketers = 150; 40% also swim -> cricket-only = 60% of 150 = 90. "Also" vs "only" wording is the whole question.`},{q:`150 people: 60% tea drinkers, 50% coffee, 20% both. Neither?`,o:[`10`,`12`,`15`,`18`,`20`],a:2,x:`Union = 90 + 75 - 30 = 135; neither = 15. Venn formula: A + B - both.`},{q:`College 400: 70% play games. Of players, 30% play only indoor. Indoor-only count?`,o:[`80`,`84`,`90`,`96`,`100`],a:1,x:`Players = 280; indoor-only = 84.`},{q:`240 employees: 75% graduates. Of graduates 60% are engineers. Engineers?`,o:[`100`,`104`,`108`,`112`,`120`],a:2,x:`180 x 0.6 = 108.`},{q:`360 applicants: 5/9 male. Of males 45% experienced. Experienced males?`,o:[`80`,`85`,`90`,`95`,`100`],a:2,x:`Males = 200; 45% = 90.`}],"0-4-2":[{q:`Factory A produced 840 units, B produced 1050. A is what % less than B?`,o:[`20%`,`25%`,`15%`,`18%`,`22%`],a:0,x:`Base = B (after "than"): 210/1050 = 1/5 = 20%. Dividing by A gives 25% — the wrong answer sitting in the options.`},{q:`Team X scored 480, Y scored 400. X is what % more than Y?`,o:[`16.7%`,`18%`,`20%`,`25%`,`22%`],a:2,x:`80/400 = 20%. Base = Y.`},{q:`Ravi earns 25% more than Mohan. Mohan earns what % less than Ravi?`,o:[`25%`,`20%`,`22.5%`,`15%`,`30%`],a:1,x:`Mohan = 100, Ravi = 125. Less = 25/125 = 20%. Asymmetric — same number, different bases.`},{q:`City A pop 1.2 lakh, B pop 1.5 lakh. B exceeds A by what %?`,o:[`20%`,`25%`,`30%`,`33.3%`,`15%`],a:1,x:`0.3/1.2 = 25%.`},{q:`Price of X = Rs 750, Y = Rs 600. Y is what % cheaper than X?`,o:[`15%`,`20%`,`25%`,`18%`,`22%`],a:1,x:`150/750 = 20%.`}],"0-4-3":[{q:`Table built: Cricket=288 boys + 144 girls; Chess=432 boys + 336 girls. Boys-in-chess as % of girls-in-cricket?`,o:[`200%`,`250%`,`300%`,`333%`,`150%`],a:2,x:`432/144 = 300%. After the table exists, this is one division — caselet = slow start, free finish.`},{q:`Using same table: total students who DONOT play cricket?`,o:[`700`,`720`,`748`,`768`,`780`],a:3,x:`1200 - 432 = 768. Total minus the cricket row/column.`},{q:`Same table: chess players form what % of the school?`,o:[`60%`,`62%`,`64%`,`66%`,`68%`],a:2,x:`(432+336)/1200 = 768/1200 = 64%.`},{q:`Same table: ratio of girl-cricketers to boy-cricketers?`,o:[`1:2`,`2:3`,`1:3`,`3:4`,`4:5`],a:0,x:`144:288 = 1:2.`},{q:`Same table: if 50 more girls join cricket, new cricket total?`,o:[`472`,`482`,`492`,`502`,`512`],a:1,x:`432 + 50 = 482. Update ONE cell, recompute the row.`}],"0-5-0":[{q:`I. x^2 + 8x + 15 = 0   II. y^2 - 8y + 15 = 0`,o:[`x > y`,`x < y`,`x >= y`,`x <= y`,`No relation`],a:1,x:`I: both roots negative (-3,-5). II: both positive (3,5). All-negative vs all-positive = instant kill, no full factoring needed.`},{q:`I. x^2 + 10x + 24 = 0   II. y^2 - 7y + 12 = 0`,o:[`x > y`,`x < y`,`x >= y`,`x <= y`,`No relation`],a:1,x:`I: -4,-6 (both neg). II: 3,4 (both pos). x < y.`},{q:`I. x^2 - 6x + 8 = 0   II. y^2 + 9y + 20 = 0`,o:[`x > y`,`x < y`,`x >= y`,`x <= y`,`No relation`],a:0,x:`I: 2,4 (pos). II: -4,-5 (neg). x > y — same trick reversed.`},{q:`I. x^2 + 12x + 35 = 0   II. y^2 - 12y + 35 = 0`,o:[`x > y`,`x < y`,`x = y`,`x <= y`,`No relation`],a:1,x:`I: -5,-7. II: 5,7. x < y instantly.`},{q:`I. x^2 + x - 12 = 0   II. y^2 + 2y - 15 = 0`,o:[`x > y`,`x < y`,`x >= y`,`x <= y`,`No relation`],a:4,x:`Constant negative = one root each sign: I: 3,-4; II: 3,-5. Ranges overlap -> CND. Sign poem: "+Sx -P = one + one -".`}],"0-5-1":[{q:`I. x^2 - 7x + 12 = 0   II. y^2 - 9y + 20 = 0`,o:[`x > y`,`x < y`,`x >= y`,`x <= y`,`x = y or no relation`],a:3,x:`I: 3,4. II: 4,5. Every x <= every y and x=4=y -> x <= y. Equal counts as <=, not <.`},{q:`I. x^2 - 11x + 30 = 0   II. y^2 - 5y + 6 = 0`,o:[`x > y`,`x < y`,`x >= y`,`x <= y`,`No relation`],a:0,x:`I: 5,6. II: 2,3. All x > all y -> x > y.`},{q:`I. x^2 - 10x + 24 = 0   II. y^2 - 13y + 42 = 0`,o:[`x > y`,`x < y`,`x >= y`,`x <= y`,`No relation`],a:3,x:`I: 4,6. II: 6,7. x <= y (touch at 6).`},{q:`I. x^2 - 9x + 20 = 0   II. y^2 - 8y + 15 = 0`,o:[`x > y`,`x < y`,`x >= y`,`x <= y`,`No relation`],a:4,x:`I: 4,5. II: 3,5. Ranges overlap (y range sits inside x) -> CND.`},{q:`I. x^2 - 15x + 56 = 0   II. y^2 - 10y + 21 = 0`,o:[`x > y`,`x < y`,`x >= y`,`x <= y`,`No relation`],a:2,x:`I: 7,8. II: 3,7. x >= y (touch at 7).`}],"0-5-2":[{q:`I. x^2 - 9x + 18 = 0   II. y^2 - 9y + 20 = 0`,o:[`x > y`,`x < y`,`x >= y`,`x <= y`,`No relation`],a:4,x:`I: 3,6. II: 4,5. y sits INSIDE x range -> overlapping = cannot determine, always.`},{q:`I. x^2 - 8x + 15 = 0   II. y^2 - 10y + 24 = 0`,o:[`x > y`,`x < y`,`x >= y`,`x <= y`,`No relation`],a:4,x:`I: 3,5. II: 4,6. Ranges overlap at 4-5 -> CND. Overlapping ranges is THE most-picked trap.`},{q:`I. x^2 - 12x + 32 = 0   II. y^2 - 11y + 28 = 0`,o:[`x > y`,`x < y`,`x >= y`,`x <= y`,`No relation`],a:4,x:`I: 4,8. II: 4,7. Overlap -> CND.`},{q:`I. x^2 + 6x - 16 = 0   II. y^2 - 3y - 18 = 0`,o:[`x > y`,`x < y`,`x >= y`,`x <= y`,`No relation`],a:4,x:`I: 2,-8. II: 6,-3. Compare all pairs: 2>-3 but -8<6 -> mixed -> CND.`},{q:`I. x^2 - 14x + 48 = 0   II. y^2 - 12y + 35 = 0`,o:[`x > y`,`x < y`,`x >= y`,`x <= y`,`No relation`],a:4,x:`I: 6,8. II: 5,7. Overlap -> CND.`}],"1-0-0":[{q:`Six people P,Q,R,S,T,U have exams in Jan,Mar,May,Jul,Sep,Nov. P is before T; U is in May; S is immediately after P. Who is in Jan?`,o:[`P`,`Q`,`R`,`S`,`Cannot be determined`],a:4,x:`Build the grid: U=May fixed. P<T and S=P+1 leaves multiple valid orders -> CND. Lesson: never force a unique answer when clues leave gaps.`},{q:`Same setup + R is in Nov and Q is in Mar. Now who is in Jan?`,o:[`P`,`Q`,`R`,`S`,`T`],a:0,x:`Fixed: Q=Mar, U=May, R=Nov. Remaining Jan,Jul,Sep for P,S,T with P<S(adjacent) and P<T: only Jan(P),Jul(S),Sep(T) works. Lock direct clues first, then run the constraints.`},{q:`Five exams A-E on Mon-Fri. C on Wed. A before C, D after C, B immediately after A. B is on?`,o:[`Mon`,`Tue`,`Thu`,`Fri`,`Cannot be determined`],a:1,x:`C=Wed. A,B adjacent before Wed -> A=Mon,B=Tue only option. Adjacency narrows slots drastically.`},{q:`Six months Jan-Jun, each person likes a colour. P=Jan(red). Q is before R; R=blue; S is in Jun. If T=green in Apr, who is in Feb-Mar-May?`,o:[`Q,R and one of U/V`,`Q and R only`,`Cannot split uniquely`,`S, T, R`,`P, Q, R`],a:2,x:`Fixed cells done (Jan P, Apr T, Jun S); Feb/Mar/May hold Q,R,+1 with Q<R but exact placement has 2 valid orders -> partial determination. Answer the SPECIFIC question asked, not the whole grid.`},{q:`A,B,C,D attend in Q1(Jan-Mar),Q2,Q3,Q4. A in Q2, D in Q4, B before A. B is in?`,o:[`Q1`,`Q2`,`Q3`,`Q4`,`Cannot be determined`],a:0,x:`Only Q1 is before A. One-clue deduction — the fastest marks in puzzle sets.`}],"1-0-1":[{q:`Six people, months Jan-Mar-Apr-Jun-Jul-Sep. "X attends before the Physics exam but after Y." Y is in Jan. Possible slots for X?`,o:[`Mar only`,`Mar or Apr`,`Apr or Jun`,`Mar, Apr or Jun`,`Any month after Jan`],a:3,x:`X must sit between Jan(Y) and the Physics exam — translate the double condition into a range, not a point.`},{q:`"Z attended exactly 2 months after the Accounts exam" — Accounts is in Feb. Z is in?`,o:[`Mar`,`Apr`,`May`,`Jun`,`Cannot be determined`],a:1,x:`"Exactly 2 after" = fixed offset -> Apr. Offset clues are anchors: convert immediately to a fixed position.`},{q:`Exams in odd months Jan,Mar,May,Jul,Sep,Nov. "M writes in a month having 31 days but not the first." If Jan is taken by K, M could be in?`,o:[`Mar or May only`,`May, Jul or later 31-day months`,`Jul only`,`Mar only`,`Nov`],a:1,x:`31-day months in the list: Mar,May,Jul (Aug not listed). Minus Jan(taken) -> May or Jul... plus check "not the first" removes nothing else. External-knowledge clues (days in month) are a SEBI flavour — know 31-day months cold.`},{q:`"P attends before R but after Q; all three in Jan,Mar,May." Correct order?`,o:[`Q,P,R`,`P,Q,R`,`Q,R,P`,`R,P,Q`,`Cannot be determined`],a:0,x:`Chain reading: before R, after Q -> Q-P-R. Three-person order chains resolve instantly once you lay them on a line.`},{q:`"The English exam is in the month immediately before the person who likes tea; that person is in Jun." English is in?`,o:[`Mar`,`Apr`,`May`,`Jun`,`Jul`],a:2,x:`Immediately before Jun = May. The clue looks circular but is a plain offset — rewrite it as "E = tea-month minus 1".`}],"1-0-2":[{q:`8 seats in a row numbered 1-8. "Exactly two people sit between A and B." If A is at 2, B is at?`,o:[`4`,`5`,`6`,`4 or 6`,`5 or 6`],a:1,x:`Two between = position gap of 3: B = 2+3 = 5 (2-3 invalid). Convert every "between" clue to |difference| = count + 1 instantly.`},{q:`"Three people have exams between P (Mar) and R." R is in a monthly sequence Jan-Dec. R is in?`,o:[`Jul`,`Aug`,`Jul or Nov`,`Jun or Oct`,`Cannot be determined`],a:2,x:`Gap of 4: Mar+4 = Jul or Mar-4 = Nov (previous year logic aside). Keep both directions open until another clue kills one.`},{q:`Six people in a column. "B has exactly one person above him; D is at the bottom; A is between B and D." Order top-bottom?`,o:[`B,x,A,x,x,D variants`,`B,A,x,x,x,D only`,`Cannot be determined fully`,`A,B,x,x,x,D`,`x,B,A,x,x,D only`],a:0,x:`B is 2nd from top; D 6th; A somewhere between -> positions 3,4,5 hold A + 2 others in some order. Partial grids are normal — answer what is determinable.`},{q:`"Number of people between X and Y equals number between Y and Z" in a row of 7. If X=1, Y=4, then Z=?`,o:[`6`,`7`,`5`,`6 or 7`,`7 only`],a:1,x:`X-Y gap = 2 between -> equal gap after Y: 4+3 = 7. Mirror-count clues = symmetric positioning.`},{q:`9 floors. "Five people live between F and G." F on floor 2, G lives?`,o:[`7`,`8`,`9`,`8 only`,`7 or 8`],a:1,x:`Five between = gap of 6: 2+6 = 8. (2-6 invalid.) Count clue -> |diff| = count+1.`}],"1-1-0":[{q:`Eight boxes stacked 1(bottom)-8(top). Red box is at 5, two boxes between red and blue. Blue is at?`,o:[`2`,`3`,`7`,`2 or 8`,`8`],a:3,x:`Gap of 3: 5-3=2 or 5+3=8. Two valid -> keep both until a clue kills one. Draw the column; never hold it in your head.`},{q:`Same stack: green is immediately above red(5), yellow is below blue. If blue = 2, yellow could be at?`,o:[`1`,`3`,`4`,`1 only`,`1 or 3`],a:0,x:`Below 2 = only 1. Fixed anchors cascade — green=6 locked, blue=2 locks yellow=1.`},{q:`Six boxes; "box A is above box C but not adjacent; C is above the black box." Minimum boxes needed below A?`,o:[`2`,`3`,`4`,`1`,`Cannot be determined`],a:1,x:`A > C > black with a gap between A and C -> at least 2 boxes under A (C + gap... actually C + black = 2 minimum plus the gap box between A and C = 3 below A). Order + gap combined.`},{q:`Boxes P,Q,R,S stacked; P is third from top, Q is immediately below P, R is at bottom. S is?`,o:[`Top`,`Second from top`,`Third`,`Bottom`,`Cannot be determined`],a:0,x:`4 positions: R=4(bottom), P=2... wait P third from top in a 4-stack = position 2 from bottom. Top to bottom: S,P,Q,R. S = top.`},{q:`Five boxes A-E; A above B with one box between; C on top; D below B. Order top to bottom?`,o:[`C,A,_,B,D only`,`C,A,E,B,D or C,A,D,B,E`,`C,A,x,B,x with D below B: C,A,E,B,D`,`Cannot be determined`,`A,C,B,D,E`],a:2,x:`C=1. A-B gap of 2: A=2,B=4 -> positions 3,5 for D,E with D below B -> D=5? "D below B" means D at 5, E=3. Order: C,A,E,B,D.`}],"1-1-1":[{q:`"Two boxes between the red and blue boxes" in a 7-stack. Red at 1, blue at?`,o:[`3`,`4`,`5`,`4 only`,`3 or 4`],a:1,x:`Two between -> |diff| = 3 -> blue = 4. Same rule as seating "people between".`},{q:`Books stacked; "three books between History and Maths"; History is 2nd from top in a 6-stack. Maths is?`,o:[`5th`,`6th`,`4th`,`5th or 6th`,`Cannot be determined`],a:1,x:`Gap of 4: 2+4 = 6 (2-4 invalid) -> bottom. One-direction valid = unique answer.`},{q:`"Exactly one box between the heaviest and lightest." Heaviest at 3 in a 6-stack. Lightest at?`,o:[`1 or 5`,`5 only`,`1 only`,`2 or 4`,`Cannot be determined`],a:0,x:`Gap of 2: 3-2=1 or 3+2=5 -> two candidates until a second clue fixes it.`},{q:`Five cartons; "no carton between Tea and Coffee" AND "Milk is between them." Contradiction?`,o:[`Yes — impossible clues`,`No — Milk is the one between`,`No — they are adjacent`,`Cannot say`,`Only if Milk removed`],a:0,x:`"No carton between" = adjacent; "Milk between" = gap. Contradictory clues = misread signal — recheck which attribute belongs to which box (Tea/Coffee may be item-attributes, not box names). Trap-training: attribute collision is the classic misdirection.`},{q:`"Two gaps between box K and box L" — if L is immediately above the bottom box in a 9-stack (position 2), K is at?`,o:[`5`,`6`,`4 or 6`,`5 only`,`Cannot be determined`],a:0,x:`L=2, gap 3 -> K=5 (2-3 invalid). Convert wording: "gaps between" = intervening boxes, diff = gaps+1.`}],"1-2-0":[{q:`Six in a row, all face north. A sits second to the left of the rightmost person. A is at position? (from left)`,o:[`4`,`5`,`3`,`2`,`Cannot be determined`],a:0,x:`Rightmost = position 6; "second to the left" = 6 - 2 = 4. Facing north: left = smaller index, right = larger.`},{q:`In a north-facing row of 5, B sits at an extreme end. C is to the immediate right of B. If B is leftmost, C is at?`,o:[`2nd`,`3rd`,`4th`,`2nd from right`,`Cannot be determined`],a:0,x:`B=1 -> C=2. Facing north: right = higher index.`},{q:`Five people, some face north some south. P faces south and is at left end. To P's immediate right (the paper's left) sits?`,o:[`No one`,`The person at position 2`,`Depends on facing`,`Position 1`,`Cannot be determined`],a:0,x:`South-facing flips left/right: P's right hand points to position 0 side (outside). Facing direction flips EVERY left/right clue — mark facing before placing anyone.`},{q:`Row of 7 facing north. "D sits third to the right of E." E at position 2. D at?`,o:[`4`,`5`,`6`,`5 or 6`,`Cannot be determined`],a:1,x:`Third to right = +3 = 5. Offset clues: left/right = minus/plus for north-facing.`},{q:`Six in a row facing south. "F is second to the left of G." G at position 4. F at?`,o:[`2`,`6`,`1`,`5`,`Cannot be determined`],a:1,x:`South-facing: left = higher index. 4+2 = 6. The flip is the entire trick.`}],"1-2-1":[{q:`Two rows of 4 facing each other: Row A faces south, Row B faces north. Person X (row A, pos 1 from left edge) faces which position in Row B?`,o:[`Leftmost of B`,`Rightmost of B`,`Second left`,`Second right`,`Cannot be determined`],a:1,x:`Facing rows mirror positions: A-pos1 aligns with B-pos4 (from A's view). Draw both rows with arrows before placing.`},{q:`Same setup: "K (row B) faces L (row A); L is second from A's right end." K sits at B's?`,o:[`Second from left`,`Second from right`,`Extreme left`,`Extreme right`,`Third from left`],a:1,x:`Mirror: A's right-end side maps to B's right-end side in facing pairs. A-second-from-right pairs B-second-from-right.`},{q:`8 people, 4 per row facing each other. "M faces the immediate neighbour of N." If N(row A) at pos 2 and its neighbour at pos 3, M sits in row B opposite pos?`,o:[`2`,`3`,`1`,`4`,`Cannot be determined`],a:1,x:`M faces A-pos3 -> M is in row B at the position paired with A-3. Opposite = same index mirrored.`},{q:`In two facing rows, "P is diagonally opposite to Q" — if Q is Row A pos 1, P (Row B) is at?`,o:[`Opposite pos 1`,`Adjacent to the one opposite Q`,`Any position`,`Pos 2`,`Cannot be determined`],a:1,x:`Diagonal = opposite row, neighbouring index. "Diagonal" vs "faces" wording decides index +-1.`},{q:`Row A south-facing, row B north. "R sits at the extreme right of row A." Who in row B faces R?`,o:[`B's extreme left`,`B's extreme right`,`B's second-left`,`Cannot be determined`,`B's second-right`],a:0,x:`A's right end aligns opposite B's left end when rows face each other. Mirror-mapping is THE rule for double rows.`}],"1-2-2":[{q:`Row of 6 facing north. "S sits second to the left of the person at the extreme end." S is at position?`,o:[`2 (if left end) or 5... need which end`,`Position 2`,`Position 5`,`2 or 5 depending on which end`,`Cannot be determined`],a:3,x:`"The extreme end" is ambiguous until the question fixes left or right — in real sets, another clue disambiguates. 6-1=5 if right end; 1+1=2 if left end.`},{q:`Five in a row; "T sits at one of the extreme ends" and "T is not at the right end." T is at?`,o:[`Position 1`,`Position 5`,`Position 2`,`Position 4`,`Cannot be determined`],a:0,x:`Elimination on an either/or clue: right-end ruled out -> left end. Negative clues narrow to one.`},{q:`Eight in a row; "U sits exactly in the middle." U is at position?`,o:[`4`,`4 or 5`,`5`,`Cannot be determined`,`3`],a:1,x:`Even-sized rows have TWO middles (4 and 5) — classic trap; odd rows have one centre.`},{q:`"V sits third from the left end; W sits second from the right end" in a 7-row. Positions?`,o:[`V=3, W=5`,`V=3, W=6`,`V=4, W=6`,`V=3, W=2`,`Cannot be determined`],a:1,x:`From right: position = N+1-rank = 7+1-2 = 6. Convert right-rank to left-index every time.`},{q:`"X is an immediate neighbour of the person who sits third from the right" in a 6-row. Third-from-right is at 4; X is at?`,o:[`3 or 5`,`3 only`,`5 only`,`2 or 6`,`Cannot be determined`],a:0,x:`Neighbours of 4 = 3 and 5. Keep both until a further clue kills one — premature fixing is the #1 seating error.`}],"1-3-0":[{q:`Seven people ranked by height. A is taller than B but shorter than C; C is not the tallest. Minimum info needed to fix the tallest?`,o:[`One more clue`,`Already determined`,`Two more clues`,`Cannot ever fix`,`None — ambiguous`],a:4,x:`C>A>B ordering fixed but the tallest is any of the remaining 4 people. "C is not tallest" removes C only — many candidates remain. Order chains rarely fix endpoints alone.`},{q:`Five ranked: D>E, E>F, G is shortest, H is second tallest. Order tallest to shortest?`,o:[`D,H,E,F,G or H,D,E,F,G`,`D,H,E,F,G only`,`Cannot be determined`,`H,D,E,F,G only`,`D,E,H,F,G`],a:0,x:`Chain D>E>F>G leaves H free except "2nd tallest" -> two valid orders. Chains + slot clues give candidate sets, not always a single order.`},{q:`"M is taller than exactly three people" in a group of 6. M's rank (tallest=1)?`,o:[`2nd`,`3rd`,`4th`,`5th`,`Cannot be determined`],a:1,x:`Taller than 3 = 3 people below -> rank 3 from top. "Taller than k people" = N-k-... careful: rank = 6-3 = 3rd.`},{q:`Weights: P heavier than Q; R heavier than P; S lighter than Q; T heavier than R. Heaviest?`,o:[`P`,`Q`,`R`,`T`,`Cannot be determined`],a:3,x:`Chain: T>R>P>Q>S — T heaviest. When the chain closes completely, the answer is instant.`},{q:`"K is heavier than L; J is heavier than K; only one person is heavier than J." J's rank?`,o:[`1st`,`2nd`,`3rd`,`4th`,`Cannot be determined`],a:1,x:`"Only one heavier" = 2nd from top directly — position-giving clues bypass the chain.`}],"1-3-1":[{q:`"The third tallest wears red." Five people ranked A>E>B>D>C (tallest first). Who wears red?`,o:[`A`,`E`,`B`,`D`,`C`],a:2,x:`Index into the finished order: 3rd = B. Position clues only work AFTER the order is built.`},{q:`Six runners finished a race. "The person who finished 4th passed exactly two people in the last lap." Who finished 4th?`,o:[`Cannot be determined from this alone`,`The one who was 6th earlier`,`The one who was 2nd earlier`,`The leader`,`The last person`],a:0,x:`Passing info gives relative movement, not identity — recognise when a clue is position-only vs identity-only.`},{q:`Ranked 1-8. "G is 5th; the person 2 ranks above G likes mango." That person is ranked?`,o:[`2nd`,`3rd`,`7th`,`6th`,`Cannot be determined`],a:1,x:`"2 ranks above 5th" = 3rd. Above = better rank = smaller number — direction errors kill these.`},{q:`In an exam, "the topper scored 95, the person just below the median scored 72." If 7 students, median rank is?`,o:[`3rd`,`4th`,`5th`,`3.5th`,`Cannot be determined`],a:1,x:`7 students -> median = 4th. Odd group centre = (N+1)/2.`},{q:`"B finished between A and C; A finished 2nd; C finished 5th." B finished?`,o:[`3rd`,`4th`,`3rd or 4th`,`1st`,`Cannot be determined`],a:2,x:`Between 2 and 5 = 3 or 4. "Between" gives a range unless endpoints are adjacent.`}],"1-4-0":[{q:`Statement: "The govt should ban plastic bags to reduce pollution." Assumption: (I) Plastic bags cause pollution. (II) A ban would reduce it.`,o:[`Only I`,`Only II`,`Both`,`Neither`,`Either`],a:2,x:`Both are implicit — the statement presumes cause and remedy. Test: if the assumption were false, would the statement still make sense? No -> implicit.`},{q:`Statement: "Join our crash course to crack SEBI Grade A." Assumption: (I) Courses help crack exams. (II) The reader wants to crack SEBI.`,o:[`Only I`,`Only II`,`Both`,`Neither`,`Either`],a:0,x:`II is not assumed — ads address potential interest, they don't presume it. Desired-but-not-assumed is the classic trap.`},{q:`Statement: "The bank advised customers to update KYC by 30 June." Assumption: (I) Some customers haven't updated. (II) The bank can verify updates.`,o:[`Only I`,`Only II`,`Both`,`Neither`,`Either`],a:0,x:`I is implicit (why advise otherwise). II is administrative capability — not required by the statement.`},{q:`Statement: "Regular exercise improves concentration, so students should exercise daily." Assumption: students can exercise daily.`,o:[`Implicit`,`Not implicit`,`Either way`,`Contradicts`,`Restates`],a:0,x:`A recommendation assumes its own feasibility — the "definitely-follows" test passes.`},{q:`Statement: "X bank offers 7% FD — the best rate in town!" Assumption: higher rates attract depositors.`,o:[`Implicit`,`Not implicit`,`Either`,`Contradicts`,`Cannot say`],a:0,x:`The advertorial claim presumes rate-sensitivity in customers — implicit.`}],"1-4-1":[{q:`Statements: All cats are animals. Some animals are dogs. Conclusions: I. Some cats are dogs. II. All cats are animals.`,o:[`Only I`,`Only II`,`Both`,`Neither`,`Either I or II`],a:1,x:`II is a restated premise -> follows. I needs the "some" groups to overlap — not forced. Some-A-are-B + All-C-are-A never gives Some-C-are-B.`},{q:`Statements: No apple is a banana. All bananas are fruits. Conclusions: I. No apple is a fruit. II. Some fruits are not apples.`,o:[`Only I`,`Only II`,`Both`,`Neither`,`Either`],a:1,x:`No-apple-banana doesn't bar apples from fruits (they could be). But banana-fruits exist and bananas aren't apples -> some fruits aren't apples. II follows via the 50-rule: "some" conclusions need only one forced case.`},{q:`Statements: All pens are books. All books are pages. Conclusions: I. All pens are pages. II. Some pages are pens.`,o:[`Only I`,`Only II`,`Both`,`Neither`,`Either`],a:2,x:`All-All chain: pens subset of pages -> I yes; subset means SOME pages are pens -> II yes. Chain syllogisms are the fastest singles.`},{q:`Statements: Some cars are bikes. Some bikes are trucks. Conclusions: I. Some cars are trucks. II. Some trucks are bikes.`,o:[`Only I`,`Only II`,`Both`,`Neither`,`Either`],a:1,x:`Two "some" premises NEVER connect the ends -> I fails. II is just the premise reversed -> follows.`},{q:`Statements: Only a few officers are managers. All managers are clerks. Conclusions: I. All officers are clerks. II. Some managers are clerks.`,o:[`Only I`,`Only II`,`Both`,`Neither`,`Either`],a:1,x:`"Only a few" = some (but limits universal reach) -> I fails. All managers are clerks -> some managers are clerks = II.`}],"1-4-2":[{q:`A is B's brother. C is A's mother. D is C's father. How is D related to B?`,o:[`Grandfather`,`Father`,`Uncle`,`Brother`,`Cannot be determined`],a:0,x:`C mother of A AND B (siblings); D is mother's father = maternal grandfather. Draw the tree: siblings share parents.`},{q:`Pointing to a photo, a man says "She is the daughter of my grandfather's only son." Who is she?`,o:[`His sister`,`His cousin`,`His aunt`,`His daughter`,`Cannot be determined`],a:0,x:`Grandfather's only son = the man's father -> father's daughter = his sister. "Only son/daughter" collapses the tree instantly.`},{q:`P is Q's sister. R is Q's husband. S is R's son. How is P related to S?`,o:[`Aunt`,`Mother`,`Grandmother`,`Cousin`,`Sister`],a:0,x:`P is the sister of S's mother -> maternal aunt. Spouse-side relations route through the marriage link.`},{q:`"A x B" means A is father of B; "A + B" means A is sister of B; "A - B" means A is brother of B. If M + N - O, then O is related to M as?`,o:[`Brother`,`Sister`,`Brother or sister (gender unstated)`,`Cousin`,`Uncle`],a:2,x:`M + N: M is sister of N. N - O: N is brother of O. All three are siblings - but O's gender is never stated. Gender-unstated is the classic trap in coded relations.`},{q:`E is F's son. G is E's sister. H is F's wife. How is H related to G?`,o:[`Mother`,`Aunt`,`Sister`,`Grandmother`,`Cannot be determined`],a:0,x:`E and G are F's children; H is F's wife -> mother of both (assuming standard family — these questions assume a single marriage unit).`}],"1-4-3":[{q:`In a code, CAT = 3120 (3-1-20). What is DOG?`,o:[`4157`,`41520`,`4156`,`41507`,`4175`],a:0,x:`Letter positions joined: D=4, O=15, G=7 -> 4157. Alphabet positions cold = coding questions free.`},{q:`If "water" is "food", "food" is "tree", "tree" is "sky", "sky" is "wall" — where does fruit grow?`,o:[`Tree`,`Sky`,`Food`,`Wall`,`Water`],a:1,x:`Fruit grows on tree -> coded as "sky". Chain-coding: follow the word, not the meaning.`},{q:`Series: A2, C4, E6, G8, ?`,o:[`H9`,`I10`,`I9`,`H10`,`J10`],a:1,x:`Letters +2, numbers +2 -> I10. Two-track series: solve each track separately.`},{q:`Series: Z1A, Y2B, X3C, ?`,o:[`W4D`,`V4D`,`W5D`,`W3D`,`X4E`],a:0,x:`Letters go back one (Z,Y,X,W); digits +1; tail letters +1 (A,B,C,D) -> W4D. Alphanumeric = 3 parallel tracks.`},{q:`In a certain code MONKEY = XDJMNL. How is TIGER coded?`,o:[`SHFDQ`,`SFFDQ`,`QDFHS`,`REGIT`,`RHSFQ`],a:2,x:`Decode the pair first: MONKEY reversed = YEKNOM, each letter -1 = XDJMNL. Same rule: TIGER -> REGIT -> -1 each = QDFHS. Two-layer codes (reverse + shift) are common.`}],"1-4-4":[{q:`A man walks 3km north, turns right, walks 4km. Distance from start?`,o:[`5 km`,`6 km`,`7 km`,`4 km`,`3 km`],a:0,x:`Right turn from north = east. 3-4-5 Pythagorean triple -> 5km. Trace on paper, never mentally.`},{q:`She walks 5km east, turns left, walks 5km, turns left, walks 5km. Now facing?`,o:[`North`,`South`,`East`,`West`,`Cannot say`],a:3,x:`Facing east, left = north; facing north, left = west. She ends walking west. Track facing after EVERY turn — distances are decoys here.`},{q:`Ravi faces sunrise, turns 135 degrees clockwise. Facing?`,o:[`South-east`,`South-west`,`North-west`,`South`,`West`],a:0,x:`Sunrise = east. 90 clockwise -> south; +45 -> south-east. Degrees problems: convert to compass points stepwise.`},{q:`A goes 10m north, 10m west, 10m south. Where relative to start?`,o:[`10m west`,`10m south-west`,`At start`,`10m east`,`10m north-west`],a:0,x:`North and south cancel; net = 10m west. Cancel opposite legs FIRST — it shrinks every direction problem.`},{q:`Point A is 8m east of B; C is 6m north of B. Shortest A-to-C?`,o:[`10m`,`12m`,`14m`,`8m`,`6m`],a:0,x:`Right triangle 6-8-10 -> 10m. Two legs from a common point = Pythagoras.`}],"2-0-0":[{q:`Passage: "SEBI was established in 1988 and given statutory powers in 1992. Its mandate covers investor protection, market development, and regulation of securities markets." Q: In which year did SEBI get statutory powers?`,o:[`1988`,`1992`,`1990`,`1985`,`1995`],a:1,x:`Direct factual Qs = locate the number/fact, don't reason. 1988 sits there as the near-miss.`},{q:`Passage: "The committee recommended three measures: faster settlement cycles, stricter disclosure norms, and higher penalties for insider trading." Q: Which is NOT a recommended measure?`,o:[`Faster settlement`,`Stricter disclosure`,`Higher insider-trading penalties`,`Lower broker fees`,`All are recommended`],a:3,x:`NOT-questions: tick off what IS in the passage; the leftover is the answer.`},{q:`Passage: "India's IPO market raised record capital in 2024, driven mainly by small and medium enterprises listing on dedicated platforms." Q: What drove the record IPO capital?`,o:[`Large-cap listings`,`SME listings`,`Foreign IPOs`,`Government divestment`,`Debt markets`],a:1,x:`"Mainly" in the passage maps to the driver asked — match the qualifier.`},{q:`Passage: "T+1 settlement means trades settle one business day after execution; India moved to T+1 in 2023, ahead of most developed markets." Q: T+1 settlement completes within?`,o:[`Same day`,`One business day`,`Two business days`,`One week`,`One month`],a:1,x:`Definition given verbatim in passage — the cheapest marks in RC.`},{q:`Passage: "The regulator imposed a penalty of Rs 25 crore on the firm and barred its director from accessing securities markets for two years." Q: For how long was the director barred?`,o:[`1 year`,`2 years`,`3 years`,`5 years`,`Not mentioned`],a:1,x:`Numbers in passage questions are always lifted directly — underline figures while reading.`}],"2-0-1":[{q:`Passage: "The regulator's stance remained resolute despite industry pushback." Q: "resolute" as used here means?`,o:[`Flexible`,`Firm`,`Uncertain`,`Aggressive`,`Cautious`],a:1,x:`Context: "despite pushback" = unwavering -> firm. Vocab-in-context answers the passage meaning, not the flashiest synonym.`},{q:`Passage: "The new norms have a stringent compliance requirement that smaller brokers find onerous." Q: "onerous" most nearly means?`,o:[`Easy`,`Burdensome`,`Optional`,`Profitable`,`Illegal`],a:1,x:`Smaller brokers + "find" = something heavy -> burdensome. The sentence itself hands you the tone.`},{q:`Passage: "Critics argue the policy is well-intentioned but myopic." Q: "myopic" here means?`,o:[`Farsighted`,`Shortsighted`,`Generous`,`Corrupt`,`Ambitious`],a:1,x:`"Well-intentioned BUT..." = contrast -> a flaw. Myopic = shortsighted.`},{q:`Passage: "The market rebounded with alacrity after the policy clarification." Q: Choose the ANTONYM of "alacrity" as used:`,o:[`Speed`,`Reluctance`,`Eagerness`,`Confusion`,`Strength`],a:1,x:`Alacrity = eager quickness; antonym = reluctance. Read whether they ask synonym or antonym — half the errors are misreading the ask.`},{q:`Passage: "The scheme aims to ameliorate the hardships faced by small investors." Q: "ameliorate" means?`,o:[`Worsen`,`Improve`,`Highlight`,`Remove`,`Delay`],a:1,x:`Aim + hardships -> to make better = improve. Verb + object tells you direction.`}],"2-0-2":[{q:`Passage: "While digital adoption has accelerated, a significant share of rural investors still depends on physical branches for grievance redressal." Q: The author implies that?`,o:[`Digital adoption should stop`,`Rural investors distrust technology`,`Physical infrastructure still matters`,`Branches are obsolete`,`Grievances are increasing`],a:2,x:`Inference = one step beyond text, not a leap. "Still depends" -> physical infra matters. Distrust is an overreach.`},{q:`Passage describes a reform that helped investors but "quietly raised compliance costs tenfold for small firms." Q: Author's tone?`,o:[`Celebratory`,`Critical but balanced`,`Angry`,`Neutral reporting only`,`Sarcastic`],a:1,x:`Both sides shown (helped + but) = balanced critique. Eliminate extremes first — "celebratory" and "angry" die fast.`},{q:`Passage covers how algo trading changed liquidity, its risks, and SEBI's response. Best title?`,o:[`The Dangers of Technology`,`Algorithmic Trading: Promise and Peril`,`SEBI Regulations Explained`,`How Markets Work`,`Liquidity in Indian Markets`],a:1,x:`Title = covers ALL major threads, not one. Options touching only one idea (regulations, liquidity alone) are decoys.`},{q:`Passage: "Policymakers celebrated the milestone, though economists cautioned that headline numbers masked uneven growth." Q: Economists' view is best described as?`,o:[`Supportive`,`Sceptical`,`Indifferent`,`Confused`,`Hostile`],a:1,x:`"Cautioned... masked" = doubt, not rejection -> sceptical. Hostile is too strong — degree words matter in tone questions.`},{q:`Passage on a new listing rule: "Time will tell whether the framework adapts or merely adds another layer." Q: Author's stance?`,o:[`Confident it will fail`,`Wait-and-see / cautiously open`,`Fully supportive`,`Dismissive`,`Enthusiastic`],a:1,x:`"Time will tell" = suspended judgment. Match the hedging language.`}],"2-1-0":[{q:`The list of candidates (A)/ are available (B)/ on the commission's website (C)/ for public scrutiny. (D)/ No error (E)`,o:[`A`,`B`,`C`,`D`,`E`],a:1,x:`Subject = "list" (singular), not "candidates" -> "is available". The real subject hides left of "of" — the classic SEBI trap.`},{q:`Each of the employees (A)/ have submitted (B)/ their KYC documents (C)/ to the HR desk. (D)/ No error (E)`,o:[`A`,`B`,`C`,`D`,`E`],a:1,x:`"Each of" takes singular verb -> "has submitted". Each/every/either/neither + plural noun still takes singular verb.`},{q:`Neither the directors nor the auditor (A)/ were aware (B)/ of the discrepancy (C)/ in the accounts. (D)/ No error (E)`,o:[`A`,`B`,`C`,`D`,`E`],a:1,x:`Neither...nor: verb agrees with the NEAREST subject ("auditor") -> "was aware". Proximity rule.`},{q:`The number of complaints (A)/ filed against brokers (B)/ have doubled (C)/ this quarter. (D)/ No error (E)`,o:[`A`,`B`,`C`,`D`,`E`],a:2,x:`"The number of" = singular -> "has doubled". ("A number of" = plural — the pair is a favourite contrast.)`},{q:`The quality of the securities (A)/ offered to retail investors (B)/ were questioned (C)/ by the committee. (D)/ No error (E)`,o:[`A`,`B`,`C`,`D`,`E`],a:2,x:`Subject = "quality" -> "was questioned". Long gap between subject and verb is intentional misdirection.`}],"2-1-1":[{q:`The regaining of freedom (A)/ as we well know has given rise for (B)/ many dormant issues and conflicts (C)/ in our society. (D)/ No error (E)`,o:[`A`,`B`,`C`,`D`,`E`],a:1,x:`"give rise TO", not "for" — real SEBI handout question. Preposition errors dress up as tense questions.`},{q:`By the time the auditor arrived, (A)/ the management have destroyed (B)/ the incriminating files (C)/ quietly. (D)/ No error (E)`,o:[`A`,`B`,`C`,`D`,`E`],a:1,x:`Earlier of two past actions = past perfect -> "had destroyed". Timeline: destroyed BEFORE arrived.`},{q:`She is working in this bank (A)/ since 2019 (B)/ and knows every process (C)/ thoroughly. (D)/ No error (E)`,o:[`A`,`B`,`C`,`D`,`E`],a:0,x:`"Since + point of time" needs present perfect continuous -> "has been working". Since/for = the #1 tense trigger.`},{q:`He wanted to buy shares, (A)/ sell them quickly, (B)/ and was making (C)/ a fast profit. (D)/ No error (E)`,o:[`A`,`B`,`C`,`D`,`E`],a:2,x:`Parallel structure breaks: to buy, sell, and MAKE — "was making" breaks the infinitive chain. Lists must stay grammatically identical.`},{q:`When I will reach office, (A)/ I will send you (B)/ the complete report (C)/ immediately. (D)/ No error (E)`,o:[`A`,`B`,`C`,`D`,`E`],a:0,x:`Time clauses take present tense for future -> "When I reach". Will + when/if/until in the same clause = automatic error.`}],"2-1-2":[{q:`The scheme provides (A)/ an unique opportunity (B)/ for rural entrepreneurs (C)/ to access credit. (D)/ No error (E)`,o:[`A`,`B`,`C`,`D`,`E`],a:1,x:`"Unique" starts with a Y consonant sound -> "a unique". A/an goes by SOUND, not spelling (a university, an hour).`},{q:`The committee insisted (A)/ on a detailed report (B)/ about the incident (C)/ at earliest. (D)/ No error (E)`,o:[`A`,`B`,`C`,`D`,`E`],a:3,x:`"at THE earliest" — set phrase. Missing articles in fixed phrases are high-frequency errors.`},{q:`He is junior than me (A)/ by two years (B)/ yet earns (C)/ a higher salary. (D)/ No error (E)`,o:[`A`,`B`,`C`,`D`,`E`],a:0,x:`Junior/senior/superior/inferior take TO, never "than" — a guaranteed-type error.`},{q:`The auditor complied to (A)/ all the guidelines (B)/ issued by the regulator (C)/ last year. (D)/ No error (E)`,o:[`A`,`B`,`C`,`D`,`E`],a:0,x:`"Comply WITH" — verb-preposition collocations: depend on, insist on, comply with, cope with.`},{q:`Despite of the warning, (A)/ investors continued (B)/ to buy the speculative stock (C)/ in large volumes. (D)/ No error (E)`,o:[`A`,`B`,`C`,`D`,`E`],a:0,x:`"Despite" never takes "of" (that's "in spite of"). Despite vs in spite of = classic pair trap.`}],"2-1-3":[{q:`Bringing clean renewable energy to low-income countries (A)/ would enable more women and girls to gain access (B)/ to education, as without electricity they often (C)/ lack the means to study after nightfall. (D)/ No error (E)`,o:[`A`,`B`,`C`,`D`,`E`],a:4,x:`This sentence is CLEAN — real PYQ-style. ~1 in 5 "No error" is genuine; don't invent errors under pressure.`},{q:`The board has decided (A)/ to raise the dividend (B)/ by 10 percent (C)/ this financial year. (D)/ No error (E)`,o:[`A`,`B`,`C`,`D`,`E`],a:4,x:`Fully correct sentence — "has decided", "raise by", all clean. Train yourself to mark E confidently.`},{q:`Each of the proposals (A)/ were discussed (B)/ in detail (C)/ by the panel. (D)/ No error (E)`,o:[`A`,`B`,`C`,`D`,`E`],a:1,x:`Each = singular -> "was discussed". If you hunt for E here, you missed the real one — check agreement FIRST on every sentence.`},{q:`Neither of the two offers (A)/ were acceptable (B)/ to the negotiating team (C)/ at that stage. (D)/ No error (E)`,o:[`A`,`B`,`C`,`D`,`E`],a:1,x:`Neither = singular -> "was acceptable".`},{q:`The data published by the exchange (A)/ shows a steady rise (B)/ in retail participation (C)/ over the decade. (D)/ No error (E)`,o:[`A`,`B`,`C`,`D`,`E`],a:4,x:`"Data" as singular mass noun with "shows" is acceptable in modern usage; everything else is clean -> No error. Don't over-apply pedantry.`}],"2-2-0":[{q:`The new policy is expected to _____ transparency and _____ investor confidence. (i) reduce (ii) enhance (iii) undermine (iv) boost`,o:[`(i) and (iii)`,`(ii) and (iv)`,`(i) and (iv)`,`(ii) and (iii)`,`(iii) and (ii)`],a:1,x:`Both blanks need positive verbs -> enhance + boost. Double fillers: check EACH word against ITS blank; only one pair survives both tests.`},{q:`_____ the warning signs, investors continued to pour money into the _____ scheme. (i) Despite (ii) dubious (iii) robust (iv) Because`,o:[`(iv) and (iii)`,`(i) and (iii)`,`(i) and (ii)`,`(iv) and (ii)`,`(ii) and (iv)`],a:2,x:`First blank needs contrast (despite), second needs negative adjective (dubious). Order matters — pair must fit BOTH blanks simultaneously.`},{q:`The minister _____ that the reforms would _____ long-term growth. (i) denied (ii) asserted (iii) hamper (iv) catalyse`,o:[`(i) and (iii)`,`(ii) and (iii)`,`(i) and (iv)`,`(ii) and (iv)`,`(iii) and (i)`],a:3,x:`Asserted + catalyse = coherent positive statement. Eliminate by polarity: a minister asserting positive reform.`},{q:`His _____ approach to work earned him the _____ of his peers. (i) casual (ii) meticulous (iii) admiration (iv) contempt`,o:[`(i) and (iii)`,`(ii) and (iv)`,`(i) and (iv)`,`(ii) and (iii)`,`(iv) and (i)`],a:3,x:`Meticulous + admiration = matching tone. The two blanks must agree in REGISTER — careless work can't earn admiration.`},{q:`The company's profits _____ sharply after it _____ the new market. (i) rose (ii) entered (iii) fell (iv) exited`,o:[`(i) and (iv)`,`(iii) and (ii)`,`(i) and (ii)`,`(iv) and (i)`,`(ii) and (iii)`],a:2,x:`Cause-effect: entering a market -> profits rise. Read the logic flow between the blanks, not each in isolation.`}],"2-2-1":[{q:`Continuous unemployment has induced in the people a kind of _____ which is most depressing.`,o:[`laziness`,`encouragement`,`satisfaction`,`anger`,`awakening`],a:3,x:`Real handout Q. "Most depressing" = the blank must be NEGATIVE + a reaction to suffering -> anger (not laziness — the people aren't the problem). The clue word at the end decides it.`},{q:`The evidence was so _____ that the jury took only minutes to convict.`,o:[`ambiguous`,`compelling`,`confusing`,`weak`,`contrived`],a:1,x:`"Only minutes" = decisive -> compelling. The outcome phrase is the polarity anchor.`},{q:`Her explanation was _____, leaving everyone more confused than before.`,o:[`lucid`,`clear`,`convoluted`,`brief`,`helpful`],a:2,x:`"More confused" -> negative/complicated -> convoluted. The result tells you the adjective.`},{q:`The report was praised for its _____ analysis, covering every angle of the issue.`,o:[`superficial`,`comprehensive`,`narrow`,`biased`,`hasty`],a:1,x:`"Covering every angle" = thorough -> comprehensive. Paraphrase the descriptive clause, then match.`},{q:`He gave a _____ reply, answering in barely a few words.`,o:[`verbose`,`lengthy`,`terse`,`detailed`,`eloquent`],a:2,x:`"Barely a few words" = terse. The quantifier phrase is the giveaway.`}],"2-2-2":[{q:`_____ the economy showed signs of recovery, unemployment remained stubbornly high.`,o:[`Because`,`Although`,`Therefore`,`Moreover`,`Since`],a:1,x:`Two opposing facts -> contrast connector = although. Logic first: same-direction (because/therefore) vs opposite (although/despite).`},{q:`The company failed to innovate; _____, it lost market share rapidly.`,o:[`however`,`nevertheless`,`consequently`,`otherwise`,`meanwhile`],a:2,x:`Effect follows cause -> consequently. Cause-and-effect connectors: therefore, thus, hence, consequently.`},{q:`He is wealthy; _____, he lives a frugal life.`,o:[`therefore`,`besides`,`yet`,`similarly`,`consequently`],a:2,x:`Opposition between clauses -> yet/however/but family.`},{q:`The report was long; _____, it contained almost no useful data.`,o:[`in addition`,`moreover`,`however`,`similarly`,`thus`],a:2,x:`Negative turn after neutral fact -> however.`},{q:`The deadline was tight; _____, the team delivered ahead of schedule.`,o:[`therefore`,`nevertheless`,`because`,`unless`,`meanwhile`],a:1,x:`Expectation broken -> nevertheless = "despite that".`}],"2-3-0":[{q:`He insisted to go with me to the meeting.`,o:[`insisted on going`,`insisted going`,`insisted for going`,`insisted to be going`,`No improvement`],a:0,x:`"Insist on + gerund" — verb+preposition collocations drive most sentence-improvement answers.`},{q:`The manager asked me that why I was late.`,o:[`asked me why was I late`,`asked me why I was late`,`asked to me why I was late`,`asked me that why was I late`,`No improvement`],a:1,x:`Indirect question = statement order (why I was), no "that". Reported-speech word order is a repeat offender.`},{q:`Unless you do not work hard, you will fail.`,o:[`do not work`,`will not work`,`did not work`,`Unless you work hard`,`No improvement`],a:3,x:`"Unless" already means "if not" — double negative breaks it -> "Unless you work hard".`},{q:`Scarcely he had reached the station when the train left.`,o:[`Scarcely had he reached`,`Scarcely he had reached`,`He had scarcely reached`,`Scarcely he has reached`,`No improvement`],a:0,x:`Negative adverb openers (scarcely/hardly/no sooner) invert: "Scarcely had he..." Fixed inversion rule.`},{q:`I am looking forward to meet you next week.`,o:[`to meeting`,`for meeting`,`to have met`,`to be meeting`,`No improvement`],a:0,x:`"Look forward to" is a phrasal preposition -> takes gerund (meeting), not infinitive. Top-5 trap in this question type.`}],"2-3-1":[{q:`The two brothers fought between themselves over the property.`,o:[`fought among themselves`,`fought between each other`,`fought each other`,`fought`,`No improvement`],a:2,x:`"Between themselves" is redundant after "fought" — leanest correct option wins. Between = 2, among = 3+ is a bonus check.`},{q:`He returned back the book yesterday.`,o:[`returned`,`gave back`,`returned back`,`has returned back`,`No improvement`],a:0,x:`"Returned back" = double meaning — "returned" alone. Redundancy pairs: return back, repeat again, revert back.`},{q:`The reason why he resigned is because he was transferred.`,o:[`is that he was transferred`,`is because of transfer`,`is due to transfer`,`is since he transferred`,`No improvement`],a:0,x:`"Reason why... is because" = double cause -> "is that". Classic redundancy structure.`},{q:`Each and every student in the class was present.`,o:[`Each and all`,`Every one of the students`,`Each student`,`All students each`,`No improvement`],a:2,x:`"Each and every" is redundant — pick one. Shortest grammatically correct = often right.`},{q:`In my opinion I think the policy is flawed.`,o:[`I think in my opinion`,`I opine that`,`In my opinion, the policy`,`My opinion thinks`,`No improvement`],a:2,x:`"In my opinion I think" doubles the hedge — drop one.`}],"2-4-0":[{q:`Arrange: (P) This dependence has made the economy vulnerable to price shocks. (Q) India imports nearly 85% of its crude oil. (R) Therefore, policymakers push for renewable energy. (S) The transition, however, needs massive investment. Correct order?`,o:[`QPRS`,`PQRS`,`QRPS`,`RQPS`,`QSRP`],a:0,x:`"This dependence" (P) needs an antecedent -> can't open. Q states the fact -> opens. "Therefore" (R) concludes. Q-P-R-S.`},{q:`(P) However, not all apps are equally safe. (Q) Millions now invest through mobile apps. (R) This has democratised market access. (S) SEBI has issued guidelines for such platforms. Order?`,o:[`QRPS`,`QPRS`,`RQPS`,`QSRP`,`PSQR`],a:0,x:`Q opens (topic statement); R's "This" = the app trend; P "However" turns; S responds. Connector words are ordering magnets.`},{q:`(P) Such schemes, though, suffer from poor awareness. (Q) The government launched several financial inclusion schemes. (R) They brought millions into the banking system. (S) Awareness campaigns are now being scaled up. Order?`,o:[`QRPS`,`QPRS`,`RQSP`,`QRSP`,`PSQR`],a:0,x:`Q -> R (result) -> P ("though" turn) -> S (response). "Though/however" always follows the claim it softens.`},{q:`(P) The first settlement system was manual and slow. (Q) Today trades settle electronically within a day. (R) Over decades, clearing evolved dramatically. (S) This evolution reduced counterparty risk. Order?`,o:[`RPQS`,`PQRS`,`RQPS`,`PRQS`,`QRPS`],a:0,x:`R is the frame sentence; P-Q = then-vs-now pair; S concludes. Frame -> contrast pair -> result.`},{q:`(P) Consequently, volumes dried up. (Q) The exchange hiked transaction fees sharply. (R) Traders protested the move immediately. (S) The exchange rolled back part of the hike. Order?`,o:[`QRPS`,`RQPS`,`QPRS`,`PSQR`,`QSRP`],a:0,x:`Cause -> reaction -> consequence -> resolution: Q-R-P-S. Story jumbles follow chronology.`}],"2-4-1":[{q:`(P) This index measures manufacturing health. (Q) PMI is released monthly by private agencies. (R) A reading above 50 signals expansion. (S) Investors track it closely for early signals. Find the locked pair.`,o:[`Q-P`,`P-Q`,`R-S`,`Q-S`,`P-R`],a:0,x:`"This index" must follow the noun it names (PMI in Q) -> Q-P locked. Pronoun->noun pairs are unbreakable.`},{q:`(P) He introduced the repo rate mechanism. (Q) The RBI governor addressed the press. (R) It determines the cost of bank borrowing. (S) Markets reacted within minutes. Locked pair?`,o:[`Q-R`,`P-R`,`Q-P`,`R-S`,`P-S`],a:1,x:`"It" (R) = the repo rate mechanism (P) -> P-R locked together. Track every "it/this/they" to its noun.`},{q:`(P) These benefits, however, come with compliance burdens. (Q) Listing brings capital, visibility and credibility. (R) Small firms find the burden especially heavy. (S) SEBI created a lighter-touch SME platform. Which pair is inseparable?`,o:[`Q-R`,`P-R`,`Q-P`,`R-S`,`Q-S`],a:1,x:`P introduces "compliance burdens"; R specifies who suffers them -> P-R bound. Abstract-then-example pairs stick.`},{q:`(P) The move surprised analysts. (Q) The central bank cut rates by 50 basis points. (R) They had predicted a 25-point cut. (S) Bond yields fell sharply. Locked pair?`,o:[`Q-R`,`P-R`,`Q-P`,`R-S`,`P-S`],a:1,x:`"They" (R) = analysts (P) -> P-R. Surprise + prediction gap = cause pair.`},{q:`(P) One such reform was dematerialisation. (Q) The 1990s saw sweeping market reforms. (R) Paper share certificates vanished within years. (S) This cut fraud and settlement delays. Locked pair?`,o:[`P-R`,`Q-P`,`R-S`,`P-S`,`Q-R`],a:0,x:`"One such reform" points back to reforms (Q... actually P follows Q, and dematerialisation->certificates vanished = P-R causal pair). P-R is the tightest link: the reform and its direct consequence.`}],"2-4-2":[{q:`Arrange into a coherent sentence: (P) to protect retail investors (Q) the regulator issued (R) stricter margin requirements (S) from excessive leverage`,o:[`QRPS`,`RQPS`,`QPRS`,`RPSQ`,`PQRS`],a:0,x:`Subject-verb first: "the regulator issued" (Q) -> object (R) -> purpose (P) -> from-clause (S). Verb-object glue is unbreakable.`},{q:`Rearrange: (P) in emerging markets (Q) foreign investors pulled out (R) over $2 billion (S) amid currency volatility`,o:[`QRPS`,`RQPS`,`PRQS`,`QSRP`,`SPQR`],a:0,x:`Q-R pair (pulled out + amount) then place (P) then reason (S). Amount attaches to the verb it quantifies.`},{q:`Rearrange: (P) which the committee found (Q) the auditor flagged (R) several irregularities (S) to be deliberate fraud`,o:[`QRPS`,`RQSP`,`QPRS`,`RSPQ`,`PQRS`],a:0,x:`Q-R (auditor flagged irregularities) -> P-S (which... found to be fraud). Relative clause stays attached to its noun.`},{q:`Rearrange: (P) that markets would stabilise (Q) the finance minister assured (R) investors on Monday (S) within two quarters`,o:[`QRPS`,`RQPS`,`PQRS`,`QPRS`,`SRQP`],a:0,x:`Q-R (assured investors) -> P-S (that-clause + time). That-clause follows the speech verb directly.`},{q:`Rearrange: (P) having cleared the audit (Q) the company was allowed (R) to resume trading (S) on the exchange`,o:[`QRPS`,`PQRS`,`QPRS`,`SRQP`,`RQPS`],a:1,x:`Participle opener (P) -> main clause (Q) -> infinitive (R) -> place (S). "Having X-ed" phrases open sentences.`}],"2-5-0":[{q:`Cloze: "The regulator has been working to (1)_____ the settlement cycle further." Blank 1:`,o:[`lengthen`,`shorten`,`delay`,`complicate`,`widen`],a:1,x:`Cloze = discourse-fit, not just grammar: reform direction = shorter cycle. Read the passage's argument before filling any blank.`},{q:`Cloze (same passage): "...though critics argue this may (2)_____ liquidity in smaller stocks." Blank 2:`,o:[`increase`,`improve`,`hurt`,`deepen`,`boost`],a:2,x:`"Critics argue" -> negative consequence -> hurt. The critic/voice cue dictates polarity.`},{q:`Cloze (same): "(3)_____, the regulator plans a phased rollout starting with large-caps." Blank 3:`,o:[`However`,`Meanwhile`,`Nevertheless`,`Despite`,`Therefore`],a:3,x:`Responding to the criticism with a plan -> "Therefore". Passage flow: proposal -> criticism -> response.`},{q:`Cloze (same): "Large-caps were chosen for their (4)_____ trading volumes." Blank 4:`,o:[`low`,`erratic`,`high`,`falling`,`poor`],a:2,x:`Why large-caps first? Because they trade heavily -> high. Blank must serve the passage's logic, not just fit grammar.`},{q:`Cloze (same): "The final phase will (5)_____ the entire listed universe by 2027." Blank 5:`,o:[`exclude`,`cover`,`ignore`,`limit`,`fragment`],a:1,x:`Phased rollout ends by covering everything -> cover. Track the argument arc across all 5 blanks.`}],"2-5-1":[{q:`Match: (1) "Bull market" pairs best with (a) falling prices (b) rising prices (c) flat prices?`,o:[`a`,`b`,`c`,`a or c`,`none`],a:1,x:`Terminology match = straight recall: bull = rising. These are free marks when terms are memorised.`},{q:`Match: (1) "Blue-chip" to (a) small speculative firms (b) large established firms (c) new IPOs`,o:[`a`,`b`,`c`,`b or c`,`none`],a:1,x:`Blue-chip = large established — finance vocabulary MCQs reward the daily GA/vocab drip.`},{q:`Match columns: A-"insider trading" B-"arbitrage" with 1-"price difference profit" 2-"illegal info use"`,o:[`A-1 B-2`,`A-2 B-1`,`A-1 B-1`,`A-2 B-2`,`cannot match`],a:1,x:`Match each term to its own definition; swap options are the trap (A-1 B-2 looks plausible if you skim).`},{q:`Match sentence starters: A-"Not only did the firm default," B-"but it also" — completes as?`,o:[`misled investors`,`but also misled`,`also it misled`,`it misled also`,`misled also investors`],a:0,x:`"Not only... but also" correlative pair -> B continues directly with a verb phrase. Correlatives: not only/but also, either/or, neither/nor.`},{q:`Match: A-"He is one of the best" -> completes with (a) player (b) players (c) playing?`,o:[`a`,`b`,`c`,`a or b`,`none`],a:1,x:`"One of the + plural" — the group must be plural -> players. Agreement traps hide inside match formats too.`}],"3-0-0":[{q:`PM Jan Dhan Yojana was launched in which year?`,o:[`2014`,`2015`,`2016`,`2013`,`2017`],a:0,x:`Aug 2014 — the flagship financial-inclusion scheme. Launch year + ministry + headline feature = the three facts SEBI asks per scheme.`},{q:`The "S" in PM SVANidhi stands for?`,o:[`Scheme`,`Street`,`Swasth`,`Samman`,`Seva`],a:2,x:`Acronym-expansion questions are a real GA staple (like the 2024 "S in SID" Q). Expand every scheme acronym in your log.`},{q:`PM-KISAN provides income support of how much per year to farmer families?`,o:[`Rs 4,000`,`Rs 6,000`,`Rs 8,000`,`Rs 10,000`,`Rs 12,000`],a:1,x:`Rs 6,000 in three instalments — numeric limits/amounts are the favourite fact-type for schemes.`},{q:`Ayushman Bharat (PM-JAY) provides health cover of up to ___ per family per year?`,o:[`Rs 1 lakh`,`Rs 2 lakh`,`Rs 5 lakh`,`Rs 10 lakh`,`Rs 3 lakh`],a:2,x:`Rs 5 lakh — flagship-scheme coverage numbers must be in the fact log.`},{q:`Stand-Up India scheme provides loans between?`,o:[`Rs 1-10 lakh`,`Rs 10 lakh-1 crore`,`Rs 5-50 lakh`,`Rs 50k-5 lakh`,`Rs 1-5 crore`],a:1,x:`Rs 10L-1Cr for SC/ST/women greenfield enterprises — range figures are classic options fodder.`}],"3-0-1":[{q:`The maximum annual income permitted for filing ITR-4 (Sugam)?`,o:[`Rs 25 lakh`,`Rs 50 lakh`,`Rs 75 lakh`,`Rs 1 crore`,`Rs 2 crore`],a:1,x:`Real 2024 PYQ — Rs 50 lakh. Threshold/cap numbers are the single most-asked scheme fact.`},{q:`What is the maximum limit to invest in National Savings Certificates (NSC)?`,o:[`Rs 1 lakh`,`Rs 1.5 lakh`,`Rs 5 lakh`,`Rs 10 lakh`,`No upper limit`],a:4,x:`Real 2024 PYQ — "no upper limit" style answers do occur; don't assume every scheme has a cap.`},{q:`Atal Innovation Mission incubation centres are operationalised for how many years?`,o:[`2 years`,`3 years`,`5 years`,`7 years`,`10 years`],a:1,x:`Real 2024 PYQ — 3 years. Scheme duration/tenure = second-favourite numeric fact.`},{q:`PMJJBY (life insurance) annual premium is approximately?`,o:[`Rs 330`,`Rs 436`,`Rs 12`,`Rs 1,000`,`Rs 2,500`],a:1,x:`Rs 436/yr for Rs 2L cover — premium-vs-cover pairs of the 3 social-security schemes get confused; log them side by side.`},{q:`PMSBY (accident insurance) annual premium?`,o:[`Rs 12`,`Rs 20`,`Rs 100`,`Rs 330`,`Rs 436`],a:1,x:`Rs 20/yr — the PMSBY/PMJJBY premium swap (20 vs 436) is exactly the kind of near-miss in options.`}],"3-0-2":[{q:`DigiLocker: which categories of documents can be stored?`,o:[`Only educational`,`Only identity documents`,`Identity + education + transport + more`,`Only financial`,`Only government-issued IDs`],a:2,x:`Real 2024 PYQ — "all of the above" is a recurring correct answer in GA; don't reject it reflexively.`},{q:`Sovereign Gold Bonds are issued by?`,o:[`SEBI`,`RBI on behalf of Govt`,`Ministry of Finance directly`,`NSE`,`Scheduled banks`],a:1,x:`RBI issues on Govt of India's behalf — "who issues/regulates what" is the top finance-static pattern.`},{q:`PM Mudra Yojana loans are categorised as Shishu, Kishor and?`,o:[`Tarun`,`Yuva`,`Pradhan`,`Bal`,`Mitra`],a:0,x:`Shishu (<50k), Kishor (50k-5L), Tarun (5-10L) — named sub-categories make great one-liners.`},{q:`APY (Atal Pension Yojana) targets which sector primarily?`,o:[`Salaried govt staff`,`Unorganised sector workers`,`Farmers only`,`Students`,`Defence personnel`],a:1,x:`Unorganised sector — "which group does scheme X serve" = recurring frame.`},{q:`e-RUPI, launched in 2021, is essentially?`,o:[`A digital currency`,`A purpose-specific digital voucher`,`A UPI app by RBI`,`A credit card`,`A CBDC pilot`],a:1,x:`Voucher-based payment (not a currency) — near-miss options (CBDC, UPI app) are exactly the designed traps.`}],"3-1-0":[{q:`Which authority regulates Real Estate Investment Trusts (REITs) in India?`,o:[`RBI`,`SEBI`,`RERA`,`MCA`,`NHB`],a:1,x:`Real 2024 PYQ — SEBI regulates REITs & InvITs (securities market products), RERA handles physical real estate. The classic overlap trap.`},{q:`Credit rating agencies in India are registered with?`,o:[`RBI`,`SEBI`,`IRDAI`,`MCA`,`PFRDA`],a:1,x:`SEBI registers CRAs — map EVERY regulator to its entities: RBI-banks/NBFCs, SEBI-markets, IRDAI-insurance, PFRDA-pensions.`},{q:`The International Financial Services Centre (GIFT City) is regulated by?`,o:[`SEBI`,`RBI`,`IFSCA`,`Ministry of Finance`,`CCI`],a:2,x:`IFSCA — the unified regulator fact is newer and therefore hot GA material.`},{q:`Who regulates commodity derivatives markets in India?`,o:[`FMC`,`SEBI`,`RBI`,`Ministry of Agriculture`,`NCDEX`],a:1,x:`SEBI since 2015 (FMC merged into it) — merger-history facts are exam favourites.`},{q:`Deposit insurance for bank deposits (DICGC) covers up to?`,o:[`Rs 1 lakh`,`Rs 2 lakh`,`Rs 5 lakh`,`Rs 10 lakh`,`Rs 3 lakh`],a:2,x:`Rs 5 lakh per depositor per bank since 2020 — raised limit = the update they love to test.`}],"3-1-1":[{q:`India currently settles equity trades on which cycle?`,o:[`T+0`,`T+1`,`T+2`,`T+3`,`Weekly`],a:1,x:`T+1 since 2023 (optional same-day T+0 pilot later) — settlement-cycle facts are market-static staples.`},{q:`An IPO where the price band is open for investors to bid is called?`,o:[`Fixed-price issue`,`Book-built issue`,`Rights issue`,`Private placement`,`FPO`],a:1,x:`Book-building vs fixed-price = the standard IPO-format distinction.`},{q:`An "infrastructure investment trust" (InvIT) primarily invests in?`,o:[`Tech startups`,`Infrastructure assets`,`Gold`,`Government bonds`,`Crypto assets`],a:1,x:`InvIT = infra assets; REIT = real estate. The REIT/InvIT pair is a guaranteed confusion point.`},{q:`The minimum investment in a mutual fund SIP can start as low as?`,o:[`Rs 100`,`Rs 500`,`Rs 1,000`,`Rs 5,000`,`Rs 10,000`],a:1,x:`Rs 500 (some Rs 100) — MF basics: SIP, NAV, expense ratio are the tested trio.`},{q:`CDSL, one of India's two depositories, was promoted by?`,o:[`NSE`,`BSE`,`RBI`,`SEBI`,`NSDL`],a:1,x:`Real 2024 PYQ — BSE promoted CDSL. Depository facts (CDSL/NSDL, who backs each) = repeated SEBI-GA territory.`}],"3-1-2":[{q:`Which statement about a Recurring Deposit is INCORRECT?`,o:[`Fixed monthly instalments`,`Interest compounded quarterly`,`Single lump-sum deposit allowed`,`Premature closure attracts penalty`,`Available at banks and post offices`],a:2,x:`Real 2024 PYQ format — RD = periodic deposits; lump-sum = FD. "INCORRECT" questions test product mechanics.`},{q:`KYC "CKYC" records are maintained by?`,o:[`RBI`,`CERSAI`,`SEBI`,`NPCI`,`IBA`],a:1,x:`CERSAI maintains the central KYC registry — body-to-function mapping again.`},{q:`NEFT transactions settle on which basis?`,o:[`Real-time individually`,`Half-hourly batches`,`End of day`,`Weekly`,`Hourly`],a:1,x:`NEFT = deferred net settlement in batches (now 24x7); RTGS = real-time gross. The NEFT/RTGS/IMPS trio is exam-critical.`},{q:`UPI is operated by?`,o:[`RBI directly`,`NPCI`,`Ministry of Electronics`,`IBA`,`SEBI`],a:1,x:`NPCI runs UPI, IMPS, RuPay, BBPS — NPCI's product list is a high-yield fact cluster.`},{q:`A "no-frills" account is now called?`,o:[`Jan Dhan only`,`Basic Savings Bank Deposit Account`,`Zero account`,`PMJDY Gold`,`Kisan account`],a:1,x:`BSBDA — renamed product names are subtle GA traps.`}],"3-2-0":[{q:`The only Indian-origin mathematician to win the Abel Prize (as of 2024)?`,o:[`C. R. Rao`,`Harish Chandra`,`S. R. S. Varadhan`,`Manjul Bhargava`,`Ashoke Sen`],a:2,x:`Real 2024 PYQ — Varadhan. "First/only Indian" award Qs are the top award pattern.`},{q:`First Indian conferred the Nelson Mandela Lifetime Achievement Award (children's filmmaker)?`,o:[`Satyajit Ray`,`Vinod Ganatra`,`Shoojit Sircar`,`Nandita Das`,`Vishal Bhardwaj`],a:1,x:`Real 2024 PYQ — obscure-recipient awards are asked BECAUSE they're obscure; your monthly log is the only defence.`},{q:`The Nobel Peace Prize 2024 went to?`,o:[`WHO`,`Nihon Hidankyo`,`UNHCR`,`World Food Programme`,`ICRC`],a:1,x:`Org-vs-person Nobel winners both get asked — log name + category + year.`},{q:`Kroll's celebrity brand valuation (2024) ranked the most valuable Indian celebrity as?`,o:[`Shah Rukh Khan`,`Virat Kohli`,`Ranveer Singh`,`Alia Bhatt`,`MS Dhoni`],a:1,x:`Real 2024 PYQ — brand/celebrity valuations = reports+indices family.`},{q:`Bharat Ratna, India's highest civilian award, was most recently conferred (2024) upon how many recipients?`,o:[`2`,`3`,`4`,`5`,`1`],a:3,x:`5 recipients in 2024 — award COUNTS and recipient lists both appear.`}],"3-2-1":[{q:`First Indian city inducted into UNESCO Creative Cities Network under "City of Literature"?`,o:[`Varanasi`,`Jaipur`,`Kozhikode`,`Chennai`,`Kolkata`],a:2,x:`Real 2024 PYQ — Kozhikode. "First Indian X to achieve Y" is THE classic GA frame.`},{q:`India's first indigenous aircraft carrier is?`,o:[`INS Vikrant`,`INS Vikramaditya`,`INS Viraat`,`INS Arihant`,`INS Visakhapatnam`],a:0,x:`Vikrant (IAC-1, commissioned 2022) — defence-firsts recur in GA.`},{q:`First city to get a fully operational Vande Bharat sleeper train route?`,o:[`Delhi-Mumbai`,`Howrah-Guwahati`,`Chennai-Bengaluru`,`Delhi-Kolkata`,`Mumbai-Ahmedabad`],a:1,x:`Howrah-Guwahati (announced 2024) — "first route/city" transport facts rotate in.`},{q:`India's first semiconductor fab was announced for which location?`,o:[`Dholera, Gujarat`,`Sanand, Gujarat`,`Jagiroad, Assam`,`Both Sanand and Jagiroad`,`Noida, UP`],a:3,x:`Multiple fabs approved — "first" can have plural answers; keep location+state together.`},{q:`The first railway station in India to get a platinum green rating?`,o:[`New Delhi`,`Secunderabad`,`Mumbai CSMT`,`Chennai Central`,`Ahmedabad`],a:1,x:`Secunderabad — environment/certification firsts are a steady sub-pattern.`}],"3-2-2":[{q:`Host of the FIFA Women's World Cup 2027?`,o:[`Japan`,`Germany`,`South Africa`,`Brazil`,`Australia`],a:3,x:`Real 2024 PYQ — Brazil. Event-host facts need (event, edition/year, host-country) triple-logged.`},{q:`How many Indian women won medals at the Arm Wrestling Asian Championship (2024)?`,o:[`5`,`6`,`7`,`8`,`9`],a:2,x:`Real 2024 PYQ — medal counts in niche events DO get asked; monthly logs must capture number + event.`},{q:`Paris Olympics 2024: India's medal tally?`,o:[`5`,`6`,`7`,`8`,`4`],a:1,x:`6 medals (1 silver, 5 bronze) — tally + which colour = both get asked.`},{q:`The Chess World Champion 2024 (youngest ever) is?`,o:[`Magnus Carlsen`,`D. Gukesh`,`Ding Liren`,`Praggnanandhaa`,`Vidit Gujrathi`],a:1,x:`Gukesh — India-linked global wins are highest-priority sports facts.`},{q:`IPL 2024 champion?`,o:[`CSK`,`KKR`,`SRH`,`RCB`,`MI`],a:1,x:`KKR beat SRH — IPL winner + runner-up + venue is a reliable annual fact.`}],"3-2-3":[{q:`The world's highest railway bridge (Chenab Bridge) is built over which river?`,o:[`Jhelum`,`Chenab`,`Ravi`,`Beas`,`Sutlej`],a:1,x:`Real 2024 PYQ — "highest/longest/first + location" = the places-in-news formula.`},{q:`The 2024 G20-related summit outcomes were hosted primarily by which country?`,o:[`India`,`Brazil`,`South Africa`,`Indonesia`,`Italy`],a:1,x:`Brazil hosted G20 2024 — summit host rotation: keep the current year + next year pair.`},{q:`Vantara, the large animal rescue centre in news, is located in?`,o:[`Jamnagar, Gujarat`,`Udaipur, Rajasthan`,`Mysuru, Karnataka`,`Pune, Maharashtra`,`Hyderabad, Telangana`],a:0,x:`Jamnagar — place-in-news questions always pair the thing with its state.`},{q:`Where is the International Big Cat Alliance headquartered?`,o:[`New Delhi`,`Mumbai`,`Geneva`,`Nairobi`,`Guwahati`],a:0,x:`New Delhi — new international bodies: name + HQ + founding year.`},{q:`The 2024 Asian Summit on disaster risk was hosted by?`,o:[`Philippines`,`India`,`Indonesia`,`Japan`,`Thailand`],a:0,x:`Manila, Philippines — obscure-summit facts separate the 15-mark GA scorer from the 10.`}],"3-3-0":[{q:`RBI's repo rate is decided by which body?`,o:[`Finance Ministry`,`Monetary Policy Committee`,`RBI Board only`,`Parliament`,`PMO`],a:1,x:`MPC — 6 members, 3 RBI + 3 external, Governor tie-breaks. Committee compositions are steady GA.`},{q:`The current RBI Governor (2024-25 cycle) is?`,o:[`Shaktikanta Das`,`Sanjay Malhotra`,`Urjit Patel`,`Raghuram Rajan`,`M. K. Jain`],a:1,x:`Sanjay Malhotra (appointed Dec 2024) — regulator HEADS are mandatory: name + since-when + predecessor.`},{q:`SEBI's current chairperson (2024-25) is?`,o:[`Madhabi Puri Buch`,`Tuhin Kanta Pandey`,`Ajay Tyagi`,`U. K. Sinha`,`Ananth Narayan`],a:1,x:`Tuhin Kanta Pandey succeeded Buch in March 2025 — succession events are always tested.`},{q:`RBI's "financial inclusion index" is published at what frequency?`,o:[`Monthly`,`Quarterly`,`Half-yearly`,`Annually`,`Biennially`],a:3,x:`Annual — publication frequency is a subtle repeated pattern.`},{q:`UDGAM portal by RBI helps citizens find?`,o:[`Unclaimed deposits`,`Tax refunds`,`Lost mutual funds`,`Pension dues`,`Insurance claims`],a:0,x:`Unclaimed deposits across banks — portal/app launches by RBI/SEBI are monthly-log material.`}],"3-3-1":[{q:`The Henley Passport Index 2024 ranked India's passport at approximately?`,o:[`70th`,`80th`,`82nd`,`90th`,`75th`],a:2,x:`~80-85 range — index questions want rank + publisher (Henley & Partners) together.`},{q:`The Global Hunger Index is published by?`,o:[`FAO`,`Concern Worldwide + Welthungerhilfe`,`UNICEF`,`WFP`,`WHO`],a:1,x:`Publisher attribution is THE repeated trap — India's rank AND who publishes must both be in the log.`},{q:`The World Press Freedom Index is released by?`,o:[`UNESCO`,`Reporters Without Borders`,`Amnesty`,`CPJ`,`Freedom House`],a:1,x:`RSF — org-name questions reward knowing the publisher, not the number.`},{q:`India's rank in the Global Innovation Index 2024?`,o:[`39th`,`40th`,`48th`,`52nd`,`35th`],a:0,x:`39th (published by WIPO) — trending-up indices on India get asked with rank + org.`},{q:`The Corruption Perceptions Index is published by?`,o:[`World Bank`,`Transparency International`,`UNDP`,`OECD`,`IMF`],a:1,x:`TI — the big indices have one-line "who publishes" facts; make a dedicated table.`}],"3-3-2":[{q:`The Bank for International Settlements (BIS) is headquartered in?`,o:[`Geneva`,`Basel`,`Zurich`,`Frankfurt`,`Paris`],a:1,x:`Basel, Switzerland — the "Basel norms" connection makes this high-frequency. Real 2024 had BIS-membership Q.`},{q:`The Financial Action Task Force (FATF) grey list: India's status?`,o:[`On grey list`,`On black list`,`Not on either list`,`Recently removed`,`Under review`],a:2,x:`India is a full member, not grey-listed — status questions need current facts, recheck each month.`},{q:`NABARD was established in which year?`,o:[`1975`,`1982`,`1990`,`1969`,`1992`],a:1,x:`1982 — institution establishment years: NABARD 82, SIDBI 90, EXIM 82, NHB 88. Make the mini-table once.`},{q:`The World Bank Group does NOT include?`,o:[`IBRD`,`IDA`,`IFC`,`IMF`,`MIGA`],a:3,x:`IMF is separate (Bretton Woods sister, not a WB member) — "NOT included" org-membership Qs recur.`},{q:`The National Centre for Financial Education (NCFE) beneficiaries include?`,o:[`Only students`,`Only bankers`,`All sections of society`,`Only farmers`,`Only women`],a:2,x:`Real 2024 PYQ — "all of the above" strikes again; broad-beneficiary schemes favour the inclusive option.`}],"p2-0-0":[{q:`What does this print? int x = 5; x = x++ + ++x; printf("%d", x);`,o:[`10`,`11`,`12`,`13`,`Undefined/implementation-defined`],a:4,x:`Modifying x twice between sequence points = undefined behaviour in C — a classic interview trick that appears in real papers.`},{q:`Python: print([i*2 for i in range(4)])`,o:[`[0,2,4,6]`,`[2,4,6,8]`,`[0,1,2,3]`,`(0,2,4,6)`,`[1,2,3,4]`],a:0,x:`range(4) = 0..3, doubled = 0,2,4,6. Dry-run: write the loop values down, apply the transform.`},{q:`Java: int a = 10, b = 3; System.out.println(a/b + a%b);`,o:[`3.33`,`4`,`5`,`3`,`4.33`],a:1,x:`Integer division: 10/3 = 3; 10%3 = 1; 3+1 = 4. int/int = int — the decimal is discarded.`},{q:`C++: int a[] = {10,20,30}; int *p = a; printf("%d", *(p+1));`,o:[`10`,`20`,`30`,`Address of a[1]`,`Compile error`],a:1,x:`Pointer arithmetic moves by ELEMENT size: *(p+1) = a[1] = 20. Arrays name = pointer to first element.`},{q:`Python: s = "SEBI"; print(s[::-1])`,o:[`SEBI`,`IBES`,`Error`,`S`,`IEBS`],a:1,x:`[::-1] = reverse slice. Slice questions (start:stop:step) are the most common Python output pattern.`}],"p2-0-1":[{q:`If a class has TWO methods with the same name but different parameter lists, this is?`,o:[`Overriding`,`Overloading`,`Inheritance`,`Abstraction`,`Polymorphism via virtual`],a:1,x:`Same name + different signature in same class = overloading (compile-time). Overriding = same signature, parent-child.`},{q:`A constructor is automatically invoked when?`,o:[`The class is defined`,`An object is created`,`An object is destroyed`,`main() ends`,`Any method is called`],a:1,x:`Constructor = on object creation; destructor = on destruction. Order: base ctor -> derived ctor; destructors reverse.`},{q:`Which C++ keyword allows a function to be redefined in a derived class?`,o:[`static`,`virtual`,`const`,`friend`,`inline`],a:1,x:`virtual enables runtime polymorphism/overriding — the single most-asked OOP keyword.`},{q:`In Java, a class that cannot be inherited is declared?`,o:[`static`,`abstract`,`final`,`private`,`sealed`],a:2,x:`final class = no subclassing. Contrast: abstract = MUST be subclassed. The final/abstract pair is a favourite confusion.`},{q:`Private members of a class are accessible from?`,o:[`Everywhere`,`Only same class methods`,`Derived classes`,`Same package`,`Friend of derived class`],a:1,x:`private = same class only; protected adds derived classes; public = all. The access table is guaranteed marks.`}],"p2-0-2":[{q:`Java: try { int x = 5/0; } catch(ArithmeticException e){ print("A"); } finally { print("F"); } Output?`,o:[`A`,`F`,`AF`,`Exception propagates`,`Compile error`],a:2,x:`catch runs (A), finally ALWAYS runs (F) -> AF. finally executes even if exception caught or not.`},{q:`Python: try: x = 1/0 except ZeroDivisionError: print("Z") — output?`,o:[`Error traceback`,`Z`,`Nothing`,`0`,`inf`],a:1,x:`ZeroDivisionError caught -> prints Z. Match the exception TYPE to the except clause.`},{q:`In C++, an uncaught exception calls which function?`,o:[`abort/terminate`,`exit`,`return`,`catch`,`delete`],a:0,x:`std::terminate() (which calls abort) — uncaught-exception behaviour is a frequent one-liner.`},{q:`Java: multiple catch blocks — which order is REQUIRED?`,o:[`Most general first`,`Most specific first`,`Any order`,`Alphabetical`,`Parent class first`],a:1,x:`Specific before general — a parent-class catch first makes subclass catches unreachable = compile error.`},{q:`Python: try: open("nofile.txt") except _____ — which exception?`,o:[`IOError/FileNotFoundError`,`ValueError`,`KeyError`,`TypeError`,`NameError`],a:0,x:`FileNotFoundError (subclass of OSError). Match common ops to their exceptions: dict[key]->KeyError, int("x")->ValueError.`}],"p2-0-3":[{q:`int f(int n){ return n<=1 ? 1 : n*f(n-1); } What is f(4)?`,o:[`10`,`16`,`24`,`12`,`120`],a:2,x:`Factorial: 4x3x2x1 = 24. Unwind: write calls down to base case, then multiply back up.`},{q:`def g(n): return 0 if n==0 else 1+g(n//2). g(8) returns?`,o:[`2`,`3`,`4`,`8`,`1`],a:2,x:`g(8)=1+g(4); g(4)=1+g(2); g(2)=1+g(1); g(1)=1+g(0)=1. So g(8)=1+1+1+1 = 4. Unwind to the base case, then count the +1s coming back up.`},{q:`fib(5) with fib(0)=0, fib(1)=1 returns?`,o:[`3`,`5`,`8`,`13`,`2`],a:1,x:`0,1,1,2,3,5 -> fib(5)=5. Write the sequence — never compute recursively in your head.`},{q:`int h(int n){ if(n==0) return 0; return n + h(n-1); } h(5) = ?`,o:[`10`,`15`,`20`,`5`,`25`],a:1,x:`5+4+3+2+1+0 = 15 — triangular number. Tail-sum recursion = the easiest trace type.`},{q:`def r(s): return s if len(s)<=1 else r(s[1:])+s[0]. r("abc") = ?`,o:[`abc`,`cba`,`cab`,`bca`,`Error`],a:1,x:`r("abc") = r("bc")+"a" = (r("c")+"b")+"a" = "cba". String recursion: peel one char per call.`}],"p2-0-4":[{q:`int x = 10; void f(){ int x = 5; printf("%d", x); } Inside f, printed value?`,o:[`10`,`5`,`Error`,`Garbage`,`0`],a:1,x:`Local shadows global inside the function -> 5. Shadowing = inner scope wins.`},{q:`C: void swap(int a, int b){ int t=a; a=b; b=t; } called with swap(x,y). After call, x and y are?`,o:[`Swapped`,`Unchanged`,`Undefined`,`Compile error`,`Doubled`],a:1,x:`Call-by-value: copies swap, originals safe. THE classic — swap needs pointers or references.`},{q:`Java: passing an object to a method that modifies its field — the field change is?`,o:[`Lost`,`Visible to caller`,`Compile error`,`Reverted`,`Copied`],a:1,x:`Java passes references by value — the OBJECT is shared, so field changes persist. (But reassigning the parameter itself does NOT persist.)`},{q:`Python: def f(lst): lst.append(1). Calling f(mylist) — after the call mylist is?`,o:[`Unchanged`,`Has 1 appended`,`None`,`Copied`,`Error`],a:1,x:`Mutable objects (lists/dicts) pass shared references -> append persists. Immutable ints/strings do NOT change.`},{q:`C++: void f(int &r){ r = 99; } int n = 5; f(n); n is now?`,o:[`5`,`99`,`Error`,`0`,`Undefined`],a:1,x:`Reference parameter = alias to the original -> 99. The & in the signature is the whole question.`}],"p2-0-5":[{q:`C: int i = 5; printf("%d %d", i++, i); typical output?`,o:[`5 5`,`5 6`,`6 6`,`6 5`,`Undefined order`],a:4,x:`i++ and i in the same printf args = unspecified evaluation order — another UB classic.`},{q:`Evaluate: 2 + 3 * 4 - 10 / 5 in C/Python?`,o:[`18`,`10`,`12`,`14`,`16`],a:2,x:`3*4=12, 10/5=2 -> 2+12-2 = 12. Precedence: * and / before + and -, left to right.`},{q:`Python: "5" + "3" evaluates to?`,o:[`8`,`53`,`Error`,`35`,`5.3`],a:1,x:`String + string = concatenation -> "53". Quotes change EVERYTHING.`},{q:`C: 7 % 3 + 2 * (4 - 1) = ?`,o:[`5`,`6`,`7`,`9`,`11`],a:2,x:`7%3 = 1; 2*3 = 6; 1+6 = 7. Parentheses first, then */% , then +-.`},{q:`Java: "1" + 2 + 3 vs 1 + 2 + "3" — outputs?`,o:[`Both "33"`,`"123" and "33"`,`"15" and "33"`,`"123" and "15"`,`Both error`],a:1,x:`Left-to-right: "1"+2 = "12", +3 = "123"; 1+2 = 3, +"3" = "33". Order of evaluation + string coercion.`}],"p2-0-6":[{q:`In UNIX, "mounting" a file system means?`,o:[`Formatting it`,`Attaching it to a directory in the tree`,`Compressing it`,`Encrypting it`,`Deleting it`],a:1,x:`Real PYQ — mount = attach a filesystem to a mount point in the directory tree.`},{q:`ADS in Windows file systems stands for?`,o:[`Active Directory Service`,`Alternate Data Streams`,`Advanced Disk Storage`,`Automated Data Sync`,`Access Data Server`],a:1,x:`Real PYQ — Alternate Data Streams (NTFS hidden streams). Full-form trivia is a recurring filler.`},{q:`Which of these is NOT an OOP pillar?`,o:[`Encapsulation`,`Inheritance`,`Compilation`,`Polymorphism`,`Abstraction`],a:2,x:`Compilation is a build step — the four pillars: encapsulation, inheritance, polymorphism, abstraction.`},{q:`The ternary operator in C/Java/Python-equivalent takes how many operands?`,o:[`1`,`2`,`3`,`4`,`Variable`],a:2,x:`cond ? a : b = three operands — the only ternary operator.`},{q:`Which language is primarily used for the examples in SEBI IT programming questions?`,o:[`COBOL`,`Java/C/C++/Python mix`,`Only Java`,`Only Python`,`Pascal`],a:1,x:`Papers mix all four languages from the official syllabus — prepare all four syntaxes at read-level.`}],"p2-1-0":[{q:`A table has a composite key (A,B) and attribute C depends only on A. This violates?`,o:[`1NF`,`2NF`,`3NF`,`BCNF`,`4NF`],a:1,x:`Partial dependency (non-key depends on PART of a composite key) = 2NF violation. The composite key is the tell.`},{q:`In a table, Dept determines DeptLocation (non-key -> non-key). Violation?`,o:[`1NF`,`2NF`,`3NF`,`BCNF`,`None`],a:2,x:`Transitive dependency (non-key -> non-key) = 3NF violation. Chain: Emp->Dept->DeptLocation.`},{q:`BCNF differs from 3NF in that it requires?`,o:[`No partial dependency`,`Every determinant is a superkey`,`No transitive dependency`,`Atomic attributes`,`A primary key`],a:1,x:`BCNF = stricter: EVERY determinant must be a superkey. 3NF allows exceptions for prime attributes.`},{q:`A table storing multiple phone numbers in one column violates?`,o:[`1NF`,`2NF`,`3NF`,`BCNF`,`4NF`],a:0,x:`Multi-valued attribute in a cell = no atomicity = 1NF violation. 1NF is about atomic values only.`},{q:`Order the forms weakest to strongest?`,o:[`1NF,2NF,3NF,BCNF`,`BCNF,3NF,2NF,1NF`,`2NF,1NF,3NF,BCNF`,`3NF,BCNF,2NF,1NF`,`1NF,BCNF,3NF,2NF`],a:0,x:`Each higher form includes the lower: 1NF -> 2NF -> 3NF -> BCNF. Mnemonic: atomic -> no partial -> no transitive -> determinant=superkey.`}],"p2-1-1":[{q:`A table R(A,B,C) has A unique and B unique. How many candidate keys?`,o:[`1`,`2`,`3`,`4`,`0`],a:1,x:`Each independently-unique attribute = its own candidate key -> 2. Primary is just the CHOSEN one.`},{q:`A superkey differs from a candidate key in that a candidate key is?`,o:[`Larger`,`Minimal superkey`,`Always composite`,`Foreign`,`Numeric only`],a:1,x:`Candidate key = MINIMAL superkey (no removable attributes). Any attribute added to a candidate key still yields a superkey.`},{q:`A foreign key in table R must reference?`,o:[`Any column`,`A candidate/primary key in another table`,`Only primary key of same table`,`An index`,`A unique index only`],a:1,x:`FK references a key (primary or candidate/unique) — maintaining referential integrity.`},{q:`If every attribute in a table is part of some candidate key, the table is?`,o:[`In BCNF automatically`,`All-key relation`,`Not normalised`,`In 1NF only`,`A weak entity`],a:1,x:`All-key relation — all attributes prime. Rare but asked as definition.`},{q:`Maximum candidate keys possible in a 4-attribute table?`,o:[`1`,`4`,`6`,`11`,`15`],a:2,x:`Candidate keys must be MINIMAL superkeys — no subset can contain another. Max = C(4,2) = 6 (all 2-attribute pairs, none nested). Standard result: C(n, floor(n/2)).`}],"p2-1-2":[{q:`Which data structure primarily implements indexes in relational databases?`,o:[`Hash Table`,`AVL Tree`,`B-Tree`,`Red-Black Tree`,`Binary Search Tree`],a:2,x:`REAL Feb-2026 PYQ — B-Tree: disk-optimised, many keys per node, O(log n). THE recurring index question.`},{q:`Millions of records on disk needing fast search + RANGE queries. Best index?`,o:[`Hash Table`,`BST`,`B+ Tree`,`Stack`,`Queue`],a:2,x:`REAL Feb-2026 PYQ — B+ Tree: linked leaves give sequential range scans. Hash = point lookups only.`},{q:`A firm swapped a BST index for a hash index; point lookups got faster but range queries slowed. Why?`,o:[`Hash uses more RAM`,`Hash tables have no ordering`,`BST was cached better`,`Hashes rehash often`,`Disk pages misaligned`],a:1,x:`REAL Feb-2026 PYQ — hashing scatters keys; ranges need ordered traversal. Order is THE trade-off.`},{q:`In a B+ tree, all actual data pointers live in?`,o:[`Root`,`Internal nodes`,`Leaf nodes`,`Both root and leaves`,`Overflow pages`],a:2,x:`B+ tree: leaves hold data + are linked; internal nodes hold only routing keys. That link is what makes ranges fast.`},{q:`A B-tree of order m can hold at most how many keys per node?`,o:[`m`,`m-1`,`2m`,`m/2`,`log m`],a:1,x:`Order m -> max m-1 keys, m children. Order/keys/children triple is definitional.`}],"p2-1-3":[{q:`"Either all operations of a transaction execute, or none do" describes?`,o:[`Consistency`,`Atomicity`,`Isolation`,`Durability`,`Concurrency`],a:1,x:`All-or-nothing = Atomicity. ACID questions give the scenario, you name the property.`},{q:`After a power failure, committed transactions must survive — which property?`,o:[`Atomicity`,`Consistency`,`Isolation`,`Durability`,`Serializability`],a:3,x:`Durability = committed = permanent (write-ahead logging). Failure-recovery scenarios = durability.`},{q:`Two concurrent transactions must not see each other's partial results — property?`,o:[`Atomicity`,`Consistency`,`Isolation`,`Durability`,`Atomicity`],a:2,x:`Isolation — concurrent txns behave as if serial. Dirty-read problems = isolation-level questions.`},{q:`A "dirty read" occurs when a transaction reads?`,o:[`Committed data twice`,`Uncommitted data of another txn`,`Deleted rows`,`Its own writes`,`A locked table`],a:1,x:`Dirty read = reading uncommitted changes — the classic concurrency anomaly, fixed by Read Committed level.`},{q:`Two transactions each hold a lock the other needs. This is?`,o:[`Livelock`,`Deadlock`,`Starvation`,`Race condition`,`Phantom read`],a:1,x:`Circular wait = deadlock. Detection (wait-for graph) and prevention (ordering) are the follow-up facts.`}],"p2-1-4":[{q:`In an ER diagram, a weak entity set requires?`,o:[`A strong key`,`An identifying owner entity + partial key`,`No attributes`,`A surrogate key always`,`At least 3 attributes`],a:1,x:`Weak entity = partial key + owner entity's key. Double-rectangle notation.`},{q:`A many-to-many relationship R between entities A and B maps to how many tables?`,o:[`1`,`2`,`3`,`4`,`0`],a:2,x:`A, B, and R itself = 3 tables. M:N always needs a join/bridge table.`},{q:`Double diamond in an ER diagram denotes?`,o:[`Weak entity`,`Identifying relationship`,`Composite attribute`,`Multivalued attribute`,`Derived attribute`],a:1,x:`Double diamond = identifying relationship linking weak entity to owner. ER notation MCQs are pure recall.`},{q:`A one-to-many relationship is usually implemented by?`,o:[`A third table`,`FK on the "many" side`,`Two tables with mutual FKs`,`A view`,`A composite key`],a:1,x:`FK lives on the MANY side referencing the one. Placement of the FK is the classic question.`},{q:`An attribute drawn with a dashed/double oval that is COMPUTED from another attribute is?`,o:[`Multivalued`,`Derived`,`Composite`,`Key`,`Simple`],a:1,x:`Derived (e.g., age from DOB) = dashed oval; multivalued = double oval. The two ovals get swapped in traps.`}],"p2-2-0":[{q:`Table EMP(10 rows, SALARY all 5000). SELECT COUNT(*) vs COUNT(SALARY) vs COUNT(DISTINCT SALARY)?`,o:[`10,10,10`,`10,10,1`,`10,1,1`,`1,10,10`,`10,10,0`],a:1,x:`COUNT(*) counts rows=10; COUNT(col)=10 non-null; DISTINCT collapses to 1. The trio is a repeat PYQ.`},{q:`SELECT * FROM EMP WHERE SALARY = NULL returns?`,o:[`All NULL-salary rows`,`0 rows always`,`Error`,`All rows`,`One row`],a:1,x:`NULL comparisons need IS NULL — "= NULL" is never true. Guaranteed trap question.`},{q:`EMP has 8 rows; query: SELECT * FROM EMP WHERE DEPT = "X" OR DEPT = "Y". If no such rows exist?`,o:[`Error`,`Empty result set`,`NULL row`,`All 8 rows`,`Exception`],a:1,x:`No match = empty set, not an error — a common misconception they test.`},{q:`SELECT 10/3 in standard SQL (integer division DB) returns?`,o:[`3.33`,`3`,`4`,`3.0`,`Error`],a:1,x:`Integer operands -> integer division = 3 in most engines (Postgres/MySQL strict mode). Know your engine's behaviour.`},{q:`SELECT name FROM emp ORDER BY name DESC LIMIT 1 — returns?`,o:[`First alphabetically`,`Last alphabetically`,`Random row`,`Longest name`,`Error`],a:1,x:`DESC + LIMIT 1 = the last value alphabetically. ORDER BY + LIMIT/TOP/FETCH FIRST combos are common.`}],"p2-2-1":[{q:`EMP(8 rows) JOIN DEPT(3 rows) on matching dept_id; 5 employees match dept D1, 3 match none. INNER JOIN returns?`,o:[`8 rows`,`5 rows`,`3 rows`,`11 rows`,`24 rows`],a:1,x:`INNER = only matches -> 5. Non-matching rows vanish. Predict the COUNT, not the content.`},{q:`Same tables, LEFT JOIN from EMP to DEPT returns?`,o:[`5`,`8`,`3`,`11`,`Depends`],a:1,x:`LEFT keeps ALL left rows -> 8 (3 with NULL dept columns). LEFT JOIN count = left table count (or more if fan-out).`},{q:`A join producing every row of A paired with every row of B is?`,o:[`INNER JOIN`,`CROSS JOIN`,`LEFT JOIN`,`SELF JOIN`,`NATURAL JOIN`],a:1,x:`Cartesian product = CROSS JOIN. Missing join condition = accidental cross join.`},{q:`Table E(emp, mgr_id) joined to itself to get manager names — this is?`,o:[`Cross join`,`Self join`,`Natural join`,`Outer join`,`Equi join`],a:1,x:`Self join with aliases (E1 JOIN E2 ON E1.mgr_id = E2.emp_id) — the employee-manager pattern is the standard example.`},{q:`NATURAL JOIN differs from equi-join in that it?`,o:[`Needs ON clause`,`Auto-joins same-named columns`,`Produces cartesian`,`Is always outer`,`Requires aliases`],a:1,x:`NATURAL joins on ALL common column names automatically — dangerous if names collide unintentionally.`}],"p2-2-2":[{q:`SELECT dept, COUNT(*) FROM emp GROUP BY dept — this returns?`,o:[`Total employees`,`One row per dept with its count`,`Dept names only`,`Error`,`One row`],a:1,x:`GROUP BY buckets rows -> one output row per group. Non-aggregated columns in SELECT must be grouped.`},{q:`WHERE vs HAVING: which filters groups AFTER aggregation?`,o:[`WHERE`,`HAVING`,`GROUP BY`,`ORDER BY`,`DISTINCT`],a:1,x:`WHERE filters rows BEFORE grouping; HAVING filters groups AFTER. Order: FROM->WHERE->GROUP->HAVING->SELECT->ORDER.`},{q:`SELECT dept, AVG(sal) FROM emp GROUP BY dept HAVING AVG(sal) > 50000 — correct because?`,o:[`AVG allowed in WHERE`,`HAVING evaluates aggregates`,`GROUP BY computes it`,`ORDER matters`,`Both WHERE and HAVING same`],a:1,x:`Aggregates belong in HAVING, not WHERE — the single most-asked SQL rule.`},{q:`SUM(salary) where 2 of 10 rows have NULL salary — SUM includes?`,o:[`Error`,`All 10 rows as 0`,`Only 8 non-null values`,`Returns NULL`,`Average instead`],a:2,x:`Aggregates IGNORE NULLs silently (except COUNT(*)). NULL-handling is the aggregate trap family.`},{q:`MAX(marks) = 95 and MIN(marks) = 40 in one SELECT — valid?`,o:[`No, one aggregate per query`,`Yes, multiple aggregates allowed`,`Only with GROUP BY`,`Only with HAVING`,`Syntax error`],a:1,x:`Multiple aggregates in one SELECT are perfectly legal.`}],"p2-2-3":[{q:`Query A returns {1,2,3}, B returns {3,4}. A UNION B = ?`,o:[`{1,2,3,4}`,`{1,2,3,3,4}`,`{3}`,`{1,2,4}`,`Error`],a:0,x:`UNION dedupes -> 4 rows. UNION ALL keeps the duplicate 3. Union-vs-union-all dedup is THE set-op question.`},{q:`Same sets: A UNION ALL B returns how many rows?`,o:[`4`,`5`,`6`,`3`,`2`],a:1,x:`3 + 2 = 5 rows — UNION ALL concatenates without dedup (also faster, no sort needed).`},{q:`A INTERSECT B on {1,2,3} and {3,4} = ?`,o:[`{1,2,3,4}`,`{3}`,`{1,2}`,`{4}`,`Empty`],a:1,x:`Common to both = {3}.`},{q:`A EXCEPT B on {1,2,3} minus {3,4} = ?`,o:[`{1,2}`,`{4}`,`{3}`,`{1,2,3,4}`,`Empty`],a:0,x:`In A but not B = {1,2}. EXCEPT is directional — A EXCEPT B differs from B EXCEPT A.`},{q:`For UNION/INTERSECT/EXCEPT to work, the two queries must have?`,o:[`Same table`,`Same number & compatible types of columns`,`Same row count`,`Same column names`,`No NULLs`],a:1,x:`Column count + type compatibility required; names need NOT match.`}],"p2-2-4":[{q:`WHERE dept_id IN (SELECT dept_id FROM dept WHERE loc="Mumbai") — the inner query runs?`,o:[`Once`,`Per outer row`,`Per column`,`Twice`,`Never`],a:0,x:`Non-correlated subquery = evaluated once; correlated = once per outer row. The inner-references-outer test decides it.`},{q:`IN vs EXISTS: which is safer when the subquery column can contain NULL?`,o:[`IN`,`EXISTS`,`Both same`,`NOT IN`,`ANY`],a:1,x:`NOT IN with a NULL in the list returns EMPTY — the famous NULL foot-gun. EXISTS is NULL-safe.`},{q:`A correlated subquery differs because it?`,o:[`Runs faster`,`References outer query columns`,`Uses joins`,`Returns one row`,`Cannot use IN`],a:1,x:`Correlated = inner query mentions outer table -> evaluated per outer row.`},{q:`SELECT * FROM emp WHERE sal > ALL(SELECT sal FROM emp WHERE dept="IT") means sal is?`,o:[`Above average`,`Above the maximum in IT`,`Above the minimum in IT`,`Equal to any IT sal`,`Above total`],a:1,x:`> ALL = greater than every value = greater than the max. ANY/SOME = greater than min.`},{q:`Subquery in SELECT clause (SELECT name, (SELECT AVG(sal) FROM emp) ...) returns?`,o:[`Error always`,`Scalar value per row`,`Multiple columns`,`A table`,`NULL`],a:1,x:`Scalar subqueries in SELECT must return exactly one value — a legal, tested pattern.`}],"p2-2-5":[{q:`Which is a DDL command?`,o:[`INSERT`,`UPDATE`,`ALTER`,`SELECT`,`GRANT`],a:2,x:`DDL = structure (CREATE/ALTER/DROP/TRUNCATE); DML = data (INSERT/UPDATE/DELETE/SELECT); TCL = COMMIT/ROLLBACK; DCL = GRANT/REVOKE.`},{q:`DELETE vs TRUNCATE: which can be rolled back (in most DBs)?`,o:[`TRUNCATE`,`DELETE`,`Both`,`Neither`,`Depends on table size`],a:1,x:`DELETE is logged DML -> rollback-able; TRUNCATE is DDL -> typically not (and resets identity).`},{q:`TRUNCATE differs from DELETE also because TRUNCATE?`,o:[`Has WHERE clause`,`Removes all rows + resets counters`,`Is slower`,`Fires triggers`,`Keeps structure only sometimes`],a:1,x:`No WHERE (all rows), resets auto-increment, faster — the full contrast list is the tested set.`},{q:`GRANT and REVOKE belong to?`,o:[`DDL`,`DML`,`TCL`,`DCL`,`DQL`],a:3,x:`DCL = Data Control Language — permission commands.`},{q:`COMMIT, ROLLBACK, SAVEPOINT are?`,o:[`DDL`,`DML`,`TCL`,`DCL`,`DQL`],a:2,x:`TCL = transaction control. The 4-way language classification table is a guaranteed 1-mark recall.`}],"p2-3-0":[{q:`df = pd.DataFrame({"a":[1,2,3],"b":[4,5,6]}). df.loc[1,"b"] returns?`,o:[`2`,`4`,`5`,`6`,`Error`],a:2,x:`loc = label-based row,col -> row 1, col "b" = 5. loc vs iloc (position) is the #1 pandas question.`},{q:`df.iloc[0:2] on a 3-row DataFrame returns?`,o:[`Rows 0,1,2`,`Rows 0,1`,`Row 0 only`,`Error`,`Rows 1,2`],a:1,x:`iloc slicing is Python-exclusive: 0:2 = rows 0,1 (stop excluded). loc INCLUDES both ends — the classic contrast.`},{q:`df.groupby("dept")["sal"].mean() produces?`,o:[`A scalar`,`One mean per dept (Series)`,`A DataFrame of all columns`,`Total sum`,`Error`],a:1,x:`groupby + single-column aggregate = Series indexed by dept. Predict the OUTPUT SHAPE.`},{q:`df[df["age"] > 30] returns?`,o:[`Ages > 30 only`,`Rows where age > 30 (all columns)`,`Count`,`Boolean Series only`,`Error`],a:1,x:`Boolean mask -> filtered DataFrame with all columns. Mask-filtering is the most common pandas idiom.`},{q:`pd.merge(df1, df2, on="id", how="left") keeps?`,o:[`All df2 rows`,`All df1 rows`,`Only matches`,`Cartesian`,`Union of both`],a:1,x:`how="left" = keep all left rows — same semantics as SQL LEFT JOIN. Map pandas args to SQL concepts.`}],"p2-3-1":[{q:`person = {"name":"John","age":30}; a = json.dumps(person). json.dumps() returns?`,o:[`file`,`string`,`byte`,`dict`,`int`],a:1,x:`REAL Feb-2026 PYQ — dumps() = "dump to string" -> JSON string. dumps vs dump (to file) is the trap pair.`},{q:`{1,2,2,3} evaluates to?`,o:[`{1,2,2,3}`,`{1,2,3}`,`Error`,`[1,2,3]`,`(1,2,3)`],a:1,x:`Sets deduplicate on creation -> {1,2,3}. Duplicate-collapse is the standard set question.`},{q:`d = {"a":1}; d["b"] raises?`,o:[`None`,`KeyError`,`ValueError`,`0`,`IndexError`],a:1,x:`Missing dict key = KeyError (d.get("b") returns None instead — the safe-access pair).`},{q:`list("abc") produces?`,o:[`["abc"]`,`["a","b","c"]`,`("a","b","c")`,`Error`,`"abc"`],a:1,x:`list() on a string splits into characters. Iterables -> list element-wise.`},{q:`x = [1,2]*2 produces?`,o:[`[2,4]`,`[1,2,1,2]`,`[1,4]`,`Error`,`[1,2,2]`],a:1,x:`List * int = repetition, not multiplication. Same trap as "5"+"3" -> "53".`}],"p2-3-2":[{q:`re.findall(r"\\d+", "a1b22c333") returns?`,o:[`["1","22","333"]`,`["a1","b22","c333"]`,`["123"]`,`["1","2","3"]`,`["333"]`],a:0,x:`\\d+ = maximal digit runs -> "1","22","333". + is greedy: takes the longest run per match.`},{q:`Pattern r"^SE" matches in "SEBI rules"?`,o:[`No`,`Yes — at string start`,`Only mid-string`,`Error`,`Twice`],a:1,x:`^ anchors to string start. Anchor symbols (^ $) are the most-asked regex tokens.`},{q:`r"\\w+@" on "user@mail.com" captures?`,o:[`user`,`user@`,`@`,`mail`,`user@mail`],a:1,x:`\\w+ = word chars greedy -> "user@". Know the tokens: \\d digit, \\w word, \\s space.`},{q:`re.sub(r"\\d", "#", "a1b2") returns?`,o:[`a#b#`,`a1b2`,`##ab`,`a2b1`,`Error`],a:0,x:`sub replaces each single digit -> a#b#. sub vs findall vs match = know which does what.`},{q:`Pattern r"a.*b" on "aXbYb" matches?`,o:[`aXb`,`aXbYb`,`ab`,`aYb`,`No match`],a:1,x:`.* is greedy -> grabs longest possible = aXbYb. Greedy vs non-greedy (.*?) is the subtle trap.`}],"p2-3-3":[{q:`open("f.txt","r") — "r" mode means?`,o:[`Write`,`Read (error if missing)`,`Append`,`Read+write`,`Create new`],a:1,x:`r = read, fails if absent; w = write+truncate; a = append; r+ = read+write. The mode table is guaranteed.`},{q:`f.read() vs f.readlines(): readlines returns?`,o:[`One string`,`List of lines`,`Bytes`,`First line`,`Dict`],a:1,x:`readlines() = list of line-strings; read() = whole file as one string; readline() = next line.`},{q:`Opening with "w" mode on an EXISTING file does what?`,o:[`Appends`,`Truncates then writes`,`Errors`,`Reads`,`Backs up`],a:1,x:`w truncates to zero immediately — the dangerous-mode fact always asked.`},{q:`with open("f.txt") as f: — the "with" block mainly ensures?`,o:[`Faster reads`,`File auto-closes`,`Encoding fixed`,`Locking`,`Buffering off`],a:1,x:`Context manager closes the file even on exceptions — the "with" purpose is a favourite concept Q.`},{q:`To read a CSV into pandas?`,o:[`pd.open_csv`,`pd.read_csv`,`pd.load_csv`,`csv.read`,`pd.read_excel`],a:1,x:`pd.read_csv — function-name recall across pandas I/O (read_excel, to_csv, read_json).`}],"p2-3-4":[{q:`Grouping customers by spending behaviour WITHOUT predefined labels is?`,o:[`Classification`,`Clustering`,`Regression`,`Association`,`Prediction`],a:1,x:`No labels = unsupervised = clustering. Labeled = classification. The supervised/unsupervised line is THE question.`},{q:`Predicting a stock PRICE (continuous value) is which task?`,o:[`Classification`,`Clustering`,`Regression`,`Association`,`Ranking`],a:2,x:`Continuous output = regression; category output = classification. Output type decides the task.`},{q:`"Customers who buy X also buy Y" rules come from?`,o:[`Regression`,`Clustering`,`Association rule mining`,`Classification`,`Anomaly detection`],a:2,x:`Market-basket = association rules (support/confidence/lift — the three metrics to know).`},{q:`k-means is an example of?`,o:[`Classification`,`Clustering`,`Regression`,`Association`,`Reinforcement`],a:1,x:`k-means = partition clustering — algorithm-to-task mapping questions.`},{q:`Data cleaning primarily deals with?`,o:[`Model training`,`Missing/inconsistent/duplicate data`,`Visualization`,`Indexing`,`Encryption`],a:1,x:`Cleaning = handling missing values, dupes, inconsistencies — the definition-level fact.`}],"p2-4-0":[{q:`Binary search on a sorted array of n elements takes?`,o:[`O(n)`,`O(log n)`,`O(n log n)`,`O(1)`,`O(n^2)`],a:1,x:`Halving each step = log n. Halving = log; full scan = n; nested loops = n^2. Map structure to complexity.`},{q:`Two nested loops each running n times = complexity?`,o:[`O(n)`,`O(log n)`,`O(n^2)`,`O(2^n)`,`O(n log n)`],a:2,x:`n x n = n^2. Multiply loop bounds when nested.`},{q:`Merge sort worst-case complexity?`,o:[`O(n)`,`O(n log n)`,`O(n^2)`,`O(log n)`,`O(n^3)`],a:1,x:`Merge = always n log n (best/avg/worst same). QuickSort degenerates to n^2 — that pair is the trap.`},{q:`QuickSort worst case occurs when?`,o:[`Array sorted + bad pivot picks`,`Random order`,`All equal only`,`Reverse only`,`Small n`],a:0,x:`Already-sorted + first/last-element pivot = n^2. Median pivot avoids it.`},{q:`Accessing an array element by index takes?`,o:[`O(n)`,`O(log n)`,`O(1)`,`O(n log n)`,`O(n^2)`],a:2,x:`Direct address computation = O(1). Linked list = O(n) — the array-vs-list contrast.`}],"p2-4-1":[{q:`Bubble sort after ONE pass on [5,1,4,2] gives?`,o:[`[1,4,2,5]`,`[1,2,4,5]`,`[5,1,2,4]`,`[4,1,2,5]`,`[1,5,4,2]`],a:0,x:`Each pass bubbles the max to the end: 5 swaps down -> [1,4,2,5]. Pass-by-pass = simulate mechanically.`},{q:`Selection sort first pass on [5,1,4,2] gives?`,o:[`[1,5,4,2]`,`[1,4,5,2]`,`[1,2,4,5]`,`[5,1,2,4]`,`[2,1,4,5]`],a:0,x:`Selection finds the MIN and swaps it to the front: min=1 -> [1,5,4,2]. Min-to-front vs bubble max-to-end.`},{q:`Insertion sort on [5,1,4,2]: after inserting the second element, array is?`,o:[`[1,5,4,2]`,`[1,4,5,2]`,`[1,2,4,5]`,`[5,1,4,2]`,`[2,5,4,1]`],a:0,x:`Insertion slides 1 into sorted prefix [5] -> [1,5,4,2].`},{q:`Which sort is stable by default?`,o:[`QuickSort`,`HeapSort`,`MergeSort`,`SelectionSort`,`Shell sort`],a:2,x:`Merge sort preserves equal-element order; quick/heap/selection don't. Stability is a repeat definition.`},{q:`Best sort for a nearly-sorted array?`,o:[`QuickSort`,`InsertionSort`,`HeapSort`,`MergeSort`,`SelectionSort`],a:1,x:`Insertion sort = O(n) on nearly-sorted input — adaptive-sorts fact.`}],"p2-4-2":[{q:`Tree: root A, left child B, right child C. INORDER traversal = ?`,o:[`A,B,C`,`B,A,C`,`B,C,A`,`C,A,B`,`A,C,B`],a:1,x:`Inorder = Left-Root-Right = B,A,C. LNR/NRL/LRN ordering is the mechanical rule.`},{q:`Same tree: PREORDER = ?`,o:[`A,B,C`,`B,A,C`,`C,B,A`,`B,C,A`,`A,C,B`],a:0,x:`Preorder = Root-Left-Right = A,B,C. Root FIRST = pre; root LAST = post; root MIDDLE = in.`},{q:`Same tree: POSTORDER = ?`,o:[`A,B,C`,`B,A,C`,`B,C,A`,`C,A,B`,`A,C,B`],a:2,x:`Postorder = Left-Right-Root = B,C,A.`},{q:`Inorder traversal of a BST always produces?`,o:[`Random order`,`Sorted order`,`Level order`,`Reverse sorted`,`Heap order`],a:1,x:`BST inorder = ascending sorted — a guaranteed 1-marker every cycle.`},{q:`BFS traversal uses which data structure?`,o:[`Stack`,`Queue`,`Heap`,`Tree`,`Hash`],a:1,x:`BFS = queue (level by level); DFS = stack/recursion. DS-mapping questions are pure recall.`}],"p2-4-3":[{q:`Shortest path in a weighted graph with non-negative edges?`,o:[`BFS`,`Dijkstra`,`DFS`,`Kruskal`,`Prim`],a:1,x:`Dijkstra = single-source shortest path, non-negative weights. Negative edges -> Bellman-Ford. Map problem -> algo.`},{q:`Minimum spanning tree: which algo adds cheapest edges avoiding cycles?`,o:[`Dijkstra`,`Kruskal`,`Prim`,`Floyd`,`DFS`],a:1,x:`Kruskal = sort all edges, add if no cycle (uses union-find). Prim grows from a vertex instead.`},{q:`All-pairs shortest paths uses?`,o:[`Dijkstra x n`,`Floyd-Warshall`,`Bellman-Ford only`,`Kruskal`,`Prim`],a:1,x:`Floyd-Warshall = all-pairs DP — the named-algo-to-purpose map.`},{q:`Matrix multiplication in O(n^2.81) instead of n^3 uses?`,o:[`Strassen's algorithm`,`Karatsuba`,`Floyd's`,`Dijkstra's`,`Gauss elimination`],a:0,x:`Strassen = divide & conquer matrix mult — appeared in Phase-2 memory Qs.`},{q:`Detecting a cycle in a linked list uses?`,o:[`Two pointers (Floyd's)`,`Binary search`,`Hash array`,`Sorting`,`BFS`],a:0,x:`Floyd's tortoise-hare: slow + fast pointer meet = cycle. Named-trick questions recur.`}],"p2-4-4":[{q:`Merge sort and QuickSort exemplify which paradigm?`,o:[`Greedy`,`Divide and Conquer`,`DP`,`Backtracking`,`Brute force`],a:1,x:`Split -> solve -> combine = D&C. Identify by structure: overlapping subproblems = DP; local-optimal picks = greedy.`},{q:`Fibonacci via memoization/table is?`,o:[`Greedy`,`Divide & Conquer`,`Dynamic Programming`,`Backtracking`,`Recursion only`],a:2,x:`Overlapping subproblems + caching = DP. Real Phase-2 Q asked "Nth Fibonacci via DP".`},{q:`Choosing the locally-best option at each step (activity selection, Huffman) = ?`,o:[`DP`,`Greedy`,`D&C`,`Backtracking`,`Branch & bound`],a:1,x:`Greedy = local optimum, no backtracking. Kruskal/Prim/Dijkstra are greedy too — map algos to paradigms.`},{q:`N-Queens problem is solved classically by?`,o:[`Greedy`,`DP`,`Backtracking`,`D&C`,`Sorting`],a:2,x:`Try -> fail -> undo = backtracking. Sudoku/N-Queens/graph-colouring = the backtracking family.`},{q:`Dijkstra and Kruskal both belong to which paradigm?`,o:[`DP`,`Greedy`,`D&C`,`Backtracking`,`Randomized`],a:1,x:`Both pick the cheapest next step = greedy. Multi-algo classification questions appear in Phase 2.`}],"p2-5-0":[{q:`Routing of packets between networks happens at which OSI layer?`,o:[`Data Link`,`Network`,`Transport`,`Session`,`Application`],a:1,x:`Routing = Layer 3 (Network). Memorise the 7-layer ladder + one job each.`},{q:`Encryption/decryption and data compression belong to which layer?`,o:[`Application`,`Presentation`,`Session`,`Transport`,`Network`],a:1,x:`Presentation (L6) = translation, encryption, compression — the most-forgotten middle layer.`},{q:`Framing and MAC addressing happen at?`,o:[`Physical`,`Data Link`,`Network`,`Transport`,`Session`],a:1,x:`Data Link (L2) = frames, MAC, switches. Media-access = L2.`},{q:`Which layer provides end-to-end reliability and segmentation?`,o:[`Network`,`Transport`,`Session`,`Data Link`,`Application`],a:1,x:`Transport (L4) = TCP/UDP, ports, segmentation, retransmission.`},{q:`The 7 OSI layers bottom-to-top are?`,o:[`PHY-DLL-NET-TRANS-SESS-PRES-APP`,`PHY-NET-DLL-TRANS-SESS-PRES-APP`,`DLL-PHY-NET-TRANS-PRES-SESS-APP`,`PHY-DLL-TRANS-NET-SESS-APP-PRES`,`APP-PRES-SESS-TRANS-NET-DLL-PHY`],a:0,x:`"Please Do Not Throw Sausage Pizza Away" — Physical, Data Link, Network, Transport, Session, Presentation, Application.`}],"p2-5-1":[{q:`Video streaming where speed matters more than perfect delivery uses?`,o:[`TCP`,`UDP`,`ICMP`,`ARP`,`SMTP`],a:1,x:`UDP = connectionless, fast, no retransmit — streaming/DNS/VoIP. TCP = reliable, ordered.`},{q:`TCP establishes connection via?`,o:[`2-way handshake`,`3-way handshake (SYN,SYN-ACK,ACK)`,`4-way handshake`,`Broadcast`,`Beacon frames`],a:1,x:`SYN -> SYN-ACK -> ACK = the handshake triple every exam asks.`},{q:`Which is TRUE about UDP?`,o:[`Connection-oriented`,`Guaranteed delivery`,`Connectionless, no guarantee`,`Slower than TCP`,`Uses handshakes`],a:2,x:`UDP = fire-and-forget. Invert properties to spot the planted false statement.`},{q:`HTTP web traffic runs over?`,o:[`UDP`,`TCP`,`ICMP`,`ARP`,`FTP`],a:1,x:`HTTP/HTTPS/SMTP/FTP = TCP-based (reliability needed). DNS = both; streaming = UDP.`},{q:`Ordered, retransmitted, flow-controlled delivery is provided by?`,o:[`UDP`,`TCP`,`IP`,`Ethernet`,`ICMP`],a:1,x:`TCP — the three features (order, retransmit, flow control) is the definition triad.`}],"p2-5-2":[{q:`HTTP uses which port?`,o:[`21`,`25`,`53`,`80`,`443`],a:3,x:`HTTP=80, HTTPS=443 — port numbers are pure recall, make the table once.`},{q:`DNS resolves?`,o:[`MAC to IP`,`Domain names to IP`,`IP to MAC`,`Ports to services`,`Email addresses`],a:1,x:`Domain -> IP on port 53 (UDP mostly, TCP for zone transfers).`},{q:`Sending email uses which protocol?`,o:[`POP3`,`IMAP`,`SMTP`,`SNMP`,`FTP`],a:2,x:`SMTP SENDS (port 25/587); POP3/IMAP RECEIVE. Send vs receive is the classic swap.`},{q:`FTP uses which port for control?`,o:[`20`,`21`,`22`,`23`,`25`],a:1,x:`FTP: 21 control, 20 data. SSH=22, Telnet=23 — the neighbouring ports get swapped in options.`},{q:`HTTPS encrypts web traffic via?`,o:[`IPsec`,`TLS/SSL`,`SSH`,`PGP`,`WPA`],a:1,x:`TLS (formerly SSL) on port 443 — protocol-to-security-layer mapping.`}],"p2-5-3":[{q:`A switch operates primarily at which layer?`,o:[`Physical`,`Data Link`,`Network`,`Transport`,`Application`],a:1,x:`Switch = L2 (MAC-based); router = L3 (IP); hub = L1 (dumb repeater). The device-layer table is guaranteed.`},{q:`A router works at which layer?`,o:[`Data Link`,`Network`,`Physical`,`Transport`,`Session`],a:1,x:`Router = L3 — routes packets between networks using IP addresses.`},{q:`A device that regenerates signals without any addressing is?`,o:[`Switch`,`Router`,`Repeater/Hub`,`Bridge`,`Gateway`],a:2,x:`Repeater/hub = L1, just amplifies/forwards bits — no intelligence.`},{q:`A device translating between DIFFERENT protocols/architectures is?`,o:[`Router`,`Switch`,`Hub`,`Gateway`,`Repeater`],a:3,x:`Gateway = protocol translator (can work up to L7) — the outlier device always asked.`},{q:`A bridge connects?`,o:[`Two LAN segments at L2`,`WAN to internet`,`Analog to digital`,`L3 subnets`,`VPN tunnels`],a:0,x:`Bridge = L2, joins/filter LAN segments by MAC — the older sibling of the switch.`}],"p2-5-4":[{q:`IP address 192.168.1.5 belongs to class?`,o:[`A`,`B`,`C`,`D`,`Private-exempt`],a:2,x:`192-223 = Class C. Ranges: A 1-126, B 128-191, C 192-223. First octet decides.`},{q:`Which is a private IP range?`,o:[`8.8.8.0/24`,`10.0.0.0/8`,`172.32.0.0/16`,`192.169.0.0/16`,`1.1.1.0/24`],a:1,x:`Private: 10.x.x.x, 172.16-31.x.x, 192.168.x.x. 172.32 is PUBLIC — the off-by-one trap.`},{q:`IPv4 addresses are how many bits?`,o:[`16`,`32`,`64`,`128`,`48`],a:1,x:`IPv4 = 32-bit (4 octets); IPv6 = 128-bit; MAC = 48-bit. The size trio.`},{q:`Subnet mask 255.255.255.0 corresponds to prefix?`,o:[`/8`,`/16`,`/24`,`/32`,`/20`],a:2,x:`Three 255 octets = 24 bits = /24. Mask-to-CIDR conversion.`},{q:`Loopback address for testing the local machine?`,o:[`0.0.0.0`,`127.0.0.1`,`192.168.1.1`,`255.255.255.255`,`8.8.8.8`],a:1,x:`127.0.0.1 = localhost loopback — never leaves the machine.`}],"p2-6-0":[{q:`An email pretending to be your bank asks you to "verify" credentials via a link. This is?`,o:[`Phishing`,`MITM`,`DDoS`,`Ransomware`,`SQL injection`],a:0,x:`Fake identity + credential harvest = phishing. Scenario -> attack-name is the dominant InfoSec pattern.`},{q:`An attacker secretly relays/alter messages between two parties who think they talk directly?`,o:[`Phishing`,`Man-in-the-middle`,`Brute force`,`Spoofing only`,`Sniffing only`],a:1,x:`MITM = interception between parties. Sniffing is passive listening; MITM is active relay — the subtle pair.`},{q:`Flooding a server with traffic from many compromised machines to make it unavailable?`,o:[`DoS`,`DDoS`,`MITM`,`Phishing`,`Trojan`],a:1,x:`Many sources + availability attack = Distributed DoS. CIA target: Availability.`},{q:`Inputting "' OR 1=1 --" into a login form targets which vulnerability?`,o:[`XSS`,`SQL injection`,`CSRF`,`Buffer overflow`,`DDoS`],a:1,x:`Classic SQLi string — recognises payloads too, not just names. Web vulns: SQLi (DB), XSS (scripts), CSRF (forged requests).`},{q:`Malware that encrypts victim files demanding payment?`,o:[`Spyware`,`Ransomware`,`Adware`,`Rootkit`,`Worm`],a:1,x:`Ransomware — the malware taxonomy: virus (needs host), worm (self-spreads), trojan (disguised), ransomware (encrypts).`}],"p2-6-1":[{q:`Preventing unauthorised access to data protects which CIA property?`,o:[`Integrity`,`Confidentiality`,`Availability`,`Authenticity`,`Non-repudiation`],a:1,x:`Access secrecy = Confidentiality. Map control -> property.`},{q:`Checksums and hashes ensure data was not tampered with — which property?`,o:[`Confidentiality`,`Integrity`,`Availability`,`Authentication`,`Authorisation`],a:1,x:`Tamper-detection = Integrity. Hash/checksum/signature questions route here.`},{q:`Backups, redundancy and DDoS protection serve which property?`,o:[`Confidentiality`,`Integrity`,`Availability`,`Authenticity`,`Privacy`],a:2,x:`System up + data reachable = Availability.`},{q:`A digital signature primarily provides?`,o:[`Confidentiality only`,`Authenticity + integrity + non-repudiation`,`Availability`,`Anonymity`,`Compression`],a:1,x:`Signature = proves sender (authenticity), content unchanged (integrity), can't deny (non-repudiation). NOT confidentiality — the trap.`},{q:`CIA in security stands for?`,o:[`Control-Integrity-Access`,`Confidentiality-Integrity-Availability`,`Certified-Information-Assurance`,`Cyber-Identity-Access`,`Compliance-Integrity-Audit`],a:1,x:`The triad itself is a freebie question — expand + map, both asked.`}],"p2-6-2":[{q:`Same key encrypts and decrypts — this is?`,o:[`Asymmetric`,`Symmetric`,`Hashing`,`Digital signature`,`PKI`],a:1,x:`One shared key = symmetric (AES, DES). Key-distribution problem is its weakness.`},{q:`Public key encrypts, private key decrypts — property of?`,o:[`Symmetric crypto`,`Asymmetric crypto`,`Hashing`,`Steganography`,`Encoding`],a:1,x:`Asymmetric (RSA) — public/private pair. For SIGNING it inverts: private signs, public verifies — know both directions.`},{q:`AES is which type of cipher?`,o:[`Asymmetric`,`Symmetric block cipher`,`Hash function`,`Stream-only`,`Key exchange`],a:1,x:`AES = symmetric block cipher; RSA = asymmetric; SHA = hash — the algo-to-type table.`},{q:`Hashing differs from encryption because hashing is?`,o:[`Reversible`,`One-way, no decryption`,`Slower always`,`Key-based`,`Weaker`],a:1,x:`Hash = one-way digest (SHA-256), you can't "decrypt" it — the concept trap vs encryption.`},{q:`Which algorithm is used for key EXCHANGE rather than encryption?`,o:[`AES`,`Diffie-Hellman`,`SHA-256`,`MD5`,`DES`],a:1,x:`Diffie-Hellman = key exchange protocol — purpose-mapping again.`}],"p2-6-3":[{q:`Password + OTP on phone = how many authentication factors?`,o:[`1`,`2`,`3`,`0`,`Depends on OTP`],a:1,x:`Knowledge (password) + possession (phone OTP) = 2FA. Count DISTINCT factor types, not steps.`},{q:`Fingerprint scan uses which factor type?`,o:[`Something you know`,`Something you have`,`Something you are`,`Somewhere you are`,`Something you do`],a:2,x:`Biometric = "something you are". The three-factor trio: know/have/are.`},{q:`An ATM card + PIN is?`,o:[`1FA`,`2FA`,`3FA`,`Not authentication`,`SSO`],a:1,x:`Card (have) + PIN (know) = textbook 2FA example.`},{q:`Authentication vs authorisation: checking WHAT you can access is?`,o:[`Authentication`,`Authorisation`,`Accounting`,`Auditing`,`Encryption`],a:1,x:`AuthN = who are you; AuthZ = what may you do. AAA trio: Authentication, Authorisation, Accounting.`},{q:`Kerberos is primarily used for?`,o:[`Encryption only`,`Network authentication`,`Antivirus`,`Firewalling`,`Backup`],a:1,x:`Kerberos = ticket-based network authentication — protocol-purpose mapping.`}],"p2-6-4":[{q:`A firewall that inspects packet contents beyond headers operates at?`,o:[`Layer 1`,`Packet-filtering only`,`Application layer (stateful/deep inspection)`,`Physical`,`MAC layer`],a:2,x:`Deep packet inspection = application-layer/next-gen firewall — firewall-type questions.`},{q:`IDS vs IPS: which one actively BLOCKS threats?`,o:[`IDS`,`IPS`,`Both`,`Neither`,`Honeypot`],a:1,x:`IPS = inline prevention (blocks); IDS = detection+alert only. The S-pair distinction.`},{q:`A decoy system designed to attract and study attackers is?`,o:[`Firewall`,`Honeypot`,`Proxy`,`VPN`,`Bastion host`],a:1,x:`Honeypot = bait system — terminology recall.`},{q:`The purpose of a security AUDIT is mainly to?`,o:[`Encrypt data`,`Evaluate controls vs policy/compliance`,`Block attacks real-time`,`Backup systems`,`Patch software`],a:1,x:`Audit = assess compliance/effectiveness — "system audit" is in the official syllabus.`},{q:`Least-privilege principle means users get?`,o:[`Maximum access for ease`,`Only access needed for their job`,`Admin by default`,`Temporary root`,`Shared accounts`],a:1,x:`Minimum necessary access = least privilege — policy-principle question.`}],"p2-7-0":[{q:`Going from monthly sales to yearly sales in a cube is called?`,o:[`Drill-down`,`Roll-up`,`Slice`,`Dice`,`Pivot`],a:1,x:`Roll-up = aggregate to coarser level (month->year). Drill-down = opposite. Direction is THE question.`},{q:`Viewing data for ONE specific region across all products is?`,o:[`Roll-up`,`Drill-down`,`Slice`,`Dice`,`Rotation`],a:2,x:`Slice = fix ONE dimension, see the rest. Dice = sub-cube on multiple dims. The slice/dice pair.`},{q:`Selecting a sub-cube (Q1 only, North region only, Electronics only) is?`,o:[`Slice`,`Dice`,`Roll-up`,`Drill-across`,`Pivot`],a:1,x:`Dice = multi-dimension filter -> sub-cube. One dim = slice, several = dice.`},{q:`Breaking yearly sales down into quarters is?`,o:[`Roll-up`,`Drill-down`,`Slice`,`Dice`,`Consolidation`],a:1,x:`Drill-down = finer granularity — the mirror of roll-up, both always tested together.`},{q:`Rotating the cube to swap rows and columns is called?`,o:[`Pivot/rotation`,`Slice`,`Dice`,`Roll-up`,`Drill`],a:0,x:`Pivot = reorient the axes — fifth OLAP op completes the set: roll-up, drill-down, slice, dice, pivot.`}],"p2-7-1":[{q:`The correct ETL order is?`,o:[`Extract-Transform-Load`,`Extract-Load-Transform`,`Transform-Extract-Load`,`Load-Extract-Transform`,`Transfer-Evaluate-Load`],a:0,x:`ETL = pull data -> clean/convert -> store in warehouse. ELT (load first, transform inside) is the modern variant they contrast.`},{q:`Which ETL stage removes duplicates and standardises formats?`,o:[`Extract`,`Transform`,`Load`,`Index`,`Mine`],a:1,x:`Transform = cleansing/dedup/mapping — stage-purpose mapping.`},{q:`ETL differs from ELT mainly in?`,o:[`Speed only`,`Where transformation happens`,`Data volume`,`Cost`,`Tools used`],a:1,x:`ETL transforms BEFORE loading (staging); ELT transforms inside the warehouse — placement question.`},{q:`Staging area in ETL is used to?`,o:[`Store final reports`,`Hold raw data before transform`,`Backup warehouse`,`Serve queries`,`Index cubes`],a:1,x:`Staging = intermediate landing zone between source and warehouse.`},{q:`Incremental loading means loading?`,o:[`All data every time`,`Only changed/new data since last load`,`Random samples`,`Aggregates only`,`Metadata`],a:1,x:`Full vs incremental load — the load-strategy pair.`}],"p2-7-2":[{q:`A star schema has?`,o:[`Normalised dimensions`,`Central fact + denormalised dimension tables`,`Only fact tables`,`Snowflake branches`,`No relationships`],a:1,x:`Star = one fact + flat dimensions (denormalised); snowflake normalises dimensions further. Central-fact visual.`},{q:`Snowflake schema differs from star because dimensions are?`,o:[`Removed`,`Normalised into sub-tables`,`Denormalised`,`Encrypted`,`Duplicated`],a:1,x:`Snowflake = normalised dims = more joins but less redundancy. The trade-off pair is the question.`},{q:`A fact table typically stores?`,o:[`Dimension descriptions`,`Numeric measures + foreign keys`,`Metadata`,`User info`,`Indexes`],a:1,x:`Facts = measurable numbers (sales amount, qty) + keys to dimensions — the fact/dimension split.`},{q:`Which is an advantage of star over snowflake?`,o:[`Less storage`,`Fewer joins = faster queries`,`More normalised`,`Better integrity`,`Smaller facts`],a:1,x:`Denormalised = fewer joins = faster reads — warehouses optimise reads, not writes (opposite of OLTP).`},{q:`Dimension tables contain?`,o:[`Measures`,`Descriptive attributes (who/what/where)`,`Aggregates`,`Logs`,`Indexes`],a:1,x:`Dims = the "by" fields: time, product, region — what you slice facts BY.`}],"p2-7-3":[{q:`A data mart is best described as?`,o:[`A bigger warehouse`,`Subject/department-specific subset of a warehouse`,`A backup`,`A lake`,`An OLTP system`],a:1,x:`Mart = departmental slice (sales-only, finance-only) of the enterprise warehouse — scope distinction.`},{q:`Data warehouse is characterised as?`,o:[`Volatile, real-time`,`Subject-oriented, integrated, time-variant, non-volatile`,`OLTP-normalised`,`Flat files`,`Unstructured`],a:1,x:`Inmon's four properties — recite them: subject-oriented, integrated, time-variant, non-volatile.`},{q:`OLAP vs OLTP: OLAP is optimised for?`,o:[`Transactions`,`Analytics/complex read queries`,`Inserts`,`Point lookups`,`Locking`],a:1,x:`OLAP = analytical reads on history; OLTP = fast transactions. System-purpose contrast.`},{q:`Metadata in a warehouse is?`,o:[`The actual sales data`,`Data about data — structure, lineage, definitions`,`Indexes only`,`User logs`,`Backups`],a:1,x:`Metadata = data about data — definition question, appears in syllabus verbatim.`},{q:`A "data lake" differs from a warehouse because a lake stores?`,o:[`Only structured data`,`Raw structured+unstructured data`,`Only aggregates`,`Only metadata`,`Only logs`],a:1,x:`Lake = raw anything; warehouse = cleaned, structured, modelled — the modern contrast.`}],"p2-8-0":[{q:`Which command searches text patterns inside files?`,o:[`ls`,`grep`,`chmod`,`pwd`,`cp`],a:1,x:`grep = pattern search. Command-purpose one-liners are the dominant shell pattern.`},{q:`chmod 755 gives the file owner which permissions?`,o:[`rw-`,`rwx`,`r-x`,`---`,`r--`],a:1,x:`755 = rwx r-x r-x — owner gets all three. Octal: 4=r 2=w 1=x.`},{q:`ls -la shows?`,o:[`Only filenames`,`All files incl. hidden, long format`,`Only directories`,`Disk usage`,`Processes`],a:1,x:`-a includes dotfiles, -l = long listing — flag-combination questions.`},{q:`Which command kills a process by PID?`,o:[`stop`,`kill`,`end`,`halt`,`exit`],a:1,x:`kill <PID> (kill -9 forces). Process commands: ps, top, kill — the trio.`},{q:`The pipe symbol | does what?`,o:[`Writes to file`,`Sends one command's output to another's input`,`Runs in background`,`Comments`,`Loops`],a:1,x:`Pipe chains stdout -> stdin. | vs > (redirect) vs >> (append) vs & (background).`}],"p2-8-1":[{q:`chmod 644 means?`,o:[`rwx rw- r--`,`rw- r-- r--`,`rwx r-x r-x`,`rw- rw- r--`,`r-- r-- r--`],a:1,x:`6=rw, 4=r, 4=r -> rw-r--r--. Decode each digit: 7=rwx, 6=rw-, 5=r-x, 4=r--.`},{q:`To make a script executable: chmod ___ script.sh?`,o:[`+x`,`-w`,`777`,`+r`,`000`],a:0,x:`chmod +x adds execute bit — the script-execution one-liner.`},{q:`chmod 777 gives?`,o:[`Owner only`,`Everyone everything`,`Read-only all`,`Execute only`,`Nothing`],a:1,x:`777 = rwxrwxrwx — full perms to all (a security smell, often the "what's wrong" question).`},{q:`Which letter in rwx stands for execute?`,o:[`r`,`w`,`x`,`e`,`s`],a:2,x:`r=read w=write x=execute — plus the octal values 4/2/1.`},{q:`chown command is used to?`,o:[`Change permissions`,`Change owner/group`,`Change directory`,`Check owner`,`Chain files`],a:1,x:`chown = ownership; chmod = permissions — the pair gets swapped in options.`}],"p2-8-2":[{q:`#!/bin/bash at a script's top is called?`,o:[`Comment`,`Shebang — declares the interpreter`,`Header`,`Variable`,`Import`],a:1,x:`Shebang/hashbang tells the OS which interpreter to run it with.`},{q:`$1 inside a script refers to?`,o:[`First line`,`First argument`,`PID`,`Exit code`,`Script name`],a:1,x:`$1,$2... = positional args; $0 = script name; $? = last exit code; $# = arg count — the $-variable set.`},{q:`To print variable x's VALUE in bash?`,o:[`echo x`,`echo $x`,`print x`,`echo %x`,`echo #x`],a:1,x:`$x dereferences — assignment is x=5 (no $!), use is $x. The $ asymmetry trips everyone.`},{q:`Correct if-statement syntax?`,o:[`if (x>5) then`,`if [ $x -gt 5 ]; then`,`if x>5 {`,`when x gt 5`,`if $x > 5 fi`],a:1,x:`[ ... ] test syntax with -gt/-eq/-lt numeric operators; ends with fi. String vs numeric compare = the subtle trap.`},{q:`for i in 1 2 3; do ... done — the loop ends with?`,o:[`end`,`done`,`fi`,`}`,`stop`],a:1,x:`do...done wraps loops; if...fi wraps conditionals — mirrored keywords.`}],"p2-9-0":[{q:`Decimal 59 in hexadecimal?`,o:[`3B`,`3C`,`2B`,`2C`,`3A`],a:0,x:`REAL PYQ — 59 = 3x16 + 11 = 3B (11=B). Divide by 16, remainder maps A-F.`},{q:`Hex A3D to decimal?`,o:[`2620`,`2621`,`2720`,`2622`,`2650`],a:1,x:`REAL PYQ — 10x256 + 3x16 + 13 = 2560+48+13 = 2621. Place values: 256,16,1.`},{q:`Binary 1111011.11 to decimal?`,o:[`123.5`,`123.75`,`111.5`,`125.5`,`123.25`],a:1,x:`REAL PYQ — 64+32+16+8+2+1 = 123; .11 = 0.5+0.25 = 0.75 -> 123.75.`},{q:`Binary 11110101 to octal?`,o:[`365`,`355`,`345`,`375`,`265`],a:0,x:`REAL PYQ — group in 3s: 011 110 101 = 3 6 5 -> 365. Grouping shortcut: octal=3 bits, hex=4 bits.`},{q:`Binary 11110101.11101 to hex?`,o:[`F5.E8`,`E5.E8`,`F5.E9`,`F4.E8`,`F6.E8`],a:0,x:`REAL PYQ — 1111 0101 = F5; .1110 1000 = .E8 -> F5.E8. Group 4 bits per hex digit.`}],"p2-9-1":[{q:`C language was developed by?`,o:[`James Gosling`,`Dennis Ritchie`,`Bjarne Stroustrup`,`Guido van Rossum`,`Ken Thompson only`],a:1,x:`REAL PYQ — Ritchie, 1972, Bell Labs. Language-author pairs: C-Ritchie, C++-Stroustrup, Java-Gosling, Python-van Rossum.`},{q:`C was developed in which year?`,o:[`1978`,`1972`,`1969`,`1975`,`1980`],a:1,x:`REAL PYQ — 1972. Pair the author AND the year — both asked separately.`},{q:`Java was developed by?`,o:[`Dennis Ritchie`,`James Gosling`,`Bjarne Stroustrup`,`Ken Thompson`,`Linus Torvalds`],a:1,x:`Gosling at Sun (1995) — the author map again.`},{q:`Python was created by?`,o:[`Guido van Rossum`,`James Gosling`,`Dennis Ritchie`,`Brendan Eich`,`Larry Wall`],a:0,x:`van Rossum (1991) — completes the author set.`},{q:`UNIX was originally developed at?`,o:[`IBM`,`Bell Labs`,`Microsoft`,`MIT`,`Xerox`],a:1,x:`Bell Labs (Thompson/Ritchie, 1969) — lab+people history cluster.`}],"p2-9-2":[{q:`ASCII is a?`,o:[`4-bit code`,`7-bit code`,`8-bit code`,`16-bit code`,`32-bit code`],a:1,x:`REAL PYQ-adjacent — ASCII = 7-bit (128 chars); extended = 8-bit. Unicode/UTF-8 = modern successor.`},{q:`A compiler differs from an interpreter because a compiler?`,o:[`Runs line by line`,`Translates whole program before execution`,`Is slower`,`Needs no source`,`Only works in Java`],a:1,x:`Compile = whole-program translation upfront; interpret = line-by-line at runtime. Python=interpreted-ish, C=compiled.`},{q:`Which converts high-level code to machine code?`,o:[`Editor`,`Compiler`,`Loader`,`Linker only`,`Assembler only`],a:1,x:`REAL PYQ-adjacent — compiler translates HLL -> machine language. Editor just edits text.`},{q:`1 KB in the binary (IEC) sense = ?`,o:[`1000 bytes`,`1024 bytes`,`1024 bits`,`512 bytes`,`2048 bytes`],a:1,x:`1024 bytes (KiB strictly) — powers of 2: KB 2^10, MB 2^20, GB 2^30.`},{q:`Which is a linear data structure?`,o:[`Tree`,`Graph`,`Array/Linked list/Stack/Queue`,`Heap`,`Trie`],a:2,x:`Linear = sequential elements (array, LL, stack, queue); non-linear = tree/graph/heap — the classification table.`}],"p2-9-3":[{q:`The main function of a data structure is to?`,o:[`Collect data`,`Organise data for efficient access`,`Compile code`,`Store passwords`,`Encrypt files`],a:1,x:`REAL PYQ-adjacent — organise data so ops are efficient. Definition-level trivia.`},{q:`Which is a non-linear data structure?`,o:[`Array`,`Stack`,`Tree`,`Queue`,`Linked list`],a:2,x:`Trees/graphs/heaps = hierarchical/non-linear.`},{q:`In an OS, a "process" is best defined as?`,o:[`A program on disk`,`A program in execution`,`A file`,`A thread always`,`A CPU core`],a:1,x:`Program in execution = process — program vs process is the classic OS trivia.`},{q:`RAM is characterised as?`,o:[`Permanent storage`,`Volatile memory`,`Slow storage`,`Cache only`,`ROM type`],a:1,x:`Volatile = loses data on power-off; ROM/SSD = persistent. Volatile-vs-permanent is the basic split.`},{q:`Cache memory sits between?`,o:[`RAM and hard disk`,`CPU and main memory`,`Keyboard and CPU`,`Network and RAM`,`GPU and display`],a:1,x:`Cache = small fast buffer between CPU and RAM — memory-hierarchy order: registers > cache > RAM > disk.`}]},fn=o((e=>{var t=Symbol.for(`react.transitional.element`),n=Symbol.for(`react.fragment`);function r(e,n,r){var i=null;if(r!==void 0&&(i=``+r),n.key!==void 0&&(i=``+n.key),`key`in n)for(var a in r={},n)a!==`key`&&(r[a]=n[a]);else r=n;return n=r.ref,{$$typeof:t,type:e,key:i,ref:n===void 0?null:n,props:r}}e.Fragment=n,e.jsx=r,e.jsxs=r})),j=o(((e,t)=>{t.exports=fn()}))(),pn=[`A`,`B`,`C`,`D`,`E`];function mn({ex:e,qi:t}){return(0,j.jsxs)(`div`,{className:`exq`,children:[(0,j.jsxs)(`div`,{className:`exq-q`,children:[`Q`,t+1,`. `,e.q]}),(0,j.jsx)(`div`,{className:`exq-opts`,children:e.o.map((e,t)=>(0,j.jsxs)(`span`,{className:`exq-opt`,children:[`(`,pn[t],`) `,e]},t))}),(0,j.jsxs)(`details`,{className:`exq-ans`,children:[(0,j.jsx)(`summary`,{children:`Answer & trick →`}),(0,j.jsxs)(`span`,{children:[(0,j.jsxs)(`strong`,{children:[`Ans (`,pn[e.a],`) `,e.o[e.a]]}),` — `,e.x]})]})]})}k.setOptions({gfm:!0,breaks:!0});var hn=()=>{try{return new Set(JSON.parse(localStorage.getItem(`sebi-done`)||`[]`))}catch{return new Set}};function gn(){let[e,t]=(0,_.useState)({type:`home`}),[n,r]=(0,_.useState)(hn),[i,a]=(0,_.useState)(!0);return(0,j.jsxs)(`div`,{className:`app`,children:[(0,j.jsxs)(`aside`,{className:i?`sidebar`:`sidebar closed`,children:[(0,j.jsxs)(`div`,{className:`brand`,children:[(0,j.jsx)(`div`,{className:`brand-mark`,children:`S`}),(0,j.jsxs)(`div`,{children:[(0,j.jsx)(`div`,{className:`brand-title`,children:`SEBI Grade A`}),(0,j.jsx)(`div`,{className:`brand-sub`,children:`IT Stream · 2027`})]})]}),(0,j.jsxs)(`nav`,{children:[(0,j.jsx)(_n,{label:`Dashboard`,active:e.type===`home`,onClick:()=>t({type:`home`})}),(0,j.jsx)(_n,{label:`49-Day Plan`,active:e.type===`plan`,onClick:()=>t({type:`plan`})}),(0,j.jsx)(_n,{label:`Q-Patterns`,active:e.type===`patterns`,onClick:()=>t({type:`patterns`})}),(0,j.jsx)(_n,{label:`Practice Links`,active:e.type===`links`,onClick:()=>t({type:`links`})}),(0,j.jsx)(`div`,{className:`nav-divider`}),Gt.map(n=>(0,j.jsxs)(`div`,{className:`nav-group`,children:[(0,j.jsx)(`div`,{className:`nav-group-label`,children:n.label}),n.docs.map(n=>(0,j.jsx)(_n,{label:n.name,sub:!0,active:e.type===`doc`&&e.path===n.path,onClick:()=>t({type:`doc`,path:n.path})},n.path))]},n.folder)),(0,j.jsx)(_n,{label:`README`,sub:!0,active:e.type===`doc`&&e.path===`README.md`,onClick:()=>t({type:`doc`,path:`README.md`})})]})]}),(0,j.jsxs)(`main`,{children:[(0,j.jsx)(`button`,{className:`menu-btn`,onClick:()=>a(!i),children:`☰`}),e.type===`home`&&(0,j.jsx)(vn,{done:n,go:t}),e.type===`plan`&&(0,j.jsx)(xn,{done:n,toggleDone:e=>{let t=new Set(n);t.has(e)?t.delete(e):t.add(e),r(t),localStorage.setItem(`sebi-done`,JSON.stringify([...t]))},go:t}),e.type===`links`&&(0,j.jsx)(Sn,{}),e.type===`patterns`&&(0,j.jsx)(Cn,{}),e.type===`doc`&&(0,j.jsx)(wn,{path:e.path,go:t})]})]})}function _n({label:e,active:t,onClick:n,sub:r}){return(0,j.jsx)(`button`,{className:`nav-item ${r?`sub`:``} ${t?`active`:``}`,onClick:n,children:e})}function vn({done:e,go:t}){let n=Math.round(e.size/49*100),r=qt.find(t=>!e.has(t.d))||qt[qt.length-1],i=new Date;i.setHours(0,0,0,0);let a={Jan:0,Feb:1,Mar:2,Apr:3,May:4,Jun:5,Jul:6,Aug:7,Sep:8,Oct:9,Nov:10,Dec:11},o=e=>{let[t,n]=e.trim().split(/\s+/);return new Date(2026,a[t],+n)},s=qt.filter(e=>o(e.date).getTime()===i.getTime()),c=s.find(e=>/weekly/i.test(e.title))||s[0]||null,l=s.filter(e=>e!==c),u=qt.find(e=>o(e.date).getTime()>i.getTime()),d=i>=o(qt[0].date),f=i>o(qt[qt.length-1].date),p=c?c.d:u?u.d:49,m=Yt(p),h=on.find(e=>e.day>=p);return(0,j.jsxs)(`div`,{className:`page`,children:[(0,j.jsx)(`h1`,{children:`Mission SEBI 2027`}),(0,j.jsx)(`p`,{className:`muted`,children:`Syllabus deadline: Dec 31, 2026 · 49 days · ~3 hrs/day`}),(0,j.jsxs)(`div`,{className:`grid3`,children:[(0,j.jsxs)(`div`,{className:`card stat`,children:[(0,j.jsxs)(`div`,{className:`stat-num`,children:[n,`%`]}),(0,j.jsx)(`div`,{className:`muted`,children:`Plan complete`}),(0,j.jsx)(`div`,{className:`bar`,children:(0,j.jsx)(`div`,{className:`bar-fill`,style:{width:n+`%`}})})]}),(0,j.jsxs)(`div`,{className:`card stat`,children:[(0,j.jsxs)(`div`,{className:`stat-num`,children:[e.size,(0,j.jsx)(`span`,{className:`muted small`,children:`/49`})]}),(0,j.jsx)(`div`,{className:`muted`,children:`Days done`})]}),(0,j.jsxs)(`div`,{className:`card stat`,children:[(0,j.jsx)(`div`,{className:`stat-num`,children:49-e.size}),(0,j.jsx)(`div`,{className:`muted`,children:`Days remaining`})]})]}),(0,j.jsx)(`div`,{className:`card hero-card`,children:d?f?(0,j.jsxs)(j.Fragment,{children:[(0,j.jsx)(`div`,{className:`hero-label`,children:`PLAN COMPLETE`}),(0,j.jsx)(`h2`,{children:`All 49 days done`}),(0,j.jsx)(`p`,{className:`muted`,children:`Revision + mocks continue from here — use the tracker and error log to drive the remaining days.`})]}):c?(0,j.jsxs)(j.Fragment,{children:[(0,j.jsxs)(`div`,{className:`hero-label`,children:[`TODAY — Day `,c.d,` · `,c.date]}),(0,j.jsx)(`h2`,{children:c.title}),(0,j.jsxs)(`div`,{className:`chips`,children:[(0,j.jsx)(bn,{color:Jt[c.sub],children:c.sub}),c.tb&&(0,j.jsxs)(`span`,{className:`chip tb`,children:[`Testbook: `,c.tb]})]}),(0,j.jsxs)(`div`,{className:`hero-block`,children:[(0,j.jsxs)(`div`,{children:[(0,j.jsx)(`strong`,{children:`90m`}),` IT topic`]}),(0,j.jsxs)(`div`,{children:[(0,j.jsx)(`strong`,{children:`15m`}),` Back-revision`,m?` — ${m.sub}`:` (extra drills)`]}),(0,j.jsxs)(`div`,{children:[(0,j.jsx)(`strong`,{children:`45m`}),` Paper 1: `,an(c).label,an(c).detail&&(0,j.jsxs)(`span`,{className:`p1-detail`,children:[` — `,an(c).detail]})]}),(0,j.jsxs)(`div`,{children:[(0,j.jsx)(`strong`,{children:`20m`}),` GA drip`]}),(0,j.jsxs)(`div`,{children:[(0,j.jsx)(`strong`,{children:`5m`}),` Error log`]})]}),l.map(e=>(0,j.jsxs)(`div`,{className:`backrev-line`,children:[`Also scheduled today — Day `,e.d,`: `,e.title]},e.d)),an(c).links.length>0&&(0,j.jsxs)(`div`,{className:`row`,children:[an(c).links.map(e=>(0,j.jsxs)(`button`,{className:`btn`,onClick:()=>t({type:`doc`,path:e.path}),children:[`Open `,e.name,` →`]},e.path)),an(c).patterns&&(0,j.jsx)(`button`,{className:`btn`,onClick:()=>t({type:`patterns`}),children:`Practice patterns →`})]}),m&&(0,j.jsxs)(`div`,{className:`backrev-line`,onClick:()=>t({type:`doc`,path:m.path}),children:[`✍️ Back-revision today: `,(0,j.jsx)(`strong`,{children:m.sub}),` — write one table/section from memory, then check →`]}),(0,j.jsxs)(`div`,{className:`row`,children:[sn[c.sub]&&(0,j.jsx)(`button`,{className:`btn primary`,onClick:()=>t({type:`doc`,path:sn[c.sub]}),children:`Open today's notes →`}),(0,j.jsx)(`button`,{className:`btn`,onClick:()=>t({type:`plan`}),children:`Full plan`})]})]}):(0,j.jsxs)(j.Fragment,{children:[(0,j.jsx)(`div`,{className:`hero-label`,children:`TODAY — Buffer / catch-up day`}),(0,j.jsx)(`h2`,{children:`No new topic — clear the week's backlog`}),(0,j.jsxs)(`div`,{className:`hero-block`,children:[(0,j.jsxs)(`div`,{children:[(0,j.jsx)(`strong`,{children:`45m`}),` Finish pending drills`]}),(0,j.jsxs)(`div`,{children:[(0,j.jsx)(`strong`,{children:`30m`}),` Redo error log`]}),(0,j.jsxs)(`div`,{children:[(0,j.jsx)(`strong`,{children:`20m`}),` Weekly GA recall`]})]}),u&&(0,j.jsxs)(`p`,{className:`muted`,children:[`Next: Day `,u.d,` — `,u.title,` (`,u.date,`)`]}),(0,j.jsx)(`div`,{className:`row`,children:(0,j.jsx)(`button`,{className:`btn`,onClick:()=>t({type:`plan`}),children:`Full plan`})})]}):(0,j.jsxs)(j.Fragment,{children:[(0,j.jsxs)(`div`,{className:`hero-label`,children:[`PLAN STARTS `,qt[0].date.toUpperCase()]}),(0,j.jsxs)(`h2`,{children:[`Day `,qt[0].d,`: `,qt[0].title]}),(0,j.jsxs)(`p`,{className:`muted`,children:[`Preview — the 49-day clock begins `,qt[0].date,`. First day is light on purpose: set up files, skim DBMS notes, log GA.`]})]})}),(0,j.jsxs)(`div`,{className:`card`,children:[(0,j.jsxs)(`div`,{className:`hero-label`,children:[`NEXT UP — Day `,r.d,` · `,r.date]}),(0,j.jsx)(`h3`,{children:r.title})]}),h&&(0,j.jsxs)(`div`,{className:`card`,children:[(0,j.jsxs)(`div`,{className:`hero-label`,children:[`SCORE CHECKPOINT — Day `,h.day]}),(0,j.jsx)(`h3`,{children:h.test}),(0,j.jsxs)(`p`,{className:`muted`,children:[`Target: `,h.target,`. Record every mock score in the tracker below — two misses in a row means the plan bends to your weak area.`]})]}),(0,j.jsxs)(`div`,{className:`card`,children:[(0,j.jsx)(`div`,{className:`hero-label`,children:`CUT-OFF GATES — NO SECTIONAL CUTOFF`}),(0,j.jsxs)(`div`,{className:`gates`,children:[(0,j.jsxs)(`div`,{className:`gate-col`,children:[(0,j.jsxs)(`div`,{className:`gate-title`,children:[`Phase 1 · Screening `,(0,j.jsx)(`span`,{className:`muted`,children:`(marks not counted in merit)`})]}),(0,j.jsxs)(`div`,{className:`gate-row`,children:[(0,j.jsx)(`span`,{children:`Paper 1 — aptitude (60 min)`}),(0,j.jsx)(`strong`,{children:`≥ 30/100`})]}),(0,j.jsxs)(`div`,{className:`gate-row`,children:[(0,j.jsx)(`span`,{children:`Paper 2 — IT (40 min)`}),(0,j.jsx)(`strong`,{children:`≥ 40/100`})]}),(0,j.jsxs)(`div`,{className:`gate-row`,children:[(0,j.jsx)(`span`,{children:`Aggregate (P1 + P2)`}),(0,j.jsx)(`strong`,{children:`≥ 80/200`})]})]}),(0,j.jsxs)(`div`,{className:`gate-col`,children:[(0,j.jsxs)(`div`,{className:`gate-title`,children:[`Phase 2 · Mains `,(0,j.jsx)(`span`,{className:`muted`,children:`(85% of final merit)`})]}),(0,j.jsxs)(`div`,{className:`gate-row`,children:[(0,j.jsx)(`span`,{children:`Paper 1 — English descriptive`}),(0,j.jsx)(`strong`,{children:`≥ 30/100`})]}),(0,j.jsxs)(`div`,{className:`gate-row`,children:[(0,j.jsx)(`span`,{children:`Paper 2 — IT (180 min)`}),(0,j.jsx)(`strong`,{children:`≥ 40/100`})]}),(0,j.jsxs)(`div`,{className:`gate-row`,children:[(0,j.jsx)(`span`,{children:`TWS = P1×⅓ + P2×⅔`}),(0,j.jsx)(`strong`,{children:`≥ 50/100`})]})]})]}),(0,j.jsxs)(`p`,{className:`muted`,style:{marginTop:`0.7rem`},children:[`Each gate applies to the whole paper — no per-section bar exists. Final merit = Phase 2 TWS (85%) + Interview (15%).`,(0,j.jsx)(`br`,{}),(0,j.jsx)(`br`,{}),`Min. attempts at ~85% accuracy: `,(0,j.jsx)(`strong`,{children:`P1 ≈ 50–60 of 80 Qs`}),` (recipe: GA 18–20 · Eng 15–18 · Quant 8–12 · Reasoning 8–12), `,(0,j.jsx)(`strong`,{children:`P2-IT ≈ 30–35 of 50 Qs`}),` · Phase 2: all 3 descriptive answers + `,(0,j.jsx)(`strong`,{children:`~90 of 100 IT Qs`}),` for a merit-level score (~75–85 TWS; 50 is the floor, not the target). Blind guessing is −¼ — skip unless you can eliminate 2+ options.`]}),(0,j.jsx)(`button`,{className:`link`,onClick:()=>t({type:`doc`,path:`00_Overview/Exam_Pattern.md`}),children:`full exam pattern →`})]}),(0,j.jsx)(yn,{})]})}function yn(){let[e,t]=(0,_.useState)(()=>{try{return JSON.parse(localStorage.getItem(`sebi-scores`)||`[]`)}catch{return[]}}),[n,r]=(0,_.useState)(``),[i,a]=(0,_.useState)(``),[o,s]=(0,_.useState)(``),c=()=>{if(!n.trim()||!i)return;let c={date:new Date().toLocaleDateString(`en-IN`,{day:`numeric`,month:`short`}),name:n.trim(),score:+i,max:+o||100},l=[...e,c];t(l),localStorage.setItem(`sebi-scores`,JSON.stringify(l)),r(``),a(``),s(``)},l=n=>{let r=e.filter((e,t)=>t!==n);t(r),localStorage.setItem(`sebi-scores`,JSON.stringify(r))},u=e.length>=2?e[e.length-1].score/e[e.length-1].max-e[0].score/e[0].max:null;return(0,j.jsxs)(`div`,{className:`card`,children:[(0,j.jsx)(`div`,{className:`hero-label`,children:`MOCK SCORE TRACKER`}),(0,j.jsxs)(`div`,{className:`score-form`,children:[(0,j.jsx)(`input`,{placeholder:`Test name (e.g. FT Phase I #1)`,value:n,onChange:e=>r(e.target.value)}),(0,j.jsx)(`input`,{placeholder:`Score`,type:`number`,value:i,onChange:e=>a(e.target.value),style:{width:`80px`}}),(0,j.jsx)(`input`,{placeholder:`/100`,type:`number`,value:o,onChange:e=>s(e.target.value),style:{width:`70px`}}),(0,j.jsx)(`button`,{className:`btn primary`,onClick:c,children:`Add`})]}),u!==null&&(0,j.jsxs)(`p`,{className:`muted`,style:{marginTop:`0.5rem`},children:[`Trend: `,u>=0?`📈 up`:`📉 down`,` `,Math.abs(Math.round(u*100)),`% since first test`]}),e.length>0&&(0,j.jsxs)(`table`,{className:`score-table`,children:[(0,j.jsx)(`thead`,{children:(0,j.jsxs)(`tr`,{children:[(0,j.jsx)(`th`,{children:`Date`}),(0,j.jsx)(`th`,{children:`Test`}),(0,j.jsx)(`th`,{children:`Score`}),(0,j.jsx)(`th`,{})]})}),(0,j.jsx)(`tbody`,{children:e.map((e,t)=>(0,j.jsxs)(`tr`,{children:[(0,j.jsx)(`td`,{className:`muted`,children:e.date}),(0,j.jsx)(`td`,{children:e.name}),(0,j.jsxs)(`td`,{children:[(0,j.jsx)(`strong`,{children:e.score}),(0,j.jsxs)(`span`,{className:`muted`,children:[`/`,e.max,` (`,Math.round(e.score/e.max*100),`%)`]})]}),(0,j.jsx)(`td`,{children:(0,j.jsx)(`button`,{className:`link`,onClick:()=>l(t),children:`✕`})})]},t))})]})]})}function bn({color:e,children:t}){return(0,j.jsx)(`span`,{className:`chip`,style:{background:e+`22`,color:e,borderColor:e+`55`},children:t})}function xn({done:e,toggleDone:t,go:n}){let r=(0,_.useMemo)(()=>{let e=[];for(let t=0;t<49;t+=7)e.push(qt.slice(t,t+7));return e},[]);return(0,j.jsxs)(`div`,{className:`page`,children:[(0,j.jsx)(`h1`,{children:`49-Day Plan`}),(0,j.jsx)(`p`,{className:`muted`,children:`Click a day to mark done — saves locally. Click a day card's notes link to open the material.`}),r.map((r,i)=>(0,j.jsxs)(`div`,{className:`week`,children:[(0,j.jsxs)(`div`,{className:`week-label`,children:[`Week `,i+1,` · `,r[0].date,` — `,r[r.length-1].date]}),(0,j.jsx)(`div`,{className:`day-grid`,children:r.map(r=>(0,j.jsxs)(`div`,{className:`day-card ${e.has(r.d)?`done`:``} ${r.sub===`Weekly`||r.sub===`Milestone`?`weekly`:``}`,children:[(0,j.jsxs)(`div`,{className:`day-top`,children:[(0,j.jsx)(`button`,{className:`check ${e.has(r.d)?`on`:``}`,onClick:()=>t(r.d),"aria-label":`mark done`,children:e.has(r.d)?`✓`:``}),(0,j.jsxs)(`div`,{children:[(0,j.jsxs)(`div`,{className:`day-num`,children:[`Day `,r.d]}),(0,j.jsx)(`div`,{className:`day-date`,children:r.date})]})]}),(0,j.jsx)(`div`,{className:`day-title`,children:r.title}),(0,j.jsx)(`div`,{className:`chips`,children:(0,j.jsx)(bn,{color:Jt[r.sub],children:r.sub})}),(0,j.jsxs)(`div`,{className:`p1-mini`,children:[`P1: `,an(r).label,an(r).detail&&` — ${an(r).detail}`]}),an(r).links.map(e=>(0,j.jsxs)(`button`,{className:`link p1-link`,onClick:()=>n({type:`doc`,path:e.path}),children:[`open `,e.name,` →`]},e.path)),an(r).patterns&&(0,j.jsx)(`button`,{className:`link p1-link`,onClick:()=>n({type:`patterns`}),children:`practice patterns →`}),r.tb&&(0,j.jsxs)(`div`,{className:`tb-line`,children:[`📋 `,r.tb]}),Yt(r.d)&&(0,j.jsxs)(`div`,{className:`backrev-mini`,children:[`✍️ back-rev: `,Yt(r.d).sub]}),sn[r.sub]&&(0,j.jsx)(`button`,{className:`link`,onClick:()=>n({type:`doc`,path:sn[r.sub]}),children:`open notes →`})]},r.d))})]},i))]})}function Sn(){return(0,j.jsxs)(`div`,{className:`page`,children:[(0,j.jsx)(`h1`,{children:`Practice Links`}),(0,j.jsx)(`p`,{className:`muted`,children:`Free MCQ banks & SEBI-specific sources for Phase 1 Paper 2 — click any card to open in a new tab. Full details: PYQs → Practice Links doc.`}),cn.map(e=>(0,j.jsxs)(`div`,{children:[(0,j.jsx)(`div`,{className:`week-label`,style:{marginTop:`1.4rem`},children:e.group}),(0,j.jsx)(`div`,{className:`link-grid`,children:e.links.map(e=>(0,j.jsxs)(`a`,{className:`link-card`,href:e.url,target:`_blank`,rel:`noopener noreferrer`,children:[(0,j.jsx)(`div`,{className:`link-name`,children:e.name}),e.note&&(0,j.jsx)(`div`,{className:`link-note`,children:e.note}),(0,j.jsx)(`div`,{className:`link-arrow`,children:`open ↗`})]},e.url))})]},e.group))]})}function Cn(){let[e,t]=(0,_.useState)(null),n=n=>t(e===n?null:n);return(0,j.jsxs)(`div`,{className:`page`,children:[(0,j.jsx)(`h1`,{children:`Question Patterns`}),(0,j.jsx)(`p`,{className:`muted`,children:`Topic → the question patterns actually asked. Click a topic to expand. Sources: Jan-2026 official handout, 2024/2026 exam analyses (Oliveboard, BankersAdda, EduTap), memory-based PYQs.`}),(0,j.jsx)(`div`,{className:`week-label`,style:{marginTop:`1.4rem`},children:`PHASE 1 · PAPER 1 — aptitude (20 Qs each · 25 marks · 1.25/Q)`}),ln.map((t,r)=>(0,j.jsxs)(`div`,{className:`card pat-section`,children:[(0,j.jsxs)(`div`,{className:`pat-sec-head`,children:[(0,j.jsx)(`span`,{className:`pat-dot`,style:{background:t.color}}),(0,j.jsx)(`h3`,{children:t.section}),(0,j.jsx)(`span`,{className:`muted`,children:`20 Qs · 25 marks`})]}),t.note&&(0,j.jsx)(`p`,{className:`pat-note`,children:t.note}),t.topics.map((t,i)=>{let a=`p1-`+r+`-`+i;return(0,j.jsxs)(`div`,{className:`pat-topic`,children:[(0,j.jsxs)(`button`,{className:`pat-topic-head`,onClick:()=>n(a),children:[(0,j.jsx)(`span`,{className:`pat-caret`,children:e===a?`▾`:`▸`}),(0,j.jsx)(`span`,{className:`pat-topic-name`,children:t.name}),(0,j.jsxs)(`span`,{className:`pat-qs`,children:[t.qs,` Qs`]}),t.tag&&(0,j.jsx)(`span`,{className:`pat-tag`,children:t.tag})]}),e===a&&(0,j.jsx)(`div`,{className:`pat-list`,children:t.patterns.map(([e,t],n)=>(0,j.jsxs)(`div`,{className:`pat-row`,children:[(0,j.jsx)(`div`,{className:`pat-pname`,children:e}),(0,j.jsx)(`div`,{className:`pat-pdet muted`,children:t}),(0,j.jsx)(`div`,{className:`ex-list`,children:(dn[`${r}-${i}-${n}`]||[]).map((e,t)=>(0,j.jsx)(mn,{ex:e,qi:t},t))})]},e))})]},t.name)})]},t.section)),(0,j.jsx)(`div`,{className:`week-label`,style:{marginTop:`1.4rem`},children:`PHASE 1 · PAPER 2 — IT (50 Qs · 100 marks · official weightages)`}),(0,j.jsx)(`div`,{className:`card pat-section`,children:un.map((t,r)=>{let i=`p2-`+r;return(0,j.jsxs)(`div`,{className:`pat-topic`,children:[(0,j.jsxs)(`button`,{className:`pat-topic-head`,onClick:()=>n(i),children:[(0,j.jsx)(`span`,{className:`pat-caret`,children:e===i?`▾`:`▸`}),(0,j.jsx)(`span`,{className:`pat-dot`,style:{background:t.color}}),(0,j.jsx)(`span`,{className:`pat-topic-name`,children:t.topic}),(0,j.jsxs)(`span`,{className:`pat-qs`,children:[t.qs,` Qs`]}),(0,j.jsx)(`span`,{className:`pat-tag`,children:t.weight})]}),e===i&&(0,j.jsxs)(`div`,{className:`pat-list`,children:[t.note&&(0,j.jsx)(`p`,{className:`pat-note`,children:t.note}),t.patterns.map(([e,t],n)=>(0,j.jsxs)(`div`,{className:`pat-row`,children:[(0,j.jsx)(`div`,{className:`pat-pname`,children:e}),(0,j.jsx)(`div`,{className:`pat-pdet muted`,children:t}),(0,j.jsx)(`div`,{className:`ex-list`,children:(dn[`p2-${r}-${n}`]||[]).map((e,t)=>(0,j.jsx)(mn,{ex:e,qi:t},t))})]},e))]})]},t.topic)})})]})}function wn({path:e,go:t}){let n=Kt(e),r=(0,_.useMemo)(()=>n?k.parse(n.text):`<p>Not found.</p>`,[e]),i=(0,_.useRef)(null);return(0,_.useEffect)(()=>{window.scrollTo(0,0)},[e]),(0,_.useEffect)(()=>{i.current?.querySelectorAll(`a[href^="http"]`).forEach(e=>{e.target=`_blank`,e.rel=`noopener noreferrer`})},[r]),(0,j.jsxs)(`div`,{className:`page doc`,children:[(0,j.jsx)(`div`,{className:`doc-path`,children:e}),(0,j.jsx)(`article`,{ref:i,dangerouslySetInnerHTML:{__html:r}}),(0,j.jsx)(`button`,{className:`btn`,style:{marginTop:`2rem`},onClick:()=>t({type:`plan`}),children:`← Back to plan`})]})}(0,v.createRoot)(document.getElementById(`root`)).render((0,j.jsx)(gn,{}));
