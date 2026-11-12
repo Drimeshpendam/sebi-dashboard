@@ -2287,8 +2287,8 @@ Both valid — so answer only what's fixed in BOTH: *"Who was born in April?"* �
 ### BLOCK B — Squares + cubes (~40 sec)
 
 \`\`\`
-11-25: 121 144 169 196 225 256 289 324 361 400
-       441 484 529 576 625
+11-30: 121 144 169 196 225 256 289 324 361 400
+       441 484 529 576 625 676 729 784 841 900
 1-15c: 1 8 27 64 125 216 343 512 729 1000
        1331 1728 2197 2744 3375
 \`\`\`
@@ -2327,6 +2327,82 @@ Facing: N→ L=W R=E | S→ L=E R=W
 | **Circular / facing puzzles** | Block D | draw circle + facing map rule BEFORE placing anyone |
 | **Syllogism** | — | statement→shorthand diagram (All A→B = A inside B circle) |
 | **Blood relations** | — | mini-tree: △=male ○=female, ▬=sibling, │=parent-child |
+
+## PLUG-IN FORMULAS — enter values, get answer
+
+*You don't write all of these on the sheet — you MEMORIZE them through drills. On the sheet, write only the 2–3 you personally fumble (for most people: \`ab/(a+b)\` and \`CI−SI\`). Solving becomes: read values → plug → done.*
+
+### % shortcuts (Quant + DI — the workhorse set)
+| Move | Formula | Plug-in |
+|---|---|---|
+| x% of y | = **y% of x** | 8% of 50 → 50% of 8 = **4** |
+| Successive a% then b% | **a + b + ab/100** | +20%, +10% → 20+10+2 = **+32%** |
+| Same x% up then down | **−x²/100** (always a loss) | +10% then −10% → **−1%** |
+| Value raised x%, undo it | **x/(100+x)** ×100 | +25% → undo = 25/125 = **20% off** |
+| New after x% rise | × **(1 + x/100)** | 480 +15% → 480×1.15 = **552** |
+
+### SI / CI
+| Move | Formula | Plug-in |
+|---|---|---|
+| Simple Interest | **P·R·T/100** | ₹8000 @6% ×3y = 8000×18/100 = **1440** |
+| SI quick-frame | = **n·R% of P** | 3y @6% = 18% of P — one multiply |
+| CI−SI gap (2 yrs) | **P·(R/100)²** | ₹10000 @10% → 10000×0.01 = **₹100** |
+| CI−SI gap (3 yrs) | 3P(R/100)² + P(R/100)³ | rare, but free when asked |
+| CI amount | **P(1+R/100)ⁿ** | use (1+R/100)² = 1 + 2R/100 + (R/100)² trick |
+
+### Profit–Loss / Discount
+| Move | Formula | Plug-in |
+|---|---|---|
+| Profit% / Loss% | **(SP−CP)/CP ×100** | always divide by CP, never SP — the classic trap |
+| SP from CP | **CP × (1 ± p/100)** | CP 800, +12.5% → ×1.125 = **900** (or 800+1/8) |
+| Two discounts d1,d2 | **d1 + d2 − d1d2/100** | 20%+10% → 30−2 = **28% off** |
+| MP→CP link | **MP×(1−d) = CP×(1+p)** | 20% discount, 25% profit → MP/CP = 1.25/0.8 = **1.5625** |
+
+### Time–Work / Pipes
+| Move | Formula | Plug-in |
+|---|---|---|
+| A in a days, B in b | **together = ab/(a+b)** | 6 & 3 days → 18/9 = **2 days** ("product over sum") |
+| 3 workers | **abc/(ab+bc+ca)** | 4,6,12 → 288/72 = **4 days** |
+| One leaves early | work first k days alone, then joint | split the job, don't overthink |
+| x% done in t days | full = **100t/x** | 40% in 8d → 20 days total |
+
+### Time–Speed–Distance
+| Move | Formula | Plug-in |
+|---|---|---|
+| Avg speed, equal distance | **2xy/(x+y)** | 40 & 60 km/h → 4800/100 = **48 km/h** (NOT 50 — trap!) |
+| Avg speed, equal time | **(x+y)/2** | then it's the plain mean |
+| km/h → m/s | **×5/18** | 72 km/h = **20 m/s** (memorize: 18×4=72, so ÷3.6) |
+| Train crosses pole | **L/v** (train length only) | platform adds both lengths: **(L₁+L₂)/v** |
+| Boats | down = b+s, up = b−s; **b=(d+u)/2, s=(d−u)/2** | two given → two adds |
+
+### Numbers & averages
+| Move | Formula | Plug-in |
+|---|---|---|
+| Sum 1→n | **n(n+1)/2** | 1→40 = 40×41/2 = **820** |
+| Sum of squares 1→n | **n(n+1)(2n+1)/6** | rare but instant when asked |
+| Avg of 1st n naturals | **(n+1)/2** | avg 1→50 = **25.5** |
+| Avg speed of group change | new avg = old ± Δ/n | 20 students, avg +2 by one boy's marks → he beat old avg by **40** |
+| Alligation mix ratio | **(dearer−mean):(mean−cheap)** flipped | ₹30 & ₹46 milk → ₹38 mix → 8:8 = **1:1** |
+| a²−b² | **(a+b)(a−b)** | 53×47 = 50²−3² = **2491**; also keys difference-series |
+
+### Multiplication / division speed hacks
+| Move | Do this | Plug-in |
+|---|---|---|
+| ×5 | **halve, ×10** | 348×5 = 174×10 = **1740** |
+| ×25 | **quarter, ×100** | 168×25 = 42×100 = **4200** |
+| ×125 | **/8, ×1000** | 64×125 = 8×1000 = **8000** |
+| ×11 | **split-add** | 342×11 → 3 (3+4) (4+2) 2 = **3762** |
+| /5, /25, /125 | inverse of above | 640/25 = ×4/100 = **25.6** |
+| Divisibility | 3/9 = digit sum · 4 = last 2 digits · 8 = last 3 · 11 = alternating sum | series/remainder shortcuts |
+
+### Quadratic-compare (sign table — never solve roots)
+| Coefficients | Roots' signs | Then |
+|---|---|---|
+| x² − a·x + b | **both +** | compare magnitudes only |
+| x² + a·x + b | **both −** | compare magnitudes only |
+| x² ± a·x − b | **one +, one −** | usually \`x ? y\` indeterminate-ish → CND/E |
+
+*Pattern: minus middle coeff → same-sign roots; negative constant → opposite signs, can't compare fully.*
 
 ## THE ORDER — when in the 60 min
 
