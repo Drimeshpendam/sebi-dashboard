@@ -1443,6 +1443,54 @@ When you read daily affairs, mentally convert each item into one of these 10 for
 
 ---
 **Weekly recall check (every Sunday):** cover this file, write 10 facts from memory, mark misses → Error_Log
+`,"../../01_Phase1_Paper1/General_Awareness/Monthly_Logs/June_2026.md":`# GA Log — June 2026
+
+> Backfilled from sebi.gov.in, rbi.org.in and monthly digests (affairsmap, PRS, PIB compendia).
+> Format per item: **fact** → *context (what it is, why it happened, what it changes)*.
+> Context: June had the **2nd SEBI board meeting of 2026** (Jun 19) + the Jun 3–5 MPC — West Asia crisis building; US Fed tension over rates.
+
+## SEBI & Markets (Tier 1 — every SEBI circular/press release)
+- [x] **Jun 19:** **SEBI Board Meeting #2 of 2026** held — *quarterly board cycle (Mar 23, Jun 19, Sep 24 in 2026); key decisions announced same day via press release — board outcomes are the highest-yield SEBI GA.*
+- [x] **Jun 16:** SEBI guidelines for **winding up of AIFs** — retention of proceeds + **'Inoperative Fund' status** — *rules for how Alternative Investment Funds close down: what money they can hold back for pending exits and when a dormant fund gets tagged "inoperative" — cleans up zombie funds.*
+- [x] **Jun 17:** SEBI press release — **transactions in securities of unlisted public limited companies on various platforms** — *caution/advisory on platforms offering trading in unlisted-company shares (pre-IPO "grey market" apps) — investor protection against unregulated venues.*
+- [x] **Jun 19:** Clarification — **early pay-in (EPI) benefit applicability in Commodity Derivatives segment** — *EPI = delivering funds/securities before settlement deadline; clarified its margin benefit applies to commodity derivatives too — ties to the Oct cash-segment margin-waiver circular.*
+- [x] **Jun 22:** Comprehensive review of **Master Circulars for Stock Exchanges & Clearing Corporations + Commodity Derivatives** — *ease-of-doing-business consolidation: scattered exchange/clearing rules merged & simplified — SEBI's master-circular cleanup drive.*
+- [x] **Jun 23:** SEBI proposed **Common Advertisement Code** for specified regulated entities — *uniform advertising rules across brokers/MFs/RAs etc. (what ads may claim); → approved at Sep 24 board meeting.*
+- [x] **Jun 24:** Relaxation in **certification for Persons Associated with Investment Advice (PAIA)** — sales & non-core services — *people selling/distributing investment-advice services don't need the full adviser certification — cuts compliance cost.*
+- [x] **Jun 11:** Extension of timelines — compliance with certain provisions of the **Jan 2, 2026 circular** — *deadline relief for regulated entities.*
+
+## RBI / Monetary Policy (rates, reports, committees)
+- [x] **Jun 3–5, 61st MPC:** repo held **5.25%** unanimous; stance **neutral**; SDF 5.00%, MSF & Bank Rate 5.50% — *FY27 GDP revised to **6.6%**, inflation **5.1%**; supply-chain disruption flagged as key risk (West Asia escalation). This was the pre-July-hike hold — RBI waited one more cycle before tightening.*
+- [x] **RBI fined Canara Bank ₹41.80 lakh** — KYC + Unclaimed Deposits norm violations (found in Mar 31, 2025 inspection).
+- [x] **Financial Stability Report (Jun 2026):** financial system resilient amid geopolitical stress — *RBI's half-yearly health-check on banks/markets; "resilient" verdict despite West Asia shock.*
+- [x] **RBI FX measures (Jun):** measures announced to attract dollar inflows — *support rupee + offset FPI outflows during the conflict (later credited for steadying FX markets).*
+
+## Schemes / Budget / Economy
+- [x] **Jun 1:** **PM SVANidhi completed 6 years** — *MoHUA street-vendor credit scheme (launched Jun 2020): collateral-free working-capital loans ₹10k → ₹20k → ₹50k across tranches + digital-payment cashback; legal base: Street Vendors Act 2014. Ask: ministry + loan ladder.*
+- [x] **Jun 7:** **West Bengal became 36th State/UT to join AB PM-JAY** — *Ayushman Bharat health cover: ₹5 lakh/year/family for secondary+tertiary hospitalization; WB joining = pan-India coverage now complete-ish. Ask: which state joined last + cover amount.*
+- [x] **Cabinet:** one-time **₹10,000 cr ATF-price support** for scheduled airlines via Oil Marketing Cos — *West Asia crisis spiked Aviation Turbine Fuel prices → airlines bleeding; govt cushion.*
+- [x] **ANRF launched MAHA Water Mission — ₹200 cr** — *Anusandhan National Research Foundation funding startups/innovators in the water sector.*
+- [x] **VB-G RAM G framework released — ₹1.25 lakh cr outlay** — *Viksit Bharat Rozgar Ajeevika Mission–Gramin: the revamped rural employment/livelihood framework (MGNREGA-lineage successor), incl. ₹95,692 cr interim component.*
+- [x] **US–Iran conflict escalated through June** — *the macro backdrop: oil swings, EM pressure, FPI outflows (feeds the Jul–Oct market story).*
+
+## Appointments / Awards / Summits
+- [x] **Cabinet approved Neelkanth Mishra** — India's **Executive Director at World Bank**, 3 yrs — * India's seat on the Bank's board; Mishra = economist (ex-UBS/Axis Bank chief economist).*
+- [x] *(more in monthly appointment digests — cross-check Nov file for carry-over items)*
+
+## Sports / Books / Obituaries (the long tail — 5 min max)
+- [x] **FIFA World Cup 2026 kicked off in June** — hosted by **USA, Canada & Mexico** (48-team format); Spain won the Jul 19 final 1–0 vs Argentina.
+
+## Reports / Indices / Rankings (note the PUBLISHER — that's what's asked)
+- [x] **RBI Financial Stability Report** — Jun 2026 edition: system resilient (publisher: RBI).
+- [x] **PRS Monthly Policy Review (Jun):** repo 5.25% maintained; MPC projections noted.
+
+## Static GK spotted while reading
+- [x] SEBI board 2026 meeting dates: **Mar 23 · Jun 19 · Sep 24** — quarterly rhythm.
+- [x] PM-JAY cover = **₹5 lakh/family/year**; scheme launched 2018 (world's largest health assurance).
+- [x] Master Circular = SEBI's consolidation format — one document replacing many circulars on a topic.
+
+---
+**Weekly recall check:** cover this file, write 10 facts from memory, mark misses → Error_Log
 `,"../../01_Phase1_Paper1/General_Awareness/Monthly_Logs/November_2026.md":`# GA Log — November 2026\r
 \r
 > Fill daily (10-15 min). Format per item: **fact** → *context (what it is, why it happened, what it changes)*. Convert each into an MCQ mentally: "who/which/year/HQ/purpose?"\r
