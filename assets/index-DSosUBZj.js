@@ -1272,7 +1272,66 @@ When you read daily affairs, mentally convert each item into one of these 10 for
 \r
 ---\r
 **Weekly recall check (every Sunday):** cover this file, write 10 facts from memory, mark misses →\r
-`,"../../01_Phase1_Paper1/General_Awareness/Monthly_Logs/November_2026.md":`﻿# GA Log — November 2026\r
+`,"../../01_Phase1_Paper1/General_Awareness/Monthly_Logs/July_2026.md":`# GA Log — July 2026
+
+> Backfilled from sebi.gov.in, rbi.org.in and monthly banking-exam digests (affairsmap, Hindu Review). One line per MCQ-able fact — who/which/year/HQ/purpose.
+> Context: July had NO SEBI board meeting and NO scheduled extra policy event, yet was one of the heaviest regulatory months — West Asia (US–Iran) conflict dominated markets all month.
+
+## SEBI & Markets (Tier 1 — every SEBI circular/press release)
+- [x] **Jul 3:** SEBI circular — **handling of client's unpaid securities by Trading Members**
+- [x] **Jul 7:** SEBI reviewed norms for utilization of **interest/income from IPF (Investor Protection Fund) of the Depositories**
+- [x] **Jul 10:** SEBI circular — **intraday borrowing facility** availed by **mutual funds**
+- [x] **Jul 14:** SEBI issued **Master Circular for Merchant Bankers** (consolidation)
+- [x] **Jul 17 (PR 40/2026):** SEBI cautioned regulated entities & listed companies about the **"Boss Scam"** (impersonation fraud)
+- [x] **Jul 17:** SEBI extended **standing instructions for SWP/STP** to MF units held in **demat form**
+- [x] **Jul 21:** SEBI operationalised **freezing of promoter + promoter-group holdings at ISIN level** under Reg 24(i)(ea) of **Buy-back Regulations 2018**
+- [x] **Jul 21:** SEBI set **certification requirements for distribution of Specialized Investment Funds (SIFs)**
+- [x] **Jul 23:** SEBI circular — simplification & standardisation of framework for **transmission of securities** (ease of doing investment)
+- [x] **Jul 23:** SEBI consultation paper — **comprehensive review of SEBI (Portfolio Managers) Regulations 2020**
+- [x] **Jul 23:** SEBI consultation paper — **streamlining Online Dispute Resolution (ODR) framework** in securities market
+- [x] **Jul 30:** SEBI launched **GARUDA** — *'Green-Channel: AIF Rollout Upon Document Acknowledgement'* mechanism for processing **PPMs of AIFs**
+
+## RBI / Monetary Policy (rates, reports, committees)
+- [x] **Jul 1:** RBI's revamped **Integrated Ombudsman Scheme** came into force — "One Nation, One Ombudsman"; covers banks, NBFCs, PPI issuers, CICs; compensation up to **₹30 lakh** for consequential loss, **₹3 lakh** for time/harassment
+- [x] **Jul 1:** **Ravi Shankar** appointed **Executive Director, RBI** — heads Dept of Statistics & Information Management (career central-bank statistician, 30+ yrs)
+- [x] **Jul 16 MPC:** repo held **5.25%** (unanimous, Gov. Sanjay Malhotra), stance **neutral**; SDF 5.00%, MSF & Bank Rate 5.50%; **FY27 GDP projected 6.9%** amid West Asia conflict
+- [x] **Jul 28:** RBI announced **Delhi HC ordered winding up of Paytm Payments Bank** — licence cancelled Apr 24, 2026 under Sec 22(4) BR Act; **Girikumar M Nair** (ex-SBI CGM) appointed Official Liquidator w.e.f. Jul 8
+- [x] **Jul:** RBI penalised **Bank of Baroda & GIC Housing Finance ₹66.7 lakh** for fair-practice/KYC deficiencies
+- [x] **Jul:** RBI consolidated **628 circulars into 64 Master Directions** (regulatory clean-up)
+- [x] **NPCI + HSBC & J.P. Morgan** partnership for international UPI upgrades (real-time FX, faster settlement); Razorpay + NBBL launched **'Banking Connect'** netbanking platform; Paytm Europe got **Payment Institution licence from Luxembourg regulator**
+- [x] **Nuclear/Coop-bank tech:** **Sahakar CBS** — centralised core banking solution for Urban Cooperative Banks via NUCFDC
+
+## Schemes / Budget / Economy
+- [x] **Jul 1:** RBI **'Data Governance Guidance Framework'** issued for banks (accountability for data shared with service providers)
+- [x] **IRDAI 137th Authority Meeting** — implementation of the **SBSR Act** reforms
+- [x] **Global:** US Fed held rates at **3.50–3.75%** end-July — 3 members dissented for immediate hike; US 30-year yield above **5%** (longest stretch since 2007) on US–Iran oil shock
+
+## Appointments / Awards / Summits
+- [x] **Jul 1:** **Rajiv Kumar** (former Finance Secretary + former CEC) approved as **HDFC Bank part-time Chairman** (subject to RBI approval) — replacing interim Keki Mistry after Atanu Chakraborty's Mar resignation
+- [x] **Jul 3:** **Vikram Misri** — one-year extension as **Foreign Secretary**
+- [x] **Jul:** **Satya Pal Kumar** (IRS 2005) — **Director, FIU-IND** (Financial Intelligence Unit)
+- [x] **Jul 3:** **Ravi Agrawal** re-appointed **CBDT Chairman** (6-month contract)
+- [x] **Jul 9:** **N.S. Vishwanathan** re-appointed **Non-Executive Chairman, Axis Bank** (RBI approval)
+- [x] **Jul:** **Mahesh Muralidhar Pai** — **MD & CEO, South Indian Bank** (RBI approval)
+- [x] **Jul 2:** Air Marshal **Ashutosh Dixit** — **Vice Chief of Air Staff**
+- [x] **Jul 3:** **Anupam Misra** — CMD, Hindustan Copper; **Rear Admiral (Retd.) C. Raghuram** — CMD, Hindustan Shipyard; **Somnath Ghosh** — High Commissioner to Malaysia
+
+## Sports / Books / Obituaries (the long tail — 5 min max)
+- [x] **Jul 19:** **Spain won FIFA World Cup 2026** — beat **Argentina 1–0** after extra time in the final
+- [x] **Jul 29:** **Global Tiger Day 2026** — India conservation progress coverage
+- [x] **PM Modi** conferred Seychelles' highest honour **"Guardian of the Blue Horizon"**; PM visited **Australia**
+- [x] India's **first hydrogen fuel cell train** unveiled (features/route coverage)
+
+## Reports / Indices / Rankings (note the PUBLISHER — that's what's asked)
+- [x] RBI's **Financial Stability Report** (June issue, discussed Jul) — financial system resilient amid geopolitical stress
+- [x] US–Iran conflict + oil-price swings = dominant July market theme; Strait of Hormuz reopening talks eased month-end
+
+## Static GK spotted while reading
+- [x] Regulator heads (2026): RBI Gov **Sanjay Malhotra** (26th, since Dec 11, 2024) · SEBI Chair **Tuhin Kanta Pandey** (11th, since Mar 1, 2025) · IRDAI Chair **Ajay Seth** (since Sep 1, 2025) · PFRDA **S. Ramann** · IFSCA **K. Rajaraman**
+
+---
+**Weekly recall check (every Sunday):** cover this file, write 10 facts from memory, mark misses ✗
+`,"../../01_Phase1_Paper1/General_Awareness/Monthly_Logs/November_2026.md":`# GA Log — November 2026\r
 \r
 > Fill daily (10-15 min). One line per item — the fact, not the story. Convert each into an MCQ mentally: "who/which/year/HQ/purpose?"\r
 > Sources: PIB, SEBI press releases (highest yield — SEBI's own news IS the syllabus), RBI notifications, one daily GA compilation.\r
@@ -1281,6 +1340,9 @@ When you read daily affairs, mentally convert each item into one of these 10 for
 ## SEBI & Markets (Tier 1 — every SEBI circular/press release)\r
 - [x] **Nov 7:** SEBI (Settlement of Administrative and Civil Proceedings) Regulations, 2026 in force — notified Oct 8; settlement possible at ANY stage; online application portal + settlement calculator + helpdesk launched; replaces 2018 framework\r
 - [x] **Nov 11:** SEBI circular — intermediaries must update KYC/CDD systems for FATCA & CRS reporting under new Income-tax Act 2025 + IT Rules 2026 (AEOI framework)\r
+- [x] **Nov 12:** SEBI press release - **Niveshak Shivir** (investor-awareness event) to be held **Nov 17, New Delhi**\r
+- [x] **Nov 12:** **Hindustan Coca-Cola Holdings Ltd** filed **DRHP** (draft red herring prospectus) with SEBI - major IPO filing\r
+- [x] **Nov 11:** SEBI Summary Settlement Order in matter of **Eight Innovate Fund II** (scheme of Eight Innovate Investment Trust I)\r
 - [x] **Nov 5:** SEBI revised limits for underlying-exposure requirement in currency derivatives contracts\r
 - [x] **Oct 28:** Jio Platforms listed — India's LARGEST-ever IPO (₹30,188 cr); issue ₹1,119 → listed ₹1,358 (+21%); subscribed 22×; bids ₹4.9 lakh cr\r
 - [x] **Sep–Oct:** 46 mainboard IPOs raised ~₹85,000 cr — record; NSE's own IPO was ₹22,563 cr\r
