@@ -5154,7 +5154,7 @@ DFS→stack · queue ops (enqueue/dequeue/front) · stack ops (push/pop/peek) ·
 \r
 > Cloud, big data, AI/ML, blockchain, payments — SEBI sprinkles 1–3 "awareness" questions. Pure recall — cheap marks. One focused read + the memory tables below is enough.\r
 \r
-## 📅 DAY MAP\r
+## DAY MAP - which sections match your plan day\r
 \r
 | Plan day | Target | Read |\r
 |---|---|---|\r
@@ -5162,6 +5162,7 @@ DFS→stack · queue ops (enqueue/dequeue/front) · stack ops (push/pop/peek) ·
 | any | Phase-2 prep / weak-spot patch | sections per the syllabus line being tested |\r
 \r
 ---\r
+\r
 **How to read:** these are buzzword questions — you only need to know what each thing IS plus one distinguishing fact. Every entry below gives the plain-English idea, then the exam hook.\r
 \r
 ---\r
@@ -5490,7 +5491,7 @@ REMEMBER: *"DAC = owner, MAC = machine, RBAC = role."* Trap pairing: Bell-LaPadu
 >\r
 > **What's testable:** process states & fork(), scheduling numerics, deadlock/Banker's, paging/TLB/page-replacement, RAID levels, Linux commands & file system, chmod permissions.\r
 \r
-## 📅 DAY MAP\r
+## DAY MAP - which sections match your plan day\r
 \r
 | Plan day | Target | Read |\r
 |---|---|---|\r
@@ -5498,6 +5499,7 @@ REMEMBER: *"DAC = owner, MAC = machine, RBAC = role."* Trap pairing: Bell-LaPadu
 | any | Phase-2 prep / weak-spot patch | sections per the syllabus line being tested |\r
 \r
 ---\r
+\r
 **How to read:** OS concepts are just stories about a manager (the OS) juggling workers (processes), a shared kitchen (memory), and one chef (the CPU). Each topic below: the story → the example you can see → the exam trap.\r
 \r
 ---\r
@@ -6030,7 +6032,7 @@ REMEMBER: *"Methods follow the OBJECT, fields & statics follow the REFERENCE."*
 \r
 > SE is not a named section in the official Paper 2 syllabus, but "software development security" (InfoSec), project-process and design-principle questions do appear — and real mains PYQs asked **"high cohesion, low coupling"**. Cover the famous models + testing levels + a few metrics; that's enough.\r
 \r
-## 📅 DAY MAP\r
+## DAY MAP - which sections match your plan day\r
 \r
 | Plan day | Target | Read |\r
 |---|---|---|\r
@@ -6038,6 +6040,7 @@ REMEMBER: *"Methods follow the OBJECT, fields & statics follow the REFERENCE."*
 | any | Phase-2 prep / weak-spot patch | sections per the syllabus line being tested |\r
 \r
 ---\r
+\r
 **How to read:** software engineering is just "how do teams build big software without chaos?" Every model below is a different answer to that — learn the story each model tells, and the matching MCQs become trivial.\r
 \r
 ---\r
