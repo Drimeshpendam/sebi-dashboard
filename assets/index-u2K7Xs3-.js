@@ -3844,11 +3844,108 @@ Word questions: "EXAMINE alphabetically" → E A E I M N X → answer position Q
 Judge CAN the data solve it — don't solve it. Test stmt-1 alone → stmt-2 alone → combined. SEBI trap: each statement gives partial seating — only combined resolves. You're grading sufficiency, not finding the answer.
 
 ## Rotation topics (0 Qs lately — keep alive at low cost, they return unannounced)
-- **Syllogism:** draw minimum circles — All A⊂B · Some A∩B · No A (separate). A conclusion holds only if true in EVERY valid drawing. **Patterns asked:** definite (all/some/no) · possibility ("is a possibility" — passes if ANY drawing allows it) · either-or complementary pairs. See Ex 6, 15, 16.
+- **Syllogism:** full deep-dive in PART 2B below — the 4 statement drawings, the 6 elimination rules, every question phrasing SEBI uses, worked variants. See Ex 6, 15, 16 + Syl-Ex 1–8.
 - **Inequality:** chain \`>\` \`≥\` \`=\` — a conclusion follows only if symbols link end-to-end pointing the same way. **Patterns asked:** direct-chain compare · coded symbols (@,#,$ decode first — Ex 17).
 - **Coding:** shifts (+2/−3), reverse, position swap; word-codes = find shared word ↔ shared code (Ex 18).
 - **Direction:** draw N-up; turns are relative to CURRENT facing; final displacement by net movement. **Patterns asked:** net displacement (Ex 10) · shortest-path (√) · shadow/facing tricks.
 - **Input-output:** identify the step-rule (sort by length? alternate?) then apply mechanically (Ex 19).
+
+---
+
+# PART 2B — SYLLOGISM DEEP-DIVE (method + tricks + every question type)
+
+Syllogism = statements give relationships between groups → judge whether conclusions MUST hold. 0–3 Qs in recent papers but nearly free marks once the method is mechanical — and it returns in bursts.
+
+## Step 1 — THE ONLY 4 DRAWINGS (memorize these 4 pictures)
+
+\`\`\`
+All A are B        Some A are B        No A is B        Some A are not B
+┌─────────┐        ┌───┐  ┌───┐        ┌───┐   ┌───┐     ┌───┐  ┌───┐
+│  ┌───┐  │        │ A ├──┤ B │        │ A │   │ B │     │A ✕├──┤ B │
+│  │ A │  │        └───┘  └───┘        └───┘   └───┘     └───┘  └───┘
+│  └───┘  │         overlap lens        separate          ✕ = part of
+│    B    │         (at least one)      circles           A outside B
+└─────────┘
+\`\`\`
+
+- **All A are B** → small circle A *inside* big circle B. (B may or may not contain other things — never assume.)
+- **Some A are B** → two circles overlapping; the overlap zone = "at least one". The overlap can sit ANYWHERE — that's the freedom that kills hasty conclusions.
+- **No A is B** → two separate circles. Reversible: No A is B = No B is A — always.
+- **Some A are not B** → circle A, with a portion marked ✕ that can never enter B. Draw only the forbidden part; the rest of A is free.
+
+## Step 2 — THE GOLDEN RULE (why people get these wrong)
+
+> **A conclusion FOLLOWS only if it's true in EVERY valid drawing of the statements.**
+> A "possibility" conclusion follows if it's true in ANY ONE valid drawing.
+
+"Could be true in some drawing" is the trap — the exam wants "true no matter how you draw it." When in doubt, try to DRAW A COUNTER-EXAMPLE: if you can draw the statements true while the conclusion is false → it does not follow.
+
+## Step 3 — THE 6 ELIMINATION RULES (the actual tricks — solve most Qs without drawing)
+
+| # | Rule | Example |
+|---|---|---|
+| R1 | **Two "Some" statements → NO definite conclusion follows** | Some A are B + Some B are C → nothing definite between A and C |
+| R2 | **Two negative statements → NO definite conclusion** | No A is B + No B is C → A and C could be anything to each other |
+| R3 | **One negative statement → only a NEGATIVE conclusion can follow** | All A are B + No B is C → only "No A is C" type, never "Some A are C" |
+| R4 | **Middle term must be fully used at least once** (the term common to both statements — B in "All A are B, All B are C"). If neither statement covers ALL of B, no definite A–C conclusion | Some A are B + Some B are C → B never fully covered → R1 catches it too |
+| R5 | **Conclusion can't exceed the statements' scope** — "All" in conclusion needs "All" in statements | Some A are B (alone) can never give "All A are B" |
+| R6 | **Reversals that ARE valid:** Some A are B ⇒ Some B are A ✓ · No A is B ⇒ No B is A ✓ · **NOT valid:** All A are B ⇏ All B are A ✗ | All pens are books ⇏ All books are pens |
+
+**Speed order:** read conclusions first → run R1–R6 → only draw when a conclusion survives the rules. 80% of SEBI syllogisms die at the rules stage, no drawing needed.
+
+## Step 4 — EVERY QUESTION PHRASING SEBI USES
+
+| Phrasing in the paper | What it's really asking | Trick |
+|---|---|---|
+| "Which conclusion(s) definitely follow(s)" | Standard — golden rule | R1–R6 first |
+| "…is a possibility" / "All A being B is a possibility" | Can ANY valid drawing show it? | Almost everything not impossible IS possible — see Syl-Ex 4 |
+| "Either conclusion 1 or 2 follows" | Neither alone is certain, but exactly one MUST be true | Complementary-pair test below |
+| "At least some A are B" | Just a fancy "Some A are B" | Treat identically |
+| "Only a few A are B" (new pattern) | = **Some A are B + Some A are not B** — BOTH parts | Trap: don't treat as simple "Some" |
+| "Only A is B" | Flip it: **All B are A** | "Only" reverses the direction — the #1 misread |
+| "A can never be B" | Is overlap impossible in ALL drawings? | Needs a "No" chain reaching A and B |
+| Reverse syllogism — "Conclusion X follows. Which statements give it?" | Pick the option whose statements FORCE X | Test each option's pair — use R1–R6 backwards |
+
+## The EITHER-OR test (complementary pairs)
+
+Two conclusions form an either-or pair when ALL THREE hold:
+1. **Same subject and predicate** (both about A and C)
+2. **One positive + one negative** — valid pairs: \`All A are C\` + \`Some A are not C\` · \`Some A are C\` + \`No A is C\` · \`Some A are C\` + \`Some A are not C\`
+3. **Neither follows individually** — if one already follows, it's not either-or, it's just that one.
+
+## Syl-Ex 1 — basic definite. "All cats are dogs. All dogs are animals." → "All cats are animals?"
+**Solve:** middle term "dogs" is fully covered by "All dogs are animals" (R4 ✓), both positive → chain gives **All cats are animals ✓ follows.** "Some cats are animals" also follows (All ⊃ Some).
+
+## Syl-Ex 2 — the R1 killer. "Some pens are books. Some books are desks." → "Some pens are desks?"
+**Solve:** Some + Some → R1 → **does not follow** (Ex 6 proved it with the drawing). But then "Some pens are desks is a **possibility**" → follows ✓.
+
+## Syl-Ex 3 — negative chain. "All cats are dogs. No dog is a fish." → "(1) Some cats are fish (2) No cat is a fish."
+**Solve:** one negative (R3) → only negative conclusions live → (1) dead. cats ⊂ dogs, dogs fully separate from fish → (2) **No cat is a fish ✓** (this was Ex 16's setup).
+
+## Syl-Ex 4 — possibility. "All pens are books. Some books are desks." → "All pens being desks is a possibility?"
+**Solve:** could a valid drawing put ALL of the pens circle inside desks' overlap zone? Statements don't forbid it → **follows ✓.** Rule: a possibility fails ONLY when statements force the opposite (e.g., a "No" separating the two).
+
+## Syl-Ex 5 — either-or. "Some cars are bikes. Some bikes are trucks." → "(1) Some cars are trucks (2) No car is a truck."
+**Solve:** R1 → (1) not definite; (2) not definite either (statements never separate cars and trucks). Same subject-predicate ✓, one positive + one negative ✓ (Some vs No is a valid pair), neither follows ✓ → **"either 1 or 2 follows."**
+
+## Syl-Ex 6 — "only a few" trap. "Only a few students are toppers. All toppers are hard-working." → "Some students are hard-working?"
+**Solve:** decode → Some students are toppers AND Some students are not toppers. First part + "All toppers are hard-working" → Some students (the topper ones) are hard-working → **follows ✓.** The second part (Some are not) does NOT kill it — it only describes the rest.
+
+## Syl-Ex 7 — "only" direction flip. "Only singers are artists. All artists are performers." → "All performers are singers?"
+**Solve:** "Only singers are artists" = **All artists are singers**. Now: singers ⊃ artists ⊂ ... performers? "All artists are performers" puts artists inside performers — performers is the biggest circle, singers unknown against it → **does not follow.** But "Some performers are artists" → follows (artists ⊂ performers ⇒ overlap).
+
+## Syl-Ex 8 — three-statement + "can never be". "All A are B. All B are C. Some C are D." → "(1) A can never be D (2) Some B are D is a possibility."
+**Solve:** (1) — A ⊂ B ⊂ C, and D overlaps C somewhere; nothing forbids D's overlap covering A's zone → A CAN be D → (1) fails. (2) — a drawing exists where D's overlap touches B → **possibility follows ✓.**
+
+## The 60-second procedure (exam speed)
+
+\`\`\`
+1. Read conclusions, not statements first.
+2. R1–R6 scan — kill what dies by rule (no drawing).
+3. Survivors → draw minimum circles; try to BREAK the conclusion.
+4. "Possibility" in wording? Flip the test — need only ONE allowing drawing.
+5. Pair check — if exactly two conclusions with same terms, one + one −, both failed → either-or.
+\`\`\`
 
 ---
 
@@ -3932,6 +4029,115 @@ Both valid — so answer only what's fixed in BOTH: *"Who was born in April?"* �
 
 **Ex 20 — uncertain number of persons.** "Some people in a row. 3 sit between A and B; 2 between B and C; C sits at an end."
 **Solve:** derive the range — A,B need ≥5 people; C at end + 2 between B,C pins C and B → count resolves to 6–8 depending on A's side. If it stays ambiguous after 2 clues → **take only the certain answers, skip the rest — this type is a deliberate time-sink.**
+
+# PART 4B — FULL SOLVES, ONE PER PUZZLE TYPE (type-wise, in the order you'll meet them)
+
+Each solve below runs the SAME 6-step method from Part 1 — watch the order, not just the answer.
+
+## Type A — DOUBLE-ROW FACING (the mirrored trap in full)
+
+**Set:** "8 people — A,B,C,D in Row 1 facing SOUTH; P,Q,R,S in Row 2 facing NORTH; column-mates face each other. A sits at the left end of Row 1. C is 2nd to the left of A. R faces C. D is not at any end. B faces S. Q sits at an end."
+
+**Solve:**
+\`\`\`
+col:        1    2    3    4
+Row1 (S):   _    _    _    _     ← their left = page RIGHT
+Row2 (N):   _    _    _    _     ← their left = page LEFT
+            ↑ column-mates face each other
+\`\`\`
+1. **Ink the facing rule first** (this is the whole game): Row-1 people face south → THEIR left = page RIGHT. Row-2 face north → THEIR left = page LEFT. Write arrows before anyone is placed.
+2. **Anchors:** A at left end → Row1-col1. "C is 2nd to the left **of A**" → A's perspective: A's left = page right → count 2 → **C at col3.**
+3. **"R faces C"** → R = Row2-col3.
+4. **"D not at an end"** → Row1 free cols are {2,4} but col4 is an end → **D at col2** → B takes col4.
+5. **"B faces S"** → S = Row2-col4. Row2 left: cols {1,2} for P,Q; **"Q at an end"** → Q=col1, P=col2.
+\`\`\`
+Row1:  A   D   C   B
+Row2:  Q   P   R   S
+\`\`\`
+**Rule that makes this type easy:** "the left END" = physical position, never mirrors. "2nd to the left **OF A**" = A's perspective, DOES mirror for south-facing. Get that one distinction inked on the diagram and every remaining clue is just column-filling.
+
+## Type D — HEIGHT / RANK ORDER (full chain build)
+
+**Set:** "Six people A–F by height. C is taller than E but shorter than B. A is taller than B. D is shorter than E but taller than F. Who is 3rd tallest?"
+
+**Solve — weld fragments at shared names:**
+1. \`B > C > E\` (clue 1)
+2. \`A > B\` → weld → \`A > B > C > E\`
+3. \`E > D > F\` → weld at E → **\`A > B > C > E > D > F\`** — done, one line.
+4. 3rd tallest = **C.** Any rank question (2nd shortest, middle, between X and Y) reads off the same line.
+**Rule:** build the whole chain BEFORE reading the questions — 20 sec of welding answers all 5 sub-questions at once. Trap variant: "X is between Y and Z" = two live directions until fixed — keep both (\`Y>X>Z\` and \`Z>X>Y\`).
+
+## Type E — CIRCULAR, all facing centre (complete 8-person solve)
+
+**Set:** "8 people A–H around a circle, all facing centre. A sits 2nd to the left of B. C sits opposite A. D is an immediate neighbour of C and B. E sits 3rd to the right of C. F is not a neighbour of A."
+
+**Solve:**
+1. Draw 8 seats. Fix A at top. Facing centre → **their left = your clockwise.** "A 2nd to left of B" → B sits 2 seats COUNTER-clockwise from A (B's left-neighbour-of relationship inverted) → place B.
+2. "C opposite A" → bottom seat.
+3. "D neighbour of C AND B" → the seat touching both → unique spot between them → place D.
+4. "E 3rd to right of C" → C's right = counter-clockwise on page (facing centre mirrors) → count 3 → place E.
+5. Remaining seats for F,G,H; "F not neighbour of A" kills the seat(s) beside A → F forced into the only remaining non-adjacent seat → G,H fill the rest.
+**Rules used:** fix one anchor (circles have no ends) · facing arrows before placing · "2nd to the left OF X" uses X's facing, "the left end" never mirrors · negative clue last trims the leftovers.
+**Square variant:** 4 corners face diagonally, 4 side-seats face the centre square — "opposite" at a corner = diagonal corner; on a side = the matching side. Same method, two facing families — keep corner-arrows and side-arrows distinct.
+
+## Type F — FLOOR + VARIABLE (vertical box-stack, full solve)
+
+**Set:** "7 floors, 1=ground to 7=top. People P,Q,R,S,T,U,V. T lives on floor 4. Two floors lie between T and Q. P lives immediately above Q. V lives on the top floor. R is somewhere above S. U lives on an odd-numbered floor."
+
+**Solve:**
+\`\`\`
+7  V
+6  ?
+5  ?
+4  T        ← anchor
+3  ?
+2  ?
+1  ?
+\`\`\`
+1. **Anchor:** T=4. "Two floors between T and Q" → |4−Q|=3 → **Q ∈ {1,7} → two cases.**
+2. **Boundary-kill:** "P immediately ABOVE Q" → Q can't be floor 7 (no floor 8) → **Q=1, P=2.** *This is the floor trap working for you: glued blocks near the edges self-eliminate.*
+3. **Anchor:** V=7. Floors left for R,S,U: {3,5,6}.
+4. **Order-only clue LAST:** "R somewhere above S" fixes no floors — it only demands R's number > S's. Options in {3,5,6}: (R,S) = (5,3),(6,3),(6,5).
+5. **"U on odd floor"** → U ∈ {3,5}.
+   - U=3 → remaining {5,6} → R=6, S=5 (R>S ✓) → **case valid**
+   - U=5 → remaining {3,6} → R=6, S=3 (R>S ✓) → **case valid**
+\`\`\`
+7 V      7 V
+6 R      6 R
+5 S      5 U
+4 T      4 T
+3 U      3 S
+2 P      2 P
+1 Q      1 Q
+\`\`\`
+Two surviving cases — **that's a legitimate outcome.** Answer only the fixed cells: T=4, P=2, Q=1, V=7, R=6 are certain in BOTH; S and U swap. A question asking "who lives on floor 5?" → can't determine; "on floor 6?" → R.
+**Rules:** anchors → boundary-check glued blocks (they die at the edges — use it) → order-only clues last · floors = box-stack rotated 90°; "somewhere above" is still order-only, never glued.
+
+## Type G — SCHEDULING (day table, full solve)
+
+**Set:** "Lectures P,Q,R,S,T,U on Mon–Sat, one per day. P is on Thursday. Two days between P and Q. R is the day immediately before T. S is not on Monday. U's lecture is before R's."
+
+**Solve:**
+1. Table Mon–Sat. P→Thu.
+2. |P−Q|=3 → Q ∈ {Mon, Sun} → Sun not in week → **Q=Mon.**
+3. R = day before T → glued block \`RT\` on adjacent days → fits {Tue,Wed}, {Wed,Thu✗}, {Fri,Sat} → RT ∈ {Tue-Wed, Fri-Sat}.
+4. "U before R" → R can't be Tue (only Mon=Q is before) → **RT = Fri-Sat.**
+5. Leftover day = Tue,Wed for S,U with "U before R" ✓ either, "S not on Mon" → S can be Tue or Wed → **two live cases** — and that ambiguity is fine: answer questions only on what's fixed (P-Thu, Q-Mon, R-Fri, T-Sat are certain; S/U swap).
+**Rules:** days = a 7-seat row → all Type-A logic applies · "the day after Saturday" doesn't exist → boundary-check blocks · when two leftover people fill two leftover days with no separating clue, the set legitimately has that ambiguity — pick questions on the fixed cells.
+
+## The cross-type cheat-sheet (match the set in 5 seconds)
+
+| First clue you see | Type | Skeleton | The trap to expect |
+|---|---|---|---|
+| "row facing north/south" | A linear | numbered row | south-facing mirror |
+| "two rows facing each other" | A double | mirrored columns | own-left vs physical-end |
+| "born in months Jan–Jun" | B month | month table | month boundaries |
+| "boxes stacked" | C box | numbered stack | somewhere ≠ immediately |
+| "taller/heavier/ranked" | D chain | one \`>\` line | "between X and Y" = 2 directions |
+| "circular table" | E circle | wheel + arrows | inside/outside mirroring |
+| "lives on floor N" | F floor | vertical table | glued-block boundary kills |
+| "exam/person on days" | G day | Mon–Sun row | week edges, glued RT blocks |
+| "some people, number not given" | A-uncertain | derive count | deliberate time-sink — bail early |
 `,"../../01_Phase1_Paper1/Rough_Sheet_Playbook.md":`# Rough Sheet Playbook — The 2-Minute Exam-Hall Strategy
 
 > In the CBT exam you get blank scratch sheets. **Spend the first ~2 min writing the blocks below — then every question after costs less.** This page = what to write + when to use it. Drill it on every mock so it's muscle memory, not exam-day improvisation.
